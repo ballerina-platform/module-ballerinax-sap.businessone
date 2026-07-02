@@ -1,7 +1,7 @@
 # Ballerina SAP Business One Connectors
 
-[![Build](https://github.com/RDPerera/module-ballerinax-sap.businessone/actions/workflows/ci.yml/badge.svg)](https://github.com/RDPerera/module-ballerinax-sap.businessone/actions/workflows/ci.yml)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/RDPerera/module-ballerinax-sap.businessone.svg)](https://github.com/RDPerera/module-ballerinax-sap.businessone/commits/main)
+[![Build](https://github.com/ballerina-platform/module-ballerinax-sap.businessone/actions/workflows/ci.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-sap.businessone/actions/workflows/ci.yml)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerinax-sap.businessone.svg)](https://github.com/ballerina-platform/module-ballerinax-sap.businessone/commits/main)
 [![GitHub Issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-library/module/sap.businessone.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-library/labels/module%2Fsap.businessone)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
