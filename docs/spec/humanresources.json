@@ -1,0 +1,4661 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SAP Business One Service Layer - Human Resources",
+    "description": "OpenAPI 3.0.3 description generated directly from the SAP Business One Service Layer OData V3 $metadata (namespace 'SAPB1').\n\nAuthentication is session based: call `POST /Login` with company/user/password; the Service Layer returns a `B1SESSION` cookie (and a `ROUTEID` cookie when load balanced) that must be sent on every subsequent request. Call `POST /Logout` to end the session.\n\nCollection responses use the OData V3 envelope `{ \"odata.metadata\": ..., \"value\": [ ... ], \"odata.nextLink\": ... }`. Use `$inlinecount=allpages` to obtain the total count and the `Prefer: odata.maxpagesize=N` header to control server paging",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://{server}:{port}/b1s/v1",
+      "description": "SAP Business One Service Layer (OData V3 endpoint)",
+      "variables": {
+        "server": {
+          "description": "Service Layer host",
+          "default": "localhost"
+        },
+        "port": {
+          "description": "Service Layer HTTPS port (default 50000)",
+          "default": "50000"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "B1Session": []
+    }
+  ],
+  "paths": {
+    "/EmployeeIDType": {
+      "get": {
+        "tags": [
+          "EmployeeIDType"
+        ],
+        "summary": "Query the EmployeeIDType collection",
+        "operationId": "List_EmployeeIDType",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeIDTypeCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeeIDType"
+        ],
+        "summary": "Create a new EmployeeIDType",
+        "operationId": "Create_EmployeeIDType",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeIDType"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeIDType"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeIDType('{iDType}')": {
+      "get": {
+        "tags": [
+          "EmployeeIDType"
+        ],
+        "summary": "Get a single EmployeeIDType by key",
+        "operationId": "Get_EmployeeIDType",
+        "parameters": [
+          {
+            "name": "iDType",
+            "in": "path",
+            "description": "Key property 'IDType' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeIDType"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeeIDType"
+        ],
+        "summary": "Delete a EmployeeIDType",
+        "operationId": "Delete_EmployeeIDType",
+        "parameters": [
+          {
+            "name": "iDType",
+            "in": "path",
+            "description": "Key property 'IDType' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeeIDType"
+        ],
+        "summary": "Partially update a EmployeeIDType (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeeIDType",
+        "parameters": [
+          {
+            "name": "iDType",
+            "in": "path",
+            "description": "Key property 'IDType' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeIDType"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeIDTypeService_GetList": {
+      "post": {
+        "tags": [
+          "EmployeeIDTypeService"
+        ],
+        "summary": "Get list",
+        "operationId": "EmployeeIDTypeService_GetList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/EmployeeIDTypeParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `EmployeeIDTypeService_GetList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeImages": {
+      "get": {
+        "tags": [
+          "EmployeeImages"
+        ],
+        "summary": "Query the EmployeeImages collection",
+        "operationId": "List_EmployeeImages",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeImagesCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeeImages"
+        ],
+        "summary": "Create a new EmployeeImage",
+        "operationId": "Create_EmployeeImages",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeImage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeImage"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeImages({employeeNo})": {
+      "get": {
+        "tags": [
+          "EmployeeImages"
+        ],
+        "summary": "Get a single EmployeeImage by key",
+        "operationId": "Get_EmployeeImages",
+        "parameters": [
+          {
+            "name": "employeeNo",
+            "in": "path",
+            "description": "Key property 'EmployeeNo' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeImage"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeeImages"
+        ],
+        "summary": "Delete a EmployeeImage",
+        "operationId": "Delete_EmployeeImages",
+        "parameters": [
+          {
+            "name": "employeeNo",
+            "in": "path",
+            "description": "Key property 'EmployeeNo' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeeImages"
+        ],
+        "summary": "Partially update a EmployeeImage (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeeImages",
+        "parameters": [
+          {
+            "name": "employeeNo",
+            "in": "path",
+            "description": "Key property 'EmployeeNo' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeImage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeePosition": {
+      "get": {
+        "tags": [
+          "EmployeePosition"
+        ],
+        "summary": "Query the EmployeePosition collection",
+        "operationId": "List_EmployeePosition",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePositionCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeePosition"
+        ],
+        "summary": "Create a new EmployeePosition",
+        "operationId": "Create_EmployeePosition",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePosition"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePosition"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeePosition({positionID})": {
+      "get": {
+        "tags": [
+          "EmployeePosition"
+        ],
+        "summary": "Get a single EmployeePosition by key",
+        "operationId": "Get_EmployeePosition",
+        "parameters": [
+          {
+            "name": "positionID",
+            "in": "path",
+            "description": "Key property 'PositionID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeePosition"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeePosition"
+        ],
+        "summary": "Delete a EmployeePosition",
+        "operationId": "Delete_EmployeePosition",
+        "parameters": [
+          {
+            "name": "positionID",
+            "in": "path",
+            "description": "Key property 'PositionID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeePosition"
+        ],
+        "summary": "Partially update a EmployeePosition (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeePosition",
+        "parameters": [
+          {
+            "name": "positionID",
+            "in": "path",
+            "description": "Key property 'PositionID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePosition"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeePositionService_GetList": {
+      "post": {
+        "tags": [
+          "EmployeePositionService"
+        ],
+        "summary": "Get list",
+        "operationId": "EmployeePositionService_GetList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/EmployeePositionParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `EmployeePositionService_GetList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeRolesSetup": {
+      "get": {
+        "tags": [
+          "EmployeeRolesSetup"
+        ],
+        "summary": "Query the EmployeeRolesSetup collection",
+        "operationId": "List_EmployeeRolesSetup",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeRolesSetupCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeeRolesSetup"
+        ],
+        "summary": "Create a new EmployeeRoleSetup",
+        "operationId": "Create_EmployeeRolesSetup",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeRoleSetup"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeRoleSetup"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeRolesSetup({typeID})": {
+      "get": {
+        "tags": [
+          "EmployeeRolesSetup"
+        ],
+        "summary": "Get a single EmployeeRoleSetup by key",
+        "operationId": "Get_EmployeeRolesSetup",
+        "parameters": [
+          {
+            "name": "typeID",
+            "in": "path",
+            "description": "Key property 'TypeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeRoleSetup"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeeRolesSetup"
+        ],
+        "summary": "Delete a EmployeeRoleSetup",
+        "operationId": "Delete_EmployeeRolesSetup",
+        "parameters": [
+          {
+            "name": "typeID",
+            "in": "path",
+            "description": "Key property 'TypeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeeRolesSetup"
+        ],
+        "summary": "Partially update a EmployeeRoleSetup (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeeRolesSetup",
+        "parameters": [
+          {
+            "name": "typeID",
+            "in": "path",
+            "description": "Key property 'TypeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeRoleSetup"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeRolesSetupService_GetEmployeeRoleSetupList": {
+      "post": {
+        "tags": [
+          "EmployeeRolesSetupService"
+        ],
+        "summary": "Get employee role setup list",
+        "operationId": "EmployeeRolesSetupService_GetEmployeeRoleSetupList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/EmployeeRoleSetupParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `EmployeeRolesSetupService_GetEmployeeRoleSetupList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeStatus": {
+      "get": {
+        "tags": [
+          "EmployeeStatus"
+        ],
+        "summary": "Query the EmployeeStatus collection",
+        "operationId": "List_EmployeeStatus",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeStatusCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeeStatus"
+        ],
+        "summary": "Create a new EmployeeStatus",
+        "operationId": "Create_EmployeeStatus",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeStatus"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeStatus"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeStatus({statusId})": {
+      "get": {
+        "tags": [
+          "EmployeeStatus"
+        ],
+        "summary": "Get a single EmployeeStatus by key",
+        "operationId": "Get_EmployeeStatus",
+        "parameters": [
+          {
+            "name": "statusId",
+            "in": "path",
+            "description": "Key property 'StatusId' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeStatus"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeeStatus"
+        ],
+        "summary": "Delete a EmployeeStatus",
+        "operationId": "Delete_EmployeeStatus",
+        "parameters": [
+          {
+            "name": "statusId",
+            "in": "path",
+            "description": "Key property 'StatusId' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeeStatus"
+        ],
+        "summary": "Partially update a EmployeeStatus (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeeStatus",
+        "parameters": [
+          {
+            "name": "statusId",
+            "in": "path",
+            "description": "Key property 'StatusId' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeStatus"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeStatusService_GetList": {
+      "post": {
+        "tags": [
+          "EmployeeStatusService"
+        ],
+        "summary": "Get list",
+        "operationId": "EmployeeStatusService_GetList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/EmployeeStatusParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `EmployeeStatusService_GetList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeTransfers": {
+      "get": {
+        "tags": [
+          "EmployeeTransfers"
+        ],
+        "summary": "Query the EmployeeTransfers collection",
+        "operationId": "List_EmployeeTransfers",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTransfersCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeeTransfers"
+        ],
+        "summary": "Create a new EmployeeTransfer",
+        "operationId": "Create_EmployeeTransfers",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTransfer"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTransfer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeTransfers({transferID})": {
+      "get": {
+        "tags": [
+          "EmployeeTransfers"
+        ],
+        "summary": "Get a single EmployeeTransfer by key",
+        "operationId": "Get_EmployeeTransfers",
+        "parameters": [
+          {
+            "name": "transferID",
+            "in": "path",
+            "description": "Key property 'TransferID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTransfer"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeeTransfers"
+        ],
+        "summary": "Delete a EmployeeTransfer",
+        "operationId": "Delete_EmployeeTransfers",
+        "parameters": [
+          {
+            "name": "transferID",
+            "in": "path",
+            "description": "Key property 'TransferID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeeTransfers"
+        ],
+        "summary": "Partially update a EmployeeTransfer (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeeTransfers",
+        "parameters": [
+          {
+            "name": "transferID",
+            "in": "path",
+            "description": "Key property 'TransferID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTransfer"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeeTransfersService_GetEmployeeTransferList": {
+      "post": {
+        "tags": [
+          "EmployeeTransfersService"
+        ],
+        "summary": "Get employee transfer list",
+        "operationId": "EmployeeTransfersService_GetEmployeeTransferList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/EmployeeTransferParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `EmployeeTransfersService_GetEmployeeTransferList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeesInfo": {
+      "get": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Query the EmployeesInfo collection",
+        "operationId": "List_EmployeesInfo",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeesInfoCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Create a new EmployeeInfo",
+        "operationId": "Create_EmployeesInfo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeInfo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeInfo"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeesInfo({employeeID})": {
+      "get": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Get a single EmployeeInfo by key",
+        "operationId": "Get_EmployeesInfo",
+        "parameters": [
+          {
+            "name": "employeeID",
+            "in": "path",
+            "description": "Key property 'EmployeeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeInfo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Delete a EmployeeInfo",
+        "operationId": "Delete_EmployeesInfo",
+        "parameters": [
+          {
+            "name": "employeeID",
+            "in": "path",
+            "description": "Key property 'EmployeeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Partially update a EmployeeInfo (PATCH/MERGE semantics)",
+        "operationId": "Update_EmployeesInfo",
+        "parameters": [
+          {
+            "name": "employeeID",
+            "in": "path",
+            "description": "Key property 'EmployeeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeInfo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeesInfo({employeeID})/Cancel": {
+      "post": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Bound action 'Cancel' on EmployeesInfo (binding type EmployeeInfo)",
+        "operationId": "EmployeesInfo_Cancel",
+        "parameters": [
+          {
+            "name": "employeeID",
+            "in": "path",
+            "description": "Key property 'EmployeeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmployeesInfo({employeeID})/Close": {
+      "post": {
+        "tags": [
+          "EmployeesInfo"
+        ],
+        "summary": "Bound action 'Close' on EmployeesInfo (binding type EmployeeInfo)",
+        "operationId": "EmployeesInfo_Close",
+        "parameters": [
+          {
+            "name": "employeeID",
+            "in": "path",
+            "description": "Key property 'EmployeeID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmploymentCategoryService_GetEmploymentCategoryList": {
+      "post": {
+        "tags": [
+          "EmploymentCategoryService"
+        ],
+        "summary": "Get employment category list",
+        "operationId": "EmploymentCategoryService_GetEmploymentCategoryList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/EmploymentCategoryParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `EmploymentCategoryService_GetEmploymentCategoryList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmploymentCategorys": {
+      "get": {
+        "tags": [
+          "EmploymentCategorys"
+        ],
+        "summary": "Query the EmploymentCategorys collection",
+        "operationId": "List_EmploymentCategorys",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmploymentCategorysCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EmploymentCategorys"
+        ],
+        "summary": "Create a new EmploymentCategory",
+        "operationId": "Create_EmploymentCategorys",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmploymentCategory"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmploymentCategory"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EmploymentCategorys('{code}')": {
+      "get": {
+        "tags": [
+          "EmploymentCategorys"
+        ],
+        "summary": "Get a single EmploymentCategory by key",
+        "operationId": "Get_EmploymentCategorys",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Key property 'Code' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmploymentCategory"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EmploymentCategorys"
+        ],
+        "summary": "Delete a EmploymentCategory",
+        "operationId": "Delete_EmploymentCategorys",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Key property 'Code' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "EmploymentCategorys"
+        ],
+        "summary": "Partially update a EmploymentCategory (PATCH/MERGE semantics)",
+        "operationId": "Update_EmploymentCategorys",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Key property 'Code' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmploymentCategory"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Genders": {
+      "get": {
+        "tags": [
+          "Genders"
+        ],
+        "summary": "Query the Genders collection",
+        "operationId": "List_Genders",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GendersCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Genders"
+        ],
+        "summary": "Create a new Gender",
+        "operationId": "Create_Genders",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Gender"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Gender"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Genders('{code}')": {
+      "get": {
+        "tags": [
+          "Genders"
+        ],
+        "summary": "Get a single Gender by key",
+        "operationId": "Get_Genders",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Key property 'Code' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Gender"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Genders"
+        ],
+        "summary": "Delete a Gender",
+        "operationId": "Delete_Genders",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Key property 'Code' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Genders"
+        ],
+        "summary": "Partially update a Gender (PATCH/MERGE semantics)",
+        "operationId": "Update_Genders",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Key property 'Code' (Edm.String)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Gender"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GendersService_GetList": {
+      "post": {
+        "tags": [
+          "GendersService"
+        ],
+        "summary": "Get list",
+        "operationId": "GendersService_GetList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/GendersParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `GendersService_GetList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Teams": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Query the Teams collection",
+        "operationId": "List_Teams",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamsCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Create a new Team",
+        "operationId": "Create_Teams",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Team"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Team"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Teams({teamID})": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Get a single Team by key",
+        "operationId": "Get_Teams",
+        "parameters": [
+          {
+            "name": "teamID",
+            "in": "path",
+            "description": "Key property 'TeamID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Team"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Delete a Team",
+        "operationId": "Delete_Teams",
+        "parameters": [
+          {
+            "name": "teamID",
+            "in": "path",
+            "description": "Key property 'TeamID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Partially update a Team (PATCH/MERGE semantics)",
+        "operationId": "Update_Teams",
+        "parameters": [
+          {
+            "name": "teamID",
+            "in": "path",
+            "description": "Key property 'TeamID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Team"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TerminationReason": {
+      "get": {
+        "tags": [
+          "TerminationReason"
+        ],
+        "summary": "Query the TerminationReason collection",
+        "operationId": "List_TerminationReason",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Top"
+          },
+          {
+            "$ref": "#/components/parameters/Skip"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          },
+          {
+            "$ref": "#/components/parameters/InlineCount"
+          },
+          {
+            "$ref": "#/components/parameters/Prefer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TerminationReasonCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TerminationReason"
+        ],
+        "summary": "Create a new TerminationReason",
+        "operationId": "Create_TerminationReason",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TerminationReason"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TerminationReason"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TerminationReason({reasonID})": {
+      "get": {
+        "tags": [
+          "TerminationReason"
+        ],
+        "summary": "Get a single TerminationReason by key",
+        "operationId": "Get_TerminationReason",
+        "parameters": [
+          {
+            "name": "reasonID",
+            "in": "path",
+            "description": "Key property 'ReasonID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Select"
+          },
+          {
+            "$ref": "#/components/parameters/Expand"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TerminationReason"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Entity not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TerminationReason"
+        ],
+        "summary": "Delete a TerminationReason",
+        "operationId": "Delete_TerminationReason",
+        "parameters": [
+          {
+            "name": "reasonID",
+            "in": "path",
+            "description": "Key property 'ReasonID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleted. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "TerminationReason"
+        ],
+        "summary": "Partially update a TerminationReason (PATCH/MERGE semantics)",
+        "operationId": "Update_TerminationReason",
+        "parameters": [
+          {
+            "name": "reasonID",
+            "in": "path",
+            "description": "Key property 'ReasonID' (Edm.Int32)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TerminationReason"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Updated. No content returned"
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TerminationReasonService_GetList": {
+      "post": {
+        "tags": [
+          "TerminationReasonService"
+        ],
+        "summary": "Get list",
+        "operationId": "TerminationReasonService_GetList",
+        "responses": {
+          "200": {
+            "description": "Function result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "odata.metadata": {
+                      "type": "string",
+                      "x-ballerina-name": "odataMetadata"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/TerminationReasonParams"
+                      }
+                    }
+                  },
+                  "description": "Represents the response payload for the `TerminationReasonService_GetList` operation of the SAP Business One Service Layer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Service Layer error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceLayerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BoMeritalStatuses": {
+        "type": "string",
+        "description": "OData EnumType 'BoMeritalStatuses'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "mts_Single",
+          "mts_Married",
+          "mts_Divorced",
+          "mts_Widowed",
+          "mts_NotSpecified"
+        ]
+      },
+      "EmployeePreviousEmpoymentInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FromDtae": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ToDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Employer": {
+            "type": "string"
+          },
+          "Position": {
+            "type": "string"
+          },
+          "Remarks": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeePreviousEmpoymentInfo` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeImagesCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeImage"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeeImages` entities returned by the SAP Business One Service Layer"
+      },
+      "EmployeePosition": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "PositionID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "positionID"
+          },
+          "EmployeesInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            },
+            "x-ballerina-name": "employeesInfo"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeePosition` entity of the SAP Business One Service Layer"
+      },
+      "EmployeeIDTypeCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeIDType"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeeIDType` entities returned by the SAP Business One Service Layer"
+      },
+      "EmploymentCategorysCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmploymentCategory"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmploymentCategorys` entities returned by the SAP Business One Service Layer"
+      },
+      "Gender": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "Code": {
+            "type": "string",
+            "x-ballerina-name": "code"
+          },
+          "EmployeesInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            },
+            "x-ballerina-name": "employeesInfo"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `Gender` entity of the SAP Business One Service Layer"
+      },
+      "EmployeeRolesSetupCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeRoleSetup"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeeRolesSetup` entities returned by the SAP Business One Service Layer"
+      },
+      "EmployeeTransfer": {
+        "type": "object",
+        "properties": {
+          "TransEndTime": {
+            "type": "string",
+            "x-ballerina-name": "transEndTime"
+          },
+          "Status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EmployeeTransferStatusEnum"
+              }
+            ],
+            "x-ballerina-name": "status"
+          },
+          "EmployeeTransferDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeTransferDetail"
+            },
+            "x-ballerina-name": "employeeTransferDetails"
+          },
+          "Comment": {
+            "type": "string",
+            "x-ballerina-name": "comment"
+          },
+          "TransEndDate": {
+            "type": "string",
+            "format": "date-time",
+            "x-ballerina-name": "transEndDate"
+          },
+          "TransStartDate": {
+            "type": "string",
+            "format": "date-time",
+            "x-ballerina-name": "transStartDate"
+          },
+          "TransferID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "transferID"
+          },
+          "TransStartTime": {
+            "type": "string",
+            "x-ballerina-name": "transStartTime"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeTransfer` entity of the SAP Business One Service Layer"
+      },
+      "BoYesNoEnum": {
+        "type": "string",
+        "description": "OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "tNO",
+          "tYES"
+        ]
+      },
+      "EmployeeTransfersCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeTransfer"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeeTransfers` entities returned by the SAP Business One Service Layer"
+      },
+      "EmployeeReviewsInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ReviewDescription": {
+            "type": "string"
+          },
+          "Manager": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Grade": {
+            "type": "string"
+          },
+          "Remarks": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeReviewsInfo` complex type of the SAP Business One Service Layer"
+      },
+      "TeamsCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Team"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `Teams` entities returned by the SAP Business One Service Layer"
+      },
+      "EmploymentCategoryParams": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string",
+            "x-ballerina-name": "code"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmploymentCategoryParams` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeIDTypeParams": {
+        "type": "object",
+        "properties": {
+          "IDType": {
+            "type": "string",
+            "x-ballerina-name": "iDType"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeIDTypeParams` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeSavingsPaymentInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ContractName": {
+            "type": "string"
+          },
+          "PaymentNotes": {
+            "type": "string"
+          },
+          "AN": {
+            "type": "number",
+            "format": "double"
+          },
+          "ANcurrency": {
+            "type": "string"
+          },
+          "AG": {
+            "type": "number",
+            "format": "double"
+          },
+          "AGcurrency": {
+            "type": "string"
+          },
+          "BankName": {
+            "type": "string"
+          },
+          "BankCode": {
+            "type": "string"
+          },
+          "BankAccount": {
+            "type": "string"
+          },
+          "Sequence": {
+            "$ref": "#/components/schemas/ContractSequenceEnum"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeSavingsPaymentInfo` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeAbsenceInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ToDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Reason": {
+            "type": "string"
+          },
+          "ApprovedBy": {
+            "type": "string"
+          },
+          "ConfirmerNumber": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeAbsenceInfo` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeBranchAssignmentItem": {
+        "type": "object",
+        "properties": {
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BPLID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeBranchAssignmentItem` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeExemptionUnitEnum": {
+        "type": "string",
+        "description": "OData EnumType 'EmployeeExemptionUnitEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "eeu_None",
+          "eeu_Yearly",
+          "eeu_Monthly",
+          "eeu_Weekly",
+          "eeu_Daily"
+        ]
+      },
+      "EmployeeTransferDetail": {
+        "type": "object",
+        "properties": {
+          "Status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EmployeeTransferProcessingStatusEnum"
+              }
+            ],
+            "x-ballerina-name": "status"
+          },
+          "Comment": {
+            "type": "string",
+            "x-ballerina-name": "comment"
+          },
+          "TransferedTime": {
+            "type": "string",
+            "x-ballerina-name": "transferedTime"
+          },
+          "TransferedDate": {
+            "type": "string",
+            "format": "date-time",
+            "x-ballerina-name": "transferedDate"
+          },
+          "TransferID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "transferID"
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "employeeID"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeTransferDetail` complex type of the SAP Business One Service Layer"
+      },
+      "TerminationReasonParams": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "ReasonID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "reasonID"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `TerminationReasonParams` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeStatusCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeStatus"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeeStatus` entities returned by the SAP Business One Service Layer"
+      },
+      "EmployeeRolesInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "RoleID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeRolesInfo` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeStatus": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "StatusId": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "statusId"
+          },
+          "EmployeesInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            },
+            "x-ballerina-name": "employeesInfo"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeStatus` entity of the SAP Business One Service Layer"
+      },
+      "EmployeesInfoCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeesInfo` entities returned by the SAP Business One Service Layer"
+      },
+      "ContractSequenceEnum": {
+        "type": "string",
+        "description": "OData EnumType 'ContractSequenceEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "cs_Monthly",
+          "cs_Quarterly",
+          "cs_SemiAnnually",
+          "cs_Yearly"
+        ]
+      },
+      "EmployeeTransferProcessingStatusEnum": {
+        "type": "string",
+        "description": "OData EnumType 'EmployeeTransferProcessingStatusEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "etps_New",
+          "etps_Sent",
+          "etps_Accepted",
+          "etps_Error"
+        ]
+      },
+      "BoRoleInTeam": {
+        "type": "string",
+        "description": "OData EnumType 'BoRoleInTeam'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "borit_Leader",
+          "borit_Member"
+        ]
+      },
+      "EmployeeRoleSetup": {
+        "type": "object",
+        "properties": {
+          "TypeID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "typeID"
+          },
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "EmployeesInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            },
+            "x-ballerina-name": "employeesInfo"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeRoleSetup` entity of the SAP Business One Service Layer"
+      },
+      "EmploymentCategory": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "Code": {
+            "type": "string",
+            "x-ballerina-name": "code"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmploymentCategory` entity of the SAP Business One Service Layer"
+      },
+      "BoGenderTypes": {
+        "type": "string",
+        "description": "OData EnumType 'BoGenderTypes'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "gt_Female",
+          "gt_Male",
+          "gt_Undefined",
+          "gt_Masked",
+          "gt_Invalid"
+        ]
+      },
+      "EmployeeStatusParams": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "StatusId": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "statusId"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeStatusParams` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeePaymentMethodEnum": {
+        "type": "string",
+        "description": "OData EnumType 'EmployeePaymentMethodEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "epm_None",
+          "epm_BankTransfer"
+        ]
+      },
+      "EmployeePositionParams": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "PositionID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "positionID"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeePositionParams` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeEducationInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ToDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "EducationType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Institute": {
+            "type": "string"
+          },
+          "Major": {
+            "type": "string"
+          },
+          "Diploma": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeEducationInfo` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeTransferStatusEnum": {
+        "type": "string",
+        "description": "OData EnumType 'EmployeeTransferStatusEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "ets_New",
+          "ets_Processing",
+          "ets_Sent",
+          "ets_Received",
+          "ets_Accepted",
+          "ets_Error"
+        ]
+      },
+      "TerminationReasonCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TerminationReason"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `TerminationReason` entities returned by the SAP Business One Service Layer"
+      },
+      "EmployeePositionCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeePosition"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `EmployeePosition` entities returned by the SAP Business One Service Layer"
+      },
+      "EmployeeImage": {
+        "type": "object",
+        "properties": {
+          "Picture": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "picture"
+          },
+          "EmployeeNo": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "employeeNo"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeImage` entity of the SAP Business One Service Layer"
+      },
+      "EmployeeRoleSetupParams": {
+        "type": "object",
+        "properties": {
+          "TypeID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "typeID"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeRoleSetupParams` complex type of the SAP Business One Service Layer"
+      },
+      "EmployeeIDType": {
+        "type": "object",
+        "properties": {
+          "IDType": {
+            "type": "string",
+            "x-ballerina-name": "iDType"
+          },
+          "EmployeesInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            },
+            "x-ballerina-name": "employeesInfo"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeIDType` entity of the SAP Business One Service Layer"
+      },
+      "EmployeeTransferParams": {
+        "type": "object",
+        "properties": {
+          "TransferID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "transferID"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `EmployeeTransferParams` complex type of the SAP Business One Service Layer"
+      },
+      "SPEDContabilQualificationCodeEnum": {
+        "type": "string",
+        "description": "OData EnumType 'SPEDContabilQualificationCodeEnum'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "spedNA",
+          "spedDiretor",
+          "spedConselheiroDeAdministracao",
+          "spedAdministrador",
+          "spedAdministradorDoGrupo",
+          "spedAdministradorDeSociedadeFiliada",
+          "spedAdministradorJudicialPessoaFisica",
+          "spedAdministradorJudicialPessoaJuridicaProfissionalResponsavel",
+          "spedAdministradorJudicialGestor",
+          "spedGestorJudicial",
+          "spedProcurador",
+          "spedInventariante",
+          "spedLiquidante",
+          "spedInterventor",
+          "spedEmpresario",
+          "spedContador",
+          "spedOutros"
+        ]
+      },
+      "Team": {
+        "type": "object",
+        "properties": {
+          "TeamID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TeamName": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
+          },
+          "TeamMembers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TeamMember"
+            }
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `Team` entity of the SAP Business One Service Layer"
+      },
+      "EmployeeInfo": {
+        "type": "object",
+        "properties": {
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LastName": {
+            "type": "string"
+          },
+          "FirstName": {
+            "type": "string"
+          },
+          "MiddleName": {
+            "type": "string"
+          },
+          "Gender": {
+            "$ref": "#/components/schemas/BoGenderTypes"
+          },
+          "JobTitle": {
+            "type": "string"
+          },
+          "EmployeeType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Department": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Branch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "WorkStreet": {
+            "type": "string"
+          },
+          "WorkBlock": {
+            "type": "string"
+          },
+          "WorkZipCode": {
+            "type": "string"
+          },
+          "WorkCity": {
+            "type": "string"
+          },
+          "WorkCounty": {
+            "type": "string"
+          },
+          "WorkCountryCode": {
+            "type": "string"
+          },
+          "WorkStateCode": {
+            "type": "string"
+          },
+          "Manager": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ApplicationUserID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SalesPersonCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OfficePhone": {
+            "type": "string"
+          },
+          "OfficeExtension": {
+            "type": "string"
+          },
+          "MobilePhone": {
+            "type": "string"
+          },
+          "Pager": {
+            "type": "string"
+          },
+          "HomePhone": {
+            "type": "string"
+          },
+          "Fax": {
+            "type": "string"
+          },
+          "eMail": {
+            "type": "string"
+          },
+          "StartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "StatusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Salary": {
+            "type": "number",
+            "format": "double"
+          },
+          "SalaryUnit": {
+            "$ref": "#/components/schemas/BoSalaryCostUnits"
+          },
+          "EmployeeCosts": {
+            "type": "number",
+            "format": "double"
+          },
+          "EmployeeCostUnit": {
+            "$ref": "#/components/schemas/BoSalaryCostUnits"
+          },
+          "TerminationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "TreminationReason": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "BankCode": {
+            "type": "string"
+          },
+          "BankBranch": {
+            "type": "string"
+          },
+          "BankBranchNum": {
+            "type": "string"
+          },
+          "BankAccount": {
+            "type": "string"
+          },
+          "HomeStreet": {
+            "type": "string"
+          },
+          "HomeBlock": {
+            "type": "string"
+          },
+          "HomeZipCode": {
+            "type": "string"
+          },
+          "HomeCity": {
+            "type": "string"
+          },
+          "HomeCounty": {
+            "type": "string"
+          },
+          "HomeCountry": {
+            "type": "string"
+          },
+          "HomeState": {
+            "type": "string"
+          },
+          "DateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "CountryOfBirth": {
+            "type": "string"
+          },
+          "MartialStatus": {
+            "$ref": "#/components/schemas/BoMeritalStatuses"
+          },
+          "NumOfChildren": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IdNumber": {
+            "type": "string"
+          },
+          "CitizenshipCountryCode": {
+            "type": "string"
+          },
+          "PassportNumber": {
+            "type": "string"
+          },
+          "PassportExpirationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Picture": {
+            "type": "string"
+          },
+          "Remarks": {
+            "type": "string"
+          },
+          "SalaryCurrency": {
+            "type": "string"
+          },
+          "EmployeeCostsCurrency": {
+            "type": "string"
+          },
+          "WorkBuildingFloorRoom": {
+            "type": "string"
+          },
+          "HomeBuildingFloorRoom": {
+            "type": "string"
+          },
+          "Position": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AttachmentEntry": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CostCenterCode": {
+            "type": "string"
+          },
+          "CompanyNumber": {
+            "type": "string"
+          },
+          "VacationPreviousYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VacationCurrentYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MunicipalityKey": {
+            "type": "string"
+          },
+          "TaxClass": {
+            "type": "string"
+          },
+          "IncomeTaxLiability": {
+            "type": "string"
+          },
+          "Religion": {
+            "type": "string"
+          },
+          "PartnerReligion": {
+            "type": "string"
+          },
+          "ExemptionAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExemptionUnit": {
+            "$ref": "#/components/schemas/EmployeeExemptionUnitEnum"
+          },
+          "ExemptionCurrency": {
+            "type": "string"
+          },
+          "AdditionalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "AdditionalUnit": {
+            "$ref": "#/components/schemas/EmployeeExemptionUnitEnum"
+          },
+          "AdditionalCurrency": {
+            "type": "string"
+          },
+          "TaxOfficeName": {
+            "type": "string"
+          },
+          "TaxOfficeNumber": {
+            "type": "string"
+          },
+          "HealthInsuranceName": {
+            "type": "string"
+          },
+          "HealthInsuranceCode": {
+            "type": "string"
+          },
+          "HealthInsuranceType": {
+            "type": "string"
+          },
+          "SocialInsuranceNumber": {
+            "type": "string"
+          },
+          "ProfessionStatus": {
+            "type": "string"
+          },
+          "EducationStatus": {
+            "type": "string"
+          },
+          "PersonGroup": {
+            "type": "string"
+          },
+          "JobTitleCode": {
+            "type": "string"
+          },
+          "BankCodeForDATEV": {
+            "type": "string"
+          },
+          "DeviatingBankAccountOwner": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "SpouseFirstName": {
+            "type": "string"
+          },
+          "SpouseSurname": {
+            "type": "string"
+          },
+          "ExternalEmployeeNumber": {
+            "type": "string"
+          },
+          "BirthPlace": {
+            "type": "string"
+          },
+          "PaymentMethod": {
+            "$ref": "#/components/schemas/EmployeePaymentMethodEnum"
+          },
+          "STDCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CPF": {
+            "type": "string"
+          },
+          "CRCNumber": {
+            "type": "string"
+          },
+          "AccountantResponsible": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "LegalRepresentative": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "DIRFResponsible": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "CRCState": {
+            "type": "string"
+          },
+          "Active": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "IDType": {
+            "type": "string"
+          },
+          "BPLID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PassportIssueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "PassportIssuer": {
+            "type": "string"
+          },
+          "QualificationCode": {
+            "$ref": "#/components/schemas/SPEDContabilQualificationCodeEnum"
+          },
+          "PRWebAccess": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "PreviousPRWebAccess": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "WorkStreetNumber": {
+            "type": "string"
+          },
+          "HomeStreetNumber": {
+            "type": "string"
+          },
+          "LinkedVendor": {
+            "type": "string"
+          },
+          "CreateDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "CreateTime": {
+            "type": "string"
+          },
+          "UpdateDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "UpdateTime": {
+            "type": "string"
+          },
+          "EmployeeCode": {
+            "type": "string"
+          },
+          "ARetSEFAZ": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "GenderEx": {
+            "type": "string"
+          },
+          "NaturalPer": {
+            "$ref": "#/components/schemas/BoYesNoEnum"
+          },
+          "EmployeeAbsenceInfoLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeAbsenceInfo"
+            }
+          },
+          "EmployeeEducationInfoLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeEducationInfo"
+            }
+          },
+          "EmployeeReviewsInfoLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeReviewsInfo"
+            }
+          },
+          "EmployeePreviousEmpoymentInfoLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeePreviousEmpoymentInfo"
+            }
+          },
+          "EmployeeRolesInfoLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeRolesInfo"
+            }
+          },
+          "EmployeeSavingsPaymentInfoLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeSavingsPaymentInfo"
+            }
+          },
+          "EmployeeBranchAssignment": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeBranchAssignmentItem"
+            }
+          },
+          "EmployeeRoleSetup": {
+            "$ref": "#/components/schemas/EmployeeRoleSetup"
+          },
+          "EmployeeStatus": {
+            "$ref": "#/components/schemas/EmployeeStatus"
+          },
+          "TerminationReason": {
+            "$ref": "#/components/schemas/TerminationReason"
+          },
+          "EmployeePosition": {
+            "$ref": "#/components/schemas/EmployeePosition"
+          },
+          "EmployeeIDType": {
+            "$ref": "#/components/schemas/EmployeeIDType"
+          },
+          "Gender2": {
+            "$ref": "#/components/schemas/Gender"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `EmployeeInfo` entity of the SAP Business One Service Layer"
+      },
+      "ServiceLayerError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "message": {
+                "type": "object",
+                "properties": {
+                  "lang": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Represents the `ServiceLayerError` type of the SAP Business One Service Layer"
+      },
+      "GendersCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "odata.metadata": {
+            "type": "string",
+            "x-ballerina-name": "odataMetadata"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Gender"
+            }
+          },
+          "odata.nextLink": {
+            "type": "string",
+            "x-ballerina-name": "odataNextLink"
+          }
+        },
+        "description": "A paged collection of `Genders` entities returned by the SAP Business One Service Layer"
+      },
+      "BoSalaryCostUnits": {
+        "type": "string",
+        "description": "OData EnumType 'BoSalaryCostUnits'. Serialised by the Service Layer as the member name",
+        "enum": [
+          "scu_Hour",
+          "scu_Day",
+          "scu_Week",
+          "scu_Month",
+          "scu_Year",
+          "scu_Semimonthly",
+          "scu_Biweekly"
+        ]
+      },
+      "TeamMember": {
+        "type": "object",
+        "properties": {
+          "TeamID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "RoleInTeam": {
+            "$ref": "#/components/schemas/BoRoleInTeam"
+          }
+        },
+        "additionalProperties": true,
+        "description": "The `TeamMember` complex type of the SAP Business One Service Layer"
+      },
+      "TerminationReason": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "x-ballerina-name": "description"
+          },
+          "ReasonID": {
+            "type": "integer",
+            "format": "int32",
+            "x-ballerina-name": "reasonID"
+          },
+          "EmployeesInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmployeeInfo"
+            },
+            "x-ballerina-name": "employeesInfo"
+          },
+          "Name": {
+            "type": "string",
+            "x-ballerina-name": "name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `TerminationReason` entity of the SAP Business One Service Layer"
+      },
+      "GendersParams": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string",
+            "x-ballerina-name": "code"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The `GendersParams` complex type of the SAP Business One Service Layer"
+      }
+    },
+    "parameters": {
+      "Expand": {
+        "name": "$expand",
+        "in": "query",
+        "description": "Comma-separated navigation properties to expand",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "string"
+        },
+        "x-ballerina-name": "dollarExpand"
+      },
+      "Filter": {
+        "name": "$filter",
+        "in": "query",
+        "description": "OData filter expression",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "string"
+        },
+        "x-ballerina-name": "dollarFilter"
+      },
+      "InlineCount": {
+        "name": "$inlinecount",
+        "in": "query",
+        "description": "Set to 'allpages' to include the total count (odata.count)",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "allpages",
+            "none"
+          ]
+        },
+        "x-ballerina-name": "dollarInlinecount"
+      },
+      "OrderBy": {
+        "name": "$orderby",
+        "in": "query",
+        "description": "OData orderby expression",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "string"
+        },
+        "x-ballerina-name": "dollarOrderby"
+      },
+      "Prefer": {
+        "name": "Prefer",
+        "in": "header",
+        "description": "Service Layer paging control, e.g. 'odata.maxpagesize=100'. Use 'odata.maxpagesize=0' to disable server paging",
+        "required": false,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        },
+        "x-ballerina-name": "prefer"
+      },
+      "Select": {
+        "name": "$select",
+        "in": "query",
+        "description": "Comma-separated list of properties to return",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "string"
+        },
+        "x-ballerina-name": "dollarSelect"
+      },
+      "Skip": {
+        "name": "$skip",
+        "in": "query",
+        "description": "Number of records to skip (paging)",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "x-ballerina-name": "dollarSkip"
+      },
+      "Top": {
+        "name": "$top",
+        "in": "query",
+        "description": "Maximum number of records to return",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "x-ballerina-name": "dollarTop"
+      }
+    },
+    "securitySchemes": {
+      "B1Session": {
+        "type": "apiKey",
+        "description": "Session cookie returned by POST /Login",
+        "name": "B1SESSION",
+        "in": "cookie",
+        "x-ballerina-name": "b1SESSION"
+      }
+    }
+  }
+}
