@@ -1,12 +1,14 @@
-name: Build
+name: Daily build
 
-# Mirrors ballerina-library/.github/workflows/s4hana-build-connector-template.yml,
-# with Ballerina set up locally instead of docker builds (plugin-gradle 3.x).
+# Mirrors ballerina-library/.github/workflows/s4hana-daily-build-connector-template.yml.
+# Inlined (instead of `uses:`) because the shared template builds with
+# plugin-gradle 2.x docker mode, a sanitation subproject, and a hardcoded
+# s4hana repository name; this repo builds with the locally installed
+# Ballerina (plugin-gradle 3.x).
+
 on:
-  push:
-    branches:
-      - main
-      - 2201.[0-9]+.x
+  schedule:
+    - cron: "30 2 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -71,8 +73,8 @@ jobs:
           done
           echo "directories=$(jq -nc --args '$ARGS.positional' ${folders[@]})" >> $GITHUB_OUTPUT
 
-  build-packages:
-    name: Build Packages
+  build-connectors:
+    name: Build Connectors
     runs-on: ubuntu-latest
     needs: generate-matrix
     strategy:
@@ -107,28 +109,26 @@ jobs:
           packageUser: ${{ github.actor }}
           packagePAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Warm the Ballerina central cache with an online build first; the
-          # test task runs `bal test --offline` and needs the locked versions
-          # to be present in the cache on a fresh runner.
+          # Warm the Ballerina central cache with an online build first (see above).
           ./gradlew :businessone-ballerina:${{ matrix.directory }}:build -x test
-          ./gradlew :businessone-ballerina:${{ matrix.directory }}:build
+          ./gradlew :businessone-ballerina:${{ matrix.directory }}:test
 
-      - name: Upload coverage reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.directory }}
-          path: ballerina/**/coverage-report.xml
-
-  upload-codecov:
-    name: Upload Codecov
+  send-notification:
+    name: Send Failure Notification
     runs-on: ubuntu-latest
-    needs: build-packages
+    needs: [ build-examples, build-connectors ]
+    if: ${{ failure() }}
     steps:
-      - name: Download coverage reports
-        uses: actions/download-artifact@v4
-
-      - name: Generate CodeCov Report
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: ballerina-platform/${{ github.event.repository.name }}
+      # Send notification when build fails
+      - name: Notify failure
+        run: |
+          curl -X POST \
+          'https://api.github.com/repos/ballerina-platform/ballerina-release/dispatches' \
+          -H 'Accept: application/vnd.github.v3+json' \
+          -H 'Authorization: Bearer ${{ secrets.BALLERINA_BOT_TOKEN }}' \
+          --data "{
+            \"event_type\": \"notify-build-failure\",
+            \"client_payload\": {
+              \"repoName\": \"module-ballerinax-sap.businessone\"
+            }
+          }"
