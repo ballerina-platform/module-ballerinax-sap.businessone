@@ -45,6 +45,10 @@ jobs:
           packageUser: ${{ github.actor }}
           packagePAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Warm the Ballerina central cache with an online build first; the
+          # test task runs `bal test --offline` and needs the locked versions
+          # to be present in the cache on a fresh runner.
+          ./gradlew :businessone-ballerina:build -x test
           ./gradlew :businessone-examples:build
 
   generate-matrix:
@@ -103,6 +107,10 @@ jobs:
           packageUser: ${{ github.actor }}
           packagePAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Warm the Ballerina central cache with an online build first; the
+          # test task runs `bal test --offline` and needs the locked versions
+          # to be present in the cache on a fresh runner.
+          ./gradlew :businessone-ballerina:${{ matrix.directory }}:build -x test
           ./gradlew :businessone-ballerina:${{ matrix.directory }}:build
 
       - name: Upload coverage reports

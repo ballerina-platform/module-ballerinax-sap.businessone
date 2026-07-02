@@ -11,12 +11,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Get Ballerina Version
+        run: |
+          BAL_VERSION=$(grep -w 'ballerinaLangVersion' gradle.properties | cut -d= -f2 | rev | cut --complement -d- -f1 | rev)
+          if [ -z "$BAL_VERSION" ]; then
+            BAL_VERSION="latest"
+          fi
+          echo "BAL_VERSION=$BAL_VERSION" >> $GITHUB_ENV
+
+      - name: Set Up Ballerina
+        uses: ballerina-platform/setup-ballerina@v1.1.0
+        with:
+          version: ${{ env.BAL_VERSION }}
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
+
       - name: Build with Gradle
         env:
           packageUser: ${{ github.actor }}
           packagePAT: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew build
+        run: |
+          # Warm the Ballerina central cache with an online build first; the
+          # test task runs `bal test --offline` and needs the locked versions
+          # to be present in the cache on a fresh runner.
+          ./gradlew build -x test
+          ./gradlew build
