@@ -18,6 +18,29 @@
 
 import org.apache.tools.ant.taskdefs.condition.Os
 
+// Runs the examples against a live Service Layer (requires a Config.toml in
+// each example). Excluded in the automated build and release flows; the
+// shared release template references this task with
+// `-x :businessone-examples:test`, so it must exist.
+task test {
+    doLast {
+        try {
+            exec {
+                workingDir project.projectDir
+                println("Working dir: ${workingDir}")
+                if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                    commandLine 'sh', "/c", "chmod +x ./build.sh && ./build.sh run && exit %%ERRORLEVEL%%"
+                } else {
+                    commandLine 'sh', "-c", "chmod +x ./build.sh && ./build.sh run"
+                }
+            }
+        } catch (Exception e) {
+            println("Example Run failed: " + e.message)
+            throw e
+        }
+    }
+}
+
 task build {
     doLast {
         try {
@@ -41,3 +64,4 @@ task clean {
 }
 
 build.dependsOn ":businessone-ballerina:build"
+test.dependsOn ":businessone-ballerina:build"
