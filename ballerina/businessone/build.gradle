@@ -33,6 +33,7 @@ ballerina {
     packageOrganization = project.ext.packageOrg
     module = packageName
     isConnector = true
+    platform = "java21"
     testCoverageParam = '--code-coverage --coverage-format=xml --includes=ballerinax.*'
 }
 
