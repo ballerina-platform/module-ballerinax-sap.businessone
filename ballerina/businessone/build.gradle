@@ -72,10 +72,10 @@ release {
 build.dependsOn ':businessone-native:build'
 test.dependsOn ':businessone-native:build'
 
-// Make the packed wrapper resolvable by the connector packages in this repo
-// before it is published to Ballerina Central. The connectors no longer pin
-// `repository = "local"`, so the wrapper is mirrored into the local Ballerina
-// Central cache and resolved from there like any Central dependency.
+// Developer convenience: pack the wrapper and mirror it into the local
+// Ballerina Central cache, so in-repo connectors can build against local
+// wrapper changes that are not yet published to Ballerina Central. Not wired
+// into any build; run it explicitly when needed.
 task pushToLocalRepo {
     dependsOn build
     doLast {
