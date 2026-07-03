@@ -72,10 +72,5 @@ release {
     }
 }
 
-// Until the wrapper is on Ballerina Central, builds resolve it from the
-// local repository; make sure it is packed and pushed there first.
-build.dependsOn ':businessone-ballerina:businessone:pushToLocalRepo'
-test.dependsOn ':businessone-ballerina:businessone:pushToLocalRepo'
-
 publishToMavenLocal.dependsOn build
 publish.dependsOn build
