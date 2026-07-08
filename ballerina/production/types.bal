@@ -22,12 +22,12 @@ import ballerina/http;
 
 # A paged collection of `ResourceCapacities` entities returned by the SAP Business One Service Layer
 public type ResourceCapacitiesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceCapacity[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -57,52 +57,52 @@ public type GetResourcesQueries record {
 
 # The `ProductTree` entity of the SAP Business One Service Layer
 public type ProductTree record {
-    # Tree code field.
+    # Tree code field
     string TreeCode?;
     # OData EnumType 'BoItemTreeTypes'. Serialised by the Service Layer as the member name
     BoItemTreeTypes TreeType?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Price list field.
+    # Price list field
     int:Signed32 PriceList?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
-    # Plan avg prod size field.
+    # Plan avg prod size field
     decimal PlanAvgProdSize?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum HideBOMComponentsInPrintout?;
-    # Product description field.
+    # Product description field
     string ProductDescription?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Product tree lines field.
+    # Product tree lines field
     ProductTreeLine[] ProductTreeLines?;
-    # Product tree stages field.
+    # Product tree stages field
     ProductTreeStage[] ProductTreeStages?;
-    # Production orders field.
+    # Production orders field
     ProductionOrder[] ProductionOrders?;
 };
 
 # A paged collection of `SalesForecast` entities returned by the SAP Business One Service Layer
 public type SalesForecastCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesForecast[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -128,7 +128,7 @@ public type BoUpdateAllocationEnum "bouaManual"|"bouaCalculated"|"bouaRunCalcula
 
 # Represents the request payload for the `RoutingDateCalculationService_Calculate` operation of the SAP Business One Service Layer
 public type RoutingDateCalculationService_Calculate_body record {
-    # Routing date calculation input field.
+    # Routing date calculation input field
     @jsondata:Name {value: "RoutingDateCalculationInput"}
     RoutingDateCalculationInput routingDateCalculationInput?;
 };
@@ -230,93 +230,93 @@ public type ConnectionConfig record {|
 
 # The `ProductionOrder` entity of the SAP Business One Service Layer
 public type ProductionOrder record {
-    # Absolute entry field.
+    # Absolute entry field
     int:Signed32 AbsoluteEntry?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocumentNumber?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Item number field.
+    # Item number field
     string ItemNo?;
     # OData EnumType 'BoProductionOrderStatusEnum'. Serialised by the Service Layer as the member name
     BoProductionOrderStatusEnum ProductionOrderStatus?;
     # OData EnumType 'BoProductionOrderTypeEnum'. Serialised by the Service Layer as the member name
     BoProductionOrderTypeEnum ProductionOrderType?;
-    # Planned quantity field.
+    # Planned quantity field
     decimal PlannedQuantity?;
-    # Completed quantity field.
+    # Completed quantity field
     decimal CompletedQuantity?;
-    # Rejected quantity field.
+    # Rejected quantity field
     decimal RejectedQuantity?;
-    # Posting date field.
+    # Posting date field
     string PostingDate?;
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Production order origin entry field.
+    # Production order origin entry field
     int:Signed32 ProductionOrderOriginEntry?;
-    # Production order origin number field.
+    # Production order origin number field
     int:Signed32 ProductionOrderOriginNumber?;
     # OData EnumType 'BoProductionOrderOriginEnum'. Serialised by the Service Layer as the member name
     BoProductionOrderOriginEnum ProductionOrderOrigin?;
-    # User signature field.
+    # User signature field
     int:Signed32 UserSignature?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
-    # Closing date field.
+    # Closing date field
     string ClosingDate?;
-    # Release date field.
+    # Release date field
     string ReleaseDate?;
-    # Customer code field.
+    # Customer code field
     string CustomerCode?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
-    # Inventory unit of measure field.
+    # Inventory unit of measure field
     string InventoryUOM?;
-    # Journal remarks field.
+    # Journal remarks field
     string JournalRemarks?;
-    # Transaction number field.
+    # Transaction number field
     int:Signed32 TransactionNumber?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Printed?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Uo m entry field.
+    # Uo m entry field
     int:Signed32 UoMEntry?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # Product description field.
+    # Product description field
     string ProductDescription?;
-    # Priority field.
+    # Priority field
     int:Signed32 Priority?;
     # OData EnumType 'ResourceAllocationEnum'. Serialised by the Service Layer as the member name
     ResourceAllocationEnum RoutingDateCalculation?;
     # OData EnumType 'BoUpdateAllocationEnum'. Serialised by the Service Layer as the member name
     BoUpdateAllocationEnum UpdateAllocation?;
-    # SAP passport field.
+    # SAP passport field
     string SAPPassport?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Pick remarks field.
+    # Pick remarks field
     string PickRemarks?;
-    # Production order lines field.
+    # Production order lines field
     ProductionOrderLine[] ProductionOrderLines?;
-    # Production orders sales order lines field.
+    # Production orders sales order lines field
     ProductionOrdersSalesOrderLine[] ProductionOrdersSalesOrderLines?;
-    # Production orders stages field.
+    # Production orders stages field
     ProductionOrdersStage[] ProductionOrdersStages?;
-    # Production orders document references field.
+    # Production orders document references field
     ProductionOrdersDocumentReference[] ProductionOrdersDocumentReferences?;
     # The `ProductTree` entity of the SAP Business One Service Layer
     ProductTree ProductTree?;
@@ -331,116 +331,116 @@ public type ListResourcesHeaders record {
 
 # Represents the response payload for the `RouteStagesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     RouteStageParams[] value?;
 };
 
 # The `RoutingDateCalculationOutput` complex type of the SAP Business One Service Layer
 public type RoutingDateCalculationOutput record {|
-    # Proportion field.
+    # Proportion field
     @jsondata:Name {value: "Proportion"}
     decimal proportion?;
-    # Result date field.
+    # Result date field
     @jsondata:Name {value: "ResultDate"}
     string resultDate?;
 |};
 
 # The `BatchNumber` complex type of the SAP Business One Service Layer
 public type BatchNumber record {
-    # Batch number field.
+    # Batch number field
     string BatchNumber?;
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNumber?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNumber?;
-    # Expiry date field.
+    # Expiry date field
     string ExpiryDate?;
-    # Manufacturing date field.
+    # Manufacturing date field
     string ManufacturingDate?;
-    # Addmision date field.
+    # Addmision date field
     string AddmisionDate?;
-    # Location field.
+    # Location field
     string Location?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Base line number field.
+    # Base line number field
     int:Signed32 BaseLineNumber?;
-    # Tracking note field.
+    # Tracking note field
     int:Signed32 TrackingNote?;
-    # Tracking note line field.
+    # Tracking note line field
     int:Signed32 TrackingNoteLine?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # System serial number field.
+    # System serial number field
     int:Signed32 SystemSerialNumber?;
 };
 
 # The `Resource` entity of the SAP Business One Service Layer
 public type Resource record {
-    # Code field.
+    # Code field
     string Code?;
-    # Vis code field.
+    # Vis code field
     string VisCode?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Number field.
+    # Number field
     int:Signed32 Number?;
-    # Code bar field.
+    # Code bar field
     string CodeBar?;
-    # Name field.
+    # Name field
     string Name?;
-    # Foreign name field.
+    # Foreign name field
     string ForeignName?;
     # OData EnumType 'ResourceTypeEnum'. Serialised by the Service Layer as the member name
     ResourceTypeEnum Type?;
-    # Group field.
+    # Group field
     int:Signed32 Group?;
-    # Unit of measure field.
+    # Unit of measure field
     string UnitOfMeasure?;
     # OData EnumType 'ResourceIssueMethodEnum'. Serialised by the Service Layer as the member name
     ResourceIssueMethodEnum IssueMethod?;
-    # Cost1 field.
+    # Cost1 field
     decimal Cost1?;
-    # Cost2 field.
+    # Cost2 field
     decimal Cost2?;
-    # Cost3 field.
+    # Cost3 field
     decimal Cost3?;
-    # Cost4 field.
+    # Cost4 field
     decimal Cost4?;
-    # Cost5 field.
+    # Cost5 field
     decimal Cost5?;
-    # Cost6 field.
+    # Cost6 field
     decimal Cost6?;
-    # Cost7 field.
+    # Cost7 field
     decimal Cost7?;
-    # Cost8 field.
+    # Cost8 field
     decimal Cost8?;
-    # Cost9 field.
+    # Cost9 field
     decimal Cost9?;
-    # Cost10 field.
+    # Cost10 field
     decimal Cost10?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Active?;
-    # Active from field.
+    # Active from field
     string ActiveFrom?;
-    # Active to field.
+    # Active to field
     string ActiveTo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactive?;
-    # Inactive from field.
+    # Inactive from field
     string InactiveFrom?;
-    # Inactive to field.
+    # Inactive to field
     string InactiveTo?;
-    # Default warehouse field.
+    # Default warehouse field
     string DefaultWarehouse?;
-    # Picture field.
+    # Picture field
     string Picture?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Property1?;
@@ -570,19 +570,19 @@ public type Resource record {
     BoYesNoEnum Property63?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Property64?;
-    # Active remarks field.
+    # Active remarks field
     string ActiveRemarks?;
-    # Inactive remarks field.
+    # Inactive remarks field
     string InactiveRemarks?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Units per time field.
+    # Units per time field
     int:Signed32 UnitsPerTime?;
-    # Time per units field.
+    # Time per units field
     int:Signed32 TimePerUnits?;
     # OData EnumType 'ResourceAllocationEnum'. Serialised by the Service Layer as the member name
     ResourceAllocationEnum Allocation?;
-    # Linked item field.
+    # Linked item field
     string LinkedItem?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RelevantForSingleRun1?;
@@ -592,15 +592,15 @@ public type Resource record {
     BoYesNoEnum RelevantForSingleRun3?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RelevantForSingleRun4?;
-    # Resource warehouses field.
+    # Resource warehouses field
     ResourceWarehouse[] ResourceWarehouses?;
-    # Resource fixed assets field.
+    # Resource fixed assets field
     ResourceFixedAsset[] ResourceFixedAssets?;
-    # Resource employees field.
+    # Resource employees field
     ResourceEmployee[] ResourceEmployees?;
-    # Resource daily capacities field.
+    # Resource daily capacities field
     ResourceDailyCapacity[] ResourceDailyCapacities?;
-    # Resource capacities field.
+    # Resource capacities field
     ResourceCapacity[] ResourceCapacities?;
     # The `ResourceGroup` entity of the SAP Business One Service Layer
     ResourceGroup ResourceGroup?;
@@ -611,32 +611,32 @@ public type ProductionItemType "pit_Item"|"pit_Resource"|"pit_Text";
 
 # The `ResourceFixedAsset` complex type of the SAP Business One Service Layer
 public type ResourceFixedAsset record {|
-    # Item code field.
+    # Item code field
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # A paged collection of `ProductionOrders` entities returned by the SAP Business One Service Layer
 public type ProductionOrdersCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ProductionOrder[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ResourceGroupParams` complex type of the SAP Business One Service Layer
 public type ResourceGroupParams record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -668,104 +668,104 @@ public type ListSalesForecastQueries record {
 
 # The `ResourcePropertyParams` complex type of the SAP Business One Service Layer
 public type ResourcePropertyParams record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `SalesForecast` entity of the SAP Business One Service Layer
 public type SalesForecast record {
-    # Forecast start date field.
+    # Forecast start date field
     string ForecastStartDate?;
-    # Forecast end date field.
+    # Forecast end date field
     string ForecastEndDate?;
-    # Forecast code field.
+    # Forecast code field
     string ForecastCode?;
-    # Forecast name field.
+    # Forecast name field
     string ForecastName?;
-    # Numerator field.
+    # Numerator field
     int:Signed32 Numerator?;
     # OData EnumType 'BoForecastViewType'. Serialised by the Service Layer as the member name
     BoForecastViewType View?;
-    # Sales forecast lines field.
+    # Sales forecast lines field
     SalesForecastLine[] SalesForecastLines?;
 };
 
 # The `ResourceCapacityParams` complex type of the SAP Business One Service Layer
 public type ResourceCapacityParams record {|
-    # Reverted entry field.
+    # Reverted entry field
     @jsondata:Name {value: "RevertedEntry"}
     int:Signed32 revertedEntry?;
-    # Warehouse field.
+    # Warehouse field
     @jsondata:Name {value: "Warehouse"}
     string warehouse?;
-    # Action field.
+    # Action field
     @jsondata:Name {value: "Action"}
     ResourceCapacityActionEnum action?;
-    # Base line number field.
+    # Base line number field
     @jsondata:Name {value: "BaseLineNum"}
     int:Signed32 baseLineNum?;
-    # Source type field.
+    # Source type field
     @jsondata:Name {value: "SourceType"}
     ResourceCapacitySourceTypeEnum sourceType?;
-    # Owning type field.
+    # Owning type field
     @jsondata:Name {value: "OwningType"}
     ResourceCapacityOwningTypeEnum owningType?;
-    # Single run memo source field.
+    # Single run memo source field
     @jsondata:Name {value: "SingleRunMemoSource"}
     ResourceCapacityMemoSourceEnum singleRunMemoSource?;
-    # Memo source field.
+    # Memo source field
     @jsondata:Name {value: "MemoSource"}
     ResourceCapacityMemoSourceEnum memoSource?;
-    # Single run memo field.
+    # Single run memo field
     @jsondata:Name {value: "SingleRunMemo"}
     string singleRunMemo?;
-    # Reverted type field.
+    # Reverted type field
     @jsondata:Name {value: "RevertedType"}
     ResourceCapacityRevertedTypeEnum revertedType?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Single run capacity field.
+    # Single run capacity field
     @jsondata:Name {value: "SingleRunCapacity"}
     decimal singleRunCapacity?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
-    # Type field.
+    # Type field
     @jsondata:Name {value: "Type"}
     ResourceCapacityTypeEnum 'type?;
-    # Reverted line number field.
+    # Reverted line number field
     @jsondata:Name {value: "RevertedLineNum"}
     int:Signed32 revertedLineNum?;
-    # Capacity field.
+    # Capacity field
     @jsondata:Name {value: "Capacity"}
     decimal capacity?;
-    # Base type field.
+    # Base type field
     @jsondata:Name {value: "BaseType"}
     ResourceCapacityBaseTypeEnum baseType?;
-    # Source entry field.
+    # Source entry field
     @jsondata:Name {value: "SourceEntry"}
     int:Signed32 sourceEntry?;
-    # Source line number field.
+    # Source line number field
     @jsondata:Name {value: "SourceLineNum"}
     int:Signed32 sourceLineNum?;
-    # ID field.
+    # ID field
     @jsondata:Name {value: "Id"}
     int:Signed32 id?;
-    # Owning entry field.
+    # Owning entry field
     @jsondata:Name {value: "OwningEntry"}
     int:Signed32 owningEntry?;
-    # Base entry field.
+    # Base entry field
     @jsondata:Name {value: "BaseEntry"}
     int:Signed32 baseEntry?;
-    # Owning line number field.
+    # Owning line number field
     @jsondata:Name {value: "OwningLineNum"}
     int:Signed32 owningLineNum?;
-    # Memo field.
+    # Memo field
     @jsondata:Name {value: "Memo"}
     string memo?;
 |};
@@ -779,22 +779,22 @@ public type ListSalesForecastHeaders record {
 
 # The `RouteStageParams` complex type of the SAP Business One Service Layer
 public type RouteStageParams record {|
-    # Creation date field.
+    # Creation date field
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
-    # Date of update field.
+    # Date of update field
     @jsondata:Name {value: "DateOfUpdate"}
     string dateOfUpdate?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Internal number field.
+    # Internal number field
     @jsondata:Name {value: "InternalNumber"}
     int:Signed32 internalNumber?;
-    # Generation time field.
+    # Generation time field
     @jsondata:Name {value: "GenerationTime"}
     string generationTime?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -804,61 +804,61 @@ public type BoProductionOrderStatusEnum "boposPlanned"|"boposReleased"|"boposClo
 
 # The `SerialNumber` complex type of the SAP Business One Service Layer
 public type SerialNumber record {
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNumber?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNumber?;
-    # Expiry date field.
+    # Expiry date field
     string ExpiryDate?;
-    # Manufacture date field.
+    # Manufacture date field
     string ManufactureDate?;
-    # Reception date field.
+    # Reception date field
     string ReceptionDate?;
-    # Warranty start field.
+    # Warranty start field
     string WarrantyStart?;
-    # Warranty end field.
+    # Warranty end field
     string WarrantyEnd?;
-    # Location field.
+    # Location field
     string Location?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Batch ID field.
+    # Batch ID field
     string BatchID?;
-    # System serial number field.
+    # System serial number field
     int:Signed32 SystemSerialNumber?;
-    # Base line number field.
+    # Base line number field
     int:Signed32 BaseLineNumber?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Tracking note field.
+    # Tracking note field
     int:Signed32 TrackingNote?;
-    # Tracking note line field.
+    # Tracking note line field
     int:Signed32 TrackingNoteLine?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
 };
 
 # The `ProductionOrdersStage` complex type of the SAP Business One Service Layer
 public type ProductionOrdersStage record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Stage ID field.
+    # Stage ID field
     int:Signed32 StageID?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNumber?;
-    # Stage entry field.
+    # Stage entry field
     int:Signed32 StageEntry?;
-    # Name field.
+    # Name field
     string Name?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # End date field.
+    # End date field
     string EndDate?;
-    # Required days field.
+    # Required days field
     decimal RequiredDays?;
-    # Waiting days field.
+    # Waiting days field
     decimal WaitingDays?;
-    # Calculation proportion field.
+    # Calculation proportion field
     decimal CalculationProportion?;
 };
 
@@ -867,87 +867,87 @@ public type ResourceCapacityBaseTypeEnum "rcbtNone"|"rcbtProductionOrder";
 
 # Represents the response payload for the `ResourceCapacitiesService_GetListWithFilter` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceCapacityParams[] value?;
 };
 
 # Represents the response payload for the `ResourceGroupsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceGroupParams[] value?;
 };
 
 # Represents the response payload for the `ResourcePropertiesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourcePropertyParams[] value?;
 };
 
 # The `ProductionOrdersDocumentReference` complex type of the SAP Business One Service Layer
 public type ProductionOrdersDocumentReference record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Reference document entr field.
+    # Reference document entr field
     int:Signed32 RefDocEntr?;
-    # Reference document number field.
+    # Reference document number field
     int:Signed32 RefDocNum?;
-    # Ext document number field.
+    # Ext document number field
     string ExtDocNum?;
     # OData EnumType 'ReferencedObjectTypeEnum'. Serialised by the Service Layer as the member name
     ReferencedObjectTypeEnum RefObjType?;
-    # Issue date field.
+    # Issue date field
     string IssueDate?;
-    # Remark field.
+    # Remark field
     string Remark?;
 };
 
 # Represents the response payload for the `ResourcesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceParams[] value?;
 };
 
 # The `RoutingDateCalculationInput` complex type of the SAP Business One Service Layer
 public type RoutingDateCalculationInput record {|
-    # Capacity sum field.
+    # Capacity sum field
     @jsondata:Name {value: "CapacitySum"}
     decimal capacitySum?;
-    # Resource code field.
+    # Resource code field
     @jsondata:Name {value: "ResourceCode"}
     string resourceCode?;
-    # First date proportion field.
+    # First date proportion field
     @jsondata:Name {value: "FirstDateProportion"}
     decimal firstDateProportion?;
-    # W OR obj abs field.
+    # W OR obj abs field
     @jsondata:Name {value: "WORObjAbs"}
     int:Signed32 wORObjAbs?;
-    # W OR line field.
+    # W OR line field
     @jsondata:Name {value: "WORLine"}
     int:Signed32 wORLine?;
-    # Calculate from date field.
+    # Calculate from date field
     @jsondata:Name {value: "CalculateFromDate"}
     string calculateFromDate?;
-    # Warehouse code field.
+    # Warehouse code field
     @jsondata:Name {value: "WarehouseCode"}
     string warehouseCode?;
-    # Calculate until date field.
+    # Calculate until date field
     @jsondata:Name {value: "CalculateUntilDate"}
     string calculateUntilDate?;
-    # Resource alloc field.
+    # Resource alloc field
     @jsondata:Name {value: "ResourceAlloc"}
     ResourceAllocationEnum resourceAlloc?;
 |};
@@ -955,12 +955,12 @@ public type RoutingDateCalculationInput record {|
 
 # A paged collection of `RouteStages` entities returned by the SAP Business One Service Layer
 public type RouteStagesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     RouteStage[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -977,53 +977,53 @@ public type GetResourceCapacitiesQueries record {
 
 # The `RouteStage` entity of the SAP Business One Service Layer
 public type RouteStage record {|
-    # Creation date field.
+    # Creation date field
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
-    # Date of update field.
+    # Date of update field
     @jsondata:Name {value: "DateOfUpdate"}
     string dateOfUpdate?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Internal number field.
+    # Internal number field
     @jsondata:Name {value: "InternalNumber"}
     int:Signed32 internalNumber?;
-    # Generation time field.
+    # Generation time field
     @jsondata:Name {value: "GenerationTime"}
     string generationTime?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `ResourceDailyCapacity` complex type of the SAP Business One Service Layer
 public type ResourceDailyCapacity record {|
-    # Factor2 field.
+    # Factor2 field
     @jsondata:Name {value: "Factor2"}
     decimal factor2?;
-    # Weekday field.
+    # Weekday field
     @jsondata:Name {value: "Weekday"}
     ResourceDailyCapacityWeekdayEnum weekday?;
-    # Factor1 field.
+    # Factor1 field
     @jsondata:Name {value: "Factor1"}
     decimal factor1?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
-    # Factor4 field.
+    # Factor4 field
     @jsondata:Name {value: "Factor4"}
     decimal factor4?;
-    # Factor3 field.
+    # Factor3 field
     @jsondata:Name {value: "Factor3"}
     decimal factor3?;
-    # Total field.
+    # Total field
     @jsondata:Name {value: "Total"}
     decimal total?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Single run field.
+    # Single run field
     @jsondata:Name {value: "SingleRun"}
     decimal singleRun?;
 |};
@@ -1036,36 +1036,36 @@ public type ResourceCapacityRevertedTypeEnum "rcrtNone"|"rcrtIssueForProduction"
 
 # The `ProductionOrdersSalesOrderLine` complex type of the SAP Business One Service Layer
 public type ProductionOrdersSalesOrderLine record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Base number field.
+    # Base number field
     int:Signed32 BaseNumber?;
-    # Base abs entry field.
+    # Base abs entry field
     int:Signed32 BaseAbsEntry?;
-    # Base line field.
+    # Base line field
     int:Signed32 BaseLine?;
 };
 
 # Represents the request payload for the `ResourceCapacitiesService_GetListWithFilter` operation of the SAP Business One Service Layer
 public type ResourceCapacitiesService_GetListWithFilter_body record {
-    # Resource capacity with filter params field.
+    # Resource capacity with filter params field
     @jsondata:Name {value: "ResourceCapacityWithFilterParams"}
     ResourceCapacityWithFilterParams resourceCapacityWithFilterParams?;
 };
 
 # The `ProductTreeStage` complex type of the SAP Business One Service Layer
 public type ProductTreeStage record {
-    # Father field.
+    # Father field
     string Father?;
-    # Stage ID field.
+    # Stage ID field
     int:Signed32 StageID?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNumber?;
-    # Stage entry field.
+    # Stage entry field
     int:Signed32 StageEntry?;
-    # Name field.
+    # Name field
     string Name?;
-    # Waiting days field.
+    # Waiting days field
     decimal WaitingDays?;
 };
 
@@ -1091,61 +1091,61 @@ public type GetResourcePropertiesQueries record {
 
 # The `ProductTreeLine` complex type of the SAP Business One Service Layer
 public type ProductTreeLine record {
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
-    # Price field.
+    # Price field
     decimal Price?;
-    # Currency field.
+    # Currency field
     string Currency?;
     # OData EnumType 'BoIssueMethod'. Serialised by the Service Layer as the member name
     BoIssueMethod IssueMethod?;
-    # Inventory unit of measure field.
+    # Inventory unit of measure field
     string InventoryUOM?;
-    # Comment field.
+    # Comment field
     string Comment?;
-    # Parent item field.
+    # Parent item field
     string ParentItem?;
-    # Price list field.
+    # Price list field
     int:Signed32 PriceList?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Wip account field.
+    # Wip account field
     string WipAccount?;
     # OData EnumType 'ProductionItemType'. Serialised by the Service Layer as the member name
     ProductionItemType ItemType?;
-    # Line text field.
+    # Line text field
     string LineText?;
-    # Additional quantity field.
+    # Additional quantity field
     decimal AdditionalQuantity?;
-    # Stage ID field.
+    # Stage ID field
     int:Signed32 StageID?;
-    # Child number field.
+    # Child number field
     int:Signed32 ChildNum?;
-    # Visual order field.
+    # Visual order field
     int:Signed32 VisualOrder?;
-    # Item name field.
+    # Item name field
     string ItemName?;
 };
 
 # The `ResourceWarehouse` complex type of the SAP Business One Service Layer
 public type ResourceWarehouse record {
-    # Code field.
+    # Code field
     string Code?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Locked?;
@@ -1156,13 +1156,13 @@ public type ResourceCapacityActionEnum "rcaUnknown"|"rcaProductionOrderCreate"|"
 
 # The `SalesForecastLine` complex type of the SAP Business One Service Layer
 public type SalesForecastLine record {
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Forecasted day field.
+    # Forecasted day field
     string ForecastedDay?;
-    # Item number field.
+    # Item number field
     string ItemNo?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
 };
 
@@ -1198,19 +1198,19 @@ public type GetResourceGroupsQueries record {
 
 # Represents the response payload for the `ResourceCapacitiesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceCapacityParams[] value?;
 };
 
 # The `ResourceEmployee` complex type of the SAP Business One Service Layer
 public type ResourceEmployee record {|
-    # Employee field.
+    # Employee field
     @jsondata:Name {value: "Employee"}
     string employee?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -1245,79 +1245,79 @@ public type ReferencedObjectTypeEnum "rot_ExternalDocument"|"rot_SalesQuotation"
 
 # The `ResourceGroup` entity of the SAP Business One Service Layer
 public type ResourceGroup record {|
-    # Cost1 field.
+    # Cost1 field
     @jsondata:Name {value: "Cost1"}
     decimal cost1?;
-    # Cost2 field.
+    # Cost2 field
     @jsondata:Name {value: "Cost2"}
     decimal cost2?;
-    # Cost3 field.
+    # Cost3 field
     @jsondata:Name {value: "Cost3"}
     decimal cost3?;
-    # Cost name9 field.
+    # Cost name9 field
     @jsondata:Name {value: "CostName9"}
     string costName9?;
-    # Cost4 field.
+    # Cost4 field
     @jsondata:Name {value: "Cost4"}
     decimal cost4?;
-    # Cost name8 field.
+    # Cost name8 field
     @jsondata:Name {value: "CostName8"}
     string costName8?;
-    # Cost9 field.
+    # Cost9 field
     @jsondata:Name {value: "Cost9"}
     decimal cost9?;
-    # Cost5 field.
+    # Cost5 field
     @jsondata:Name {value: "Cost5"}
     decimal cost5?;
-    # Cost6 field.
+    # Cost6 field
     @jsondata:Name {value: "Cost6"}
     decimal cost6?;
-    # Cost7 field.
+    # Cost7 field
     @jsondata:Name {value: "Cost7"}
     decimal cost7?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
-    # Cost8 field.
+    # Cost8 field
     @jsondata:Name {value: "Cost8"}
     decimal cost8?;
-    # Number of units text field.
+    # Number of units text field
     @jsondata:Name {value: "NumOfUnitsText"}
     string numOfUnitsText?;
-    # Cost10 field.
+    # Cost10 field
     @jsondata:Name {value: "Cost10"}
     decimal cost10?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Type field.
+    # Type field
     @jsondata:Name {value: "Type"}
     ResourceTypeEnum 'type?;
-    # Cost name10 field.
+    # Cost name10 field
     @jsondata:Name {value: "CostName10"}
     string costName10?;
-    # Cost name3 field.
+    # Cost name3 field
     @jsondata:Name {value: "CostName3"}
     string costName3?;
-    # Cost name2 field.
+    # Cost name2 field
     @jsondata:Name {value: "CostName2"}
     string costName2?;
-    # Cost name1 field.
+    # Cost name1 field
     @jsondata:Name {value: "CostName1"}
     string costName1?;
-    # Resources field.
+    # Resources field
     @jsondata:Name {value: "Resources"}
     Resource[] resources?;
-    # Cost name7 field.
+    # Cost name7 field
     @jsondata:Name {value: "CostName7"}
     string costName7?;
-    # Cost name6 field.
+    # Cost name6 field
     @jsondata:Name {value: "CostName6"}
     string costName6?;
-    # Cost name5 field.
+    # Cost name5 field
     @jsondata:Name {value: "CostName5"}
     string costName5?;
-    # Cost name4 field.
+    # Cost name4 field
     @jsondata:Name {value: "CostName4"}
     string costName4?;
 |};
@@ -1341,7 +1341,7 @@ public type ListProductTreesHeaders record {
 
 # The `ResourceParams` complex type of the SAP Business One Service Layer
 public type ResourceParams record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -1351,12 +1351,12 @@ public type BoItemTreeTypes "iNotATree"|"iAssemblyTree"|"iSalesTree"|"iProductio
 
 # A paged collection of `ResourceProperties` entities returned by the SAP Business One Service Layer
 public type ResourcePropertiesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceProperty[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1395,69 +1395,69 @@ public type ListProductTreesQueries record {
 
 # The `ProductionOrderLine` complex type of the SAP Business One Service Layer
 public type ProductionOrderLine record {
-    # Document absolute entry field.
+    # Document absolute entry field
     int:Signed32 DocumentAbsoluteEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Item number field.
+    # Item number field
     string ItemNo?;
-    # Base quantity field.
+    # Base quantity field
     decimal BaseQuantity?;
-    # Planned quantity field.
+    # Planned quantity field
     decimal PlannedQuantity?;
-    # Issued quantity field.
+    # Issued quantity field
     decimal IssuedQuantity?;
     # OData EnumType 'BoIssueMethod'. Serialised by the Service Layer as the member name
     BoIssueMethod ProductionOrderIssueType?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
-    # Visual order field.
+    # Visual order field
     int:Signed32 VisualOrder?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Location code field.
+    # Location code field
     int:Signed32 LocationCode?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Uo m entry field.
+    # Uo m entry field
     int:Signed32 UoMEntry?;
-    # Uo m code field.
+    # Uo m code field
     int:Signed32 UoMCode?;
-    # Wip account field.
+    # Wip account field
     string WipAccount?;
     # OData EnumType 'ProductionItemType'. Serialised by the Service Layer as the member name
     ProductionItemType ItemType?;
-    # Line text field.
+    # Line text field
     string LineText?;
-    # Additional quantity field.
+    # Additional quantity field
     decimal AdditionalQuantity?;
     # OData EnumType 'ResourceAllocationEnum'. Serialised by the Service Layer as the member name
     ResourceAllocationEnum ResourceAllocation?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # End date field.
+    # End date field
     string EndDate?;
-    # Stage ID field.
+    # Stage ID field
     int:Signed32 StageID?;
-    # Required days field.
+    # Required days field
     decimal RequiredDays?;
-    # Item name field.
+    # Item name field
     string ItemName?;
-    # Weight of recycled plastic field.
+    # Weight of recycled plastic field
     decimal WeightOfRecycledPlastic?;
-    # Plastic package exemption reason field.
+    # Plastic package exemption reason field
     string PlasticPackageExemptionReason?;
-    # Serial numbers field.
+    # Serial numbers field
     SerialNumber[] SerialNumbers?;
-    # Batch numbers field.
+    # Batch numbers field
     BatchNumber[] BatchNumbers?;
 };
 
@@ -1529,12 +1529,12 @@ public type ListResourceCapacitiesHeaders record {
 
 # A paged collection of `ProductTrees` entities returned by the SAP Business One Service Layer
 public type ProductTreesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ProductTree[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1566,89 +1566,89 @@ public type ListResourceCapacitiesQueries record {
 
 # The `ResourceCapacity` entity of the SAP Business One Service Layer
 public type ResourceCapacity record {|
-    # Warehouse field.
+    # Warehouse field
     @jsondata:Name {value: "Warehouse"}
     string warehouse?;
-    # Action field.
+    # Action field
     @jsondata:Name {value: "Action"}
     ResourceCapacityActionEnum action?;
-    # Source type field.
+    # Source type field
     @jsondata:Name {value: "SourceType"}
     ResourceCapacitySourceTypeEnum sourceType?;
-    # Single run capacity field.
+    # Single run capacity field
     @jsondata:Name {value: "SingleRunCapacity"}
     decimal singleRunCapacity?;
-    # Reverted line number field.
+    # Reverted line number field
     @jsondata:Name {value: "RevertedLineNum"}
     int:Signed32 revertedLineNum?;
-    # Capacity field.
+    # Capacity field
     @jsondata:Name {value: "Capacity"}
     decimal capacity?;
-    # Source entry field.
+    # Source entry field
     @jsondata:Name {value: "SourceEntry"}
     int:Signed32 sourceEntry?;
-    # Reverted entry field.
+    # Reverted entry field
     @jsondata:Name {value: "RevertedEntry"}
     int:Signed32 revertedEntry?;
-    # Base line number field.
+    # Base line number field
     @jsondata:Name {value: "BaseLineNum"}
     int:Signed32 baseLineNum?;
-    # Owning type field.
+    # Owning type field
     @jsondata:Name {value: "OwningType"}
     ResourceCapacityOwningTypeEnum owningType?;
-    # Single run memo source field.
+    # Single run memo source field
     @jsondata:Name {value: "SingleRunMemoSource"}
     ResourceCapacityMemoSourceEnum singleRunMemoSource?;
-    # Resource field.
+    # Resource field
     @jsondata:Name {value: "Resource"}
     Resource 'resource?;
-    # Memo source field.
+    # Memo source field
     @jsondata:Name {value: "MemoSource"}
     ResourceCapacityMemoSourceEnum memoSource?;
-    # Single run memo field.
+    # Single run memo field
     @jsondata:Name {value: "SingleRunMemo"}
     string singleRunMemo?;
-    # Reverted type field.
+    # Reverted type field
     @jsondata:Name {value: "RevertedType"}
     ResourceCapacityRevertedTypeEnum revertedType?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
-    # Type field.
+    # Type field
     @jsondata:Name {value: "Type"}
     ResourceCapacityTypeEnum 'type?;
-    # Base type field.
+    # Base type field
     @jsondata:Name {value: "BaseType"}
     ResourceCapacityBaseTypeEnum baseType?;
-    # Source line number field.
+    # Source line number field
     @jsondata:Name {value: "SourceLineNum"}
     int:Signed32 sourceLineNum?;
-    # ID field.
+    # ID field
     @jsondata:Name {value: "Id"}
     int:Signed32 id?;
-    # Owning entry field.
+    # Owning entry field
     @jsondata:Name {value: "OwningEntry"}
     int:Signed32 owningEntry?;
-    # Base entry field.
+    # Base entry field
     @jsondata:Name {value: "BaseEntry"}
     int:Signed32 baseEntry?;
-    # Owning line number field.
+    # Owning line number field
     @jsondata:Name {value: "OwningLineNum"}
     int:Signed32 owningLineNum?;
-    # Memo field.
+    # Memo field
     @jsondata:Name {value: "Memo"}
     string memo?;
 |};
 
 # The `ResourceProperty` entity of the SAP Business One Service Layer
 public type ResourceProperty record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1665,28 +1665,28 @@ public type GetRouteStagesQueries record {
 
 # A paged collection of `Resources` entities returned by the SAP Business One Service Layer
 public type ResourcesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Resource[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ResourceCapacityWithFilterParams` complex type of the SAP Business One Service Layer
 public type ResourceCapacityWithFilterParams record {|
-    # Warehouse field.
+    # Warehouse field
     @jsondata:Name {value: "Warehouse"}
     string warehouse?;
-    # Type field.
+    # Type field
     @jsondata:Name {value: "Type"}
     ResourceCapacityTypeEnum 'type?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
 |};
@@ -1696,12 +1696,12 @@ public type BoProductionOrderTypeEnum "bopotStandard"|"bopotSpecial"|"bopotDisas
 
 # A paged collection of `ResourceGroups` entities returned by the SAP Business One Service Layer
 public type ResourceGroupsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ResourceGroup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };

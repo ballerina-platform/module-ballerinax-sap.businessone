@@ -54,25 +54,25 @@ public type ListServiceCallProblemSubTypesHeaders record {
 
 # The `ServiceContract_Line` complex type of the SAP Business One Service Layer
 public type ServiceContractLine record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNum?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNum?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Item name field.
+    # Item name field
     string ItemName?;
-    # Item group field.
+    # Item group field
     int:Signed32 ItemGroup?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # End date field.
+    # End date field
     string EndDate?;
-    # Item group name field.
+    # Item group name field
     string ItemGroupName?;
-    # Termination date field.
+    # Termination date field
     string TerminationDate?;
 };
 
@@ -81,7 +81,7 @@ public type BoYesNoEnum "tNO"|"tYES";
 
 # The `CustomerEquipmentCardBusinessPartner` complex type of the SAP Business One Service Layer
 public type CustomerEquipmentCardBusinessPartner record {
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
 };
 
@@ -152,12 +152,12 @@ public type BoContractTypes "ct_Customer"|"ct_ItemGroup"|"ct_SerialNumber";
 
 # A paged collection of `KnowledgeBaseSolutions` entities returned by the SAP Business One Service Layer
 public type KnowledgeBaseSolutionsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     KnowledgeBaseSolution[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -192,19 +192,19 @@ public type ListServiceCallOriginsQueries record {
 
 # The `ServiceCallStatusParams` complex type of the SAP Business One Service Layer
 public type ServiceCallStatusParams record {|
-    # Status ID field.
+    # Status ID field
     @jsondata:Name {value: "StatusId"}
     int:Signed32 statusId?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `QueueMember` complex type of the SAP Business One Service Layer
 public type QueueMember record {
-    # Queue ID field.
+    # Queue ID field
     string QueueID?;
-    # Member user ID field.
+    # Member user ID field
     int:Signed32 MemberUserID?;
 };
 
@@ -231,31 +231,31 @@ public type GetServiceContractsQueries record {
 
 # A paged collection of `Queue` entities returned by the SAP Business One Service Layer
 public type QueueCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Queue[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ServiceCallSolutionStatus` entity of the SAP Business One Service Layer
 public type ServiceCallSolutionStatus record {|
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Status ID field.
+    # Status ID field
     @jsondata:Name {value: "StatusId"}
     int:Signed32 statusId?;
-    # Knowledge base solutions field.
+    # Knowledge base solutions field
     @jsondata:Name {value: "KnowledgeBaseSolutions"}
     KnowledgeBaseSolution[] knowledgeBaseSolutions?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -310,106 +310,106 @@ public type BoSvcCallPriorities "scp_Low"|"scp_Medium"|"scp_High";
 
 # A paged collection of `ServiceCallStatus` entities returned by the SAP Business One Service Layer
 public type ServiceCallStatusCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallStatus[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ServiceCallProblemSubType` entity of the SAP Business One Service Layer
 public type ServiceCallProblemSubType record {|
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Problem sub type ID field.
+    # Problem sub type ID field
     @jsondata:Name {value: "ProblemSubTypeID"}
     int:Signed32 problemSubTypeID?;
-    # Service calls field.
+    # Service calls field
     @jsondata:Name {value: "ServiceCalls"}
     ServiceCall[] serviceCalls?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `ServiceCallBPAddressComponent` complex type of the SAP Business One Service Layer
 public type ServiceCallBPAddressComponent record {
-    # Ship to street field.
+    # Ship to street field
     string ShipToStreet?;
-    # Ship to street number field.
+    # Ship to street number field
     string ShipToStreetNo?;
-    # Ship to block field.
+    # Ship to block field
     string ShipToBlock?;
-    # Ship to building field.
+    # Ship to building field
     string ShipToBuilding?;
-    # Ship to city field.
+    # Ship to city field
     string ShipToCity?;
-    # Ship to zip code field.
+    # Ship to zip code field
     string ShipToZipCode?;
-    # Ship to state field.
+    # Ship to state field
     string ShipToState?;
-    # Ship to county field.
+    # Ship to county field
     string ShipToCounty?;
-    # Ship to country field.
+    # Ship to country field
     string ShipToCountry?;
-    # Ship to address type field.
+    # Ship to address type field
     string ShipToAddressType?;
-    # Ship to address2 field.
+    # Ship to address2 field
     string ShipToAddress2?;
-    # Ship to address3 field.
+    # Ship to address3 field
     string ShipToAddress3?;
-    # Ship to global location number field.
+    # Ship to global location number field
     string ShipToGlobalLocationNumber?;
-    # Bill to street field.
+    # Bill to street field
     string BillToStreet?;
-    # Bill to street number field.
+    # Bill to street number field
     string BillToStreetNo?;
-    # Bill to block field.
+    # Bill to block field
     string BillToBlock?;
-    # Bill to building field.
+    # Bill to building field
     string BillToBuilding?;
-    # Bill to city field.
+    # Bill to city field
     string BillToCity?;
-    # Bill to zip code field.
+    # Bill to zip code field
     string BillToZipCode?;
-    # Bill to state field.
+    # Bill to state field
     string BillToState?;
-    # Bill to county field.
+    # Bill to county field
     string BillToCounty?;
-    # Bill to country field.
+    # Bill to country field
     string BillToCountry?;
-    # Bill to address type field.
+    # Bill to address type field
     string BillToAddressType?;
-    # Bill to address2 field.
+    # Bill to address2 field
     string BillToAddress2?;
-    # Bill to address3 field.
+    # Bill to address3 field
     string BillToAddress3?;
-    # Bill to global location number field.
+    # Bill to global location number field
     string BillToGlobalLocationNumber?;
 };
 
 # The `ServiceCallOrigin` entity of the SAP Business One Service Layer
 public type ServiceCallOrigin record {|
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Origin ID field.
+    # Origin ID field
     @jsondata:Name {value: "OriginID"}
     int:Signed32 originID?;
-    # Service calls field.
+    # Service calls field
     @jsondata:Name {value: "ServiceCalls"}
     ServiceCall[] serviceCalls?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -429,50 +429,50 @@ public type GetServiceCallSolutionStatusQueries record {
 
 # The `ServiceCallProblemType` entity of the SAP Business One Service Layer
 public type ServiceCallProblemType record {|
-    # Problem type ID field.
+    # Problem type ID field
     @jsondata:Name {value: "ProblemTypeID"}
     int:Signed32 problemTypeID?;
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Service calls field.
+    # Service calls field
     @jsondata:Name {value: "ServiceCalls"}
     ServiceCall[] serviceCalls?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # A paged collection of `ContractTemplates` entities returned by the SAP Business One Service Layer
 public type ContractTemplatesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ContractTemplate[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `Queue` entity of the SAP Business One Service Layer
 public type Queue record {
-    # Queue ID field.
+    # Queue ID field
     string QueueID?;
-    # Description field.
+    # Description field
     string Description?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactive?;
-    # Queue manager field.
+    # Queue manager field
     int:Signed32 QueueManager?;
-    # Queue email field.
+    # Queue email field
     string QueueEmail?;
-    # Queue members field.
+    # Queue members field
     QueueMember[] QueueMembers?;
-    # Service calls field.
+    # Service calls field
     ServiceCall[] ServiceCalls?;
 };
 
@@ -503,24 +503,24 @@ public type ListKnowledgeBaseSolutionsQueries record {
 
 # A paged collection of `CustomerEquipmentCards` entities returned by the SAP Business One Service Layer
 public type CustomerEquipmentCardsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CustomerEquipmentCard[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `ServiceCallProblemTypes` entities returned by the SAP Business One Service Layer
 public type ServiceCallProblemTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallProblemType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -594,28 +594,28 @@ public type BoServiceTypes "bst_Regular"|"bst_Warranty";
 
 # The `ServiceCallInventoryExpense` complex type of the SAP Business One Service Layer
 public type ServiceCallInventoryExpense record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
     # OData EnumType 'BoSvcExpPartTypes'. Serialised by the Service Layer as the member name
     BoSvcExpPartTypes PartType?;
     # OData EnumType 'BoSvcEpxDocTypes'. Serialised by the Service Layer as the member name
     BoSvcEpxDocTypes DocumentType?;
-    # Document posting date field.
+    # Document posting date field
     string DocumentPostingDate?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocumentNumber?;
     # OData EnumType 'BoStckTrnDir'. Serialised by the Service Layer as the member name
     BoStckTrnDir StockTransferDirection?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
 };
 
 # The `ServiceCallTypeParams` complex type of the SAP Business One Service Layer
 public type ServiceCallTypeParams record {|
-    # Call type ID field.
+    # Call type ID field
     @jsondata:Name {value: "CallTypeID"}
     int:Signed32 callTypeID?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -638,9 +638,9 @@ public type ListServiceCallStatusHeaders record {
 
 # The `ServiceCallActivity` complex type of the SAP Business One Service Layer
 public type ServiceCallActivity record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Activity code field.
+    # Activity code field
     int:Signed32 ActivityCode?;
 };
 
@@ -671,83 +671,83 @@ public type ListQueueQueries record {
 
 # The `CustomerEquipmentCard` entity of the SAP Business One Service Layer
 public type CustomerEquipmentCard record {
-    # Equipment card number field.
+    # Equipment card number field
     int:Signed32 EquipmentCardNum?;
-    # Customer code field.
+    # Customer code field
     string CustomerCode?;
-    # Customer name field.
+    # Customer name field
     string CustomerName?;
-    # Contact employee code field.
+    # Contact employee code field
     int:Signed32 ContactEmployeeCode?;
-    # Direct customer code field.
+    # Direct customer code field
     string DirectCustomerCode?;
-    # Direct customer name field.
+    # Direct customer name field
     string DirectCustomerName?;
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNum?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNum?;
-    # Required resolution time field.
+    # Required resolution time field
     int:Signed32 RequiredResolutionTime?;
     # OData EnumType 'BoResolutionUnits'. Serialised by the Service Layer as the member name
     BoResolutionUnits RequiredResolutionUnit?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Item description field.
+    # Item description field
     string ItemDescription?;
-    # Invoice code field.
+    # Invoice code field
     int:Signed32 InvoiceCode?;
-    # Invoice number field.
+    # Invoice number field
     int:Signed32 InvoiceNumber?;
-    # Delivery date field.
+    # Delivery date field
     string DeliveryDate?;
-    # Contact phone field.
+    # Contact phone field
     string ContactPhone?;
-    # Street field.
+    # Street field
     string Street?;
-    # Block field.
+    # Block field
     string Block?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # City field.
+    # City field
     string City?;
-    # County field.
+    # County field
     string County?;
-    # Country code field.
+    # Country code field
     string CountryCode?;
-    # State code field.
+    # State code field
     string StateCode?;
-    # Install location field.
+    # Install location field
     string InstallLocation?;
-    # Contract code field.
+    # Contract code field
     int:Signed32 ContractCode?;
-    # Contract start date field.
+    # Contract start date field
     string ContractStartDate?;
-    # Contract end date field.
+    # Contract end date field
     string ContractEndDate?;
-    # Delivery code field.
+    # Delivery code field
     int:Signed32 DeliveryCode?;
-    # Delivery number field.
+    # Delivery number field
     int:Signed32 DeliveryNumber?;
     # OData EnumType 'BoSerialNumberStatus'. Serialised by the Service Layer as the member name
     BoSerialNumberStatus StatusOfSerialNumber?;
-    # Replace serial number field.
+    # Replace serial number field
     int:Signed32 ReplaceSN?;
-    # Default technician field.
+    # Default technician field
     int:Signed32 DefaultTechnician?;
-    # Replaced by serial number field.
+    # Replaced by serial number field
     int:Signed32 ReplacedBySN?;
-    # Defaultterritory field.
+    # Defaultterritory field
     int:Signed32 Defaultterritory?;
-    # Building floor room field.
+    # Building floor room field
     string BuildingFloorRoom?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Street number field.
+    # Street number field
     string StreetNo?;
     # OData EnumType 'BoEquipmentBPType'. Serialised by the Service Layer as the member name
     BoEquipmentBPType ServiceBPType?;
-    # Customer equipment card business partners field.
+    # Customer equipment card business partners field
     CustomerEquipmentCardBusinessPartner[] CustomerEquipmentCardBusinessPartners?;
     # The `ServiceContract` entity of the SAP Business One Service Layer
     ServiceContract ServiceContract?;
@@ -765,22 +765,22 @@ public type GetServiceCallProblemTypesQueries record {
 
 # A paged collection of `ServiceCallSolutionStatus` entities returned by the SAP Business One Service Layer
 public type ServiceCallSolutionStatusCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallSolutionStatus[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `ServiceCallTypesService_GetServiceCallTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallTypeParams[] value?;
 };
 
@@ -870,23 +870,23 @@ public type ListServiceContractsHeaders record {
 
 # The `ServiceCallScheduling` complex type of the SAP Business One Service Layer
 public type ServiceCallScheduling record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Technician field.
+    # Technician field
     int:Signed32 Technician?;
-    # Handled by field.
+    # Handled by field
     int:Signed32 HandledBy?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # Start time field.
+    # Start time field
     string StartTime?;
-    # End date field.
+    # End date field
     string EndDate?;
-    # End time field.
+    # End time field
     string EndTime?;
-    # Duration field.
+    # Duration field
     decimal Duration?;
-    # Actual duration field.
+    # Actual duration field
     decimal ActualDuration?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations DurationType?;
@@ -894,104 +894,104 @@ public type ServiceCallScheduling record {
     BoDurations ActualDurationType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Reminder?;
-    # Reminder period field.
+    # Reminder period field
     decimal ReminderPeriod?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations ReminderType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ReminderSent?;
-    # Reminder date field.
+    # Reminder date field
     string ReminderDate?;
-    # Reminder time field.
+    # Reminder time field
     string ReminderTime?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DisplayInCalendar?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsUnscheduled?;
-    # Location field.
+    # Location field
     int:Signed32 Location?;
-    # Address name field.
+    # Address name field
     string AddressName?;
-    # Address text field.
+    # Address text field
     string AddressText?;
-    # Street field.
+    # Street field
     string Street?;
-    # City field.
+    # City field
     string City?;
-    # Room field.
+    # Room field
     string Room?;
-    # State field.
+    # State field
     string State?;
-    # Country field.
+    # Country field
     string Country?;
-    # Address2 field.
+    # Address2 field
     string Address2?;
-    # Address3 field.
+    # Address3 field
     string Address3?;
-    # Address type field.
+    # Address type field
     string AddressType?;
-    # Street number field.
+    # Street number field
     string StreetNo?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # Block field.
+    # Block field
     string Block?;
-    # County field.
+    # County field
     string County?;
-    # Tax office field.
+    # Tax office field
     string TaxOffice?;
-    # Global loc number field.
+    # Global loc number field
     string GlobalLocNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsClosed?;
-    # Remark field.
+    # Remark field
     string Remark?;
     # OData EnumType 'BoAddressType'. Serialised by the Service Layer as the member name
     BoAddressType AddressTypeBS?;
-    # Signature name field.
+    # Signature name field
     string SignatureName?;
-    # Sales orders field.
+    # Sales orders field
     string SalesOrders?;
-    # Check in date field.
+    # Check in date field
     string CheckInDate?;
-    # Check in time field.
+    # Check in time field
     string CheckInTime?;
-    # Check in location field.
+    # Check in location field
     string CheckInLocation?;
-    # Check in latitude field.
+    # Check in latitude field
     string CheckInLatitude?;
-    # Check in longitude field.
+    # Check in longitude field
     string CheckInLongitude?;
-    # Check out date field.
+    # Check out date field
     string CheckOutDate?;
-    # Check out time field.
+    # Check out time field
     string CheckOutTime?;
 };
 
 # Represents the response payload for the `ServiceCallProblemSubTypesService_GetServiceCallProblemSubTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallProblemSubTypeParams[] value?;
 };
 
 # Represents the response payload for the `ServiceCallProblemTypesService_GetServiceCallProblemTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallProblemTypeParams[] value?;
 };
 
 # Represents the response payload for the `ServiceCallSolutionStatusService_GetServiceCallSolutionStatusList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallSolutionStatusParams[] value?;
 };
 
@@ -1007,33 +1007,33 @@ public type GetQueueQueries record {
 
 # Represents the response payload for the `ServiceCallStatusService_GetServiceCallStatusList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallStatusParams[] value?;
 };
 
 # A paged collection of `ServiceCallTypes` entities returned by the SAP Business One Service Layer
 public type ServiceCallTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `ServiceCallProblemSubTypes` entities returned by the SAP Business One Service Layer
 public type ServiceCallProblemSubTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallProblemSubType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1068,90 +1068,90 @@ public type ListServiceCallStatusQueries record {
 
 # A paged collection of `ServiceCalls` entities returned by the SAP Business One Service Layer
 public type ServiceCallsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCall[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ServiceCallSolution` complex type of the SAP Business One Service Layer
 public type ServiceCallSolution record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Solution ID field.
+    # Solution ID field
     int:Signed32 SolutionID?;
 };
 
 # A paged collection of `ServiceCallOrigins` entities returned by the SAP Business One Service Layer
 public type ServiceCallOriginsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallOrigin[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ServiceCallType` entity of the SAP Business One Service Layer
 public type ServiceCallType record {|
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Call type ID field.
+    # Call type ID field
     @jsondata:Name {value: "CallTypeID"}
     int:Signed32 callTypeID?;
-    # Service calls field.
+    # Service calls field
     @jsondata:Name {value: "ServiceCalls"}
     ServiceCall[] serviceCalls?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `ServiceCallOriginParams` complex type of the SAP Business One Service Layer
 public type ServiceCallOriginParams record {|
-    # Origin ID field.
+    # Origin ID field
     @jsondata:Name {value: "OriginID"}
     int:Signed32 originID?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `ServiceCallProblemSubTypeParams` complex type of the SAP Business One Service Layer
 public type ServiceCallProblemSubTypeParams record {|
-    # Problem sub type ID field.
+    # Problem sub type ID field
     @jsondata:Name {value: "ProblemSubTypeID"}
     int:Signed32 problemSubTypeID?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `ServiceCallStatus` entity of the SAP Business One Service Layer
 public type ServiceCallStatus record {|
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Status ID field.
+    # Status ID field
     @jsondata:Name {value: "StatusId"}
     int:Signed32 statusId?;
-    # Service calls field.
+    # Service calls field
     @jsondata:Name {value: "ServiceCalls"}
     ServiceCall[] serviceCalls?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1168,19 +1168,19 @@ public type GetCustomerEquipmentCardsQueries record {
 
 # Represents the response payload for the `ServiceCallOriginsService_GetServiceCallOriginList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceCallOriginParams[] value?;
 };
 
 # The `ServiceCallProblemTypeParams` complex type of the SAP Business One Service Layer
 public type ServiceCallProblemTypeParams record {|
-    # Problem type ID field.
+    # Problem type ID field
     @jsondata:Name {value: "ProblemTypeID"}
     int:Signed32 problemTypeID?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1193,191 +1193,191 @@ public type BoEquipmentBPType "et_Sales"|"et_Purchasing"|"et_SalesAndPurchasing"
 
 # A paged collection of `ServiceContracts` entities returned by the SAP Business One Service Layer
 public type ServiceContractsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ServiceContract[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ServiceCall` entity of the SAP Business One Service Layer
 public type ServiceCall record {
-    # Service call ID field.
+    # Service call ID field
     int:Signed32 ServiceCallID?;
-    # Subject field.
+    # Subject field
     string Subject?;
-    # Customer code field.
+    # Customer code field
     string CustomerCode?;
-    # Customer name field.
+    # Customer name field
     string CustomerName?;
-    # Contact code field.
+    # Contact code field
     int:Signed32 ContactCode?;
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNum?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNum?;
-    # Contract ID field.
+    # Contract ID field
     int:Signed32 ContractID?;
-    # Contract end date field.
+    # Contract end date field
     string ContractEndDate?;
-    # Resolution date field.
+    # Resolution date field
     string ResolutionDate?;
-    # Resolution time field.
+    # Resolution time field
     string ResolutionTime?;
-    # Origin field.
+    # Origin field
     int:Signed32 Origin?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Item description field.
+    # Item description field
     string ItemDescription?;
-    # Item group code field.
+    # Item group code field
     int:Signed32 ItemGroupCode?;
-    # Status field.
+    # Status field
     int:Signed32 Status?;
     # OData EnumType 'BoSvcCallPriorities'. Serialised by the Service Layer as the member name
     BoSvcCallPriorities Priority?;
-    # Call type field.
+    # Call type field
     int:Signed32 CallType?;
-    # Problem type field.
+    # Problem type field
     int:Signed32 ProblemType?;
-    # Assignee code field.
+    # Assignee code field
     int:Signed32 AssigneeCode?;
-    # Description field.
+    # Description field
     string Description?;
-    # Technician code field.
+    # Technician code field
     int:Signed32 TechnicianCode?;
-    # Resolution field.
+    # Resolution field
     string Resolution?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
-    # Creation time field.
+    # Creation time field
     string CreationTime?;
-    # Responder field.
+    # Responder field
     int:Signed32 Responder?;
-    # Updated time field.
+    # Updated time field
     string UpdatedTime?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BelongsToAQueue?;
-    # Response by time field.
+    # Response by time field
     string ResponseByTime?;
-    # Response by date field.
+    # Response by date field
     string ResponseByDate?;
-    # Resolution on date field.
+    # Resolution on date field
     string ResolutionOnDate?;
-    # Response on time field.
+    # Response on time field
     string ResponseOnTime?;
-    # Response on date field.
+    # Response on date field
     string ResponseOnDate?;
-    # Closing time field.
+    # Closing time field
     string ClosingTime?;
-    # Assigned date field.
+    # Assigned date field
     string AssignedDate?;
-    # Queue field.
+    # Queue field
     string Queue?;
-    # Response assignee field.
+    # Response assignee field
     int:Signed32 ResponseAssignee?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EntitledforService?;
-    # Resolution on time field.
+    # Resolution on time field
     string ResolutionOnTime?;
-    # Assigned time field.
+    # Assigned time field
     string AssignedTime?;
-    # Closing date field.
+    # Closing date field
     string ClosingDate?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum HandWritten?;
-    # Period indicator field.
+    # Period indicator field
     string PeriodIndicator?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # Start time field.
+    # Start time field
     string StartTime?;
-    # End due date field.
+    # End due date field
     string EndDueDate?;
-    # End time field.
+    # End time field
     string EndTime?;
-    # Duration field.
+    # Duration field
     decimal Duration?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations DurationType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Reminder?;
-    # Reminder period field.
+    # Reminder period field
     decimal ReminderPeriod?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations ReminderType?;
-    # Location field.
+    # Location field
     int:Signed32 Location?;
-    # Address name field.
+    # Address name field
     string AddressName?;
     # OData EnumType 'BoAddressType'. Serialised by the Service Layer as the member name
     BoAddressType AddressType?;
-    # Street field.
+    # Street field
     string Street?;
-    # City field.
+    # City field
     string City?;
-    # Room field.
+    # Room field
     string Room?;
-    # State field.
+    # State field
     string State?;
-    # Country field.
+    # Country field
     string Country?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DisplayInCalendar?;
-    # Customer reference number field.
+    # Customer reference number field
     string CustomerRefNo?;
-    # Problem sub type field.
+    # Problem sub type field
     int:Signed32 ProblemSubType?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'ServiceTypeEnum'. Serialised by the Service Layer as the member name
     ServiceTypeEnum ServiceBPType?;
-    # Business partner contact person field.
+    # Business partner contact person field
     string BPContactPerson?;
-    # Business partner phone1 field.
+    # Business partner phone1 field
     string BPPhone1?;
-    # Business partner phone2 field.
+    # Business partner phone2 field
     string BPPhone2?;
-    # Business partner cellular field.
+    # Business partner cellular field
     string BPCellular?;
-    # Business partner fax field.
+    # Business partner fax field
     string BPFax?;
-    # B pe mail field.
+    # B pe mail field
     string BPeMail?;
-    # Business partner project code field.
+    # Business partner project code field
     string BPProjectCode?;
-    # Business partner territory field.
+    # Business partner territory field
     int:Signed32 BPTerritory?;
-    # Business partner ship to code field.
+    # Business partner ship to code field
     string BPShipToCode?;
-    # Business partner ship to address field.
+    # Business partner ship to address field
     string BPShipToAddress?;
-    # Business partner bill to code field.
+    # Business partner bill to code field
     string BPBillToCode?;
-    # Business partner bill to address field.
+    # Business partner bill to address field
     string BPBillToAddress?;
-    # Telephone field.
+    # Telephone field
     string Telephone?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Supplementary code field.
+    # Supplementary code field
     string SupplementaryCode?;
-    # Service call activities field.
+    # Service call activities field
     ServiceCallActivity[] ServiceCallActivities?;
-    # Service call inventory expenses field.
+    # Service call inventory expenses field
     ServiceCallInventoryExpense[] ServiceCallInventoryExpenses?;
-    # Service call solutions field.
+    # Service call solutions field
     ServiceCallSolution[] ServiceCallSolutions?;
-    # Service call schedulings field.
+    # Service call schedulings field
     ServiceCallScheduling[] ServiceCallSchedulings?;
-    # Service call business partner address components field.
+    # Service call business partner address components field
     ServiceCallBPAddressComponent[] ServiceCallBPAddressComponents?;
     # The `ServiceContract` entity of the SAP Business One Service Layer
     ServiceContract ServiceContract?;
@@ -1404,39 +1404,39 @@ public type ListKnowledgeBaseSolutionsHeaders record {
 
 # The `ServiceContract` entity of the SAP Business One Service Layer
 public type ServiceContract record {
-    # Contract ID field.
+    # Contract ID field
     int:Signed32 ContractID?;
-    # Customer code field.
+    # Customer code field
     string CustomerCode?;
-    # Customer name field.
+    # Customer name field
     string CustomerName?;
-    # Contact code field.
+    # Contact code field
     int:Signed32 ContactCode?;
-    # Owner field.
+    # Owner field
     int:Signed32 Owner?;
     # OData EnumType 'BoSvcContractStatus'. Serialised by the Service Layer as the member name
     BoSvcContractStatus Status?;
-    # Contract template field.
+    # Contract template field
     string ContractTemplate?;
     # OData EnumType 'BoContractTypes'. Serialised by the Service Layer as the member name
     BoContractTypes ContractType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Renewal?;
-    # Reminder time field.
+    # Reminder time field
     int:Signed32 ReminderTime?;
     # OData EnumType 'BoRemindUnits'. Serialised by the Service Layer as the member name
     BoRemindUnits RemindUnit?;
-    # Duration of coverage field.
+    # Duration of coverage field
     int:Signed32 DurationOfCoverage?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # End date field.
+    # End date field
     string EndDate?;
-    # Resolution time field.
+    # Resolution time field
     int:Signed32 ResolutionTime?;
     # OData EnumType 'BoResolutionUnits'. Serialised by the Service Layer as the member name
     BoResolutionUnits ResolutionUnit?;
-    # Description field.
+    # Description field
     string Description?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum MondayEnabled?;
@@ -1452,33 +1452,33 @@ public type ServiceContract record {
     BoYesNoEnum SaturdayEnabled?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SundayEnabled?;
-    # Monday start field.
+    # Monday start field
     string MondayStart?;
-    # Monday end field.
+    # Monday end field
     string MondayEnd?;
-    # Tuesday start field.
+    # Tuesday start field
     string TuesdayStart?;
-    # Tuesday end field.
+    # Tuesday end field
     string TuesdayEnd?;
-    # Wednesday start field.
+    # Wednesday start field
     string WednesdayStart?;
-    # Wednesday end field.
+    # Wednesday end field
     string WednesdayEnd?;
-    # Thursday start field.
+    # Thursday start field
     string ThursdayStart?;
-    # Thursday end field.
+    # Thursday end field
     string ThursdayEnd?;
-    # Friday start field.
+    # Friday start field
     string FridayStart?;
-    # Friday end field.
+    # Friday end field
     string FridayEnd?;
-    # Saturday start field.
+    # Saturday start field
     string SaturdayStart?;
-    # Saturday end field.
+    # Saturday end field
     string SaturdayEnd?;
-    # Sunday start field.
+    # Sunday start field
     string SundayStart?;
-    # Sunday end field.
+    # Sunday end field
     string SundayEnd?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeParts?;
@@ -1486,9 +1486,9 @@ public type ServiceContract record {
     BoYesNoEnum IncludeLabor?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeTravel?;
-    # Template remarks field.
+    # Template remarks field
     string TemplateRemarks?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeHolidays?;
@@ -1496,19 +1496,19 @@ public type ServiceContract record {
     BoServiceTypes ServiceType?;
     # OData EnumType 'BoResponseUnit'. Serialised by the Service Layer as the member name
     BoResponseUnit ResponseUnit?;
-    # Response time field.
+    # Response time field
     int:Signed32 ResponseTime?;
-    # Termination date field.
+    # Termination date field
     string TerminationDate?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'ServiceTypeEnum'. Serialised by the Service Layer as the member name
     ServiceTypeEnum ServiceBPType?;
-    # Service contract lines field.
+    # Service contract lines field
     ServiceContractLine[] ServiceContract_Lines?;
-    # Customer equipment cards field.
+    # Customer equipment cards field
     CustomerEquipmentCard[] CustomerEquipmentCards?;
-    # Service calls field.
+    # Service calls field
     ServiceCall[] ServiceCalls?;
     # The `ContractTemplate` entity of the SAP Business One Service Layer
     ContractTemplate ContractTemplate2?;
@@ -1533,10 +1533,10 @@ public type GetKnowledgeBaseSolutionsQueries record {
 
 # The `ServiceCallSolutionStatusParams` complex type of the SAP Business One Service Layer
 public type ServiceCallSolutionStatusParams record {|
-    # Status ID field.
+    # Status ID field
     @jsondata:Name {value: "StatusId"}
     int:Signed32 statusId?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1560,23 +1560,23 @@ public type GetServiceCallStatusQueries record {
 
 # The `ContractTemplate` entity of the SAP Business One Service Layer
 public type ContractTemplate record {
-    # Template name field.
+    # Template name field
     string TemplateName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TemplateIsDeleted?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TemplateIsRenewal?;
-    # Remind before renewal field.
+    # Remind before renewal field
     int:Signed32 RemindBeforeRenewal?;
     # OData EnumType 'BoRemindUnits'. Serialised by the Service Layer as the member name
     BoRemindUnits RemindUnit?;
-    # Duration of coverage field.
+    # Duration of coverage field
     int:Signed32 DurationOfCoverage?;
-    # Response value field.
+    # Response value field
     int:Signed32 ResponseValue?;
     # OData EnumType 'BoResolutionUnits'. Serialised by the Service Layer as the member name
     BoResolutionUnits ResolutionUnit?;
-    # Description field.
+    # Description field
     string Description?;
     # OData EnumType 'BoContractTypes'. Serialised by the Service Layer as the member name
     BoContractTypes ContractType?;
@@ -1594,33 +1594,33 @@ public type ContractTemplate record {
     BoYesNoEnum SaturdayEnabled?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SundayEnabled?;
-    # Monday start field.
+    # Monday start field
     string MondayStart?;
-    # Monday end field.
+    # Monday end field
     string MondayEnd?;
-    # Tuesday start field.
+    # Tuesday start field
     string TuesdayStart?;
-    # Tuesday end field.
+    # Tuesday end field
     string TuesdayEnd?;
-    # Wednesday start field.
+    # Wednesday start field
     string WednesdayStart?;
-    # Wednesday end field.
+    # Wednesday end field
     string WednesdayEnd?;
-    # Thursday start field.
+    # Thursday start field
     string ThursdayStart?;
-    # Thursday end field.
+    # Thursday end field
     string ThursdayEnd?;
-    # Friday start field.
+    # Friday start field
     string FridayStart?;
-    # Friday end field.
+    # Friday end field
     string FridayEnd?;
-    # Saturday start field.
+    # Saturday start field
     string SaturdayStart?;
-    # Saturday end field.
+    # Saturday end field
     string SaturdayEnd?;
-    # Sunday start field.
+    # Sunday start field
     string SundayStart?;
-    # Sunday end field.
+    # Sunday end field
     string SundayEnd?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeParts?;
@@ -1628,17 +1628,17 @@ public type ContractTemplate record {
     BoYesNoEnum IncludeLabor?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeTravel?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeHolidays?;
     # OData EnumType 'BoResponseUnit'. Serialised by the Service Layer as the member name
     BoResponseUnit ResponseUnit?;
-    # Resolution time field.
+    # Resolution time field
     int:Signed32 ResolutionTime?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Service contracts field.
+    # Service contracts field
     ServiceContract[] ServiceContracts?;
 };
 
@@ -1694,31 +1694,31 @@ public type ListServiceCallTypesQueries record {
 
 # The `KnowledgeBaseSolution` entity of the SAP Business One Service Layer
 public type KnowledgeBaseSolution record {
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Status field.
+    # Status field
     int:Signed32 Status?;
-    # Owner field.
+    # Owner field
     int:Signed32 Owner?;
-    # Created by field.
+    # Created by field
     int:Signed32 CreatedBy?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
-    # Last updated by field.
+    # Last updated by field
     int:Signed32 LastUpdatedBy?;
-    # Last update date field.
+    # Last update date field
     string LastUpdateDate?;
-    # Solution field.
+    # Solution field
     string Solution?;
-    # Symptom field.
+    # Symptom field
     string Symptom?;
-    # Cause field.
+    # Cause field
     string Cause?;
-    # Description field.
+    # Description field
     string Description?;
-    # Solution code field.
+    # Solution code field
     int:Signed32 SolutionCode?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # The `ServiceCallSolutionStatus` entity of the SAP Business One Service Layer
     ServiceCallSolutionStatus ServiceCallSolutionStatus?;

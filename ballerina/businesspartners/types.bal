@@ -24,46 +24,46 @@ import ballerina/http;
 public type BPAccountReceivablePayble record {
     # OData EnumType 'BoBpAccountTypes'. Serialised by the Service Layer as the member name
     BoBpAccountTypes AccountType?;
-    # Account code field.
+    # Account code field
     string AccountCode?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
 };
 
 # The `BPIntrastatExtension` complex type of the SAP Business One Service Layer
 public type BPIntrastatExtension record {|
-    # Intrastat relevant field.
+    # Intrastat relevant field
     @jsondata:Name {value: "IntrastatRelevant"}
     BoYesNoEnum intrastatRelevant?;
-    # Domestic or foreign ID field.
+    # Domestic or foreign ID field
     @jsondata:Name {value: "DomesticOrForeignID"}
     string domesticOrForeignID?;
-    # Customs procedure field.
+    # Customs procedure field
     @jsondata:Name {value: "CustomsProcedure"}
     int:Signed32 customsProcedure?;
-    # Statistical procedure field.
+    # Statistical procedure field
     @jsondata:Name {value: "StatisticalProcedure"}
     int:Signed32 statisticalProcedure?;
-    # Nature of transactions field.
+    # Nature of transactions field
     @jsondata:Name {value: "NatureOfTransactions"}
     int:Signed32 natureOfTransactions?;
-    # Port of entry or exit field.
+    # Port of entry or exit field
     @jsondata:Name {value: "PortOfEntryOrExit"}
     int:Signed32 portOfEntryOrExit?;
-    # Card code field.
+    # Card code field
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
-    # Transport mode field.
+    # Transport mode field
     @jsondata:Name {value: "TransportMode"}
     int:Signed32 transportMode?;
-    # Incoterms field.
+    # Incoterms field
     @jsondata:Name {value: "Incoterms"}
     int:Signed32 incoterms?;
 |};
 
 # Represents the request payload for the `AddressService_GetAddressFormat` operation of the SAP Business One Service Layer
 public type AddressService_GetAddressFormat_body record {
-    # Address format params field.
+    # Address format params field
     @jsondata:Name {value: "AddressFormatParams"}
     AddressFormatParams addressFormatParams?;
 };
@@ -77,167 +77,167 @@ public type ListBusinessPartnerGroupsHeaders record {
 
 # The `BusinessPartner` entity of the SAP Business One Service Layer
 public type BusinessPartner record {
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Card name field.
+    # Card name field
     string CardName?;
     # OData EnumType 'BoCardTypes'. Serialised by the Service Layer as the member name
     BoCardTypes CardType?;
-    # Group code field.
+    # Group code field
     int:Signed32 GroupCode?;
-    # Address field.
+    # Address field
     string Address?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # Mail address field.
+    # Mail address field
     string MailAddress?;
-    # Mail zip code field.
+    # Mail zip code field
     string MailZipCode?;
-    # Phone1 field.
+    # Phone1 field
     string Phone1?;
-    # Phone2 field.
+    # Phone2 field
     string Phone2?;
-    # Fax field.
+    # Fax field
     string Fax?;
-    # Contact person field.
+    # Contact person field
     string ContactPerson?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Pay terms group code field.
+    # Pay terms group code field
     int:Signed32 PayTermsGrpCode?;
-    # Credit limit field.
+    # Credit limit field
     decimal CreditLimit?;
-    # Max commitment field.
+    # Max commitment field
     decimal MaxCommitment?;
-    # Discount percent field.
+    # Discount percent field
     decimal DiscountPercent?;
     # OData EnumType 'BoVatStatus'. Serialised by the Service Layer as the member name
     BoVatStatus VatLiable?;
-    # Federal tax ID field.
+    # Federal tax ID field
     string FederalTaxID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DeductibleAtSource?;
-    # Deduction percent field.
+    # Deduction percent field
     decimal DeductionPercent?;
-    # Deduction valid until field.
+    # Deduction valid until field
     string DeductionValidUntil?;
-    # Price list number field.
+    # Price list number field
     int:Signed32 PriceListNum?;
-    # Intrest rate percent field.
+    # Intrest rate percent field
     decimal IntrestRatePercent?;
-    # Commission percent field.
+    # Commission percent field
     decimal CommissionPercent?;
-    # Commission group code field.
+    # Commission group code field
     int:Signed32 CommissionGroupCode?;
-    # Free text field.
+    # Free text field
     string FreeText?;
-    # Sales person code field.
+    # Sales person code field
     int:Signed32 SalesPersonCode?;
-    # Currency field.
+    # Currency field
     string Currency?;
-    # Rate diff account field.
+    # Rate diff account field
     string RateDiffAccount?;
-    # Cellular field.
+    # Cellular field
     string Cellular?;
-    # Avarage late field.
+    # Avarage late field
     int:Signed32 AvarageLate?;
-    # City field.
+    # City field
     string City?;
-    # County field.
+    # County field
     string County?;
-    # Country field.
+    # Country field
     string Country?;
-    # Mail city field.
+    # Mail city field
     string MailCity?;
-    # Mail county field.
+    # Mail county field
     string MailCounty?;
-    # Mail country field.
+    # Mail country field
     string MailCountry?;
-    # Email address field.
+    # Email address field
     string EmailAddress?;
-    # Picture field.
+    # Picture field
     string Picture?;
-    # Default account field.
+    # Default account field
     string DefaultAccount?;
-    # Default branch field.
+    # Default branch field
     string DefaultBranch?;
-    # Default bank code field.
+    # Default bank code field
     string DefaultBankCode?;
-    # Additional ID field.
+    # Additional ID field
     string AdditionalID?;
-    # Pager field.
+    # Pager field
     string Pager?;
-    # Father card field.
+    # Father card field
     string FatherCard?;
-    # Card foreign name field.
+    # Card foreign name field
     string CardForeignName?;
     # OData EnumType 'BoFatherCardTypes'. Serialised by the Service Layer as the member name
     BoFatherCardTypes FatherType?;
-    # Deduction office field.
+    # Deduction office field
     string DeductionOffice?;
-    # Export code field.
+    # Export code field
     string ExportCode?;
-    # Min intrest field.
+    # Min intrest field
     decimal MinIntrest?;
-    # Current account balance field.
+    # Current account balance field
     decimal CurrentAccountBalance?;
-    # Open delivery notes balance field.
+    # Open delivery notes balance field
     decimal OpenDeliveryNotesBalance?;
-    # Open orders balance field.
+    # Open orders balance field
     decimal OpenOrdersBalance?;
-    # Open checks balance field.
+    # Open checks balance field
     decimal OpenChecksBalance?;
-    # VAT group field.
+    # VAT group field
     string VatGroup?;
-    # Shipping type field.
+    # Shipping type field
     int:Signed32 ShippingType?;
-    # Password field.
+    # Password field
     string Password?;
-    # Indicator field.
+    # Indicator field
     string Indicator?;
-    # IBAN field.
+    # IBAN field
     string IBAN?;
-    # Credit card code field.
+    # Credit card code field
     int:Signed32 CreditCardCode?;
-    # Credit card number field.
+    # Credit card number field
     string CreditCardNum?;
-    # Credit card expiration field.
+    # Credit card expiration field
     string CreditCardExpiration?;
-    # Debitor account field.
+    # Debitor account field
     string DebitorAccount?;
-    # Open opportunities field.
+    # Open opportunities field
     int:Signed32 OpenOpportunities?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Valid?;
-    # Valid from field.
+    # Valid from field
     string ValidFrom?;
-    # Valid to field.
+    # Valid to field
     string ValidTo?;
-    # Valid remarks field.
+    # Valid remarks field
     string ValidRemarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Frozen?;
-    # Frozen from field.
+    # Frozen from field
     string FrozenFrom?;
-    # Frozen to field.
+    # Frozen to field
     string FrozenTo?;
-    # Frozen remarks field.
+    # Frozen remarks field
     string FrozenRemarks?;
-    # Block field.
+    # Block field
     string Block?;
-    # Bill to state field.
+    # Bill to state field
     string BillToState?;
-    # Ship to state field.
+    # Ship to state field
     string ShipToState?;
-    # Exempt number field.
+    # Exempt number field
     string ExemptNum?;
-    # Priority field.
+    # Priority field
     int:Signed32 Priority?;
-    # Form code1099 field.
+    # Form code1099 field
     int:Signed32 FormCode1099?;
-    # Box1099 field.
+    # Box1099 field
     string Box1099?;
-    # Peyment method code field.
+    # Peyment method code field
     string PeymentMethodCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BackOrder?;
@@ -245,51 +245,51 @@ public type BusinessPartner record {
     BoYesNoEnum PartialDelivery?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BlockDunning?;
-    # Bank country field.
+    # Bank country field
     string BankCountry?;
-    # House bank field.
+    # House bank field
     string HouseBank?;
-    # House bank country field.
+    # House bank country field
     string HouseBankCountry?;
-    # House bank account field.
+    # House bank account field
     string HouseBankAccount?;
-    # Ship to default field.
+    # Ship to default field
     string ShipToDefault?;
-    # Dunning level field.
+    # Dunning level field
     int:Signed32 DunningLevel?;
-    # Dunning date field.
+    # Dunning date field
     string DunningDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CollectionAuthorization?;
-    # DME field.
+    # DME field
     string DME?;
-    # Instruction key field.
+    # Instruction key field
     string InstructionKey?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SinglePayment?;
-    # ISR biller ID field.
+    # ISR biller ID field
     string ISRBillerID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentBlock?;
-    # Reference details field.
+    # Reference details field
     string ReferenceDetails?;
-    # House bank branch field.
+    # House bank branch field
     string HouseBankBranch?;
-    # Owner ID number field.
+    # Owner ID number field
     string OwnerIDNumber?;
-    # Payment block description field.
+    # Payment block description field
     int:Signed32 PaymentBlockDescription?;
-    # Tax exemption letter number field.
+    # Tax exemption letter number field
     string TaxExemptionLetterNum?;
-    # Max amount of exemption field.
+    # Max amount of exemption field
     decimal MaxAmountOfExemption?;
-    # Exemption validity date from field.
+    # Exemption validity date from field
     string ExemptionValidityDateFrom?;
-    # Exemption validity date to field.
+    # Exemption validity date to field
     string ExemptionValidityDateTo?;
-    # Linked business partner field.
+    # Linked business partner field
     string LinkedBusinessPartner?;
-    # Last multi reconciliation number field.
+    # Last multi reconciliation number field
     int:Signed32 LastMultiReconciliationNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DeferredTax?;
@@ -297,59 +297,59 @@ public type BusinessPartner record {
     BoYesNoEnum Equalization?;
     # OData EnumType 'BoYesNoNoneEnum'. Serialised by the Service Layer as the member name
     BoYesNoNoneEnum SubjectToWithholdingTax?;
-    # Certificate number field.
+    # Certificate number field
     string CertificateNumber?;
-    # Expiration date field.
+    # Expiration date field
     string ExpirationDate?;
-    # National insurance number field.
+    # National insurance number field
     string NationalInsuranceNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AccrualCriteria?;
-    # Withholding tax code field.
+    # Withholding tax code field
     string WTCode?;
-    # Bill to building floor room field.
+    # Bill to building floor room field
     string BillToBuildingFloorRoom?;
-    # Down payment clear act field.
+    # Down payment clear act field
     string DownPaymentClearAct?;
-    # Channel business partner field.
+    # Channel business partner field
     string ChannelBP?;
-    # Default technician field.
+    # Default technician field
     int:Signed32 DefaultTechnician?;
-    # Billto default field.
+    # Billto default field
     string BilltoDefault?;
-    # Customer billof exchang disc field.
+    # Customer billof exchang disc field
     string CustomerBillofExchangDisc?;
-    # Territory field.
+    # Territory field
     int:Signed32 Territory?;
-    # Ship to building floor room field.
+    # Ship to building floor room field
     string ShipToBuildingFloorRoom?;
-    # Customer billof exchang pres field.
+    # Customer billof exchang pres field
     string CustomerBillofExchangPres?;
-    # Project code field.
+    # Project code field
     string ProjectCode?;
-    # VAT group latin america field.
+    # VAT group latin america field
     string VatGroupLatinAmerica?;
-    # Dunning term field.
+    # Dunning term field
     string DunningTerm?;
-    # Website field.
+    # Website field
     string Website?;
-    # Other receivable payable field.
+    # Other receivable payable field
     string OtherReceivablePayable?;
-    # Billof exchangeon collection field.
+    # Billof exchangeon collection field
     string BillofExchangeonCollection?;
     # OData EnumType 'BoCardCompanyTypes'. Serialised by the Service Layer as the member name
     BoCardCompanyTypes CompanyPrivate?;
-    # Language code field.
+    # Language code field
     int:Signed32 LanguageCode?;
-    # Unpaid billof exchange field.
+    # Unpaid billof exchange field
     string UnpaidBillofExchange?;
-    # Withholding tax deduction group field.
+    # Withholding tax deduction group field
     int:Signed32 WithholdingTaxDeductionGroup?;
-    # Closing date procedure number field.
+    # Closing date procedure number field
     int:Signed32 ClosingDateProcedureNumber?;
-    # Profession field.
+    # Profession field
     string Profession?;
-    # Bank charges allocation code field.
+    # Bank charges allocation code field
     string BankChargesAllocationCode?;
     # OData EnumType 'BoTaxRoundingRuleTypes'. Serialised by the Service Layer as the member name
     BoTaxRoundingRuleTypes TaxRoundingRule?;
@@ -481,9 +481,9 @@ public type BusinessPartner record {
     BoYesNoEnum Properties63?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Properties64?;
-    # Company registration number field.
+    # Company registration number field
     string CompanyRegistrationNumber?;
-    # Verification number field.
+    # Verification number field
     string VerificationNumber?;
     # OData EnumType 'DiscountGroupBaseObjectEnum'. Serialised by the Service Layer as the member name
     DiscountGroupBaseObjectEnum DiscountBaseObject?;
@@ -495,11 +495,11 @@ public type BusinessPartner record {
     BoYesNoEnum ThresholdOverlook?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SurchargeOverlook?;
-    # Remark1 field.
+    # Remark1 field
     int:Signed32 Remark1?;
-    # Con certi field.
+    # Con certi field
     string ConCerti?;
-    # Down payment interim account field.
+    # Down payment interim account field
     string DownPaymentInterimAccount?;
     # OData EnumType 'OperationCode347Enum'. Serialised by the Service Layer as the member name
     OperationCode347Enum OperationCode347?;
@@ -513,51 +513,51 @@ public type BusinessPartner record {
     BoYesNoEnum WithholdingTaxCertified?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BookkeepingCertified?;
-    # Planning group field.
+    # Planning group field
     string PlanningGroup?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Affiliate?;
-    # Industry field.
+    # Industry field
     int:Signed32 Industry?;
-    # VAT ID number field.
+    # VAT ID number field
     string VatIDNum?;
-    # Datev account field.
+    # Datev account field
     string DatevAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DatevFirstDataEntry?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseShippedGoodsAccount?;
-    # GTS reg number field.
+    # GTS reg number field
     string GTSRegNo?;
-    # GTS bank account number field.
+    # GTS bank account number field
     string GTSBankAccountNo?;
-    # GTS billing address tel field.
+    # GTS billing address tel field
     string GTSBillingAddrTel?;
-    # E tax web site field.
+    # E tax web site field
     int:Signed32 ETaxWebSite?;
-    # House bank IBAN field.
+    # House bank IBAN field
     string HouseBankIBAN?;
-    # VAT registration number field.
+    # VAT registration number field
     string VATRegistrationNumber?;
-    # Representative name field.
+    # Representative name field
     string RepresentativeName?;
-    # Industry type field.
+    # Industry type field
     string IndustryType?;
-    # Business type field.
+    # Business type field
     string BusinessType?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
     # OData EnumType 'AutomaticPostingEnum'. Serialised by the Service Layer as the member name
     AutomaticPostingEnum AutomaticPosting?;
-    # Interest account field.
+    # Interest account field
     string InterestAccount?;
-    # Fee account field.
+    # Fee account field
     string FeeAccount?;
-    # Campaign number field.
+    # Campaign number field
     int:Signed32 CampaignNumber?;
-    # Alias name field.
+    # Alias name field
     string AliasName?;
-    # Default blanket agreement number field.
+    # Default blanket agreement number field
     int:Signed32 DefaultBlanketAgreementNumber?;
     # OData EnumType 'DiscountGroupRelationsEnum'. Serialised by the Service Layer as the member name
     DiscountGroupRelationsEnum EffectiveDiscount?;
@@ -567,23 +567,23 @@ public type BusinessPartner record {
     EffectivePriceEnum EffectivePrice?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EffectivePriceConsidersPriceBeforeDiscount?;
-    # Global location number field.
+    # Global location number field
     string GlobalLocationNumber?;
-    # EDI sender ID field.
+    # EDI sender ID field
     string EDISenderID?;
-    # EDI recipient ID field.
+    # EDI recipient ID field
     string EDIRecipientID?;
     # OData EnumType 'ResidenceNumberTypeEnum'. Serialised by the Service Layer as the member name
     ResidenceNumberTypeEnum ResidenNumber?;
-    # Relationship code field.
+    # Relationship code field
     string RelationshipCode?;
-    # Relationship date from field.
+    # Relationship date from field
     string RelationshipDateFrom?;
-    # Relationship date till field.
+    # Relationship date till field
     string RelationshipDateTill?;
-    # Unified federal tax ID field.
+    # Unified federal tax ID field
     string UnifiedFederalTaxID?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'TypeOfOperationEnum'. Serialised by the Service Layer as the member name
     TypeOfOperationEnum TypeOfOperation?;
@@ -591,83 +591,83 @@ public type BusinessPartner record {
     BoYesNoEnum EndorsableChecksFromBP?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AcceptsEndorsedChecks?;
-    # Owner code field.
+    # Owner code field
     int:Signed32 OwnerCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BlockSendingMarketingContent?;
-    # Agent code field.
+    # Agent code field
     string AgentCode?;
     # OData EnumType 'PriceModeEnum'. Serialised by the Service Layer as the member name
     PriceModeEnum PriceMode?;
     # OData EnumType 'EDocGenerationTypeEnum'. Serialised by the Service Layer as the member name
     EDocGenerationTypeEnum EDocGenerationType?;
-    # E document street field.
+    # E document street field
     string EDocStreet?;
-    # E document street number field.
+    # E document street number field
     string EDocStreetNumber?;
-    # E document building number field.
+    # E document building number field
     int:Signed32 EDocBuildingNumber?;
-    # E document zip code field.
+    # E document zip code field
     string EDocZipCode?;
-    # E document city field.
+    # E document city field
     string EDocCity?;
-    # E document country field.
+    # E document country field
     string EDocCountry?;
-    # E document district field.
+    # E document district field
     string EDocDistrict?;
-    # E document representative first name field.
+    # E document representative first name field
     string EDocRepresentativeFirstName?;
-    # E document representative surname field.
+    # E document representative surname field
     string EDocRepresentativeSurname?;
-    # E document representative company field.
+    # E document representative company field
     string EDocRepresentativeCompany?;
-    # E document representative fiscal code field.
+    # E document representative fiscal code field
     string EDocRepresentativeFiscalCode?;
-    # E document representative additional ID field.
+    # E document representative additional ID field
     string EDocRepresentativeAdditionalId?;
-    # E document PEC address field.
+    # E document PEC address field
     string EDocPECAddress?;
-    # IPA code for PA field.
+    # IPA code for PA field
     string IPACodeForPA?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Update time field.
+    # Update time field
     string UpdateTime?;
     # OData EnumType 'ExemptionMaxAmountValidationTypeEnum'. Serialised by the Service Layer as the member name
     ExemptionMaxAmountValidationTypeEnum ExemptionMaxAmountValidationType?;
-    # E commerce merchant ID field.
+    # E commerce merchant ID field
     string ECommerceMerchantID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseBillToAddrToDetermineTax?;
-    # Create date field.
+    # Create date field
     string CreateDate?;
-    # Create time field.
+    # Create time field
     string CreateTime?;
-    # Default transporter entry field.
+    # Default transporter entry field
     int:Signed32 DefaultTransporterEntry?;
-    # Default transporter line number field.
+    # Default transporter line number field
     int:Signed32 DefaultTransporterLineNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FCERelevant?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FCEValidateBaseDelivery?;
-    # Main usage field.
+    # Main usage field
     int:Signed32 MainUsage?;
-    # E books VAT exemption cause field.
+    # E books VAT exemption cause field
     int:Signed32 EBooksVATExemptionCause?;
-    # Legal text field.
+    # Legal text field
     string LegalText?;
-    # Data version field.
+    # Data version field
     int:Signed32 DataVersion?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ExchangeRateForIncomingPayment?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ExchangeRateForOutgoingPayment?;
-    # Certificate details field.
+    # Certificate details field
     string CertificateDetails?;
-    # Default currency field.
+    # Default currency field
     string DefaultCurrency?;
-    # EORI number field.
+    # EORI number field
     string EORINumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FCEAsPaymentMeans?;
@@ -675,47 +675,47 @@ public type BusinessPartner record {
     BoYesNoEnum NotRelevantForMonthlyInvoice?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NaturalPer?;
-    # Siren number field.
+    # Siren number field
     string SirenNumber?;
-    # Siret number field.
+    # Siret number field
     string SiretNumber?;
-    # VAT exemption reason field.
+    # VAT exemption reason field
     string VATExemptionReason?;
-    # Routing code field.
+    # Routing code field
     string RoutingCode?;
     # OData EnumType 'BoPublicDirectoryStatusTypes'. Serialised by the Service Layer as the member name
     BoPublicDirectoryStatusTypes PublicDirectoryStatus?;
-    # Electronic protocols field.
+    # Electronic protocols field
     ElectronicProtocol[] ElectronicProtocols?;
-    # Business partner addresses field.
+    # Business partner addresses field
     BPAddress[] BPAddresses?;
-    # Contact employees field.
+    # Contact employees field
     ContactEmployee[] ContactEmployees?;
-    # Business partner account receivable payble collection field.
+    # Business partner account receivable payble collection field
     BPAccountReceivablePayble[] BPAccountReceivablePaybleCollection?;
-    # Business partner payment methods field.
+    # Business partner payment methods field
     BPPaymentMethod[] BPPaymentMethods?;
-    # Business partner withholding tax collection field.
+    # Business partner withholding tax collection field
     BPWithholdingTax[] BPWithholdingTaxCollection?;
-    # Business partner payment dates field.
+    # Business partner payment dates field
     BPPaymentDate[] BPPaymentDates?;
-    # Business partner branch assignment field.
+    # Business partner branch assignment field
     BPBranchAssignmentItem[] BPBranchAssignment?;
-    # Business partner bank accounts field.
+    # Business partner bank accounts field
     BPBankAccount[] BPBankAccounts?;
-    # Business partner fiscal tax ID collection field.
+    # Business partner fiscal tax ID collection field
     BPFiscalTaxID[] BPFiscalTaxIDCollection?;
-    # Discount groups field.
+    # Discount groups field
     DiscountGroup[] DiscountGroups?;
     # The `BPIntrastatExtension` complex type of the SAP Business One Service Layer
     BPIntrastatExtension BPIntrastatExtension?;
-    # Business partner block sending marketing contents field.
+    # Business partner block sending marketing contents field
     BPBlockSendingMarketingContent[] BPBlockSendingMarketingContents?;
-    # Business partner currencies collection field.
+    # Business partner currencies collection field
     BPCurrencies[] BPCurrenciesCollection?;
-    # Business partner VAT exemptions field.
+    # Business partner VAT exemptions field
     BPVatExemptions[] BPVatExemptions?;
-    # Contacts field.
+    # Contacts field
     Contact[] Contacts?;
     # The `BusinessPartnerGroup` entity of the SAP Business One Service Layer
     BusinessPartnerGroup BusinessPartnerGroup?;
@@ -757,55 +757,55 @@ public type GetContactsQueries record {
 
 # The `BPAddress` complex type of the SAP Business One Service Layer
 public type BPAddress record {
-    # Address name field.
+    # Address name field
     string AddressName?;
-    # Street field.
+    # Street field
     string Street?;
-    # Block field.
+    # Block field
     string Block?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # City field.
+    # City field
     string City?;
-    # County field.
+    # County field
     string County?;
-    # Country field.
+    # Country field
     string Country?;
-    # State field.
+    # State field
     string State?;
-    # Federal tax ID field.
+    # Federal tax ID field
     string FederalTaxID?;
-    # Tax code field.
+    # Tax code field
     string TaxCode?;
-    # Building floor room field.
+    # Building floor room field
     string BuildingFloorRoom?;
     # OData EnumType 'BoAddressType'. Serialised by the Service Layer as the member name
     BoAddressType AddressType?;
-    # Address name2 field.
+    # Address name2 field
     string AddressName2?;
-    # Address name3 field.
+    # Address name3 field
     string AddressName3?;
-    # Type of address field.
+    # Type of address field
     string TypeOfAddress?;
-    # Street number field.
+    # Street number field
     string StreetNo?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
-    # Row number field.
+    # Row number field
     int:Signed32 RowNum?;
-    # Global location number field.
+    # Global location number field
     string GlobalLocationNumber?;
-    # Nationality field.
+    # Nationality field
     string Nationality?;
-    # Tax office field.
+    # Tax office field
     string TaxOffice?;
-    # GSTIN field.
+    # GSTIN field
     string GSTIN?;
     # OData EnumType 'BoGSTRegnTypeEnum'. Serialised by the Service Layer as the member name
     BoGSTRegnTypeEnum GstType?;
-    # Create date field.
+    # Create date field
     string CreateDate?;
-    # Create time field.
+    # Create time field
     string CreateTime?;
     # OData EnumType 'BoMYFTypeEnum'. Serialised by the Service Layer as the member name
     BoMYFTypeEnum MYFType?;
@@ -918,44 +918,44 @@ public type ListBPFiscalRegistryIDQueries record {
 
 # The `BPBlockSendingMarketingContent` complex type of the SAP Business One Service Layer
 public type BPBlockSendingMarketingContent record {|
-    # Communication media ID field.
+    # Communication media ID field
     @jsondata:Name {value: "CommunicationMediaId"}
     int:Signed32 communicationMediaId?;
-    # Choose field.
+    # Choose field
     @jsondata:Name {value: "Choose"}
     BoYesNoEnum choose?;
-    # Card code field.
+    # Card code field
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
 |};
 
 # The `AddressParams` complex type of the SAP Business One Service Layer
 public type AddressParams record {
-    # Country field.
+    # Country field
     string Country?;
-    # State field.
+    # State field
     string State?;
-    # County field.
+    # County field
     string County?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # City field.
+    # City field
     string City?;
-    # Building field.
+    # Building field
     string Building?;
-    # Block field.
+    # Block field
     string Block?;
-    # Street field.
+    # Street field
     string Street?;
-    # Street number field.
+    # Street number field
     string StreetNo?;
-    # Address2 field.
+    # Address2 field
     string Address2?;
-    # Address3 field.
+    # Address3 field
     string Address3?;
-    # Address type field.
+    # Address type field
     string AddressType?;
-    # Global location number field.
+    # Global location number field
     string GlobalLocationNumber?;
 };
 
@@ -1005,24 +1005,24 @@ public type ListBPPrioritiesQueries record {
 
 # The `BusinessPartnerGroup` entity of the SAP Business One Service Layer
 public type BusinessPartnerGroup record {
-    # Code field.
+    # Code field
     int:Signed32 Code?;
-    # Name field.
+    # Name field
     string Name?;
     # OData EnumType 'BoBusinessPartnerGroupTypes'. Serialised by the Service Layer as the member name
     BoBusinessPartnerGroupTypes Type?;
-    # Business partners field.
+    # Business partners field
     BusinessPartner[] BusinessPartners?;
 };
 
 # A paged collection of `Contacts` entities returned by the SAP Business One Service Layer
 public type ContactsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Contact[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1036,12 +1036,12 @@ public type OperationCode347Enum "ocGoodsOrServiciesAcquisitions"|"ocPublicEntit
 
 # A paged collection of `Industries` entities returned by the SAP Business One Service Layer
 public type IndustriesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Industry[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1090,7 +1090,7 @@ public type ListContactsQueries record {
 
 # The `AddressReturnParams` complex type of the SAP Business One Service Layer
 public type AddressReturnParams record {|
-    # Full address field.
+    # Full address field
     @jsondata:Name {value: "FullAddress"}
     string fullAddress?;
 |};
@@ -1103,12 +1103,12 @@ public type BoCardCompanyTypes "cCompany"|"cPrivate"|"cGovernment"|"cEmployee"|"
 
 # A paged collection of `Territories` entities returned by the SAP Business One Service Layer
 public type TerritoriesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Territory[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1118,7 +1118,7 @@ public type BoCardTypes "cCustomer"|"cSupplier"|"cLid";
 
 # Represents the request payload for the `AddressService_GetFullAddress` operation of the SAP Business One Service Layer
 public type AddressService_GetFullAddress_body record {
-    # Address params field.
+    # Address params field
     @jsondata:Name {value: "AddressParams"}
     AddressParams addressParams?;
 };
@@ -1135,81 +1135,81 @@ public type ElectronicProtocol record {
     ElectronicDocProtocolCodeEnum ProtocolCode?;
     # OData EnumType 'ElectronicDocGenTypeEnum'. Serialised by the Service Layer as the member name
     ElectronicDocGenTypeEnum GenerationType?;
-    # Mapping ID field.
+    # Mapping ID field
     int:Signed32 MappingID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TestingMode?;
-    # Confirmation field.
+    # Confirmation field
     string Confirmation?;
-    # E document type field.
+    # E document type field
     int:Signed32 EDocType?;
-    # CF di cancellation reason field.
+    # CF di cancellation reason field
     string CFDiCancellationReason?;
-    # CF di cancellation response field.
+    # CF di cancellation response field
     string CFDiCancellationResponse?;
-    # Related documents field.
+    # Related documents field
     RelatedDocument[] RelatedDocuments?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EBooksRelevant?;
-    # E books MARK field.
+    # E books MARK field
     string EBooksMARK?;
-    # E books MAR kof negative field.
+    # E books MAR kof negative field
     string EBooksMARKofNegative?;
-    # E books invoice type field.
+    # E books invoice type field
     string EBooksInvoiceType?;
-    # E books invoice typeof negative field.
+    # E books invoice typeof negative field
     string EBooksInvoiceTypeofNegative?;
-    # E billing IRN field.
+    # E billing IRN field
     string EBillingIRN?;
-    # EETPKP field.
+    # EETPKP field
     string EETPKP?;
-    # EETBKP field.
+    # EETBKP field
     string EETBKP?;
-    # Signature input message field.
+    # Signature input message field
     string SignatureInputMessage?;
-    # Signature digest field.
+    # Signature digest field
     string SignatureDigest?;
-    # Fecha timbrado field.
+    # Fecha timbrado field
     string FechaTimbrado?;
-    # Sello SAT field.
+    # Sello SAT field
     string SelloSAT?;
-    # Payment method field.
+    # Payment method field
     string PaymentMethod?;
-    # Rfc prov certif field.
+    # Rfc prov certif field
     string RfcProvCertif?;
-    # Number certificado SAT field.
+    # Number certificado SAT field
     string NoCertificadoSAT?;
-    # FPA sequence number field.
+    # FPA sequence number field
     int:Signed32 FPASequenceNumber?;
-    # FPA send date SDI field.
+    # FPA send date SDI field
     string FPASendDateSDI?;
-    # FPA progressivo field.
+    # FPA progressivo field
     string FPAProgressivo?;
-    # Protocol description field.
+    # Protocol description field
     string ProtocolDescription?;
-    # CF di export field.
+    # CF di export field
     string CFDiExport?;
-    # E billing ack number field.
+    # E billing ack number field
     string EBillingAckNo?;
-    # E billing ack dt field.
+    # E billing ack dt field
     string EBillingAckDt?;
-    # E billing signed invoice field.
+    # E billing signed invoice field
     string EBillingSignedInvoice?;
-    # E billing signed QR code field.
+    # E billing signed QR code field
     string EBillingSignedQRCode?;
-    # E billing response status field.
+    # E billing response status field
     string EBillingResponseStatus?;
-    # CF di cancellation reference field.
+    # CF di cancellation reference field
     string CFDiCancellationReference?;
-    # E books QR code path field.
+    # E books QR code path field
     string EBooksQRCodePath?;
-    # E books QR code pathof negative field.
+    # E books QR code pathof negative field
     string EBooksQRCodePathofNegative?;
-    # Carta porte ID field.
+    # Carta porte ID field
     string CartaPorteID?;
-    # E books dispatch date field.
+    # E books dispatch date field
     string EBooksDispatchDate?;
-    # E books dispatch time field.
+    # E books dispatch time field
     string EBooksDispatchTime?;
 };
 
@@ -1218,41 +1218,41 @@ public type TypeOfOperationEnum "tooProfessionalServices"|"tooRentingAssets"|"to
 
 # The `PaymentTermsType` entity of the SAP Business One Service Layer
 public type PaymentTermsType record {
-    # Group number field.
+    # Group number field
     int:Signed32 GroupNumber?;
-    # Payment terms group name field.
+    # Payment terms group name field
     string PaymentTermsGroupName?;
     # OData EnumType 'BoPayTermDueTypes'. Serialised by the Service Layer as the member name
     BoPayTermDueTypes StartFrom?;
-    # Number of additional months field.
+    # Number of additional months field
     int:Signed32 NumberOfAdditionalMonths?;
-    # Number of additional days field.
+    # Number of additional days field
     int:Signed32 NumberOfAdditionalDays?;
-    # Credit limit field.
+    # Credit limit field
     decimal CreditLimit?;
-    # General discount field.
+    # General discount field
     decimal GeneralDiscount?;
-    # Interest on arrears field.
+    # Interest on arrears field
     decimal InterestOnArrears?;
-    # Price list number field.
+    # Price list number field
     int:Signed32 PriceListNo?;
-    # Load limit field.
+    # Load limit field
     decimal LoadLimit?;
     # OData EnumType 'BoOpenIncPayment'. Serialised by the Service Layer as the member name
     BoOpenIncPayment OpenReceipt?;
-    # Discount code field.
+    # Discount code field
     string DiscountCode?;
-    # Dunning code field.
+    # Dunning code field
     string DunningCode?;
     # OData EnumType 'BoBaselineDate'. Serialised by the Service Layer as the member name
     BoBaselineDate BaselineDate?;
-    # Number of installments field.
+    # Number of installments field
     int:Signed32 NumberOfInstallments?;
-    # Number of tolerance days field.
+    # Number of tolerance days field
     int:Signed32 NumberOfToleranceDays?;
     # OData EnumType 'BoPayTermDueTypes'. Serialised by the Service Layer as the member name
     BoPayTermDueTypes EndAt?;
-    # Business partners field.
+    # Business partners field
     BusinessPartner[] BusinessPartners?;
 };
 
@@ -1283,29 +1283,29 @@ public type ListBusinessPartnerGroupsQueries record {
 
 # The `BPVatExemptionsParams` complex type of the SAP Business One Service Layer
 public type BPVatExemptionsParams record {|
-    # Absolute entry field.
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
-    # B p code field.
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
 |};
 
 # The `BPVatExemptions` entity of the SAP Business One Service Layer
 public type BPVatExemptions record {|
-    # Absolute entry field.
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
-    # Business partner field.
+    # Business partner field
     @jsondata:Name {value: "BusinessPartner"}
     BusinessPartner businessPartner?;
-    # B p VAT exemptions lines field.
+    # B p VAT exemptions lines field
     @jsondata:Name {value: "BPVatExemptionsLines"}
     BPVatExemptionsLine[] bPVatExemptionsLines?;
-    # B p code field.
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
 |};
@@ -1315,19 +1315,19 @@ public type BoOpenIncPayment "oip_No"|"oip_Cash"|"oip_Checks"|"oip_Credit"|"oip_
 
 # The `BPPaymentMethod` complex type of the SAP Business One Service Layer
 public type BPPaymentMethod record {
-    # Payment method code field.
+    # Payment method code field
     string PaymentMethodCode?;
-    # Row number field.
+    # Row number field
     int:Signed32 RowNumber?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
 };
 
 # The `BPBranchAssignmentItem` complex type of the SAP Business One Service Layer
 public type BPBranchAssignmentItem record {
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
-    # BPLID field.
+    # BPLID field
     int:Signed32 BPLID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DisabledForBP?;
@@ -1405,45 +1405,45 @@ public type ListBusinessPartnersQueries record {
 
 # The `Relationship` entity of the SAP Business One Service Layer
 public type Relationship record {
-    # Relationship description field.
+    # Relationship description field
     string RelationshipDescription?;
-    # Relationship code field.
+    # Relationship code field
     int:Signed32 RelationshipCode?;
 };
 
 # A paged collection of `BusinessPartnerProperties` entities returned by the SAP Business One Service Layer
 public type BusinessPartnerPropertiesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BusinessPartnerProperty[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `BusinessPartnerPropertyParams` complex type of the SAP Business One Service Layer
 public type BusinessPartnerPropertyParams record {|
-    # Property name field.
+    # Property name field
     @jsondata:Name {value: "PropertyName"}
     string propertyName?;
-    # Property code field.
+    # Property code field
     @jsondata:Name {value: "PropertyCode"}
     int:Signed32 propertyCode?;
 |};
 
 # The `BPPaymentDate` complex type of the SAP Business One Service Layer
 public type BPPaymentDate record {
-    # Payment date field.
+    # Payment date field
     string PaymentDate?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
 };
 
 # The `BPCurrencies` complex type of the SAP Business One Service Layer
 public type BPCurrencies record {
-    # Currency code field.
+    # Currency code field
     string CurrencyCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Include?;
@@ -1458,34 +1458,34 @@ public type ListIndustriesHeaders record {
 
 # The `BPCode` complex type of the SAP Business One Service Layer
 public type BPCode record {|
-    # Debit field.
+    # Debit field
     @jsondata:Name {value: "Debit"}
     decimal debit?;
-    # System credit field.
+    # System credit field
     @jsondata:Name {value: "SystemCredit"}
     decimal systemCredit?;
-    # Credit field.
+    # Credit field
     @jsondata:Name {value: "Credit"}
     decimal credit?;
-    # Foreign credit field.
+    # Foreign credit field
     @jsondata:Name {value: "ForeignCredit"}
     decimal foreignCredit?;
-    # Foreign currency field.
+    # Foreign currency field
     @jsondata:Name {value: "ForeignCurrency"}
     string foreignCurrency?;
-    # Business partner ctrl account field.
+    # Business partner ctrl account field
     @jsondata:Name {value: "BpCtrlAcct"}
     string bpCtrlAcct?;
-    # System debit field.
+    # System debit field
     @jsondata:Name {value: "SystemDebit"}
     decimal systemDebit?;
-    # Foreign debit field.
+    # Foreign debit field
     @jsondata:Name {value: "ForeignDebit"}
     decimal foreignDebit?;
-    # Due date field.
+    # Due date field
     @jsondata:Name {value: "DueDate"}
     string dueDate?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -1495,71 +1495,71 @@ public type BoAddressType "bo_ShipTo"|"bo_BillTo";
 
 # The `BPBankAccount` complex type of the SAP Business One Service Layer
 public type BPBankAccount record {
-    # Log instance field.
+    # Log instance field
     int:Signed32 LogInstance?;
-    # User no4 field.
+    # User no4 field
     string UserNo4?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
-    # County field.
+    # County field
     string County?;
-    # State field.
+    # State field
     string State?;
-    # User no2 field.
+    # User no2 field
     string UserNo2?;
-    # IBAN field.
+    # IBAN field
     string IBAN?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # City field.
+    # City field
     string City?;
-    # Block field.
+    # Block field
     string Block?;
-    # Branch field.
+    # Branch field
     string Branch?;
-    # Country field.
+    # Country field
     string Country?;
-    # Street field.
+    # Street field
     string Street?;
-    # Control key field.
+    # Control key field
     string ControlKey?;
-    # User no3 field.
+    # User no3 field
     string UserNo3?;
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Account number field.
+    # Account number field
     string AccountNo?;
-    # User no1 field.
+    # User no1 field
     string UserNo1?;
-    # Internal key field.
+    # Internal key field
     int:Signed32 InternalKey?;
-    # Building floor room field.
+    # Building floor room field
     string BuildingFloorRoom?;
-    # BIK field.
+    # BIK field
     string BIK?;
-    # Account name field.
+    # Account name field
     string AccountName?;
-    # Correspondent account field.
+    # Correspondent account field
     string CorrespondentAccount?;
-    # Phone field.
+    # Phone field
     string Phone?;
-    # Fax field.
+    # Fax field
     string Fax?;
-    # Customer ID number field.
+    # Customer ID number field
     string CustomerIdNumber?;
-    # ISR biller ID field.
+    # ISR biller ID field
     string ISRBillerID?;
-    # ISR type field.
+    # ISR type field
     int:Signed32 ISRType?;
-    # BIC swift code field.
+    # BIC swift code field
     string BICSwiftCode?;
-    # ABA routing number field.
+    # ABA routing number field
     string ABARoutingNumber?;
-    # Mandate ID field.
+    # Mandate ID field
     string MandateID?;
-    # Signature date field.
+    # Signature date field
     string SignatureDate?;
-    # Mandate exp date field.
+    # Mandate exp date field
     string MandateExpDate?;
     # OData EnumType 'SEPASequenceTypeEnum'. Serialised by the Service Layer as the member name
     SEPASequenceTypeEnum SEPASeqType?;
@@ -1567,22 +1567,22 @@ public type BPBankAccount record {
 
 # Represents the request payload for the `BusinessPartnersService_CreateOpenBalance` operation of the SAP Business One Service Layer
 public type BusinessPartnersService_CreateOpenBalance_body record {
-    # Openning balance account field.
+    # Openning balance account field
     @jsondata:Name {value: "OpenningBalanceAccount"}
     OpenningBalanceAccount openningBalanceAccount?;
-    # B p codes field.
+    # B p codes field
     @jsondata:Name {value: "BPCodes"}
     BPCode[] bPCodes?;
 };
 
 # A paged collection of `Relationships` entities returned by the SAP Business One Service Layer
 public type RelationshipsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Relationship[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1602,22 +1602,22 @@ public type ElectronicDocProtocolCodeEnum "edpc_Invalid"|"edpc_GEN"|"edpc_EET"|"
 
 # The `OpenningBalanceAccount` complex type of the SAP Business One Service Layer
 public type OpenningBalanceAccount record {|
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Open balance account field.
+    # Open balance account field
     @jsondata:Name {value: "OpenBalanceAccount"}
     string openBalanceAccount?;
-    # Ref1 field.
+    # Ref1 field
     @jsondata:Name {value: "Ref1"}
     string ref1?;
-    # Ref2 field.
+    # Ref2 field
     @jsondata:Name {value: "Ref2"}
     string ref2?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
-    # B PLID field.
+    # B PLID field
     @jsondata:Name {value: "BPLID"}
     int:Signed32 bPLID?;
 |};
@@ -1659,21 +1659,21 @@ public type ListBusinessPartnerPropertiesQueries record {
 
 # The `BPWithholdingTax` complex type of the SAP Business One Service Layer
 public type BPWithholdingTax record {
-    # Withholding tax code field.
+    # Withholding tax code field
     string WTCode?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
 };
 
 # The `Industry` entity of the SAP Business One Service Layer
 public type Industry record {
-    # Industry description field.
+    # Industry description field
     string IndustryDescription?;
-    # Industry name field.
+    # Industry name field
     string IndustryName?;
-    # Industry code field.
+    # Industry code field
     int:Signed32 IndustryCode?;
-    # Business partners field.
+    # Business partners field
     BusinessPartner[] BusinessPartners?;
 };
 
@@ -1704,67 +1704,67 @@ public type ListPaymentTermsTypesQueries record {
 
 # The `BPFiscalTaxID` complex type of the SAP Business One Service Layer
 public type BPFiscalTaxID record {
-    # Address field.
+    # Address field
     string Address?;
-    # CNAE code field.
+    # CNAE code field
     int:Signed32 CNAECode?;
-    # Tax id0 field.
+    # Tax id0 field
     string TaxId0?;
-    # Tax id1 field.
+    # Tax id1 field
     string TaxId1?;
-    # Tax id2 field.
+    # Tax id2 field
     string TaxId2?;
-    # Tax id3 field.
+    # Tax id3 field
     string TaxId3?;
-    # Tax id4 field.
+    # Tax id4 field
     string TaxId4?;
-    # Tax id5 field.
+    # Tax id5 field
     string TaxId5?;
-    # Tax id6 field.
+    # Tax id6 field
     string TaxId6?;
-    # Tax id7 field.
+    # Tax id7 field
     string TaxId7?;
-    # Tax id8 field.
+    # Tax id8 field
     string TaxId8?;
-    # Tax id9 field.
+    # Tax id9 field
     string TaxId9?;
-    # Tax id10 field.
+    # Tax id10 field
     string TaxId10?;
-    # Tax id11 field.
+    # Tax id11 field
     string TaxId11?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
     # OData EnumType 'BoAddressType'. Serialised by the Service Layer as the member name
     BoAddressType AddrType?;
-    # Tax id12 field.
+    # Tax id12 field
     string TaxId12?;
-    # Tax id13 field.
+    # Tax id13 field
     string TaxId13?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AToRetrNFe?;
-    # Tax id14 field.
+    # Tax id14 field
     string TaxId14?;
 };
 
 # The `Territory` entity of the SAP Business One Service Layer
 public type Territory record {
-    # Territory ID field.
+    # Territory ID field
     int:Signed32 TerritoryID?;
-    # Description field.
+    # Description field
     string Description?;
-    # Location index field.
+    # Location index field
     int:Signed32 LocationIndex?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactive?;
-    # Parent field.
+    # Parent field
     int:Signed32 Parent?;
-    # Business partners field.
+    # Business partners field
     BusinessPartner[] BusinessPartners?;
 };
 
 # Represents the request payload for the `PaymentTermsTypesService_UpdateWithBPs` operation of the SAP Business One Service Layer
 public type PaymentTermsTypesService_UpdateWithBPs_body record {
-    # Payment terms type field.
+    # Payment terms type field
     @jsondata:Name {value: "PaymentTermsType"}
     PaymentTermsType paymentTermsType?;
 };
@@ -1784,11 +1784,11 @@ public type GetBusinessPartnerGroupsQueries record {
 
 # The `BPPriority` entity of the SAP Business One Service Layer
 public type BPPriority record {
-    # Priority field.
+    # Priority field
     int:Signed32 Priority?;
-    # Priority description field.
+    # Priority description field
     string PriorityDescription?;
-    # Business partners field.
+    # Business partners field
     BusinessPartner[] BusinessPartners?;
 };
 
@@ -1804,19 +1804,19 @@ public type ListBPPrioritiesHeaders record {
 
 # The `RelatedDocument` complex type of the SAP Business One Service Layer
 public type RelatedDocument record {|
-    # Abs enry field.
+    # Abs enry field
     @jsondata:Name {value: "AbsEnry"}
     int:Signed32 absEnry?;
-    # Abs entry field.
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
-    # U UID field.
+    # U UID field
     @jsondata:Name {value: "UUID"}
     string uUID?;
-    # Document tye field.
+    # Document tye field
     @jsondata:Name {value: "DocTye"}
     RelatedDocumentTypeEnum docTye?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     RelatedDocumentTypeEnum docType?;
 |};
@@ -1829,32 +1829,32 @@ public type BoGSTRegnTypeEnum "invalid"|"gstRegularTDSISD"|"gstCasualTaxablePers
 
 # The `AddressFormatParams` complex type of the SAP Business One Service Layer
 public type AddressFormatParams record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # A paged collection of `BPPriorities` entities returned by the SAP Business One Service Layer
 public type BPPrioritiesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BPPriority[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `BusinessPartnerPropertiesService_GetBusinessPartnerPropertyList` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BusinessPartnerPropertyParams[] value?;
 };
 
@@ -1870,88 +1870,88 @@ public type GetBusinessPartnerPropertiesQueries record {
 
 # The `ContactEmployee` complex type of the SAP Business One Service Layer
 public type ContactEmployee record {
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Name field.
+    # Name field
     string Name?;
-    # Position field.
+    # Position field
     string Position?;
-    # Address field.
+    # Address field
     string Address?;
-    # Phone1 field.
+    # Phone1 field
     string Phone1?;
-    # Phone2 field.
+    # Phone2 field
     string Phone2?;
-    # Mobile phone field.
+    # Mobile phone field
     string MobilePhone?;
-    # Fax field.
+    # Fax field
     string Fax?;
-    # E mail field.
+    # E mail field
     string E_Mail?;
-    # Pager field.
+    # Pager field
     string Pager?;
-    # Remarks1 field.
+    # Remarks1 field
     string Remarks1?;
-    # Remarks2 field.
+    # Remarks2 field
     string Remarks2?;
-    # Password field.
+    # Password field
     string Password?;
-    # Internal code field.
+    # Internal code field
     int:Signed32 InternalCode?;
-    # Place of birth field.
+    # Place of birth field
     string PlaceOfBirth?;
-    # Date of birth field.
+    # Date of birth field
     string DateOfBirth?;
     # OData EnumType 'BoGenderTypes'. Serialised by the Service Layer as the member name
     BoGenderTypes Gender?;
-    # Profession field.
+    # Profession field
     string Profession?;
-    # Title field.
+    # Title field
     string Title?;
-    # City of birth field.
+    # City of birth field
     string CityOfBirth?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Active?;
-    # First name field.
+    # First name field
     string FirstName?;
-    # Middle name field.
+    # Middle name field
     string MiddleName?;
-    # Last name field.
+    # Last name field
     string LastName?;
-    # Email group code field.
+    # Email group code field
     string EmailGroupCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BlockSendingMarketingContent?;
-    # Create date field.
+    # Create date field
     string CreateDate?;
-    # Create time field.
+    # Create time field
     string CreateTime?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Update time field.
+    # Update time field
     string UpdateTime?;
-    # Connected address name field.
+    # Connected address name field
     string ConnectedAddressName?;
     # OData EnumType 'BoAddressType'. Serialised by the Service Layer as the member name
     BoAddressType ConnectedAddressType?;
-    # Foreign country field.
+    # Foreign country field
     string ForeignCountry?;
-    # Gender ex field.
+    # Gender ex field
     string GenderEx?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NaturalPer?;
-    # Contact employee block sending marketing contents field.
+    # Contact employee block sending marketing contents field
     ContactEmployeeBlockSendingMarketingContent[] ContactEmployeeBlockSendingMarketingContents?;
 };
 
 # A paged collection of `BusinessPartnerGroups` entities returned by the SAP Business One Service Layer
 public type BusinessPartnerGroupsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BusinessPartnerGroup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1983,12 +1983,12 @@ public type ListTerritoriesQueries record {
 
 # A paged collection of `BPVatExemptions` entities returned by the SAP Business One Service Layer
 public type BPVatExemptionsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BPVatExemptions[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2002,19 +2002,19 @@ public type ListBusinessPartnerPropertiesHeaders record {
 
 # The `ContactEmployeeBlockSendingMarketingContent` complex type of the SAP Business One Service Layer
 public type ContactEmployeeBlockSendingMarketingContent record {|
-    # Communication media ID field.
+    # Communication media ID field
     @jsondata:Name {value: "CommunicationMediaId"}
     int:Signed32 communicationMediaId?;
-    # Choose field.
+    # Choose field
     @jsondata:Name {value: "Choose"}
     BoYesNoEnum choose?;
-    # Contact employee abs entry field.
+    # Contact employee abs entry field
     @jsondata:Name {value: "ContactEmployeeAbsEntry"}
     int:Signed32 contactEmployeeAbsEntry?;
-    # Contact person name field.
+    # Contact person name field
     @jsondata:Name {value: "ContactPersonName"}
     string contactPersonName?;
-    # Card code field.
+    # Card code field
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
 |};
@@ -2024,58 +2024,58 @@ public type BoBusinessPartnerGroupTypes "bbpgt_CustomerGroup"|"bbpgt_VendorGroup
 
 # The `BPVatExemptionsLine` complex type of the SAP Business One Service Layer
 public type BPVatExemptionsLine record {|
-    # V AT rate field.
+    # V AT rate field
     @jsondata:Name {value: "VATRate"}
     decimal vATRate?;
-    # Item code field.
+    # Item code field
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
-    # Issue date field.
+    # Issue date field
     @jsondata:Name {value: "IssueDate"}
     string issueDate?;
-    # Item description field.
+    # Item description field
     @jsondata:Name {value: "ItemDescription"}
     string itemDescription?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Exemption document number field.
+    # Exemption document number field
     @jsondata:Name {value: "ExemptionDocNum"}
     string exemptionDocNum?;
-    # Issue time field.
+    # Issue time field
     @jsondata:Name {value: "IssueTime"}
     string issueTime?;
-    # Absolute entry field.
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
-    # Tax code field.
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
-    # Valid to field.
+    # Valid to field
     @jsondata:Name {value: "ValidTo"}
     string validTo?;
-    # Valid from field.
+    # Valid from field
     @jsondata:Name {value: "ValidFrom"}
     string validFrom?;
-    # Authorities name field.
+    # Authorities name field
     @jsondata:Name {value: "AuthoritiesName"}
     string authoritiesName?;
-    # Exemption type field.
+    # Exemption type field
     @jsondata:Name {value: "ExemptionType"}
     int:Signed32 exemptionType?;
-    # Apply all items field.
+    # Apply all items field
     @jsondata:Name {value: "ApplyAllItems"}
     BoYesNoEnum applyAllItems?;
-    # Visual order field.
+    # Visual order field
     @jsondata:Name {value: "VisualOrder"}
     int:Signed32 visualOrder?;
 |};
 
 # The `BusinessPartnerProperty` entity of the SAP Business One Service Layer
 public type BusinessPartnerProperty record {
-    # Property code field.
+    # Property code field
     int:Signed32 PropertyCode?;
-    # Property name field.
+    # Property name field
     string PropertyName?;
 };
 
@@ -2097,34 +2097,34 @@ public type BoActivities "cn_Conversation"|"cn_Meeting"|"cn_Task"|"cn_Other"|"cn
 
 # Represents the response payload for the `BPVatExemptionsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BPVatExemptionsParams[] value?;
 };
 
 # A paged collection of `BPFiscalRegistryID` entities returned by the SAP Business One Service Layer
 public type BPFiscalRegistryIDCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BPFiscalRegistryID[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AddressFormat` complex type of the SAP Business One Service Layer
 public type AddressFormat record {|
-    # Format field.
+    # Format field
     @jsondata:Name {value: "Format"}
     string format?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -2134,10 +2134,10 @@ public type BoBaselineDate "bld_PostingDate"|"bld_SystemDate"|"bld_TaxDate"|"bld
 
 # Represents the request payload for the `BPOpeningBalanceService_CreateOpenBalance` operation of the SAP Business One Service Layer
 public type BPOpeningBalanceService_CreateOpenBalance_body record {
-    # Openning balance account field.
+    # Openning balance account field
     @jsondata:Name {value: "OpenningBalanceAccount"}
     OpenningBalanceAccount openningBalanceAccount?;
-    # B p codes field.
+    # B p codes field
     @jsondata:Name {value: "BPCodes"}
     BPCode[] bPCodes?;
 };
@@ -2150,11 +2150,11 @@ public type EffectivePriceEnum "epDefaultPriority"|"epLowestPrice"|"epHighestPri
 
 # The `BPFiscalRegistryID` entity of the SAP Business One Service Layer
 public type BPFiscalRegistryID record {
-    # Numerator field.
+    # Numerator field
     int:Signed32 Numerator?;
-    # CNAE code field.
+    # CNAE code field
     string CNAECode?;
-    # Description field.
+    # Description field
     string Description?;
 };
 
@@ -2173,99 +2173,99 @@ public type ListRelationshipsHeaders record {
 
 # The `Contact` entity of the SAP Business One Service Layer
 public type Contact record {
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Contact date field.
+    # Contact date field
     string ContactDate?;
-    # Contact time field.
+    # Contact time field
     string ContactTime?;
-    # Recontact field.
+    # Recontact field
     string Recontact?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Closed?;
-    # Close date field.
+    # Close date field
     string CloseDate?;
-    # Phone field.
+    # Phone field
     string Phone?;
-    # Fax field.
+    # Fax field
     string Fax?;
-    # Subject field.
+    # Subject field
     int:Signed32 Subject?;
-    # Document type field.
+    # Document type field
     string DocType?;
-    # Document number field.
+    # Document number field
     string DocNum?;
-    # Document entry field.
+    # Document entry field
     string DocEntry?;
-    # Contact code field.
+    # Contact code field
     int:Signed32 ContactCode?;
     # OData EnumType 'BoMsgPriorities'. Serialised by the Service Layer as the member name
     BoMsgPriorities Priority?;
-    # Details field.
+    # Details field
     string Details?;
     # OData EnumType 'BoActivities'. Serialised by the Service Layer as the member name
     BoActivities Activity?;
-    # Activity type field.
+    # Activity type field
     int:Signed32 ActivityType?;
-    # Location field.
+    # Location field
     int:Signed32 Location?;
-    # Start time field.
+    # Start time field
     string StartTime?;
-    # End time field.
+    # End time field
     string EndTime?;
-    # Duration field.
+    # Duration field
     decimal Duration?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations DurationType?;
-    # Sales employee field.
+    # Sales employee field
     int:Signed32 SalesEmployee?;
-    # Contact person code field.
+    # Contact person code field
     int:Signed32 ContactPersonCode?;
-    # Handled by field.
+    # Handled by field
     int:Signed32 HandledBy?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Reminder?;
-    # Reminder period field.
+    # Reminder period field
     decimal ReminderPeriod?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations ReminderType?;
-    # City field.
+    # City field
     string City?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Personalflag?;
-    # Street field.
+    # Street field
     string Street?;
-    # Parentobject ID field.
+    # Parentobject ID field
     int:Signed32 ParentobjectId?;
-    # Parentobjecttype field.
+    # Parentobjecttype field
     string Parentobjecttype?;
-    # Room field.
+    # Room field
     string Room?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactiveflag?;
-    # State field.
+    # State field
     string State?;
-    # Previous activity field.
+    # Previous activity field
     int:Signed32 PreviousActivity?;
-    # Country field.
+    # Country field
     string Country?;
-    # Status field.
+    # Status field
     int:Signed32 Status?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Tentativeflag?;
-    # End duedate field.
+    # End duedate field
     string EndDuedate?;
-    # Document type ex field.
+    # Document type ex field
     string DocTypeEx?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # User signature field.
+    # User signature field
     int:Signed32 UserSignature?;
-    # User signature2 field.
+    # User signature2 field
     int:Signed32 UserSignature2?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Emailedflag?;
@@ -2275,24 +2275,24 @@ public type Contact record {
 
 # A paged collection of `PaymentTermsTypes` entities returned by the SAP Business One Service Layer
 public type PaymentTermsTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentTermsType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `BusinessPartners` entities returned by the SAP Business One Service Layer
 public type BusinessPartnersCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BusinessPartner[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2372,16 +2372,16 @@ public type ListBPVatExemptionsQueries record {
 
 # The `DiscountGroup` complex type of the SAP Business One Service Layer
 public type DiscountGroup record {|
-    # Discount percentage field.
+    # Discount percentage field
     @jsondata:Name {value: "DiscountPercentage"}
     decimal discountPercentage?;
-    # Object entry field.
+    # Object entry field
     @jsondata:Name {value: "ObjectEntry"}
     string objectEntry?;
-    # B p code field.
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
-    # Base object type field.
+    # Base object type field
     @jsondata:Name {value: "BaseObjectType"}
     DiscountGroupBaseObjectEnum baseObjectType?;
 |};

@@ -72,34 +72,34 @@ public type ListAssetDepreciationGroupsQueries record {
 
 # The `FixedAssetEndBalance` complex type of the SAP Business One Service Layer
 public type FixedAssetEndBalance record {|
-    # Salvage value field.
+    # Salvage value field
     @jsondata:Name {value: "SalvageValue"}
     decimal salvageValue?;
-    # Acquisition cost field.
+    # Acquisition cost field
     @jsondata:Name {value: "AcquisitionCost"}
     decimal acquisitionCost?;
-    # Net book value field.
+    # Net book value field
     @jsondata:Name {value: "NetBookValue"}
     decimal netBookValue?;
-    # Ordinary depreciation value field.
+    # Ordinary depreciation value field
     @jsondata:Name {value: "OrdinaryDepreciationValue"}
     decimal ordinaryDepreciationValue?;
-    # Special depreciation value field.
+    # Special depreciation value field
     @jsondata:Name {value: "SpecialDepreciationValue"}
     decimal specialDepreciationValue?;
-    # Historical APC field.
+    # Historical APC field
     @jsondata:Name {value: "HistoricalAPC"}
     decimal historicalAPC?;
-    # Unplaned depreciation value field.
+    # Unplaned depreciation value field
     @jsondata:Name {value: "UnplanedDepreciationValue"}
     decimal unplanedDepreciationValue?;
-    # Quantity field.
+    # Quantity field
     @jsondata:Name {value: "Quantity"}
     decimal quantity?;
-    # Historical NBV field.
+    # Historical NBV field
     @jsondata:Name {value: "HistoricalNBV"}
     decimal historicalNBV?;
-    # Write up field.
+    # Write up field
     @jsondata:Name {value: "WriteUp"}
     decimal writeUp?;
 |};
@@ -109,25 +109,25 @@ public type AssetTypeEnum "atAssetTypeGeneral"|"atAssetTypeLowValueAsset";
 
 # A paged collection of `DepreciationTypePools` entities returned by the SAP Business One Service Layer
 public type DepreciationTypePoolsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepreciationTypePool[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `FixedAssetValuesParams` complex type of the SAP Business One Service Layer
 public type FixedAssetValuesParams record {|
-    # Item code field.
+    # Item code field
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
-    # Fiscal year field.
+    # Fiscal year field
     @jsondata:Name {value: "FiscalYear"}
     string fiscalYear?;
-    # Depreciation area field.
+    # Depreciation area field
     @jsondata:Name {value: "DepreciationArea"}
     string depreciationArea?;
 |};
@@ -137,45 +137,45 @@ public type CalculationBaseEnum "cbYearly"|"cbMonthly";
 
 # A paged collection of `AssetManualDepreciation` entities returned by the SAP Business One Service Layer
 public type AssetManualDepreciationCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocument[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AssetDocument` entity of the SAP Business One Service Layer
 public type AssetDocument record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Posting date field.
+    # Posting date field
     string PostingDate?;
-    # Document date field.
+    # Document date field
     string DocumentDate?;
     # OData EnumType 'AssetDocumentStatusEnum'. Serialised by the Service Layer as the member name
     AssetDocumentStatusEnum Status?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
-    # Reference field.
+    # Reference field
     string Reference?;
-    # Currency field.
+    # Currency field
     string Currency?;
-    # Document rate field.
+    # Document rate field
     decimal DocumentRate?;
-    # Document total field.
+    # Document total field
     decimal DocumentTotal?;
-    # Document total foreign currency field.
+    # Document total foreign currency field
     decimal DocumentTotalFC?;
-    # Document total system currency field.
+    # Document total system currency field
     decimal DocumentTotalSC?;
-    # Asset value date field.
+    # Asset value date field
     string AssetValueDate?;
     # OData EnumType 'AssetDocumentTypeEnum'. Serialised by the Service Layer as the member name
     AssetDocumentTypeEnum DocumentType?;
@@ -183,17 +183,17 @@ public type AssetDocument record {
     BoYesNoEnum SummerizeByProjects?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SummerizeByDistributionRules?;
-    # Manual depreciation type field.
+    # Manual depreciation type field
     string ManualDepreciationType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum HandWritten?;
-    # Cancellation date field.
+    # Cancellation date field
     string CancellationDate?;
-    # Depreciation area field.
+    # Depreciation area field
     string DepreciationArea?;
-    # BPL ID field.
+    # BPL ID field
     int:Signed32 BPLId?;
-    # Origin field.
+    # Origin field
     int:Signed32 Origin?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LowValueAssetRetirement?;
@@ -201,25 +201,25 @@ public type AssetDocument record {
     ClosingOptionEnum CancellationOption?;
     # OData EnumType 'AssetOriginalTypeEnum'. Serialised by the Service Layer as the member name
     AssetOriginalTypeEnum OriginalType?;
-    # Base reference field.
+    # Base reference field
     string BaseReference?;
-    # BPL name field.
+    # BPL name field
     string BPLName?;
-    # VAT reg number field.
+    # VAT reg number field
     string VATRegNum?;
-    # Asset document line collection field.
+    # Asset document line collection field
     AssetDocumentLine[] AssetDocumentLineCollection?;
-    # Asset document area journal collection field.
+    # Asset document area journal collection field
     AssetDocumentAreaJournal[] AssetDocumentAreaJournalCollection?;
-    # PTI code field.
+    # PTI code field
     string PTICode?;
-    # Letter field.
+    # Letter field
     string Letter?;
-    # Fol number from field.
+    # Fol number from field
     int:Signed32 FolNumFrom?;
-    # Fol number to field.
+    # Fol number to field
     int:Signed32 FolNumTo?;
-    # Asset document new loc collection field.
+    # Asset document new loc collection field
     AssetDocumentNewLoc[] AssetDocumentNewLocCollection?;
     # The `DepreciationType` entity of the SAP Business One Service Layer
     DepreciationType DepreciationType?;
@@ -238,34 +238,34 @@ public type SubsequentAcquisitionPeriodControlEnum "sapcProRataTemporis"|"sapcHa
 
 # The `FixedAssetValues` complex type of the SAP Business One Service Layer
 public type FixedAssetValues record {|
-    # Transaction type field.
+    # Transaction type field
     @jsondata:Name {value: "TransactionType"}
     AssetTransactionTypeEnum transactionType?;
-    # Acquisition cost field.
+    # Acquisition cost field
     @jsondata:Name {value: "AcquisitionCost"}
     decimal acquisitionCost?;
-    # Net book value field.
+    # Net book value field
     @jsondata:Name {value: "NetBookValue"}
     decimal netBookValue?;
-    # Appreciation field.
+    # Appreciation field
     @jsondata:Name {value: "Appreciation"}
     decimal appreciation?;
-    # Depreciation value field.
+    # Depreciation value field
     @jsondata:Name {value: "DepreciationValue"}
     decimal depreciationValue?;
-    # Ordinary depreciation value field.
+    # Ordinary depreciation value field
     @jsondata:Name {value: "OrdinaryDepreciationValue"}
     decimal ordinaryDepreciationValue?;
-    # Special depreciation value field.
+    # Special depreciation value field
     @jsondata:Name {value: "SpecialDepreciationValue"}
     decimal specialDepreciationValue?;
-    # Quantity field.
+    # Quantity field
     @jsondata:Name {value: "Quantity"}
     decimal quantity?;
-    # Unplaned depreciation value field.
+    # Unplaned depreciation value field
     @jsondata:Name {value: "UnplanedDepreciationValue"}
     decimal unplanedDepreciationValue?;
-    # Write up field.
+    # Write up field
     @jsondata:Name {value: "WriteUp"}
     decimal writeUp?;
 |};
@@ -310,10 +310,10 @@ public type SubsequentAcquisitionProRataTypeEnum "saprtExactlyDailyBase"|"saprtF
 
 # The `AssetGroupParams` complex type of the SAP Business One Service Layer
 public type AssetGroupParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -333,25 +333,25 @@ public type GetAssetManualDepreciationQueries record {
 
 # A paged collection of `AssetDepreciationGroups` entities returned by the SAP Business One Service Layer
 public type AssetDepreciationGroupsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDepreciationGroup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AssetDocumentParams` complex type of the SAP Business One Service Layer
 public type AssetDocumentParams record {|
-    # Cancellation option field.
+    # Cancellation option field
     @jsondata:Name {value: "CancellationOption"}
     ClosingOptionEnum cancellationOption?;
-    # Cancellation date field.
+    # Cancellation date field
     @jsondata:Name {value: "CancellationDate"}
     string cancellationDate?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
 |};
@@ -435,7 +435,7 @@ public type GetAssetTransferQueries record {
 
 # Represents the request payload for the `FixedAssetItemsService_GetAssetValuesList` operation of the SAP Business One Service Layer
 public type FixedAssetItemsService_GetAssetValuesList_body record {
-    # Fixed asset values params field.
+    # Fixed asset values params field
     @jsondata:Name {value: "FixedAssetValuesParams"}
     FixedAssetValuesParams fixedAssetValuesParams?;
 };
@@ -452,25 +452,25 @@ public type ListAssetClassesHeaders record {
 
 # A paged collection of `DepreciationAreas` entities returned by the SAP Business One Service Layer
 public type DepreciationAreasCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepreciationArea[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AssetDepreciationGroup` entity of the SAP Business One Service Layer
 public type AssetDepreciationGroup record {|
-    # Group field.
+    # Group field
     @jsondata:Name {value: "Group"}
     string group?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -512,12 +512,12 @@ public type ListAssetCapitalizationCreditMemoQueries record {
 
 # A paged collection of `AssetRevaluations` entities returned by the SAP Business One Service Layer
 public type AssetRevaluationsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetRevaluation[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -556,12 +556,12 @@ public type ListDepreciationAreasQueries record {
 
 # A paged collection of `AssetCapitalization` entities returned by the SAP Business One Service Layer
 public type AssetCapitalizationCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocument[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -569,41 +569,41 @@ public type AssetCapitalizationCollectionResponse record {
 
 # Represents the request payload for the `AssetCapitalizationCreditMemoService_Cancel` operation of the SAP Business One Service Layer
 public type AssetCapitalizationCreditMemoService_Cancel_body record {
-    # Asset document params field.
+    # Asset document params field
     @jsondata:Name {value: "AssetDocumentParams"}
     AssetDocumentParams assetDocumentParams?;
 };
 
 # A paged collection of `AssetClasses` entities returned by the SAP Business One Service Layer
 public type AssetClassesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetClass[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AssetDepreciationGroupParams` complex type of the SAP Business One Service Layer
 public type AssetDepreciationGroupParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # A paged collection of `AssetTransfer` entities returned by the SAP Business One Service Layer
 public type AssetTransferCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocument[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -627,7 +627,7 @@ public type ListAssetGroupsHeaders record {
 
 # Represents the request payload for the `AssetManualDepreciationService_Cancel` operation of the SAP Business One Service Layer
 public type AssetManualDepreciationService_Cancel_body record {
-    # Asset document params field.
+    # Asset document params field
     @jsondata:Name {value: "AssetDocumentParams"}
     AssetDocumentParams assetDocumentParams?;
 };
@@ -647,25 +647,25 @@ public type TransferSourcePeriodControlEnum "tspcProRataTemporis";
 
 # The `AssetDocumentNewLoc` complex type of the SAP Business One Service Layer
 public type AssetDocumentNewLoc record {|
-    # N BV field.
+    # N BV field
     @jsondata:Name {value: "NBV"}
     decimal nBV?;
-    # New location field.
+    # New location field
     @jsondata:Name {value: "NewLocation"}
     int:Signed32 newLocation?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Quantity field.
+    # Quantity field
     @jsondata:Name {value: "Quantity"}
     decimal quantity?;
-    # Cur location field.
+    # Cur location field
     @jsondata:Name {value: "CurLocation"}
     int:Signed32 curLocation?;
-    # Asset number field.
+    # Asset number field
     @jsondata:Name {value: "AssetNumber"}
     string assetNumber?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
@@ -733,35 +733,35 @@ public type AssetOriginalTypeEnum "aotARInvoice"|"aotAPCreditMemo"|"aotAPInvoice
 
 # The `AssetDocumentAreaJournal` complex type of the SAP Business One Service Layer
 public type AssetDocumentAreaJournal record {|
-    # Transaction number field.
+    # Transaction number field
     @jsondata:Name {value: "TransactionNumber"}
     int:Signed32 transactionNumber?;
-    # Cancellation transaction number field.
+    # Cancellation transaction number field
     @jsondata:Name {value: "CancellationTransactionNumber"}
     int:Signed32 cancellationTransactionNumber?;
-    # Cancellation journal remarks field.
+    # Cancellation journal remarks field
     @jsondata:Name {value: "CancellationJournalRemarks"}
     string cancellationJournalRemarks?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Depreciation area field.
+    # Depreciation area field
     @jsondata:Name {value: "DepreciationArea"}
     string depreciationArea?;
-    # Journal remarks field.
+    # Journal remarks field
     @jsondata:Name {value: "JournalRemarks"}
     string journalRemarks?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
 
 # The `DepreciationTypePoolParams` complex type of the SAP Business One Service Layer
 public type DepreciationTypePoolParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -771,26 +771,26 @@ public type RetirementPeriodControlEnum "rpcProRataTemporis"|"rpcHalfYearConvent
 
 # The `DepreciationLevel` complex type of the SAP Business One Service Layer
 public type DepreciationLevel record {|
-    # Depreciation calculation base field.
+    # Depreciation calculation base field
     @jsondata:Name {value: "DepreciationCalculationBase"}
     DepreciationCalculationBaseEnum depreciationCalculationBase?;
-    # Percentage field.
+    # Percentage field
     @jsondata:Name {value: "Percentage"}
     decimal percentage?;
-    # Amount field.
+    # Amount field
     @jsondata:Name {value: "Amount"}
     decimal amount?;
-    # Number of years field.
+    # Number of years field
     @jsondata:Name {value: "NumberOfYears"}
     int:Signed32 numberOfYears?;
-    # Level field.
+    # Level field
     @jsondata:Name {value: "Level"}
     int:Signed32 level?;
 |};
 
 # Represents the request payload for the `AssetCapitalizationService_Cancel` operation of the SAP Business One Service Layer
 public type AssetCapitalizationService_Cancel_body record {
-    # Asset document params field.
+    # Asset document params field
     @jsondata:Name {value: "AssetDocumentParams"}
     AssetDocumentParams assetDocumentParams?;
 };
@@ -822,7 +822,7 @@ public type ListAssetRetirementQueries record {
 
 # Represents the request payload for the `AssetTransferService_Cancel` operation of the SAP Business One Service Layer
 public type AssetTransferService_Cancel_body record {
-    # Asset document params field.
+    # Asset document params field
     @jsondata:Name {value: "AssetDocumentParams"}
     AssetDocumentParams assetDocumentParams?;
 };
@@ -857,67 +857,67 @@ public type ListAssetTransferQueries record {
 
 # The `FAAccountDetermination` entity of the SAP Business One Service Layer
 public type FAAccountDetermination record {|
-    # Revaluation reserve account field.
+    # Revaluation reserve account field
     @jsondata:Name {value: "RevaluationReserveAccount"}
     string revaluationReserveAccount?;
-    # Leavewith revenue NBV gross field.
+    # Leavewith revenue NBV gross field
     @jsondata:Name {value: "LeavewithRevenueNBVGross"}
     string leavewithRevenueNBVGross?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Retirementwith revenue net field.
+    # Retirementwith revenue net field
     @jsondata:Name {value: "RetirementwithRevenueNet"}
     string retirementwithRevenueNet?;
-    # Revenue accountfor retirement field.
+    # Revenue accountfor retirement field
     @jsondata:Name {value: "RevenueAccountforRetirement"}
     string revenueAccountforRetirement?;
-    # Revaluation account field.
+    # Revaluation account field
     @jsondata:Name {value: "RevaluationAccount"}
     string revaluationAccount?;
-    # Asset balance sheet account field.
+    # Asset balance sheet account field
     @jsondata:Name {value: "AssetBalanceSheetAccount"}
     string assetBalanceSheetAccount?;
-    # Revenuefrom asset sales net field.
+    # Revenuefrom asset sales net field
     @jsondata:Name {value: "RevenuefromAssetSalesNet"}
     string revenuefromAssetSalesNet?;
-    # Accumulated unplanned depr field.
+    # Accumulated unplanned depr field
     @jsondata:Name {value: "AccumulatedUnplannedDepr"}
     string accumulatedUnplannedDepr?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Accumulated ordinary depr field.
+    # Accumulated ordinary depr field
     @jsondata:Name {value: "AccumulatedOrdinaryDepr"}
     string accumulatedOrdinaryDepr?;
-    # Special depreciation field.
+    # Special depreciation field
     @jsondata:Name {value: "SpecialDepreciation"}
     string specialDepreciation?;
-    # Clearing account acquisition field.
+    # Clearing account acquisition field
     @jsondata:Name {value: "ClearingAccountAcquisition"}
     string clearingAccountAcquisition?;
-    # Accumulated special depr field.
+    # Accumulated special depr field
     @jsondata:Name {value: "AccumulatedSpecialDepr"}
     string accumulatedSpecialDepr?;
-    # Revaluation reserve clearing field.
+    # Revaluation reserve clearing field
     @jsondata:Name {value: "RevaluationReserveClearing"}
     string revaluationReserveClearing?;
-    # Leavewith expense NBV gross field.
+    # Leavewith expense NBV gross field
     @jsondata:Name {value: "LeavewithExpenseNBVGross"}
     string leavewithExpenseNBVGross?;
-    # Unplanned depreciation field.
+    # Unplanned depreciation field
     @jsondata:Name {value: "UnplannedDepreciation"}
     string unplannedDepreciation?;
-    # Revaluation loss account field.
+    # Revaluation loss account field
     @jsondata:Name {value: "RevaluationLossAcct"}
     string revaluationLossAcct?;
-    # Ordinary depreciation field.
+    # Ordinary depreciation field
     @jsondata:Name {value: "OrdinaryDepreciation"}
     string ordinaryDepreciation?;
-    # Revenue clearing account field.
+    # Revenue clearing account field
     @jsondata:Name {value: "RevenueClearingAccount"}
     string revenueClearingAccount?;
-    # Retirementwith expense net field.
+    # Retirementwith expense net field
     @jsondata:Name {value: "RetirementwithExpenseNet"}
     string retirementwithExpenseNet?;
 |};
@@ -927,43 +927,43 @@ public type DepreciationRoundingMethodEnum "drmTruncate"|"drmRoundUp"|"drmRoundD
 
 # The `AssetRevaluationLine` complex type of the SAP Business One Service Layer
 public type AssetRevaluationLine record {|
-    # Current NBV field.
+    # Current NBV field
     @jsondata:Name {value: "CurrentNBV"}
     decimal currentNBV?;
-    # Distribution rule field.
+    # Distribution rule field
     @jsondata:Name {value: "DistributionRule"}
     string distributionRule?;
-    # New NBV field.
+    # New NBV field
     @jsondata:Name {value: "NewNBV"}
     decimal newNBV?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     @jsondata:Name {value: "DistributionRule4"}
     string distributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     @jsondata:Name {value: "DistributionRule5"}
     string distributionRule5?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     @jsondata:Name {value: "DistributionRule2"}
     string distributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     @jsondata:Name {value: "DistributionRule3"}
     string distributionRule3?;
-    # Revaluation percent field.
+    # Revaluation percent field
     @jsondata:Name {value: "RevaluationPercent"}
     decimal revaluationPercent?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Asset number field.
+    # Asset number field
     @jsondata:Name {value: "AssetNumber"}
     string assetNumber?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Project field.
+    # Project field
     @jsondata:Name {value: "Project"}
     string project?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
 |};
@@ -973,74 +973,74 @@ public type AcquisitionProRataTypeEnum "aprtExactlyDailyBase"|"aprtFirstDayOfCur
 
 # The `DepreciationTypePool` entity of the SAP Business One Service Layer
 public type DepreciationTypePool record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Depreciation types field.
+    # Depreciation types field
     @jsondata:Name {value: "DepreciationTypes"}
     DepreciationType[] depreciationTypes?;
 |};
 
 # The `DepreciationArea` entity of the SAP Business One Service Layer
 public type DepreciationArea record {|
-    # Usage for tax correction field.
+    # Usage for tax correction field
     @jsondata:Name {value: "UsageForTaxCorrection"}
     int:Signed32 usageForTaxCorrection?;
-    # Asset revaluations field.
+    # Asset revaluations field
     @jsondata:Name {value: "AssetRevaluations"}
     AssetRevaluation[] assetRevaluations?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Asset capitalization field.
+    # Asset capitalization field
     @jsondata:Name {value: "AssetCapitalization"}
     AssetDocument[] assetCapitalization?;
-    # Posting of depreciation field.
+    # Posting of depreciation field
     @jsondata:Name {value: "PostingOfDepreciation"}
     PostingOfDepreciationEnum postingOfDepreciation?;
-    # Asset transfer field.
+    # Asset transfer field
     @jsondata:Name {value: "AssetTransfer"}
     AssetDocument[] assetTransfer?;
-    # Tax credit control field.
+    # Tax credit control field
     @jsondata:Name {value: "TaxCreditControl"}
     BoYesNoEnum taxCreditControl?;
-    # Item for tax correction field.
+    # Item for tax correction field
     @jsondata:Name {value: "ItemForTaxCorrection"}
     string itemForTaxCorrection?;
-    # Area type field.
+    # Area type field
     @jsondata:Name {value: "AreaType"}
     AreaTypeEnum areaType?;
-    # Main booking area field.
+    # Main booking area field
     @jsondata:Name {value: "MainBookingArea"}
     BoYesNoEnum mainBookingArea?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Derived area field.
+    # Derived area field
     @jsondata:Name {value: "DerivedArea"}
     string derivedArea?;
-    # Tax type field.
+    # Tax type field
     @jsondata:Name {value: "TaxType"}
     int:Signed32 taxType?;
-    # Asset manual depreciation field.
+    # Asset manual depreciation field
     @jsondata:Name {value: "AssetManualDepreciation"}
     AssetDocument[] assetManualDepreciation?;
-    # Direct revenue posting field.
+    # Direct revenue posting field
     @jsondata:Name {value: "DirectRevenuePosting"}
     BoYesNoEnum directRevenuePosting?;
-    # Retirement method field.
+    # Retirement method field
     @jsondata:Name {value: "RetirementMethod"}
     RetirementMethodEnum retirementMethod?;
-    # Asset retirement field.
+    # Asset retirement field
     @jsondata:Name {value: "AssetRetirement"}
     AssetDocument[] assetRetirement?;
-    # Asset capitalization credit memo field.
+    # Asset capitalization credit memo field
     @jsondata:Name {value: "AssetCapitalizationCreditMemo"}
     AssetDocument[] assetCapitalizationCreditMemo?;
-    # B p for tax correction field.
+    # B p for tax correction field
     @jsondata:Name {value: "BPForTaxCorrection"}
     string bPForTaxCorrection?;
 |};
@@ -1050,68 +1050,68 @@ public type AcquisitionPeriodControlEnum "apcProRataTemporis"|"apcFirstYearConve
 
 # The `DepreciationAreaParams` complex type of the SAP Business One Service Layer
 public type DepreciationAreaParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `AssetRevaluationParams` complex type of the SAP Business One Service Layer
 public type AssetRevaluationParams record {|
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
 |};
 
 # The `AssetDocumentLine` complex type of the SAP Business One Service Layer
 public type AssetDocumentLine record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Asset number field.
+    # Asset number field
     string AssetNumber?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Total local currency field.
+    # Total local currency field
     decimal TotalLC?;
-    # Total foreign currency field.
+    # Total foreign currency field
     decimal TotalFC?;
-    # Total system currency field.
+    # Total system currency field
     decimal TotalSC?;
-    # Depreciation area field.
+    # Depreciation area field
     string DepreciationArea?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
-    # New asset number field.
+    # New asset number field
     string NewAssetNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Partial?;
-    # APC field.
+    # APC field
     decimal APC?;
-    # New asset class field.
+    # New asset class field
     string NewAssetClass?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Project field.
+    # Project field
     string Project?;
 };
 
 # Represents the request payload for the `AssetRetirementService_Cancel` operation of the SAP Business One Service Layer
 public type AssetRetirementService_Cancel_body record {
-    # Asset document params field.
+    # Asset document params field
     @jsondata:Name {value: "AssetDocumentParams"}
     AssetDocumentParams assetDocumentParams?;
 };
@@ -1149,22 +1149,22 @@ public type StraightLinePeriodControlDepreciationPeriodsEnum "slpcdpStandard"|"s
 
 # A paged collection of `AssetCapitalizationCreditMemo` entities returned by the SAP Business One Service Layer
 public type AssetCapitalizationCreditMemoCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocument[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `FixedAssetItemsService_UpdateAssetEndBalance` operation of the SAP Business One Service Layer
 public type FixedAssetItemsService_UpdateAssetEndBalance_body record {
-    # Fixed asset end balance field.
+    # Fixed asset end balance field
     @jsondata:Name {value: "FixedAssetEndBalance"}
     FixedAssetEndBalance fixedAssetEndBalance?;
-    # Fixed asset values params field.
+    # Fixed asset values params field
     @jsondata:Name {value: "FixedAssetValuesParams"}
     FixedAssetValuesParams fixedAssetValuesParams?;
 };
@@ -1178,10 +1178,10 @@ public type ListDepreciationAreasHeaders record {
 
 # Represents the response payload for the `DepreciationAreasService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_9 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepreciationAreaParams[] value?;
 };
 
@@ -1215,10 +1215,10 @@ public type DepreciationCalculationBaseEnum "dcbAcquisitionValue"|"dcbNetBookVal
 
 # Represents the response payload for the `AssetManualDepreciationService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocumentParams[] value?;
 };
 
@@ -1231,10 +1231,10 @@ public type ListDepreciationTypePoolsHeaders record {
 
 # Represents the response payload for the `AssetRetirementService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_6 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocumentParams[] value?;
 };
 
@@ -1243,19 +1243,19 @@ public type TransferSourceProRataTypeEnum "tsprtExactlyDailyBase"|"tsprtLastDayO
 
 # Represents the response payload for the `AssetRevaluationService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_7 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetRevaluationParams[] value?;
 };
 
 # Represents the response payload for the `AssetTransferService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_8 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocumentParams[] value?;
 };
 
@@ -1296,64 +1296,64 @@ public type RetirementProRataTypeEnum "rprtExactlyDailyBase"|"rprtLastDayOfPrior
 
 # Represents the response payload for the `AssetCapitalizationService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocumentParams[] value?;
 };
 
 # Represents the response payload for the `AssetClassesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetClassParams[] value?;
 };
 
 # Represents the response payload for the `AssetDepreciationGroupsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDepreciationGroupParams[] value?;
 };
 
 # Represents the response payload for the `AssetGroupsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetGroupParams[] value?;
 };
 
 # The `AssetClass` entity of the SAP Business One Service Layer
 public type AssetClass record {|
-    # Asset type field.
+    # Asset type field
     @jsondata:Name {value: "AssetType"}
     AssetTypeEnum assetType?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Value limit to field.
+    # Value limit to field
     @jsondata:Name {value: "ValueLimitTo"}
     decimal valueLimitTo?;
-    # Value limit from field.
+    # Value limit from field
     @jsondata:Name {value: "ValueLimitFrom"}
     decimal valueLimitFrom?;
-    # Attribute group field.
+    # Attribute group field
     @jsondata:Name {value: "AttributeGroup"}
     int:Signed32 attributeGroup?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Asset class collection field.
+    # Asset class collection field
     @jsondata:Name {value: "AssetClassCollection"}
     AssetClassLine[] assetClassCollection?;
-    # B PLID field.
+    # B PLID field
     @jsondata:Name {value: "BPLID"}
     int:Signed32 bPLID?;
 |};
@@ -1385,10 +1385,10 @@ public type ListFAAccountDeterminationsQueries record {
 
 # Represents the response payload for the `DepreciationTypesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_11 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepreciationTypeParams[] value?;
 };
 
@@ -1401,28 +1401,28 @@ public type ListAssetDepreciationGroupsHeaders record {
 
 # Represents the response payload for the `DepreciationTypePoolsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_10 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepreciationTypePoolParams[] value?;
 };
 
 # Represents the response payload for the `FixedAssetItemsService_GetAssetValuesList` operation of the SAP Business One Service Layer
 public type inline_response_200_13 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     FixedAssetValues[] value?;
 };
 
 # Represents the response payload for the `FAAccountDeterminationsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_12 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     FAAccountDeterminationParams[] value?;
 };
 
@@ -1441,35 +1441,35 @@ public type AssetTransactionTypeEnum "att_BeginningOfYear"|"att_Acquistion"|"att
 
 # The `DepreciationTypeParams` complex type of the SAP Business One Service Layer
 public type DepreciationTypeParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `AssetClassLine` complex type of the SAP Business One Service Layer
 public type AssetClassLine record {|
-    # Depreciation area ID field.
+    # Depreciation area ID field
     @jsondata:Name {value: "DepreciationAreaID"}
     string depreciationAreaID?;
-    # Account determination field.
+    # Account determination field
     @jsondata:Name {value: "AccountDetermination"}
     string accountDetermination?;
-    # Use life field.
+    # Use life field
     @jsondata:Name {value: "UseLife"}
     int:Signed32 useLife?;
-    # Depreciation type ID field.
+    # Depreciation type ID field
     @jsondata:Name {value: "DepreciationTypeID"}
     string depreciationTypeID?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Active status field.
+    # Active status field
     @jsondata:Name {value: "ActiveStatus"}
     BoYesNoEnum activeStatus?;
 |};
@@ -1506,269 +1506,269 @@ public type ListAssetManualDepreciationHeaders record {
 
 # A paged collection of `AssetGroups` entities returned by the SAP Business One Service Layer
 public type AssetGroupsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetGroup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `AssetCapitalizationCreditMemoService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocumentParams[] value?;
 };
 
 # The `DepreciationType` entity of the SAP Business One Service Layer
 public type DepreciationType record {|
-    # Depreciation type pool field.
+    # Depreciation type pool field
     @jsondata:Name {value: "DepreciationTypePool"}
     string depreciationTypePool?;
-    # Percentage of depreciation reversed in retirement year field.
+    # Percentage of depreciation reversed in retirement year field
     @jsondata:Name {value: "PercentageOfDepreciationReversedInRetirementYear"}
     decimal percentageOfDepreciationReversedInRetirementYear?;
-    # Straight line calculation method field.
+    # Straight line calculation method field
     @jsondata:Name {value: "StraightLineCalculationMethod"}
     StraightLineCalculationMethodEnum straightLineCalculationMethod?;
-    # Transfer target pro rata type field.
+    # Transfer target pro rata type field
     @jsondata:Name {value: "TransferTargetProRataType"}
     TransferTargetProRataTypeEnum transferTargetProRataType?;
-    # Include previous depreciation in capitalization period field.
+    # Include previous depreciation in capitalization period field
     @jsondata:Name {value: "IncludePreviousDepreciationInCapitalizationPeriod"}
     BoYesNoEnum includePreviousDepreciationInCapitalizationPeriod?;
-    # Valid from field.
+    # Valid from field
     @jsondata:Name {value: "ValidFrom"}
     string validFrom?;
-    # Special depreciation maximum amount field.
+    # Special depreciation maximum amount field
     @jsondata:Name {value: "SpecialDepreciationMaximumAmount"}
     decimal specialDepreciationMaximumAmount?;
-    # Transfer source period control field.
+    # Transfer source period control field
     @jsondata:Name {value: "TransferSourcePeriodControl"}
     TransferSourcePeriodControlEnum transferSourcePeriodControl?;
-    # Asset transfer field.
+    # Asset transfer field
     @jsondata:Name {value: "AssetTransfer"}
     AssetDocument[] assetTransfer?;
-    # Depreciation level collection field.
+    # Depreciation level collection field
     @jsondata:Name {value: "DepreciationLevelCollection"}
     DepreciationLevel[] depreciationLevelCollection?;
-    # Subsequent acquisition period control field.
+    # Subsequent acquisition period control field
     @jsondata:Name {value: "SubsequentAcquisitionPeriodControl"}
     SubsequentAcquisitionPeriodControlEnum subsequentAcquisitionPeriodControl?;
-    # Rounding method field.
+    # Rounding method field
     @jsondata:Name {value: "RoundingMethod"}
     DepreciationRoundingMethodEnum roundingMethod?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Factor only relevant to first fiscal year field.
+    # Factor only relevant to first fiscal year field
     @jsondata:Name {value: "FactorOnlyRelevantToFirstFiscalYear"}
     BoYesNoEnum factorOnlyRelevantToFirstFiscalYear?;
-    # Include salvage in depreciation field.
+    # Include salvage in depreciation field
     @jsondata:Name {value: "IncludeSalvageInDepreciation"}
     BoYesNoEnum includeSalvageInDepreciation?;
-    # Declining change to field.
+    # Declining change to field
     @jsondata:Name {value: "DecliningChangeTo"}
     string decliningChangeTo?;
-    # Retirement period control field.
+    # Retirement period control field
     @jsondata:Name {value: "RetirementPeriodControl"}
     RetirementPeriodControlEnum retirementPeriodControl?;
-    # Special depreciation normal depreciation field.
+    # Special depreciation normal depreciation field
     @jsondata:Name {value: "SpecialDepreciationNormalDepreciation"}
     string specialDepreciationNormalDepreciation?;
-    # Transfer target period control field.
+    # Transfer target period control field
     @jsondata:Name {value: "TransferTargetPeriodControl"}
     TransferTargetPeriodControlEnum transferTargetPeriodControl?;
-    # Depreciation type pool2 field.
+    # Depreciation type pool2 field
     @jsondata:Name {value: "DepreciationTypePool2"}
     DepreciationTypePool depreciationTypePool2?;
-    # Minimum depreciated value field.
+    # Minimum depreciated value field
     @jsondata:Name {value: "MinimumDepreciatedValue"}
     decimal minimumDepreciatedValue?;
-    # Special depreciation maximum flag field.
+    # Special depreciation maximum flag field
     @jsondata:Name {value: "SpecialDepreciationMaximumFlag"}
     SpecialDepreciationMaximumFlagEnum specialDepreciationMaximumFlag?;
-    # Declining percentage field.
+    # Declining percentage field
     @jsondata:Name {value: "DecliningPercentage"}
     decimal decliningPercentage?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Straight line percentage field.
+    # Straight line percentage field
     @jsondata:Name {value: "StraightLinePercentage"}
     decimal straightLinePercentage?;
-    # Asset capitalization field.
+    # Asset capitalization field
     @jsondata:Name {value: "AssetCapitalization"}
     AssetDocument[] assetCapitalization?;
-    # Acquisition pro rata type field.
+    # Acquisition pro rata type field
     @jsondata:Name {value: "AcquisitionProRataType"}
     AcquisitionProRataTypeEnum acquisitionProRataType?;
-    # Special depreciation alternative depreciation field.
+    # Special depreciation alternative depreciation field
     @jsondata:Name {value: "SpecialDepreciationAlternativeDepreciation"}
     string specialDepreciationAlternativeDepreciation?;
-    # Depreciation end at last full year field.
+    # Depreciation end at last full year field
     @jsondata:Name {value: "DepreciationEndAtLastFullYear"}
     BoYesNoEnum depreciationEndAtLastFullYear?;
-    # Special depreciation maximum percentage field.
+    # Special depreciation maximum percentage field
     @jsondata:Name {value: "SpecialDepreciationMaximumPercentage"}
     decimal specialDepreciationMaximumPercentage?;
-    # Retirement pro rata type field.
+    # Retirement pro rata type field
     @jsondata:Name {value: "RetirementProRataType"}
     RetirementProRataTypeEnum retirementProRataType?;
-    # Asset retirement field.
+    # Asset retirement field
     @jsondata:Name {value: "AssetRetirement"}
     AssetDocument[] assetRetirement?;
-    # Salvage percentage field.
+    # Salvage percentage field
     @jsondata:Name {value: "SalvagePercentage"}
     decimal salvagePercentage?;
-    # Depreciation method field.
+    # Depreciation method field
     @jsondata:Name {value: "DepreciationMethod"}
     DepreciationMethodEnum depreciationMethod?;
-    # Manual depreciation reduce depreciation base field.
+    # Manual depreciation reduce depreciation base field
     @jsondata:Name {value: "ManualDepreciationReduceDepreciationBase"}
     BoYesNoEnum manualDepreciationReduceDepreciationBase?;
-    # Declining factor field.
+    # Declining factor field
     @jsondata:Name {value: "DecliningFactor"}
     decimal decliningFactor?;
-    # Transfer source pro rata type field.
+    # Transfer source pro rata type field
     @jsondata:Name {value: "TransferSourceProRataType"}
     TransferSourceProRataTypeEnum transferSourceProRataType?;
-    # Special depreciation concession period years field.
+    # Special depreciation concession period years field
     @jsondata:Name {value: "SpecialDepreciationConcessionPeriodYears"}
     int:Signed32 specialDepreciationConcessionPeriodYears?;
-    # Asset manual depreciation field.
+    # Asset manual depreciation field
     @jsondata:Name {value: "AssetManualDepreciation"}
     AssetDocument[] assetManualDepreciation?;
-    # Round year end book value field.
+    # Round year end book value field
     @jsondata:Name {value: "RoundYearEndBookValue"}
     BoYesNoEnum roundYearEndBookValue?;
-    # Subsequent acquisition pro rata type field.
+    # Subsequent acquisition pro rata type field
     @jsondata:Name {value: "SubsequentAcquisitionProRataType"}
     SubsequentAcquisitionProRataTypeEnum subsequentAcquisitionProRataType?;
-    # Valid to field.
+    # Valid to field
     @jsondata:Name {value: "ValidTo"}
     string validTo?;
-    # Calculation base field.
+    # Calculation base field
     @jsondata:Name {value: "CalculationBase"}
     CalculationBaseEnum calculationBase?;
-    # Straight line period control factor field.
+    # Straight line period control factor field
     @jsondata:Name {value: "StraightLinePeriodControlFactor"}
     decimal straightLinePeriodControlFactor?;
-    # Straight line period control depreciation periods field.
+    # Straight line period control depreciation periods field
     @jsondata:Name {value: "StraightLinePeriodControlDepreciationPeriods"}
     StraightLinePeriodControlDepreciationPeriodsEnum straightLinePeriodControlDepreciationPeriods?;
-    # Delta coefficient field.
+    # Delta coefficient field
     @jsondata:Name {value: "DeltaCoefficient"}
     int:Signed32 deltaCoefficient?;
-    # Maximum depreciable value field.
+    # Maximum depreciable value field
     @jsondata:Name {value: "MaximumDepreciableValue"}
     decimal maximumDepreciableValue?;
-    # Asset capitalization credit memo field.
+    # Asset capitalization credit memo field
     @jsondata:Name {value: "AssetCapitalizationCreditMemo"}
     AssetDocument[] assetCapitalizationCreditMemo?;
-    # Special depreciation calculation method field.
+    # Special depreciation calculation method field
     @jsondata:Name {value: "SpecialDepreciationCalculationMethod"}
     SpecialDepreciationCalculationMethodEnum specialDepreciationCalculationMethod?;
-    # Acquisition period control field.
+    # Acquisition period control field
     @jsondata:Name {value: "AcquisitionPeriodControl"}
     AcquisitionPeriodControlEnum acquisitionPeriodControl?;
 |};
 
 # A paged collection of `AssetRetirement` entities returned by the SAP Business One Service Layer
 public type AssetRetirementCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     AssetDocument[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `DepreciationTypes` entities returned by the SAP Business One Service Layer
 public type DepreciationTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepreciationType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AssetRevaluation` entity of the SAP Business One Service Layer
 public type AssetRevaluation record {|
-    # Hand written field.
+    # Hand written field
     @jsondata:Name {value: "HandWritten"}
     BoYesNoEnum handWritten?;
-    # Ifrs posting field.
+    # Ifrs posting field
     @jsondata:Name {value: "IfrsPosting"}
     BoYesNoEnum ifrsPosting?;
-    # Reference field.
+    # Reference field
     @jsondata:Name {value: "Reference"}
     string reference?;
-    # Revaluation percent field.
+    # Revaluation percent field
     @jsondata:Name {value: "RevaluationPercent"}
     decimal revaluationPercent?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Depreciation area field.
+    # Depreciation area field
     @jsondata:Name {value: "DepreciationArea"}
     string depreciationArea?;
-    # Journal remarks field.
+    # Journal remarks field
     @jsondata:Name {value: "JournalRemarks"}
     string journalRemarks?;
-    # Asset revaluation line collection field.
+    # Asset revaluation line collection field
     @jsondata:Name {value: "AssetRevaluationLineCollection"}
     AssetRevaluationLine[] assetRevaluationLineCollection?;
-    # Asset value date field.
+    # Asset value date field
     @jsondata:Name {value: "AssetValueDate"}
     string assetValueDate?;
-    # Period indicator field.
+    # Period indicator field
     @jsondata:Name {value: "PeriodIndicator"}
     string periodIndicator?;
-    # Series field.
+    # Series field
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
-    # Posting date field.
+    # Posting date field
     @jsondata:Name {value: "PostingDate"}
     string postingDate?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
-    # Summerize by distribution rules field.
+    # Summerize by distribution rules field
     @jsondata:Name {value: "SummerizeByDistributionRules"}
     BoYesNoEnum summerizeByDistributionRules?;
-    # V AT reg number field.
+    # V AT reg number field
     @jsondata:Name {value: "VATRegNum"}
     string vATRegNum?;
-    # B PL name field.
+    # B PL name field
     @jsondata:Name {value: "BPLName"}
     string bPLName?;
-    # Depreciation area2 field.
+    # Depreciation area2 field
     @jsondata:Name {value: "DepreciationArea2"}
     DepreciationArea depreciationArea2?;
-    # Document number field.
+    # Document number field
     @jsondata:Name {value: "DocNum"}
     int:Signed32 docNum?;
-    # Trans ID field.
+    # Trans ID field
     @jsondata:Name {value: "TransId"}
     int:Signed32 transId?;
-    # Document date field.
+    # Document date field
     @jsondata:Name {value: "DocumentDate"}
     string documentDate?;
-    # B PL ID field.
+    # B PL ID field
     @jsondata:Name {value: "BPLId"}
     int:Signed32 bPLId?;
-    # Summerize by projects field.
+    # Summerize by projects field
     @jsondata:Name {value: "SummerizeByProjects"}
     BoYesNoEnum summerizeByProjects?;
 |};
@@ -1799,12 +1799,12 @@ public type ListAssetTransferHeaders record {
 
 # A paged collection of `FAAccountDeterminations` entities returned by the SAP Business One Service Layer
 public type FAAccountDeterminationsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     FAAccountDetermination[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1827,27 +1827,27 @@ public type GetDepreciationAreasQueries record {
 
 # The `FAAccountDeterminationParams` complex type of the SAP Business One Service Layer
 public type FAAccountDeterminationParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # Represents the request payload for the `FixedAssetItemsService_GetAssetEndBalance` operation of the SAP Business One Service Layer
 public type FixedAssetItemsService_GetAssetEndBalance_body record {
-    # Fixed asset values params field.
+    # Fixed asset values params field
     @jsondata:Name {value: "FixedAssetValuesParams"}
     FixedAssetValuesParams fixedAssetValuesParams?;
 };
 
 # The `AssetClassParams` complex type of the SAP Business One Service Layer
 public type AssetClassParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -1867,10 +1867,10 @@ public type GetFAAccountDeterminationsQueries record {
 
 # The `AssetGroup` entity of the SAP Business One Service Layer
 public type AssetGroup record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};

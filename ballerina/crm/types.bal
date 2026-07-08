@@ -22,12 +22,12 @@ import ballerina/http;
 
 # A paged collection of `CampaignResponseType` entities returned by the SAP Business One Service Layer
 public type CampaignResponseTypeCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CampaignResponseType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -44,115 +44,115 @@ public type GetActivityStatusesQueries record {
 
 # The `CampaignParams` complex type of the SAP Business One Service Layer
 public type CampaignParams record {|
-    # Campaign number field.
+    # Campaign number field
     @jsondata:Name {value: "CampaignNumber"}
     int:Signed32 campaignNumber?;
-    # Campaign name field.
+    # Campaign name field
     @jsondata:Name {value: "CampaignName"}
     string campaignName?;
 |};
 
 # The `Activity` entity of the SAP Business One Service Layer
 public type Activity record {
-    # Activity code field.
+    # Activity code field
     int:Signed32 ActivityCode?;
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Activity date field.
+    # Activity date field
     string ActivityDate?;
-    # Activity time field.
+    # Activity time field
     string ActivityTime?;
-    # Start date field.
+    # Start date field
     string StartDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Closed?;
-    # Close date field.
+    # Close date field
     string CloseDate?;
-    # Phone field.
+    # Phone field
     string Phone?;
-    # Fax field.
+    # Fax field
     string Fax?;
-    # Subject field.
+    # Subject field
     int:Signed32 Subject?;
-    # Document type field.
+    # Document type field
     string DocType?;
-    # Document number field.
+    # Document number field
     string DocNum?;
-    # Document entry field.
+    # Document entry field
     string DocEntry?;
     # OData EnumType 'BoMsgPriorities'. Serialised by the Service Layer as the member name
     BoMsgPriorities Priority?;
-    # Details field.
+    # Details field
     string Details?;
     # OData EnumType 'BoActivities'. Serialised by the Service Layer as the member name
     BoActivities Activity?;
-    # Activity type field.
+    # Activity type field
     int:Signed32 ActivityType?;
-    # Location field.
+    # Location field
     int:Signed32 Location?;
-    # Start time field.
+    # Start time field
     string StartTime?;
-    # End time field.
+    # End time field
     string EndTime?;
-    # Duration field.
+    # Duration field
     decimal Duration?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations DurationType?;
-    # Sales employee field.
+    # Sales employee field
     int:Signed32 SalesEmployee?;
-    # Contact person code field.
+    # Contact person code field
     int:Signed32 ContactPersonCode?;
-    # Handled by field.
+    # Handled by field
     int:Signed32 HandledBy?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Reminder?;
-    # Reminder period field.
+    # Reminder period field
     decimal ReminderPeriod?;
     # OData EnumType 'BoDurations'. Serialised by the Service Layer as the member name
     BoDurations ReminderType?;
-    # City field.
+    # City field
     string City?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PersonalFlag?;
-    # Street field.
+    # Street field
     string Street?;
-    # Parent object ID field.
+    # Parent object ID field
     int:Signed32 ParentObjectId?;
-    # Parent object type field.
+    # Parent object type field
     string ParentObjectType?;
-    # Room field.
+    # Room field
     string Room?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InactiveFlag?;
-    # State field.
+    # State field
     string State?;
-    # Previous activity field.
+    # Previous activity field
     int:Signed32 PreviousActivity?;
-    # Country field.
+    # Country field
     string Country?;
-    # Status field.
+    # Status field
     int:Signed32 Status?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TentativeFlag?;
-    # End due date field.
+    # End due date field
     string EndDueDate?;
-    # Document type ex field.
+    # Document type ex field
     string DocTypeEx?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'RecurrencePatternEnum'. Serialised by the Service Layer as the member name
     RecurrencePatternEnum RecurrencePattern?;
     # OData EnumType 'EndTypeEnum'. Serialised by the Service Layer as the member name
     EndTypeEnum EndType?;
-    # Series start date field.
+    # Series start date field
     string SeriesStartDate?;
-    # Series end date field.
+    # Series end date field
     string SeriesEndDate?;
-    # Max occurrence field.
+    # Max occurrence field
     int:Signed32 MaxOccurrence?;
-    # Interval field.
+    # Interval field
     int:Signed32 Interval?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Sunday?;
@@ -170,43 +170,43 @@ public type Activity record {
     BoYesNoEnum Saturday?;
     # OData EnumType 'RepeatOptionEnum'. Serialised by the Service Layer as the member name
     RepeatOptionEnum RepeatOption?;
-    # Belonged series number field.
+    # Belonged series number field
     int:Signed32 BelongedSeriesNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsRemoved?;
-    # Address name field.
+    # Address name field
     string AddressName?;
     # OData EnumType 'BoAddressType'. Serialised by the Service Layer as the member name
     BoAddressType AddressType?;
-    # Handled by employee field.
+    # Handled by employee field
     int:Signed32 HandledByEmployee?;
     # OData EnumType 'RecurrenceSequenceEnum'. Serialised by the Service Layer as the member name
     RecurrenceSequenceEnum RecurrenceSequenceSpecifier?;
-    # Recurrence day in month field.
+    # Recurrence day in month field
     int:Signed32 RecurrenceDayInMonth?;
-    # Recurrence month field.
+    # Recurrence month field
     int:Signed32 RecurrenceMonth?;
     # OData EnumType 'RecurrenceDayOfWeekEnum'. Serialised by the Service Layer as the member name
     RecurrenceDayOfWeekEnum RecurrenceDayOfWeek?;
-    # Sales opportunity ID field.
+    # Sales opportunity ID field
     int:Signed32 SalesOpportunityId?;
-    # Sales opportunity line field.
+    # Sales opportunity line field
     int:Signed32 SalesOpportunityLine?;
-    # Handled by recipient list field.
+    # Handled by recipient list field
     int:Signed32 HandledByRecipientList?;
-    # Office365 event ID field.
+    # Office365 event ID field
     string Office365EventId?;
-    # Data version field.
+    # Data version field
     int:Signed32 DataVersion?;
-    # User signature field.
+    # User signature field
     int:Signed32 UserSignature?;
-    # User signature2 field.
+    # User signature2 field
     int:Signed32 UserSignature2?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EmailedFlag?;
-    # Check in list params field.
+    # Check in list params field
     CheckInParams[] CheckInListParams?;
-    # Activity multiple recipients field.
+    # Activity multiple recipients field
     ActivityMultipleRecipient[] ActivityMultipleRecipients?;
     # The `ActivitySubject` entity of the SAP Business One Service Layer
     ActivitySubject ActivitySubject?;
@@ -250,10 +250,10 @@ public type CampaignTypeEnum "ctEmail"|"ctMail"|"ctFax"|"ctPhoneCall"|"ctMeeting
 
 # The `ActivitySubjectParams` complex type of the SAP Business One Service Layer
 public type ActivitySubjectParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
 |};
@@ -369,13 +369,13 @@ public type ConnectionConfig record {|
 
 # The `SalesOpportunityCompetitorSetupParams` complex type of the SAP Business One Service Layer
 public type SalesOpportunityCompetitorSetupParams record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Threat level field.
+    # Threat level field
     @jsondata:Name {value: "ThreatLevel"}
     ThreatLevelEnum threatLevel?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -407,101 +407,101 @@ public type ListSalesOpportunityCompetitorsSetupQueries record {
 
 # A paged collection of `SalesOpportunityReasonsSetup` entities returned by the SAP Business One Service Layer
 public type SalesOpportunityReasonsSetupCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunityReasonSetup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `CampaignBusinessPartner` complex type of the SAP Business One Service Layer
 public type CampaignBusinessPartner record {
-    # Campaign number field.
+    # Campaign number field
     int:Signed32 CampaignNumber?;
-    # Campaign line number field.
+    # Campaign line number field
     int:Signed32 CampaignLineNumber?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
-    # Business partner name field.
+    # Business partner name field
     string BPName?;
-    # Business partner group name field.
+    # Business partner group name field
     string BPGroupName?;
-    # Business partner industry name field.
+    # Business partner industry name field
     string BPIndustryName?;
-    # Business partner status field.
+    # Business partner status field
     string BPStatus?;
-    # Contact code field.
+    # Contact code field
     string ContactCode?;
-    # Contact title field.
+    # Contact title field
     string ContactTitle?;
-    # Contact position field.
+    # Contact position field
     string ContactPosition?;
-    # Contact email field.
+    # Contact email field
     string ContactEmail?;
-    # Contact telephone field.
+    # Contact telephone field
     string ContactTelephone?;
-    # Contact mobile field.
+    # Contact mobile field
     string ContactMobile?;
-    # Contact fax field.
+    # Contact fax field
     string ContactFax?;
-    # Contact address field.
+    # Contact address field
     string ContactAddress?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Response?;
-    # Related sales opportunity field.
+    # Related sales opportunity field
     int:Signed32 RelatedSalesOpportunity?;
-    # Street field.
+    # Street field
     string Street?;
-    # Block field.
+    # Block field
     string Block?;
-    # City field.
+    # City field
     string City?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # County field.
+    # County field
     string County?;
-    # State field.
+    # State field
     string State?;
-    # Country field.
+    # Country field
     string Country?;
-    # Building field.
+    # Building field
     string Building?;
     # OData EnumType 'LinkedDocTypeEnum'. Serialised by the Service Layer as the member name
     LinkedDocTypeEnum DocType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsShowLinkedDoc?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNumber?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # First name field.
+    # First name field
     string FirstName?;
-    # Middle name field.
+    # Middle name field
     string MiddleName?;
-    # Last name field.
+    # Last name field
     string LastName?;
-    # Address ID field.
+    # Address ID field
     string AddressID?;
-    # Address type field.
+    # Address type field
     string AddressType?;
-    # Address name2 field.
+    # Address name2 field
     string AddressName2?;
-    # Address name3 field.
+    # Address name3 field
     string AddressName3?;
-    # Federal tax ID field.
+    # Federal tax ID field
     string FederalTaxID?;
-    # Street number field.
+    # Street number field
     string StreetNo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CreateActivity?;
     # OData EnumType 'CampaignAssignToEnum'. Serialised by the Service Layer as the member name
     CampaignAssignToEnum AssignTo?;
-    # Assign name field.
+    # Assign name field
     int:Signed32 AssignName?;
-    # Response type field.
+    # Response type field
     string ResponseType?;
 };
 
@@ -527,12 +527,12 @@ public type ListSalesOpportunityCompetitorsSetupHeaders record {
 
 # A paged collection of `ActivityLocations` entities returned by the SAP Business One Service Layer
 public type ActivityLocationsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityLocation[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -542,26 +542,26 @@ public type BoSoOsStatus "sos_Open"|"sos_Missed"|"sos_Sold";
 
 # The `SalesOpportunityCompetitorSetup` entity of the SAP Business One Service Layer
 public type SalesOpportunityCompetitorSetup record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Threat level field.
+    # Threat level field
     @jsondata:Name {value: "ThreatLevel"}
     ThreatLevelEnum threatLevel?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `SalesOpportunitySourceSetupParams` complex type of the SAP Business One Service Layer
 public type SalesOpportunitySourceSetupParams record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
 |};
@@ -571,37 +571,37 @@ public type RecipientTypeEnum "rtUser"|"rtEmployee";
 
 # The `CampaignResponseTypeParams` complex type of the SAP Business One Service Layer
 public type CampaignResponseTypeParams record {|
-    # Response type description field.
+    # Response type description field
     @jsondata:Name {value: "ResponseTypeDescription"}
     string responseTypeDescription?;
-    # Is active field.
+    # Is active field
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
-    # Response type field.
+    # Response type field
     @jsondata:Name {value: "ResponseType"}
     string responseType?;
 |};
 
 # The `ActivityMultipleRecipient` complex type of the SAP Business One Service Layer
 public type ActivityMultipleRecipient record {
-    # Line numer field.
+    # Line numer field
     int:Signed32 LineNumer?;
     # OData EnumType 'ActivityRecipientObjTypeEnum'. Serialised by the Service Layer as the member name
     ActivityRecipientObjTypeEnum RecipientType?;
-    # Recipient code field.
+    # Recipient code field
     string RecipientCode?;
 };
 
 
 # The `ActivityStatus` entity of the SAP Business One Service Layer
 public type ActivityStatus record {
-    # Status description field.
+    # Status description field
     string StatusDescription?;
-    # Status ID field.
+    # Status ID field
     int:Signed32 StatusId?;
-    # Status name field.
+    # Status name field
     string StatusName?;
-    # Activities field.
+    # Activities field
     Activity[] Activities?;
 };
 
@@ -617,43 +617,43 @@ public type ListPartnersSetupsHeaders record {
 
 # The `SalesOpportunityReasonSetupParams` complex type of the SAP Business One Service Layer
 public type SalesOpportunityReasonSetupParams record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
 |};
 
 # Represents the request payload for the `ActivitiesService_GetSingleInstanceFromSeries` operation of the SAP Business One Service Layer
 public type ActivitiesService_GetSingleInstanceFromSeries_body record {
-    # Activity instance params field.
+    # Activity instance params field
     @jsondata:Name {value: "ActivityInstanceParams"}
     ActivityInstanceParams activityInstanceParams?;
 };
 
 # Represents the request payload for the `ActivitiesService_DeleteSingleInstanceFromSeries` operation of the SAP Business One Service Layer
 public type ActivitiesService_DeleteSingleInstanceFromSeries_body record {
-    # Activity instance params field.
+    # Activity instance params field
     @jsondata:Name {value: "ActivityInstanceParams"}
     ActivityInstanceParams activityInstanceParams?;
 };
 
 # The `PartnersSetup` entity of the SAP Business One Service Layer
 public type PartnersSetup record {|
-    # Default relationship field.
+    # Default relationship field
     @jsondata:Name {value: "DefaultRelationship"}
     int:Signed32 defaultRelationship?;
-    # Related business partner field.
+    # Related business partner field
     @jsondata:Name {value: "RelatedBP"}
     string relatedBP?;
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Partner ID field.
+    # Partner ID field
     @jsondata:Name {value: "PartnerID"}
     int:Signed32 partnerID?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -685,12 +685,12 @@ public type ListActivitiesQueries record {
 
 # A paged collection of `ActivitySubjects` entities returned by the SAP Business One Service Layer
 public type ActivitySubjectsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivitySubject[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -725,54 +725,54 @@ public type ListActivityLocationsQueries record {
 
 # The `ActivityRecipientListParams` complex type of the SAP Business One Service Layer
 public type ActivityRecipientListParams record {|
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Is multiple field.
+    # Is multiple field
     @jsondata:Name {value: "IsMultiple"}
     BoYesNoEnum isMultiple?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `SalesOpportunityInterestSetupParams` complex type of the SAP Business One Service Layer
 public type SalesOpportunityInterestSetupParams record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
 |};
 
 # A paged collection of `Activities` entities returned by the SAP Business One Service Layer
 public type ActivitiesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Activity[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `SalesOpportunityReasonSetup` entity of the SAP Business One Service Layer
 public type SalesOpportunityReasonSetup record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Sales opportunities field.
+    # Sales opportunities field
     @jsondata:Name {value: "SalesOpportunities"}
     SalesOpportunities[] salesOpportunities?;
-    # Sort field.
+    # Sort field
     @jsondata:Name {value: "Sort"}
     int:Signed32 sort?;
 |};
@@ -792,12 +792,12 @@ public type GetSalesOpportunityInterestsSetupQueries record {
 
 # A paged collection of `SalesOpportunities` entities returned by the SAP Business One Service Layer
 public type SalesOpportunitiesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunities[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -811,64 +811,64 @@ public type ListActivityStatusesHeaders record {
 
 # A paged collection of `SalesOpportunityCompetitorsSetup` entities returned by the SAP Business One Service Layer
 public type SalesOpportunityCompetitorsSetupCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunityCompetitorSetup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ActivitySubject` entity of the SAP Business One Service Layer
 public type ActivitySubject record {|
-    # Activities field.
+    # Activities field
     @jsondata:Name {value: "Activities"}
     Activity[] activities?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Is active field.
+    # Is active field
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
-    # Activity type field.
+    # Activity type field
     @jsondata:Name {value: "ActivityType"}
     int:Signed32 activityType?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Activity type2 field.
+    # Activity type2 field
     @jsondata:Name {value: "ActivityType2"}
     ActivityType activityType2?;
 |};
 
 # The `ActivityRecipient` complex type of the SAP Business One Service Layer
 public type ActivityRecipient record {|
-    # Recipient type field.
+    # Recipient type field
     @jsondata:Name {value: "RecipientType"}
     RecipientTypeEnum recipientType?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Recipient code field.
+    # Recipient code field
     @jsondata:Name {value: "RecipientCode"}
     string recipientCode?;
 |};
 
 # The `CampaignItem` complex type of the SAP Business One Service Layer
 public type CampaignItem record {
-    # Campaign number field.
+    # Campaign number field
     int:Signed32 CampaignNumber?;
-    # Campaign line number field.
+    # Campaign line number field
     int:Signed32 CampaignLineNumber?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Item name field.
+    # Item name field
     string ItemName?;
     # OData EnumType 'CampaignItemTypeEnum'. Serialised by the Service Layer as the member name
     CampaignItemTypeEnum ItemType?;
-    # Item group field.
+    # Item group field
     string ItemGroup?;
 };
 
@@ -913,12 +913,12 @@ public type ListSalesStagesQueries record {
 
 # A paged collection of `SalesOpportunitySourcesSetup` entities returned by the SAP Business One Service Layer
 public type SalesOpportunitySourcesSetupCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunitySourceSetup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -988,15 +988,15 @@ public type ListActivityRecipientListsHeaders record {
 
 # The `SalesOpportunitiesPartner` complex type of the SAP Business One Service Layer
 public type SalesOpportunitiesPartner record {
-    # Row number field.
+    # Row number field
     int:Signed32 RowNo?;
-    # Partners field.
+    # Partners field
     int:Signed32 Partners?;
-    # Details field.
+    # Details field
     string Details?;
-    # Relationship code field.
+    # Relationship code field
     int:Signed32 RelationshipCode?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
 };
 
@@ -1027,95 +1027,95 @@ public type ListSalesOpportunitiesQueries record {
 
 # The `CampaignPartner` complex type of the SAP Business One Service Layer
 public type CampaignPartner record {
-    # Campaign number field.
+    # Campaign number field
     int:Signed32 CampaignNumber?;
-    # Campaign line number field.
+    # Campaign line number field
     int:Signed32 CampaignLineNumber?;
-    # Partner ID field.
+    # Partner ID field
     int:Signed32 PartnerID?;
-    # Relationship code field.
+    # Relationship code field
     int:Signed32 RelationshipCode?;
-    # Related business partner field.
+    # Related business partner field
     string RelatedBP?;
-    # Details field.
+    # Details field
     string Details?;
 };
 
 # The `ActivityParams` complex type of the SAP Business One Service Layer
 public type ActivityParams record {|
-    # End time field.
+    # End time field
     @jsondata:Name {value: "EndTime"}
     string endTime?;
-    # Activity field.
+    # Activity field
     @jsondata:Name {value: "Activity"}
     BoActivities activity?;
-    # Tentative flag field.
+    # Tentative flag field
     @jsondata:Name {value: "TentativeFlag"}
     BoYesNoEnum tentativeFlag?;
-    # Start date field.
+    # Start date field
     @jsondata:Name {value: "StartDate"}
     string startDate?;
-    # Sales opportunity line field.
+    # Sales opportunity line field
     @jsondata:Name {value: "SalesOpportunityLine"}
     int:Signed32 salesOpportunityLine?;
-    # Handled by field.
+    # Handled by field
     @jsondata:Name {value: "HandledBy"}
     int:Signed32 handledBy?;
-    # Street field.
+    # Street field
     @jsondata:Name {value: "Street"}
     string street?;
-    # Document number field.
+    # Document number field
     @jsondata:Name {value: "DocNum"}
     string docNum?;
-    # Room field.
+    # Room field
     @jsondata:Name {value: "Room"}
     string room?;
-    # Notes field.
+    # Notes field
     @jsondata:Name {value: "Notes"}
     string notes?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     string docType?;
-    # End due date field.
+    # End due date field
     @jsondata:Name {value: "EndDueDate"}
     string endDueDate?;
-    # Sales opportunity ID field.
+    # Sales opportunity ID field
     @jsondata:Name {value: "SalesOpportunityId"}
     int:Signed32 salesOpportunityId?;
-    # Activity code field.
+    # Activity code field
     @jsondata:Name {value: "ActivityCode"}
     int:Signed32 activityCode?;
-    # Priority field.
+    # Priority field
     @jsondata:Name {value: "Priority"}
     BoMsgPriorities priority?;
-    # Start time field.
+    # Start time field
     @jsondata:Name {value: "StartTime"}
     string startTime?;
-    # Emailed flag field.
+    # Emailed flag field
     @jsondata:Name {value: "EmailedFlag"}
     BoYesNoEnum emailedFlag?;
-    # Card code field.
+    # Card code field
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     string docEntry?;
-    # City field.
+    # City field
     @jsondata:Name {value: "City"}
     string city?;
-    # Inactive flag field.
+    # Inactive flag field
     @jsondata:Name {value: "InactiveFlag"}
     BoYesNoEnum inactiveFlag?;
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Closed field.
+    # Closed field
     @jsondata:Name {value: "Closed"}
     BoYesNoEnum closed?;
-    # State field.
+    # State field
     @jsondata:Name {value: "State"}
     string state?;
-    # Country field.
+    # Country field
     @jsondata:Name {value: "Country"}
     string country?;
 |};
@@ -1156,19 +1156,19 @@ public type GetActivityRecipientListsQueries record {
 
 # The `TargetGroup` entity of the SAP Business One Service Layer
 public type TargetGroup record {|
-    # Target group type field.
+    # Target group type field
     @jsondata:Name {value: "TargetGroupType"}
     TargetGroupTypeEnum targetGroupType?;
-    # Target groups details field.
+    # Target groups details field
     @jsondata:Name {value: "TargetGroupsDetails"}
     TargetGroupsDetail[] targetGroupsDetails?;
-    # Target group code field.
+    # Target group code field
     @jsondata:Name {value: "TargetGroupCode"}
     string targetGroupCode?;
-    # Campaigns field.
+    # Campaigns field
     @jsondata:Name {value: "Campaigns"}
     Campaign[] campaigns?;
-    # Target group name field.
+    # Target group name field
     @jsondata:Name {value: "TargetGroupName"}
     string targetGroupName?;
 |};
@@ -1200,11 +1200,11 @@ public type ListCampaignsQueries record {
 
 # The `ActivityLocation` entity of the SAP Business One Service Layer
 public type ActivityLocation record {
-    # Code field.
+    # Code field
     int:Signed32 Code?;
-    # Name field.
+    # Name field
     string Name?;
-    # Activities field.
+    # Activities field
     Activity[] Activities?;
 };
 
@@ -1227,29 +1227,29 @@ public type ListActivitiesHeaders record {
 
 # The `ActivityInstancesListParams` complex type of the SAP Business One Service Layer
 public type ActivityInstancesListParams record {|
-    # Start date field.
+    # Start date field
     @jsondata:Name {value: "StartDate"}
     string startDate?;
-    # Instance count field.
+    # Instance count field
     @jsondata:Name {value: "InstanceCount"}
     int:Signed32 instanceCount?;
 |};
 
 # The `PartnersSetupParams` complex type of the SAP Business One Service Layer
 public type PartnersSetupParams record {|
-    # Default relationship field.
+    # Default relationship field
     @jsondata:Name {value: "DefaultRelationship"}
     int:Signed32 defaultRelationship?;
-    # Related business partner field.
+    # Related business partner field
     @jsondata:Name {value: "RelatedBP"}
     string relatedBP?;
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Partner ID field.
+    # Partner ID field
     @jsondata:Name {value: "PartnerID"}
     int:Signed32 partnerID?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1269,10 +1269,10 @@ public type RecurrenceSequenceEnum "rsFirst"|"rsSecond"|"rsThird"|"rsFourth"|"rs
 
 # Represents the response payload for the `SalesOpportunityCompetitorsSetupService_GetSalesOpportunityCompetitorSetupList` operation of the SAP Business One Service Layer
 public type inline_response_200_9 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunityCompetitorSetupParams[] value?;
 };
 
@@ -1281,63 +1281,63 @@ public type ThreatLevelEnum "tlLow"|"tlMedium"|"tlHigh";
 
 # Represents the response payload for the `ActivitySubjectService_GetListByTypeCode` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivitySubjectParams[] value?;
 };
 
 # Represents the response payload for the `CampaignResponseTypeService_GetResponseTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_6 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CampaignResponseTypeParams[] value?;
 };
 
 # The `SalesOpportunitiesInterest` complex type of the SAP Business One Service Layer
 public type SalesOpportunitiesInterest record {
-    # Row number field.
+    # Row number field
     int:Signed32 RowNo?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PrimaryInterest?;
-    # Interest ID field.
+    # Interest ID field
     int:Signed32 InterestId?;
 };
 
 # Represents the response payload for the `CampaignsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_7 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CampaignParams[] value?;
 };
 
 # Represents the response payload for the `PartnersSetupsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_8 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PartnersSetupParams[] value?;
 };
 
 # The `SalesOpportunitiesCompetitionItem` complex type of the SAP Business One Service Layer
 public type SalesOpportunitiesCompetitionItem record {
-    # Row number field.
+    # Row number field
     int:Signed32 RowNo?;
-    # Competition field.
+    # Competition field
     int:Signed32 Competition?;
-    # Details field.
+    # Details field
     string Details?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
-    # Won or lost field.
+    # Won or lost field
     string WonOrLost?;
     # OData EnumType 'ThreatLevelEnum'. Serialised by the Service Layer as the member name
     ThreatLevelEnum ThreatLevel?;
@@ -1345,24 +1345,24 @@ public type SalesOpportunitiesCompetitionItem record {
 
 # A paged collection of `SalesStages` entities returned by the SAP Business One Service Layer
 public type SalesStagesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesStage[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `ActivityRecipientLists` entities returned by the SAP Business One Service Layer
 public type ActivityRecipientListsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityRecipientList[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1407,45 +1407,45 @@ public type GetActivitiesQueries record {
 
 # The `ActivityInstanceParams` complex type of the SAP Business One Service Layer
 public type ActivityInstanceParams record {|
-    # Activity code field.
+    # Activity code field
     @jsondata:Name {value: "ActivityCode"}
     int:Signed32 activityCode?;
-    # Instance date field.
+    # Instance date field
     @jsondata:Name {value: "InstanceDate"}
     string instanceDate?;
 |};
 
 # The `Campaign` entity of the SAP Business One Service Layer
 public type Campaign record {
-    # Campaign number field.
+    # Campaign number field
     int:Signed32 CampaignNumber?;
-    # Campaign name field.
+    # Campaign name field
     string CampaignName?;
     # OData EnumType 'CampaignTypeEnum'. Serialised by the Service Layer as the member name
     CampaignTypeEnum CampaignType?;
-    # Target group field.
+    # Target group field
     string TargetGroup?;
-    # Owner field.
+    # Owner field
     int:Signed32 Owner?;
     # OData EnumType 'CampaignStatusEnum'. Serialised by the Service Layer as the member name
     CampaignStatusEnum Status?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # Finish date field.
+    # Finish date field
     string FinishDate?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum GeneratedByWizard?;
-    # Attachements entry field.
+    # Attachements entry field
     int:Signed32 AttachementsEntry?;
     # OData EnumType 'TargetGroupTypeEnum'. Serialised by the Service Layer as the member name
     TargetGroupTypeEnum TargetGroupType?;
-    # Campaign business partners field.
+    # Campaign business partners field
     CampaignBusinessPartner[] CampaignBusinessPartners?;
-    # Campaign items field.
+    # Campaign items field
     CampaignItem[] CampaignItems?;
-    # Campaign partners field.
+    # Campaign partners field
     CampaignPartner[] CampaignPartners?;
     # The `TargetGroup` entity of the SAP Business One Service Layer
     TargetGroup TargetGroup2?;
@@ -1453,85 +1453,85 @@ public type Campaign record {
 
 # Represents the request payload for the `ActivitiesService_GetTopNActivityInstances` operation of the SAP Business One Service Layer
 public type ActivitiesService_GetTopNActivityInstances_body record {
-    # Activity instances list params field.
+    # Activity instances list params field
     @jsondata:Name {value: "ActivityInstancesListParams"}
     ActivityInstancesListParams activityInstancesListParams?;
 };
 
 # Represents the response payload for the `ActivitiesService_GetListByAttendUser` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityParams[] value?;
 };
 
 # Represents the request payload for the `ActivitySubjectService_GetListByTypeCode` operation of the SAP Business One Service Layer
 public type ActivitySubjectService_GetListByTypeCode_body record {
-    # Activity subject field.
+    # Activity subject field
     @jsondata:Name {value: "ActivitySubject"}
     ActivitySubject activitySubject?;
 };
 
 # Represents the response payload for the `ActivitiesService_GetTopNActivityInstances` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityInstanceParams[] value?;
 };
 
 # A paged collection of `SalesOpportunityInterestsSetup` entities returned by the SAP Business One Service Layer
 public type SalesOpportunityInterestsSetupCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunityInterestSetup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `ActivityRecipientListsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityRecipientListParams[] value?;
 };
 
 # The `ActivityRecipientList` entity of the SAP Business One Service Layer
 public type ActivityRecipientList record {|
-    # Activities field.
+    # Activities field
     @jsondata:Name {value: "Activities"}
     Activity[] activities?;
-    # Active field.
+    # Active field
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
-    # Is multiple field.
+    # Is multiple field
     @jsondata:Name {value: "IsMultiple"}
     BoYesNoEnum isMultiple?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
-    # Activity recipient collection field.
+    # Activity recipient collection field
     @jsondata:Name {value: "ActivityRecipientCollection"}
     ActivityRecipient[] activityRecipientCollection?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # Represents the response payload for the `ActivitySubjectService_GetActivitySubjectList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivitySubjectParams[] value?;
 };
 
@@ -1540,49 +1540,49 @@ public type BoAPARDocumentTypes "bodt_Invoice"|"bodt_CreditNote"|"bodt_DeliveryN
 
 # The `SalesOpportunitiesLine` complex type of the SAP Business One Service Layer
 public type SalesOpportunitiesLine record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Sales person field.
+    # Sales person field
     int:Signed32 SalesPerson?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # Closing date field.
+    # Closing date field
     string ClosingDate?;
-    # Stage key field.
+    # Stage key field
     int:Signed32 StageKey?;
-    # Percentage rate field.
+    # Percentage rate field
     decimal PercentageRate?;
-    # Max local total field.
+    # Max local total field
     decimal MaxLocalTotal?;
-    # Max system total field.
+    # Max system total field
     decimal MaxSystemTotal?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Contact?;
     # OData EnumType 'BoSoStatus'. Serialised by the Service Layer as the member name
     BoSoStatus Status?;
-    # Weighted amount local field.
+    # Weighted amount local field
     decimal WeightedAmountLocal?;
-    # Weighted amount system field.
+    # Weighted amount system field
     decimal WeightedAmountSystem?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocumentNumber?;
     # OData EnumType 'BoAPARDocumentTypes'. Serialised by the Service Layer as the member name
     BoAPARDocumentTypes DocumentType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DocumentCheckbox?;
-    # Contact person field.
+    # Contact person field
     int:Signed32 ContactPerson?;
-    # Business partner chanel name field.
+    # Business partner chanel name field
     string BPChanelName?;
-    # Business partner chanel code field.
+    # Business partner chanel code field
     string BPChanelCode?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
-    # Data ownershipfield field.
+    # Data ownershipfield field
     int:Signed32 DataOwnershipfield?;
-    # Business partner channel contact field.
+    # Business partner channel contact field
     int:Signed32 BPChannelContact?;
 };
 
@@ -1602,10 +1602,10 @@ public type ListCampaignResponseTypeHeaders record {
 
 # Represents the response payload for the `SalesOpportunityReasonsSetupService_GetSalesOpportunityReasonSetupList` operation of the SAP Business One Service Layer
 public type inline_response_200_11 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunityReasonSetupParams[] value?;
 };
 
@@ -1618,138 +1618,138 @@ public type ListSalesOpportunitiesHeaders record {
 
 # Represents the response payload for the `SalesOpportunityInterestsSetupService_GetSalesOpportunityInterestSetupList` operation of the SAP Business One Service Layer
 public type inline_response_200_10 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunityInterestSetupParams[] value?;
 };
 
 # Represents the response payload for the `TargetGroupsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_13 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     TargetGroupParams[] value?;
 };
 
 # Represents the response payload for the `SalesOpportunitySourcesSetupService_GetSalesOpportunitySourceSetupList` operation of the SAP Business One Service Layer
 public type inline_response_200_12 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     SalesOpportunitySourceSetupParams[] value?;
 };
 
 # The `SalesOpportunities` entity of the SAP Business One Service Layer
 public type SalesOpportunities record {
-    # Sequential number field.
+    # Sequential number field
     int:Signed32 SequentialNo?;
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Sales person field.
+    # Sales person field
     int:Signed32 SalesPerson?;
-    # Contact person field.
+    # Contact person field
     int:Signed32 ContactPerson?;
-    # Source field.
+    # Source field
     int:Signed32 Source?;
-    # Interest field1 field.
+    # Interest field1 field
     int:Signed32 InterestField1?;
-    # Interest field2 field.
+    # Interest field2 field
     int:Signed32 InterestField2?;
-    # Interest field3 field.
+    # Interest field3 field
     int:Signed32 InterestField3?;
-    # Interest level field.
+    # Interest level field
     int:Signed32 InterestLevel?;
-    # Start date field.
+    # Start date field
     string StartDate?;
-    # Predicted closing date field.
+    # Predicted closing date field
     string PredictedClosingDate?;
-    # Max local total field.
+    # Max local total field
     decimal MaxLocalTotal?;
-    # Max system total field.
+    # Max system total field
     decimal MaxSystemTotal?;
-    # Weighted sum local currency field.
+    # Weighted sum local currency field
     decimal WeightedSumLC?;
-    # Weighted sum system currency field.
+    # Weighted sum system currency field
     decimal WeightedSumSC?;
-    # Gross profit field.
+    # Gross profit field
     decimal GrossProfit?;
-    # Gross profit total local field.
+    # Gross profit total local field
     decimal GrossProfitTotalLocal?;
-    # Gross profit total system field.
+    # Gross profit total system field
     decimal GrossProfitTotalSystem?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoSoOsStatus'. Serialised by the Service Layer as the member name
     BoSoOsStatus Status?;
-    # Reason for closing field.
+    # Reason for closing field
     int:Signed32 ReasonForClosing?;
-    # Total amount local field.
+    # Total amount local field
     decimal TotalAmountLocal?;
-    # Total amoun system field.
+    # Total amoun system field
     decimal TotalAmounSystem?;
-    # Closing gross profit local field.
+    # Closing gross profit local field
     decimal ClosingGrossProfitLocal?;
-    # Closing gross profit system field.
+    # Closing gross profit system field
     decimal ClosingGrossProfitSystem?;
-    # Closing percentage field.
+    # Closing percentage field
     decimal ClosingPercentage?;
-    # Current stage number field.
+    # Current stage number field
     int:Signed32 CurrentStageNo?;
-    # Current stage number field.
+    # Current stage number field
     int:Signed32 CurrentStageNumber?;
-    # Opportunity name field.
+    # Opportunity name field
     string OpportunityName?;
-    # Industry field.
+    # Industry field
     int:Signed32 Industry?;
-    # Linked document type field.
+    # Linked document type field
     string LinkedDocumentType?;
-    # Data ownershipfield field.
+    # Data ownershipfield field
     int:Signed32 DataOwnershipfield?;
-    # Status remarks field.
+    # Status remarks field
     string StatusRemarks?;
-    # Project code field.
+    # Project code field
     string ProjectCode?;
-    # Business partner chanel name field.
+    # Business partner chanel name field
     string BPChanelName?;
-    # User signature field.
+    # User signature field
     int:Signed32 UserSignature?;
-    # Customer name field.
+    # Customer name field
     string CustomerName?;
-    # Document checkbox field.
+    # Document checkbox field
     string DocumentCheckbox?;
-    # Linked document number field.
+    # Linked document number field
     int:Signed32 LinkedDocumentNumber?;
-    # Territory field.
+    # Territory field
     int:Signed32 Territory?;
-    # Closing date field.
+    # Closing date field
     string ClosingDate?;
-    # Business partner channel contact field.
+    # Business partner channel contact field
     int:Signed32 BPChannelContact?;
-    # Business partner chanel code field.
+    # Business partner chanel code field
     string BPChanelCode?;
     # OData EnumType 'BoSoClosedInTypes'. Serialised by the Service Layer as the member name
     BoSoClosedInTypes ClosingType?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'OpportunityTypeEnum'. Serialised by the Service Layer as the member name
     OpportunityTypeEnum OpportunityType?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Update time field.
+    # Update time field
     string UpdateTime?;
-    # Sales opportunities lines field.
+    # Sales opportunities lines field
     SalesOpportunitiesLine[] SalesOpportunitiesLines?;
-    # Sales opportunities competition field.
+    # Sales opportunities competition field
     SalesOpportunitiesCompetitionItem[] SalesOpportunitiesCompetition?;
-    # Sales opportunities partners field.
+    # Sales opportunities partners field
     SalesOpportunitiesPartner[] SalesOpportunitiesPartners?;
-    # Sales opportunities interests field.
+    # Sales opportunities interests field
     SalesOpportunitiesInterest[] SalesOpportunitiesInterests?;
-    # Sales opportunities reasons field.
+    # Sales opportunities reasons field
     SalesOpportunitiesReason[] SalesOpportunitiesReasons?;
     # The `SalesOpportunitySourceSetup` entity of the SAP Business One Service Layer
     SalesOpportunitySourceSetup SalesOpportunitySourceSetup?;
@@ -1766,70 +1766,70 @@ public type RecurrencePatternEnum "rpNone"|"rpDaily"|"rpWeekly"|"rpMonthly"|"rpA
 
 # The `TargetGroupsDetail` complex type of the SAP Business One Service Layer
 public type TargetGroupsDetail record {|
-    # Building field.
+    # Building field
     @jsondata:Name {value: "Building"}
     string building?;
-    # Telephone field.
+    # Telephone field
     @jsondata:Name {value: "Telephone"}
     string telephone?;
-    # Address field.
+    # Address field
     @jsondata:Name {value: "Address"}
     string address?;
-    # Position field.
+    # Position field
     @jsondata:Name {value: "Position"}
     string position?;
-    # Zip code field.
+    # Zip code field
     @jsondata:Name {value: "ZipCode"}
     string zipCode?;
-    # Group code field.
+    # Group code field
     @jsondata:Name {value: "GroupCode"}
     string groupCode?;
-    # Title field.
+    # Title field
     @jsondata:Name {value: "Title"}
     string title?;
-    # City field.
+    # City field
     @jsondata:Name {value: "City"}
     string city?;
-    # E mail field.
+    # E mail field
     @jsondata:Name {value: "E_Mail"}
     string eMail?;
-    # County field.
+    # County field
     @jsondata:Name {value: "County"}
     string county?;
-    # Contact person field.
+    # Contact person field
     @jsondata:Name {value: "ContactPerson"}
     string contactPerson?;
-    # Mobile phone field.
+    # Mobile phone field
     @jsondata:Name {value: "MobilePhone"}
     string mobilePhone?;
-    # Active status field.
+    # Active status field
     @jsondata:Name {value: "ActiveStatus"}
     TargetGroupsDetailStatusEnum activeStatus?;
-    # Industry field.
+    # Industry field
     @jsondata:Name {value: "Industry"}
     string industry?;
-    # State field.
+    # State field
     @jsondata:Name {value: "State"}
     string state?;
-    # Target group code field.
+    # Target group code field
     @jsondata:Name {value: "TargetGroupCode"}
     string targetGroupCode?;
-    # Street field.
+    # Street field
     @jsondata:Name {value: "Street"}
     string street?;
-    # Block field.
+    # Block field
     @jsondata:Name {value: "Block"}
     string block?;
-    # Country field.
+    # Country field
     @jsondata:Name {value: "Country"}
     string country?;
-    # Fax field.
+    # Fax field
     @jsondata:Name {value: "Fax"}
     string fax?;
-    # Business partner code field.
+    # Business partner code field
     @jsondata:Name {value: "BusinessPartnerCode"}
     string businessPartnerCode?;
-    # Business partner name field.
+    # Business partner name field
     @jsondata:Name {value: "BusinessPartnerName"}
     string businessPartnerName?;
 |};
@@ -1846,30 +1846,30 @@ public type CampaignItemTypeEnum "citItems"|"citLabel"|"citTravel";
 
 # The `TargetGroupParams` complex type of the SAP Business One Service Layer
 public type TargetGroupParams record {|
-    # Target group code field.
+    # Target group code field
     @jsondata:Name {value: "TargetGroupCode"}
     string targetGroupCode?;
-    # Target group name field.
+    # Target group name field
     @jsondata:Name {value: "TargetGroupName"}
     string targetGroupName?;
 |};
 
 # The `CampaignResponseType` entity of the SAP Business One Service Layer
 public type CampaignResponseType record {|
-    # Response type description field.
+    # Response type description field
     @jsondata:Name {value: "ResponseTypeDescription"}
     string responseTypeDescription?;
-    # Is active field.
+    # Is active field
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
-    # Response type field.
+    # Response type field
     @jsondata:Name {value: "ResponseType"}
     string responseType?;
 |};
 
 # Represents the request payload for the `ActivitiesService_GetListByAttendUser` operation of the SAP Business One Service Layer
 public type ActivitiesService_GetListByAttendUser_body record {
-    # Activity field.
+    # Activity field
     @jsondata:Name {value: "Activity"}
     Activity activity?;
 };
@@ -1911,21 +1911,21 @@ public type BoActivities "cn_Conversation"|"cn_Meeting"|"cn_Task"|"cn_Other"|"cn
 
 # Represents the response payload for the `ActivitiesService_GetActivityList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityParams[] value?;
 };
 
 # A paged collection of `ActivityStatuses` entities returned by the SAP Business One Service Layer
 public type ActivityStatusesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityStatus[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1945,12 +1945,12 @@ public type RecurrenceDayOfWeekEnum "rdowDay"|"rdowWeekDay"|"rdowWeekendDay"|"rd
 
 # A paged collection of `ActivityTypes` entities returned by the SAP Business One Service Layer
 public type ActivityTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ActivityType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2025,13 +2025,13 @@ public type ListActivityStatusesQueries record {
 
 # The `SalesStage` entity of the SAP Business One Service Layer
 public type SalesStage record {
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
-    # Name field.
+    # Name field
     string Name?;
-    # Stageno field.
+    # Stageno field
     int:Signed32 Stageno?;
-    # Closing percentage field.
+    # Closing percentage field
     decimal ClosingPercentage?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Cancelled?;
@@ -2039,58 +2039,58 @@ public type SalesStage record {
     BoYesNoEnum IsSales?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsPurchasing?;
-    # Sales opportunities field.
+    # Sales opportunities field
     SalesOpportunities[] SalesOpportunities?;
 };
 
 # The `ActivityType` entity of the SAP Business One Service Layer
 public type ActivityType record {
-    # Code field.
+    # Code field
     int:Signed32 Code?;
-    # Name field.
+    # Name field
     string Name?;
-    # Activity subjects field.
+    # Activity subjects field
     ActivitySubject[] ActivitySubjects?;
-    # Activities field.
+    # Activities field
     Activity[] Activities?;
 };
 
 # A paged collection of `Campaigns` entities returned by the SAP Business One Service Layer
 public type CampaignsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Campaign[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `PartnersSetups` entities returned by the SAP Business One Service Layer
 public type PartnersSetupsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PartnersSetup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `SalesOpportunityInterestSetup` entity of the SAP Business One Service Layer
 public type SalesOpportunityInterestSetup record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Sales opportunities field.
+    # Sales opportunities field
     @jsondata:Name {value: "SalesOpportunities"}
     SalesOpportunities[] salesOpportunities?;
-    # Sort field.
+    # Sort field
     @jsondata:Name {value: "Sort"}
     int:Signed32 sort?;
 |};
@@ -2104,18 +2104,18 @@ public type ListSalesStagesHeaders record {
 
 # Represents the request payload for the `ActivitiesService_UpdateSingleInstanceInSeries` operation of the SAP Business One Service Layer
 public type ActivitiesService_UpdateSingleInstanceInSeries_body record {
-    # Activity field.
+    # Activity field
     @jsondata:Name {value: "Activity"}
     Activity activity?;
 };
 
 # The `SalesOpportunitiesReason` complex type of the SAP Business One Service Layer
 public type SalesOpportunitiesReason record {
-    # Row number field.
+    # Row number field
     int:Signed32 RowNo?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
-    # Reason field.
+    # Reason field
     int:Signed32 Reason?;
 };
 
@@ -2124,37 +2124,37 @@ public type BoDurations "du_Seconds"|"du_Minuts"|"du_Hours"|"du_Days";
 
 # The `CheckInParams` complex type of the SAP Business One Service Layer
 public type CheckInParams record {|
-    # Handled by field.
+    # Handled by field
     @jsondata:Name {value: "HandledBy"}
     int:Signed32 handledBy?;
-    # Recipient name field.
+    # Recipient name field
     @jsondata:Name {value: "RecipientName"}
     string recipientName?;
-    # Time field.
+    # Time field
     @jsondata:Name {value: "Time"}
     string time?;
-    # Latitude field.
+    # Latitude field
     @jsondata:Name {value: "Latitude"}
     string latitude?;
-    # Handled by employee field.
+    # Handled by employee field
     @jsondata:Name {value: "HandledByEmployee"}
     int:Signed32 handledByEmployee?;
-    # Recipient type field.
+    # Recipient type field
     @jsondata:Name {value: "RecipientType"}
     string recipientType?;
-    # Longitude field.
+    # Longitude field
     @jsondata:Name {value: "Longitude"}
     string longitude?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
-    # Email address field.
+    # Email address field
     @jsondata:Name {value: "EmailAddress"}
     string emailAddress?;
-    # Location field.
+    # Location field
     @jsondata:Name {value: "Location"}
     string location?;
 |};
@@ -2186,16 +2186,16 @@ public type ListTargetGroupsQueries record {
 
 # The `SalesOpportunitySourceSetup` entity of the SAP Business One Service Layer
 public type SalesOpportunitySourceSetup record {|
-    # Sequence number field.
+    # Sequence number field
     @jsondata:Name {value: "SequenceNo"}
     int:Signed32 sequenceNo?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Sales opportunities field.
+    # Sales opportunities field
     @jsondata:Name {value: "SalesOpportunities"}
     SalesOpportunities[] salesOpportunities?;
-    # Sort field.
+    # Sort field
     @jsondata:Name {value: "Sort"}
     int:Signed32 sort?;
 |};
@@ -2265,12 +2265,12 @@ public type ListActivityRecipientListsQueries record {
 
 # A paged collection of `TargetGroups` entities returned by the SAP Business One Service Layer
 public type TargetGroupsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     TargetGroup[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };

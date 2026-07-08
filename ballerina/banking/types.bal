@@ -22,15 +22,15 @@ import ballerina/http;
 
 # The `ChecksforPaymentPrintStatus` complex type of the SAP Business One Service Layer
 public type ChecksforPaymentPrintStatus record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Check number field.
+    # Check number field
     int:Signed32 CheckNumber?;
-    # Print status field.
+    # Print status field
     string PrintStatus?;
-    # Printed by field.
+    # Printed by field
     int:Signed32 PrintedBy?;
 };
 
@@ -43,49 +43,49 @@ public type ListPaymentBlocksHeaders record {
 
 # The `BankPage` entity of the SAP Business One Service Layer
 public type BankPage record {
-    # Account code field.
+    # Account code field
     string AccountCode?;
-    # Sequence field.
+    # Sequence field
     int:Signed32 Sequence?;
-    # Account name field.
+    # Account name field
     string AccountName?;
-    # Reference field.
+    # Reference field
     string Reference?;
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Memo field.
+    # Memo field
     string Memo?;
-    # Debit amount field.
+    # Debit amount field
     decimal DebitAmount?;
-    # Credit amount field.
+    # Credit amount field
     decimal CreditAmount?;
-    # Bank match field.
+    # Bank match field
     int:Signed32 BankMatch?;
-    # Data source field.
+    # Data source field
     string DataSource?;
-    # User signature field.
+    # User signature field
     int:Signed32 UserSignature?;
-    # External code field.
+    # External code field
     string ExternalCode?;
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Card name field.
+    # Card name field
     string CardName?;
-    # Statement number field.
+    # Statement number field
     int:Signed32 StatementNumber?;
-    # Invoice number field.
+    # Invoice number field
     string InvoiceNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentCreated?;
-    # Visual order field.
+    # Visual order field
     int:Signed32 VisualOrder?;
     # OData EnumType 'BoBpsDocTypes'. Serialised by the Service Layer as the member name
     BoBpsDocTypes DocNumberType?;
-    # Payment reference field.
+    # Payment reference field
     string PaymentReference?;
-    # Invoice number ex field.
+    # Invoice number ex field
     string InvoiceNumberEx?;
-    # BIC swift code field.
+    # BIC swift code field
     string BICSwiftCode?;
 };
 
@@ -126,19 +126,19 @@ public type GetDepositsQueries record {
 
 # The `CreditPaymentMethod` entity of the SAP Business One Service Layer
 public type CreditPaymentMethod record {
-    # Payment method code field.
+    # Payment method code field
     int:Signed32 PaymentMethodCode?;
-    # Name field.
+    # Name field
     string Name?;
-    # Assignedto credit card field.
+    # Assignedto credit card field
     int:Signed32 AssignedtoCreditCard?;
-    # Payment code field.
+    # Payment code field
     string PaymentCode?;
-    # Minimum credit amount field.
+    # Minimum credit amount field
     decimal MinimumCreditAmount?;
-    # Minimum payment amount field.
+    # Minimum payment amount field
     decimal MinimumPaymentAmount?;
-    # Max quantity without approval field.
+    # Max quantity without approval field
     decimal MaxQtyWithoutApproval?;
     # OData EnumType 'InstallmentPaymentsPossiblityEnum'. Serialised by the Service Layer as the member name
     InstallmentPaymentsPossiblityEnum InstallmentPaymentsPossible?;
@@ -150,13 +150,13 @@ public type CreditPaymentMethod record {
 
 # The `BankChargesAllocationCode` entity of the SAP Business One Service Layer
 public type BankChargesAllocationCode record {|
-    # Payment run export field.
+    # Payment run export field
     @jsondata:Name {value: "PaymentRunExport"}
     PaymentRunExport[] paymentRunExport?;
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -205,25 +205,25 @@ public type ListFactoringIndicatorsQueries record {
 
 # A paged collection of `WizardPaymentMethods` entities returned by the SAP Business One Service Layer
 public type WizardPaymentMethodsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     WizardPaymentMethod[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `PaymentInvoiceEntry` complex type of the SAP Business One Service Layer
 public type PaymentInvoiceEntry record {|
-    # Installment ID field.
+    # Installment ID field
     @jsondata:Name {value: "InstallmentId"}
     int:Signed32 installmentId?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     PaymentInvoiceTypeEnum docType?;
 |};
@@ -243,61 +243,61 @@ public type BankStatementDocTypeEnum "bsdtReceipts"|"bsdtPaymentToVendor"|"bsdtI
 
 # The `BillOfExchange` complex type of the SAP Business One Service Layer
 public type BillOfExchange record {
-    # Bill of exchange number field.
+    # Bill of exchange number field
     int:Signed32 BillOfExchangeNo?;
-    # Bill of exchange due date field.
+    # Bill of exchange due date field
     string BillOfExchangeDueDate?;
-    # Details field.
+    # Details field
     string Details?;
-    # Reference number field.
+    # Reference number field
     string ReferenceNo?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
-    # Payment method code field.
+    # Payment method code field
     string PaymentMethodCode?;
-    # Business partner bank code field.
+    # Business partner bank code field
     string BPBankCode?;
-    # Business partner bank act field.
+    # Business partner bank act field
     string BPBankAct?;
-    # Business partner bank country field.
+    # Business partner bank country field
     string BPBankCountry?;
-    # Control key field.
+    # Control key field
     string ControlKey?;
-    # Payment engine status1 field.
+    # Payment engine status1 field
     string PaymentEngineStatus1?;
-    # Payment engine status2 field.
+    # Payment engine status2 field
     string PaymentEngineStatus2?;
-    # Payment engine status3 field.
+    # Payment engine status3 field
     string PaymentEngineStatus3?;
-    # Stamp tax code field.
+    # Stamp tax code field
     string StampTaxCode?;
-    # Stamp tax amount field.
+    # Stamp tax amount field
     decimal StampTaxAmount?;
-    # Folio number field.
+    # Folio number field
     int:Signed32 FolioNumber?;
-    # Folio prefix string field.
+    # Folio prefix string field
     string FolioPrefixString?;
-    # Interest amount field.
+    # Interest amount field
     decimal InterestAmount?;
-    # Discount amount field.
+    # Discount amount field
     decimal DiscountAmount?;
-    # Fine amount field.
+    # Fine amount field
     decimal FineAmount?;
-    # Interest date field.
+    # Interest date field
     string InterestDate?;
-    # Discount date field.
+    # Discount date field
     string DiscountDate?;
-    # Fine date field.
+    # Fine date field
     string FineDate?;
-    # IOF amount field.
+    # IOF amount field
     decimal IOFAmount?;
-    # Service fee amount field.
+    # Service fee amount field
     decimal ServiceFeeAmount?;
-    # Other expenses amount field.
+    # Other expenses amount field
     decimal OtherExpensesAmount?;
-    # Other incomes amount field.
+    # Other incomes amount field
     decimal OtherIncomesAmount?;
-    # Last page folio number field.
+    # Last page folio number field
     int:Signed32 LastPageFolioNumber?;
 };
 
@@ -338,78 +338,78 @@ public type ListCreditCardPaymentsQueries record {
 
 # The `PaymentRunExport_Line` complex type of the SAP Business One Service Layer
 public type PaymentRunExportLine record {
-    # Row number field.
+    # Row number field
     int:Signed32 RowNumber?;
-    # Date of payment run field.
+    # Date of payment run field
     string DateOfPaymentRun?;
-    # Payment wizard code field.
+    # Payment wizard code field
     int:Signed32 PaymentWizardCode?;
-    # Vendor number field.
+    # Vendor number field
     string VendorNumber?;
-    # Customer number field.
+    # Customer number field
     string CustomerNumber?;
-    # Payment means field.
+    # Payment means field
     string PaymentMeans?;
-    # Payment document number field.
+    # Payment document number field
     int:Signed32 PaymentDocNum?;
-    # Fiscal year field.
+    # Fiscal year field
     string FiscalYear?;
-    # Vendor reference number field.
+    # Vendor reference number field
     string VendorRefNum?;
-    # Document object type field.
+    # Document object type field
     string DocumentObjectType?;
-    # Document posting date field.
+    # Document posting date field
     string DocumentPostingDate?;
-    # Document tax date field.
+    # Document tax date field
     string DocumentTaxDate?;
-    # Business partner debit payable account field.
+    # Business partner debit payable account field
     string BPDebitPayableAccount?;
-    # Document currency field.
+    # Document currency field
     string DocumentCurrency?;
-    # Document rate field.
+    # Document rate field
     decimal DocumentRate?;
-    # Document total field.
+    # Document total field
     decimal DocumentTotal?;
-    # Document total foreign currency field.
+    # Document total foreign currency field
     decimal DocumentTotalFC?;
-    # Document tax amount field.
+    # Document tax amount field
     decimal DocumentTaxAmount?;
-    # Document tax amount foreign currency field.
+    # Document tax amount foreign currency field
     decimal DocumentTaxAmountFC?;
-    # Document remarks field.
+    # Document remarks field
     string DocumentRemarks?;
-    # Document payment terms field.
+    # Document payment terms field
     int:Signed32 DocumentPaymentTerms?;
-    # Payment document reference field.
+    # Payment document reference field
     string PaymentDocReference?;
-    # Document local currency field.
+    # Document local currency field
     string DocumentLocalCurrency?;
-    # Payment terms period field.
+    # Payment terms period field
     int:Signed32 PaymentTermsPeriod?;
-    # Document object type ex field.
+    # Document object type ex field
     string DocumentObjectTypeEx?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocumentNumber?;
-    # Payment number field.
+    # Payment number field
     int:Signed32 PaymentNumber?;
-    # Payment order number field.
+    # Payment order number field
     int:Signed32 PaymentOrderNum?;
-    # Free text1 field.
+    # Free text1 field
     string FreeText1?;
-    # Free text2 field.
+    # Free text2 field
     string FreeText2?;
-    # Free text3 field.
+    # Free text3 field
     string FreeText3?;
 };
 
 # A paged collection of `BankPages` entities returned by the SAP Business One Service Layer
 public type BankPagesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BankPage[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -461,10 +461,10 @@ public type CancelStatusEnum "csYes"|"csNo"|"csCancellation";
 
 # The `GovPayCodeParams` complex type of the SAP Business One Service Layer
 public type GovPayCodeParams record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Abs ID field.
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
@@ -474,52 +474,52 @@ public type PrintOnEnum "poBlankPaper"|"poDefault"|"poOverflowBlankPaper"|"poOve
 
 # A paged collection of `FactoringIndicators` entities returned by the SAP Business One Service Layer
 public type FactoringIndicatorsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     FactoringIndicator[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `PaymentBlocks` entities returned by the SAP Business One Service Layer
 public type PaymentBlocksCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentBlock[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `InternalReconciliation` entity of the SAP Business One Service Layer
 public type InternalReconciliation record {|
-    # Cancel abs field.
+    # Cancel abs field
     @jsondata:Name {value: "CancelAbs"}
     int:Signed32 cancelAbs?;
-    # Internal reconciliation rows field.
+    # Internal reconciliation rows field
     @jsondata:Name {value: "InternalReconciliationRows"}
     InternalReconciliationRow[] internalReconciliationRows?;
-    # Recon type field.
+    # Recon type field
     @jsondata:Name {value: "ReconType"}
     ReconTypeEnum reconType?;
-    # Recon number field.
+    # Recon number field
     @jsondata:Name {value: "ReconNum"}
     int:Signed32 reconNum?;
-    # Total field.
+    # Total field
     @jsondata:Name {value: "Total"}
     decimal total?;
-    # Card or account field.
+    # Card or account field
     @jsondata:Name {value: "CardOrAccount"}
     CardOrAccountEnum cardOrAccount?;
-    # Electronic protocols field.
+    # Electronic protocols field
     @jsondata:Name {value: "ElectronicProtocols"}
     ElectronicProtocol[] electronicProtocols?;
-    # Recon date field.
+    # Recon date field
     @jsondata:Name {value: "ReconDate"}
     string reconDate?;
 |};
@@ -533,10 +533,10 @@ public type ListPaymentRunExportHeaders record {
 
 # The `CentralBankIndicator` entity of the SAP Business One Service Layer
 public type CentralBankIndicator record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Indicator field.
+    # Indicator field
     @jsondata:Name {value: "Indicator"}
     string indicator?;
 |};
@@ -629,42 +629,42 @@ public type GetIncomingPaymentsQueries record {
 
 # Represents the request payload for the `DepositsService_CancelCheckRow` operation of the SAP Business One Service Layer
 public type DepositsService_CancelCheckRow_body record {
-    # Cancel check row params field.
+    # Cancel check row params field
     @jsondata:Name {value: "CancelCheckRowParams"}
     CancelCheckRowParams cancelCheckRowParams?;
 };
 
 # The `WithholdingTaxCertificatesData` complex type of the SAP Business One Service Layer
 public type WithholdingTaxCertificatesData record {
-    # POI code reference field.
+    # POI code reference field
     string POICodeRef?;
-    # POI code field.
+    # POI code field
     string POICode?;
-    # Certificate field.
+    # Certificate field
     string Certificate?;
-    # W tax type field.
+    # W tax type field
     string WTaxType?;
-    # Period indicator field.
+    # Period indicator field
     string PeriodIndicator?;
-    # Wht abs ID field.
+    # Wht abs ID field
     int:Signed32 WhtAbsId?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Number field.
+    # Number field
     int:Signed32 Number?;
-    # Issue date field.
+    # Issue date field
     string IssueDate?;
-    # Sum VAT amount field.
+    # Sum VAT amount field
     decimal SumVATAmount?;
-    # Sum document total field.
+    # Sum document total field
     decimal SumDocTotal?;
-    # Sum base amount field.
+    # Sum base amount field
     decimal SumBaseAmount?;
-    # Sum accum amount field.
+    # Sum accum amount field
     decimal SumAccumAmount?;
-    # Sum perc amount field.
+    # Sum perc amount field
     decimal SumPercAmount?;
-    # Withholding tax groups collection field.
+    # Withholding tax groups collection field
     WTGroups[] WTGroupsCollection?;
 };
 
@@ -673,29 +673,29 @@ public type BoOpexStatus "bos_Open"|"bos_Close";
 
 # The `BOEInstruction` entity of the SAP Business One Service Layer
 public type BOEInstruction record {|
-    # Is cancel instruction field.
+    # Is cancel instruction field
     @jsondata:Name {value: "IsCancelInstruction"}
     BoYesNoEnum isCancelInstruction?;
-    # Instruction description field.
+    # Instruction description field
     @jsondata:Name {value: "InstructionDesc"}
     string instructionDesc?;
-    # Instruction entry field.
+    # Instruction entry field
     @jsondata:Name {value: "InstructionEntry"}
     int:Signed32 instructionEntry?;
-    # Instruction code field.
+    # Instruction code field
     @jsondata:Name {value: "InstructionCode"}
     string instructionCode?;
 |};
 
 # The `BOEPortfolioParams` complex type of the SAP Business One Service Layer
 public type BOEPortfolioParams record {|
-    # Portfolio ID field.
+    # Portfolio ID field
     @jsondata:Name {value: "PortfolioID"}
     string portfolioID?;
-    # Portfolio entry field.
+    # Portfolio entry field
     @jsondata:Name {value: "PortfolioEntry"}
     int:Signed32 portfolioEntry?;
-    # Portfolio code field.
+    # Portfolio code field
     @jsondata:Name {value: "PortfolioCode"}
     string portfolioCode?;
 |};
@@ -708,47 +708,47 @@ public type BoBOTFromStatus "btfs_Sent"|"btfs_Generated"|"btfs_Deposited"|"btfs_
 
 # A paged collection of `HouseBankAccounts` entities returned by the SAP Business One Service Layer
 public type HouseBankAccountsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     HouseBankAccount[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `PaymentDocumentReferences` complex type of the SAP Business One Service Layer
 public type PaymentDocumentReferences record {|
-    # Referenced document entry field.
+    # Referenced document entry field
     @jsondata:Name {value: "ReferencedDocEntry"}
     int:Signed32 referencedDocEntry?;
-    # Referenced object type field.
+    # Referenced object type field
     @jsondata:Name {value: "ReferencedObjectType"}
     ReferencedObjectTypeEnum referencedObjectType?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # External referenced document number field.
+    # External referenced document number field
     @jsondata:Name {value: "ExternalReferencedDocNumber"}
     string externalReferencedDocNumber?;
-    # Issue date field.
+    # Issue date field
     @jsondata:Name {value: "IssueDate"}
     string issueDate?;
-    # Referenced document number field.
+    # Referenced document number field
     @jsondata:Name {value: "ReferencedDocNumber"}
     int:Signed32 referencedDocNumber?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Remark field.
+    # Remark field
     @jsondata:Name {value: "Remark"}
     string remark?;
 |};
 
 # Represents the request payload for the `BOELinesService_GetBOELine` operation of the SAP Business One Service Layer
 public type BOELinesService_GetBOELine_body record {
-    # B OE line params field.
+    # B OE line params field
     @jsondata:Name {value: "BOELineParams"}
     BOELineParams bOELineParams?;
 };
@@ -758,23 +758,23 @@ public type BankStatementStatusEnum "bssExecuted"|"bssDraft"|"bssOld";
 
 # Represents the request payload for the `ExternalReconciliationsService_GetReconciliation` operation of the SAP Business One Service Layer
 public type ExternalReconciliationsService_GetReconciliation_body record {
-    # External reconciliation params field.
+    # External reconciliation params field
     @jsondata:Name {value: "ExternalReconciliationParams"}
     ExternalReconciliationParams externalReconciliationParams?;
 };
 
 # Represents the request payload for the `InternalReconciliationsService_RequestApproveCancellation` operation of the SAP Business One Service Layer
 public type InternalReconciliationsService_RequestApproveCancellation_body record {
-    # Internal reconciliation field.
+    # Internal reconciliation field
     @jsondata:Name {value: "InternalReconciliation"}
     InternalReconciliation internalReconciliation?;
 };
 
 # The `BillOfExchangeTransBankPage` complex type of the SAP Business One Service Layer
 public type BillOfExchangeTransBankPage record {
-    # Account code field.
+    # Account code field
     string AccountCode?;
-    # Sequence field.
+    # Sequence field
     int:Signed32 Sequence?;
 };
 
@@ -787,79 +787,79 @@ public type ListBOEPortfoliosHeaders record {
 
 # The `Bank` entity of the SAP Business One Service Layer
 public type Bank record {
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Bank name field.
+    # Bank name field
     string BankName?;
-    # Accountfor outgoing checks field.
+    # Accountfor outgoing checks field
     string AccountforOutgoingChecks?;
-    # Branchfor outgoing checks field.
+    # Branchfor outgoing checks field
     string BranchforOutgoingChecks?;
-    # Next check number field.
+    # Next check number field
     int:Signed32 NextCheckNumber?;
-    # Swift number field.
+    # Swift number field
     string SwiftNo?;
-    # IBAN field.
+    # IBAN field
     string IBAN?;
-    # Country code field.
+    # Country code field
     string CountryCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PostOffice?;
-    # Absolute entry field.
+    # Absolute entry field
     int:Signed32 AbsoluteEntry?;
-    # Default bank account key field.
+    # Default bank account key field
     int:Signed32 DefaultBankAccountKey?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DigitalPayments?;
-    # House bank accounts field.
+    # House bank accounts field
     HouseBankAccount[] HouseBankAccounts?;
 };
 
 # The `BankStatement` entity of the SAP Business One Service Layer
 public type BankStatement record {|
-    # Bank account key field.
+    # Bank account key field
     @jsondata:Name {value: "BankAccountKey"}
     int:Signed32 bankAccountKey?;
-    # Statement number field.
+    # Statement number field
     @jsondata:Name {value: "StatementNumber"}
     string statementNumber?;
-    # Status field.
+    # Status field
     @jsondata:Name {value: "Status"}
     BankStatementStatusEnum status?;
-    # Bank statement file hash field.
+    # Bank statement file hash field
     @jsondata:Name {value: "BankStatementFileHash"}
     string bankStatementFileHash?;
-    # Bank statement rows field.
+    # Bank statement rows field
     @jsondata:Name {value: "BankStatementRows"}
     BankStatementRow[] bankStatementRows?;
-    # House bank account field.
+    # House bank account field
     @jsondata:Name {value: "HouseBankAccount"}
     HouseBankAccount houseBankAccount?;
-    # Imported field.
+    # Imported field
     @jsondata:Name {value: "Imported"}
     BoYesNoEnum imported?;
-    # Ending balance l field.
+    # Ending balance l field
     @jsondata:Name {value: "EndingBalanceL"}
     decimal endingBalanceL?;
-    # Statement date field.
+    # Statement date field
     @jsondata:Name {value: "StatementDate"}
     string statementDate?;
-    # Ending balance f field.
+    # Ending balance f field
     @jsondata:Name {value: "EndingBalanceF"}
     decimal endingBalanceF?;
-    # Starting balance l field.
+    # Starting balance l field
     @jsondata:Name {value: "StartingBalanceL"}
     decimal startingBalanceL?;
-    # Starting balance f field.
+    # Starting balance f field
     @jsondata:Name {value: "StartingBalanceF"}
     decimal startingBalanceF?;
-    # Internal number field.
+    # Internal number field
     @jsondata:Name {value: "InternalNumber"}
     int:Signed32 internalNumber?;
-    # Currency field.
+    # Currency field
     @jsondata:Name {value: "Currency"}
     string currency?;
-    # Bank statement GUID field.
+    # Bank statement GUID field
     @jsondata:Name {value: "BankStatementGUID"}
     string bankStatementGUID?;
 |};
@@ -891,12 +891,12 @@ public type ListPaymentBlocksQueries record {
 
 # A paged collection of `CreditCards` entities returned by the SAP Business One Service Layer
 public type CreditCardsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CreditCard[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -928,12 +928,12 @@ public type ListBillOfExchangeTransactionsQueries record {
 
 # A paged collection of `ChecksforPayment` entities returned by the SAP Business One Service Layer
 public type ChecksforPaymentCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ChecksforPayment[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1027,41 +1027,41 @@ public type ReferencedObjectTypeEnum "rot_ExternalDocument"|"rot_SalesQuotation"
 
 # The `PaymentCheck` complex type of the SAP Business One Service Layer
 public type PaymentCheck record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Check number field.
+    # Check number field
     int:Signed32 CheckNumber?;
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Branch field.
+    # Branch field
     string Branch?;
-    # Accountt number field.
+    # Accountt number field
     string AccounttNum?;
-    # Details field.
+    # Details field
     string Details?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Trnsfrable?;
-    # Check sum field.
+    # Check sum field
     decimal CheckSum?;
-    # Currency field.
+    # Currency field
     string Currency?;
-    # Country code field.
+    # Country code field
     string CountryCode?;
-    # Check abs entry field.
+    # Check abs entry field
     int:Signed32 CheckAbsEntry?;
-    # Check account field.
+    # Check account field
     string CheckAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ManualCheck?;
-    # Fiscal ID field.
+    # Fiscal ID field
     string FiscalID?;
-    # Originally issued by field.
+    # Originally issued by field
     string OriginallyIssuedBy?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Endorse?;
-    # Endorsable check number field.
+    # Endorsable check number field
     int:Signed32 EndorsableCheckNo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ECheck?;
@@ -1072,41 +1072,41 @@ public type BoDepositTypeEnum "dtChecks"|"dtCredit"|"dtCash"|"dtBOE";
 
 # The `PaymentCreditCard` complex type of the SAP Business One Service Layer
 public type PaymentCreditCard record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Credit card field.
+    # Credit card field
     int:Signed32 CreditCard?;
-    # Credit account field.
+    # Credit account field
     string CreditAcct?;
-    # Credit card number field.
+    # Credit card number field
     string CreditCardNumber?;
-    # Card valid until field.
+    # Card valid until field
     string CardValidUntil?;
-    # Voucher number field.
+    # Voucher number field
     string VoucherNum?;
-    # Owner ID number field.
+    # Owner ID number field
     string OwnerIdNum?;
-    # Owner phone field.
+    # Owner phone field
     string OwnerPhone?;
-    # Payment method code field.
+    # Payment method code field
     int:Signed32 PaymentMethodCode?;
-    # Number of payments field.
+    # Number of payments field
     int:Signed32 NumOfPayments?;
-    # First payment due field.
+    # First payment due field
     string FirstPaymentDue?;
-    # First payment sum field.
+    # First payment sum field
     decimal FirstPaymentSum?;
-    # Additional payment sum field.
+    # Additional payment sum field
     decimal AdditionalPaymentSum?;
-    # Credit sum field.
+    # Credit sum field
     decimal CreditSum?;
-    # Credit cur field.
+    # Credit cur field
     string CreditCur?;
-    # Credit rate field.
+    # Credit rate field
     decimal CreditRate?;
-    # Confirmation number field.
+    # Confirmation number field
     string ConfirmationNum?;
-    # Number of credit payments field.
+    # Number of credit payments field
     int:Signed32 NumOfCreditPayments?;
     # OData EnumType 'BoRcptCredTypes'. Serialised by the Service Layer as the member name
     BoRcptCredTypes CreditType?;
@@ -1116,24 +1116,24 @@ public type PaymentCreditCard record {
 
 # A paged collection of `GovPayCodes` entities returned by the SAP Business One Service Layer
 public type GovPayCodesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     GovPayCode[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `PaymentWizards` entities returned by the SAP Business One Service Layer
 public type PaymentWizardsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentWizard[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1168,19 +1168,19 @@ public type CreditOrDebitEnum "codCredit"|"codDebit";
 
 # A paged collection of `BOEPortfolios` entities returned by the SAP Business One Service Layer
 public type BOEPortfoliosCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BOEPortfolio[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `ExternalReconciliationsService_GetReconciliationList` operation of the SAP Business One Service Layer
 public type ExternalReconciliationsService_GetReconciliationList_body record {
-    # External reconciliation filter params field.
+    # External reconciliation filter params field
     @jsondata:Name {value: "ExternalReconciliationFilterParams"}
     ExternalReconciliationFilterParams externalReconciliationFilterParams?;
 };
@@ -1190,31 +1190,31 @@ public type BoCpCardAcct "cfp_Card"|"cfp_Account";
 
 # The `GovPayCode` entity of the SAP Business One Service Layer
 public type GovPayCode record {|
-    # Gov pay code authorities field.
+    # Gov pay code authorities field
     @jsondata:Name {value: "GovPayCodeAuthorities"}
     GovPayCodeAuthority[] govPayCodeAuthorities?;
-    # State tax field.
+    # State tax field
     @jsondata:Name {value: "StateTax"}
     BoYesNoEnum stateTax?;
-    # Prdcity field.
+    # Prdcity field
     @jsondata:Name {value: "Prdcity"}
     GovPayCodePeriodicityEnum prdcity?;
-    # Descr field.
+    # Descr field
     @jsondata:Name {value: "Descr"}
     string descr?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
-    # Abs ID field.
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
 
 # The `FactoringIndicator` entity of the SAP Business One Service Layer
 public type FactoringIndicator record {
-    # Indicator code field.
+    # Indicator code field
     string IndicatorCode?;
-    # Indicator name field.
+    # Indicator name field
     string IndicatorName?;
 };
 
@@ -1226,12 +1226,12 @@ public type BankStatementRowSourceEnum "bsImported"|"bsImportedAndAmended"|"bsMa
 
 # A paged collection of `CentralBankIndicator` entities returned by the SAP Business One Service Layer
 public type CentralBankIndicatorCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CentralBankIndicator[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1263,7 +1263,7 @@ public type ListBankChargesAllocationCodesQueries record {
 
 # The `InternalReconciliationBP` complex type of the SAP Business One Service Layer
 public type InternalReconciliationBP record {|
-    # B p code field.
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
 |};
@@ -1335,27 +1335,27 @@ public type GetGovPayCodesQueries record {
 
 # The `ChecksforPaymentDocumentReference` complex type of the SAP Business One Service Layer
 public type ChecksforPaymentDocumentReference record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Referenced document entry field.
+    # Referenced document entry field
     int:Signed32 ReferencedDocEntry?;
-    # Referenced document number field.
+    # Referenced document number field
     int:Signed32 ReferencedDocNumber?;
-    # External referenced document number field.
+    # External referenced document number field
     string ExternalReferencedDocNumber?;
     # OData EnumType 'ReferencedObjectTypeEnum'. Serialised by the Service Layer as the member name
     ReferencedObjectTypeEnum ReferencedObjectType?;
-    # Issue date field.
+    # Issue date field
     string IssueDate?;
-    # Remark field.
+    # Remark field
     string Remark?;
 };
 
 # The `BOELineParams` complex type of the SAP Business One Service Layer
 public type BOELineParams record {|
-    # B OE key field.
+    # B OE key field
     @jsondata:Name {value: "BOEKey"}
     int:Signed32 bOEKey?;
 |};
@@ -1372,9 +1372,9 @@ public type GetBankStatementsQueries record {
 
 # The `WizardPaymentMethod` entity of the SAP Business One Service Layer
 public type WizardPaymentMethod record {
-    # Payment method code field.
+    # Payment method code field
     string PaymentMethodCode?;
-    # Description field.
+    # Description field
     string Description?;
     # OData EnumType 'BoPaymentTypeEnum'. Serialised by the Service Layer as the member name
     BoPaymentTypeEnum Type?;
@@ -1394,29 +1394,29 @@ public type WizardPaymentMethod record {
     BoYesNoEnum CurrencyRestriction?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PostOfficeBank?;
-    # Minimum amount field.
+    # Minimum amount field
     decimal MinimumAmount?;
-    # Maximum amount field.
+    # Maximum amount field
     decimal MaximumAmount?;
-    # Default bank field.
+    # Default bank field
     string DefaultBank?;
-    # User signature field.
+    # User signature field
     int:Signed32 UserSignature?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
-    # Bank country field.
+    # Bank country field
     string BankCountry?;
-    # Default account field.
+    # Default account field
     string DefaultAccount?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Branch field.
+    # Branch field
     string Branch?;
-    # Key code field.
+    # Key code field
     string KeyCode?;
-    # Transaction type field.
+    # Transaction type field
     string TransactionType?;
-    # Format field.
+    # Format field
     string Format?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AgentCollection?;
@@ -1424,7 +1424,7 @@ public type WizardPaymentMethod record {
     BoYesNoEnum SendforAcceptance?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum GroupByDate?;
-    # Deposit norm field.
+    # Deposit norm field
     string DepositNorm?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DebitMemo?;
@@ -1434,27 +1434,27 @@ public type WizardPaymentMethod record {
     BoYesNoEnum GroupInvoicesbyPay?;
     # OData EnumType 'BoDueDateEnum'. Serialised by the Service Layer as the member name
     BoDueDateEnum DueDateSelection?;
-    # Payment terms code field.
+    # Payment terms code field
     int:Signed32 PaymentTermsCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PosttoGLInterimAccount?;
-    # Bank account key field.
+    # Bank account key field
     int:Signed32 BankAccountKey?;
-    # Document type field.
+    # Document type field
     string DocType?;
-    # Accepted field.
+    # Accepted field
     string Accepted?;
-    # Portfolio ID field.
+    # Portfolio ID field
     string PortfolioID?;
-    # Cur code field.
+    # Cur code field
     string CurCode?;
-    # Instruction1 field.
+    # Instruction1 field
     string Instruction1?;
-    # Instruction2 field.
+    # Instruction2 field
     string Instruction2?;
-    # Payment place field.
+    # Payment place field
     string PaymentPlace?;
-    # Barcode dll field.
+    # Barcode dll field
     string BarcodeDll?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Active?;
@@ -1462,19 +1462,19 @@ public type WizardPaymentMethod record {
     BoYesNoEnum GroupInvoicesByPayToBank?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum GroupInvoicesByCurrency?;
-    # Bank charge rate field.
+    # Bank charge rate field
     decimal BankChargeRate?;
-    # Report code field.
+    # Report code field
     string ReportCode?;
-    # Cancel instruction field.
+    # Cancel instruction field
     string CancelInstruction?;
-    # Occurence code field.
+    # Occurence code field
     string OccurenceCode?;
-    # Movement code field.
+    # Movement code field
     string MovementCode?;
-    # Direct debit field.
+    # Direct debit field
     string DirectDebit?;
-    # Currency restrictions field.
+    # Currency restrictions field
     CurrencyRestriction[] CurrencyRestrictions?;
     # The `HouseBankAccount` entity of the SAP Business One Service Layer
     HouseBankAccount HouseBankAccount?;
@@ -1482,22 +1482,22 @@ public type WizardPaymentMethod record {
 
 # The `ExternalReconciliationParams` complex type of the SAP Business One Service Layer
 public type ExternalReconciliationParams record {|
-    # Account code field.
+    # Account code field
     @jsondata:Name {value: "AccountCode"}
     string accountCode?;
-    # Reconciliation number field.
+    # Reconciliation number field
     @jsondata:Name {value: "ReconciliationNo"}
     int:Signed32 reconciliationNo?;
 |};
 
 # A paged collection of `BOEDocumentTypes` entities returned by the SAP Business One Service Layer
 public type BOEDocumentTypesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BOEDocumentType[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1529,7 +1529,7 @@ public type ListPaymentRunExportQueries record {
 
 # The `CheckLineParams` complex type of the SAP Business One Service Layer
 public type CheckLineParams record {|
-    # Check key field.
+    # Check key field
     @jsondata:Name {value: "CheckKey"}
     int:Signed32 checkKey?;
 |};
@@ -1571,19 +1571,19 @@ public type GetBOEDocumentTypesQueries record {
 
 # The `RelatedDocument` complex type of the SAP Business One Service Layer
 public type RelatedDocument record {|
-    # Abs enry field.
+    # Abs enry field
     @jsondata:Name {value: "AbsEnry"}
     int:Signed32 absEnry?;
-    # Abs entry field.
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
-    # U UID field.
+    # U UID field
     @jsondata:Name {value: "UUID"}
     string uUID?;
-    # Document tye field.
+    # Document tye field
     @jsondata:Name {value: "DocTye"}
     RelatedDocumentTypeEnum docTye?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     RelatedDocumentTypeEnum docType?;
 |};
@@ -1603,67 +1603,67 @@ public type InstallmentPaymentsPossiblityEnum "ippCr"|"ippNo"|"ippRd"|"ippYes";
 
 # A paged collection of `CreditCardPayments` entities returned by the SAP Business One Service Layer
 public type CreditCardPaymentsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CreditCardPayment[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `BankChargesAllocationCodeParams` complex type of the SAP Business One Service Layer
 public type BankChargesAllocationCodeParams record {|
-    # Description field.
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `ReconciliationJournalEntryLine` complex type of the SAP Business One Service Layer
 public type ReconciliationJournalEntryLine record {|
-    # Transaction number field.
+    # Transaction number field
     @jsondata:Name {value: "TransactionNumber"}
     int:Signed32 transactionNumber?;
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Posting date field.
+    # Posting date field
     @jsondata:Name {value: "PostingDate"}
     string postingDate?;
-    # Ref3 field.
+    # Ref3 field
     @jsondata:Name {value: "Ref3"}
     string ref3?;
-    # Ref1 field.
+    # Ref1 field
     @jsondata:Name {value: "Ref1"}
     string ref1?;
-    # Ref2 field.
+    # Ref2 field
     @jsondata:Name {value: "Ref2"}
     string ref2?;
-    # Credit amount field.
+    # Credit amount field
     @jsondata:Name {value: "CreditAmount"}
     decimal creditAmount?;
-    # Due date field.
+    # Due date field
     @jsondata:Name {value: "DueDate"}
     string dueDate?;
-    # Debit amount field.
+    # Debit amount field
     @jsondata:Name {value: "DebitAmount"}
     decimal debitAmount?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
 
 # The `BillOfExchangeTransactionLine` complex type of the SAP Business One Service Layer
 public type BillOfExchangeTransactionLine record {
-    # Bill of exchange number field.
+    # Bill of exchange number field
     int:Signed32 BillOfExchangeNo?;
     # OData EnumType 'BoBOETypes'. Serialised by the Service Layer as the member name
     BoBOETypes BillOfExchangeType?;
-    # Bill of exchange due date field.
+    # Bill of exchange due date field
     string BillOfExchangeDueDate?;
 };
 
@@ -1676,23 +1676,23 @@ public type ListCreditCardsHeaders record {
 
 # The `CashFlowAssignment` complex type of the SAP Business One Service Layer
 public type CashFlowAssignment record {
-    # Cash flow assignments ID field.
+    # Cash flow assignments ID field
     int:Signed32 CashFlowAssignmentsID?;
-    # Cash flow line item ID field.
+    # Cash flow line item ID field
     int:Signed32 CashFlowLineItemID?;
-    # Credit field.
+    # Credit field
     decimal Credit?;
     # OData EnumType 'PaymentMeansTypeEnum'. Serialised by the Service Layer as the member name
     PaymentMeansTypeEnum PaymentMeans?;
-    # Check number field.
+    # Check number field
     string CheckNumber?;
-    # Amount local currency field.
+    # Amount local currency field
     decimal AmountLC?;
-    # Amount foreign currency field.
+    # Amount foreign currency field
     decimal AmountFC?;
-    # JDT line ID field.
+    # JDT line ID field
     int:Signed32 JDTLineId?;
-    # JDT ID field.
+    # JDT ID field
     int:Signed32 JDTId?;
 };
 
@@ -1736,21 +1736,21 @@ public type GetBanksQueries record {
 
 # The `DocsInWTGroups` complex type of the SAP Business One Service Layer
 public type DocsInWTGroups record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Document obj type field.
+    # Document obj type field
     string DocObjType?;
-    # VAT amount field.
+    # VAT amount field
     decimal VATAmount?;
-    # Document total field.
+    # Document total field
     decimal DocTotal?;
-    # Base amount field.
+    # Base amount field
     decimal BaseAmount?;
-    # Accum amount field.
+    # Accum amount field
     decimal AccumAmount?;
-    # Percept amount field.
+    # Percept amount field
     decimal PerceptAmount?;
-    # Percent field.
+    # Percent field
     decimal Percent?;
 };
 
@@ -1763,35 +1763,35 @@ public type ListPaymentReasonCodesHeaders record {
 
 # The `ChecksforPayment` entity of the SAP Business One Service Layer
 public type ChecksforPayment record {
-    # Check key field.
+    # Check key field
     int:Signed32 CheckKey?;
-    # Check number field.
+    # Check number field
     int:Signed32 CheckNumber?;
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Branch field.
+    # Branch field
     string Branch?;
-    # Bank name field.
+    # Bank name field
     string BankName?;
-    # Check date field.
+    # Check date field
     string CheckDate?;
-    # Account number field.
+    # Account number field
     string AccountNumber?;
-    # Details field.
+    # Details field
     string Details?;
-    # Journal entry reference field.
+    # Journal entry reference field
     string JournalEntryReference?;
-    # Payment date field.
+    # Payment date field
     string PaymentDate?;
-    # Payment number field.
+    # Payment number field
     int:Signed32 PaymentNo?;
-    # Check amount field.
+    # Check amount field
     decimal CheckAmount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Transferable?;
-    # Vendor code field.
+    # Vendor code field
     string VendorCode?;
-    # Check currency field.
+    # Check currency field
     string CheckCurrency?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Canceled?;
@@ -1799,49 +1799,49 @@ public type ChecksforPayment record {
     BoCpCardAcct CardOrAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Printed?;
-    # Vendor name field.
+    # Vendor name field
     string VendorName?;
-    # Signature field.
+    # Signature field
     string Signature?;
-    # Customer account code field.
+    # Customer account code field
     string CustomerAccountCode?;
-    # Transaction number field.
+    # Transaction number field
     int:Signed32 TransactionNumber?;
-    # Address field.
+    # Address field
     string Address?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CreateJournalEntry?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
-    # Tax total field.
+    # Tax total field
     decimal TaxTotal?;
-    # Tax date field.
+    # Tax date field
     string TaxDate?;
-    # Deduction refund amount field.
+    # Deduction refund amount field
     decimal DeductionRefundAmount?;
-    # Printed by field.
+    # Printed by field
     int:Signed32 PrintedBy?;
-    # Country code field.
+    # Country code field
     string CountryCode?;
-    # Totalin words field.
+    # Totalin words field
     string TotalinWords?;
-    # Address name field.
+    # Address name field
     string AddressName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ManualCheck?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ECheck?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PrintConfirm?;
-    # Checksfor payment lines field.
+    # Checksfor payment lines field
     ChecksforPaymentLine[] ChecksforPaymentLines?;
-    # Checksfor payment print status field.
+    # Checksfor payment print status field
     ChecksforPaymentPrintStatus[] ChecksforPaymentPrintStatus?;
-    # Checksfor payment document references field.
+    # Checksfor payment document references field
     ChecksforPaymentDocumentReference[] ChecksforPaymentDocumentReferences?;
 };
 
@@ -1860,12 +1860,12 @@ public type CreateMethodEnum "cmManual"|"cmAutomatic";
 
 # A paged collection of `InternalReconciliations` entities returned by the SAP Business One Service Layer
 public type InternalReconciliationsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     InternalReconciliation[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1888,26 +1888,26 @@ public type BoRcptCredTypes "cr_Regular"|"cr_Telephone"|"cr_InternetTransaction"
 
 # The `Payments_ApprovalRequest` complex type of the SAP Business One Service Layer
 public type PaymentsApprovalRequest record {|
-    # Active for update field.
+    # Active for update field
     @jsondata:Name {value: "ActiveForUpdate"}
     BoYesNoEnum activeForUpdate?;
-    # Approval templates ID field.
+    # Approval templates ID field
     @jsondata:Name {value: "ApprovalTemplatesID"}
     int:Signed32 approvalTemplatesID?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
-    # Approval templates name field.
+    # Approval templates name field
     @jsondata:Name {value: "ApprovalTemplatesName"}
     string approvalTemplatesName?;
 |};
 
 # The `PaymentBlock` entity of the SAP Business One Service Layer
 public type PaymentBlock record {|
-    # Payment block code field.
+    # Payment block code field
     @jsondata:Name {value: "PaymentBlockCode"}
     string paymentBlockCode?;
-    # Abs entry field.
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
@@ -1942,47 +1942,47 @@ public type RelatedDocumentTypeEnum "rdt_Payment"|"rdt_Reconciliation";
 
 # The `ExternalReconciliationFilterParams` complex type of the SAP Business One Service Layer
 public type ExternalReconciliationFilterParams record {|
-    # Reconciliation number to field.
+    # Reconciliation number to field
     @jsondata:Name {value: "ReconciliationNoTo"}
     int:Signed32 reconciliationNoTo?;
-    # Reconciliation number from field.
+    # Reconciliation number from field
     @jsondata:Name {value: "ReconciliationNoFrom"}
     int:Signed32 reconciliationNoFrom?;
-    # Reconciliation account type field.
+    # Reconciliation account type field
     @jsondata:Name {value: "ReconciliationAccountType"}
     ReconciliationAccountTypeEnum reconciliationAccountType?;
-    # Reconciliation date to field.
+    # Reconciliation date to field
     @jsondata:Name {value: "ReconciliationDateTo"}
     string reconciliationDateTo?;
-    # Reconciliation date from field.
+    # Reconciliation date from field
     @jsondata:Name {value: "ReconciliationDateFrom"}
     string reconciliationDateFrom?;
-    # Account code to field.
+    # Account code to field
     @jsondata:Name {value: "AccountCodeTo"}
     string accountCodeTo?;
-    # Account code from field.
+    # Account code from field
     @jsondata:Name {value: "AccountCodeFrom"}
     string accountCodeFrom?;
 |};
 
 # The `ReconciliationBankStatementLine` complex type of the SAP Business One Service Layer
 public type ReconciliationBankStatementLine record {|
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Amount field.
+    # Amount field
     @jsondata:Name {value: "Amount"}
     decimal amount?;
-    # Ref1 field.
+    # Ref1 field
     @jsondata:Name {value: "Ref1"}
     string ref1?;
-    # Sequence field.
+    # Sequence field
     @jsondata:Name {value: "Sequence"}
     int:Signed32 sequence?;
-    # Bank statement account code field.
+    # Bank statement account code field
     @jsondata:Name {value: "BankStatementAccountCode"}
     string bankStatementAccountCode?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
 |};
@@ -1996,34 +1996,34 @@ public type ListBankPagesHeaders record {
 
 # The `PaymentAmountParams` complex type of the SAP Business One Service Layer
 public type PaymentAmountParams record {|
-    # Cash discount amount field.
+    # Cash discount amount field
     @jsondata:Name {value: "CashDiscountAmount"}
     decimal cashDiscountAmount?;
-    # Cash discount percentage field.
+    # Cash discount percentage field
     @jsondata:Name {value: "CashDiscountPercentage"}
     decimal cashDiscountPercentage?;
-    # Installment ID field.
+    # Installment ID field
     @jsondata:Name {value: "InstallmentId"}
     int:Signed32 installmentId?;
-    # Cash discount amount system currency field.
+    # Cash discount amount system currency field
     @jsondata:Name {value: "CashDiscountAmountSC"}
     decimal cashDiscountAmountSC?;
-    # Total payment amount foreign currency field.
+    # Total payment amount foreign currency field
     @jsondata:Name {value: "TotalPaymentAmountFC"}
     decimal totalPaymentAmountFC?;
-    # Cash discount amount foreign currency field.
+    # Cash discount amount foreign currency field
     @jsondata:Name {value: "CashDiscountAmountFC"}
     decimal cashDiscountAmountFC?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     PaymentInvoiceTypeEnum docType?;
-    # Total payment amount field.
+    # Total payment amount field
     @jsondata:Name {value: "TotalPaymentAmount"}
     decimal totalPaymentAmount?;
-    # Total payment amount system currency field.
+    # Total payment amount system currency field
     @jsondata:Name {value: "TotalPaymentAmountSC"}
     decimal totalPaymentAmountSC?;
 |};
@@ -2055,133 +2055,133 @@ public type ListGovPayCodesQueries record {
 
 # The `HouseBankAccount` entity of the SAP Business One Service Layer
 public type HouseBankAccount record {
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Acc number field.
+    # Acc number field
     string AccNo?;
-    # Branch field.
+    # Branch field
     string Branch?;
-    # Next check number field.
+    # Next check number field
     int:Signed32 NextCheckNo?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # DSC1 STREET ALIAS field.
+    # DSC1 STREET ALIAS field
     string DSC1_STREET_ALIAS?;
-    # Block field.
+    # Block field
     string Block?;
-    # Zip code field.
+    # Zip code field
     string ZipCode?;
-    # City field.
+    # City field
     string City?;
-    # County field.
+    # County field
     string County?;
-    # Country field.
+    # Country field
     string Country?;
-    # State field.
+    # State field
     string State?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BISR?;
-    # Control key field.
+    # Control key field
     string ControlKey?;
-    # User no1 field.
+    # User no1 field
     string UserNo1?;
-    # User no2 field.
+    # User no2 field
     string UserNo2?;
-    # User no3 field.
+    # User no3 field
     string UserNo3?;
-    # User no4 field.
+    # User no4 field
     string UserNo4?;
-    # IBAN field.
+    # IBAN field
     string IBAN?;
-    # Debtof discounted billof exc field.
+    # Debtof discounted billof exc field
     string DebtofDiscountedBillofExc?;
-    # Tolerance days field.
+    # Tolerance days field
     int:Signed32 ToleranceDays?;
-    # Min amountof billof exchang field.
+    # Min amountof billof exchang field
     decimal MinAmountofBillofExchang?;
-    # Max amountof billof exchan field.
+    # Max amountof billof exchan field
     decimal MaxAmountofBillofExchan?;
-    # Discount limit field.
+    # Discount limit field
     decimal DiscountLimit?;
-    # Days in advance field.
+    # Days in advance field
     int:Signed32 DaysInAdvance?;
-    # Bankon collection field.
+    # Bankon collection field
     string BankonCollection?;
-    # Bankon discounted field.
+    # Bankon discounted field
     string BankonDiscounted?;
-    # General ledger interim account field.
+    # General ledger interim account field
     string GLInterimAccount?;
-    # Absolute entry field.
+    # Absolute entry field
     int:Signed32 AbsoluteEntry?;
-    # Bank key field.
+    # Bank key field
     int:Signed32 BankKey?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LockChecksPrinting?;
-    # Template name field.
+    # Template name field
     string TemplateName?;
-    # Maximum lines field.
+    # Maximum lines field
     int:Signed32 MaximumLines?;
     # OData EnumType 'PrintOnEnum'. Serialised by the Service Layer as the member name
     PrintOnEnum PrintOn?;
-    # Customer ID number field.
+    # Customer ID number field
     string CustomerIdNumber?;
-    # ISR biller ID field.
+    # ISR biller ID field
     string ISRBillerID?;
-    # ISR type field.
+    # ISR type field
     int:Signed32 ISRType?;
-    # Account check digit field.
+    # Account check digit field
     string AccountCheckDigit?;
-    # Our number field.
+    # Our number field
     int:Signed32 OurNumber?;
-    # Agreement number field.
+    # Agreement number field
     string AgreementNumber?;
-    # Address type field.
+    # Address type field
     string AddressType?;
-    # Street number field.
+    # Street number field
     string StreetNo?;
-    # Building field.
+    # Building field
     string Building?;
-    # Incoming payment series field.
+    # Incoming payment series field
     int:Signed32 IncomingPaymentSeries?;
-    # Outgoing payment series field.
+    # Outgoing payment series field
     int:Signed32 OutgoingPaymentSeries?;
-    # Journal entry series field.
+    # Journal entry series field
     int:Signed32 JournalEntrySeries?;
-    # Import file name field.
+    # Import file name field
     string ImportFileName?;
-    # Account name field.
+    # Account name field
     string AccountName?;
-    # BIC swift code field.
+    # BIC swift code field
     string BICSwiftCode?;
-    # Fine account field.
+    # Fine account field
     string FineAccount?;
-    # Interest account field.
+    # Interest account field
     string InterestAccount?;
-    # Discount account field.
+    # Discount account field
     string DiscountAccount?;
-    # Service fee account field.
+    # Service fee account field
     string ServiceFeeAccount?;
-    # IOF tax account field.
+    # IOF tax account field
     string IOFTaxAccount?;
-    # Other expenses account field.
+    # Other expenses account field
     string OtherExpensesAccount?;
-    # Other incomes account field.
+    # Other incomes account field
     string OtherIncomesAccount?;
-    # Retorno file name field.
+    # Retorno file name field
     string RetornoFileName?;
-    # Branch check digit field.
+    # Branch check digit field
     string BranchCheckDigit?;
-    # Collection code field.
+    # Collection code field
     string CollectionCode?;
-    # File seq next number field.
+    # File seq next number field
     int:Signed32 FileSeqNextNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NoValidationForStartingEndingBal?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ECheck?;
-    # Wizard payment methods field.
+    # Wizard payment methods field
     WizardPaymentMethod[] WizardPaymentMethods?;
-    # Bank statements field.
+    # Bank statements field
     BankStatement[] BankStatements?;
     # The `Bank` entity of the SAP Business One Service Layer
     Bank Bank?;
@@ -2189,81 +2189,81 @@ public type HouseBankAccount record {
 
 # The `ChecksforPaymentLine` complex type of the SAP Business One Service Layer
 public type ChecksforPaymentLine record {
-    # Row number field.
+    # Row number field
     int:Signed32 RowNumber?;
-    # Row details field.
+    # Row details field
     string RowDetails?;
-    # Row total field.
+    # Row total field
     decimal RowTotal?;
-    # Row currency field.
+    # Row currency field
     string RowCurrency?;
-    # Tax definition field.
+    # Tax definition field
     string TaxDefinition?;
-    # Tax percent field.
+    # Tax percent field
     decimal TaxPercent?;
-    # Credited account field.
+    # Credited account field
     string CreditedAccount?;
-    # Line total field.
+    # Line total field
     decimal LineTotal?;
 };
 
 # A paged collection of `BOEInstructions` entities returned by the SAP Business One Service Layer
 public type BOEInstructionsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BOEInstruction[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `BOEPortfolio` entity of the SAP Business One Service Layer
 public type BOEPortfolio record {|
-    # Portfolio number field.
+    # Portfolio number field
     @jsondata:Name {value: "PortfolioNum"}
     string portfolioNum?;
-    # Portfolio ID field.
+    # Portfolio ID field
     @jsondata:Name {value: "PortfolioID"}
     string portfolioID?;
-    # Portfolio entry field.
+    # Portfolio entry field
     @jsondata:Name {value: "PortfolioEntry"}
     int:Signed32 portfolioEntry?;
-    # Portfolio description field.
+    # Portfolio description field
     @jsondata:Name {value: "PortfolioDescription"}
     string portfolioDescription?;
-    # Portfolio code field.
+    # Portfolio code field
     @jsondata:Name {value: "PortfolioCode"}
     string portfolioCode?;
 |};
 
 # The `CreditCard` entity of the SAP Business One Service Layer
 public type CreditCard record {
-    # Credit card code field.
+    # Credit card code field
     int:Signed32 CreditCardCode?;
-    # Credit card name field.
+    # Credit card name field
     string CreditCardName?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Telephone field.
+    # Telephone field
     string Telephone?;
-    # Company ID field.
+    # Company ID field
     string CompanyID?;
-    # Country code field.
+    # Country code field
     string CountryCode?;
-    # Credit payment methods field.
+    # Credit payment methods field
     CreditPaymentMethod[] CreditPaymentMethods?;
 };
 
 # A paged collection of `PaymentDrafts` entities returned by the SAP Business One Service Layer
 public type PaymentDraftsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Payment[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2283,19 +2283,19 @@ public type GetCreditPaymentMethodsQueries record {
 
 # A paged collection of `BankChargesAllocationCodes` entities returned by the SAP Business One Service Layer
 public type BankChargesAllocationCodesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BankChargesAllocationCode[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `CreditLineParams` complex type of the SAP Business One Service Layer
 public type CreditLineParams record {|
-    # Abs ID field.
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
@@ -2325,42 +2325,42 @@ public type GetPaymentBlocksQueries record {
 
 # The `InternalReconciliationOpenTransParams` complex type of the SAP Business One Service Layer
 public type InternalReconciliationOpenTransParams record {|
-    # Internal reconciliation b ps field.
+    # Internal reconciliation b ps field
     @jsondata:Name {value: "InternalReconciliationBPs"}
     InternalReconciliationBP[] internalReconciliationBPs?;
-    # Account number field.
+    # Account number field
     @jsondata:Name {value: "AccountNo"}
     string accountNo?;
-    # Card or account field.
+    # Card or account field
     @jsondata:Name {value: "CardOrAccount"}
     CardOrAccountEnum cardOrAccount?;
-    # From date field.
+    # From date field
     @jsondata:Name {value: "FromDate"}
     string fromDate?;
-    # To date field.
+    # To date field
     @jsondata:Name {value: "ToDate"}
     string toDate?;
-    # Date type field.
+    # Date type field
     @jsondata:Name {value: "DateType"}
     ReconSelectDateTypeEnum dateType?;
-    # Recon date field.
+    # Recon date field
     @jsondata:Name {value: "ReconDate"}
     string reconDate?;
 |};
 
 # The `PaymentBPCode` complex type of the SAP Business One Service Layer
 public type PaymentBPCode record {|
-    # B p code field.
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
-    # Date field.
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
 |};
 
 # Represents the request payload for the `CreditLinesService_GetCreditLine` operation of the SAP Business One Service Layer
 public type CreditLinesService_GetCreditLine_body record {
-    # Credit line params field.
+    # Credit line params field
     @jsondata:Name {value: "CreditLineParams"}
     CreditLineParams creditLineParams?;
 };
@@ -2381,13 +2381,13 @@ public type ListHouseBankAccountsHeaders record {
 
 # The `BankStatementsFilter` complex type of the SAP Business One Service Layer
 public type BankStatementsFilter record {|
-    # Account field.
+    # Account field
     @jsondata:Name {value: "Account"}
     string account?;
-    # Bank field.
+    # Bank field
     @jsondata:Name {value: "Bank"}
     string bank?;
-    # Country field.
+    # Country field
     @jsondata:Name {value: "Country"}
     string country?;
 |};
@@ -2439,69 +2439,69 @@ public type ListHouseBankAccountsQueries record {
 
 # The `WithholdingTaxDataWTX` complex type of the SAP Business One Service Layer
 public type WithholdingTaxDataWTX record {
-    # Withholding tax amount sys field.
+    # Withholding tax amount sys field
     decimal WTAmountSys?;
-    # Withholding tax amount foreign currency field.
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
-    # Withholding tax amount field.
+    # Withholding tax amount field
     decimal WTAmount?;
-    # Withholding type field.
+    # Withholding type field
     string WithholdingType?;
-    # Taxable amountin sys field.
+    # Taxable amountin sys field
     decimal TaxableAmountinSys?;
-    # Taxable amount foreign currency field.
+    # Taxable amount foreign currency field
     decimal TaxableAmountFC?;
-    # Taxable amount field.
+    # Taxable amount field
     decimal TaxableAmount?;
-    # Rate field.
+    # Rate field
     decimal Rate?;
-    # Category field.
+    # Category field
     string Category?;
-    # Base type field.
+    # Base type field
     string BaseType?;
-    # Applied withholding tax amount sys field.
+    # Applied withholding tax amount sys field
     decimal AppliedWTAmountSys?;
-    # Applied withholding tax amount foreign currency field.
+    # Applied withholding tax amount foreign currency field
     decimal AppliedWTAmountFC?;
-    # Applied withholding tax amount field.
+    # Applied withholding tax amount field
     decimal AppliedWTAmount?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Base document entry field.
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
-    # Base document line field.
+    # Base document line field
     int:Signed32 BaseDocLine?;
-    # Base document type field.
+    # Base document type field
     string BaseDocType?;
-    # Withholding tax abs ID field.
+    # Withholding tax abs ID field
     string WTAbsId?;
-    # Exempt rate field.
+    # Exempt rate field
     decimal ExemptRate?;
-    # Base net amount sys field.
+    # Base net amount sys field
     decimal BaseNetAmountSys?;
-    # Base net amount foreign currency field.
+    # Base net amount foreign currency field
     decimal BaseNetAmountFC?;
-    # Base net amount field.
+    # Base net amount field
     decimal BaseNetAmount?;
-    # Base vatmount sys field.
+    # Base vatmount sys field
     decimal BaseVatmountSys?;
-    # Base vatmount foreign currency field.
+    # Base vatmount foreign currency field
     decimal BaseVatmountFC?;
-    # Base vatmount field.
+    # Base vatmount field
     decimal BaseVatmount?;
-    # Accum base amount sys field.
+    # Accum base amount sys field
     decimal AccumBaseAmountSys?;
-    # Accum base amount foreign currency field.
+    # Accum base amount foreign currency field
     decimal AccumBaseAmountFC?;
-    # Accum base amount field.
+    # Accum base amount field
     decimal AccumBaseAmount?;
-    # Accum w tax amount sys field.
+    # Accum w tax amount sys field
     decimal AccumWTaxAmountSys?;
-    # Accum w tax amount foreign currency field.
+    # Accum w tax amount foreign currency field
     decimal AccumWTaxAmountFC?;
-    # Accum w tax amount field.
+    # Accum w tax amount field
     decimal AccumWTaxAmount?;
 };
 
@@ -2532,10 +2532,10 @@ public type ListChecksforPaymentQueries record {
 
 # The `PaymentBlockParams` complex type of the SAP Business One Service Layer
 public type PaymentBlockParams record {|
-    # Payment block code field.
+    # Payment block code field
     @jsondata:Name {value: "PaymentBlockCode"}
     string paymentBlockCode?;
-    # Abs entry field.
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
@@ -2545,267 +2545,267 @@ public type PaymentMeansTypeEnum "pmtNotAssigned"|"pmtChecks"|"pmtBankTransfer"|
 
 # A paged collection of `BankStatements` entities returned by the SAP Business One Service Layer
 public type BankStatementsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BankStatement[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `BOEInstructionParams` complex type of the SAP Business One Service Layer
 public type BOEInstructionParams record {|
-    # Instruction entry field.
+    # Instruction entry field
     @jsondata:Name {value: "InstructionEntry"}
     int:Signed32 instructionEntry?;
-    # Instruction code field.
+    # Instruction code field
     @jsondata:Name {value: "InstructionCode"}
     string instructionCode?;
 |};
 
 # The `BankStatementRow` complex type of the SAP Business One Service Layer
 public type BankStatementRow record {
-    # External bank statement number field.
+    # External bank statement number field
     int:Signed32 ExternalBankStatementNo?;
-    # Account number field.
+    # Account number field
     string AccountNumber?;
-    # Sequence number field.
+    # Sequence number field
     int:Signed32 SequenceNo?;
-    # Account name field.
+    # Account name field
     string AccountName?;
-    # Reference field.
+    # Reference field
     string Reference?;
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Details field.
+    # Details field
     string Details?;
-    # Debit amount foreign currency field.
+    # Debit amount foreign currency field
     decimal DebitAmountFC?;
-    # Credit amount foreign currency field.
+    # Credit amount foreign currency field
     decimal CreditAmountFC?;
-    # Credit currency field.
+    # Credit currency field
     string CreditCurrency?;
-    # Balance field.
+    # Balance field
     decimal Balance?;
-    # Reconciliation number field.
+    # Reconciliation number field
     int:Signed32 ReconciliationNo?;
-    # External code field.
+    # External code field
     string ExternalCode?;
-    # Business partner code field.
+    # Business partner code field
     string BPCode?;
-    # Business partner name field.
+    # Business partner name field
     string BPName?;
-    # Statement number field.
+    # Statement number field
     int:Signed32 StatementNumber?;
-    # Row status field.
+    # Row status field
     string RowStatus?;
-    # Visual order field.
+    # Visual order field
     int:Signed32 VisualOrder?;
     # OData EnumType 'BoBpsDocTypes'. Serialised by the Service Layer as the member name
     BoBpsDocTypes DocNumType?;
-    # Details2 field.
+    # Details2 field
     string Details2?;
-    # Payment reference number field.
+    # Payment reference number field
     string PaymentReferenceNo?;
     # OData EnumType 'CreateMethodEnum'. Serialised by the Service Layer as the member name
     CreateMethodEnum CreateMethod?;
-    # Bank stmt line date field.
+    # Bank stmt line date field
     string BankStmtLineDate?;
-    # Bank stmt due date field.
+    # Bank stmt due date field
     string BankStmtDueDate?;
-    # Internal bank op code field.
+    # Internal bank op code field
     int:Signed32 InternalBankOpCode?;
-    # Business partner bank account field.
+    # Business partner bank account field
     string BPBankAccount?;
-    # Debit amount local currency field.
+    # Debit amount local currency field
     decimal DebitAmountLC?;
-    # Credit amount local currency field.
+    # Credit amount local currency field
     decimal CreditAmountLC?;
-    # Exchange rate field.
+    # Exchange rate field
     decimal ExchangeRate?;
-    # IBA nof business partner bank account field.
+    # IBA nof business partner bank account field
     string IBANofBPBankAccount?;
-    # Fee on the line field.
+    # Fee on the line field
     decimal FeeOnTheLine?;
-    # VAT amount local currency field.
+    # VAT amount local currency field
     decimal VATAmountLC?;
-    # VAT amount foreign currency field.
+    # VAT amount foreign currency field
     decimal VATAmountFC?;
-    # Journal entry ID field.
+    # Journal entry ID field
     int:Signed32 JournalEntryID?;
-    # Payment ID field.
+    # Payment ID field
     int:Signed32 PaymentID?;
     # OData EnumType 'BankStatementDocTypeEnum'. Serialised by the Service Layer as the member name
     BankStatementDocTypeEnum DocumentType?;
     # OData EnumType 'PostingMethodEnum'. Serialised by the Service Layer as the member name
     PostingMethodEnum PostingMethod?;
-    # General ledger accountfor fee field.
+    # General ledger accountfor fee field
     string GLAccountforFee?;
-    # Fee profit center field.
+    # Fee profit center field
     string FeeProfitCenter?;
-    # Fee project field.
+    # Fee project field
     string FeeProject?;
-    # Business partner bank code field.
+    # Business partner bank code field
     string BPBankCode?;
-    # Fee distribution rule field.
+    # Fee distribution rule field
     string FeeDistributionRule?;
-    # Fee distribution rule2 field.
+    # Fee distribution rule2 field
     string FeeDistributionRule2?;
-    # Fee distribution rule3 field.
+    # Fee distribution rule3 field
     string FeeDistributionRule3?;
-    # Fee distribution rule4 field.
+    # Fee distribution rule4 field
     string FeeDistributionRule4?;
-    # Fee distribution rule5 field.
+    # Fee distribution rule5 field
     string FeeDistributionRule5?;
-    # BPBIC swift code field.
+    # BPBIC swift code field
     string BPBICSwiftCode?;
     # OData EnumType 'BankStatementRowSourceEnum'. Serialised by the Service Layer as the member name
     BankStatementRowSourceEnum Source?;
-    # Folio prefix string field.
+    # Folio prefix string field
     string FolioPrefixString?;
-    # Folio number field.
+    # Folio number field
     int:Signed32 FolioNumber?;
-    # Multiple payments field.
+    # Multiple payments field
     MultiplePayment[] MultiplePayments?;
 };
 
 
 # Represents the request payload for the `ExternalReconciliationsService_Reconcile` operation of the SAP Business One Service Layer
 public type ExternalReconciliationsService_Reconcile_body record {
-    # External reconciliation field.
+    # External reconciliation field
     @jsondata:Name {value: "ExternalReconciliation"}
     ExternalReconciliation externalReconciliation?;
 };
 
 # A paged collection of `VendorPayments` entities returned by the SAP Business One Service Layer
 public type VendorPaymentsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Payment[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ExternalReconciliation` complex type of the SAP Business One Service Layer
 public type ExternalReconciliation record {|
-    # Creation date field.
+    # Creation date field
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
-    # Reconciliation type field.
+    # Reconciliation type field
     @jsondata:Name {value: "ReconciliationType"}
     string reconciliationType?;
-    # Reconciliation account type field.
+    # Reconciliation account type field
     @jsondata:Name {value: "ReconciliationAccountType"}
     ReconciliationAccountTypeEnum reconciliationAccountType?;
-    # Reconciliation date field.
+    # Reconciliation date field
     @jsondata:Name {value: "ReconciliationDate"}
     string reconciliationDate?;
-    # Amount field.
+    # Amount field
     @jsondata:Name {value: "Amount"}
     decimal amount?;
-    # Account code field.
+    # Account code field
     @jsondata:Name {value: "AccountCode"}
     string accountCode?;
-    # Reconciliation number field.
+    # Reconciliation number field
     @jsondata:Name {value: "ReconciliationNo"}
     int:Signed32 reconciliationNo?;
-    # Currency type field.
+    # Currency type field
     @jsondata:Name {value: "CurrencyType"}
     string currencyType?;
-    # Reconciliation journal entry lines field.
+    # Reconciliation journal entry lines field
     @jsondata:Name {value: "ReconciliationJournalEntryLines"}
     ReconciliationJournalEntryLine[] reconciliationJournalEntryLines?;
-    # Reconciliation bank statement lines field.
+    # Reconciliation bank statement lines field
     @jsondata:Name {value: "ReconciliationBankStatementLines"}
     ReconciliationBankStatementLine[] reconciliationBankStatementLines?;
 |};
 
 # The `InternalReconciliationOpenTrans` complex type of the SAP Business One Service Layer
 public type InternalReconciliationOpenTrans record {|
-    # Internal reconciliation open trans rows field.
+    # Internal reconciliation open trans rows field
     @jsondata:Name {value: "InternalReconciliationOpenTransRows"}
     InternalReconciliationOpenTransRow[] internalReconciliationOpenTransRows?;
-    # Card or account field.
+    # Card or account field
     @jsondata:Name {value: "CardOrAccount"}
     CardOrAccountEnum cardOrAccount?;
-    # Electronic protocols field.
+    # Electronic protocols field
     @jsondata:Name {value: "ElectronicProtocols"}
     ElectronicProtocol[] electronicProtocols?;
-    # Recon date field.
+    # Recon date field
     @jsondata:Name {value: "ReconDate"}
     string reconDate?;
-    # B PL ID field.
+    # B PL ID field
     @jsondata:Name {value: "BPLId"}
     int:Signed32 bPLId?;
 |};
 
 # Represents the request payload for the `PaymentCalculationService_GetPaymentAmount` operation of the SAP Business One Service Layer
 public type PaymentCalculationService_GetPaymentAmount_body record {
-    # Payment invoice entries field.
+    # Payment invoice entries field
     @jsondata:Name {value: "PaymentInvoiceEntries"}
     PaymentInvoiceEntry[] paymentInvoiceEntries?;
-    # Payment business partner code field.
+    # Payment business partner code field
     @jsondata:Name {value: "PaymentBPCode"}
     PaymentBPCode paymentBPCode?;
 };
 
 # The `PaymentReasonCodeParams` complex type of the SAP Business One Service Layer
 public type PaymentReasonCodeParams record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `BankStatementParams` complex type of the SAP Business One Service Layer
 public type BankStatementParams record {|
-    # Bank account key field.
+    # Bank account key field
     @jsondata:Name {value: "BankAccountKey"}
     int:Signed32 bankAccountKey?;
-    # Statement number field.
+    # Statement number field
     @jsondata:Name {value: "StatementNumber"}
     string statementNumber?;
-    # Status field.
+    # Status field
     @jsondata:Name {value: "Status"}
     BankStatementStatusEnum status?;
-    # Starting balance f field.
+    # Starting balance f field
     @jsondata:Name {value: "StartingBalanceF"}
     decimal startingBalanceF?;
-    # Internal number field.
+    # Internal number field
     @jsondata:Name {value: "InternalNumber"}
     int:Signed32 internalNumber?;
-    # Currency field.
+    # Currency field
     @jsondata:Name {value: "Currency"}
     string currency?;
-    # Imported field.
+    # Imported field
     @jsondata:Name {value: "Imported"}
     BoYesNoEnum imported?;
-    # Ending balance l field.
+    # Ending balance l field
     @jsondata:Name {value: "EndingBalanceL"}
     decimal endingBalanceL?;
-    # Statement date field.
+    # Statement date field
     @jsondata:Name {value: "StatementDate"}
     string statementDate?;
-    # Ending balance f field.
+    # Ending balance f field
     @jsondata:Name {value: "EndingBalanceF"}
     decimal endingBalanceF?;
-    # Starting balance l field.
+    # Starting balance l field
     @jsondata:Name {value: "StartingBalanceL"}
     decimal startingBalanceL?;
 |};
 
 # A paged collection of `IncomingPayments` entities returned by the SAP Business One Service Layer
 public type IncomingPaymentsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Payment[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2822,41 +2822,41 @@ public type BoBOTToStatus "btts_Canceled"|"btts_Generated"|"btts_Deposit"|"btts_
 
 # The `InternalReconciliationOpenTransRow` complex type of the SAP Business One Service Layer
 public type InternalReconciliationOpenTransRow record {|
-    # Cash discount field.
+    # Cash discount field
     @jsondata:Name {value: "CashDiscount"}
     decimal cashDiscount?;
-    # Short name field.
+    # Short name field
     @jsondata:Name {value: "ShortName"}
     string shortName?;
-    # Trans row ID field.
+    # Trans row ID field
     @jsondata:Name {value: "TransRowId"}
     int:Signed32 transRowId?;
-    # Selected field.
+    # Selected field
     @jsondata:Name {value: "Selected"}
     BoYesNoEnum selected?;
-    # Src obj typ field.
+    # Src obj typ field
     @jsondata:Name {value: "SrcObjTyp"}
     string srcObjTyp?;
-    # Src obj abs field.
+    # Src obj abs field
     @jsondata:Name {value: "SrcObjAbs"}
     int:Signed32 srcObjAbs?;
-    # Trans ID field.
+    # Trans ID field
     @jsondata:Name {value: "TransId"}
     int:Signed32 transId?;
-    # Credit or debit field.
+    # Credit or debit field
     @jsondata:Name {value: "CreditOrDebit"}
     CreditOrDebitEnum creditOrDebit?;
-    # Reconcile amount field.
+    # Reconcile amount field
     @jsondata:Name {value: "ReconcileAmount"}
     decimal reconcileAmount?;
 |};
 
 # The `PaymentWizardParams` complex type of the SAP Business One Service Layer
 public type PaymentWizardParams record {|
-    # ID number field.
+    # ID number field
     @jsondata:Name {value: "IdNumber"}
     int:Signed32 idNumber?;
-    # Wizard name field.
+    # Wizard name field
     @jsondata:Name {value: "WizardName"}
     string wizardName?;
 |};
@@ -2867,81 +2867,81 @@ public type ElectronicProtocol record {
     ElectronicDocProtocolCodeEnum ProtocolCode?;
     # OData EnumType 'ElectronicDocGenTypeEnum'. Serialised by the Service Layer as the member name
     ElectronicDocGenTypeEnum GenerationType?;
-    # Mapping ID field.
+    # Mapping ID field
     int:Signed32 MappingID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TestingMode?;
-    # Confirmation field.
+    # Confirmation field
     string Confirmation?;
-    # E document type field.
+    # E document type field
     int:Signed32 EDocType?;
-    # CF di cancellation reason field.
+    # CF di cancellation reason field
     string CFDiCancellationReason?;
-    # CF di cancellation response field.
+    # CF di cancellation response field
     string CFDiCancellationResponse?;
-    # Related documents field.
+    # Related documents field
     RelatedDocument[] RelatedDocuments?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EBooksRelevant?;
-    # E books MARK field.
+    # E books MARK field
     string EBooksMARK?;
-    # E books MAR kof negative field.
+    # E books MAR kof negative field
     string EBooksMARKofNegative?;
-    # E books invoice type field.
+    # E books invoice type field
     string EBooksInvoiceType?;
-    # E books invoice typeof negative field.
+    # E books invoice typeof negative field
     string EBooksInvoiceTypeofNegative?;
-    # E billing IRN field.
+    # E billing IRN field
     string EBillingIRN?;
-    # EETPKP field.
+    # EETPKP field
     string EETPKP?;
-    # EETBKP field.
+    # EETBKP field
     string EETBKP?;
-    # Signature input message field.
+    # Signature input message field
     string SignatureInputMessage?;
-    # Signature digest field.
+    # Signature digest field
     string SignatureDigest?;
-    # Fecha timbrado field.
+    # Fecha timbrado field
     string FechaTimbrado?;
-    # Sello SAT field.
+    # Sello SAT field
     string SelloSAT?;
-    # Payment method field.
+    # Payment method field
     string PaymentMethod?;
-    # Rfc prov certif field.
+    # Rfc prov certif field
     string RfcProvCertif?;
-    # Number certificado SAT field.
+    # Number certificado SAT field
     string NoCertificadoSAT?;
-    # FPA sequence number field.
+    # FPA sequence number field
     int:Signed32 FPASequenceNumber?;
-    # FPA send date SDI field.
+    # FPA send date SDI field
     string FPASendDateSDI?;
-    # FPA progressivo field.
+    # FPA progressivo field
     string FPAProgressivo?;
-    # Protocol description field.
+    # Protocol description field
     string ProtocolDescription?;
-    # CF di export field.
+    # CF di export field
     string CFDiExport?;
-    # E billing ack number field.
+    # E billing ack number field
     string EBillingAckNo?;
-    # E billing ack dt field.
+    # E billing ack dt field
     string EBillingAckDt?;
-    # E billing signed invoice field.
+    # E billing signed invoice field
     string EBillingSignedInvoice?;
-    # E billing signed QR code field.
+    # E billing signed QR code field
     string EBillingSignedQRCode?;
-    # E billing response status field.
+    # E billing response status field
     string EBillingResponseStatus?;
-    # CF di cancellation reference field.
+    # CF di cancellation reference field
     string CFDiCancellationReference?;
-    # E books QR code path field.
+    # E books QR code path field
     string EBooksQRCodePath?;
-    # E books QR code pathof negative field.
+    # E books QR code pathof negative field
     string EBooksQRCodePathofNegative?;
-    # Carta porte ID field.
+    # Carta porte ID field
     string CartaPorteID?;
-    # E books dispatch date field.
+    # E books dispatch date field
     string EBooksDispatchDate?;
-    # E books dispatch time field.
+    # E books dispatch time field
     string EBooksDispatchTime?;
 };
 
@@ -2957,18 +2957,18 @@ public type GetWizardPaymentMethodsQueries record {
 
 # Represents the request payload for the `ExternalReconciliationsService_CancelReconciliation` operation of the SAP Business One Service Layer
 public type ExternalReconciliationsService_CancelReconciliation_body record {
-    # External reconciliation params field.
+    # External reconciliation params field
     @jsondata:Name {value: "ExternalReconciliationParams"}
     ExternalReconciliationParams externalReconciliationParams?;
 };
 
 # The `CurrencyRestriction` complex type of the SAP Business One Service Layer
 public type CurrencyRestriction record {
-    # Payment method code field.
+    # Payment method code field
     string PaymentMethodCode?;
-    # Currency code field.
+    # Currency code field
     string CurrencyCode?;
-    # Currency name field.
+    # Currency name field
     string CurrencyName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Choose?;
@@ -2976,12 +2976,12 @@ public type CurrencyRestriction record {
 
 # A paged collection of `Banks` entities returned by the SAP Business One Service Layer
 public type BanksCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Bank[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3051,38 +3051,38 @@ public type PostingMethodEnum "pmGLAccountBankAccount"|"pmBussinessPartnerBankAc
 
 # The `CentralBankIndicatorParams` complex type of the SAP Business One Service Layer
 public type CentralBankIndicatorParams record {|
-    # Indicator field.
+    # Indicator field
     @jsondata:Name {value: "Indicator"}
     string indicator?;
 |};
 
 # Represents the request payload for the `BankStatementsService_GetBankStatementList` operation of the SAP Business One Service Layer
 public type BankStatementsService_GetBankStatementList_body record {
-    # Bank statements filter field.
+    # Bank statements filter field
     @jsondata:Name {value: "BankStatementsFilter"}
     BankStatementsFilter bankStatementsFilter?;
 };
 
 # A paged collection of `Deposits` entities returned by the SAP Business One Service Layer
 public type DepositsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Deposit[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `PaymentRunExport` entities returned by the SAP Business One Service Layer
 public type PaymentRunExportCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentRunExport[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3092,17 +3092,17 @@ public type BoBpsDocTypes "bpdt_PaymentReference"|"bpdt_ISR"|"bpdt_DocNum";
 
 # The `BillOfExchangeTransDeposit` complex type of the SAP Business One Service Layer
 public type BillOfExchangeTransDeposit record {
-    # Deposit norm field.
+    # Deposit norm field
     string DepositNorm?;
     # OData EnumType 'BoDepositPostingTypes'. Serialised by the Service Layer as the member name
     BoDepositPostingTypes PostingType?;
-    # Bank country field.
+    # Bank country field
     string BankCountry?;
-    # Bank account field.
+    # Bank account field
     string BankAccount?;
-    # Bank deposit account field.
+    # Bank deposit account field
     string BankDepositAccount?;
-    # Bank branch field.
+    # Bank branch field
     string BankBranch?;
 };
 
@@ -3111,40 +3111,40 @@ public type BoDepositAccountTypeEnum "datBankAccount"|"datBusinessPartner";
 
 # The `CreditLine` complex type of the SAP Business One Service Layer
 public type CreditLine record {|
-    # Credit currency field.
+    # Credit currency field
     @jsondata:Name {value: "CreditCurrency"}
     string creditCurrency?;
-    # Deposited field.
+    # Deposited field
     @jsondata:Name {value: "Deposited"}
     BoYesNoEnum deposited?;
-    # Pay date field.
+    # Pay date field
     @jsondata:Name {value: "PayDate"}
     string payDate?;
-    # Number of payments field.
+    # Number of payments field
     @jsondata:Name {value: "NumOfPayments"}
     int:Signed32 numOfPayments?;
-    # Customer field.
+    # Customer field
     @jsondata:Name {value: "Customer"}
     string customer?;
-    # Reference field.
+    # Reference field
     @jsondata:Name {value: "Reference"}
     string reference?;
-    # Total field.
+    # Total field
     @jsondata:Name {value: "Total"}
     decimal total?;
-    # Voucher number field.
+    # Voucher number field
     @jsondata:Name {value: "VoucherNumber"}
     string voucherNumber?;
-    # Transferred field.
+    # Transferred field
     @jsondata:Name {value: "Transferred"}
     BoYesNoEnum transferred?;
-    # Payment method code field.
+    # Payment method code field
     @jsondata:Name {value: "PaymentMethodCode"}
     int:Signed32 paymentMethodCode?;
-    # Credit card field.
+    # Credit card field
     @jsondata:Name {value: "CreditCard"}
     int:Signed32 creditCard?;
-    # Abs ID field.
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
@@ -3154,12 +3154,12 @@ public type ElectronicDocProtocolCodeEnum "edpc_Invalid"|"edpc_GEN"|"edpc_EET"|"
 
 # A paged collection of `CreditPaymentMethods` entities returned by the SAP Business One Service Layer
 public type CreditPaymentMethodsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CreditPaymentMethod[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3182,197 +3182,197 @@ public type GetPaymentRunExportQueries record {
 
 # The `PaymentRunExport` entity of the SAP Business One Service Layer
 public type PaymentRunExport record {
-    # Absolute entry field.
+    # Absolute entry field
     int:Signed32 AbsoluteEntry?;
-    # Run date field.
+    # Run date field
     string RunDate?;
-    # Vendor number field.
+    # Vendor number field
     string VendorNum?;
-    # Customer number field.
+    # Customer number field
     string CustomerNum?;
-    # Payment method field.
+    # Payment method field
     string PaymentMethod?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
-    # Fiscal year field.
+    # Fiscal year field
     string FiscalYear?;
-    # Countery field.
+    # Countery field
     string Countery?;
-    # Company tax number field.
+    # Company tax number field
     string CompanyTaxNum?;
-    # Payee name field.
+    # Payee name field
     string PayeeName?;
-    # Payee postal code field.
+    # Payee postal code field
     string PayeePostalCode?;
-    # Payee city field.
+    # Payee city field
     string PayeeCity?;
-    # Payee street field.
+    # Payee street field
     string PayeeStreet?;
-    # Payee country field.
+    # Payee country field
     string PayeeCountry?;
-    # Payee state field.
+    # Payee state field
     string PayeeState?;
-    # Payee bank name field.
+    # Payee bank name field
     string PayeeBankName?;
-    # Payee bank zip field.
+    # Payee bank zip field
     string PayeeBankZip?;
-    # Payee bank city field.
+    # Payee bank city field
     string PayeeBankCity?;
-    # Payee bank street field.
+    # Payee bank street field
     string PayeeBankStreet?;
-    # Payee bank country field.
+    # Payee bank country field
     string PayeeBankCountry?;
-    # Payee bank account field.
+    # Payee bank account field
     string PayeeBankAccount?;
-    # Payee bank code field.
+    # Payee bank code field
     string PayeeBankCode?;
-    # Payee bank ctrl key field.
+    # Payee bank ctrl key field
     string PayeeBankCtrlKey?;
-    # Payee bank swift number field.
+    # Payee bank swift number field
     string PayeeBankSwiftNum?;
-    # Payee bank IBAN field.
+    # Payee bank IBAN field
     string PayeeBankIBAN?;
-    # Posting date field.
+    # Posting date field
     string PostingDate?;
-    # Bank account field.
+    # Bank account field
     string BankAccount?;
-    # Bank country field.
+    # Bank country field
     string BankCountry?;
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Bank IBAN field.
+    # Bank IBAN field
     string BankIBAN?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Currency field.
+    # Currency field
     string Currency?;
-    # Document amount local field.
+    # Document amount local field
     decimal DocAmountLocal?;
-    # Document currnecy field.
+    # Document currnecy field
     string DocCurrnecy?;
-    # Document amount forign field.
+    # Document amount forign field
     decimal DocAmountForign?;
-    # Document cash discount field.
+    # Document cash discount field
     decimal DocCashDiscount?;
-    # Document cash discount forign field.
+    # Document cash discount forign field
     decimal DocCashDiscountForign?;
-    # Document number offield paid field.
+    # Document number offield paid field
     int:Signed32 DocNumOffieldPaid?;
-    # Document rate field.
+    # Document rate field
     decimal DocRate?;
-    # Wiz code field.
+    # Wiz code field
     int:Signed32 WizCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CollectionAuthorization?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PayeeBankPostOffice?;
-    # Payee bank next check number field.
+    # Payee bank next check number field
     int:Signed32 PayeeBankNextCheckNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PayeeBankHouseBank?;
-    # Payee bank block field.
+    # Payee bank block field
     string PayeeBankBlock?;
-    # Payee bank county field.
+    # Payee bank county field
     string PayeeBankCounty?;
-    # Payee bank state field.
+    # Payee bank state field
     string PayeeBankState?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PayeeBankBISR?;
-    # Payee bank user num1 field.
+    # Payee bank user num1 field
     string PayeeBankUserNum1?;
-    # Payee bank user num2 field.
+    # Payee bank user num2 field
     string PayeeBankUserNum2?;
-    # Payee bank user num3 field.
+    # Payee bank user num3 field
     string PayeeBankUserNum3?;
-    # Payee bank user num4 field.
+    # Payee bank user num4 field
     string PayeeBankUserNum4?;
-    # Instruction key field.
+    # Instruction key field
     string InstructionKey?;
-    # Payment format field.
+    # Payment format field
     string PaymentFormat?;
-    # Company name field.
+    # Company name field
     string CompanyName?;
-    # Company address field.
+    # Company address field
     string CompanyAddress?;
     # OData EnumType 'BoOpexStatus'. Serialised by the Service Layer as the member name
     BoOpexStatus Status?;
-    # Comp isr biller ID field.
+    # Comp isr biller ID field
     string CompIsrBillerID?;
-    # Vendor isr biller ID field.
+    # Vendor isr biller ID field
     string VendorIsrBillerID?;
-    # Additional ID number field.
+    # Additional ID number field
     string AdditionalIdNumber?;
-    # Organization number field.
+    # Organization number field
     string OrganizationNumber?;
-    # Payee bank branch field.
+    # Payee bank branch field
     string PayeeBankBranch?;
-    # Payment bank branch field.
+    # Payment bank branch field
     string PaymentBankBranch?;
-    # User name field.
+    # User name field
     string UserName?;
-    # User e mail field.
+    # User e mail field
     string UserEMail?;
-    # User mobile phone number field.
+    # User mobile phone number field
     string UserMobilePhoneNumber?;
-    # User fax number field.
+    # User fax number field
     string UserFaxNumber?;
-    # User department field.
+    # User department field
     int:Signed32 UserDepartment?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DebitMemo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EUInternalTransfer?;
-    # File path field.
+    # File path field
     string FilePath?;
-    # Ordering party field.
+    # Ordering party field
     string OrderingParty?;
-    # Payment bank control key field.
+    # Payment bank control key field
     string PaymentBankControlKey?;
-    # Payee tax number field.
+    # Payee tax number field
     string PayeeTaxNumber?;
-    # Payment key code field.
+    # Payment key code field
     string PaymentKeyCode?;
-    # Payee reference details field.
+    # Payee reference details field
     string PayeeReferenceDetails?;
-    # Format name field.
+    # Format name field
     string FormatName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentDonewithCheck?;
-    # Company block field.
+    # Company block field
     string CompanyBlock?;
-    # Company city field.
+    # Company city field
     string CompanyCity?;
-    # Company county field.
+    # Company county field
     string CompanyCounty?;
-    # Company state field.
+    # Company state field
     string CompanyState?;
-    # Company street field.
+    # Company street field
     string CompanyStreet?;
-    # Company zip code field.
+    # Company zip code field
     string CompanyZipCode?;
-    # Payment bank charges field.
+    # Payment bank charges field
     string PaymentBankCharges?;
-    # Payment bank user no1 field.
+    # Payment bank user no1 field
     string PaymentBankUserNo1?;
-    # Payment bank user no2 field.
+    # Payment bank user no2 field
     string PaymentBankUserNo2?;
-    # Payment bank user no3 field.
+    # Payment bank user no3 field
     string PaymentBankUserNo3?;
-    # Payment bank user no4 field.
+    # Payment bank user no4 field
     string PaymentBankUserNo4?;
-    # Payment bank charges allocation code field.
+    # Payment bank charges allocation code field
     string PaymentBankChargesAllocationCode?;
-    # Payment order number field.
+    # Payment order number field
     int:Signed32 PaymentOrderNum?;
-    # Free text1 field.
+    # Free text1 field
     string FreeText1?;
-    # Free text2 field.
+    # Free text2 field
     string FreeText2?;
-    # Free text3 field.
+    # Free text3 field
     string FreeText3?;
     # OData EnumType 'PaymentRunExportRowTypeEnum'. Serialised by the Service Layer as the member name
     PaymentRunExportRowTypeEnum RowType?;
-    # Payment run export lines field.
+    # Payment run export lines field
     PaymentRunExportLine[] PaymentRunExport_Lines?;
     # The `PaymentWizard` entity of the SAP Business One Service Layer
     PaymentWizard PaymentWizard?;
@@ -3391,126 +3391,126 @@ public type BoPaymentMeansEnum "bopmCheck"|"bopmBankTransfer"|"bopmBillOfExchang
 
 # The `CancelCheckRowParams` complex type of the SAP Business One Service Layer
 public type CancelCheckRowParams record {|
-    # Check ID field.
+    # Check ID field
     @jsondata:Name {value: "CheckID"}
     int:Signed32 checkID?;
-    # Deposit ID field.
+    # Deposit ID field
     @jsondata:Name {value: "DepositID"}
     int:Signed32 depositID?;
 |};
 
 # Represents the response payload for the `ExternalReconciliationsService_GetReconciliationList` operation of the SAP Business One Service Layer
 public type inline_response_200_9 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     ExternalReconciliationParams[] value?;
 };
 
 # The `Deposit` entity of the SAP Business One Service Layer
 public type Deposit record {
-    # Deposit number field.
+    # Deposit number field
     int:Signed32 DepositNumber?;
-    # Abs entry field.
+    # Abs entry field
     int:Signed32 AbsEntry?;
     # OData EnumType 'BoDepositTypeEnum'. Serialised by the Service Layer as the member name
     BoDepositTypeEnum DepositType?;
-    # Deposit date field.
+    # Deposit date field
     string DepositDate?;
-    # Deposit currency field.
+    # Deposit currency field
     string DepositCurrency?;
-    # Deposit account field.
+    # Deposit account field
     string DepositAccount?;
-    # Depositor name field.
+    # Depositor name field
     string DepositorName?;
-    # Bank field.
+    # Bank field
     string Bank?;
-    # Bank account number field.
+    # Bank account number field
     string BankAccountNum?;
-    # Bank branch field.
+    # Bank branch field
     string BankBranch?;
-    # Bank reference field.
+    # Bank reference field
     string BankReference?;
-    # Journal remarks field.
+    # Journal remarks field
     string JournalRemarks?;
-    # Total local currency field.
+    # Total local currency field
     decimal TotalLC?;
-    # Total foreign currency field.
+    # Total foreign currency field
     decimal TotalFC?;
-    # Total system currency field.
+    # Total system currency field
     decimal TotalSC?;
-    # Allocation account field.
+    # Allocation account field
     string AllocationAccount?;
-    # Document rate field.
+    # Document rate field
     decimal DocRate?;
-    # Tax account field.
+    # Tax account field
     string TaxAccount?;
-    # Tax amount field.
+    # Tax amount field
     decimal TaxAmount?;
-    # Commission account field.
+    # Commission account field
     string CommissionAccount?;
-    # Commission field.
+    # Commission field
     decimal Commission?;
-    # Commission date field.
+    # Commission date field
     string CommissionDate?;
-    # Tax code field.
+    # Tax code field
     string TaxCode?;
     # OData EnumType 'BoDepositAccountTypeEnum'. Serialised by the Service Layer as the member name
     BoDepositAccountTypeEnum DepositAccountType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ReconcileAfterDeposit?;
-    # Voucher account field.
+    # Voucher account field
     string VoucherAccount?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Commission currency field.
+    # Commission currency field
     string CommissionCurrency?;
-    # Commission system currency field.
+    # Commission system currency field
     decimal CommissionSC?;
-    # Commission foreign currency field.
+    # Commission foreign currency field
     decimal CommissionFC?;
-    # Tax amount system currency field.
+    # Tax amount system currency field
     decimal TaxAmountSC?;
-    # Tax amount foreign currency field.
+    # Tax amount foreign currency field
     decimal TaxAmountFC?;
-    # BPLID field.
+    # BPLID field
     int:Signed32 BPLID?;
     # OData EnumType 'BoCheckDepositTypeEnum'. Serialised by the Service Layer as the member name
     BoCheckDepositTypeEnum CheckDepositType?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Income tax account field.
+    # Income tax account field
     string IncomeTaxAccount?;
-    # Income tax amount field.
+    # Income tax amount field
     decimal IncomeTaxAmount?;
-    # Income tax amount system currency field.
+    # Income tax amount system currency field
     decimal IncomeTaxAmountSC?;
-    # Income tax amount foreign currency field.
+    # Income tax amount foreign currency field
     decimal IncomeTaxAmountFC?;
-    # Check lines field.
+    # Check lines field
     CheckLine[] CheckLines?;
-    # Credit lines field.
+    # Credit lines field
     CreditLine[] CreditLines?;
-    # BOE lines field.
+    # BOE lines field
     BOELine[] BOELines?;
 };
 
 # Represents the request payload for the `InternalReconciliationsService_GetOpenTransactions` operation of the SAP Business One Service Layer
 public type InternalReconciliationsService_GetOpenTransactions_body record {
-    # Internal reconciliation open trans params field.
+    # Internal reconciliation open trans params field
     @jsondata:Name {value: "InternalReconciliationOpenTransParams"}
     InternalReconciliationOpenTransParams internalReconciliationOpenTransParams?;
 };
@@ -3524,53 +3524,53 @@ public type ListIncomingPaymentsHeaders record {
 
 # The `PaymentInvoice` complex type of the SAP Business One Service Layer
 public type PaymentInvoice record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
-    # Sum applied field.
+    # Sum applied field
     decimal SumApplied?;
-    # Applied foreign currency field.
+    # Applied foreign currency field
     decimal AppliedFC?;
-    # Applied sys field.
+    # Applied sys field
     decimal AppliedSys?;
-    # Document rate field.
+    # Document rate field
     decimal DocRate?;
-    # Document line field.
+    # Document line field
     int:Signed32 DocLine?;
     # OData EnumType 'BoRcptInvTypes'. Serialised by the Service Layer as the member name
     BoRcptInvTypes InvoiceType?;
-    # Discount percent field.
+    # Discount percent field
     decimal DiscountPercent?;
-    # Paid sum field.
+    # Paid sum field
     decimal PaidSum?;
-    # Installment ID field.
+    # Installment ID field
     int:Signed32 InstallmentId?;
-    # Witholding tax applied field.
+    # Witholding tax applied field
     decimal WitholdingTaxApplied?;
-    # Witholding tax applied foreign currency field.
+    # Witholding tax applied foreign currency field
     decimal WitholdingTaxAppliedFC?;
-    # Witholding tax applied system currency field.
+    # Witholding tax applied system currency field
     decimal WitholdingTaxAppliedSC?;
-    # Link date field.
+    # Link date field
     string LinkDate?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Total discount field.
+    # Total discount field
     decimal TotalDiscount?;
-    # Total discount foreign currency field.
+    # Total discount foreign currency field
     decimal TotalDiscountFC?;
-    # Total discount system currency field.
+    # Total discount system currency field
     decimal TotalDiscountSC?;
 };
 
@@ -3601,116 +3601,116 @@ public type ListPaymentDraftsQueries record {
 
 # Represents the response payload for the `CentralBankIndicatorService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CentralBankIndicatorParams[] value?;
 };
 
 # Represents the response payload for the `CheckLinesService_GetValidCheckLineList` operation of the SAP Business One Service Layer
 public type inline_response_200_6 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CheckLineParams[] value?;
 };
 
 # The `WTGroups` complex type of the SAP Business One Service Layer
 public type WTGroups record {
-    # Withholding tax abs entry field.
+    # Withholding tax abs entry field
     int:Signed32 WTAbsEntry?;
-    # Percent field.
+    # Percent field
     decimal Percent?;
-    # Sum VAT amount field.
+    # Sum VAT amount field
     decimal SumVATAmount?;
-    # Sum document total field.
+    # Sum document total field
     decimal SumDocTotal?;
-    # Sum base amount field.
+    # Sum base amount field
     decimal SumBaseAmount?;
-    # Sum accum amount field.
+    # Sum accum amount field
     decimal SumAccumAmount?;
-    # Sum percept amount field.
+    # Sum percept amount field
     decimal SumPerceptAmount?;
-    # Docs in withholding tax groups collection field.
+    # Docs in withholding tax groups collection field
     DocsInWTGroups[] DocsInWTGroupsCollection?;
 };
 
 # Represents the response payload for the `CreditLinesService_GetValidCreditLineList` operation of the SAP Business One Service Layer
 public type inline_response_200_7 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     CreditLineParams[] value?;
 };
 
 # The `PaymentAccount` complex type of the SAP Business One Service Layer
 public type PaymentAccount record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Account code field.
+    # Account code field
     string AccountCode?;
-    # Sum paid field.
+    # Sum paid field
     decimal SumPaid?;
-    # Sum paid foreign currency field.
+    # Sum paid foreign currency field
     decimal SumPaidFC?;
-    # Decription field.
+    # Decription field
     string Decription?;
-    # VAT group field.
+    # VAT group field
     string VatGroup?;
-    # Account name field.
+    # Account name field
     string AccountName?;
-    # Gross amount field.
+    # Gross amount field
     decimal GrossAmount?;
-    # Profit center field.
+    # Profit center field
     string ProfitCenter?;
-    # Project code field.
+    # Project code field
     string ProjectCode?;
-    # VAT amount field.
+    # VAT amount field
     decimal VatAmount?;
-    # Profit center2 field.
+    # Profit center2 field
     string ProfitCenter2?;
-    # Profit center3 field.
+    # Profit center3 field
     string ProfitCenter3?;
-    # Profit center4 field.
+    # Profit center4 field
     string ProfitCenter4?;
-    # Profit center5 field.
+    # Profit center5 field
     string ProfitCenter5?;
-    # Location code field.
+    # Location code field
     int:Signed32 LocationCode?;
-    # Equalization VAT amount field.
+    # Equalization VAT amount field
     decimal EqualizationVatAmount?;
 };
 
 # Represents the response payload for the `DepositsService_GetDepositList` operation of the SAP Business One Service Layer
 public type inline_response_200_8 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     DepositParams[] value?;
 };
 
 # The `MultiplePayment` complex type of the SAP Business One Service Layer
 public type MultiplePayment record {|
-    # Is debit field.
+    # Is debit field
     @jsondata:Name {value: "IsDebit"}
     BoYesNoEnum isDebit?;
-    # Bank statment line ID field.
+    # Bank statment line ID field
     @jsondata:Name {value: "BankStatmentLineID"}
     int:Signed32 bankStatmentLineID?;
-    # Amount foreign currency field.
+    # Amount foreign currency field
     @jsondata:Name {value: "AmountFC"}
     decimal amountFC?;
-    # List line ID field.
+    # List line ID field
     @jsondata:Name {value: "ListLineID"}
     int:Signed32 listLineID?;
-    # Document identifier field.
+    # Document identifier field
     @jsondata:Name {value: "DocumentIdentifier"}
     string documentIdentifier?;
-    # Amount local currency field.
+    # Amount local currency field
     @jsondata:Name {value: "AmountLC"}
     decimal amountLC?;
 |};
@@ -3724,49 +3724,49 @@ public type ListChecksforPaymentHeaders record {
 
 # The `CreditCardPayment` entity of the SAP Business One Service Layer
 public type CreditCardPayment record {
-    # Due date code field.
+    # Due date code field
     string DueDateCode?;
-    # Due date name field.
+    # Due date name field
     string DueDateName?;
     # OData EnumType 'DueDateTypesEnum'. Serialised by the Service Layer as the member name
     DueDateTypesEnum DueDatesType?;
-    # Payment after days field.
+    # Payment after days field
     int:Signed32 PaymentAfterDays?;
-    # Payment after months field.
+    # Payment after months field
     int:Signed32 PaymentAfterMonths?;
-    # From day1 field.
+    # From day1 field
     int:Signed32 FromDay1?;
-    # To day1 field.
+    # To day1 field
     int:Signed32 ToDay1?;
-    # Payment day1 field.
+    # Payment day1 field
     int:Signed32 PaymentDay1?;
-    # Number of months1 field.
+    # Number of months1 field
     int:Signed32 NoOfMonths1?;
-    # From day2 field.
+    # From day2 field
     int:Signed32 FromDay2?;
-    # To day2 field.
+    # To day2 field
     int:Signed32 ToDay2?;
-    # Payment day2 field.
+    # Payment day2 field
     int:Signed32 PaymentDay2?;
-    # Number of months2 field.
+    # Number of months2 field
     int:Signed32 NoOfMonths2?;
-    # From day3 field.
+    # From day3 field
     int:Signed32 FromDay3?;
-    # To day3 field.
+    # To day3 field
     int:Signed32 ToDay3?;
-    # Payment day3 field.
+    # Payment day3 field
     int:Signed32 PaymentDay3?;
-    # Number of months3 field.
+    # Number of months3 field
     int:Signed32 NoOfMonths3?;
-    # From day4 field.
+    # From day4 field
     int:Signed32 FromDay4?;
-    # To day4 field.
+    # To day4 field
     int:Signed32 ToDay4?;
-    # Payment day4 field.
+    # Payment day4 field
     int:Signed32 PaymentDay4?;
-    # Number of months4 field.
+    # Number of months4 field
     int:Signed32 NoOfMonths4?;
-    # Credit payment methods field.
+    # Credit payment methods field
     CreditPaymentMethod[] CreditPaymentMethods?;
 };
 
@@ -3797,14 +3797,14 @@ public type ListInternalReconciliationsQueries record {
 
 # Represents the request payload for the `CheckLinesService_GetCheckLine` operation of the SAP Business One Service Layer
 public type CheckLinesService_GetCheckLine_body record {
-    # Check line params field.
+    # Check line params field
     @jsondata:Name {value: "CheckLineParams"}
     CheckLineParams checkLineParams?;
 };
 
 # The `Payment` entity of the SAP Business One Service Layer
 public type Payment record {
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
     # OData EnumType 'BoRcptTypes'. Serialised by the Service Layer as the member name
     BoRcptTypes DocType?;
@@ -3812,217 +3812,217 @@ public type Payment record {
     BoYesNoEnum HandWritten?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Printed?;
-    # Document date field.
+    # Document date field
     string DocDate?;
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Card name field.
+    # Card name field
     string CardName?;
-    # Address field.
+    # Address field
     string Address?;
-    # Cash account field.
+    # Cash account field
     string CashAccount?;
-    # Document currency field.
+    # Document currency field
     string DocCurrency?;
-    # Cash sum field.
+    # Cash sum field
     decimal CashSum?;
-    # Check account field.
+    # Check account field
     string CheckAccount?;
-    # Transfer account field.
+    # Transfer account field
     string TransferAccount?;
-    # Transfer sum field.
+    # Transfer sum field
     decimal TransferSum?;
-    # Transfer date field.
+    # Transfer date field
     string TransferDate?;
-    # Transfer reference field.
+    # Transfer reference field
     string TransferReference?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LocalCurrency?;
-    # Document rate field.
+    # Document rate field
     decimal DocRate?;
-    # Reference1 field.
+    # Reference1 field
     string Reference1?;
-    # Reference2 field.
+    # Reference2 field
     string Reference2?;
-    # Counter reference field.
+    # Counter reference field
     string CounterReference?;
-    # Payment reference number field.
+    # Payment reference number field
     string PaymentReferenceNo?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
-    # Journal remarks field.
+    # Journal remarks field
     string JournalRemarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SplitTransaction?;
-    # Contact person code field.
+    # Contact person code field
     int:Signed32 ContactPersonCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ApplyVAT?;
-    # Tax date field.
+    # Tax date field
     string TaxDate?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Bank code field.
+    # Bank code field
     string BankCode?;
-    # Bank account field.
+    # Bank account field
     string BankAccount?;
-    # Discount percent field.
+    # Discount percent field
     decimal DiscountPercent?;
-    # Project code field.
+    # Project code field
     string ProjectCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CurrencyIsLocal?;
-    # Deduction percent field.
+    # Deduction percent field
     decimal DeductionPercent?;
-    # Deduction sum field.
+    # Deduction sum field
     decimal DeductionSum?;
-    # Cash sum foreign currency field.
+    # Cash sum foreign currency field
     decimal CashSumFC?;
-    # Cash sum sys field.
+    # Cash sum sys field
     decimal CashSumSys?;
-    # Boe account field.
+    # Boe account field
     string BoeAccount?;
-    # Bill of exchange amount field.
+    # Bill of exchange amount field
     decimal BillOfExchangeAmount?;
     # OData EnumType 'BoBoeStatus'. Serialised by the Service Layer as the member name
     BoBoeStatus BillofExchangeStatus?;
-    # Bill of exchange amount foreign currency field.
+    # Bill of exchange amount foreign currency field
     decimal BillOfExchangeAmountFC?;
-    # Bill of exchange amount system currency field.
+    # Bill of exchange amount system currency field
     decimal BillOfExchangeAmountSC?;
-    # Bill of exchange agent field.
+    # Bill of exchange agent field
     string BillOfExchangeAgent?;
-    # Withholding tax code field.
+    # Withholding tax code field
     string WTCode?;
-    # Withholding tax amount field.
+    # Withholding tax amount field
     decimal WTAmount?;
-    # Withholding tax amount foreign currency field.
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
-    # Withholding tax amount system currency field.
+    # Withholding tax amount system currency field
     decimal WTAmountSC?;
-    # Withholding tax account field.
+    # Withholding tax account field
     string WTAccount?;
-    # Withholding tax taxable amount field.
+    # Withholding tax taxable amount field
     decimal WTTaxableAmount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Proforma?;
-    # Pay to bank code field.
+    # Pay to bank code field
     string PayToBankCode?;
-    # Pay to bank branch field.
+    # Pay to bank branch field
     string PayToBankBranch?;
-    # Pay to bank account number field.
+    # Pay to bank account number field
     string PayToBankAccountNo?;
-    # Pay to code field.
+    # Pay to code field
     string PayToCode?;
-    # Pay to bank country field.
+    # Pay to bank country field
     string PayToBankCountry?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsPayToBank?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
     # OData EnumType 'BoPaymentPriorities'. Serialised by the Service Layer as the member name
     BoPaymentPriorities PaymentPriority?;
-    # Tax group field.
+    # Tax group field
     string TaxGroup?;
-    # Bank charge amount field.
+    # Bank charge amount field
     decimal BankChargeAmount?;
-    # Bank charge amount in foreign currency field.
+    # Bank charge amount in foreign currency field
     decimal BankChargeAmountInFC?;
-    # Bank charge amount in system currency field.
+    # Bank charge amount in system currency field
     decimal BankChargeAmountInSC?;
-    # Under overpaymentdifference field.
+    # Under overpaymentdifference field
     decimal UnderOverpaymentdifference?;
-    # Under overpaymentdiff system currency field.
+    # Under overpaymentdiff system currency field
     decimal UnderOverpaymentdiffSC?;
-    # Withholding tax base sum field.
+    # Withholding tax base sum field
     decimal WtBaseSum?;
-    # Withholding tax base sum foreign currency field.
+    # Withholding tax base sum foreign currency field
     decimal WtBaseSumFC?;
-    # Withholding tax base sum system currency field.
+    # Withholding tax base sum system currency field
     decimal WtBaseSumSC?;
-    # VAT date field.
+    # VAT date field
     string VatDate?;
-    # Transaction code field.
+    # Transaction code field
     string TransactionCode?;
     # OData EnumType 'BoORCTPaymentTypeEnum'. Serialised by the Service Layer as the member name
     BoORCTPaymentTypeEnum PaymentType?;
-    # Transfer real amount field.
+    # Transfer real amount field
     decimal TransferRealAmount?;
     # OData EnumType 'BoPaymentsObjectType'. Serialised by the Service Layer as the member name
     BoPaymentsObjectType DocObjectCode?;
     # OData EnumType 'BoRcptTypes'. Serialised by the Service Layer as the member name
     BoRcptTypes DocTypte?;
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Location code field.
+    # Location code field
     int:Signed32 LocationCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Cancelled?;
     # OData EnumType 'CancelStatusEnum'. Serialised by the Service Layer as the member name
     CancelStatusEnum CancelStatus?;
-    # Control account field.
+    # Control account field
     string ControlAccount?;
-    # Under overpaymentdiff foreign currency field.
+    # Under overpaymentdiff foreign currency field
     decimal UnderOverpaymentdiffFC?;
     # OData EnumType 'PaymentsAuthorizationStatusEnum'. Serialised by the Service Layer as the member name
     PaymentsAuthorizationStatusEnum AuthorizationStatus?;
-    # BPLID field.
+    # BPLID field
     int:Signed32 BPLID?;
-    # BPL name field.
+    # BPL name field
     string BPLName?;
-    # VAT reg number field.
+    # VAT reg number field
     string VATRegNum?;
-    # Blanket agreement field.
+    # Blanket agreement field
     int:Signed32 BlanketAgreement?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentByWTCertif?;
-    # Cig field.
+    # Cig field
     int:Signed32 Cig?;
-    # Cup field.
+    # Cup field
     int:Signed32 Cup?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Signature input message field.
+    # Signature input message field
     string SignatureInputMessage?;
-    # Signature digest field.
+    # Signature digest field
     string SignatureDigest?;
-    # Certification number field.
+    # Certification number field
     string CertificationNumber?;
-    # Private key version field.
+    # Private key version field
     int:Signed32 PrivateKeyVersion?;
-    # E document export format field.
+    # E document export format field
     int:Signed32 EDocExportFormat?;
     # OData EnumType 'ElecCommStatusEnum'. Serialised by the Service Layer as the member name
     ElecCommStatusEnum ElecCommStatus?;
-    # Elec comm message field.
+    # Elec comm message field
     string ElecCommMessage?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SplitVendorCreditRow?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DigitalPayments?;
-    # Allocation number IL field.
+    # Allocation number IL field
     string AllocationNumberIL?;
-    # Payment checks field.
+    # Payment checks field
     PaymentCheck[] PaymentChecks?;
-    # Payment invoices field.
+    # Payment invoices field
     PaymentInvoice[] PaymentInvoices?;
-    # Payment credit cards field.
+    # Payment credit cards field
     PaymentCreditCard[] PaymentCreditCards?;
-    # Payment accounts field.
+    # Payment accounts field
     PaymentAccount[] PaymentAccounts?;
-    # Payment document references collection field.
+    # Payment document references collection field
     PaymentDocumentReferences[] PaymentDocumentReferencesCollection?;
     # The `BillOfExchange` complex type of the SAP Business One Service Layer
     BillOfExchange BillOfExchange?;
-    # Withholding tax certificates collection field.
+    # Withholding tax certificates collection field
     WithholdingTaxCertificatesData[] WithholdingTaxCertificatesCollection?;
-    # Electronic protocols field.
+    # Electronic protocols field
     ElectronicProtocol[] ElectronicProtocols?;
-    # Cash flow assignments field.
+    # Cash flow assignments field
     CashFlowAssignment[] CashFlowAssignments?;
-    # Payments approval requests field.
+    # Payments approval requests field
     PaymentsApprovalRequest[] Payments_ApprovalRequests?;
-    # Withholding tax data WTX collection field.
+    # Withholding tax data WTX collection field
     WithholdingTaxDataWTX[] WithholdingTaxDataWTXCollection?;
 };
 
@@ -4038,31 +4038,31 @@ public type PaymentsAuthorizationStatusEnum "pasWithout"|"pasPending"|"pasApprov
 
 # The `BOELine` complex type of the SAP Business One Service Layer
 public type BOELine record {|
-    # Bank field.
+    # Bank field
     @jsondata:Name {value: "Bank"}
     string bank?;
-    # Branch field.
+    # Branch field
     @jsondata:Name {value: "Branch"}
     string branch?;
-    # Amount field.
+    # Amount field
     @jsondata:Name {value: "Amount"}
     decimal amount?;
-    # B OE status field.
+    # B OE status field
     @jsondata:Name {value: "BOEStatus"}
     BoBoeStatus bOEStatus?;
-    # Transferred field.
+    # Transferred field
     @jsondata:Name {value: "Transferred"}
     BoYesNoEnum transferred?;
-    # B OE number field.
+    # B OE number field
     @jsondata:Name {value: "BOENumber"}
     int:Signed32 bOENumber?;
-    # Due date field.
+    # Due date field
     @jsondata:Name {value: "DueDate"}
     string dueDate?;
-    # B OE key field.
+    # B OE key field
     @jsondata:Name {value: "BOEKey"}
     int:Signed32 bOEKey?;
-    # Account number field.
+    # Account number field
     @jsondata:Name {value: "AccountNumber"}
     string accountNumber?;
 |};
@@ -4101,37 +4101,37 @@ public type ListVendorPaymentsHeaders record {
 
 # Represents the response payload for the `BOEInstructionsService_GetBOEInstructionList` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BOEInstructionParams[] value?;
 };
 
 # Represents the response payload for the `BOEPortfoliosService_GetBOEPortfolioList` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BOEPortfolioParams[] value?;
 };
 
 # Represents the response payload for the `BankChargesAllocationCodesService_GetBankChargesAllocationCodeList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BankChargesAllocationCodeParams[] value?;
 };
 
 # Represents the response payload for the `BankStatementsService_GetBankStatementList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BankStatementParams[] value?;
 };
 
@@ -4165,19 +4165,19 @@ public type BoBoeStatus "boes_Created"|"boes_Sent"|"boes_Deposited"|"boes_Paid"|
 
 # Represents the response payload for the `PaymentBlocksService_GetPaymentBlockList` operation of the SAP Business One Service Layer
 public type inline_response_200_11 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentBlockParams[] value?;
 };
 
 # Represents the response payload for the `GovPayCodesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_10 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     GovPayCodeParams[] value?;
 };
 
@@ -4186,19 +4186,19 @@ public type BoDepositCheckEnum "dtNo"|"dcAsCash"|"dtAsPostdated";
 
 # Represents the response payload for the `PaymentReasonCodeService_GetPaymentReasonCodeList` operation of the SAP Business One Service Layer
 public type inline_response_200_13 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentReasonCodeParams[] value?;
 };
 
 # Represents the response payload for the `PaymentCalculationService_GetPaymentAmount` operation of the SAP Business One Service Layer
 public type inline_response_200_12 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentAmountParams[] value?;
 };
 
@@ -4207,69 +4207,69 @@ public type BoRcptTypes "rCustomer"|"rAccount"|"rSupplier";
 
 # The `BOEDocumentTypeParams` complex type of the SAP Business One Service Layer
 public type BOEDocumentTypeParams record {|
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     string docType?;
 |};
 
 # The `CheckLine` complex type of the SAP Business One Service Layer
 public type CheckLine record {|
-    # Check key field.
+    # Check key field
     @jsondata:Name {value: "CheckKey"}
     int:Signed32 checkKey?;
-    # Bank field.
+    # Bank field
     @jsondata:Name {value: "Bank"}
     string bank?;
-    # Customer field.
+    # Customer field
     @jsondata:Name {value: "Customer"}
     string customer?;
-    # Fiscal ID field.
+    # Fiscal ID field
     @jsondata:Name {value: "FiscalID"}
     string fiscalID?;
-    # Transferred field.
+    # Transferred field
     @jsondata:Name {value: "Transferred"}
     BoYesNoEnum transferred?;
-    # Originally issued by field.
+    # Originally issued by field
     @jsondata:Name {value: "OriginallyIssuedBy"}
     string originallyIssuedBy?;
-    # Check number field.
+    # Check number field
     @jsondata:Name {value: "CheckNumber"}
     int:Signed32 checkNumber?;
-    # Rejected by bank field.
+    # Rejected by bank field
     @jsondata:Name {value: "RejectedByBank"}
     BoYesNoEnum rejectedByBank?;
-    # Check currency field.
+    # Check currency field
     @jsondata:Name {value: "CheckCurrency"}
     string checkCurrency?;
-    # Account number field.
+    # Account number field
     @jsondata:Name {value: "AccountNumber"}
     string accountNumber?;
-    # Deposited field.
+    # Deposited field
     @jsondata:Name {value: "Deposited"}
     BoDepositCheckEnum deposited?;
-    # Cash check field.
+    # Cash check field
     @jsondata:Name {value: "CashCheck"}
     string cashCheck?;
-    # Branch field.
+    # Branch field
     @jsondata:Name {value: "Branch"}
     string branch?;
-    # Check date field.
+    # Check date field
     @jsondata:Name {value: "CheckDate"}
     string checkDate?;
-    # Check amount field.
+    # Check amount field
     @jsondata:Name {value: "CheckAmount"}
     decimal checkAmount?;
 |};
 
 # Represents the response payload for the `PaymentWizardService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_14 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentWizardParams[] value?;
 };
 
@@ -4326,7 +4326,7 @@ public type GetBOEInstructionsQueries record {
 
 # The `PaymentReasonCode` entity of the SAP Business One Service Layer
 public type PaymentReasonCode record {|
-    # Code field.
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -4343,41 +4343,41 @@ public type GetPaymentDraftsQueries record {
 
 # The `PaymentWizard` entity of the SAP Business One Service Layer
 public type PaymentWizard record {|
-    # Payment run export field.
+    # Payment run export field
     @jsondata:Name {value: "PaymentRunExport"}
     PaymentRunExport[] paymentRunExport?;
-    # Bill of exchange payment method field.
+    # Bill of exchange payment method field
     @jsondata:Name {value: "BillOfExchangePaymentMethod"}
     PaymentMethodEnum billOfExchangePaymentMethod?;
-    # ID number field.
+    # ID number field
     @jsondata:Name {value: "IdNumber"}
     int:Signed32 idNumber?;
-    # Outgoing type field.
+    # Outgoing type field
     @jsondata:Name {value: "OutgoingType"}
     PaymentWizardTypeEnum outgoingType?;
-    # Incoming type field.
+    # Incoming type field
     @jsondata:Name {value: "IncomingType"}
     PaymentWizardTypeEnum incomingType?;
-    # Wizard name field.
+    # Wizard name field
     @jsondata:Name {value: "WizardName"}
     string wizardName?;
-    # Check payment method field.
+    # Check payment method field
     @jsondata:Name {value: "CheckPaymentMethod"}
     PaymentMethodEnum checkPaymentMethod?;
-    # Pmnt date field.
+    # Pmnt date field
     @jsondata:Name {value: "PmntDate"}
     string pmntDate?;
-    # Bank transfer payment method field.
+    # Bank transfer payment method field
     @jsondata:Name {value: "BankTransferPaymentMethod"}
     PaymentMethodEnum bankTransferPaymentMethod?;
 |};
 
 # Represents the response payload for the `BOEDocumentTypesService_GetBOEDocumentTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BOEDocumentTypeParams[] value?;
 };
 
@@ -4387,50 +4387,50 @@ public type BillOfExchangeTransaction record {
     BoBOTFromStatus StatusFrom?;
     # OData EnumType 'BoBOTToStatus'. Serialised by the Service Layer as the member name
     BoBOTToStatus StatusTo?;
-    # Transaction date field.
+    # Transaction date field
     string TransactionDate?;
-    # Transaction time field.
+    # Transaction time field
     string TransactionTime?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsBoeReconciled?;
-    # Transaction number field.
+    # Transaction number field
     int:Signed32 TransactionNumber?;
-    # Posting date field.
+    # Posting date field
     string PostingDate?;
-    # Tax date field.
+    # Tax date field
     string TaxDate?;
-    # BOE transactionkey field.
+    # BOE transactionkey field
     int:Signed32 BOETransactionkey?;
-    # Bill of exchange transaction lines field.
+    # Bill of exchange transaction lines field
     BillOfExchangeTransactionLine[] BillOfExchangeTransactionLines?;
-    # Bill of exchange trans deposits field.
+    # Bill of exchange trans deposits field
     BillOfExchangeTransDeposit[] BillOfExchangeTransDeposits?;
-    # Bill of exchange trans bank pages field.
+    # Bill of exchange trans bank pages field
     BillOfExchangeTransBankPage[] BillOfExchangeTransBankPages?;
 };
 
 # The `BOEDocumentType` entity of the SAP Business One Service Layer
 public type BOEDocumentType record {|
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     string docType?;
-    # Document description field.
+    # Document description field
     @jsondata:Name {value: "DocDescription"}
     string docDescription?;
 |};
 
 # The `DepositParams` complex type of the SAP Business One Service Layer
 public type DepositParams record {|
-    # Series field.
+    # Series field
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
-    # Deposit number field.
+    # Deposit number field
     @jsondata:Name {value: "DepositNumber"}
     int:Signed32 depositNumber?;
-    # Abs entry field.
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
@@ -4461,7 +4461,7 @@ public type ListPaymentWizardsHeaders record {
 
 # Represents the request payload for the `DepositsService_CancelCheckRowbyCurrentSystemDate` operation of the SAP Business One Service Layer
 public type DepositsService_CancelCheckRowbyCurrentSystemDate_body record {
-    # Cancel check row params field.
+    # Cancel check row params field
     @jsondata:Name {value: "CancelCheckRowParams"}
     CancelCheckRowParams cancelCheckRowParams?;
 };
@@ -4488,12 +4488,12 @@ public type GetInternalReconciliationsQueries record {
 
 # A paged collection of `BillOfExchangeTransactions` entities returned by the SAP Business One Service Layer
 public type BillOfExchangeTransactionsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     BillOfExchangeTransaction[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4503,59 +4503,59 @@ public type BoRcptInvTypes "it_AllTransactions"|"it_OpeningBalance"|"it_ClosingB
 
 # The `GovPayCodeAuthority` complex type of the SAP Business One Service Layer
 public type GovPayCodeAuthority record {|
-    # State field.
+    # State field
     @jsondata:Name {value: "State"}
     string state?;
-    # Card code field.
+    # Card code field
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
-    # B PL ID field.
+    # B PL ID field
     @jsondata:Name {value: "BPLId"}
     int:Signed32 bPLId?;
-    # Abs ID field.
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
 
 # The `InternalReconciliationRow` complex type of the SAP Business One Service Layer
 public type InternalReconciliationRow record {|
-    # Cash discount field.
+    # Cash discount field
     @jsondata:Name {value: "CashDiscount"}
     decimal cashDiscount?;
-    # Line seq field.
+    # Line seq field
     @jsondata:Name {value: "LineSeq"}
     int:Signed32 lineSeq?;
-    # Short name field.
+    # Short name field
     @jsondata:Name {value: "ShortName"}
     string shortName?;
-    # Trans row ID field.
+    # Trans row ID field
     @jsondata:Name {value: "TransRowId"}
     int:Signed32 transRowId?;
-    # Src obj typ field.
+    # Src obj typ field
     @jsondata:Name {value: "SrcObjTyp"}
     string srcObjTyp?;
-    # Src obj abs field.
+    # Src obj abs field
     @jsondata:Name {value: "SrcObjAbs"}
     int:Signed32 srcObjAbs?;
-    # Trans ID field.
+    # Trans ID field
     @jsondata:Name {value: "TransId"}
     int:Signed32 transId?;
-    # Credit or debit field.
+    # Credit or debit field
     @jsondata:Name {value: "CreditOrDebit"}
     CreditOrDebitEnum creditOrDebit?;
-    # Reconcile amount field.
+    # Reconcile amount field
     @jsondata:Name {value: "ReconcileAmount"}
     decimal reconcileAmount?;
 |};
 
 # A paged collection of `PaymentReasonCodes` entities returned by the SAP Business One Service Layer
 public type PaymentReasonCodesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PaymentReasonCode[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };

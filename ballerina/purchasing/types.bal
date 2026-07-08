@@ -39,14 +39,14 @@ public type ListCorrectionPurchaseInvoiceHeaders record {
 
 # Represents the request payload for the `PurchaseDeliveryNotesService_Cancel2` operation of the SAP Business One Service Layer
 public type PurchaseDeliveryNotesService_Cancel2_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseOrdersService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseOrdersService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -60,37 +60,37 @@ public type ListPurchaseReturnsHeaders record {
 
 # A paged collection of `PurchaseRequests` entities returned by the SAP Business One Service Layer
 public type PurchaseRequestsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `Document_ApprovalRequest` complex type of the SAP Business One Service Layer
 public type DocumentApprovalRequest record {|
-    # Active for update field.
+    # Active for update field
     @jsondata:Name {value: "ActiveForUpdate"}
     BoYesNoEnum activeForUpdate?;
-    # Approval templates ID field.
+    # Approval templates ID field
     @jsondata:Name {value: "ApprovalTemplatesID"}
     int:Signed32 approvalTemplatesID?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
-    # Approval templates name field.
+    # Approval templates name field
     @jsondata:Name {value: "ApprovalTemplatesName"}
     string approvalTemplatesName?;
 |};
 
 # The `Document` entity of the SAP Business One Service Layer
 public type Document record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
     # OData EnumType 'BoDocumentTypes'. Serialised by the Service Layer as the member name
     BoDocumentTypes DocType?;
@@ -98,333 +98,333 @@ public type Document record {
     BoYesNoEnum HandWritten?;
     # OData EnumType 'PrintStatusEnum'. Serialised by the Service Layer as the member name
     PrintStatusEnum Printed?;
-    # Document date field.
+    # Document date field
     string DocDate?;
-    # Document due date field.
+    # Document due date field
     string DocDueDate?;
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Card name field.
+    # Card name field
     string CardName?;
-    # Address field.
+    # Address field
     string Address?;
-    # Number at card field.
+    # Number at card field
     string NumAtCard?;
-    # Document total field.
+    # Document total field
     decimal DocTotal?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Document currency field.
+    # Document currency field
     string DocCurrency?;
-    # Document rate field.
+    # Document rate field
     decimal DocRate?;
-    # Reference1 field.
+    # Reference1 field
     string Reference1?;
-    # Reference2 field.
+    # Reference2 field
     string Reference2?;
-    # Comments field.
+    # Comments field
     string Comments?;
-    # Journal memo field.
+    # Journal memo field
     string JournalMemo?;
-    # Payment group code field.
+    # Payment group code field
     int:Signed32 PaymentGroupCode?;
-    # Document time field.
+    # Document time field
     string DocTime?;
-    # Sales person code field.
+    # Sales person code field
     int:Signed32 SalesPersonCode?;
-    # Transportation code field.
+    # Transportation code field
     int:Signed32 TransportationCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Confirmed?;
-    # Import file number field.
+    # Import file number field
     int:Signed32 ImportFileNum?;
     # OData EnumType 'BoDocSummaryTypes'. Serialised by the Service Layer as the member name
     BoDocSummaryTypes SummeryType?;
-    # Contact person code field.
+    # Contact person code field
     int:Signed32 ContactPersonCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ShowSCN?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Tax date field.
+    # Tax date field
     string TaxDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PartialSupply?;
     # OData EnumType 'BoObjectTypes'. Serialised by the Service Layer as the member name
     BoObjectTypes DocObjectCode?;
-    # Ship to code field.
+    # Ship to code field
     string ShipToCode?;
-    # Indicator field.
+    # Indicator field
     string Indicator?;
-    # Federal tax ID field.
+    # Federal tax ID field
     string FederalTaxID?;
-    # Discount percent field.
+    # Discount percent field
     decimal DiscountPercent?;
-    # Payment reference field.
+    # Payment reference field
     string PaymentReference?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Financial period field.
+    # Financial period field
     int:Signed32 FinancialPeriod?;
-    # User sign field.
+    # User sign field
     int:Signed32 UserSign?;
-    # Trans number field.
+    # Trans number field
     int:Signed32 TransNum?;
-    # VAT sum field.
+    # VAT sum field
     decimal VatSum?;
-    # VAT sum sys field.
+    # VAT sum sys field
     decimal VatSumSys?;
-    # VAT sum foreign currency field.
+    # VAT sum foreign currency field
     decimal VatSumFc?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NetProcedure?;
-    # Document total foreign currency field.
+    # Document total foreign currency field
     decimal DocTotalFc?;
-    # Document total sys field.
+    # Document total sys field
     decimal DocTotalSys?;
-    # Form1099 field.
+    # Form1099 field
     int:Signed32 Form1099?;
-    # Box1099 field.
+    # Box1099 field
     string Box1099?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RevisionPo?;
-    # Requried date field.
+    # Requried date field
     string RequriedDate?;
-    # Cancel date field.
+    # Cancel date field
     string CancelDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BlockDunning?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Submitted?;
-    # Segment field.
+    # Segment field
     int:Signed32 Segment?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PickStatus?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Pick?;
-    # Payment method field.
+    # Payment method field
     string PaymentMethod?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentBlock?;
-    # Payment block entry field.
+    # Payment block entry field
     int:Signed32 PaymentBlockEntry?;
-    # Central bank indicator field.
+    # Central bank indicator field
     string CentralBankIndicator?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum MaximumCashDiscount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Reserve?;
-    # Project field.
+    # Project field
     string Project?;
-    # Exemption validity date from field.
+    # Exemption validity date from field
     string ExemptionValidityDateFrom?;
-    # Exemption validity date to field.
+    # Exemption validity date to field
     string ExemptionValidityDateTo?;
     # OData EnumType 'BoDocWhsUpdateTypes'. Serialised by the Service Layer as the member name
     BoDocWhsUpdateTypes WareHouseUpdateType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Rounding?;
-    # External corrected document number field.
+    # External corrected document number field
     string ExternalCorrectedDocNum?;
-    # Internal corrected document number field.
+    # Internal corrected document number field
     int:Signed32 InternalCorrectedDocNum?;
-    # Next correcting document field.
+    # Next correcting document field
     int:Signed32 NextCorrectingDocument?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DeferredTax?;
-    # Tax exemption letter number field.
+    # Tax exemption letter number field
     string TaxExemptionLetterNum?;
-    # Withholding tax applied field.
+    # Withholding tax applied field
     decimal WTApplied?;
-    # Withholding tax applied foreign currency field.
+    # Withholding tax applied foreign currency field
     decimal WTAppliedFC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BillOfExchangeReserved?;
-    # Agent code field.
+    # Agent code field
     string AgentCode?;
-    # Withholding tax applied system currency field.
+    # Withholding tax applied system currency field
     decimal WTAppliedSC?;
-    # Total equalization tax field.
+    # Total equalization tax field
     decimal TotalEqualizationTax?;
-    # Total equalization tax foreign currency field.
+    # Total equalization tax foreign currency field
     decimal TotalEqualizationTaxFC?;
-    # Total equalization tax system currency field.
+    # Total equalization tax system currency field
     decimal TotalEqualizationTaxSC?;
-    # Number of installments field.
+    # Number of installments field
     int:Signed32 NumberOfInstallments?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ApplyTaxOnFirstInstallment?;
     # OData EnumType 'BoTaxOnInstallmentsTypeEnum'. Serialised by the Service Layer as the member name
     BoTaxOnInstallmentsTypeEnum TaxOnInstallments?;
-    # Withholding tax non subject amount field.
+    # Withholding tax non subject amount field
     decimal WTNonSubjectAmount?;
-    # Withholding tax non subject amount system currency field.
+    # Withholding tax non subject amount system currency field
     decimal WTNonSubjectAmountSC?;
-    # Withholding tax non subject amount foreign currency field.
+    # Withholding tax non subject amount foreign currency field
     decimal WTNonSubjectAmountFC?;
-    # Withholding tax exempted amount field.
+    # Withholding tax exempted amount field
     decimal WTExemptedAmount?;
-    # Withholding tax exempted amount system currency field.
+    # Withholding tax exempted amount system currency field
     decimal WTExemptedAmountSC?;
-    # Withholding tax exempted amount foreign currency field.
+    # Withholding tax exempted amount foreign currency field
     decimal WTExemptedAmountFC?;
-    # Base amount field.
+    # Base amount field
     decimal BaseAmount?;
-    # Base amount system currency field.
+    # Base amount system currency field
     decimal BaseAmountSC?;
-    # Base amount foreign currency field.
+    # Base amount foreign currency field
     decimal BaseAmountFC?;
-    # Withholding tax amount field.
+    # Withholding tax amount field
     decimal WTAmount?;
-    # Withholding tax amount system currency field.
+    # Withholding tax amount system currency field
     decimal WTAmountSC?;
-    # Withholding tax amount foreign currency field.
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
-    # VAT date field.
+    # VAT date field
     string VatDate?;
-    # Documents owner field.
+    # Documents owner field
     int:Signed32 DocumentsOwner?;
-    # Folio prefix string field.
+    # Folio prefix string field
     string FolioPrefixString?;
-    # Folio number field.
+    # Folio number field
     int:Signed32 FolioNumber?;
     # OData EnumType 'BoDocumentSubType'. Serialised by the Service Layer as the member name
     BoDocumentSubType DocumentSubType?;
-    # Business partner channel code field.
+    # Business partner channel code field
     string BPChannelCode?;
-    # Business partner channel contact field.
+    # Business partner channel contact field
     int:Signed32 BPChannelContact?;
-    # Address2 field.
+    # Address2 field
     string Address2?;
     # OData EnumType 'BoStatus'. Serialised by the Service Layer as the member name
     BoStatus DocumentStatus?;
-    # Period indicator field.
+    # Period indicator field
     string PeriodIndicator?;
-    # Pay to code field.
+    # Pay to code field
     string PayToCode?;
-    # Manual number field.
+    # Manual number field
     string ManualNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseShpdGoodsAct?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsPayToBank?;
-    # Pay to bank country field.
+    # Pay to bank country field
     string PayToBankCountry?;
-    # Pay to bank code field.
+    # Pay to bank code field
     string PayToBankCode?;
-    # Pay to bank account number field.
+    # Pay to bank account number field
     string PayToBankAccountNo?;
-    # Pay to bank branch field.
+    # Pay to bank branch field
     string PayToBankBranch?;
-    # BPL ID assigned to invoice field.
+    # BPL ID assigned to invoice field
     int:Signed32 BPL_IDAssignedToInvoice?;
-    # Down payment field.
+    # Down payment field
     decimal DownPayment?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ReserveInvoice?;
-    # Language code field.
+    # Language code field
     int:Signed32 LanguageCode?;
-    # Tracking number field.
+    # Tracking number field
     string TrackingNumber?;
-    # Pick remark field.
+    # Pick remark field
     string PickRemark?;
-    # Closing date field.
+    # Closing date field
     string ClosingDate?;
-    # Sequence code field.
+    # Sequence code field
     int:Signed32 SequenceCode?;
-    # Sequence serial field.
+    # Sequence serial field
     int:Signed32 SequenceSerial?;
-    # Series string field.
+    # Series string field
     string SeriesString?;
-    # Sub series string field.
+    # Sub series string field
     string SubSeriesString?;
-    # Sequence model field.
+    # Sequence model field
     string SequenceModel?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseCorrectionVATGroup?;
-    # Total discount field.
+    # Total discount field
     decimal TotalDiscount?;
-    # Down payment amount field.
+    # Down payment amount field
     decimal DownPaymentAmount?;
-    # Down payment percentage field.
+    # Down payment percentage field
     decimal DownPaymentPercentage?;
     # OData EnumType 'DownPaymentTypeEnum'. Serialised by the Service Layer as the member name
     DownPaymentTypeEnum DownPaymentType?;
-    # Down payment amount system currency field.
+    # Down payment amount system currency field
     decimal DownPaymentAmountSC?;
-    # Down payment amount foreign currency field.
+    # Down payment amount foreign currency field
     decimal DownPaymentAmountFC?;
-    # VAT percent field.
+    # VAT percent field
     decimal VatPercent?;
-    # Service gross profit percent field.
+    # Service gross profit percent field
     decimal ServiceGrossProfitPercent?;
-    # Opening remarks field.
+    # Opening remarks field
     string OpeningRemarks?;
-    # Closing remarks field.
+    # Closing remarks field
     string ClosingRemarks?;
-    # Rounding diff amount field.
+    # Rounding diff amount field
     decimal RoundingDiffAmount?;
-    # Rounding diff amount foreign currency field.
+    # Rounding diff amount foreign currency field
     decimal RoundingDiffAmountFC?;
-    # Rounding diff amount system currency field.
+    # Rounding diff amount system currency field
     decimal RoundingDiffAmountSC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Cancelled?;
-    # Signature input message field.
+    # Signature input message field
     string SignatureInputMessage?;
-    # Signature digest field.
+    # Signature digest field
     string SignatureDigest?;
-    # Certification number field.
+    # Certification number field
     string CertificationNumber?;
-    # Private key version field.
+    # Private key version field
     int:Signed32 PrivateKeyVersion?;
-    # Control account field.
+    # Control account field
     string ControlAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InsuranceOperation347?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ArchiveNonremovableSalesQuotation?;
-    # GTS checker field.
+    # GTS checker field
     int:Signed32 GTSChecker?;
-    # GTS payee field.
+    # GTS payee field
     int:Signed32 GTSPayee?;
-    # Extra month field.
+    # Extra month field
     int:Signed32 ExtraMonth?;
-    # Extra days field.
+    # Extra days field
     int:Signed32 ExtraDays?;
-    # Cash discount date offset field.
+    # Cash discount date offset field
     int:Signed32 CashDiscountDateOffset?;
     # OData EnumType 'BoPayTermDueTypes'. Serialised by the Service Layer as the member name
     BoPayTermDueTypes StartFrom?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NTSApproved?;
-    # E tax web site field.
+    # E tax web site field
     int:Signed32 ETaxWebSite?;
-    # E tax number field.
+    # E tax number field
     string ETaxNumber?;
-    # NTS approved number field.
+    # NTS approved number field
     string NTSApprovedNumber?;
     # OData EnumType 'EDocGenerationTypeEnum'. Serialised by the Service Layer as the member name
     EDocGenerationTypeEnum EDocGenerationType?;
-    # E document series field.
+    # E document series field
     int:Signed32 EDocSeries?;
-    # E document number field.
+    # E document number field
     string EDocNum?;
-    # E document export format field.
+    # E document export format field
     int:Signed32 EDocExportFormat?;
     # OData EnumType 'EDocStatusEnum'. Serialised by the Service Layer as the member name
     EDocStatusEnum EDocStatus?;
-    # E document error code field.
+    # E document error code field
     string EDocErrorCode?;
-    # E document error message field.
+    # E document error message field
     string EDocErrorMessage?;
     # OData EnumType 'BoSoStatus'. Serialised by the Service Layer as the member name
     BoSoStatus DownPaymentStatus?;
-    # Group series field.
+    # Group series field
     int:Signed32 GroupSeries?;
-    # Group number field.
+    # Group number field
     int:Signed32 GroupNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum GroupHandWritten?;
@@ -434,87 +434,87 @@ public type Document record {
     BoYesNoEnum ReopenManuallyClosedOrCanceledDocument?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CreateOnlineQuotation?;
-    # POS equipment number field.
+    # POS equipment number field
     string POSEquipmentNumber?;
-    # POS manufacturer serial number field.
+    # POS manufacturer serial number field
     string POSManufacturerSerialNumber?;
-    # POS cashier number field.
+    # POS cashier number field
     int:Signed32 POSCashierNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ApplyCurrentVATRatesForDownPaymentsToDraw?;
     # OData EnumType 'ClosingOptionEnum'. Serialised by the Service Layer as the member name
     ClosingOptionEnum ClosingOption?;
-    # Specified closing date field.
+    # Specified closing date field
     string SpecifiedClosingDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum OpenForLandedCosts?;
     # OData EnumType 'DocumentAuthorizationStatusEnum'. Serialised by the Service Layer as the member name
     DocumentAuthorizationStatusEnum AuthorizationStatus?;
-    # Total discount foreign currency field.
+    # Total discount foreign currency field
     decimal TotalDiscountFC?;
-    # Total discount system currency field.
+    # Total discount system currency field
     decimal TotalDiscountSC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RelevantToGTS?;
-    # BPL name field.
+    # BPL name field
     string BPLName?;
-    # VAT reg number field.
+    # VAT reg number field
     string VATRegNum?;
-    # Annual invoice declaration reference field.
+    # Annual invoice declaration reference field
     int:Signed32 AnnualInvoiceDeclarationReference?;
-    # Supplier field.
+    # Supplier field
     string Supplier?;
-    # Releaser field.
+    # Releaser field
     int:Signed32 Releaser?;
-    # Receiver field.
+    # Receiver field
     int:Signed32 Receiver?;
-    # Blanket agreement number field.
+    # Blanket agreement number field
     int:Signed32 BlanketAgreementNumber?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsAlteration?;
     # OData EnumType 'CancelStatusEnum'. Serialised by the Service Layer as the member name
     CancelStatusEnum CancelStatus?;
-    # Draft key field.
+    # Draft key field
     int:Signed32 DraftKey?;
-    # Asset value date field.
+    # Asset value date field
     string AssetValueDate?;
-    # Requester field.
+    # Requester field
     string Requester?;
-    # Requester name field.
+    # Requester name field
     string RequesterName?;
-    # Requester branch field.
+    # Requester branch field
     int:Signed32 RequesterBranch?;
-    # Requester department field.
+    # Requester department field
     int:Signed32 RequesterDepartment?;
-    # Requester email field.
+    # Requester email field
     string RequesterEmail?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SendNotification?;
-    # Req type field.
+    # Req type field
     int:Signed32 ReqType?;
-    # Req code field.
+    # Req code field
     string ReqCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InvoicePayment?;
     # OData EnumType 'DocumentDeliveryTypeEnum'. Serialised by the Service Layer as the member name
     DocumentDeliveryTypeEnum DocumentDelivery?;
-    # Authorization code field.
+    # Authorization code field
     string AuthorizationCode?;
-    # Start delivery date field.
+    # Start delivery date field
     string StartDeliveryDate?;
-    # Start delivery time field.
+    # Start delivery time field
     string StartDeliveryTime?;
-    # End delivery date field.
+    # End delivery date field
     string EndDeliveryDate?;
-    # End delivery time field.
+    # End delivery time field
     string EndDeliveryTime?;
-    # Vehicle plate field.
+    # Vehicle plate field
     string VehiclePlate?;
-    # AT document type field.
+    # AT document type field
     string ATDocumentType?;
     # OData EnumType 'ElecCommStatusEnum'. Serialised by the Service Layer as the member name
     ElecCommStatusEnum ElecCommStatus?;
-    # Elec comm message field.
+    # Elec comm message field
     string ElecCommMessage?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ReuseDocumentNum?;
@@ -522,69 +522,69 @@ public type Document record {
     BoYesNoEnum ReuseNotaFiscalNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PrintSEPADirect?;
-    # Fiscal document number field.
+    # Fiscal document number field
     string FiscalDocNum?;
-    # POS daily summary number field.
+    # POS daily summary number field
     int:Signed32 POSDailySummaryNo?;
-    # POS receipt number field.
+    # POS receipt number field
     int:Signed32 POSReceiptNo?;
-    # Point of issue code field.
+    # Point of issue code field
     string PointOfIssueCode?;
     # OData EnumType 'FolioLetterEnum'. Serialised by the Service Layer as the member name
     FolioLetterEnum Letter?;
-    # Folio number from field.
+    # Folio number from field
     int:Signed32 FolioNumberFrom?;
-    # Folio number to field.
+    # Folio number to field
     int:Signed32 FolioNumberTo?;
     # OData EnumType 'BoInterimDocTypes'. Serialised by the Service Layer as the member name
     BoInterimDocTypes InterimType?;
-    # Related type field.
+    # Related type field
     int:Signed32 RelatedType?;
-    # Related entry field.
+    # Related entry field
     int:Signed32 RelatedEntry?;
-    # SAP passport field.
+    # SAP passport field
     string SAPPassport?;
-    # Document tax ID field.
+    # Document tax ID field
     string DocumentTaxID?;
-    # Date of reporting control statement VAT field.
+    # Date of reporting control statement VAT field
     string DateOfReportingControlStatementVAT?;
-    # Reporting section control statement VAT field.
+    # Reporting section control statement VAT field
     string ReportingSectionControlStatementVAT?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ExcludeFromTaxReportControlStatementVAT?;
-    # POS cash register field.
+    # POS cash register field
     int:Signed32 POS_CashRegister?;
-    # Update time field.
+    # Update time field
     string UpdateTime?;
-    # Create QR code from field.
+    # Create QR code from field
     string CreateQRCodeFrom?;
     # OData EnumType 'PriceModeDocumentEnum'. Serialised by the Service Layer as the member name
     PriceModeDocumentEnum PriceMode?;
-    # Price list number field.
+    # Price list number field
     int:Signed32 PriceListNum?;
-    # Down payment trasaction ID field.
+    # Down payment trasaction ID field
     string DownPaymentTrasactionID?;
-    # Original reference number field.
+    # Original reference number field
     string OriginalRefNo?;
-    # Original reference date field.
+    # Original reference date field
     string OriginalRefDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Revision?;
     # OData EnumType 'GSTTransactionTypeEnum'. Serialised by the Service Layer as the member name
     GSTTransactionTypeEnum GSTTransactionType?;
-    # Original credit or debit number field.
+    # Original credit or debit number field
     string OriginalCreditOrDebitNo?;
-    # Original credit or debit date field.
+    # Original credit or debit date field
     string OriginalCreditOrDebitDate?;
-    # E commerce operator field.
+    # E commerce operator field
     string ECommerceOperator?;
-    # E commerce GSTIN field.
+    # E commerce GSTIN field
     string ECommerceGSTIN?;
-    # Tax invoice number field.
+    # Tax invoice number field
     string TaxInvoiceNo?;
-    # Tax invoice date field.
+    # Tax invoice date field
     string TaxInvoiceDate?;
-    # Ship from field.
+    # Ship from field
     string ShipFrom?;
     # OData EnumType 'CommissionTradeTypeEnum'. Serialised by the Service Layer as the member name
     CommissionTradeTypeEnum CommissionTrade?;
@@ -592,43 +592,43 @@ public type Document record {
     BoYesNoEnum CommissionTradeReturn?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseBillToAddrToDetermineTax?;
-    # Issuing reason field.
+    # Issuing reason field
     int:Signed32 IssuingReason?;
-    # Cig field.
+    # Cig field
     int:Signed32 Cig?;
-    # Cup field.
+    # Cup field
     int:Signed32 Cup?;
     # OData EnumType 'EDocTypeEnum'. Serialised by the Service Layer as the member name
     EDocTypeEnum EDocType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FCEAsPaymentMeans?;
-    # Paid to date field.
+    # Paid to date field
     decimal PaidToDate?;
-    # Paid to date foreign currency field.
+    # Paid to date foreign currency field
     decimal PaidToDateFC?;
-    # Paid to date sys field.
+    # Paid to date sys field
     decimal PaidToDateSys?;
-    # Father card field.
+    # Father card field
     string FatherCard?;
     # OData EnumType 'BoFatherCardTypes'. Serialised by the Service Layer as the member name
     BoFatherCardTypes FatherType?;
-    # Ship state field.
+    # Ship state field
     string ShipState?;
-    # Ship place field.
+    # Ship place field
     string ShipPlace?;
-    # Customer office field.
+    # Customer office field
     string CustOffice?;
-    # FCI field.
+    # FCI field
     string FCI?;
-    # Add leg in field.
+    # Add leg in field
     string AddLegIn?;
-    # Leg text f field.
+    # Leg text f field
     int:Signed32 LegTextF?;
-    # DANFE lg txt field.
+    # DANFE lg txt field
     string DANFELgTxt?;
-    # Data version field.
+    # Data version field
     int:Signed32 DataVersion?;
-    # Last page folio number field.
+    # Last page folio number field
     int:Signed32 LastPageFolioNumber?;
     # OData EnumType 'BoStatus'. Serialised by the Service Layer as the member name
     BoStatus InventoryStatus?;
@@ -638,67 +638,67 @@ public type Document record {
     BoYesNoEnum NotRelevantForMonthlyInvoice?;
     # OData EnumType 'BoPayTermDueTypes'. Serialised by the Service Layer as the member name
     BoPayTermDueTypes EndAt?;
-    # Ship to code for return field.
+    # Ship to code for return field
     string ShipToCodeForReturn?;
-    # Address for return field.
+    # Address for return field
     string AddressForReturn?;
-    # Document approval requests field.
+    # Document approval requests field
     DocumentApprovalRequest[] Document_ApprovalRequests?;
-    # Document lines field.
+    # Document lines field
     DocumentLine[] DocumentLines?;
     # The `EWayBillDetails` complex type of the SAP Business One Service Layer
     EWayBillDetails EWayBillDetails?;
     # The `EDeliveryInfo` complex type of the SAP Business One Service Layer
     EDeliveryInfo EDeliveryInfo?;
-    # Electronic protocols field.
+    # Electronic protocols field
     ElectronicProtocol[] ElectronicProtocols?;
-    # Document additional expenses field.
+    # Document additional expenses field
     DocumentAdditionalExpense[] DocumentAdditionalExpenses?;
-    # Document distributed expenses field.
+    # Document distributed expenses field
     DocumentDistributedExpense[] DocumentDistributedExpenses?;
-    # Withholding tax data WTX collection field.
+    # Withholding tax data WTX collection field
     WithholdingTaxDataWTX[] WithholdingTaxDataWTXCollection?;
-    # Withholding tax data collection field.
+    # Withholding tax data collection field
     WithholdingTaxData[] WithholdingTaxDataCollection?;
-    # Document packages field.
+    # Document packages field
     DocumentPackage[] DocumentPackages?;
-    # Document special lines field.
+    # Document special lines field
     DocumentSpecialLine[] DocumentSpecialLines?;
-    # Document installments field.
+    # Document installments field
     DocumentInstallment[] DocumentInstallments?;
-    # Down payments to draw field.
+    # Down payments to draw field
     DownPaymentToDraw[] DownPaymentsToDraw?;
     # The `TaxExtension` complex type of the SAP Business One Service Layer
     TaxExtension TaxExtension?;
     # The `AddressExtension` complex type of the SAP Business One Service Layer
     AddressExtension AddressExtension?;
-    # Document references field.
+    # Document references field
     DocumentReference[] DocumentReferences?;
-    # Document additional intrastat expenses field.
+    # Document additional intrastat expenses field
     DocumentAdditionalIntrastatExpense[] DocumentAdditionalIntrastatExpenses?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DutyStatus?;
-    # Base type field.
+    # Base type field
     int:Signed32 BaseType?;
-    # Base entry field.
+    # Base entry field
     int:Signed32 BaseEntry?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IndFinal?;
-    # Allocation number IL field.
+    # Allocation number IL field
     string AllocationNumberIL?;
-    # Digital pay to address field.
+    # Digital pay to address field
     string DigitalPayToAddress?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DigitalPayments?;
-    # Siren number field.
+    # Siren number field
     string SirenNumber?;
-    # Siret number field.
+    # Siret number field
     string SiretNumber?;
-    # Routing code field.
+    # Routing code field
     string RoutingCode?;
-    # Suffix field.
+    # Suffix field
     string Suffix?;
-    # SOI wizard ID field.
+    # SOI wizard ID field
     int:Signed32 SOIWizardId?;
     # The `LandedCost` entity of the SAP Business One Service Layer
     LandedCost LandedCost?;
@@ -712,7 +712,7 @@ public type ClosingOptionEnum "coByCurrentSystemDate"|"coByOriginalDocumentDate"
 
 # Represents the request payload for the `PurchaseQuotationsService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseQuotationsService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -729,7 +729,7 @@ public type GetPurchaseOrdersQueries record {
 
 # Represents the request payload for the `PurchaseRequestService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseRequestService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -740,7 +740,7 @@ public type DocumentDistributedExpense record {|
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceReversalService_CloseByDate` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceReversalService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
@@ -754,7 +754,7 @@ public type ListPurchaseOrdersHeaders record {
 
 # Represents the request payload for the `PurchaseRequestService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseRequestService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -764,13 +764,13 @@ public type LandedCostCostCategoryEnum "lccc_CustomsVAT"|"lccc_ExciseCost"|"lccc
 
 # The `EDeliveryInfo` complex type of the SAP Business One Service Layer
 public type EDeliveryInfo record {|
-    # Vehicle number field.
+    # Vehicle number field
     @jsondata:Name {value: "VehicleNo"}
     string vehicleNo?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Move type field.
+    # Move type field
     @jsondata:Name {value: "MoveType"}
     int:Signed32 moveType?;
 |};
@@ -780,58 +780,58 @@ public type PrintStatusEnum "psNo"|"psYes"|"psAmended";
 
 # The `DocumentReference` complex type of the SAP Business One Service Layer
 public type DocumentReference record {|
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Issue date field.
+    # Issue date field
     @jsondata:Name {value: "IssueDate"}
     string issueDate?;
-    # Issuer code field.
+    # Issuer code field
     @jsondata:Name {value: "IssuerCode"}
     string issuerCode?;
-    # Ext document number field.
+    # Ext document number field
     @jsondata:Name {value: "ExtDocNum"}
     string extDocNum?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Reference document entr field.
+    # Reference document entr field
     @jsondata:Name {value: "RefDocEntr"}
     int:Signed32 refDocEntr?;
-    # Remark field.
+    # Remark field
     @jsondata:Name {value: "Remark"}
     string remark?;
-    # Reference document number field.
+    # Reference document number field
     @jsondata:Name {value: "RefDocNum"}
     int:Signed32 refDocNum?;
-    # Issuer CNPJ field.
+    # Issuer CNPJ field
     @jsondata:Name {value: "IssuerCNPJ"}
     string issuerCNPJ?;
-    # Series field.
+    # Series field
     @jsondata:Name {value: "Series"}
     string series?;
-    # Number field.
+    # Number field
     @jsondata:Name {value: "Number"}
     int:Signed32 number?;
-    # Sub series field.
+    # Sub series field
     @jsondata:Name {value: "SubSeries"}
     string subSeries?;
-    # Link reference typ field.
+    # Link reference typ field
     @jsondata:Name {value: "LinkRefTyp"}
     LinkReferenceTypeEnum linkRefTyp?;
-    # Reference amount field.
+    # Reference amount field
     @jsondata:Name {value: "RefAmount"}
     decimal refAmount?;
-    # Model field.
+    # Model field
     @jsondata:Name {value: "Model"}
     string model?;
-    # Access key field.
+    # Access key field
     @jsondata:Name {value: "AccessKey"}
     string accessKey?;
-    # Reference acc key field.
+    # Reference acc key field
     @jsondata:Name {value: "RefAccKey"}
     string refAccKey?;
-    # Reference obj type field.
+    # Reference obj type field
     @jsondata:Name {value: "RefObjType"}
     ReferencedObjectTypeEnum refObjType?;
 |};
@@ -905,7 +905,7 @@ public type ConnectionConfig record {|
 
 # Represents the request payload for the `PurchaseDownPaymentsService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseDownPaymentsService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -950,35 +950,35 @@ public type BoAdEpnsDistribMethods "aedm_None"|"aedm_Quantity"|"aedm_Volume"|"ae
 
 # The `LineFreightEBooksDetail` complex type of the SAP Business One Service Layer
 public type LineFreightEBooksDetail record {
-    # Income classification type field.
+    # Income classification type field
     int:Signed32 IncomeClassificationType?;
-    # Income classification category field.
+    # Income classification category field
     int:Signed32 IncomeClassificationCategory?;
-    # Expenses classification type field.
+    # Expenses classification type field
     int:Signed32 ExpensesClassificationType?;
-    # Expenses classification category field.
+    # Expenses classification category field
     int:Signed32 ExpensesClassificationCategory?;
-    # Net value local currency field.
+    # Net value local currency field
     decimal NetValueLC?;
-    # Net value foreign currency field.
+    # Net value foreign currency field
     decimal NetValueFC?;
-    # Net value system currency field.
+    # Net value system currency field
     decimal NetValueSC?;
-    # VAT category field.
+    # VAT category field
     int:Signed32 VatCategory?;
-    # Withheld percent category field.
+    # Withheld percent category field
     int:Signed32 WithheldPercentCategory?;
-    # Withheld amount local currency field.
+    # Withheld amount local currency field
     decimal WithheldAmountLC?;
-    # Withheld amount foreign currency field.
+    # Withheld amount foreign currency field
     decimal WithheldAmountFC?;
-    # Withheld amount system currency field.
+    # Withheld amount system currency field
     decimal WithheldAmountSC?;
-    # VAT classification type field.
+    # VAT classification type field
     int:Signed32 VatClassificationType?;
-    # VAT classification category field.
+    # VAT classification category field
     int:Signed32 VatClassificationCategory?;
-    # VAT exemption cause field.
+    # VAT exemption cause field
     int:Signed32 VATExemptionCause?;
 };
 
@@ -987,39 +987,39 @@ public type BoCorInvItemStatus "ciis_Was"|"ciis_ShouldBe";
 
 # The `BatchNumber` complex type of the SAP Business One Service Layer
 public type BatchNumber record {
-    # Batch number field.
+    # Batch number field
     string BatchNumber?;
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNumber?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNumber?;
-    # Expiry date field.
+    # Expiry date field
     string ExpiryDate?;
-    # Manufacturing date field.
+    # Manufacturing date field
     string ManufacturingDate?;
-    # Addmision date field.
+    # Addmision date field
     string AddmisionDate?;
-    # Location field.
+    # Location field
     string Location?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Base line number field.
+    # Base line number field
     int:Signed32 BaseLineNumber?;
-    # Tracking note field.
+    # Tracking note field
     int:Signed32 TrackingNote?;
-    # Tracking note line field.
+    # Tracking note line field
     int:Signed32 TrackingNoteLine?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # System serial number field.
+    # System serial number field
     int:Signed32 SystemSerialNumber?;
 };
 
 # Represents the request payload for the `PurchaseReturnsService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseReturnsService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -1051,105 +1051,105 @@ public type PriceModeDocumentEnum "pmdNet"|"pmdGross"|"pmdNetAndGross";
 
 # The `DocumentLine` complex type of the SAP Business One Service Layer
 public type DocumentLine record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Item description field.
+    # Item description field
     string ItemDescription?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Ship date field.
+    # Ship date field
     string ShipDate?;
-    # Price field.
+    # Price field
     decimal Price?;
-    # Price after VAT field.
+    # Price after VAT field
     decimal PriceAfterVAT?;
-    # Currency field.
+    # Currency field
     string Currency?;
-    # Rate field.
+    # Rate field
     decimal Rate?;
-    # Discount percent field.
+    # Discount percent field
     decimal DiscountPercent?;
-    # Vendor number field.
+    # Vendor number field
     string VendorNum?;
-    # Serial number field.
+    # Serial number field
     string SerialNum?;
-    # Warehouse code field.
+    # Warehouse code field
     string WarehouseCode?;
-    # Sales person code field.
+    # Sales person code field
     int:Signed32 SalesPersonCode?;
-    # Commision percent field.
+    # Commision percent field
     decimal CommisionPercent?;
     # OData EnumType 'BoItemTreeTypes'. Serialised by the Service Layer as the member name
     BoItemTreeTypes TreeType?;
-    # Account code field.
+    # Account code field
     string AccountCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseBaseUnits?;
-    # Supplier cat number field.
+    # Supplier cat number field
     string SupplierCatNum?;
-    # Costing code field.
+    # Costing code field
     string CostingCode?;
-    # Project code field.
+    # Project code field
     string ProjectCode?;
-    # Bar code field.
+    # Bar code field
     string BarCode?;
-    # VAT group field.
+    # VAT group field
     string VatGroup?;
-    # Height1 field.
+    # Height1 field
     decimal Height1?;
-    # Hight1 unit field.
+    # Hight1 unit field
     int:Signed32 Hight1Unit?;
-    # Height2 field.
+    # Height2 field
     decimal Height2?;
-    # Height2 unit field.
+    # Height2 unit field
     int:Signed32 Height2Unit?;
-    # Lengh1 field.
+    # Lengh1 field
     decimal Lengh1?;
-    # Lengh1 unit field.
+    # Lengh1 unit field
     int:Signed32 Lengh1Unit?;
-    # Lengh2 field.
+    # Lengh2 field
     decimal Lengh2?;
-    # Lengh2 unit field.
+    # Lengh2 unit field
     int:Signed32 Lengh2Unit?;
-    # Weight1 field.
+    # Weight1 field
     decimal Weight1?;
-    # Weight1 unit field.
+    # Weight1 unit field
     int:Signed32 Weight1Unit?;
-    # Weight2 field.
+    # Weight2 field
     decimal Weight2?;
-    # Weight2 unit field.
+    # Weight2 unit field
     int:Signed32 Weight2Unit?;
-    # Factor1 field.
+    # Factor1 field
     decimal Factor1?;
-    # Factor2 field.
+    # Factor2 field
     decimal Factor2?;
-    # Factor3 field.
+    # Factor3 field
     decimal Factor3?;
-    # Factor4 field.
+    # Factor4 field
     decimal Factor4?;
-    # Base type field.
+    # Base type field
     int:Signed32 BaseType?;
-    # Base entry field.
+    # Base entry field
     int:Signed32 BaseEntry?;
-    # Base line field.
+    # Base line field
     int:Signed32 BaseLine?;
-    # Volume field.
+    # Volume field
     decimal Volume?;
-    # Volume unit field.
+    # Volume unit field
     int:Signed32 VolumeUnit?;
-    # Width1 field.
+    # Width1 field
     decimal Width1?;
-    # Width1 unit field.
+    # Width1 unit field
     int:Signed32 Width1Unit?;
-    # Width2 field.
+    # Width2 field
     decimal Width2?;
-    # Width2 unit field.
+    # Width2 unit field
     int:Signed32 Width2Unit?;
-    # Address field.
+    # Address field
     string Address?;
-    # Tax code field.
+    # Tax code field
     string TaxCode?;
     # OData EnumType 'BoTaxTypes'. Serialised by the Service Layer as the member name
     BoTaxTypes TaxType?;
@@ -1157,273 +1157,273 @@ public type DocumentLine record {
     BoYesNoEnum TaxLiable?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PickStatus?;
-    # Pick quantity field.
+    # Pick quantity field
     decimal PickQuantity?;
-    # Pick list ID number field.
+    # Pick list ID number field
     int:Signed32 PickListIdNumber?;
-    # Original item field.
+    # Original item field
     string OriginalItem?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BackOrder?;
-    # Free text field.
+    # Free text field
     string FreeText?;
-    # Shipping method field.
+    # Shipping method field
     int:Signed32 ShippingMethod?;
-    # Purchase order target number field.
+    # Purchase order target number field
     int:Signed32 POTargetNum?;
-    # Purchase order target entry field.
+    # Purchase order target entry field
     string POTargetEntry?;
-    # Purchase order target row number field.
+    # Purchase order target row number field
     int:Signed32 POTargetRowNum?;
     # OData EnumType 'BoCorInvItemStatus'. Serialised by the Service Layer as the member name
     BoCorInvItemStatus CorrectionInvoiceItem?;
-    # Corr inv amount to stock field.
+    # Corr inv amount to stock field
     decimal CorrInvAmountToStock?;
-    # Corr inv amount to diff account field.
+    # Corr inv amount to diff account field
     decimal CorrInvAmountToDiffAcct?;
-    # Applied tax field.
+    # Applied tax field
     decimal AppliedTax?;
-    # Applied tax foreign currency field.
+    # Applied tax foreign currency field
     decimal AppliedTaxFC?;
-    # Applied tax system currency field.
+    # Applied tax system currency field
     decimal AppliedTaxSC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum WTLiable?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DeferredTax?;
-    # Equalization tax percent field.
+    # Equalization tax percent field
     decimal EqualizationTaxPercent?;
-    # Total equalization tax field.
+    # Total equalization tax field
     decimal TotalEqualizationTax?;
-    # Total equalization tax foreign currency field.
+    # Total equalization tax foreign currency field
     decimal TotalEqualizationTaxFC?;
-    # Total equalization tax system currency field.
+    # Total equalization tax system currency field
     decimal TotalEqualizationTaxSC?;
-    # Net tax amount field.
+    # Net tax amount field
     decimal NetTaxAmount?;
-    # Net tax amount foreign currency field.
+    # Net tax amount foreign currency field
     decimal NetTaxAmountFC?;
-    # Net tax amount system currency field.
+    # Net tax amount system currency field
     decimal NetTaxAmountSC?;
-    # Measure unit field.
+    # Measure unit field
     string MeasureUnit?;
-    # Units of measurment field.
+    # Units of measurment field
     decimal UnitsOfMeasurment?;
-    # Line total field.
+    # Line total field
     decimal LineTotal?;
-    # Tax percentage per row field.
+    # Tax percentage per row field
     decimal TaxPercentagePerRow?;
-    # Tax total field.
+    # Tax total field
     decimal TaxTotal?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ConsumerSalesForecast?;
-    # Excise amount field.
+    # Excise amount field
     decimal ExciseAmount?;
-    # Tax per unit field.
+    # Tax per unit field
     decimal TaxPerUnit?;
-    # Total incl tax field.
+    # Total incl tax field
     decimal TotalInclTax?;
-    # Country organization field.
+    # Country organization field
     string CountryOrg?;
-    # SWW field.
+    # SWW field
     string SWW?;
     # OData EnumType 'BoTransactionTypeEnum'. Serialised by the Service Layer as the member name
     BoTransactionTypeEnum TransactionType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DistributeExpense?;
-    # Row total foreign currency field.
+    # Row total foreign currency field
     decimal RowTotalFC?;
-    # Row total system currency field.
+    # Row total system currency field
     decimal RowTotalSC?;
-    # Last buy inm price field.
+    # Last buy inm price field
     decimal LastBuyInmPrice?;
-    # Last buy distribute sum foreign currency field.
+    # Last buy distribute sum foreign currency field
     decimal LastBuyDistributeSumFc?;
-    # Last buy distribute sum system currency field.
+    # Last buy distribute sum system currency field
     decimal LastBuyDistributeSumSc?;
-    # Last buy distribute sum field.
+    # Last buy distribute sum field
     decimal LastBuyDistributeSum?;
-    # Stock distributesum foreign field.
+    # Stock distributesum foreign field
     decimal StockDistributesumForeign?;
-    # Stock distributesum system field.
+    # Stock distributesum system field
     decimal StockDistributesumSystem?;
-    # Stock distributesum field.
+    # Stock distributesum field
     decimal StockDistributesum?;
-    # Stock inm price field.
+    # Stock inm price field
     decimal StockInmPrice?;
     # OData EnumType 'BoDocumentLinePickStatus'. Serialised by the Service Layer as the member name
     BoDocumentLinePickStatus PickStatusEx?;
-    # Tax before DPM field.
+    # Tax before DPM field
     decimal TaxBeforeDPM?;
-    # Tax before DPMFC field.
+    # Tax before DPMFC field
     decimal TaxBeforeDPMFC?;
-    # Tax before DPMSC field.
+    # Tax before DPMSC field
     decimal TaxBeforeDPMSC?;
-    # CFOP code field.
+    # CFOP code field
     string CFOPCode?;
-    # CST code field.
+    # CST code field
     string CSTCode?;
-    # Usage field.
+    # Usage field
     int:Signed32 Usage?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxOnly?;
-    # Visual order field.
+    # Visual order field
     int:Signed32 VisualOrder?;
-    # Base open quantity field.
+    # Base open quantity field
     decimal BaseOpenQuantity?;
-    # Unit price field.
+    # Unit price field
     decimal UnitPrice?;
     # OData EnumType 'BoStatus'. Serialised by the Service Layer as the member name
     BoStatus LineStatus?;
-    # Package quantity field.
+    # Package quantity field
     decimal PackageQuantity?;
-    # Text field.
+    # Text field
     string Text?;
     # OData EnumType 'BoDocLineType'. Serialised by the Service Layer as the member name
     BoDocLineType LineType?;
-    # COGS costing code field.
+    # COGS costing code field
     string COGSCostingCode?;
-    # COGS account code field.
+    # COGS account code field
     string COGSAccountCode?;
-    # Change assemly bo m warehouse field.
+    # Change assemly bo m warehouse field
     string ChangeAssemlyBoMWarehouse?;
-    # Gross buy price field.
+    # Gross buy price field
     decimal GrossBuyPrice?;
-    # Gross base field.
+    # Gross base field
     int:Signed32 GrossBase?;
-    # Gross profit total base price field.
+    # Gross profit total base price field
     decimal GrossProfitTotalBasePrice?;
-    # Costing code2 field.
+    # Costing code2 field
     string CostingCode2?;
-    # Costing code3 field.
+    # Costing code3 field
     string CostingCode3?;
-    # Costing code4 field.
+    # Costing code4 field
     string CostingCode4?;
-    # Costing code5 field.
+    # Costing code5 field
     string CostingCode5?;
-    # Item details field.
+    # Item details field
     string ItemDetails?;
-    # Location code field.
+    # Location code field
     int:Signed32 LocationCode?;
-    # Actual delivery date field.
+    # Actual delivery date field
     string ActualDeliveryDate?;
-    # Remaining open quantity field.
+    # Remaining open quantity field
     decimal RemainingOpenQuantity?;
-    # Open amount field.
+    # Open amount field
     decimal OpenAmount?;
-    # Open amount foreign currency field.
+    # Open amount foreign currency field
     decimal OpenAmountFC?;
-    # Open amount system currency field.
+    # Open amount system currency field
     decimal OpenAmountSC?;
-    # Ex line number field.
+    # Ex line number field
     string ExLineNo?;
-    # Required date field.
+    # Required date field
     string RequiredDate?;
-    # Required quantity field.
+    # Required quantity field
     decimal RequiredQuantity?;
-    # COGS costing code2 field.
+    # COGS costing code2 field
     string COGSCostingCode2?;
-    # COGS costing code3 field.
+    # COGS costing code3 field
     string COGSCostingCode3?;
-    # COGS costing code4 field.
+    # COGS costing code4 field
     string COGSCostingCode4?;
-    # COGS costing code5 field.
+    # COGS costing code5 field
     string COGSCostingCode5?;
-    # CS tfor IPI field.
+    # CS tfor IPI field
     string CSTforIPI?;
-    # CS tfor PIS field.
+    # CS tfor PIS field
     string CSTforPIS?;
-    # CS tfor COFINS field.
+    # CS tfor COFINS field
     string CSTforCOFINS?;
-    # Credit origin code field.
+    # Credit origin code field
     string CreditOriginCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum WithoutInventoryMovement?;
-    # Agreement number field.
+    # Agreement number field
     int:Signed32 AgreementNo?;
-    # Agreement row number field.
+    # Agreement row number field
     int:Signed32 AgreementRowNumber?;
-    # Actual base entry field.
+    # Actual base entry field
     int:Signed32 ActualBaseEntry?;
-    # Actual base line field.
+    # Actual base line field
     int:Signed32 ActualBaseLine?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Surpluses field.
+    # Surpluses field
     decimal Surpluses?;
-    # Defect and breakup field.
+    # Defect and breakup field
     decimal DefectAndBreakup?;
-    # Shortages field.
+    # Shortages field
     decimal Shortages?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ConsiderQuantity?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PartialRetirement?;
-    # Retirement quantity field.
+    # Retirement quantity field
     decimal RetirementQuantity?;
-    # Retirement APC field.
+    # Retirement APC field
     decimal RetirementAPC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ThirdParty?;
-    # Purchase order number field.
+    # Purchase order number field
     string PoNum?;
-    # Purchase order itm number field.
+    # Purchase order itm number field
     int:Signed32 PoItmNum?;
-    # Expense type field.
+    # Expense type field
     string ExpenseType?;
-    # Receipt number field.
+    # Receipt number field
     string ReceiptNumber?;
     # OData EnumType 'BoExpenseOperationTypeEnum'. Serialised by the Service Layer as the member name
     BoExpenseOperationTypeEnum ExpenseOperationType?;
-    # Federal tax ID field.
+    # Federal tax ID field
     string FederalTaxID?;
-    # Gross profit field.
+    # Gross profit field
     decimal GrossProfit?;
-    # Gross profit foreign currency field.
+    # Gross profit foreign currency field
     decimal GrossProfitFC?;
-    # Gross profit system currency field.
+    # Gross profit system currency field
     decimal GrossProfitSC?;
     # OData EnumType 'DocumentPriceSourceEnum'. Serialised by the Service Layer as the member name
     DocumentPriceSourceEnum PriceSource?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EnableReturnCost?;
-    # Return cost field.
+    # Return cost field
     decimal ReturnCost?;
-    # Line vendor field.
+    # Line vendor field
     string LineVendor?;
-    # Return action field.
+    # Return action field
     int:Signed32 ReturnAction?;
-    # Return reason field.
+    # Return reason field
     int:Signed32 ReturnReason?;
-    # Stg seq number field.
+    # Stg seq number field
     int:Signed32 StgSeqNum?;
-    # Stg entry field.
+    # Stg entry field
     int:Signed32 StgEntry?;
-    # Stg description field.
+    # Stg description field
     string StgDesc?;
-    # Uo m entry field.
+    # Uo m entry field
     int:Signed32 UoMEntry?;
-    # Uo m code field.
+    # Uo m code field
     string UoMCode?;
-    # Inventory quantity field.
+    # Inventory quantity field
     decimal InventoryQuantity?;
-    # Remaining open inventory quantity field.
+    # Remaining open inventory quantity field
     decimal RemainingOpenInventoryQuantity?;
-    # Parent line number field.
+    # Parent line number field
     int:Signed32 ParentLineNum?;
-    # Incoterms field.
+    # Incoterms field
     int:Signed32 Incoterms?;
-    # Transport mode field.
+    # Transport mode field
     int:Signed32 TransportMode?;
-    # Nature of transaction field.
+    # Nature of transaction field
     int:Signed32 NatureOfTransaction?;
-    # Destination country for import field.
+    # Destination country for import field
     string DestinationCountryForImport?;
-    # Destination region for import field.
+    # Destination region for import field
     int:Signed32 DestinationRegionForImport?;
-    # Origin country for export field.
+    # Origin country for export field
     string OriginCountryForExport?;
-    # Origin region for export field.
+    # Origin region for export field
     int:Signed32 OriginRegionForExport?;
     # OData EnumType 'BoDocItemType'. Serialised by the Service Layer as the member name
     BoDocItemType ItemType?;
@@ -1431,175 +1431,175 @@ public type DocumentLine record {
     BoYesNoEnum ChangeInventoryQuantityIndependently?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FreeOfChargeBP?;
-    # SAC entry field.
+    # SAC entry field
     int:Signed32 SACEntry?;
-    # HSN entry field.
+    # HSN entry field
     int:Signed32 HSNEntry?;
-    # Gross price field.
+    # Gross price field
     decimal GrossPrice?;
-    # Gross total field.
+    # Gross total field
     decimal GrossTotal?;
-    # Gross total foreign currency field.
+    # Gross total foreign currency field
     decimal GrossTotalFC?;
-    # Gross total system currency field.
+    # Gross total system currency field
     decimal GrossTotalSC?;
-    # NCM code field.
+    # NCM code field
     int:Signed32 NCMCode?;
-    # NVE code field.
+    # NVE code field
     string NVECode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IndEscala?;
-    # Ctr seal quantity field.
+    # Ctr seal quantity field
     decimal CtrSealQty?;
-    # CNJP man field.
+    # CNJP man field
     string CNJPMan?;
-    # CEST code field.
+    # CEST code field
     int:Signed32 CESTCode?;
-    # UF fiscal benefit code field.
+    # UF fiscal benefit code field
     string UFFiscalBenefitCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ReverseCharge?;
-    # Ship to code field.
+    # Ship to code field
     string ShipToCode?;
-    # Ship to description field.
+    # Ship to description field
     string ShipToDescription?;
-    # Ship from code field.
+    # Ship from code field
     string ShipFromCode?;
-    # Ship from description field.
+    # Ship from description field
     string ShipFromDescription?;
-    # Owner code field.
+    # Owner code field
     int:Signed32 OwnerCode?;
-    # External calc tax rate field.
+    # External calc tax rate field
     decimal ExternalCalcTaxRate?;
-    # External calc tax amount field.
+    # External calc tax amount field
     decimal ExternalCalcTaxAmount?;
-    # External calc tax amount foreign currency field.
+    # External calc tax amount foreign currency field
     decimal ExternalCalcTaxAmountFC?;
-    # External calc tax amount system currency field.
+    # External calc tax amount system currency field
     decimal ExternalCalcTaxAmountSC?;
-    # Standard item identification field.
+    # Standard item identification field
     int:Signed32 StandardItemIdentification?;
-    # Commodity classification field.
+    # Commodity classification field
     int:Signed32 CommodityClassification?;
-    # Weight of recycled plastic field.
+    # Weight of recycled plastic field
     decimal WeightOfRecycledPlastic?;
-    # Plastic package exemption reason field.
+    # Plastic package exemption reason field
     string PlasticPackageExemptionReason?;
-    # Legal text field.
+    # Legal text field
     string LegalText?;
-    # Cig field.
+    # Cig field
     int:Signed32 Cig?;
-    # Cup field.
+    # Cup field
     int:Signed32 Cup?;
-    # Operating profit field.
+    # Operating profit field
     decimal OperatingProfit?;
-    # Operating profit foreign currency field.
+    # Operating profit foreign currency field
     decimal OperatingProfitFC?;
-    # Operating profit system currency field.
+    # Operating profit system currency field
     decimal OperatingProfitSC?;
-    # Net income field.
+    # Net income field
     decimal NetIncome?;
-    # Net income foreign currency field.
+    # Net income foreign currency field
     decimal NetIncomeFC?;
-    # Net income system currency field.
+    # Net income system currency field
     decimal NetIncomeSC?;
-    # CS tfor IBS field.
+    # CS tfor IBS field
     string CSTforIBS?;
-    # CS tfor CBS field.
+    # CS tfor CBS field
     string CSTforCBS?;
-    # CS tfor IS field.
+    # CS tfor IS field
     string CSTforIS?;
-    # Unencumbered reason field.
+    # Unencumbered reason field
     int:Signed32 UnencumberedReason?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CUSplit?;
-    # List number field.
+    # List number field
     int:Signed32 ListNum?;
-    # Recognized tax code field.
+    # Recognized tax code field
     string RecognizedTaxCode?;
-    # Line tax jurisdictions field.
+    # Line tax jurisdictions field
     LineTaxJurisdiction[] LineTaxJurisdictions?;
-    # Generated assets field.
+    # Generated assets field
     GeneratedAsset[] GeneratedAssets?;
-    # E books details field.
+    # E books details field
     EBooksDetail[] EBooksDetails?;
-    # Document line pick lists field.
+    # Document line pick lists field
     DocLinePickList[] DocLinePickLists?;
-    # Document line additional expenses field.
+    # Document line additional expenses field
     DocumentLineAdditionalExpense[] DocumentLineAdditionalExpenses?;
-    # Withholding tax lines field.
+    # Withholding tax lines field
     WithholdingTaxLine[] WithholdingTaxLines?;
-    # Serial numbers field.
+    # Serial numbers field
     SerialNumber[] SerialNumbers?;
-    # Batch numbers field.
+    # Batch numbers field
     BatchNumber[] BatchNumbers?;
-    # Document lines bin allocations field.
+    # Document lines bin allocations field
     DocumentLinesBinAllocation[] DocumentLinesBinAllocations?;
-    # Export processes field.
+    # Export processes field
     ExportProcess[] ExportProcesses?;
-    # CCD numbers field.
+    # CCD numbers field
     CCDNumber[] CCDNumbers?;
-    # Import processes field.
+    # Import processes field
     ImportProcess[] ImportProcesses?;
 };
 
 # The `ExportProcess` complex type of the SAP Business One Service Layer
 public type ExportProcess record {|
-    # Lading bill type code field.
+    # Lading bill type code field
     @jsondata:Name {value: "LadingBillTypeCode"}
     int:Signed32 ladingBillTypeCode?;
-    # Quantity of exported items field.
+    # Quantity of exported items field
     @jsondata:Name {value: "QuantityOfExportedItems"}
     decimal quantityOfExportedItems?;
-    # Exportation nature code field.
+    # Exportation nature code field
     @jsondata:Name {value: "ExportationNatureCode"}
     int:Signed32 exportationNatureCode?;
-    # Lading bill date field.
+    # Lading bill date field
     @jsondata:Name {value: "LadingBillDate"}
     string ladingBillDate?;
-    # Nature of export field.
+    # Nature of export field
     @jsondata:Name {value: "NatureOfExport"}
     string natureOfExport?;
-    # Lading bill number field.
+    # Lading bill number field
     @jsondata:Name {value: "LadingBillNumber"}
     string ladingBillNumber?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Exportation registry number field.
+    # Exportation registry number field
     @jsondata:Name {value: "ExportationRegistryNumber"}
     int:Signed32 exportationRegistryNumber?;
-    # Additional item sequential number field.
+    # Additional item sequential number field
     @jsondata:Name {value: "AdditionalItemSequentialNumber"}
     int:Signed32 additionalItemSequentialNumber?;
-    # Exportation declaration date field.
+    # Exportation declaration date field
     @jsondata:Name {value: "ExportationDeclarationDate"}
     string exportationDeclarationDate?;
-    # Drawback suspension regime field.
+    # Drawback suspension regime field
     @jsondata:Name {value: "DrawbackSuspensionRegime"}
     string drawbackSuspensionRegime?;
-    # Merchandise left customs date field.
+    # Merchandise left customs date field
     @jsondata:Name {value: "MerchandiseLeftCustomsDate"}
     string merchandiseLeftCustomsDate?;
-    # Exportation document type code field.
+    # Exportation document type code field
     @jsondata:Name {value: "ExportationDocumentTypeCode"}
     int:Signed32 exportationDocumentTypeCode?;
-    # Exportation registry date field.
+    # Exportation registry date field
     @jsondata:Name {value: "ExportationRegistryDate"}
     string exportationRegistryDate?;
-    # Exportation declaration number field.
+    # Exportation declaration number field
     @jsondata:Name {value: "ExportationDeclarationNumber"}
     int:Signed32 exportationDeclarationNumber?;
 |};
 
 # A paged collection of `GoodsReturnRequest` entities returned by the SAP Business One Service Layer
 public type GoodsReturnRequestCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1612,20 +1612,20 @@ public type BoDocSummaryTypes "dNoSummary"|"dByItems"|"dByDocuments";
 
 # The `DocumentCloseParams` complex type of the SAP Business One Service Layer
 public type DocumentCloseParams record {|
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Specified closing date field.
+    # Specified closing date field
     @jsondata:Name {value: "SpecifiedClosingDate"}
     string specifiedClosingDate?;
-    # Closing option field.
+    # Closing option field
     @jsondata:Name {value: "ClosingOption"}
     ClosingOptionEnum closingOption?;
 |};
 
 # Represents the request payload for the `PurchaseDeliveryNotesService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseDeliveryNotesService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -1667,12 +1667,12 @@ public type ListPurchaseReturnsQueries record {
 
 # A paged collection of `CorrectionPurchaseInvoice` entities returned by the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1691,37 +1691,37 @@ public type BoSoStatus "so_Open"|"so_Closed";
 
 # The `DocumentAdditionalIntrastatExpense` complex type of the SAP Business One Service Layer
 public type DocumentAdditionalIntrastatExpense record {
-    # Expense code field.
+    # Expense code field
     int:Signed32 ExpenseCode?;
-    # Line total field.
+    # Line total field
     decimal LineTotal?;
-    # Line total foreign currency field.
+    # Line total foreign currency field
     decimal LineTotalFC?;
-    # Line total sys field.
+    # Line total sys field
     decimal LineTotalSys?;
-    # Paid to date field.
+    # Paid to date field
     decimal PaidToDate?;
-    # Paid to date foreign currency field.
+    # Paid to date foreign currency field
     decimal PaidToDateFC?;
-    # Paid to date sys field.
+    # Paid to date sys field
     decimal PaidToDateSys?;
     # OData EnumType 'BoAdEpnsDistribMethods'. Serialised by the Service Layer as the member name
     BoAdEpnsDistribMethods DistributionMethod?;
-    # Base document entry field.
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
-    # Base document line field.
+    # Base document line field
     int:Signed32 BaseDocLine?;
-    # Base document type field.
+    # Base document type field
     int:Signed32 BaseDocType?;
-    # Base document reference field.
+    # Base document reference field
     int:Signed32 BaseDocumentReference?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
 };
 
 # Represents the request payload for the `GoodsReturnRequestService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type GoodsReturnRequestService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -1734,7 +1734,7 @@ public type ReferencedObjectTypeEnum "rot_ExternalDocument"|"rot_SalesQuotation"
 
 # Represents the request payload for the `PurchaseRequestService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseRequestService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -1754,29 +1754,29 @@ public type BoDocLineType "dlt_Regular"|"dlt_Alternative"|"dlt_Resource";
 
 # The `PurchaseTaxInvoiceDocumentReference` complex type of the SAP Business One Service Layer
 public type PurchaseTaxInvoiceDocumentReference record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Referenced document entry field.
+    # Referenced document entry field
     int:Signed32 ReferencedDocEntry?;
-    # Referenced document number field.
+    # Referenced document number field
     int:Signed32 ReferencedDocNumber?;
-    # External referenced document number field.
+    # External referenced document number field
     string ExternalReferencedDocNumber?;
     # OData EnumType 'ReferencedObjectTypeEnum'. Serialised by the Service Layer as the member name
     ReferencedObjectTypeEnum ReferencedObjectType?;
-    # Issue date field.
+    # Issue date field
     string IssueDate?;
-    # Remark field.
+    # Remark field
     string Remark?;
-    # Card code field.
+    # Card code field
     string CardCode?;
 };
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceService_CloseByDate` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
@@ -1815,37 +1815,37 @@ public type ListCorrectionPurchaseInvoiceReversalQueries record {
 
 # The `LineExpenseTaxJurisdiction` complex type of the SAP Business One Service Layer
 public type LineExpenseTaxJurisdiction record {
-    # Jurisdiction code field.
+    # Jurisdiction code field
     string JurisdictionCode?;
-    # Jurisdiction type field.
+    # Jurisdiction type field
     int:Signed32 JurisdictionType?;
-    # Tax amount field.
+    # Tax amount field
     decimal TaxAmount?;
-    # Tax amount system currency field.
+    # Tax amount system currency field
     decimal TaxAmountSC?;
-    # Tax amount foreign currency field.
+    # Tax amount foreign currency field
     decimal TaxAmountFC?;
-    # Tax rate field.
+    # Tax rate field
     decimal TaxRate?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Row sequence field.
+    # Row sequence field
     int:Signed32 RowSequence?;
-    # External calc tax rate field.
+    # External calc tax rate field
     decimal ExternalCalcTaxRate?;
-    # External calc tax amount field.
+    # External calc tax amount field
     decimal ExternalCalcTaxAmount?;
-    # External calc tax amount foreign currency field.
+    # External calc tax amount foreign currency field
     decimal ExternalCalcTaxAmountFC?;
-    # External calc tax amount system currency field.
+    # External calc tax amount system currency field
     decimal ExternalCalcTaxAmountSC?;
 };
 
 # Represents the request payload for the `PurchaseQuotationsService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseQuotationsService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -1862,43 +1862,43 @@ public type GetPurchaseDownPaymentsQueries record {
 
 # Represents the request payload for the `PurchaseOrdersService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseOrdersService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `GeneratedAsset` complex type of the SAP Business One Service Layer
 public type GeneratedAsset record {|
-    # Status field.
+    # Status field
     @jsondata:Name {value: "Status"}
     GeneratedAssetStatusEnum status?;
-    # Amount field.
+    # Amount field
     decimal amount?;
-    # Serial number field.
+    # Serial number field
     @jsondata:Name {value: "SerialNumber"}
     string serialNumber?;
-    # Remarks field.
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Asset code field.
+    # Asset code field
     @jsondata:Name {value: "AssetCode"}
     string assetCode?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
-    # Visual order field.
+    # Visual order field
     @jsondata:Name {value: "VisualOrder"}
     int:Signed32 visualOrder?;
-    # Amount system currency field.
+    # Amount system currency field
     decimal amountSC?;
 |};
 
 # Represents the request payload for the `PurchaseReturnsService_Cancel2` operation of the SAP Business One Service Layer
 public type PurchaseReturnsService_Cancel2_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -1915,55 +1915,55 @@ public type ListLandedCostsCodesHeaders record {
 
 # The `WithholdingTaxData` complex type of the SAP Business One Service Layer
 public type WithholdingTaxData record {
-    # Withholding tax code field.
+    # Withholding tax code field
     string WTCode?;
-    # Withholding tax amount sys field.
+    # Withholding tax amount sys field
     decimal WTAmountSys?;
-    # Withholding tax amount foreign currency field.
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
-    # Withholding tax amount field.
+    # Withholding tax amount field
     decimal WTAmount?;
-    # Withholding type field.
+    # Withholding type field
     string WithholdingType?;
-    # Taxable amountin sys field.
+    # Taxable amountin sys field
     decimal TaxableAmountinSys?;
-    # Taxable amount foreign currency field.
+    # Taxable amount foreign currency field
     decimal TaxableAmountFC?;
-    # Taxable amount field.
+    # Taxable amount field
     decimal TaxableAmount?;
-    # Rounding type field.
+    # Rounding type field
     string RoundingType?;
-    # Rate field.
+    # Rate field
     decimal Rate?;
-    # Criteria field.
+    # Criteria field
     string Criteria?;
-    # Category field.
+    # Category field
     string Category?;
-    # Base type field.
+    # Base type field
     string BaseType?;
-    # Applied withholding tax amount sys field.
+    # Applied withholding tax amount sys field
     decimal AppliedWTAmountSys?;
-    # Applied withholding tax amount foreign currency field.
+    # Applied withholding tax amount foreign currency field
     decimal AppliedWTAmountFC?;
-    # Applied withholding tax amount field.
+    # Applied withholding tax amount field
     decimal AppliedWTAmount?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Base document entry field.
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
-    # Base document line field.
+    # Base document line field
     int:Signed32 BaseDocLine?;
-    # Base document type field.
+    # Base document type field
     int:Signed32 BaseDocType?;
-    # Base document reference field.
+    # Base document reference field
     int:Signed32 BaseDocumentReference?;
     # OData EnumType 'BoStatus'. Serialised by the Service Layer as the member name
     BoStatus Status?;
-    # Target abs entry field.
+    # Target abs entry field
     int:Signed32 TargetAbsEntry?;
-    # Target document type field.
+    # Target document type field
     int:Signed32 TargetDocumentType?;
 };
 
@@ -1972,12 +1972,12 @@ public type EDocStatusEnum "edoc_New"|"edoc_Pending"|"edoc_Sent"|"edoc_Error"|"e
 
 # A paged collection of `PurchaseOrders` entities returned by the SAP Business One Service Layer
 public type PurchaseOrdersCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2047,38 +2047,38 @@ public type ListLandedCostsQueries record {
 
 # Represents the request payload for the `GoodsReturnRequestService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type GoodsReturnRequestService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # A paged collection of `PurchaseDeliveryNotes` entities returned by the SAP Business One Service Layer
 public type PurchaseDeliveryNotesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `RelatedDocument` complex type of the SAP Business One Service Layer
 public type RelatedDocument record {|
-    # Abs enry field.
+    # Abs enry field
     @jsondata:Name {value: "AbsEnry"}
     int:Signed32 absEnry?;
-    # Abs entry field.
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
-    # U UID field.
+    # U UID field
     @jsondata:Name {value: "UUID"}
     string uUID?;
-    # Document tye field.
+    # Document tye field
     @jsondata:Name {value: "DocTye"}
     RelatedDocumentTypeEnum docTye?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocType"}
     RelatedDocumentTypeEnum docType?;
 |};
@@ -2095,7 +2095,7 @@ public type GetGoodsReturnRequestQueries record {
 
 # Represents the request payload for the `PurchaseReturnsService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseReturnsService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
@@ -2105,269 +2105,269 @@ public type BoStatus "bost_Open"|"bost_Close"|"bost_Paid"|"bost_Delivered";
 
 # The `AddressExtension` complex type of the SAP Business One Service Layer
 public type AddressExtension record {
-    # Ship to street field.
+    # Ship to street field
     string ShipToStreet?;
-    # Ship to street number field.
+    # Ship to street number field
     string ShipToStreetNo?;
-    # Ship to block field.
+    # Ship to block field
     string ShipToBlock?;
-    # Ship to building field.
+    # Ship to building field
     string ShipToBuilding?;
-    # Ship to city field.
+    # Ship to city field
     string ShipToCity?;
-    # Ship to zip code field.
+    # Ship to zip code field
     string ShipToZipCode?;
-    # Ship to county field.
+    # Ship to county field
     string ShipToCounty?;
-    # Ship to state field.
+    # Ship to state field
     string ShipToState?;
-    # Ship to country field.
+    # Ship to country field
     string ShipToCountry?;
-    # Ship to address type field.
+    # Ship to address type field
     string ShipToAddressType?;
-    # Bill to street field.
+    # Bill to street field
     string BillToStreet?;
-    # Bill to street number field.
+    # Bill to street number field
     string BillToStreetNo?;
-    # Bill to block field.
+    # Bill to block field
     string BillToBlock?;
-    # Bill to building field.
+    # Bill to building field
     string BillToBuilding?;
-    # Bill to city field.
+    # Bill to city field
     string BillToCity?;
-    # Bill to zip code field.
+    # Bill to zip code field
     string BillToZipCode?;
-    # Bill to county field.
+    # Bill to county field
     string BillToCounty?;
-    # Bill to state field.
+    # Bill to state field
     string BillToState?;
-    # Bill to country field.
+    # Bill to country field
     string BillToCountry?;
-    # Bill to address type field.
+    # Bill to address type field
     string BillToAddressType?;
-    # Ship to global location number field.
+    # Ship to global location number field
     string ShipToGlobalLocationNumber?;
-    # Bill to global location number field.
+    # Bill to global location number field
     string BillToGlobalLocationNumber?;
-    # Ship to address2 field.
+    # Ship to address2 field
     string ShipToAddress2?;
-    # Ship to address3 field.
+    # Ship to address3 field
     string ShipToAddress3?;
-    # Bill to address2 field.
+    # Bill to address2 field
     string BillToAddress2?;
-    # Bill to address3 field.
+    # Bill to address3 field
     string BillToAddress3?;
-    # Place of supply field.
+    # Place of supply field
     string PlaceOfSupply?;
-    # Purchase place of supply field.
+    # Purchase place of supply field
     string PurchasePlaceOfSupply?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Goods issue place business partner field.
+    # Goods issue place business partner field
     string GoodsIssuePlaceBP?;
-    # Goods issue place CNPJ field.
+    # Goods issue place CNPJ field
     string GoodsIssuePlaceCNPJ?;
-    # Goods issue place CPF field.
+    # Goods issue place CPF field
     string GoodsIssuePlaceCPF?;
-    # Goods issue place street field.
+    # Goods issue place street field
     string GoodsIssuePlaceStreet?;
-    # Goods issue place street number field.
+    # Goods issue place street number field
     string GoodsIssuePlaceStreetNo?;
-    # Goods issue place building field.
+    # Goods issue place building field
     string GoodsIssuePlaceBuilding?;
-    # Goods issue place zip field.
+    # Goods issue place zip field
     string GoodsIssuePlaceZip?;
-    # Goods issue place block field.
+    # Goods issue place block field
     string GoodsIssuePlaceBlock?;
-    # Goods issue place city field.
+    # Goods issue place city field
     string GoodsIssuePlaceCity?;
-    # Goods issue place county field.
+    # Goods issue place county field
     string GoodsIssuePlaceCounty?;
-    # Goods issue place state field.
+    # Goods issue place state field
     string GoodsIssuePlaceState?;
-    # Goods issue place country field.
+    # Goods issue place country field
     string GoodsIssuePlaceCountry?;
-    # Goods issue place phone field.
+    # Goods issue place phone field
     string GoodsIssuePlacePhone?;
-    # Goods issue place e mail field.
+    # Goods issue place e mail field
     string GoodsIssuePlaceEMail?;
-    # Goods issue place departure date field.
+    # Goods issue place departure date field
     string GoodsIssuePlaceDepartureDate?;
-    # Delivery place business partner field.
+    # Delivery place business partner field
     string DeliveryPlaceBP?;
-    # Delivery place CNPJ field.
+    # Delivery place CNPJ field
     string DeliveryPlaceCNPJ?;
-    # Delivery place CPF field.
+    # Delivery place CPF field
     string DeliveryPlaceCPF?;
-    # Delivery place street field.
+    # Delivery place street field
     string DeliveryPlaceStreet?;
-    # Delivery place street number field.
+    # Delivery place street number field
     string DeliveryPlaceStreetNo?;
-    # Delivery place building field.
+    # Delivery place building field
     string DeliveryPlaceBuilding?;
-    # Delivery place zip field.
+    # Delivery place zip field
     string DeliveryPlaceZip?;
-    # Delivery place block field.
+    # Delivery place block field
     string DeliveryPlaceBlock?;
-    # Delivery place city field.
+    # Delivery place city field
     string DeliveryPlaceCity?;
-    # Delivery place county field.
+    # Delivery place county field
     string DeliveryPlaceCounty?;
-    # Delivery place state field.
+    # Delivery place state field
     string DeliveryPlaceState?;
-    # Delivery place country field.
+    # Delivery place country field
     string DeliveryPlaceCountry?;
-    # Delivery place phone field.
+    # Delivery place phone field
     string DeliveryPlacePhone?;
-    # Delivery place e mail field.
+    # Delivery place e mail field
     string DeliveryPlaceEMail?;
-    # Delivery place departure date field.
+    # Delivery place departure date field
     string DeliveryPlaceDepartureDate?;
-    # Ship to street for return field.
+    # Ship to street for return field
     string ShipToStreetForReturn?;
-    # Ship to street number for return field.
+    # Ship to street number for return field
     string ShipToStreetNoForReturn?;
-    # Ship to block for return field.
+    # Ship to block for return field
     string ShipToBlockForReturn?;
-    # Ship to building for return field.
+    # Ship to building for return field
     string ShipToBuildingForReturn?;
-    # Ship to city for return field.
+    # Ship to city for return field
     string ShipToCityForReturn?;
-    # Ship to zip code for return field.
+    # Ship to zip code for return field
     string ShipToZipCodeForReturn?;
-    # Ship to county for return field.
+    # Ship to county for return field
     string ShipToCountyForReturn?;
-    # Ship to state for return field.
+    # Ship to state for return field
     string ShipToStateForReturn?;
-    # Ship to country for return field.
+    # Ship to country for return field
     string ShipToCountryForReturn?;
-    # Ship to address type for return field.
+    # Ship to address type for return field
     string ShipToAddressTypeForReturn?;
-    # Ship to global location number for return field.
+    # Ship to global location number for return field
     string ShipToGlobalLocationNumberForReturn?;
-    # Ship to address2 for return field.
+    # Ship to address2 for return field
     string ShipToAddress2ForReturn?;
-    # Ship to address3 for return field.
+    # Ship to address3 for return field
     string ShipToAddress3ForReturn?;
 };
 
 # The `LandedCost` entity of the SAP Business One Service Layer
 public type LandedCost record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Landed cost number field.
+    # Landed cost number field
     int:Signed32 LandedCostNumber?;
-    # Posting date field.
+    # Posting date field
     string PostingDate?;
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Vendor code field.
+    # Vendor code field
     string VendorCode?;
-    # Vendor name field.
+    # Vendor name field
     string VendorName?;
-    # Broker field.
+    # Broker field
     string Broker?;
-    # Broker name field.
+    # Broker name field
     string BrokerName?;
     # OData EnumType 'LandedCostDocStatusEnum'. Serialised by the Service Layer as the member name
     LandedCostDocStatusEnum ClosedDocument?;
-    # File number field.
+    # File number field
     string FileNumber?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
-    # Reference field.
+    # Reference field
     string Reference?;
-    # Document currency field.
+    # Document currency field
     string DocumentCurrency?;
-    # Document rate field.
+    # Document rate field
     decimal DocumentRate?;
-    # Projected customs field.
+    # Projected customs field
     decimal ProjectedCustoms?;
-    # Actual customs field.
+    # Actual customs field
     decimal ActualCustoms?;
-    # Actual customs foreign currency field.
+    # Actual customs foreign currency field
     decimal ActualCustomsFC?;
-    # Tax1 field.
+    # Tax1 field
     decimal Tax1?;
-    # Tax2 field.
+    # Tax2 field
     decimal Tax2?;
-    # Before tax field.
+    # Before tax field
     decimal BeforeTax?;
-    # Total field.
+    # Total field
     decimal Total?;
-    # Total freight charges field.
+    # Total freight charges field
     decimal TotalFreightCharges?;
-    # Projected customs foreign currency field.
+    # Projected customs foreign currency field
     decimal ProjectedCustomsFC?;
-    # Tax1 foreign currency field.
+    # Tax1 foreign currency field
     decimal Tax1FC?;
-    # Tax2 foreign currency field.
+    # Tax2 foreign currency field
     decimal Tax2FC?;
-    # Before tax foreign currency field.
+    # Before tax foreign currency field
     decimal BeforeTaxFC?;
-    # Total foreign currency field.
+    # Total foreign currency field
     decimal TotalFC?;
-    # Total freight charges foreign currency field.
+    # Total freight charges foreign currency field
     decimal TotalFreightChargesFC?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CustomsAffectsInventory?;
-    # Amount to balance field.
+    # Amount to balance field
     decimal AmountToBalance?;
-    # Amount to balance foreign currency field.
+    # Amount to balance foreign currency field
     decimal AmountToBalanceFC?;
-    # Billof lading number field.
+    # Billof lading number field
     string BillofLadingNumber?;
-    # Transport type field.
+    # Transport type field
     int:Signed32 TransportType?;
-    # Transaction number field.
+    # Transaction number field
     int:Signed32 TransactionNumber?;
-    # Journal remarks field.
+    # Journal remarks field
     string JournalRemarks?;
-    # Attachment entry field.
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
-    # Landed cost item lines field.
+    # Landed cost item lines field
     LandedCostItemLine[] LandedCost_ItemLines?;
-    # Landed cost cost lines field.
+    # Landed cost cost lines field
     LandedCostCostLine[] LandedCost_CostLines?;
-    # Purchase delivery notes field.
+    # Purchase delivery notes field
     Document[] PurchaseDeliveryNotes?;
 };
 
 # The `SerialNumber` complex type of the SAP Business One Service Layer
 public type SerialNumber record {
-    # Manufacturer serial number field.
+    # Manufacturer serial number field
     string ManufacturerSerialNumber?;
-    # Internal serial number field.
+    # Internal serial number field
     string InternalSerialNumber?;
-    # Expiry date field.
+    # Expiry date field
     string ExpiryDate?;
-    # Manufacture date field.
+    # Manufacture date field
     string ManufactureDate?;
-    # Reception date field.
+    # Reception date field
     string ReceptionDate?;
-    # Warranty start field.
+    # Warranty start field
     string WarrantyStart?;
-    # Warranty end field.
+    # Warranty end field
     string WarrantyEnd?;
-    # Location field.
+    # Location field
     string Location?;
-    # Notes field.
+    # Notes field
     string Notes?;
-    # Batch ID field.
+    # Batch ID field
     string BatchID?;
-    # System serial number field.
+    # System serial number field
     int:Signed32 SystemSerialNumber?;
-    # Base line number field.
+    # Base line number field
     int:Signed32 BaseLineNumber?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Tracking note field.
+    # Tracking note field
     int:Signed32 TrackingNote?;
-    # Tracking note line field.
+    # Tracking note line field
     int:Signed32 TrackingNoteLine?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
 };
 
@@ -2376,182 +2376,182 @@ public type LinkReferenceTypeEnum "lrt_00"|"lrt_01"|"lrt_02"|"lrt_03"|"lrt_04"|"
 
 # Represents the request payload for the `PurchaseQuotationsService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseQuotationsService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `TaxExtension` complex type of the SAP Business One Service Layer
 public type TaxExtension record {|
-    # Building s field.
+    # Building s field
     @jsondata:Name {value: "BuildingS"}
     string buildingS?;
-    # Tax id3 field.
+    # Tax id3 field
     @jsondata:Name {value: "TaxId3"}
     string taxId3?;
-    # Tax id2 field.
+    # Tax id2 field
     @jsondata:Name {value: "TaxId2"}
     string taxId2?;
-    # Tax id5 field.
+    # Tax id5 field
     @jsondata:Name {value: "TaxId5"}
     string taxId5?;
-    # Tax id4 field.
+    # Tax id4 field
     @jsondata:Name {value: "TaxId4"}
     string taxId4?;
-    # Pack quantity field.
+    # Pack quantity field
     @jsondata:Name {value: "PackQuantity"}
     int:Signed32 packQuantity?;
-    # Tax id1 field.
+    # Tax id1 field
     @jsondata:Name {value: "TaxId1"}
     string taxId1?;
-    # Tax id0 field.
+    # Tax id0 field
     @jsondata:Name {value: "TaxId0"}
     string taxId0?;
-    # Vehicle field.
+    # Vehicle field
     @jsondata:Name {value: "Vehicle"}
     string vehicle?;
-    # Port code field.
+    # Port code field
     @jsondata:Name {value: "PortCode"}
     string portCode?;
-    # Tax id7 field.
+    # Tax id7 field
     @jsondata:Name {value: "TaxId7"}
     string taxId7?;
-    # Building b field.
+    # Building b field
     @jsondata:Name {value: "BuildingB"}
     string buildingB?;
-    # Tax id6 field.
+    # Tax id6 field
     @jsondata:Name {value: "TaxId6"}
     string taxId6?;
-    # Tax id9 field.
+    # Tax id9 field
     @jsondata:Name {value: "TaxId9"}
     string taxId9?;
-    # Tax id8 field.
+    # Tax id8 field
     @jsondata:Name {value: "TaxId8"}
     string taxId8?;
-    # Carrier field.
+    # Carrier field
     @jsondata:Name {value: "Carrier"}
     string carrier?;
-    # Ship unit number field.
+    # Ship unit number field
     @jsondata:Name {value: "ShipUnitNo"}
     int:Signed32 shipUnitNo?;
-    # Street s field.
+    # Street s field
     @jsondata:Name {value: "StreetS"}
     string streetS?;
-    # Differential of tax rate field.
+    # Differential of tax rate field
     @jsondata:Name {value: "DifferentialOfTaxRate"}
     int:Signed32 differentialOfTaxRate?;
-    # Zip code s field.
+    # Zip code s field
     @jsondata:Name {value: "ZipCodeS"}
     string zipCodeS?;
-    # Country b field.
+    # Country b field
     @jsondata:Name {value: "CountryB"}
     string countryB?;
-    # Gross weight field.
+    # Gross weight field
     @jsondata:Name {value: "GrossWeight"}
     decimal grossWeight?;
-    # Global location number b field.
+    # Global location number b field
     @jsondata:Name {value: "GlobalLocationNumberB"}
     string globalLocationNumberB?;
-    # Pack description field.
+    # Pack description field
     @jsondata:Name {value: "PackDescription"}
     string packDescription?;
-    # Main usage field.
+    # Main usage field
     @jsondata:Name {value: "MainUsage"}
     int:Signed32 mainUsage?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Brand field.
+    # Brand field
     @jsondata:Name {value: "Brand"}
     string brand?;
-    # State s field.
+    # State s field
     @jsondata:Name {value: "StateS"}
     string stateS?;
-    # Country s field.
+    # Country s field
     @jsondata:Name {value: "CountryS"}
     string countryS?;
-    # Block b field.
+    # Block b field
     @jsondata:Name {value: "BlockB"}
     string blockB?;
-    # State field.
+    # State field
     @jsondata:Name {value: "State"}
     string state?;
-    # Global location number s field.
+    # Global location number s field
     @jsondata:Name {value: "GlobalLocationNumberS"}
     string globalLocationNumberS?;
-    # Import or export type field.
+    # Import or export type field
     @jsondata:Name {value: "ImportOrExportType"}
     ImportOrExportTypeEnum importOrExportType?;
-    # Vehicle state field.
+    # Vehicle state field
     @jsondata:Name {value: "VehicleState"}
     string vehicleState?;
-    # Block s field.
+    # Block s field
     @jsondata:Name {value: "BlockS"}
     string blockS?;
-    # State b field.
+    # State b field
     @jsondata:Name {value: "StateB"}
     string stateB?;
-    # City s field.
+    # City s field
     @jsondata:Name {value: "CityS"}
     string cityS?;
-    # County field.
+    # County field
     @jsondata:Name {value: "County"}
     string county?;
-    # Bo e value field.
+    # Bo e value field
     @jsondata:Name {value: "BoEValue"}
     decimal boEValue?;
-    # N f reference field.
+    # N f reference field
     @jsondata:Name {value: "NFRef"}
     string nFRef?;
-    # County b field.
+    # County b field
     @jsondata:Name {value: "CountyB"}
     string countyB?;
-    # Bill of entry number field.
+    # Bill of entry number field
     @jsondata:Name {value: "BillOfEntryNo"}
     string billOfEntryNo?;
-    # County s field.
+    # County s field
     @jsondata:Name {value: "CountyS"}
     string countyS?;
-    # Tax id14 field.
+    # Tax id14 field
     @jsondata:Name {value: "TaxId14"}
     string taxId14?;
-    # Tax id13 field.
+    # Tax id13 field
     @jsondata:Name {value: "TaxId13"}
     string taxId13?;
-    # Claim refund field.
+    # Claim refund field
     @jsondata:Name {value: "ClaimRefund"}
     BoYesNoEnum claimRefund?;
-    # Tax id12 field.
+    # Tax id12 field
     @jsondata:Name {value: "TaxId12"}
     string taxId12?;
-    # Net weight field.
+    # Net weight field
     @jsondata:Name {value: "NetWeight"}
     decimal netWeight?;
-    # Original bill of entry date field.
+    # Original bill of entry date field
     @jsondata:Name {value: "OriginalBillOfEntryDate"}
     string originalBillOfEntryDate?;
-    # Bill of entry date field.
+    # Bill of entry date field
     @jsondata:Name {value: "BillOfEntryDate"}
     string billOfEntryDate?;
-    # Zip code b field.
+    # Zip code b field
     @jsondata:Name {value: "ZipCodeB"}
     string zipCodeB?;
-    # Import or export field.
+    # Import or export field
     @jsondata:Name {value: "ImportOrExport"}
     BoYesNoEnum importOrExport?;
-    # Original bill of entry number field.
+    # Original bill of entry number field
     @jsondata:Name {value: "OriginalBillOfEntryNo"}
     string originalBillOfEntryNo?;
-    # Street b field.
+    # Street b field
     @jsondata:Name {value: "StreetB"}
     string streetB?;
-    # City b field.
+    # City b field
     @jsondata:Name {value: "CityB"}
     string cityB?;
-    # Is IGST account field.
+    # Is IGST account field
     @jsondata:Name {value: "IsIGSTAccount"}
     BoYesNoEnum isIGSTAccount?;
-    # Incoterms field.
+    # Incoterms field
     @jsondata:Name {value: "Incoterms"}
     string incoterms?;
 |};
@@ -2561,84 +2561,84 @@ public type LandedCostBaseDocumentTypeEnum "asDefault"|"asEmpty"|"asGoodsReceipt
 
 # Represents the request payload for the `PurchaseInvoicesService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseInvoicesService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
 
 # The `DocumentAdditionalExpense` complex type of the SAP Business One Service Layer
 public type DocumentAdditionalExpense record {
-    # Expense code field.
+    # Expense code field
     int:Signed32 ExpenseCode?;
-    # Line total field.
+    # Line total field
     decimal LineTotal?;
-    # Line total foreign currency field.
+    # Line total foreign currency field
     decimal LineTotalFC?;
-    # Line total sys field.
+    # Line total sys field
     decimal LineTotalSys?;
-    # Paid to date field.
+    # Paid to date field
     decimal PaidToDate?;
-    # Paid to date foreign currency field.
+    # Paid to date foreign currency field
     decimal PaidToDateFC?;
-    # Paid to date sys field.
+    # Paid to date sys field
     decimal PaidToDateSys?;
-    # Remarks field.
+    # Remarks field
     string Remarks?;
     # OData EnumType 'BoAdEpnsDistribMethods'. Serialised by the Service Layer as the member name
     BoAdEpnsDistribMethods DistributionMethod?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxLiable?;
-    # VAT group field.
+    # VAT group field
     string VatGroup?;
-    # Tax percent field.
+    # Tax percent field
     decimal TaxPercent?;
-    # Tax sum field.
+    # Tax sum field
     decimal TaxSum?;
-    # Tax sum foreign currency field.
+    # Tax sum foreign currency field
     decimal TaxSumFC?;
-    # Tax sum sys field.
+    # Tax sum sys field
     decimal TaxSumSys?;
-    # Deductible tax sum field.
+    # Deductible tax sum field
     decimal DeductibleTaxSum?;
-    # Deductible tax sum foreign currency field.
+    # Deductible tax sum foreign currency field
     decimal DeductibleTaxSumFC?;
-    # Deductible tax sum sys field.
+    # Deductible tax sum sys field
     decimal DeductibleTaxSumSys?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AquisitionTax?;
-    # Tax code field.
+    # Tax code field
     string TaxCode?;
     # OData EnumType 'BoAdEpnsTaxTypes'. Serialised by the Service Layer as the member name
     BoAdEpnsTaxTypes TaxType?;
-    # Tax paid field.
+    # Tax paid field
     decimal TaxPaid?;
-    # Tax paid foreign currency field.
+    # Tax paid foreign currency field
     decimal TaxPaidFC?;
-    # Tax paid sys field.
+    # Tax paid sys field
     decimal TaxPaidSys?;
-    # Equalization tax percent field.
+    # Equalization tax percent field
     decimal EqualizationTaxPercent?;
-    # Equalization tax sum field.
+    # Equalization tax sum field
     decimal EqualizationTaxSum?;
-    # Equalization tax foreign currency field.
+    # Equalization tax foreign currency field
     decimal EqualizationTaxFC?;
-    # Equalization tax sys field.
+    # Equalization tax sys field
     decimal EqualizationTaxSys?;
-    # Tax total sum field.
+    # Tax total sum field
     decimal TaxTotalSum?;
-    # Tax total sum foreign currency field.
+    # Tax total sum foreign currency field
     decimal TaxTotalSumFC?;
-    # Tax total sum sys field.
+    # Tax total sum sys field
     decimal TaxTotalSumSys?;
-    # Base document entry field.
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
-    # Base document line field.
+    # Base document line field
     int:Signed32 BaseDocLine?;
-    # Base document type field.
+    # Base document type field
     int:Signed32 BaseDocType?;
-    # Base document reference field.
+    # Base document reference field
     int:Signed32 BaseDocumentReference?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LastPurchasePrice?;
@@ -2646,51 +2646,51 @@ public type DocumentAdditionalExpense record {
     BoStatus Status?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Stock?;
-    # Target abs entry field.
+    # Target abs entry field
     int:Signed32 TargetAbsEntry?;
-    # Target type field.
+    # Target type field
     int:Signed32 TargetType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum WTLiable?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Line gross field.
+    # Line gross field
     decimal LineGross?;
-    # Line gross sys field.
+    # Line gross sys field
     decimal LineGrossSys?;
-    # Line gross foreign currency field.
+    # Line gross foreign currency field
     decimal LineGrossFC?;
-    # External calc tax rate field.
+    # External calc tax rate field
     decimal ExternalCalcTaxRate?;
-    # External calc tax amount field.
+    # External calc tax amount field
     decimal ExternalCalcTaxAmount?;
-    # External calc tax amount foreign currency field.
+    # External calc tax amount foreign currency field
     decimal ExternalCalcTaxAmountFC?;
-    # External calc tax amount system currency field.
+    # External calc tax amount system currency field
     decimal ExternalCalcTaxAmountSC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CUSplit?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DocFreight?;
-    # Document expense tax jurisdictions field.
+    # Document expense tax jurisdictions field
     DocExpenseTaxJurisdiction[] DocExpenseTaxJurisdictions?;
-    # Document freight e books details field.
+    # Document freight e books details field
     DocFreightEBooksDetail[] DocFreightEBooksDetails?;
 };
 
 # Represents the request payload for the `PurchaseRequestService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseRequestService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
@@ -2722,7 +2722,7 @@ public type ListPurchaseQuotationsQueries record {
 
 # Represents the request payload for the `PurchaseInvoicesService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseInvoicesService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -2770,21 +2770,21 @@ public type GetPurchaseTaxInvoicesQueries record {
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `GoodsReturnRequestService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type GoodsReturnRequestService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseCreditNotesService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseCreditNotesService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -2794,85 +2794,85 @@ public type BoFatherCardTypes "cPayments_sum"|"cDelivery_sum";
 
 # A paged collection of `PurchaseCreditNotes` entities returned by the SAP Business One Service Layer
 public type PurchaseCreditNotesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `DocumentSpecialLine` complex type of the SAP Business One Service Layer
 public type DocumentSpecialLine record {|
-    # Subtotal system currency field.
+    # Subtotal system currency field
     @jsondata:Name {value: "SubtotalSC"}
     decimal subtotalSC?;
-    # Gross total foreign currency field.
+    # Gross total foreign currency field
     @jsondata:Name {value: "GrossTotalFC"}
     decimal grossTotalFC?;
-    # Freight1 field.
+    # Freight1 field
     @jsondata:Name {value: "Freight1"}
     decimal freight1?;
-    # Freight2 field.
+    # Freight2 field
     @jsondata:Name {value: "Freight2"}
     decimal freight2?;
-    # Freight3 system currency field.
+    # Freight3 system currency field
     @jsondata:Name {value: "Freight3SC"}
     decimal freight3SC?;
-    # Tax amount system currency field.
+    # Tax amount system currency field
     @jsondata:Name {value: "TaxAmountSC"}
     decimal taxAmountSC?;
-    # Subtotal field.
+    # Subtotal field
     @jsondata:Name {value: "Subtotal"}
     decimal subtotal?;
-    # Freight3 foreign currency field.
+    # Freight3 foreign currency field
     @jsondata:Name {value: "Freight3FC"}
     decimal freight3FC?;
-    # Freight2 foreign currency field.
+    # Freight2 foreign currency field
     @jsondata:Name {value: "Freight2FC"}
     decimal freight2FC?;
-    # Order number field.
+    # Order number field
     @jsondata:Name {value: "OrderNumber"}
     int:Signed32 orderNumber?;
-    # After line number field.
+    # After line number field
     @jsondata:Name {value: "AfterLineNumber"}
     int:Signed32 afterLineNumber?;
-    # Freight1 foreign currency field.
+    # Freight1 foreign currency field
     @jsondata:Name {value: "Freight1FC"}
     decimal freight1FC?;
-    # Gross total system currency field.
+    # Gross total system currency field
     @jsondata:Name {value: "GrossTotalSC"}
     decimal grossTotalSC?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNum"}
     int:Signed32 lineNum?;
-    # Line text field.
+    # Line text field
     @jsondata:Name {value: "LineText"}
     string lineText?;
-    # Tax amount field.
+    # Tax amount field
     @jsondata:Name {value: "TaxAmount"}
     decimal taxAmount?;
-    # Tax amount foreign currency field.
+    # Tax amount foreign currency field
     @jsondata:Name {value: "TaxAmountFC"}
     decimal taxAmountFC?;
-    # Subtotal foreign currency field.
+    # Subtotal foreign currency field
     @jsondata:Name {value: "SubtotalFC"}
     decimal subtotalFC?;
-    # Gross total field.
+    # Gross total field
     @jsondata:Name {value: "GrossTotal"}
     decimal grossTotal?;
-    # Freight2 system currency field.
+    # Freight2 system currency field
     @jsondata:Name {value: "Freight2SC"}
     decimal freight2SC?;
-    # Freight3 field.
+    # Freight3 field
     @jsondata:Name {value: "Freight3"}
     decimal freight3?;
-    # Freight1 system currency field.
+    # Freight1 system currency field
     @jsondata:Name {value: "Freight1SC"}
     decimal freight1SC?;
-    # Line type field.
+    # Line type field
     @jsondata:Name {value: "LineType"}
     BoDocSpecialLineType lineType?;
 |};
@@ -2904,87 +2904,87 @@ public type ListPurchaseInvoicesQueries record {
 
 # The `CCDNumber` complex type of the SAP Business One Service Layer
 public type CCDNumber record {
-    # Tracking note field.
+    # Tracking note field
     int:Signed32 TrackingNote?;
-    # Tracking note line field.
+    # Tracking note line field
     int:Signed32 TrackingNoteLine?;
-    # CCD number field.
+    # CCD number field
     string CCDNumber?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Country of origin field.
+    # Country of origin field
     string CountryOfOrigin?;
-    # Sub line number field.
+    # Sub line number field
     int:Signed32 SubLineNumber?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocumentEntry?;
-    # Base line number field.
+    # Base line number field
     int:Signed32 BaseLineNumber?;
-    # Child number field.
+    # Child number field
     int:Signed32 ChildNumber?;
 };
 
 # The `DownPaymentToDrawDetails` complex type of the SAP Business One Service Layer
 public type DownPaymentToDrawDetails record {|
-    # Seq number field.
+    # Seq number field
     @jsondata:Name {value: "SeqNum"}
     int:Signed32 seqNum?;
-    # VAT group code field.
+    # VAT group code field
     @jsondata:Name {value: "VatGroupCode"}
     string vatGroupCode?;
-    # Tax foreign currency field.
+    # Tax foreign currency field
     @jsondata:Name {value: "TaxFC"}
     decimal taxFC?;
-    # Gross amount to draw field.
+    # Gross amount to draw field
     @jsondata:Name {value: "GrossAmountToDraw"}
     decimal grossAmountToDraw?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Gross amount to draw system currency field.
+    # Gross amount to draw system currency field
     @jsondata:Name {value: "GrossAmountToDrawSC"}
     decimal grossAmountToDrawSC?;
-    # Tax field.
+    # Tax field
     @jsondata:Name {value: "Tax"}
     decimal tax?;
-    # Tax adjust field.
+    # Tax adjust field
     @jsondata:Name {value: "TaxAdjust"}
     BoYesNoEnum taxAdjust?;
-    # Row number field.
+    # Row number field
     @jsondata:Name {value: "RowNum"}
     int:Signed32 rowNum?;
-    # Amount to draw system currency field.
+    # Amount to draw system currency field
     @jsondata:Name {value: "AmountToDrawSC"}
     decimal amountToDrawSC?;
-    # Document internal ID field.
+    # Document internal ID field
     @jsondata:Name {value: "DocInternalID"}
     int:Signed32 docInternalID?;
-    # Is gross line field.
+    # Is gross line field
     @jsondata:Name {value: "IsGrossLine"}
     BoYesNoEnum isGrossLine?;
-    # Amount to draw field.
+    # Amount to draw field
     @jsondata:Name {value: "AmountToDraw"}
     decimal amountToDraw?;
-    # Tax system currency field.
+    # Tax system currency field
     @jsondata:Name {value: "TaxSC"}
     decimal taxSC?;
-    # Gross amount to draw foreign currency field.
+    # Gross amount to draw foreign currency field
     @jsondata:Name {value: "GrossAmountToDrawFC"}
     decimal grossAmountToDrawFC?;
-    # Line type field.
+    # Line type field
     @jsondata:Name {value: "LineType"}
     LineTypeEnum lineType?;
-    # VAT percent field.
+    # VAT percent field
     @jsondata:Name {value: "VatPercent"}
     decimal vatPercent?;
-    # Amount to draw foreign currency field.
+    # Amount to draw foreign currency field
     @jsondata:Name {value: "AmountToDrawFC"}
     decimal amountToDrawFC?;
 |};
 
 # Represents the request payload for the `GoodsReturnRequestService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type GoodsReturnRequestService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3019,7 +3019,7 @@ public type BoInterimDocTypes "boidt_None"|"boidt_ExchangeRate"|"boidt_CashDisco
 
 # The `LandedCostParams` complex type of the SAP Business One Service Layer
 public type LandedCostParams record {|
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
 |};
@@ -3032,72 +3032,72 @@ public type DownPaymentTypeEnum "dptRequest"|"dptInvoice";
 
 # The `WithholdingTaxLine` complex type of the SAP Business One Service Layer
 public type WithholdingTaxLine record {
-    # Withholding tax code field.
+    # Withholding tax code field
     string WTCode?;
-    # Withholding tax amount sys field.
+    # Withholding tax amount sys field
     decimal WTAmountSys?;
-    # Withholding tax amount foreign currency field.
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
-    # Withholding tax amount field.
+    # Withholding tax amount field
     decimal WTAmount?;
-    # Withholding type field.
+    # Withholding type field
     string WithholdingType?;
-    # Taxable amountin sys field.
+    # Taxable amountin sys field
     decimal TaxableAmountinSys?;
-    # Taxable amount foreign currency field.
+    # Taxable amount foreign currency field
     decimal TaxableAmountFC?;
-    # Taxable amount field.
+    # Taxable amount field
     decimal TaxableAmount?;
-    # Rounding type field.
+    # Rounding type field
     string RoundingType?;
-    # Rate field.
+    # Rate field
     decimal Rate?;
-    # Criteria field.
+    # Criteria field
     string Criteria?;
-    # Category field.
+    # Category field
     string Category?;
-    # Base type field.
+    # Base type field
     string BaseType?;
-    # Applied withholding tax amount sys field.
+    # Applied withholding tax amount sys field
     decimal AppliedWTAmountSys?;
-    # Applied withholding tax amount foreign currency field.
+    # Applied withholding tax amount foreign currency field
     decimal AppliedWTAmountFC?;
-    # Applied withholding tax amount field.
+    # Applied withholding tax amount field
     decimal AppliedWTAmount?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Base document entry field.
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
-    # Base document line field.
+    # Base document line field
     int:Signed32 BaseDocLine?;
-    # Base document type field.
+    # Base document type field
     int:Signed32 BaseDocType?;
-    # Base document reference field.
+    # Base document reference field
     int:Signed32 BaseDocumentReference?;
     # OData EnumType 'BoStatus'. Serialised by the Service Layer as the member name
     BoStatus Status?;
-    # Target abs entry field.
+    # Target abs entry field
     int:Signed32 TargetAbsEntry?;
-    # Target document type field.
+    # Target document type field
     int:Signed32 TargetDocumentType?;
-    # CST code incoming field.
+    # CST code incoming field
     string CSTCodeIncoming?;
-    # CST code outgoing field.
+    # CST code outgoing field
     string CSTCodeOutgoing?;
-    # Doc1 line number field.
+    # Doc1 line number field
     int:Signed32 Doc1LineNum?;
 };
 
 # A paged collection of `PurchaseDownPayments` entities returned by the SAP Business One Service Layer
 public type PurchaseDownPaymentsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3114,7 +3114,7 @@ public type GetPurchaseDeliveryNotesQueries record {
 
 # Represents the request payload for the `PurchaseDeliveryNotesService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseDeliveryNotesService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
@@ -3124,21 +3124,21 @@ public type BoDocWhsUpdateTypes "dwh_No"|"dwh_OrdersFromVendors"|"dwh_CustomerOr
 
 # Represents the request payload for the `PurchaseDownPaymentsService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseDownPaymentsService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseCreditNotesService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseCreditNotesService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseInvoicesService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseInvoicesService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3151,7 +3151,7 @@ public type EWBSupplyTypeEnum "ewb_st_Inward"|"ewb_st_Outward";
 
 # Represents the request payload for the `PurchaseCreditNotesService_Cancel2` operation of the SAP Business One Service Layer
 public type PurchaseCreditNotesService_Cancel2_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3164,115 +3164,115 @@ public type LineTypeEnum "ltDocument"|"ltRounding"|"ltVat";
 
 # The `DocumentPackageItem` complex type of the SAP Business One Service Layer
 public type DocumentPackageItem record {
-    # Package number field.
+    # Package number field
     int:Signed32 PackageNumber?;
-    # Item code field.
+    # Item code field
     string ItemCode?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Uo m entry field.
+    # Uo m entry field
     int:Signed32 UoMEntry?;
-    # Measure unit field.
+    # Measure unit field
     string MeasureUnit?;
-    # Units of measurement field.
+    # Units of measurement field
     decimal UnitsOfMeasurement?;
 };
 
 # The `DocumentLineAdditionalExpense` complex type of the SAP Business One Service Layer
 public type DocumentLineAdditionalExpense record {
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Group code field.
+    # Group code field
     int:Signed32 GroupCode?;
-    # Expense code field.
+    # Expense code field
     int:Signed32 ExpenseCode?;
-    # Line total field.
+    # Line total field
     decimal LineTotal?;
-    # Line total foreign currency field.
+    # Line total foreign currency field
     decimal LineTotalFC?;
-    # Line total sys field.
+    # Line total sys field
     decimal LineTotalSys?;
-    # Paid to date field.
+    # Paid to date field
     decimal PaidToDate?;
-    # Paid to date foreign currency field.
+    # Paid to date foreign currency field
     decimal PaidToDateFC?;
-    # Paid to date sys field.
+    # Paid to date sys field
     decimal PaidToDateSys?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxLiable?;
-    # VAT group field.
+    # VAT group field
     string VatGroup?;
-    # Tax percent field.
+    # Tax percent field
     decimal TaxPercent?;
-    # Tax sum field.
+    # Tax sum field
     decimal TaxSum?;
-    # Tax sum foreign currency field.
+    # Tax sum foreign currency field
     decimal TaxSumFC?;
-    # Tax sum sys field.
+    # Tax sum sys field
     decimal TaxSumSys?;
-    # Deductible tax sum field.
+    # Deductible tax sum field
     decimal DeductibleTaxSum?;
-    # Deductible tax sum foreign currency field.
+    # Deductible tax sum foreign currency field
     decimal DeductibleTaxSumFC?;
-    # Deductible tax sum sys field.
+    # Deductible tax sum sys field
     decimal DeductibleTaxSumSys?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AquisitionTax?;
-    # Tax code field.
+    # Tax code field
     string TaxCode?;
     # OData EnumType 'BoAdEpnsTaxTypes'. Serialised by the Service Layer as the member name
     BoAdEpnsTaxTypes TaxType?;
-    # Tax paid field.
+    # Tax paid field
     decimal TaxPaid?;
-    # Tax paid foreign currency field.
+    # Tax paid foreign currency field
     decimal TaxPaidFC?;
-    # Tax paid sys field.
+    # Tax paid sys field
     decimal TaxPaidSys?;
-    # Equalization tax percent field.
+    # Equalization tax percent field
     decimal EqualizationTaxPercent?;
-    # Equalization tax sum field.
+    # Equalization tax sum field
     decimal EqualizationTaxSum?;
-    # Equalization tax foreign currency field.
+    # Equalization tax foreign currency field
     decimal EqualizationTaxFC?;
-    # Equalization tax sys field.
+    # Equalization tax sys field
     decimal EqualizationTaxSys?;
-    # Tax total sum field.
+    # Tax total sum field
     decimal TaxTotalSum?;
-    # Tax total sum foreign currency field.
+    # Tax total sum foreign currency field
     decimal TaxTotalSumFC?;
-    # Tax total sum sys field.
+    # Tax total sum sys field
     decimal TaxTotalSumSys?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum WTLiable?;
-    # Base group field.
+    # Base group field
     int:Signed32 BaseGroup?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # External calc tax rate field.
+    # External calc tax rate field
     decimal ExternalCalcTaxRate?;
-    # External calc tax amount field.
+    # External calc tax amount field
     decimal ExternalCalcTaxAmount?;
-    # External calc tax amount foreign currency field.
+    # External calc tax amount foreign currency field
     decimal ExternalCalcTaxAmountFC?;
-    # External calc tax amount system currency field.
+    # External calc tax amount system currency field
     decimal ExternalCalcTaxAmountSC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CUSplit?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DocFreight?;
-    # Line expense tax jurisdictions field.
+    # Line expense tax jurisdictions field
     LineExpenseTaxJurisdiction[] LineExpenseTaxJurisdictions?;
-    # Line freight e books details field.
+    # Line freight e books details field
     LineFreightEBooksDetail[] LineFreightEBooksDetails?;
 };
 
@@ -3303,14 +3303,14 @@ public type ListPurchaseDownPaymentsQueries record {
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceReversalService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceReversalService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceReversalService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceReversalService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3327,35 +3327,35 @@ public type GetPurchaseQuotationsQueries record {
 
 # The `PurchaseTaxInvoiceLinkedDownPayment` complex type of the SAP Business One Service Layer
 public type PurchaseTaxInvoiceLinkedDownPayment record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Down payment type field.
+    # Down payment type field
     int:Signed32 DownPaymentType?;
-    # Down payment entry field.
+    # Down payment entry field
     int:Signed32 DownPaymentEntry?;
-    # Down payment number field.
+    # Down payment number field
     int:Signed32 DownPaymentNum?;
-    # Payment type field.
+    # Payment type field
     int:Signed32 PaymentType?;
-    # Payment entry field.
+    # Payment entry field
     int:Signed32 PaymentEntry?;
-    # Payment number field.
+    # Payment number field
     int:Signed32 PaymentNum?;
-    # Payment tax date field.
+    # Payment tax date field
     string PaymentTaxDate?;
-    # Transfer date field.
+    # Transfer date field
     string TransferDate?;
-    # Transfer reference field.
+    # Transfer reference field
     string TransferReference?;
-    # Amount to draw field.
+    # Amount to draw field
     decimal AmountToDraw?;
-    # Amount to draw foreign currency field.
+    # Amount to draw foreign currency field
     decimal AmountToDrawFC?;
-    # Amount to draw system currency field.
+    # Amount to draw system currency field
     decimal AmountToDrawSC?;
-    # Document currency field.
+    # Document currency field
     string DocCurrency?;
 };
 
@@ -3364,101 +3364,101 @@ public type ImportOrExportTypeEnum "et_IpmortsOrExports"|"et_SEZ_Developer"|"et_
 
 # The `WithholdingTaxDataWTX` complex type of the SAP Business One Service Layer
 public type WithholdingTaxDataWTX record {
-    # Withholding tax amount sys field.
+    # Withholding tax amount sys field
     decimal WTAmountSys?;
-    # Withholding tax amount foreign currency field.
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
-    # Withholding tax amount field.
+    # Withholding tax amount field
     decimal WTAmount?;
-    # Withholding type field.
+    # Withholding type field
     string WithholdingType?;
-    # Taxable amountin sys field.
+    # Taxable amountin sys field
     decimal TaxableAmountinSys?;
-    # Taxable amount foreign currency field.
+    # Taxable amount foreign currency field
     decimal TaxableAmountFC?;
-    # Taxable amount field.
+    # Taxable amount field
     decimal TaxableAmount?;
-    # Rate field.
+    # Rate field
     decimal Rate?;
-    # Category field.
+    # Category field
     string Category?;
-    # Base type field.
+    # Base type field
     string BaseType?;
-    # Applied withholding tax amount sys field.
+    # Applied withholding tax amount sys field
     decimal AppliedWTAmountSys?;
-    # Applied withholding tax amount foreign currency field.
+    # Applied withholding tax amount foreign currency field
     decimal AppliedWTAmountFC?;
-    # Applied withholding tax amount field.
+    # Applied withholding tax amount field
     decimal AppliedWTAmount?;
-    # General ledger account field.
+    # General ledger account field
     string GLAccount?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNum?;
-    # Base document entry field.
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
-    # Base document line field.
+    # Base document line field
     int:Signed32 BaseDocLine?;
-    # Base document type field.
+    # Base document type field
     string BaseDocType?;
-    # Withholding tax abs ID field.
+    # Withholding tax abs ID field
     string WTAbsId?;
-    # Exempt rate field.
+    # Exempt rate field
     decimal ExemptRate?;
-    # Base net amount sys field.
+    # Base net amount sys field
     decimal BaseNetAmountSys?;
-    # Base net amount foreign currency field.
+    # Base net amount foreign currency field
     decimal BaseNetAmountFC?;
-    # Base net amount field.
+    # Base net amount field
     decimal BaseNetAmount?;
-    # Base vatmount sys field.
+    # Base vatmount sys field
     decimal BaseVatmountSys?;
-    # Base vatmount foreign currency field.
+    # Base vatmount foreign currency field
     decimal BaseVatmountFC?;
-    # Base vatmount field.
+    # Base vatmount field
     decimal BaseVatmount?;
-    # Accum base amount sys field.
+    # Accum base amount sys field
     decimal AccumBaseAmountSys?;
-    # Accum base amount foreign currency field.
+    # Accum base amount foreign currency field
     decimal AccumBaseAmountFC?;
-    # Accum base amount field.
+    # Accum base amount field
     decimal AccumBaseAmount?;
-    # Accum w tax amount sys field.
+    # Accum w tax amount sys field
     decimal AccumWTaxAmountSys?;
-    # Accum w tax amount foreign currency field.
+    # Accum w tax amount foreign currency field
     decimal AccumWTaxAmountFC?;
-    # Accum w tax amount field.
+    # Accum w tax amount field
     decimal AccumWTaxAmount?;
 };
 
 # Represents the request payload for the `PurchaseDeliveryNotesService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseDeliveryNotesService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # A paged collection of `LandedCostsCodes` entities returned by the SAP Business One Service Layer
 public type LandedCostsCodesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     LandedCostsCode[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `PurchaseDownPaymentsService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseDownPaymentsService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseOrdersService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseOrdersService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3466,19 +3466,19 @@ public type PurchaseOrdersService_ApproveAndAdd_body record {
 
 # Represents the request payload for the `PurchaseDownPaymentsService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseDownPaymentsService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
 
 # A paged collection of `CorrectionPurchaseInvoiceReversal` entities returned by the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceReversalCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3488,7 +3488,7 @@ public type EDocGenerationTypeEnum "edocGenerate"|"edocGenerateLater"|"edocNotRe
 
 # Represents the request payload for the `PurchaseReturnsService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseReturnsService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3505,37 +3505,37 @@ public type FolioLetterEnum "fLetterA"|"fLetterB"|"fLetterC"|"fLetterE"|"fLetter
 
 # The `DocLinePickList` complex type of the SAP Business One Service Layer
 public type DocLinePickList record {|
-    # Pick list line number field.
+    # Pick list line number field
     @jsondata:Name {value: "PickListLineNum"}
     int:Signed32 pickListLineNum?;
-    # Pick list batch and bin line number field.
+    # Pick list batch and bin line number field
     @jsondata:Name {value: "PickListBatchAndBinLineNum"}
     int:Signed32 pickListBatchAndBinLineNum?;
-    # Pick list entry field.
+    # Pick list entry field
     @jsondata:Name {value: "PickListEntry"}
     int:Signed32 pickListEntry?;
 |};
 
 # A paged collection of `PurchaseReturns` entities returned by the SAP Business One Service Layer
 public type PurchaseReturnsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `PurchaseTaxInvoices` entities returned by the SAP Business One Service Layer
 public type PurchaseTaxInvoicesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     PurchaseTaxInvoice[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3552,109 +3552,109 @@ public type DocumentDeliveryTypeEnum "ddtNoneSeleted"|"ddtCreateOnlineDocument"|
 
 # The `EWayBillDetails` complex type of the SAP Business One Service Layer
 public type EWayBillDetails record {|
-    # Bill from name field.
+    # Bill from name field
     @jsondata:Name {value: "BillFromName"}
     string billFromName?;
-    # Ship to state GST code field.
+    # Ship to state GST code field
     @jsondata:Name {value: "ShipToStateGSTCode"}
     string shipToStateGSTCode?;
-    # Transaction type field.
+    # Transaction type field
     @jsondata:Name {value: "TransactionType"}
     EWBTransactionTypeEnum transactionType?;
-    # Vehicle number field.
+    # Vehicle number field
     @jsondata:Name {value: "VehicleNo"}
     string vehicleNo?;
-    # E way bill expiration date field.
+    # E way bill expiration date field
     @jsondata:Name {value: "EWayBillExpirationDate"}
     string eWayBillExpirationDate?;
-    # Dispatch from address1 field.
+    # Dispatch from address1 field
     @jsondata:Name {value: "DispatchFromAddress1"}
     string dispatchFromAddress1?;
-    # Transporter name field.
+    # Transporter name field
     @jsondata:Name {value: "TransporterName"}
     string transporterName?;
-    # Bill from GSTIN field.
+    # Bill from GSTIN field
     @jsondata:Name {value: "BillFromGSTIN"}
     string billFromGSTIN?;
-    # Dispatch from address2 field.
+    # Dispatch from address2 field
     @jsondata:Name {value: "DispatchFromAddress2"}
     string dispatchFromAddress2?;
-    # Dispatch from zip code field.
+    # Dispatch from zip code field
     @jsondata:Name {value: "DispatchFromZipCode"}
     string dispatchFromZipCode?;
-    # Transporter ID field.
+    # Transporter ID field
     @jsondata:Name {value: "TransporterID"}
     string transporterID?;
-    # Bill to name field.
+    # Bill to name field
     @jsondata:Name {value: "BillToName"}
     string billToName?;
-    # Supply type field.
+    # Supply type field
     @jsondata:Name {value: "SupplyType"}
     EWBSupplyTypeEnum supplyType?;
-    # Main HSN entry field.
+    # Main HSN entry field
     @jsondata:Name {value: "MainHSNEntry"}
     int:Signed32 mainHSNEntry?;
-    # Ship to address2 field.
+    # Ship to address2 field
     @jsondata:Name {value: "ShipToAddress2"}
     string shipToAddress2?;
-    # Ship to address1 field.
+    # Ship to address1 field
     @jsondata:Name {value: "ShipToAddress1"}
     string shipToAddress1?;
-    # Distance field.
+    # Distance field
     @jsondata:Name {value: "Distance"}
     decimal distance?;
-    # Dispatch from place field.
+    # Dispatch from place field
     @jsondata:Name {value: "DispatchFromPlace"}
     string dispatchFromPlace?;
-    # Sub type field.
+    # Sub type field
     @jsondata:Name {value: "SubType"}
     int:Signed32 subType?;
-    # Ship to zip code field.
+    # Ship to zip code field
     @jsondata:Name {value: "ShipToZipCode"}
     string shipToZipCode?;
-    # Transportation mode field.
+    # Transportation mode field
     @jsondata:Name {value: "TransportationMode"}
     int:Signed32 transportationMode?;
-    # Transporter document date field.
+    # Transporter document date field
     @jsondata:Name {value: "TransporterDocDate"}
     string transporterDocDate?;
-    # Vehicle type field.
+    # Vehicle type field
     @jsondata:Name {value: "VehicleType"}
     string vehicleType?;
-    # Transporter entry field.
+    # Transporter entry field
     @jsondata:Name {value: "TransporterEntry"}
     int:Signed32 transporterEntry?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Document type field.
+    # Document type field
     @jsondata:Name {value: "DocumentType"}
     string documentType?;
-    # Bill from state GST code field.
+    # Bill from state GST code field
     @jsondata:Name {value: "BillFromStateGSTCode"}
     string billFromStateGSTCode?;
-    # Dispatch from state GST code field.
+    # Dispatch from state GST code field
     @jsondata:Name {value: "DispatchFromStateGSTCode"}
     string dispatchFromStateGSTCode?;
-    # Transporter document number field.
+    # Transporter document number field
     @jsondata:Name {value: "TransporterDocNo"}
     string transporterDocNo?;
-    # Ship to place field.
+    # Ship to place field
     @jsondata:Name {value: "ShipToPlace"}
     string shipToPlace?;
-    # Bill to GSTIN field.
+    # Bill to GSTIN field
     @jsondata:Name {value: "BillToGSTIN"}
     string billToGSTIN?;
-    # Transporter line number field.
+    # Transporter line number field
     @jsondata:Name {value: "TransporterLineNumber"}
     int:Signed32 transporterLineNumber?;
-    # E way bill number field.
+    # E way bill number field
     @jsondata:Name {value: "EWayBillNo"}
     string eWayBillNo?;
-    # Bill to state GST code field.
+    # Bill to state GST code field
     @jsondata:Name {value: "BillToStateGSTCode"}
     string billToStateGSTCode?;
-    # E way bill date field.
+    # E way bill date field
     @jsondata:Name {value: "EWayBillDate"}
     string eWayBillDate?;
 |};
@@ -3665,106 +3665,106 @@ public type ElectronicProtocol record {
     ElectronicDocProtocolCodeEnum ProtocolCode?;
     # OData EnumType 'ElectronicDocGenTypeEnum'. Serialised by the Service Layer as the member name
     ElectronicDocGenTypeEnum GenerationType?;
-    # Mapping ID field.
+    # Mapping ID field
     int:Signed32 MappingID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TestingMode?;
-    # Confirmation field.
+    # Confirmation field
     string Confirmation?;
-    # E document type field.
+    # E document type field
     int:Signed32 EDocType?;
-    # CF di cancellation reason field.
+    # CF di cancellation reason field
     string CFDiCancellationReason?;
-    # CF di cancellation response field.
+    # CF di cancellation response field
     string CFDiCancellationResponse?;
-    # Related documents field.
+    # Related documents field
     RelatedDocument[] RelatedDocuments?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EBooksRelevant?;
-    # E books MARK field.
+    # E books MARK field
     string EBooksMARK?;
-    # E books MAR kof negative field.
+    # E books MAR kof negative field
     string EBooksMARKofNegative?;
-    # E books invoice type field.
+    # E books invoice type field
     string EBooksInvoiceType?;
-    # E books invoice typeof negative field.
+    # E books invoice typeof negative field
     string EBooksInvoiceTypeofNegative?;
-    # E billing IRN field.
+    # E billing IRN field
     string EBillingIRN?;
-    # EETPKP field.
+    # EETPKP field
     string EETPKP?;
-    # EETBKP field.
+    # EETBKP field
     string EETBKP?;
-    # Signature input message field.
+    # Signature input message field
     string SignatureInputMessage?;
-    # Signature digest field.
+    # Signature digest field
     string SignatureDigest?;
-    # Fecha timbrado field.
+    # Fecha timbrado field
     string FechaTimbrado?;
-    # Sello SAT field.
+    # Sello SAT field
     string SelloSAT?;
-    # Payment method field.
+    # Payment method field
     string PaymentMethod?;
-    # Rfc prov certif field.
+    # Rfc prov certif field
     string RfcProvCertif?;
-    # Number certificado SAT field.
+    # Number certificado SAT field
     string NoCertificadoSAT?;
-    # FPA sequence number field.
+    # FPA sequence number field
     int:Signed32 FPASequenceNumber?;
-    # FPA send date SDI field.
+    # FPA send date SDI field
     string FPASendDateSDI?;
-    # FPA progressivo field.
+    # FPA progressivo field
     string FPAProgressivo?;
-    # Protocol description field.
+    # Protocol description field
     string ProtocolDescription?;
-    # CF di export field.
+    # CF di export field
     string CFDiExport?;
-    # E billing ack number field.
+    # E billing ack number field
     string EBillingAckNo?;
-    # E billing ack dt field.
+    # E billing ack dt field
     string EBillingAckDt?;
-    # E billing signed invoice field.
+    # E billing signed invoice field
     string EBillingSignedInvoice?;
-    # E billing signed QR code field.
+    # E billing signed QR code field
     string EBillingSignedQRCode?;
-    # E billing response status field.
+    # E billing response status field
     string EBillingResponseStatus?;
-    # CF di cancellation reference field.
+    # CF di cancellation reference field
     string CFDiCancellationReference?;
-    # E books QR code path field.
+    # E books QR code path field
     string EBooksQRCodePath?;
-    # E books QR code pathof negative field.
+    # E books QR code pathof negative field
     string EBooksQRCodePathofNegative?;
-    # Carta porte ID field.
+    # Carta porte ID field
     string CartaPorteID?;
-    # E books dispatch date field.
+    # E books dispatch date field
     string EBooksDispatchDate?;
-    # E books dispatch time field.
+    # E books dispatch time field
     string EBooksDispatchTime?;
 };
 
 # Represents the request payload for the `GoodsReturnRequestService_CloseByDate` operation of the SAP Business One Service Layer
 public type GoodsReturnRequestService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
 
 # A paged collection of `PurchaseInvoices` entities returned by the SAP Business One Service Layer
 public type PurchaseInvoicesCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `PurchaseTaxInvoiceOperationCode` complex type of the SAP Business One Service Layer
 public type PurchaseTaxInvoiceOperationCode record {
-    # Op code field.
+    # Op code field
     int:Signed32 OpCode?;
 };
 
@@ -3773,7 +3773,7 @@ public type CommissionTradeTypeEnum "ct_Empty"|"ct_SalesAgent"|"ct_PurchaseAgent
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3787,7 +3787,7 @@ public type ListGoodsReturnRequestHeaders record {
 
 # Represents the request payload for the `PurchaseOrdersService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseOrdersService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
@@ -3797,67 +3797,67 @@ public type BoAllocationByEnum "ab_CashValueAfterCustoms"|"ab_CashValueBeforeCus
 
 # The `PurchaseTaxInvoice` entity of the SAP Business One Service Layer
 public type PurchaseTaxInvoice record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Document number field.
+    # Document number field
     int:Signed32 DocNum?;
     # OData EnumType 'BoTaxInvoiceTypes'. Serialised by the Service Layer as the member name
     BoTaxInvoiceTypes DocType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Printed?;
-    # Document date field.
+    # Document date field
     string DocDate?;
-    # Card code field.
+    # Card code field
     string CardCode?;
-    # Creation date field.
+    # Creation date field
     string CreationDate?;
-    # Update date field.
+    # Update date field
     string UpdateDate?;
-    # Document due date field.
+    # Document due date field
     string DocDueDate?;
-    # Series field.
+    # Series field
     int:Signed32 Series?;
-    # Segment field.
+    # Segment field
     int:Signed32 Segment?;
-    # Contact person code field.
+    # Contact person code field
     int:Signed32 ContactPersonCode?;
-    # Tax date field.
+    # Tax date field
     string TaxDate?;
-    # Comments field.
+    # Comments field
     string Comments?;
-    # Ship to code field.
+    # Ship to code field
     string ShipToCode?;
-    # Address field.
+    # Address field
     string Address?;
-    # Address2 field.
+    # Address2 field
     string Address2?;
     # OData EnumType 'BoCurrencySources'. Serialised by the Service Layer as the member name
     BoCurrencySources CurrencySource?;
-    # Document currency field.
+    # Document currency field
     string DocCurrency?;
-    # Customer or vendor reference number field.
+    # Customer or vendor reference number field
     string CustomerOrVendorRefNo?;
-    # Customer or vendor name field.
+    # Customer or vendor name field
     string CustomerOrVendorName?;
-    # Cancel date field.
+    # Cancel date field
     string CancelDate?;
-    # Document total field.
+    # Document total field
     decimal DocumentTotal?;
-    # Tax total field.
+    # Tax total field
     decimal TaxTotal?;
-    # Payment reference number field.
+    # Payment reference number field
     string PaymentRefNo?;
-    # Payment reference date field.
+    # Payment reference date field
     string PaymentRefDate?;
-    # Alteration revision field.
+    # Alteration revision field
     int:Signed32 AlterationRevision?;
-    # Purchase tax invoice lines field.
+    # Purchase tax invoice lines field
     PurchaseTaxInvoiceLine[] PurchaseTaxInvoiceLines?;
-    # Purchase tax invoice operation codes field.
+    # Purchase tax invoice operation codes field
     PurchaseTaxInvoiceOperationCode[] PurchaseTaxInvoiceOperationCodes?;
-    # Purchase tax invoice document references field.
+    # Purchase tax invoice document references field
     PurchaseTaxInvoiceDocumentReference[] PurchaseTaxInvoiceDocumentReferences?;
-    # Purchase tax invoice linked down payments field.
+    # Purchase tax invoice linked down payments field
     PurchaseTaxInvoiceLinkedDownPayment[] PurchaseTaxInvoiceLinkedDownPayments?;
 };
 
@@ -3866,7 +3866,7 @@ public type BoTaxOnInstallmentsTypeEnum "toiProportionally"|"toiTaxInFirst"|"toi
 
 # Represents the request payload for the `PurchaseCreditNotesService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseCreditNotesService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3883,7 +3883,7 @@ public type GetCorrectionPurchaseInvoiceReversalQueries record {
 
 # Represents the request payload for the `PurchaseInvoicesService_Cancel2` operation of the SAP Business One Service Layer
 public type PurchaseInvoicesService_Cancel2_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3893,23 +3893,23 @@ public type BoDocItemType "dit_Item"|"dit_Resource";
 
 # Represents the request payload for the `PurchaseQuotationsService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseQuotationsService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
 
 # Represents the request payload for the `PurchaseReturnsService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseReturnsService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `PurchaseTaxInvoiceLine` complex type of the SAP Business One Service Layer
 public type PurchaseTaxInvoiceLine record {
-    # Reference entry1 field.
+    # Reference entry1 field
     int:Signed32 RefEntry1?;
-    # Reference entry2 field.
+    # Reference entry2 field
     int:Signed32 RefEntry2?;
 };
 
@@ -3925,7 +3925,7 @@ public type GetPurchaseRequestsQueries record {
 
 # Represents the request payload for the `PurchaseDeliveryNotesService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseDeliveryNotesService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -3939,31 +3939,31 @@ public type ListPurchaseQuotationsHeaders record {
 
 # The `DocExpenseTaxJurisdiction` complex type of the SAP Business One Service Layer
 public type DocExpenseTaxJurisdiction record {
-    # Jurisdiction code field.
+    # Jurisdiction code field
     string JurisdictionCode?;
-    # Jurisdiction type field.
+    # Jurisdiction type field
     int:Signed32 JurisdictionType?;
-    # Tax amount field.
+    # Tax amount field
     decimal TaxAmount?;
-    # Tax amount system currency field.
+    # Tax amount system currency field
     decimal TaxAmountSC?;
-    # Tax amount foreign currency field.
+    # Tax amount foreign currency field
     decimal TaxAmountFC?;
-    # Tax rate field.
+    # Tax rate field
     decimal TaxRate?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Row sequence field.
+    # Row sequence field
     int:Signed32 RowSequence?;
-    # External calc tax rate field.
+    # External calc tax rate field
     decimal ExternalCalcTaxRate?;
-    # External calc tax amount field.
+    # External calc tax amount field
     decimal ExternalCalcTaxAmount?;
-    # External calc tax amount foreign currency field.
+    # External calc tax amount foreign currency field
     decimal ExternalCalcTaxAmountFC?;
-    # External calc tax amount system currency field.
+    # External calc tax amount system currency field
     decimal ExternalCalcTaxAmountSC?;
 };
 
@@ -3972,7 +3972,7 @@ public type ElectronicDocProtocolCodeEnum "edpc_Invalid"|"edpc_GEN"|"edpc_EET"|"
 
 # Represents the request payload for the `PurchaseDownPaymentsService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseDownPaymentsService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -4004,12 +4004,12 @@ public type ListPurchaseTaxInvoicesQueries record {
 
 # A paged collection of `LandedCosts` entities returned by the SAP Business One Service Layer
 public type LandedCostsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     LandedCost[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4019,71 +4019,71 @@ public type ElecCommStatusEnum "ecsApproved"|"ecsPendingApproval"|"ecsRejected";
 
 # The `DownPaymentToDraw` complex type of the SAP Business One Service Layer
 public type DownPaymentToDraw record {|
-    # Tax foreign currency field.
+    # Tax foreign currency field
     @jsondata:Name {value: "TaxFC"}
     decimal taxFC?;
-    # Gross amount to draw field.
+    # Gross amount to draw field
     @jsondata:Name {value: "GrossAmountToDraw"}
     decimal grossAmountToDraw?;
-    # Document entry field.
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
-    # Gross amount to draw system currency field.
+    # Gross amount to draw system currency field
     @jsondata:Name {value: "GrossAmountToDrawSC"}
     decimal grossAmountToDrawSC?;
-    # Tax field.
+    # Tax field
     @jsondata:Name {value: "Tax"}
     decimal tax?;
-    # Amount to draw system currency field.
+    # Amount to draw system currency field
     @jsondata:Name {value: "AmountToDrawSC"}
     decimal amountToDrawSC?;
-    # Row number field.
+    # Row number field
     @jsondata:Name {value: "RowNum"}
     int:Signed32 rowNum?;
-    # Name field.
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
-    # Document internal ID field.
+    # Document internal ID field
     @jsondata:Name {value: "DocInternalID"}
     int:Signed32 docInternalID?;
-    # Is gross line field.
+    # Is gross line field
     @jsondata:Name {value: "IsGrossLine"}
     BoYesNoEnum isGrossLine?;
-    # Details field.
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
-    # Posting date field.
+    # Posting date field
     @jsondata:Name {value: "PostingDate"}
     string postingDate?;
-    # Amount to draw field.
+    # Amount to draw field
     @jsondata:Name {value: "AmountToDraw"}
     decimal amountToDraw?;
-    # Tax system currency field.
+    # Tax system currency field
     @jsondata:Name {value: "TaxSC"}
     decimal taxSC?;
-    # Down payment type field.
+    # Down payment type field
     @jsondata:Name {value: "DownPaymentType"}
     DownPaymentTypeEnum downPaymentType?;
-    # Document number field.
+    # Document number field
     @jsondata:Name {value: "DocNumber"}
     int:Signed32 docNumber?;
-    # Gross amount to draw foreign currency field.
+    # Gross amount to draw foreign currency field
     @jsondata:Name {value: "GrossAmountToDrawFC"}
     decimal grossAmountToDrawFC?;
-    # Down payments to draw details field.
+    # Down payments to draw details field
     @jsondata:Name {value: "DownPaymentsToDrawDetails"}
     DownPaymentToDrawDetails[] downPaymentsToDrawDetails?;
-    # Due date field.
+    # Due date field
     @jsondata:Name {value: "DueDate"}
     string dueDate?;
-    # Amount to draw foreign currency field.
+    # Amount to draw foreign currency field
     @jsondata:Name {value: "AmountToDrawFC"}
     decimal amountToDrawFC?;
 |};
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -4100,73 +4100,73 @@ public type ListCorrectionPurchaseInvoiceReversalHeaders record {
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceReversalService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceReversalService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `LandedCostsCode` entity of the SAP Business One Service Layer
 public type LandedCostsCode record {
-    # Code field.
+    # Code field
     string Code?;
-    # Name field.
+    # Name field
     string Name?;
     # OData EnumType 'BoAllocationByEnum'. Serialised by the Service Layer as the member name
     BoAllocationByEnum AllocationBy?;
-    # Landed costs allocation account field.
+    # Landed costs allocation account field
     string LandedCostsAllocationAccount?;
 };
 
 # The `EBooksDetail` complex type of the SAP Business One Service Layer
 public type EBooksDetail record {
-    # Income classification type field.
+    # Income classification type field
     int:Signed32 IncomeClassificationType?;
-    # Income classification category field.
+    # Income classification category field
     int:Signed32 IncomeClassificationCategory?;
-    # Expenses classification type field.
+    # Expenses classification type field
     int:Signed32 ExpensesClassificationType?;
-    # Expenses classification category field.
+    # Expenses classification category field
     int:Signed32 ExpensesClassificationCategory?;
-    # Net value local currency field.
+    # Net value local currency field
     decimal NetValueLC?;
-    # Net value foreign currency field.
+    # Net value foreign currency field
     decimal NetValueFC?;
-    # Net value system currency field.
+    # Net value system currency field
     decimal NetValueSC?;
-    # VAT category field.
+    # VAT category field
     int:Signed32 VatCategory?;
-    # Withheld percent category field.
+    # Withheld percent category field
     int:Signed32 WithheldPercentCategory?;
-    # Withheld amount local currency field.
+    # Withheld amount local currency field
     decimal WithheldAmountLC?;
-    # Withheld amount foreign currency field.
+    # Withheld amount foreign currency field
     decimal WithheldAmountFC?;
-    # Withheld amount system currency field.
+    # Withheld amount system currency field
     decimal WithheldAmountSC?;
-    # VAT classification type field.
+    # VAT classification type field
     int:Signed32 VatClassificationType?;
-    # VAT classification category field.
+    # VAT classification category field
     int:Signed32 VatClassificationCategory?;
-    # VAT exemption cause field.
+    # VAT exemption cause field
     int:Signed32 VATExemptionCause?;
-    # Rec type field.
+    # Rec type field
     int:Signed32 RecType?;
-    # Stamp duty category field.
+    # Stamp duty category field
     int:Signed32 StampDutyCategory?;
-    # Other taxes category field.
+    # Other taxes category field
     int:Signed32 OtherTaxesCategory?;
-    # Fees category field.
+    # Fees category field
     int:Signed32 FeesCategory?;
 };
 
 # A paged collection of `PurchaseQuotations` entities returned by the SAP Business One Service Layer
 public type PurchaseQuotationsCollectionResponse record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     Document[] value?;
-    # Odata next link field.
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4186,43 +4186,43 @@ public type GeneratedAssetStatusEnum "gasOpen"|"gasClosed";
 
 # The `DocumentLinesBinAllocation` complex type of the SAP Business One Service Layer
 public type DocumentLinesBinAllocation record {
-    # Bin abs entry field.
+    # Bin abs entry field
     int:Signed32 BinAbsEntry?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AllowNegativeQuantity?;
-    # Serial and batch numbers base line field.
+    # Serial and batch numbers base line field
     int:Signed32 SerialAndBatchNumbersBaseLine?;
-    # Base line number field.
+    # Base line number field
     int:Signed32 BaseLineNumber?;
 };
 
 # The `LandedCost_CostLine` complex type of the SAP Business One Service Layer
 public type LandedCostCostLine record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Landed cost code field.
+    # Landed cost code field
     string LandedCostCode?;
     # OData EnumType 'LandedCostAllocationByEnum'. Serialised by the Service Layer as the member name
     LandedCostAllocationByEnum AllocationBy?;
-    # Amount field.
+    # Amount field
     decimal Amount?;
-    # Amount foreign currency field.
+    # Amount foreign currency field
     decimal AmountFC?;
-    # Factor field.
+    # Factor field
     decimal Factor?;
     # OData EnumType 'LCCostTypeEnum'. Serialised by the Service Layer as the member name
     LCCostTypeEnum CostType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IncludeForCustoms?;
-    # Open amount field.
+    # Open amount field
     decimal OpenAmount?;
-    # Open amount foreign currency field.
+    # Open amount foreign currency field
     decimal OpenAmountFC?;
-    # Broker field.
+    # Broker field
     string Broker?;
-    # Broker name field.
+    # Broker name field
     string BrokerName?;
     # OData EnumType 'LandedCostCostCategoryEnum'. Serialised by the Service Layer as the member name
     LandedCostCostCategoryEnum CostCategory?;
@@ -4230,82 +4230,82 @@ public type LandedCostCostLine record {
 
 # Represents the request payload for the `PurchaseQuotationsService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseQuotationsService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseCreditNotesService_CloseByDate` operation of the SAP Business One Service Layer
 public type PurchaseCreditNotesService_CloseByDate_body record {
-    # Document close params field.
+    # Document close params field
     @jsondata:Name {value: "DocumentCloseParams"}
     DocumentCloseParams documentCloseParams?;
 };
 
 # Represents the request payload for the `PurchaseInvoicesService_GetApprovalTemplates` operation of the SAP Business One Service Layer
 public type PurchaseInvoicesService_GetApprovalTemplates_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `DocumentPackage` complex type of the SAP Business One Service Layer
 public type DocumentPackage record {
-    # Number field.
+    # Number field
     int:Signed32 Number?;
-    # Type field.
+    # Type field
     string Type?;
-    # Total weight field.
+    # Total weight field
     decimal TotalWeight?;
-    # Units field.
+    # Units field
     int:Signed32 Units?;
-    # Document package items field.
+    # Document package items field
     DocumentPackageItem[] DocumentPackageItems?;
 };
 
 # Represents the request payload for the `PurchaseInvoicesService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type PurchaseInvoicesService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `ImportProcess` complex type of the SAP Business One Service Layer
 public type ImportProcess record {|
-    # Date of registry DIDSIDA field.
+    # Date of registry DIDSIDA field
     @jsondata:Name {value: "DateOfRegistry_DI_DSI_DA"}
     string dateOfRegistryDIDSIDA?;
-    # Importation document number field.
+    # Importation document number field
     @jsondata:Name {value: "ImportationDocumentNumber"}
     string importationDocumentNumber?;
-    # Customs clearance date field.
+    # Customs clearance date field
     @jsondata:Name {value: "CustomsClearanceDate"}
     string customsClearanceDate?;
-    # Additional item sequential number field.
+    # Additional item sequential number field
     @jsondata:Name {value: "AdditionalItemSequentialNumber"}
     int:Signed32 additionalItemSequentialNumber?;
-    # Drawback suspension regime field.
+    # Drawback suspension regime field
     @jsondata:Name {value: "DrawbackSuspensionRegime"}
     string drawbackSuspensionRegime?;
-    # Type of import field.
+    # Type of import field
     @jsondata:Name {value: "TypeOfImport"}
     string typeOfImport?;
-    # Additional freight to navy authority field.
+    # Additional freight to navy authority field
     @jsondata:Name {value: "AdditionalFreightToNavyAuthority"}
     decimal additionalFreightToNavyAuthority?;
-    # Drawback regime concession account number field.
+    # Drawback regime concession account number field
     @jsondata:Name {value: "DrawbackRegimeConcessionAccountNumber"}
     string drawbackRegimeConcessionAccountNumber?;
-    # Importation document type code field.
+    # Importation document type code field
     @jsondata:Name {value: "ImportationDocumentTypeCode"}
     string importationDocumentTypeCode?;
-    # Additional number field.
+    # Additional number field
     @jsondata:Name {value: "AdditionalNumber"}
     string additionalNumber?;
-    # Additional item discount value field.
+    # Additional item discount value field
     @jsondata:Name {value: "AdditionalItemDiscountValue"}
     decimal additionalItemDiscountValue?;
-    # Line number field.
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
@@ -4322,10 +4322,10 @@ public type GetPurchaseInvoicesQueries record {
 
 # Represents the response payload for the `LandedCostsService_GetLandedCostList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
-    # Odata metadata field.
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
-    # Value field.
+    # Value field
     LandedCostParams[] value?;
 };
 
@@ -4356,37 +4356,37 @@ public type ListPurchaseDeliveryNotesQueries record {
 
 # The `LineTaxJurisdiction` complex type of the SAP Business One Service Layer
 public type LineTaxJurisdiction record {
-    # Jurisdiction code field.
+    # Jurisdiction code field
     string JurisdictionCode?;
-    # Jurisdiction type field.
+    # Jurisdiction type field
     int:Signed32 JurisdictionType?;
-    # Tax amount field.
+    # Tax amount field
     decimal TaxAmount?;
-    # Tax amount system currency field.
+    # Tax amount system currency field
     decimal TaxAmountSC?;
-    # Tax amount foreign currency field.
+    # Tax amount foreign currency field
     decimal TaxAmountFC?;
-    # Tax rate field.
+    # Tax rate field
     decimal TaxRate?;
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
-    # Row sequence field.
+    # Row sequence field
     int:Signed32 RowSequence?;
-    # External calc tax rate field.
+    # External calc tax rate field
     decimal ExternalCalcTaxRate?;
-    # External calc tax amount field.
+    # External calc tax amount field
     decimal ExternalCalcTaxAmount?;
-    # External calc tax amount foreign currency field.
+    # External calc tax amount foreign currency field
     decimal ExternalCalcTaxAmountFC?;
-    # External calc tax amount system currency field.
+    # External calc tax amount system currency field
     decimal ExternalCalcTaxAmountSC?;
-    # Base sum field.
+    # Base sum field
     decimal BaseSum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxInPrice?;
-    # Non deductible percent field.
+    # Non deductible percent field
     decimal NonDeductiblePercent?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxOnReserveInvoice?;
@@ -4401,42 +4401,42 @@ public type BoItemTreeTypes "iNotATree"|"iAssemblyTree"|"iSalesTree"|"iProductio
 
 # Represents the request payload for the `PurchaseReturnsService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseReturnsService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `DocFreightEBooksDetail` complex type of the SAP Business One Service Layer
 public type DocFreightEBooksDetail record {
-    # Income classification type field.
+    # Income classification type field
     int:Signed32 IncomeClassificationType?;
-    # Income classification category field.
+    # Income classification category field
     int:Signed32 IncomeClassificationCategory?;
-    # Expenses classification type field.
+    # Expenses classification type field
     int:Signed32 ExpensesClassificationType?;
-    # Expenses classification category field.
+    # Expenses classification category field
     int:Signed32 ExpensesClassificationCategory?;
-    # Net value local currency field.
+    # Net value local currency field
     decimal NetValueLC?;
-    # Net value foreign currency field.
+    # Net value foreign currency field
     decimal NetValueFC?;
-    # Net value system currency field.
+    # Net value system currency field
     decimal NetValueSC?;
-    # VAT category field.
+    # VAT category field
     int:Signed32 VatCategory?;
-    # Withheld percent category field.
+    # Withheld percent category field
     int:Signed32 WithheldPercentCategory?;
-    # Withheld amount local currency field.
+    # Withheld amount local currency field
     decimal WithheldAmountLC?;
-    # Withheld amount foreign currency field.
+    # Withheld amount foreign currency field
     decimal WithheldAmountFC?;
-    # Withheld amount system currency field.
+    # Withheld amount system currency field
     decimal WithheldAmountSC?;
-    # VAT classification type field.
+    # VAT classification type field
     int:Signed32 VatClassificationType?;
-    # VAT classification category field.
+    # VAT classification category field
     int:Signed32 VatClassificationCategory?;
-    # VAT exemption cause field.
+    # VAT exemption cause field
     int:Signed32 VATExemptionCause?;
 };
 
@@ -4467,7 +4467,7 @@ public type ListGoodsReturnRequestQueries record {
 
 # Represents the request payload for the `PurchaseRequestService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseRequestService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -4477,200 +4477,200 @@ public type BoTaxInvoiceTypes "botit_AlterationCorrectionInvoice"|"botit_Alterat
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # The `DocumentInstallment` complex type of the SAP Business One Service Layer
 public type DocumentInstallment record {
-    # Due date field.
+    # Due date field
     string DueDate?;
-    # Percentage field.
+    # Percentage field
     decimal Percentage?;
-    # Total field.
+    # Total field
     decimal Total?;
-    # Last dunning date field.
+    # Last dunning date field
     string LastDunningDate?;
-    # Dunning level field.
+    # Dunning level field
     int:Signed32 DunningLevel?;
-    # Total foreign currency field.
+    # Total foreign currency field
     decimal TotalFC?;
-    # Installment ID field.
+    # Installment ID field
     int:Signed32 InstallmentId?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentOrdered?;
-    # Paid to date field.
+    # Paid to date field
     decimal PaidToDate?;
-    # Paid to date foreign currency field.
+    # Paid to date foreign currency field
     decimal PaidToDateFC?;
 };
 
 # The `LandedCost_ItemLine` complex type of the SAP Business One Service Layer
 public type LandedCostItemLine record {
-    # Document entry field.
+    # Document entry field
     int:Signed32 DocEntry?;
-    # Line number field.
+    # Line number field
     int:Signed32 LineNumber?;
     # OData EnumType 'LandedCostBaseDocumentTypeEnum'. Serialised by the Service Layer as the member name
     LandedCostBaseDocumentTypeEnum BaseDocumentType?;
-    # Base entry field.
+    # Base entry field
     int:Signed32 BaseEntry?;
-    # Number field.
+    # Number field
     string Number?;
-    # Item description field.
+    # Item description field
     string ItemDescription?;
-    # Quantity field.
+    # Quantity field
     decimal Quantity?;
-    # Base document price field.
+    # Base document price field
     decimal BaseDocumentPrice?;
-    # Rate field.
+    # Rate field
     decimal Rate?;
-    # Projected customs field.
+    # Projected customs field
     decimal ProjectedCustoms?;
-    # Projected customs foreign currency field.
+    # Projected customs foreign currency field
     decimal ProjectedCustomsFC?;
-    # Expenditure field.
+    # Expenditure field
     decimal Expenditure?;
-    # Expenditure foreign currency field.
+    # Expenditure foreign currency field
     decimal ExpenditureFC?;
-    # Warehouse price field.
+    # Warehouse price field
     decimal WarehousePrice?;
-    # Warehouse price foreign currency field.
+    # Warehouse price foreign currency field
     decimal WarehousePriceFC?;
-    # Line total field.
+    # Line total field
     decimal LineTotal?;
-    # Line total foreign currency field.
+    # Line total foreign currency field
     decimal LineTotalFC?;
-    # Volume field.
+    # Volume field
     decimal Volume?;
-    # Volume uo m field.
+    # Volume uo m field
     int:Signed32 VolumeUoM?;
-    # Weight1 field.
+    # Weight1 field
     decimal Weight1?;
-    # Weight1 unit code field.
+    # Weight1 unit code field
     int:Signed32 Weight1UnitCode?;
-    # Weight2 field.
+    # Weight2 field
     decimal Weight2?;
-    # Weight2 unit code field.
+    # Weight2 unit code field
     int:Signed32 Weight2UnitCode?;
-    # Vendor code field.
+    # Vendor code field
     string VendorCode?;
-    # Reference field.
+    # Reference field
     string Reference?;
-    # Factor without customs field.
+    # Factor without customs field
     decimal FactorWithoutCustoms?;
-    # Factor with customs field.
+    # Factor with customs field
     decimal FactorWithCustoms?;
-    # Inventory uo m field.
+    # Inventory uo m field
     string InventoryUoM?;
-    # Block number field.
+    # Block number field
     string BlockNumber?;
-    # Import log field.
+    # Import log field
     string ImportLog?;
-    # Original warehouse field.
+    # Original warehouse field
     string OriginalWarehouse?;
-    # Warehouse field.
+    # Warehouse field
     string Warehouse?;
-    # Release number field.
+    # Release number field
     int:Signed32 ReleaseNumber?;
-    # Variant costs field.
+    # Variant costs field
     decimal VariantCosts?;
-    # Fix costs field.
+    # Fix costs field
     decimal FixCosts?;
-    # Variant costs foreign currency field.
+    # Variant costs foreign currency field
     decimal VariantCostsFC?;
-    # Fix costs foreign currency field.
+    # Fix costs foreign currency field
     decimal FixCostsFC?;
-    # Customs field.
+    # Customs field
     decimal Customs?;
-    # Customs foreign currency field.
+    # Customs foreign currency field
     decimal CustomsFC?;
-    # Base document value line total field.
+    # Base document value line total field
     decimal BaseDocumentValueLineTotal?;
-    # Base document value line total foreign currency field.
+    # Base document value line total foreign currency field
     decimal BaseDocumentValueLineTotalFC?;
-    # Allocated unit costs line total field.
+    # Allocated unit costs line total field
     decimal AllocatedUnitCostsLineTotal?;
-    # Allocated unit costs line total foreign currency field.
+    # Allocated unit costs line total foreign currency field
     decimal AllocatedUnitCostsLineTotalFC?;
-    # Customs value field.
+    # Customs value field
     decimal CustomsValue?;
-    # Customs value foreign currency field.
+    # Customs value foreign currency field
     decimal CustomsValueFC?;
-    # Total costs field.
+    # Total costs field
     decimal TotalCosts?;
-    # Total costs foreign currency field.
+    # Total costs foreign currency field
     decimal TotalCostsFC?;
-    # Total volume field.
+    # Total volume field
     decimal TotalVolume?;
-    # Base line field.
+    # Base line field
     int:Signed32 BaseLine?;
-    # Total line projected customs field.
+    # Total line projected customs field
     decimal TotalLineProjectedCustoms?;
-    # Allocated costs line total field.
+    # Allocated costs line total field
     decimal AllocatedCostsLineTotal?;
-    # FO band included costs field.
+    # FO band included costs field
     decimal FOBandIncludedCosts?;
-    # FO band included costs foreign currency field.
+    # FO band included costs foreign currency field
     decimal FOBandIncludedCostsFC?;
-    # Project field.
+    # Project field
     string Project?;
-    # Distribution rule field.
+    # Distribution rule field
     string DistributionRule?;
-    # Distribution rule2 field.
+    # Distribution rule2 field
     string DistributionRule2?;
-    # Distribution rule3 field.
+    # Distribution rule3 field
     string DistributionRule3?;
-    # Distribution rule4 field.
+    # Distribution rule4 field
     string DistributionRule4?;
-    # Distribution rule5 field.
+    # Distribution rule5 field
     string DistributionRule5?;
-    # Price list field.
+    # Price list field
     int:Signed32 PriceList?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AutomaticExpenditure?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InventoryValuation?;
-    # Origin line field.
+    # Origin line field
     int:Signed32 OriginLine?;
-    # Currency field.
+    # Currency field
     string Currency?;
-    # Customs group rate field.
+    # Customs group rate field
     decimal CustomsGroupRate?;
-    # VAT group field.
+    # VAT group field
     string VatGroup?;
-    # VAT percent field.
+    # VAT percent field
     decimal VatPercent?;
-    # Excise sum field.
+    # Excise sum field
     decimal ExciseSum?;
-    # Excise sum foreign currency field.
+    # Excise sum foreign currency field
     decimal ExciseSumFC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ExciseAffectStock?;
-    # Customs cost field.
+    # Customs cost field
     decimal CustomsCost?;
-    # Customs cost foreign currency field.
+    # Customs cost foreign currency field
     decimal CustomsCostFC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CustomsAffectStock?;
-    # Customs VAT field.
+    # Customs VAT field
     decimal CustomsVat?;
-    # Customs VAT foreign currency field.
+    # Customs VAT foreign currency field
     decimal CustomsVatFC?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CustomsVatAffectStock?;
-    # CCD number field.
+    # CCD number field
     string CCDNumber?;
-    # Corrected base document value field.
+    # Corrected base document value field
     decimal CorrectedBaseDocumentValue?;
-    # Corrected base document value foreign currency field.
+    # Corrected base document value foreign currency field
     decimal CorrectedBaseDocumentValueFC?;
 };
 
 # Represents the request payload for the `CorrectionPurchaseInvoiceReversalService_ExportEWayBill` operation of the SAP Business One Service Layer
 public type CorrectionPurchaseInvoiceReversalService_ExportEWayBill_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -4680,14 +4680,14 @@ public type BoDocumentTypes "dDocument_Items"|"dDocument_Service";
 
 # Represents the request payload for the `PurchaseCreditNotesService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseCreditNotesService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
 
 # Represents the request payload for the `PurchaseOrdersService_ApproveAndUpdate` operation of the SAP Business One Service Layer
 public type PurchaseOrdersService_ApproveAndUpdate_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
@@ -4704,7 +4704,7 @@ public type GetLandedCostsCodesQueries record {
 
 # Represents the request payload for the `PurchaseDeliveryNotesService_ApproveAndAdd` operation of the SAP Business One Service Layer
 public type PurchaseDeliveryNotesService_ApproveAndAdd_body record {
-    # Document field.
+    # Document field
     @jsondata:Name {value: "Document"}
     Document document?;
 };
