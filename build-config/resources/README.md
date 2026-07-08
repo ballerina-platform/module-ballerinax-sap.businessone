@@ -1,9 +1,7 @@
 ## Overview
 
 [SAP Business One](https://www.sap.com/products/erp/business-one.html) is an enterprise resource planning (ERP)
-solution designed for small and midsize businesses by SAP SE. Its
-[Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) exposes the Business One business objects
-through an OData web service interface.
+solution designed for small and midsize businesses by SAP SE.
 
 @description@
 

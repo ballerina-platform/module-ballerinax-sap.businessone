@@ -5,10 +5,10 @@
 [![GitHub Issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-library/module/sap.businessone.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-library/labels/module%2Fsap.businessone)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This repository hosts the [Ballerina](https://ballerina.io/) connector family for the
-[SAP Business One Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) (OData V3). The Service
-Layer exposes the SAP Business One business objects through an OData web service, and these connectors provide
-typed Ballerina clients for them, grouped by business module.
+This repository hosts the [Ballerina](https://ballerina.io/) connector family for
+[SAP Business One](https://www.sap.com/products/erp/business-one.html). The Service Layer exposes the SAP Business
+One business objects through an OData V3 web service, and these connectors provide typed Ballerina clients for
+them, grouped by business module.
 
 ## Packages
 
@@ -76,14 +76,19 @@ Execute the commands below to build from the source.
    | humanresources   | ballerinax/sap.businessone.humanresources   |
    | localization     | ballerinax/sap.businessone.localization     |
 
-5. To run tests against a live Service Layer instead of the mock:
+5. To run tests against a live Service Layer instead of the mock, set the following environment variables before
+   invoking the test task:
 
    ```bash
-   B1_SERVICE_URL="https://<host>:50000/b1s/v1" B1_COMPANY_DB="<db>" \
-     B1_USERNAME="<user>" B1_PASSWORD="<password>" ./gradlew clean test
+   export B1_SERVICE_URL="https://<host>:50000/b1s/v1"
+   export B1_COMPANY_DB="<db>"
+   export B1_USERNAME="<user>"
+   export B1_PASSWORD="<password>"
+   ./gradlew clean test
    ```
 
-   **Note**: When `B1_SERVICE_URL` is unset, tests run against the bundled mock Service Layer.
+   **Note**: When the `B1_SERVICE_URL` environment variable is unset, tests run against the bundled mock Service
+   Layer instead of a live one.
 
 6. To debug packages with a remote debugger:
 

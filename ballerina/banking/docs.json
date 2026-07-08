@@ -1,5 +1,5 @@
 {
-  "description": "The SAP Business One Banking & Payments connector provides APIs for the banking objects of SAP Business One: incoming and outgoing payments, deposits, checks, bank statements, and reconciliations, exposed through the [SAP Business One Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) (OData).",
+  "description": "The SAP Business One Banking & Payments connector provides APIs for the banking objects of SAP Business One: incoming and outgoing payments, deposits, checks, bank statements, and reconciliations, exposed through the [SAP Business One Service Layer](https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html) (OData).",
   "key-features": [
     "Create and query incoming and vendor (outgoing) payments",
     "Process deposits, checks for payment, and bills of exchange",

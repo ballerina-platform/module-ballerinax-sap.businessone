@@ -1,5 +1,5 @@
 {
-  "description": "The SAP Business One Financials connector provides APIs for the financial accounting objects of SAP Business One: chart of accounts, journal entries, budgets, cost accounting dimensions, and tax setup, exposed through the [SAP Business One Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) (OData).",
+  "description": "The SAP Business One Financials connector provides APIs for the financial accounting objects of SAP Business One: chart of accounts, journal entries, budgets, cost accounting dimensions, and tax setup, exposed through the [SAP Business One Service Layer](https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html) (OData).",
   "key-features": [
     "Create and query journal entries and posting templates",
     "Manage the chart of accounts and account categories",
