@@ -25,71 +25,99 @@ public type BoWeekNoRuleEnum "fromJanFirst"|"fromFirstFourDayWeek"|"fromFirstFul
 
 # The `EventNotification` entity of the SAP Business One Service Layer
 public type EventNotification record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     EventStatusEnum status?;
+    # Transaction type field.
     @jsondata:Name {value: "TransactionType"}
     string transactionType?;
+    # Replay state field.
     @jsondata:Name {value: "ReplayState"}
     EventReplayStateEnum replayState?;
+    # Create time field.
     @jsondata:Name {value: "CreateTime"}
     string createTime?;
+    # Source DB field.
     @jsondata:Name {value: "SourceDB"}
     string sourceDB?;
+    # Fields in key field.
     @jsondata:Name {value: "FieldsInKey"}
     int:Signed32 fieldsInKey?;
+    # Operation field.
     @jsondata:Name {value: "Operation"}
     string operation?;
+    # Business object field.
     @jsondata:Name {value: "BusinessObject"}
     string businessObject?;
+    # Create date field.
     @jsondata:Name {value: "CreateDate"}
     string createDate?;
+    # Object type field.
     @jsondata:Name {value: "ObjectType"}
     string objectType?;
+    # Update date field.
     @jsondata:Name {value: "UpdateDate"}
     string updateDate?;
+    # Field names field.
     @jsondata:Name {value: "FieldNames"}
     string fieldNames?;
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     string userID?;
+    # Update time field.
     @jsondata:Name {value: "UpdateTime"}
     string updateTime?;
+    # Event ID field.
     @jsondata:Name {value: "EventID"}
     string eventID?;
+    # Field values field.
     @jsondata:Name {value: "FieldValues"}
     string fieldValues?;
 |};
 
 # The `ExternalCallParams` complex type of the SAP Business One Service Layer
 public type ExternalCallParams record {|
+    # I d field.
     @jsondata:Name {value: "ID"}
     int:Signed32 iD?;
 |};
 
 # A paged collection of `MobileAddOnSetting` entities returned by the SAP Business One Service Layer
 public type MobileAddOnSettingCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     MobileAddOnSetting[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `CallMessage` complex type of the SAP Business One Service Layer
 public type CallMessage record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     CallMessageStatusEnum status?;
+    # Creation date field.
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
+    # Type field.
     @jsondata:Name {value: "Type"}
     CallMessageTypeEnum 'type?;
+    # Call message arguments field.
     @jsondata:Name {value: "CallMessageArguments"}
     CallMessageArgument[] callMessageArguments?;
+    # Creation time field.
     @jsondata:Name {value: "CreationTime"}
     int:Signed32 creationTime?;
+    # I d field.
     @jsondata:Name {value: "ID"}
     int:Signed32 iD?;
+    # Error code field.
     @jsondata:Name {value: "ErrorCode"}
     string errorCode?;
+    # Message body field.
     @jsondata:Name {value: "MessageBody"}
     string messageBody?;
 |};
@@ -124,115 +152,162 @@ public type ListUserFieldsMDQueries record {
 
 # The `ApprovalRequest` entity of the SAP Business One Service Layer
 public type ApprovalRequest record {|
+    # Is draft field.
     @jsondata:Name {value: "IsDraft"}
     string isDraft?;
+    # Status field.
     @jsondata:Name {value: "Status"}
     BoApprovalRequestStatusEnum status?;
+    # Originator ID field.
     @jsondata:Name {value: "OriginatorID"}
     int:Signed32 originatorID?;
+    # Creation date field.
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
+    # Approval request decisions field.
     @jsondata:Name {value: "ApprovalRequestDecisions"}
     ApprovalRequestDecision[] approvalRequestDecisions?;
+    # User field.
     @jsondata:Name {value: "User"}
     User user?;
+    # Approval templates ID field.
     @jsondata:Name {value: "ApprovalTemplatesID"}
     int:Signed32 approvalTemplatesID?;
+    # Approval request lines field.
     @jsondata:Name {value: "ApprovalRequestLines"}
     ApprovalRequestLine[] approvalRequestLines?;
+    # Current stage field.
     @jsondata:Name {value: "CurrentStage"}
     int:Signed32 currentStage?;
+    # Draft entry field.
     @jsondata:Name {value: "DraftEntry"}
     int:Signed32 draftEntry?;
+    # Object entry field.
     @jsondata:Name {value: "ObjectEntry"}
     int:Signed32 objectEntry?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Object type field.
     @jsondata:Name {value: "ObjectType"}
     string objectType?;
+    # Draft type field.
     @jsondata:Name {value: "DraftType"}
     string draftType?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Creation time field.
     @jsondata:Name {value: "CreationTime"}
     string creationTime?;
+    # Approval template field.
     @jsondata:Name {value: "ApprovalTemplate"}
     ApprovalTemplate approvalTemplate?;
+    # Approval stage field.
     @jsondata:Name {value: "ApprovalStage"}
     ApprovalStage approvalStage?;
 |};
 
 # The `DefaultReportParams` complex type of the SAP Business One Service Layer
 public type DefaultReportParams record {|
+    # Layout code field.
     @jsondata:Name {value: "LayoutCode"}
     string layoutCode?;
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
+    # Report code field.
     @jsondata:Name {value: "ReportCode"}
     string reportCode?;
+    # Card code field.
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
 |};
 
 # The `AdvancedGLAccountParams` complex type of the SAP Business One Service Layer
 public type AdvancedGLAccountParams record {|
+    # Item code field.
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
+    # Warehouse field.
     @jsondata:Name {value: "Warehouse"}
     string warehouse?;
+    # Usage field.
     @jsondata:Name {value: "Usage"}
     int:Signed32 usage?;
+    # Ship to country field.
     @jsondata:Name {value: "ShipToCountry"}
     string shipToCountry?;
+    # VAT group field.
     @jsondata:Name {value: "VatGroup"}
     string vatGroup?;
+    # Account type field.
     @jsondata:Name {value: "AccountType"}
     InventoryAccountTypeEnum accountType?;
+    # Federal tax ID field.
     @jsondata:Name {value: "FederalTaxID"}
     string federalTaxID?;
+    # Ship to state field.
     @jsondata:Name {value: "ShipToState"}
     string shipToState?;
+    # Posting date field.
     @jsondata:Name {value: "PostingDate"}
     string postingDate?;
+    # U DF5 field.
     @jsondata:Name {value: "UDF5"}
     string uDF5?;
+    # U DF4 field.
     @jsondata:Name {value: "UDF4"}
     string uDF4?;
+    # U DF3 field.
     @jsondata:Name {value: "UDF3"}
     string uDF3?;
+    # B p code field.
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
+    # U DF2 field.
     @jsondata:Name {value: "UDF2"}
     string uDF2?;
+    # U DF1 field.
     @jsondata:Name {value: "UDF1"}
     string uDF1?;
 |};
 
 # The `KPIParams` complex type of the SAP Business One Service Layer
 public type KPIParams record {|
+    # K PI code field.
     @jsondata:Name {value: "KPICode"}
     string kPICode?;
+    # K PI name field.
     @jsondata:Name {value: "KPIName"}
     string kPIName?;
 |};
 
 # The `SalesAppSetting` complex type of the SAP Business One Service Layer
 public type SalesAppSetting record {|
+    # Customer advanced dash board field.
     @jsondata:Name {value: "CustomerAdvancedDashBoard"}
     int:Signed32 customerAdvancedDashBoard?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Advanced dash board field.
     @jsondata:Name {value: "AdvancedDashBoard"}
     int:Signed32 advancedDashBoard?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `QueryCategory` entity of the SAP Business One Service Layer
 public type QueryCategory record {
+    # Code field.
     int:Signed32 Code?;
+    # Name field.
     string Name?;
+    # Permissions field.
     string Permissions?;
+    # User queries field.
     UserQuery[] UserQueries?;
 };
 
@@ -266,14 +341,17 @@ public type BoUTBTableType "bott_Document"|"bott_DocumentLines"|"bott_MasterData
 
 # The `CallMessageArgument` complex type of the SAP Business One Service Layer
 public type CallMessageArgument record {|
+    # Value field.
     @jsondata:Name {value: "Value"}
     string value?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # Represents the request payload for the `CompanyService_UpdatePathAdmin` operation of the SAP Business One Service Layer
 public type CompanyService_UpdatePathAdmin_body record {
+    # Path admin field.
     @jsondata:Name {value: "PathAdmin"}
     PathAdmin pathAdmin?;
 };
@@ -283,14 +361,17 @@ public type FormattedSearchByFieldEnum "fsbfWhenExitingAlteredColumn"|"fsbfWhenF
 
 # The `SeriesParams` complex type of the SAP Business One Service Layer
 public type SeriesParams record {|
+    # Series field.
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
 |};
 
 # The `SingleUserConnection` entity of the SAP Business One Service Layer
 public type SingleUserConnection record {|
+    # Action field.
     @jsondata:Name {value: "Action"}
     SingleUserConnectionActionEnum action?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
 |};
@@ -322,30 +403,39 @@ public type ListPredefinedTextsQueries record {
 
 # The `WorkflowTaskCompleteParams` complex type of the SAP Business One Service Layer
 public type WorkflowTaskCompleteParams record {|
+    # Task ID field.
     @jsondata:Name {value: "TaskID"}
     int:Signed32 taskID?;
+    # Note field.
     @jsondata:Name {value: "Note"}
     string note?;
+    # Trigger params field.
     @jsondata:Name {value: "TriggerParams"}
     string triggerParams?;
 |};
 
 # The `Picture` entity of the SAP Business One Service Layer
 public type Picture record {|
+    # Picture size field.
     @jsondata:Name {value: "PictureSize"}
     int:Signed32 pictureSize?;
+    # Picture name field.
     @jsondata:Name {value: "PictureName"}
     string pictureName?;
+    # Picture create date field.
     @jsondata:Name {value: "PictureCreateDate"}
     string pictureCreateDate?;
+    # Picture path field.
     @jsondata:Name {value: "PicturePath"}
     string picturePath?;
+    # Picture modify date field.
     @jsondata:Name {value: "PictureModifyDate"}
     string pictureModifyDate?;
 |};
 
 # Represents the request payload for the `ReportLayoutsService_GetDefaultReport` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_GetDefaultReport_body record {
+    # Report params field.
     @jsondata:Name {value: "ReportParams"}
     ReportParams reportParams?;
 };
@@ -359,6 +449,7 @@ public type ListUserKeysMDHeaders record {
 
 # The `IntegrationPackageParams` complex type of the SAP Business One Service Layer
 public type IntegrationPackageParams record {|
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
@@ -375,15 +466,19 @@ public type BoConsumptionMethod "cm_BackwardForward"|"cm_ForwardBackward";
 
 # A paged collection of `ExceptionalEvents` entities returned by the SAP Business One Service Layer
 public type ExceptionalEventsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ExceptionalEvent[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `MobileAppService_UpdateTechnicianSettingsGroup` operation of the SAP Business One Service Layer
 public type MobileAppService_UpdateTechnicianSettingsGroup_body record {
+    # Technician settings group field.
     @jsondata:Name {value: "TechnicianSettingsGroup"}
     TechnicianSettingsGroup technicianSettingsGroup?;
 };
@@ -415,92 +510,132 @@ public type ListSQLQueriesQueries record {
 
 # Represents the request payload for the `ReportLayoutsService_DeleteReportLayoutAndMenu` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_DeleteReportLayoutAndMenu_body record {
+    # Report layout params field.
     @jsondata:Name {value: "ReportLayoutParams"}
     ReportLayoutParams reportLayoutParams?;
 };
 
 # The `ExtendedAdminInfo` complex type of the SAP Business One Service Layer
 public type ExtendedAdminInfo record {|
+    # Credit contribution origin code field.
     @jsondata:Name {value: "CreditContributionOriginCode"}
     string creditContributionOriginCode?;
+    # Email field.
     @jsondata:Name {value: "Email"}
     string email?;
+    # Telephone field.
     @jsondata:Name {value: "Telephone"}
     string telephone?;
+    # Company qualification code field.
     @jsondata:Name {value: "CompanyQualificationCode"}
     int:Signed32 companyQualificationCode?;
+    # S TD code field.
     @jsondata:Name {value: "STDCode"}
     int:Signed32 sTDCode?;
+    # S TD code foreign field.
     @jsondata:Name {value: "STDCodeForeign"}
     int:Signed32 sTDCodeForeign?;
+    # Global location number field.
     @jsondata:Name {value: "GlobalLocationNumber"}
     string globalLocationNumber?;
+    # Enable same UR lfor payment type service field.
     @jsondata:Name {value: "EnableSameURLforPaymentTypeService"}
     BoYesNoEnum enableSameURLforPaymentTypeService?;
+    # Commercial register field.
     @jsondata:Name {value: "CommercialRegister"}
     string commercialRegister?;
+    # Authority password field.
     @jsondata:Name {value: "AuthorityPassword"}
     string authorityPassword?;
+    # Economic activity type code field.
     @jsondata:Name {value: "EconomicActivityTypeCode"}
     int:Signed32 economicActivityTypeCode?;
+    # Document remarks include field.
     @jsondata:Name {value: "DocumentRemarksInclude"}
     DocumentRemarksIncludeTypeEnum documentRemarksInclude?;
+    # C NPJ of IT field.
     @jsondata:Name {value: "CNPJOfIT"}
     string cNPJOfIT?;
+    # Number warning for link type UDF field.
     @jsondata:Name {value: "NoWarningForLinkTypeUDF"}
     BoYesNoEnum noWarningForLinkTypeUDF?;
+    # Electronic approval for invoice enabled field.
     @jsondata:Name {value: "ElectronicApprovalForInvoiceEnabled"}
     BoYesNoEnum electronicApprovalForInvoiceEnabled?;
+    # Authority user field.
     @jsondata:Name {value: "AuthorityUser"}
     string authorityUser?;
+    # Street number field.
     @jsondata:Name {value: "StreetNo"}
     string streetNo?;
+    # U r lfor goods transport service field.
     @jsondata:Name {value: "URLforGoodsTransportService"}
     string uRLforGoodsTransportService?;
+    # Profit taxation code field.
     @jsondata:Name {value: "ProfitTaxationCode"}
     int:Signed32 profitTaxationCode?;
+    # Allow inactive items in inventory opening balance field.
     @jsondata:Name {value: "AllowInactiveItemsInInventoryOpeningBalance"}
     BoYesNoEnum allowInactiveItemsInInventoryOpeningBalance?;
+    # Opting4 ICMS field.
     @jsondata:Name {value: "Opting4ICMS"}
     BoYesNoEnum opting4ICMS?;
+    # U r lfor invoice type service field.
     @jsondata:Name {value: "URLforInvoiceTypeService"}
     string uRLforInvoiceTypeService?;
+    # Cn person field.
     @jsondata:Name {value: "CnPerson"}
     string cnPerson?;
+    # O KDP number field.
     @jsondata:Name {value: "OKDPNumber"}
     string oKDPNumber?;
+    # I PI tax contributor field.
     @jsondata:Name {value: "IPITaxContributor"}
     BoYesNoEnum iPITaxContributor?;
+    # Allow inactive items in inventory counting and posting field.
     @jsondata:Name {value: "AllowInactiveItemsInInventoryCountingAndPosting"}
     BoYesNoEnum allowInactiveItemsInInventoryCountingAndPosting?;
+    # Cooperative association type code field.
     @jsondata:Name {value: "CooperativeAssociationTypeCode"}
     int:Signed32 cooperativeAssociationTypeCode?;
+    # S PED profile field.
     @jsondata:Name {value: "SPEDProfile"}
     string sPEDProfile?;
+    # Copy reference document form orig document to dup document field.
     @jsondata:Name {value: "CopyRefDocFormOrigDocToDupDoc"}
     BoYesNoEnum copyRefDocFormOrigDocToDupDoc?;
+    # Electronic approval for goods trans enabled field.
     @jsondata:Name {value: "ElectronicApprovalForGoodsTransEnabled"}
     BoYesNoEnum electronicApprovalForGoodsTransEnabled?;
+    # Environment type field.
     @jsondata:Name {value: "EnvironmentType"}
     int:Signed32 environmentType?;
+    # Auto assign new branch to business partner field.
     @jsondata:Name {value: "AutoAssignNewBranchToBP"}
     BoYesNoEnum autoAssignNewBranchToBP?;
+    # Enable intrastat field.
     @jsondata:Name {value: "EnableIntrastat"}
     BoYesNoEnum enableIntrastat?;
+    # Declarer type code field.
     @jsondata:Name {value: "DeclarerTypeCode"}
     int:Signed32 declarerTypeCode?;
+    # Nature of company code field.
     @jsondata:Name {value: "NatureOfCompanyCode"}
     int:Signed32 natureOfCompanyCode?;
+    # I PI period code field.
     @jsondata:Name {value: "IPIPeriodCode"}
     string iPIPeriodCode?;
+    # Address type field.
     @jsondata:Name {value: "AddressType"}
     string addressType?;
+    # Date of incorporation field.
     @jsondata:Name {value: "DateOfIncorporation"}
     string dateOfIncorporation?;
 |};
 
 # The `TSRExceptionalEventParams` complex type of the SAP Business One Service Layer
 public type TSRExceptionalEventParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -520,33 +655,46 @@ public type ListIntegrationPackagesConfigureHeaders record {
 
 # A paged collection of `Cockpits` entities returned by the SAP Business One Service Layer
 public type CockpitsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Cockpit[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WebClientRecentActivity` entity of the SAP Business One Service Layer
 public type WebClientRecentActivity record {|
+    # App ID field.
     @jsondata:Name {value: "AppId"}
     string appId?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Title field.
     @jsondata:Name {value: "Title"}
     string title?;
+    # Recent day field.
     @jsondata:Name {value: "RecentDay"}
     string recentDay?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Count field.
     @jsondata:Name {value: "Count"}
     int:Signed32 count?;
+    # App type field.
     @jsondata:Name {value: "AppType"}
     string appType?;
+    # Timestamp field.
     @jsondata:Name {value: "Timestamp"}
     string timestamp?;
+    # URL field.
     @jsondata:Name {value: "Url"}
     string url?;
+    # Usage array field.
     @jsondata:Name {value: "UsageArray"}
     string usageArray?;
 |};
@@ -559,19 +707,25 @@ public type DrawingMethodEnum "dmAll"|"dmNone"|"dmQuantity"|"dmTotal";
 
 # A paged collection of `MultiLanguageTranslations` entities returned by the SAP Business One Service Layer
 public type MultiLanguageTranslationsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     MultiLanguageTranslation[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WebClientVariantSelectedColumn` complex type of the SAP Business One Service Layer
 public type WebClientVariantSelectedColumn record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -595,8 +749,10 @@ public type GetMessagesQueries record {
 
 # The `CallArgument` complex type of the SAP Business One Service Layer
 public type CallArgument record {|
+    # Value field.
     @jsondata:Name {value: "Value"}
     string value?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -610,10 +766,13 @@ public type ListWebClientPreferencesHeaders record {
 
 # Represents the request payload for the `SBOBobService_SetCurrencyRate` operation of the SAP Business One Service Layer
 public type SBOBobService_SetCurrencyRate_body record {
+    # Rate date field.
     @jsondata:Name {value: "RateDate"}
     string rateDate?;
+    # Rate field.
     @jsondata:Name {value: "Rate"}
     string rate?;
+    # Currency field.
     @jsondata:Name {value: "Currency"}
     string currency?;
 };
@@ -623,12 +782,16 @@ public type BoSubPeriodTypeEnum "spt_Year"|"spt_Quarters"|"spt_Months"|"spt_Days
 
 # The `SQLView` entity of the SAP Business One Service Layer
 public type SQLView record {|
+    # D b type field.
     @jsondata:Name {value: "DBType"}
     string dBType?;
+    # Create date field.
     @jsondata:Name {value: "CreateDate"}
     string createDate?;
+    # Schema name field.
     @jsondata:Name {value: "SchemaName"}
     string schemaName?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -712,13 +875,21 @@ public type ListAdditionalExpensesQueries record {
 
 # The `BusinessPlaceTributaryInfo` complex type of the SAP Business One Service Layer
 public type BusinessPlaceTributaryInfo record {
+    # BPLID field.
     int:Signed32 BPLID?;
+    # Tributary ID field.
     int:Signed32 TributaryID?;
+    # Tributary type field.
     int:Signed32 TributaryType?;
+    # TT start date field.
     string TTStartDate?;
+    # TT end date field.
     string TTEndDate?;
+    # Tributary regime code field.
     int:Signed32 TributaryRegimeCode?;
+    # TRC start date field.
     string TRCStartDate?;
+    # TRC end date field.
     string TRCEndDate?;
 };
 
@@ -761,8 +932,11 @@ public type ListHolidaysHeaders record {
 
 # The `TranslationsInUserLanguage` complex type of the SAP Business One Service Layer
 public type TranslationsInUserLanguage record {
+    # Key from header table field.
     int:Signed32 KeyFromHeaderTable?;
+    # Language code of user language field.
     int:Signed32 LanguageCodeOfUserLanguage?;
+    # Translationscontent field.
     string Translationscontent?;
 };
 
@@ -771,18 +945,23 @@ public type VMCommunicationTypeEnum "vmct_MasterData"|"vmct_Transaction";
 
 # The `AlertManagementParams` complex type of the SAP Business One Service Layer
 public type AlertManagementParams record {|
+    # Type field.
     @jsondata:Name {value: "Type"}
     AlertManagementTypeEnum 'type?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `DistributionListParams` complex type of the SAP Business One Service Layer
 public type DistributionListParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -812,34 +991,44 @@ public type GetFormattedSearchesQueries record {
 
 # The `TaxReportFilterParams` complex type of the SAP Business One Service Layer
 public type TaxReportFilterParams record {|
+    # Filter type field.
     @jsondata:Name {value: "FilterType"}
     TaxReportFilterType filterType?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # A paged collection of `WebClientRecentActivities` entities returned by the SAP Business One Service Layer
 public type WebClientRecentActivitiesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientRecentActivity[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `PredefinedTexts` entities returned by the SAP Business One Service Layer
 public type PredefinedTextsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     PredefinedText[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `ExternalCallsService_UpdateCall` operation of the SAP Business One Service Layer
 public type ExternalCallsService_UpdateCall_body record {
+    # External call field.
     @jsondata:Name {value: "ExternalCall"}
     ExternalCall externalCall?;
 };
@@ -871,34 +1060,44 @@ public type ListEventSubscriptionsQueries record {
 
 # Represents the request payload for the `ExternalCallsService_GetCall` operation of the SAP Business One Service Layer
 public type ExternalCallsService_GetCall_body record {
+    # External call params field.
     @jsondata:Name {value: "ExternalCallParams"}
     ExternalCallParams externalCallParams?;
 };
 
 # A paged collection of `B1Sessions` entities returned by the SAP Business One Service Layer
 public type B1SessionsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     B1Session[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `Counties` entities returned by the SAP Business One Service Layer
 public type CountiesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     County[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ReportParams` complex type of the SAP Business One Service Layer
 public type ReportParams record {|
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
+    # Report code field.
     @jsondata:Name {value: "ReportCode"}
     string reportCode?;
+    # Card code field.
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
 |};
@@ -943,76 +1142,100 @@ public type ListAttachments2Queries record {
 
 # Represents the request payload for the `SeriesService_SetDefaultSeriesForCurrentUser` operation of the SAP Business One Service Layer
 public type SeriesService_SetDefaultSeriesForCurrentUser_body record {
+    # Document series params field.
     @jsondata:Name {value: "DocumentSeriesParams"}
     DocumentSeriesParams documentSeriesParams?;
 };
 
 # Represents the request payload for the `ExternalCallsService_SendCall` operation of the SAP Business One Service Layer
 public type ExternalCallsService_SendCall_body record {
+    # External call field.
     @jsondata:Name {value: "ExternalCall"}
     ExternalCall externalCall?;
 };
 
 # The `Holiday` entity of the SAP Business One Service Layer
 public type Holiday record {|
+    # Set weekends as work days field.
     @jsondata:Name {value: "SetWeekendsAsWorkDays"}
     string setWeekendsAsWorkDays?;
+    # Week number rule field.
     @jsondata:Name {value: "WeekNoRule"}
     BoWeekNoRuleEnum weekNoRule?;
+    # Weekend TO field.
     @jsondata:Name {value: "WeekendTO"}
     BoWeekEnum weekendTO?;
+    # Holiday code field.
     @jsondata:Name {value: "HolidayCode"}
     string holidayCode?;
+    # Holiday dates field.
     @jsondata:Name {value: "HolidayDates"}
     HolidayDate[] holidayDates?;
+    # Valid for one year only field.
     @jsondata:Name {value: "ValidForOneYearOnly"}
     BoYesNoEnum validForOneYearOnly?;
+    # Weekend from field.
     @jsondata:Name {value: "WeekendFrom"}
     BoWeekEnum weekendFrom?;
 |};
 
 # Represents the request payload for the `SeriesService_UpdateElectronicSeries` operation of the SAP Business One Service Layer
 public type SeriesService_UpdateElectronicSeries_body record {
+    # Electronic series field.
     @jsondata:Name {value: "ElectronicSeries"}
     ElectronicSeries electronicSeries?;
 };
 
 # Represents the request payload for the `UserMenuService_GetUserMenu` operation of the SAP Business One Service Layer
 public type UserMenuService_GetUserMenu_body record {
+    # User menu params field.
     @jsondata:Name {value: "UserMenuParams"}
     UserMenuParams userMenuParams?;
 };
 
 # The `Cockpit` entity of the SAP Business One Service Layer
 public type Cockpit record {|
+    # User signature field.
     @jsondata:Name {value: "UserSignature"}
     int:Signed32 userSignature?;
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # User field.
     @jsondata:Name {value: "User"}
     User user?;
+    # Manufacturer field.
     @jsondata:Name {value: "Manufacturer"}
     string manufacturer?;
+    # Cockpit type field.
     @jsondata:Name {value: "CockpitType"}
     BoCockpitTypeEnum cockpitType?;
+    # Time field.
     @jsondata:Name {value: "Time"}
     string time?;
+    # Publisher field.
     @jsondata:Name {value: "Publisher"}
     string publisher?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Date field.
     @jsondata:Name {value: "Date"}
     string date?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `EmailGroup` entity of the SAP Business One Service Layer
 public type EmailGroup record {|
+    # Email group name field.
     @jsondata:Name {value: "EmailGroupName"}
     string emailGroupName?;
+    # Email group code field.
     @jsondata:Name {value: "EmailGroupCode"}
     string emailGroupCode?;
 |};
@@ -1085,38 +1308,53 @@ public type ListWebClientVariantGroupsQueries record {
 
 # The `DashboardPackageImportParams` complex type of the SAP Business One Service Layer
 public type DashboardPackageImportParams record {|
+    # Force overwrite query field.
     @jsondata:Name {value: "ForceOverwriteQuery"}
     BoYesNoEnum forceOverwriteQuery?;
+    # Force overwrite package field.
     @jsondata:Name {value: "ForceOverwritePackage"}
     BoYesNoEnum forceOverwritePackage?;
+    # Package file path field.
     @jsondata:Name {value: "PackageFilePath"}
     string packageFilePath?;
+    # Import queries field.
     @jsondata:Name {value: "ImportQueries"}
     BoYesNoEnum importQueries?;
 |};
 
 # The `MobileAddOnSetting` entity of the SAP Business One Service Layer
 public type MobileAddOnSetting record {|
+    # Type field.
     @jsondata:Name {value: "Type"}
     MobileAddonSettingTypeEnum 'type?;
+    # B1 sales app field.
     @jsondata:Name {value: "B1SalesApp"}
     BoYesNoEnum b1SalesApp?;
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Logon method field.
     @jsondata:Name {value: "LogonMethod"}
     LogonMethodEnum logonMethod?;
+    # Enable field.
     @jsondata:Name {value: "Enable"}
     BoYesNoEnum enable?;
+    # View style field.
     @jsondata:Name {value: "ViewStyle"}
     ViewStyleTypeEnum viewStyle?;
+    # B1 mobile app field.
     @jsondata:Name {value: "B1MobileApp"}
     BoYesNoEnum b1MobileApp?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # B1 service app field.
     @jsondata:Name {value: "B1ServiceApp"}
     BoYesNoEnum b1ServiceApp?;
+    # URL field.
     @jsondata:Name {value: "Url"}
     string url?;
+    # Provider field.
     @jsondata:Name {value: "Provider"}
     string provider?;
 |};
@@ -1126,32 +1364,44 @@ public type BoSuppLangs "ln_Null"|"ln_Hebrew"|"ln_Spanish_Ar"|"ln_English"|"ln_P
 
 # The `TaxReportSeries` complex type of the SAP Business One Service Layer
 public type TaxReportSeries record {|
+    # Series code field.
     @jsondata:Name {value: "SeriesCode"}
     int:Signed32 seriesCode?;
+    # Document type field.
     @jsondata:Name {value: "DocumentType"}
     TaxReportFilterDocumentType documentType?;
 |};
 
 # The `UserGroupByUserItem` complex type of the SAP Business One Service Layer
 public type UserGroupByUserItem record {
+    # USER ID field.
     int:Signed32 USERId?;
+    # Group ID field.
     int:Signed32 GroupId?;
+    # Start date field.
     string StartDate?;
+    # Due date field.
     string DueDate?;
 };
 
 # The `WebClientNotification` entity of the SAP Business One Service Layer
 public type WebClientNotification record {|
+    # Read status field.
     @jsondata:Name {value: "ReadStatus"}
     string readStatus?;
+    # Noti type field.
     @jsondata:Name {value: "NotiType"}
     int:Signed32 notiType?;
+    # Activity date field.
     @jsondata:Name {value: "ActivityDate"}
     string activityDate?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Is dismissed field.
     @jsondata:Name {value: "IsDismissed"}
     string isDismissed?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -1183,22 +1433,28 @@ public type ListFormattedSearchesQueries record {
 
 # The `FieldID` complex type of the SAP Business One Service Layer
 public type FieldID record {
+    # Field ID field.
     string FieldID?;
 };
 
 # A paged collection of `ReportTypes` entities returned by the SAP Business One Service Layer
 public type ReportTypesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ReportType[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `AlertManagementDocument` complex type of the SAP Business One Service Layer
 public type AlertManagementDocument record {|
+    # Active field.
     @jsondata:Name {value: "Active"}
     BoYesNoEnum active?;
+    # Document field.
     @jsondata:Name {value: "Document"}
     AlertManagementDocumentEnum document?;
 |};
@@ -1208,20 +1464,24 @@ public type UserMenuItemTypeEnum "umitForm"|"umitQuery"|"umitFolder"|"umitReport
 
 # The `ApprovalTemplateDocument` complex type of the SAP Business One Service Layer
 public type ApprovalTemplateDocument record {|
+    # Document type field.
     @jsondata:Name {value: "DocumentType"}
     ApprovalTemplatesDocumentTypeEnum documentType?;
 |};
 
 # Represents the request payload for the `CompanyService_CreatePeriodWithFinanceParams` operation of the SAP Business One Service Layer
 public type CompanyService_CreatePeriodWithFinanceParams_body record {
+    # Finance period params field.
     @jsondata:Name {value: "FinancePeriodParams"}
     FinancePeriodParams financePeriodParams?;
+    # Period category field.
     @jsondata:Name {value: "PeriodCategory"}
     PeriodCategory periodCategory?;
 };
 
 # Represents the request payload for the `QRCodeService_AddOrUpdateQRCode` operation of the SAP Business One Service Layer
 public type QRCodeService_AddOrUpdateQRCode_body record {
+    # Q r code data field.
     @jsondata:Name {value: "QRCodeData"}
     QRCodeData qRCodeData?;
 };
@@ -1238,14 +1498,19 @@ public type GetWebClientLaunchpadsQueries record {
 
 # The `WorkflowTaskNote` complex type of the SAP Business One Service Layer
 public type WorkflowTaskNote record {|
+    # Note date field.
     @jsondata:Name {value: "NoteDate"}
     string noteDate?;
+    # Task ID field.
     @jsondata:Name {value: "TaskID"}
     int:Signed32 taskID?;
+    # Line ID field.
     @jsondata:Name {value: "LineId"}
     int:Signed32 lineId?;
+    # Note field.
     @jsondata:Name {value: "Note"}
     string note?;
+    # Creator field.
     @jsondata:Name {value: "Creator"}
     string creator?;
 |};
@@ -1332,12 +1597,14 @@ public type GetUserQueriesQueries record {
 
 # Represents the request payload for the `CompanyService_CreatePeriod` operation of the SAP Business One Service Layer
 public type CompanyService_CreatePeriod_body record {
+    # Period category field.
     @jsondata:Name {value: "PeriodCategory"}
     PeriodCategory periodCategory?;
 };
 
 # The `SQLQueryResult` complex type of the SAP Business One Service Layer
 public type SQLQueryResult record {
+    # Sql text field.
     string SqlText?;
 };
 
@@ -1349,34 +1616,47 @@ public type DataSensitiveStatusEnum "dss_FieldNotSentive"|"dss_DataSubjectNotNat
 
 # The `WebClientVariantEmbeddedChart` complex type of the SAP Business One Service Layer
 public type WebClientVariantEmbeddedChart record {|
+    # Time axis field.
     @jsondata:Name {value: "TimeAxis"}
     string timeAxis?;
+    # Web client variant embedded chart value2 collection field.
     @jsondata:Name {value: "WebClientVariantEmbeddedChartValue2Collection"}
     WebClientVariantEmbeddedChartValue2[] webClientVariantEmbeddedChartValue2Collection?;
+    # Shape field.
     @jsondata:Name {value: "Shape"}
     string shape?;
+    # Web client variant embedded chart value1 collection field.
     @jsondata:Name {value: "WebClientVariantEmbeddedChartValue1Collection"}
     WebClientVariantEmbeddedChartValue1[] webClientVariantEmbeddedChartValue1Collection?;
+    # Color field.
     @jsondata:Name {value: "Color"}
     string color?;
+    # Bubble width field.
     @jsondata:Name {value: "BubbleWidth"}
     string bubbleWidth?;
+    # Chart type field.
     @jsondata:Name {value: "ChartType"}
     string chartType?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Is show legend field.
     @jsondata:Name {value: "IsShowLegend"}
     BoYesNoEnum isShowLegend?;
+    # Web client variant embedded chart size collection field.
     @jsondata:Name {value: "WebClientVariantEmbeddedChartSizeCollection"}
     WebClientVariantEmbeddedChartSize[] webClientVariantEmbeddedChartSizeCollection?;
+    # Category axis1 field.
     @jsondata:Name {value: "CategoryAxis1"}
     string categoryAxis1?;
+    # Category axis2 field.
     @jsondata:Name {value: "CategoryAxis2"}
     string categoryAxis2?;
 |};
 
 # Represents the request payload for the `ValueMappingService_RemoveMappedValue` operation of the SAP Business One Service Layer
 public type ValueMappingService_RemoveMappedValue_body record {
+    # V m third party values data field.
     @jsondata:Name {value: "VM_ThirdPartyValuesData"}
     VMThirdPartyValuesData vMThirdPartyValuesData?;
 };
@@ -1390,12 +1670,14 @@ public type ListSectionsHeaders record {
 
 # Represents the request payload for the `ValueMappingService_GetThirdPartyValuesForB1Value` operation of the SAP Business One Service Layer
 public type ValueMappingService_GetThirdPartyValuesForB1Value_body record {
+    # V MB1V alues data field.
     @jsondata:Name {value: "VM_B1ValuesData"}
     VMB1ValuesData vMB1ValuesData?;
 };
 
 # Represents the request payload for the `MobileAppService_GetServiceAppReportContent` operation of the SAP Business One Service Layer
 public type MobileAppService_GetServiceAppReportContent_body record {
+    # Service app report params field.
     @jsondata:Name {value: "ServiceAppReportParams"}
     ServiceAppReportParams serviceAppReportParams?;
 };
@@ -1415,6 +1697,7 @@ public type GetApprovalRequestsQueries record {
 
 # The `HolidayParams` complex type of the SAP Business One Service Layer
 public type HolidayParams record {|
+    # Holiday code field.
     @jsondata:Name {value: "HolidayCode"}
     string holidayCode?;
 |};
@@ -1428,16 +1711,22 @@ public type ListCountriesHeaders record {
 
 # The `State` entity of the SAP Business One Service Layer
 public type State record {|
+    # Country2 field.
     @jsondata:Name {value: "Country2"}
     Country country2?;
+    # Is union territory field.
     @jsondata:Name {value: "IsUnionTerritory"}
     BoYesNoEnum isUnionTerritory?;
+    # Country field.
     @jsondata:Name {value: "Country"}
     string country?;
+    # G ST code field.
     @jsondata:Name {value: "GSTCode"}
     string gSTCode?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1454,20 +1743,26 @@ public type GetStatesQueries record {
 
 # The `WebClientVariantSortBy` complex type of the SAP Business One Service Layer
 public type WebClientVariantSortBy record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Direction field.
     @jsondata:Name {value: "Direction"}
     string direction?;
 |};
 
 # The `DepartmentParams` complex type of the SAP Business One Service Layer
 public type DepartmentParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -1477,12 +1772,16 @@ public type SAFTProductTypeEnum "saftpt_Products"|"saftpt_Services"|"saftpt_Othe
 
 # The `SupportUserLoginRecord` complex type of the SAP Business One Service Layer
 public type SupportUserLoginRecord record {|
+    # Log detail field.
     @jsondata:Name {value: "LogDetail"}
     string logDetail?;
+    # Log reason field.
     @jsondata:Name {value: "LogReason"}
     SupportUserLoginRecordLogReasonTypeEnum logReason?;
+    # I d field.
     @jsondata:Name {value: "ID"}
     int:Signed32 iD?;
+    # Real name field.
     @jsondata:Name {value: "RealName"}
     string realName?;
 |};
@@ -1492,18 +1791,24 @@ public type BoApprovalRequestDecisionEnum "ardPending"|"ardApproved"|"ardNotAppr
 
 # A paged collection of `SingleUserConnections` entities returned by the SAP Business One Service Layer
 public type SingleUserConnectionsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     SingleUserConnection[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `EventSubscriptions` entities returned by the SAP Business One Service Layer
 public type EventSubscriptionsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     EventSubscription[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1513,596 +1818,887 @@ public type BoSeriesTypeEnum "stDocument"|"stBusinessPartner"|"stItem"|"stResour
 
 # Represents the request payload for the `CompanyService_UpdateFinancePeriod` operation of the SAP Business One Service Layer
 public type CompanyService_UpdateFinancePeriod_body record {
+    # Finance period field.
     @jsondata:Name {value: "FinancePeriod"}
     FinancePeriod financePeriod?;
 };
 
 # The `AdminInfo` complex type of the SAP Business One Service Layer
 public type AdminInfo record {|
+    # Alert typefor warehouse stock field.
     @jsondata:Name {value: "AlertTypeforWHStock"}
     BoAlertTypeforWHStockEnum alertTypeforWHStock?;
+    # Inventory posting highlight variance field.
     @jsondata:Name {value: "InventoryPostingHighlightVariance"}
     decimal inventoryPostingHighlightVariance?;
+    # Auto assign only valid ARBA field.
     @jsondata:Name {value: "AutoAssignOnlyValidARBA"}
     BoYesNoEnum autoAssignOnlyValidARBA?;
+    # Bank country field.
     @jsondata:Name {value: "BankCountry"}
     string bankCountry?;
+    # System currency field.
     @jsondata:Name {value: "SystemCurrency"}
     string systemCurrency?;
+    # Bank statement installed field.
     @jsondata:Name {value: "BankStatementInstalled"}
     BoYesNoEnum bankStatementInstalled?;
+    # Block multiple BA on same accounts payable document field.
     @jsondata:Name {value: "BlockMultipleBAOnSameAPDocument"}
     BoYesNoEnum blockMultipleBAOnSameAPDocument?;
+    # File numberin income tax field.
     @jsondata:Name {value: "FileNumberinIncomeTax"}
     string fileNumberinIncomeTax?;
+    # Alt namefor credit memo field.
     @jsondata:Name {value: "AltNameforCreditMemo"}
     string altNameforCreditMemo?;
+    # E mail field.
     string eMail?;
+    # Deferred taxfor vendors field.
     @jsondata:Name {value: "DeferredTaxforVendors"}
     BoYesNoEnum deferredTaxforVendors?;
+    # W t accum amount accounts receivable field.
     @jsondata:Name {value: "WTAccumAmountAR"}
     decimal wTAccumAmountAR?;
+    # Period status auto change field.
     @jsondata:Name {value: "PeriodStatusAutoChange"}
     BoYesNoEnum periodStatusAutoChange?;
+    # Alt name for goods return field.
     @jsondata:Name {value: "AltNameForGoodsReturn"}
     string altNameForGoodsReturn?;
+    # W t accum amount accounts payable field.
     @jsondata:Name {value: "WTAccumAmountAP"}
     decimal wTAccumAmountAP?;
+    # Fax number field.
     @jsondata:Name {value: "FaxNumber"}
     string faxNumber?;
+    # Alias name field.
     @jsondata:Name {value: "AliasName"}
     string aliasName?;
+    # Calculate in whse quantity based on posting date field.
     @jsondata:Name {value: "CalculateInWhseQtyBasedOnPostingDate"}
     BoYesNoEnum calculateInWhseQtyBasedOnPostingDate?;
+    # Webhook retry times field.
     @jsondata:Name {value: "WebhookRetryTimes"}
     int:Signed32 webhookRetryTimes?;
+    # Default budget cost assess mt field.
     @jsondata:Name {value: "DefaultBudgetCostAssessMt"}
     int:Signed32 defaultBudgetCostAssessMt?;
+    # Enable webhook field.
     @jsondata:Name {value: "EnableWebhook"}
     BoYesNoEnum enableWebhook?;
+    # Set items warehouses field.
     @jsondata:Name {value: "SetItemsWarehouses"}
     BoYesNoEnum setItemsWarehouses?;
+    # Message batch limit field.
     @jsondata:Name {value: "MessageBatchLimit"}
     int:Signed32 messageBatchLimit?;
+    # Display inactive price list in reports field.
     @jsondata:Name {value: "DisplayInactivePriceListInReports"}
     BoYesNoEnum displayInactivePriceListInReports?;
+    # Inventory counting highlight variance field.
     @jsondata:Name {value: "InventoryCountingHighlightVariance"}
     decimal inventoryCountingHighlightVariance?;
+    # Default bank account key field.
     @jsondata:Name {value: "DefaultBankAccountKey"}
     int:Signed32 defaultBankAccountKey?;
+    # Withholding tax tdct percnt field.
     @jsondata:Name {value: "WithholdingTaxTdctPercnt"}
     decimal withholdingTaxTdctPercnt?;
+    # Service password field.
     @jsondata:Name {value: "ServicePassword"}
     string servicePassword?;
+    # Use production profit and loss account field.
     @jsondata:Name {value: "UseProductionProfitAndLossAccount"}
     BoYesNoEnum useProductionProfitAndLossAccount?;
+    # G TS outbound folder field.
     @jsondata:Name {value: "GTSOutboundFolder"}
     string gTSOutboundFolder?;
+    # Extended admin information field.
     @jsondata:Name {value: "ExtendedAdminInfo"}
     ExtendedAdminInfo extendedAdminInfo?;
+    # Rounding method field.
     @jsondata:Name {value: "RoundingMethod"}
     BoYesNoEnum roundingMethod?;
+    # Boleto folder path field.
     @jsondata:Name {value: "BoletoFolderPath"}
     string boletoFolderPath?;
+    # Display inactive price list in documents field.
     @jsondata:Name {value: "DisplayInactivePriceListInDocuments"}
     BoYesNoEnum displayInactivePriceListInDocuments?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Allow business partner with number owner field.
     @jsondata:Name {value: "AllowBPWithNoOwner"}
     BoYesNoEnum allowBPWithNoOwner?;
+    # Default vendor payment terms field.
     @jsondata:Name {value: "DefaultVendorPaymentTerms"}
     int:Signed32 defaultVendorPaymentTerms?;
+    # Price listfor cost price field.
     @jsondata:Name {value: "PriceListforCostPrice"}
     int:Signed32 priceListforCostPrice?;
+    # Chartof accounts template field.
     @jsondata:Name {value: "ChartofAccountsTemplate"}
     string chartofAccountsTemplate?;
+    # Block system currency editing field.
     @jsondata:Name {value: "BlockSystemCurrencyEditing"}
     BoYesNoEnum blockSystemCurrencyEditing?;
+    # Holidays name field.
     @jsondata:Name {value: "HolidaysName"}
     string holidaysName?;
+    # I SR type field.
     @jsondata:Name {value: "ISRType"}
     int:Signed32 iSRType?;
+    # Enable update draft during approval field.
     @jsondata:Name {value: "EnableUpdateDraftDuringApproval"}
     BoYesNoEnum enableUpdateDraftDuringApproval?;
+    # Printing header field.
     @jsondata:Name {value: "PrintingHeader"}
     string printingHeader?;
+    # Multi currency check field.
     @jsondata:Name {value: "MultiCurrencyCheck"}
     BoCurrencyCheck multiCurrencyCheck?;
+    # Unique serial number field.
     @jsondata:Name {value: "UniqueSerialNo"}
     BoUniqueSerialNumber uniqueSerialNo?;
+    # Close counted rows with zero difference field.
     @jsondata:Name {value: "CloseCountedRowsWithZeroDifference"}
     BoYesNoEnum closeCountedRowsWithZeroDifference?;
+    # Data ownership manage by field.
     @jsondata:Name {value: "DataOwnershipManageBy"}
     BoDataOwnershipManageMethodEnum dataOwnershipManageBy?;
+    # Maximum number of days for due date field.
     @jsondata:Name {value: "MaximumNumberOfDaysForDueDate"}
     int:Signed32 maximumNumberOfDaysForDueDate?;
+    # Local currency field.
     @jsondata:Name {value: "LocalCurrency"}
     string localCurrency?;
+    # I SR biller ID field.
     @jsondata:Name {value: "ISRBillerID"}
     string iSRBillerID?;
+    # Alt name for goods receipt field.
     @jsondata:Name {value: "AltNameForGoodsReceipt"}
     string altNameForGoodsReceipt?;
+    # S handle withholding tax field.
     @jsondata:Name {value: "SHandleWT"}
     BoYesNoEnum sHandleWT?;
+    # Inventory counting highlight max variance field.
     @jsondata:Name {value: "InventoryCountingHighlightMaxVariance"}
     decimal inventoryCountingHighlightMaxVariance?;
+    # Customer ID number field.
     @jsondata:Name {value: "CustomerIdNumber"}
     string customerIdNumber?;
+    # Service code field.
     @jsondata:Name {value: "ServiceCode"}
     string serviceCode?;
+    # Max number of web hooks field.
     @jsondata:Name {value: "MaxNumberOfWebHooks"}
     int:Signed32 maxNumberOfWebHooks?;
+    # Block del notesfor purchase field.
     @jsondata:Name {value: "BlockDelNotesforPurchase"}
     BoYesNoEnum blockDelNotesforPurchase?;
+    # Enable payment due dates field.
     @jsondata:Name {value: "EnablePaymentDueDates"}
     BoYesNoEnum enablePaymentDueDates?;
+    # Default customer price list field.
     @jsondata:Name {value: "DefaultCustomerPriceList"}
     int:Signed32 defaultCustomerPriceList?;
+    # Withholding tax vendor ddct field.
     @jsondata:Name {value: "WithholdingTaxVendorDdct"}
     BoYesNoEnum withholdingTaxVendorDdct?;
+    # Sales ln w tax field.
     @jsondata:Name {value: "SalesLnWTax"}
     BoYesNoEnum salesLnWTax?;
+    # Consider del notesin sales r field.
     @jsondata:Name {value: "ConsiderDelNotesinSalesR"}
     BoYesNoEnum considerDelNotesinSalesR?;
+    # Document confirmation field.
     @jsondata:Name {value: "DocConfirmation"}
     BoYesNoEnum docConfirmation?;
+    # Excel folder path field.
     @jsondata:Name {value: "ExcelFolderPath"}
     string excelFolderPath?;
+    # Default vendor price list field.
     @jsondata:Name {value: "DefaultVendorPriceList"}
     int:Signed32 defaultVendorPriceList?;
+    # Apply base inactive status to special prices field.
     @jsondata:Name {value: "ApplyBaseInactiveStatusToSpecialPrices"}
     BoYesNoEnum applyBaseInactiveStatusToSpecialPrices?;
+    # Addressin foreign language field.
     @jsondata:Name {value: "AddressinForeignLanguage"}
     string addressinForeignLanguage?;
+    # Consumption method field.
     @jsondata:Name {value: "ConsumptionMethod"}
     BoConsumptionMethod consumptionMethod?;
+    # Sales post payment category ln w tax field.
     @jsondata:Name {value: "SalesPostPaymentCategoryLnWTax"}
     BoYesNoEnum salesPostPaymentCategoryLnWTax?;
+    # Display pricefor price only field.
     @jsondata:Name {value: "DisplayPriceforPriceOnly"}
     BoYesNoEnum displayPriceforPriceOnly?;
+    # Query accuracy field.
     @jsondata:Name {value: "QueryAccuracy"}
     int:Signed32 queryAccuracy?;
+    # Weight unit default field.
     @jsondata:Name {value: "WeightUnitDefault"}
     int:Signed32 weightUnitDefault?;
+    # Company color field.
     @jsondata:Name {value: "CompanyColor"}
     int:Signed32 companyColor?;
+    # Wholding tax ded hierarchy field.
     @jsondata:Name {value: "WholdingTaxDedHierarchy"}
     BoYesNoEnum wholdingTaxDedHierarchy?;
+    # Reuse nota fiscal number field.
     @jsondata:Name {value: "ReuseNotaFiscalNum"}
     BoYesNoEnum reuseNotaFiscalNum?;
+    # Set resources warehouses field.
     @jsondata:Name {value: "SetResourcesWarehouses"}
     BoYesNoEnum setResourcesWarehouses?;
+    # Display batch quantity uo m by field.
     @jsondata:Name {value: "DisplayBatchQtyUoMBy"}
     DisplayBatchQtyUoMByEnum displayBatchQtyUoMBy?;
+    # Inventory counting highlight counters difference field.
     @jsondata:Name {value: "InventoryCountingHighlightCountersDifference"}
     decimal inventoryCountingHighlightCountersDifference?;
+    # Electronic report information field.
     @jsondata:Name {value: "ElectronicReportInfo"}
     ElectronicReportInfo electronicReportInfo?;
+    # Action when deviate from BA for accounting field.
     @jsondata:Name {value: "ActionWhenDeviateFromBAForAccounting"}
     BADivationAlertLevelEnum actionWhenDeviateFromBAForAccounting?;
+    # Defaultfor batch status field.
     @jsondata:Name {value: "DefaultforBatchStatus"}
     BoDefaultBatchStatus defaultforBatchStatus?;
+    # Enable multiple schedulings field.
     @jsondata:Name {value: "EnableMultipleSchedulings"}
     string enableMultipleSchedulings?;
+    # Deferred tax field.
     @jsondata:Name {value: "DeferredTax"}
     BoYesNoEnum deferredTax?;
+    # Enable digital payments field.
     @jsondata:Name {value: "EnableDigitalPayments"}
     BoYesNoEnum enableDigitalPayments?;
+    # Fax number foreign lang field.
     @jsondata:Name {value: "FaxNumberForeignLang"}
     string faxNumberForeignLang?;
+    # Message TTL field.
     @jsondata:Name {value: "MessageTTL"}
     int:Signed32 messageTTL?;
+    # P default withholding tax code field.
     @jsondata:Name {value: "PDefaultWTCode"}
     string pDefaultWTCode?;
+    # Federal tax ID field.
     @jsondata:Name {value: "FederalTaxID"}
     string federalTaxID?;
+    # Accuracyof quantities field.
     @jsondata:Name {value: "AccuracyofQuantities"}
     int:Signed32 accuracyofQuantities?;
+    # Message retention time field.
     @jsondata:Name {value: "MessageRetentionTime"}
     int:Signed32 messageRetentionTime?;
+    # Adress from warehouse field.
     @jsondata:Name {value: "AdressFromWH"}
     BoYesNoEnum adressFromWH?;
+    # Default tax code field.
     @jsondata:Name {value: "DefaultTaxCode"}
     string defaultTaxCode?;
+    # P BS number field.
     @jsondata:Name {value: "PBSNumber"}
     string pBSNumber?;
+    # P BS group number field.
     @jsondata:Name {value: "PBSGroupNumber"}
     string pBSGroupNumber?;
+    # General manager field.
     @jsondata:Name {value: "GeneralManager"}
     string generalManager?;
+    # Use PA system field.
     @jsondata:Name {value: "UsePASystem"}
     BoYesNoEnum usePASystem?;
+    # Is printer connected field.
     @jsondata:Name {value: "IsPrinterConnected"}
     BoYesNoEnum isPrinterConnected?;
+    # Totals accuracy field.
     @jsondata:Name {value: "TotalsAccuracy"}
     int:Signed32 totalsAccuracy?;
+    # Allow closed sales quotations field.
     @jsondata:Name {value: "AllowClosedSalesQuotations"}
     BoYesNoEnum allowClosedSalesQuotations?;
+    # Certificate number field.
     @jsondata:Name {value: "CertificateNo"}
     string certificateNo?;
+    # Dont duplicatw attachment field.
     @jsondata:Name {value: "DontDuplicatwAttachment"}
     BoYesNoEnum dontDuplicatwAttachment?;
+    # Enable external tax field.
     @jsondata:Name {value: "EnableExternalTax"}
     BoYesNoEnum enableExternalTax?;
+    # Minimum amountfor347 report field.
     @jsondata:Name {value: "MinimumAmountfor347Report"}
     decimal minimumAmountfor347Report?;
+    # State field.
     @jsondata:Name {value: "State"}
     string state?;
+    # Alt name for purchase field.
     @jsondata:Name {value: "AltNameForPurchase"}
     string altNameForPurchase?;
+    # Enable centralized incoming payments field.
     @jsondata:Name {value: "EnableCentralizedIncomingPayments"}
     BoYesNoEnum enableCentralizedIncomingPayments?;
+    # Rate accuracy field.
     @jsondata:Name {value: "RateAccuracy"}
     int:Signed32 rateAccuracy?;
+    # Max history field.
     @jsondata:Name {value: "MaxHistory"}
     int:Signed32 maxHistory?;
+    # Withholding tax ddct expired field.
     @jsondata:Name {value: "WithholdingTaxDdctExpired"}
     string withholdingTaxDdctExpired?;
+    # Phone number2 foreign lang field.
     @jsondata:Name {value: "PhoneNumber2ForeignLang"}
     string phoneNumber2ForeignLang?;
+    # Credit restriction field.
     @jsondata:Name {value: "CreditRestriction"}
     BoYesNoEnum creditRestriction?;
+    # Date separator field.
     @jsondata:Name {value: "DateSeparator"}
     string dateSeparator?;
+    # Continuous stock management field.
     @jsondata:Name {value: "ContinuousStockManagement"}
     BoYesNoEnum continuousStockManagement?;
+    # Webhook retry interval field.
     @jsondata:Name {value: "WebhookRetryInterval"}
     int:Signed32 webhookRetryInterval?;
+    # G TS inbound folder field.
     @jsondata:Name {value: "GTSInboundFolder"}
     string gTSInboundFolder?;
+    # Attachment entry for file storage field.
     @jsondata:Name {value: "AttachmentEntryForFileStorage"}
     int:Signed32 attachmentEntryForFileStorage?;
+    # Enable advanced general ledger account determination field.
     @jsondata:Name {value: "EnableAdvancedGLAccountDetermination"}
     BoYesNoEnum enableAdvancedGLAccountDetermination?;
+    # Customers deductionat source field.
     @jsondata:Name {value: "CustomersDeductionatSource"}
     BoYesNoEnum customersDeductionatSource?;
+    # G l method field.
     @jsondata:Name {value: "GLMethod"}
     BoGLMethods gLMethod?;
+    # User conversion code field.
     @jsondata:Name {value: "UserConversionCode"}
     BoYesNoEnum userConversionCode?;
+    # Additional ID number field.
     @jsondata:Name {value: "AdditionalIdNumber"}
     string additionalIdNumber?;
+    # Restrict del notes purchase order field.
     @jsondata:Name {value: "RestrictDelNotesPO"}
     BoYesNoEnum restrictDelNotesPO?;
+    # Days backward field.
     @jsondata:Name {value: "DaysBackward"}
     int:Signed32 daysBackward?;
+    # Auto add package field.
     @jsondata:Name {value: "AutoAddPackage"}
     BoYesNoEnum autoAddPackage?;
+    # Dont overwrite atc with same name field.
     @jsondata:Name {value: "DontOverwriteAtcWithSameName"}
     BoYesNoEnum dontOverwriteAtcWithSameName?;
+    # Consume forecast field.
     @jsondata:Name {value: "ConsumeForecast"}
     BoYesNoEnum consumeForecast?;
+    # Enable approval procedure in DI field.
     @jsondata:Name {value: "EnableApprovalProcedureInDI"}
     BoYesNoEnum enableApprovalProcedureInDI?;
+    # Tax percentage field.
     @jsondata:Name {value: "TaxPercentage"}
     decimal taxPercentage?;
+    # G TS default payee field.
     @jsondata:Name {value: "GTSDefaultPayee"}
     int:Signed32 gTSDefaultPayee?;
+    # Display inactive price list in settings field.
     @jsondata:Name {value: "DisplayInactivePriceListInSettings"}
     BoYesNoEnum displayInactivePriceListInSettings?;
+    # Report according to field.
     @jsondata:Name {value: "ReportAccordingTo"}
     int:Signed32 reportAccordingTo?;
+    # Allow future posting date field.
     @jsondata:Name {value: "AllowFuturePostingDate"}
     BoYesNoEnum allowFuturePostingDate?;
+    # I e mandatory validation field.
     @jsondata:Name {value: "IEMandatoryValidation"}
     BoYesNoEnum iEMandatoryValidation?;
+    # Use default price list field.
     @jsondata:Name {value: "UseDefaultPriceList"}
     BoYesNoEnum useDefaultPriceList?;
+    # Use parent WIP in components field.
     @jsondata:Name {value: "UseParentWIPInComponents"}
     BoYesNoEnum useParentWIPInComponents?;
+    # Tax definitionfor vatitem field.
     @jsondata:Name {value: "TaxDefinitionforVatitem"}
     string taxDefinitionforVatitem?;
+    # General manager foreign language field.
     @jsondata:Name {value: "GeneralManagerForeignLanguage"}
     string generalManagerForeignLanguage?;
+    # G TS separate code field.
     @jsondata:Name {value: "GTSSeparateCode"}
     string gTSSeparateCode?;
+    # Multi language support enable field.
     @jsondata:Name {value: "MultiLanguageSupportEnable"}
     BoYesNoEnum multiLanguageSupportEnable?;
+    # Calculate row discount field.
     @jsondata:Name {value: "CalculateRowDiscount"}
     BoYesNoEnum calculateRowDiscount?;
+    # Sales apply exh rates ln w tax field.
     @jsondata:Name {value: "SalesApplyExhRatesLnWTax"}
     BoYesNoEnum salesApplyExhRatesLnWTax?;
+    # Tax collection field.
     @jsondata:Name {value: "TaxCollection"}
     BoYesNoEnum taxCollection?;
+    # Account field.
     @jsondata:Name {value: "Account"}
     string account?;
+    # Organization number field.
     @jsondata:Name {value: "OrganizationNumber"}
     string organizationNumber?;
+    # Account segments separator field.
     @jsondata:Name {value: "AccountSegmentsSeparator"}
     string accountSegmentsSeparator?;
+    # Address field.
     @jsondata:Name {value: "Address"}
     string address?;
+    # Block stock negative quantity field.
     @jsondata:Name {value: "BlockStockNegativeQuantity"}
     BoYesNoEnum blockStockNegativeQuantity?;
+    # Default bank number field.
     @jsondata:Name {value: "DefaultBankNo"}
     string defaultBankNo?;
+    # Institution code field.
     @jsondata:Name {value: "InstitutionCode"}
     string institutionCode?;
+    # Create auto VAT linein JDT field.
     @jsondata:Name {value: "CreateAutoVATLineinJDT"}
     BoYesNoEnum createAutoVATLineinJDT?;
+    # Default warehouse field.
     @jsondata:Name {value: "DefaultWarehouse"}
     string defaultWarehouse?;
+    # Refresh in whse quantity in DI field.
     @jsondata:Name {value: "RefreshInWhseQtyInDI"}
     BoYesNoEnum refreshInWhseQtyInDI?;
+    # Tax groupfor purchase item field.
     @jsondata:Name {value: "TaxGroupforPurchaseItem"}
     string taxGroupforPurchaseItem?;
+    # Price system field.
     @jsondata:Name {value: "PriceSystem"}
     BoYesNoEnum priceSystem?;
+    # Apply base inactive status to price lists field.
     @jsondata:Name {value: "ApplyBaseInactiveStatusToPriceLists"}
     BoYesNoEnum applyBaseInactiveStatusToPriceLists?;
+    # Block purchase orders field.
     @jsondata:Name {value: "BlockPurchaseOrders"}
     BoYesNoEnum blockPurchaseOrders?;
+    # Copy attachments from bill of materials field.
     @jsondata:Name {value: "CopyAttachmentsFromBOM"}
     BoYesNoEnum copyAttachmentsFromBOM?;
+    # Copy open rows to delivery field.
     @jsondata:Name {value: "CopyOpenRowsToDelivery"}
     BoYesNoEnum copyOpenRowsToDelivery?;
+    # Param folder path field.
     @jsondata:Name {value: "ParamFolderPath"}
     string paramFolderPath?;
+    # With tax field.
     @jsondata:Name {value: "WithTax"}
     decimal withTax?;
+    # Number of char in month field.
     @jsondata:Name {value: "NumberOfCharInMonth"}
     int:Signed32 numberOfCharInMonth?;
+    # Thousands separator field.
     @jsondata:Name {value: "ThousandsSeparator"}
     string thousandsSeparator?;
+    # Enable update BA price and planned amount field.
     @jsondata:Name {value: "EnableUpdateBAPriceAndPlannedAmount"}
     BoYesNoEnum enableUpdateBAPriceAndPlannedAmount?;
+    # Auto add uo m field.
     @jsondata:Name {value: "AutoAddUoM"}
     BoYesNoEnum autoAddUoM?;
+    # Is remove unpriced value field.
     @jsondata:Name {value: "IsRemoveUnpricedValue"}
     BoYesNoEnum isRemoveUnpricedValue?;
+    # Use negative amounts field.
     @jsondata:Name {value: "UseNegativeAmounts"}
     BoYesNoEnum useNegativeAmounts?;
+    # Purchase order confirmed field.
     @jsondata:Name {value: "PurchaseOrderConfirmed"}
     BoYesNoEnum purchaseOrderConfirmed?;
+    # Restrict sales field.
     @jsondata:Name {value: "RestrictSales"}
     BoYesNoEnum restrictSales?;
+    # Calculate gross profitper tra field.
     @jsondata:Name {value: "CalculateGrossProfitperTra"}
     BoYesNoEnum calculateGrossProfitperTra?;
+    # Set commissionby SE field.
     @jsondata:Name {value: "SetCommissionbySE"}
     BoYesNoEnum setCommissionbySE?;
+    # Country field.
     @jsondata:Name {value: "Country"}
     string country?;
+    # Starting in fiscal year field.
     @jsondata:Name {value: "StartingInFiscalYear"}
     int:Signed32 startingInFiscalYear?;
+    # Default account currency field.
     @jsondata:Name {value: "DefaultAccountCurrency"}
     BoYesNoEnum defaultAccountCurrency?;
+    # Action when deviate from BA for GRPO field.
     @jsondata:Name {value: "ActionWhenDeviateFromBAForGRPO"}
     BADivationAlertLevelEnum actionWhenDeviateFromBAForGRPO?;
+    # Block budget field.
     @jsondata:Name {value: "BlockBudget"}
     BoBlockBudget blockBudget?;
+    # Base field field.
     @jsondata:Name {value: "BaseField"}
     BoYesNoEnum baseField?;
+    # Reuse document number field.
     @jsondata:Name {value: "ReuseDocumentNum"}
     BoYesNoEnum reuseDocumentNum?;
+    # Display bookkeeping window field.
     @jsondata:Name {value: "DisplayBookkeepingWindow"}
     BoYesNoEnum displayBookkeepingWindow?;
+    # Webhook request timeout field.
     @jsondata:Name {value: "WebhookRequestTimeout"}
     int:Signed32 webhookRequestTimeout?;
+    # Use tax field.
     @jsondata:Name {value: "UseTax"}
     BoYesNoEnum useTax?;
+    # Block tax date field.
     @jsondata:Name {value: "BlockTaxDate"}
     BoYesNoEnum blockTaxDate?;
+    # Tax definitionfor vatservice field.
     @jsondata:Name {value: "TaxDefinitionforVatservice"}
     string taxDefinitionforVatservice?;
+    # X ML file folder path field.
     @jsondata:Name {value: "XMLFileFolderPath"}
     string xMLFileFolderPath?;
+    # Price accuracy field.
     @jsondata:Name {value: "PriceAccuracy"}
     int:Signed32 priceAccuracy?;
+    # Siren number field.
     @jsondata:Name {value: "SirenNo"}
     string sirenNo?;
+    # Sales order confirmed field.
     @jsondata:Name {value: "SalesOrderConfirmed"}
     BoYesNoEnum salesOrderConfirmed?;
+    # Copy single counter to individual counter field.
     @jsondata:Name {value: "CopySingleCounterToIndividualCounter"}
     BoYesNoEnum copySingleCounterToIndividualCounter?;
+    # Display rounding remark field.
     @jsondata:Name {value: "DisplayRoundingRemark"}
     BoYesNoEnum displayRoundingRemark?;
+    # Credit deposit type field.
     @jsondata:Name {value: "CreditDepositType"}
     BoYesNoEnum creditDepositType?;
+    # Date template field.
     @jsondata:Name {value: "DateTemplate"}
     BoDateTemplate dateTemplate?;
+    # Purchase post payment category ln w tax field.
     @jsondata:Name {value: "PurchasePostPaymentCategoryLnWTax"}
     BoYesNoEnum purchasePostPaymentCategoryLnWTax?;
+    # Close counted rows without confirmation field.
     @jsondata:Name {value: "CloseCountedRowsWithoutConfirmation"}
     BoYesNoEnum closeCountedRowsWithoutConfirmation?;
+    # Decimal separator field.
     @jsondata:Name {value: "DecimalSeparator"}
     string decimalSeparator?;
+    # B p type code field.
     @jsondata:Name {value: "BPTypeCode"}
     string bPTypeCode?;
+    # Change def recon accounts payable accounts field.
     @jsondata:Name {value: "ChangeDefReconAPAccounts"}
     BoYesNoEnum changeDefReconAPAccounts?;
+    # Display cancel document in report field.
     @jsondata:Name {value: "DisplayCancelDocInReport"}
     BoYesNoEnum displayCancelDocInReport?;
+    # E ORI number field.
     @jsondata:Name {value: "EORINumber"}
     string eORINumber?;
+    # Copy attachments from base to target field.
     @jsondata:Name {value: "CopyAttachmentsFromBaseToTarget"}
     BoYesNoEnum copyAttachmentsFromBaseToTarget?;
+    # Percentage accuracy field.
     @jsondata:Name {value: "PercentageAccuracy"}
     int:Signed32 percentageAccuracy?;
+    # G TS max amount field.
     @jsondata:Name {value: "GTSMaxAmount"}
     decimal gTSMaxAmount?;
+    # Tax office field.
     @jsondata:Name {value: "TaxOffice"}
     string taxOffice?;
+    # Gross profit percent for service documents field.
     @jsondata:Name {value: "GrossProfitPercentForServiceDocuments"}
     decimal grossProfitPercentForServiceDocuments?;
+    # Changed existing orders field.
     @jsondata:Name {value: "ChangedExistingOrders"}
     BoYesNoEnum changedExistingOrders?;
+    # Expiration date field.
     @jsondata:Name {value: "ExpirationDate"}
     string expirationDate?;
+    # Managing director field.
     @jsondata:Name {value: "ManagingDirector"}
     string managingDirector?;
+    # Credit balancewith minus sign field.
     @jsondata:Name {value: "CreditBalancewithMinusSign"}
     BoYesNoEnum creditBalancewithMinusSign?;
+    # Restrict orders field.
     @jsondata:Name {value: "RestrictOrders"}
     BoYesNoEnum restrictOrders?;
+    # Price proceed method field.
     @jsondata:Name {value: "PriceProceedMethod"}
     PriceProceedMethodEnum priceProceedMethod?;
+    # Allow in bound posting with zero price field.
     @jsondata:Name {value: "AllowInBoundPostingWithZeroPrice"}
     BoYesNoEnum allowInBoundPostingWithZeroPrice?;
+    # Measuring accuracy field.
     @jsondata:Name {value: "MeasuringAccuracy"}
     int:Signed32 measuringAccuracy?;
+    # Action when deviate from BA for purchase order field.
     @jsondata:Name {value: "ActionWhenDeviateFromBAForPO"}
     BADivationAlertLevelEnum actionWhenDeviateFromBAForPO?;
+    # Enable centralized outgoing payments field.
     @jsondata:Name {value: "EnableCentralizedOutgoingPayments"}
     BoYesNoEnum enableCentralizedOutgoingPayments?;
+    # Block multiple BA on same accounts receivable document field.
     @jsondata:Name {value: "BlockMultipleBAOnSameARDocument"}
     BoYesNoEnum blockMultipleBAOnSameARDocument?;
+    # Auto assign only valid APBA field.
     @jsondata:Name {value: "AutoAssignOnlyValidAPBA"}
     BoYesNoEnum autoAssignOnlyValidAPBA?;
+    # Display currencyonthe right field.
     @jsondata:Name {value: "DisplayCurrencyontheRight"}
     BoYesNoEnum displayCurrencyontheRight?;
+    # Tax groupfor service purchase field.
     @jsondata:Name {value: "TaxGroupforServicePurchase"}
     string taxGroupforServicePurchase?;
+    # Gross profit after sale field.
     @jsondata:Name {value: "GrossProfitAfterSale"}
     BoYesNoEnum grossProfitAfterSale?;
+    # Company name field.
     @jsondata:Name {value: "CompanyName"}
     string companyName?;
+    # Remove update prices based on non standard price lists field.
     @jsondata:Name {value: "RemoveUpdatePricesBasedOnNonStandardPriceLists"}
     BoYesNoEnum removeUpdatePricesBasedOnNonStandardPriceLists?;
+    # F c check account field.
     @jsondata:Name {value: "FCCheckAccount"}
     BoCurrencyCheck fCCheckAccount?;
+    # Enable separate price mode field.
     @jsondata:Name {value: "EnableSeparatePriceMode"}
     BoYesNoEnum enableSeparatePriceMode?;
+    # Unique tax payer reference field.
     @jsondata:Name {value: "UniqueTaxPayerReference"}
     string uniqueTaxPayerReference?;
+    # Purchase apply exh rates ln w tax WX field.
     @jsondata:Name {value: "PurchaseApplyExhRatesLnWTaxWX"}
     BoYesNoEnum purchaseApplyExhRatesLnWTaxWX?;
+    # Set commissionby item field.
     @jsondata:Name {value: "SetCommissionbyItem"}
     BoYesNoEnum setCommissionbyItem?;
+    # Issue primarily by field.
     @jsondata:Name {value: "IssuePrimarilyBy"}
     IssuePrimarilyByEnum issuePrimarilyBy?;
+    # Split purchase order field.
     @jsondata:Name {value: "SplitPO"}
     BoYesNoEnum splitPO?;
+    # Budget alert field.
     @jsondata:Name {value: "BudgetAlert"}
     BoBudgetAlert budgetAlert?;
+    # Default branch field.
     @jsondata:Name {value: "DefaultBranch"}
     string defaultBranch?;
+    # Days forward field.
     @jsondata:Name {value: "DaysForward"}
     int:Signed32 daysForward?;
+    # Round tax amounts field.
     @jsondata:Name {value: "RoundTaxAmounts"}
     BoYesNoEnum roundTaxAmounts?;
+    # Phone number2 field.
     @jsondata:Name {value: "PhoneNumber2"}
     string phoneNumber2?;
+    # Ordering party field.
     @jsondata:Name {value: "OrderingParty"}
     string orderingParty?;
+    # Phone number1 field.
     @jsondata:Name {value: "PhoneNumber1"}
     string phoneNumber1?;
+    # Standard unitof length field.
     @jsondata:Name {value: "StandardUnitofLength"}
     int:Signed32 standardUnitofLength?;
+    # Default customer payment terms field.
     @jsondata:Name {value: "DefaultCustomerPaymentTerms"}
     int:Signed32 defaultCustomerPaymentTerms?;
+    # Direct indirect rate field.
     @jsondata:Name {value: "DirectIndirectRate"}
     BoYesNoEnum directIndirectRate?;
+    # Phone number1 foreign lang field.
     @jsondata:Name {value: "PhoneNumber1ForeignLang"}
     string phoneNumber1ForeignLang?;
+    # Set commissionby customer field.
     @jsondata:Name {value: "SetCommissionbyCustomer"}
     BoYesNoEnum setCommissionbyCustomer?;
+    # Purchase ln w tax field.
     @jsondata:Name {value: "PurchaseLnWTax"}
     BoYesNoEnum purchaseLnWTax?;
+    # National insurance number field.
     @jsondata:Name {value: "NationalInsuranceNo"}
     string nationalInsuranceNo?;
+    # Order block field.
     @jsondata:Name {value: "OrderBlock"}
     string orderBlock?;
+    # Block bookkeeping field.
     @jsondata:Name {value: "BlockBookkeeping"}
     BoYesNoEnum blockBookkeeping?;
+    # Tax rate determination field.
     @jsondata:Name {value: "TaxRateDetermination"}
     TaxRateDeterminationEnum taxRateDetermination?;
+    # Pick list field.
     @jsondata:Name {value: "PickList"}
     BoYesNoEnum pickList?;
+    # Withholding tax ddct office field.
     @jsondata:Name {value: "WithholdingTaxDdctOffice"}
     string withholdingTaxDdctOffice?;
+    # Federal tax ID3 field.
     @jsondata:Name {value: "FederalTaxID3"}
     string federalTaxID3?;
+    # Federal tax ID2 field.
     @jsondata:Name {value: "FederalTaxID2"}
     string federalTaxID2?;
+    # Max days for cancel field.
     @jsondata:Name {value: "MaxDaysForCancel"}
     int:Signed32 maxDaysForCancel?;
+    # Withholding tax p handle field.
     @jsondata:Name {value: "WithholdingTaxPHandle"}
     string withholdingTaxPHandle?;
+    # Default dunning term field.
     @jsondata:Name {value: "DefaultDunningTerm"}
     string defaultDunningTerm?;
+    # Inventory posting release only serial and batch field.
     @jsondata:Name {value: "InventoryPostingReleaseOnlySerialAndBatch"}
     BoYesNoEnum inventoryPostingReleaseOnlySerialAndBatch?;
+    # Employer reference field.
     @jsondata:Name {value: "EmployerReference"}
     string employerReference?;
+    # S dflt ITWT field.
     @jsondata:Name {value: "SDfltITWT"}
     string sDfltITWT?;
+    # G TS default checker field.
     @jsondata:Name {value: "GTSDefaultChecker"}
     int:Signed32 gTSDefaultChecker?;
+    # Letter headerin foreign langu field.
     @jsondata:Name {value: "LetterHeaderinForeignLangu"}
     string letterHeaderinForeignLangu?;
+    # Enable branches field.
     @jsondata:Name {value: "EnableBranches"}
     BoYesNoEnum enableBranches?;
+    # S EPA creditor ID field.
     @jsondata:Name {value: "SEPACreditorID"}
     string sEPACreditorID?;
+    # Application of IFRS field.
     @jsondata:Name {value: "ApplicationOfIFRS"}
     BoYesNoEnum applicationOfIFRS?;
+    # S default withholding tax code field.
     @jsondata:Name {value: "SDefaultWTCode"}
     string sDefaultWTCode?;
+    # Alt name for accounts payable invoice field.
     @jsondata:Name {value: "AltNameForApInvoice"}
     string altNameForApInvoice?;
+    # Calculate budget field.
     @jsondata:Name {value: "CalculateBudget"}
     BoYesNoEnum calculateBudget?;
+    # Create online quotation field.
     @jsondata:Name {value: "CreateOnlineQuotation"}
     BoYesNoEnum createOnlineQuotation?;
+    # Advanceson corp income tax field.
     @jsondata:Name {value: "AdvancesonCorpIncomeTax"}
     decimal advancesonCorpIncomeTax?;
+    # Calculate taxin sales quotati field.
     @jsondata:Name {value: "CalculateTaxinSalesQuotati"}
     BoYesNoEnum calculateTaxinSalesQuotati?;
+    # Continuous stock system field.
     @jsondata:Name {value: "ContinuousStockSystem"}
     BoInventorySystem continuousStockSystem?;
+    # Commitment restriction field.
     @jsondata:Name {value: "CommitmentRestriction"}
     BoYesNoEnum commitmentRestriction?;
+    # Tax definition field.
     @jsondata:Name {value: "TaxDefinition"}
     BoYesNoEnum taxDefinition?;
+    # Change def recon accounts receivable accounts field.
     @jsondata:Name {value: "ChangeDefReconARAccounts"}
     BoYesNoEnum changeDefReconARAccounts?;
+    # Period status change delay field.
     @jsondata:Name {value: "PeriodStatusChangeDelay"}
     int:Signed32 periodStatusChangeDelay?;
+    # W t liable expense field.
     @jsondata:Name {value: "WTLiableExpense"}
     BoYesNoEnum wTLiableExpense?;
+    # Alertby warehouse field.
     @jsondata:Name {value: "AlertbyWarehouse"}
     BoYesNoEnum alertbyWarehouse?;
+    # Enable update document after approval field.
     @jsondata:Name {value: "EnableUpdateDocAfterApproval"}
     BoYesNoEnum enableUpdateDocAfterApproval?;
+    # G TS response to exceeding field.
     @jsondata:Name {value: "GTSResponseToExceeding"}
     GTSResponseToExceedingEnum gTSResponseToExceeding?;
+    # Block posting date editing field.
     @jsondata:Name {value: "BlockPostingDateEditing"}
     BoYesNoEnum blockPostingDateEditing?;
+    # Managing director foreign lan field.
     @jsondata:Name {value: "ManagingDirectorForeignLan"}
     string managingDirectorForeignLan?;
+    # Deduction file number field.
     @jsondata:Name {value: "DeductionFileNo"}
     string deductionFileNo?;
+    # Enable authorizer update pending draft field.
     @jsondata:Name {value: "EnableAuthorizerUpdatePendingDraft"}
     BoYesNoEnum enableAuthorizerUpdatePendingDraft?;
+    # Series field.
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
+    # Default bank account field.
     @jsondata:Name {value: "DefaultBankAccount"}
     string defaultBankAccount?;
+    # Copy exchange rate in copy to field.
     @jsondata:Name {value: "CopyExchangeRateInCopyTo"}
     BoYesNoEnum copyExchangeRateInCopyTo?;
+    # Time template field.
     @jsondata:Name {value: "TimeTemplate"}
     BoTimeTemplate timeTemplate?;
+    # P dflt ITWT field.
     @jsondata:Name {value: "PDfltITWT"}
     string pDfltITWT?;
+    # Allow multiple BA on same period field.
     @jsondata:Name {value: "AllowMultipleBAOnSamePeriod"}
     BoYesNoEnum allowMultipleBAOnSamePeriod?;
+    # Apply base inactive status to period volume discounts field.
     @jsondata:Name {value: "ApplyBaseInactiveStatusToPeriodVolumeDiscounts"}
     BoYesNoEnum applyBaseInactiveStatusToPeriodVolumeDiscounts?;
 |};
 
 # Represents the request payload for the `CompanyService_LogLoginAction` operation of the SAP Business One Service Layer
 public type CompanyService_LogLoginAction_body record {
+    # User access log field.
     @jsondata:Name {value: "UserAccessLog"}
     UserAccessLog userAccessLog?;
+    # Support user login record field.
     @jsondata:Name {value: "SupportUserLoginRecord"}
     SupportUserLoginRecord supportUserLoginRecord?;
 };
 
 # A paged collection of `QueryCategories` entities returned by the SAP Business One Service Layer
 public type QueryCategoriesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     QueryCategory[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2123,44 +2719,62 @@ public type ListQueryCategoriesHeaders record {
 
 # The `WorkflowTask` complex type of the SAP Business One Service Layer
 public type WorkflowTask record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     string status?;
+    # Owner field.
     @jsondata:Name {value: "Owner"}
     string owner?;
+    # Task ID field.
     @jsondata:Name {value: "TaskID"}
     int:Signed32 taskID?;
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Instance ID field.
     @jsondata:Name {value: "InstanceID"}
     int:Signed32 instanceID?;
+    # Priority field.
     @jsondata:Name {value: "Priority"}
     int:Signed32 priority?;
+    # Operation field.
     @jsondata:Name {value: "Operation"}
     string operation?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Workflow task note collection field.
     @jsondata:Name {value: "WorkflowTaskNoteCollection"}
     WorkflowTaskNote[] workflowTaskNoteCollection?;
+    # Type field.
     @jsondata:Name {value: "Type"}
     string 'type?;
+    # Workflow task output object collection field.
     @jsondata:Name {value: "WorkflowTaskOutputObjectCollection"}
     WorkflowTaskOutputObject[] workflowTaskOutputObjectCollection?;
+    # Workflow task input object collection field.
     @jsondata:Name {value: "WorkflowTaskInputObjectCollection"}
     WorkflowTaskInputObject[] workflowTaskInputObjectCollection?;
+    # Template name field.
     @jsondata:Name {value: "TemplateName"}
     string templateName?;
+    # Template ID field.
     @jsondata:Name {value: "TemplateID"}
     string templateID?;
 |};
 
 # The `WIPMapping` complex type of the SAP Business One Service Layer
 public type WIPMapping record {|
+    # Account to field.
     @jsondata:Name {value: "AccountTo"}
     string accountTo?;
+    # Absolute entry field.
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # Account from field.
     @jsondata:Name {value: "AccountFrom"}
     string accountFrom?;
+    # Line number field.
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
@@ -2177,34 +2791,44 @@ public type GetAttachments2Queries record {
 
 # A paged collection of `WebClientVariantGroups` entities returned by the SAP Business One Service Layer
 public type WebClientVariantGroupsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientVariantGroup[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `CurrentServerTime` complex type of the SAP Business One Service Layer
 public type CurrentServerTime record {|
+    # Current time field.
     @jsondata:Name {value: "CurrentTime"}
     string currentTime?;
+    # Current date field.
     @jsondata:Name {value: "CurrentDate"}
     string currentDate?;
 |};
 
 # Represents the request payload for the `MobileAppService_UpdateServiceAppReportContent` operation of the SAP Business One Service Layer
 public type MobileAppService_UpdateServiceAppReportContent_body record {
+    # Service app report params field.
     @jsondata:Name {value: "ServiceAppReportParams"}
     ServiceAppReportParams serviceAppReportParams?;
+    # Service app report content field.
     @jsondata:Name {value: "ServiceAppReportContent"}
     ServiceAppReportContent serviceAppReportContent?;
 };
 
 # A paged collection of `WebClientDashboards` entities returned by the SAP Business One Service Layer
 public type WebClientDashboardsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientDashboard[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2218,27 +2842,35 @@ public type ListPredefinedTextsHeaders record {
 
 # A paged collection of `UserFieldsMD` entities returned by the SAP Business One Service Layer
 public type UserFieldsMDCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserFieldMD[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ChangeLogParams` complex type of the SAP Business One Service Layer
 public type ChangeLogParams record {|
+    # User name field.
     @jsondata:Name {value: "UserName"}
     string userName?;
+    # Updated date field.
     @jsondata:Name {value: "UpdatedDate"}
     string updatedDate?;
+    # Object code field.
     @jsondata:Name {value: "ObjectCode"}
     string objectCode?;
+    # Log instance field.
     @jsondata:Name {value: "LogInstance"}
     int:Signed32 logInstance?;
 |};
 
 # The `RoundedData` complex type of the SAP Business One Service Layer
 public type RoundedData record {|
+    # Value field.
     @jsondata:Name {value: "Value"}
     decimal value?;
 |};
@@ -2295,14 +2927,19 @@ public type ListWebClientDashboardsQueries record {
 
 # The `WebClientFormSetting` entity of the SAP Business One Service Layer
 public type WebClientFormSetting record {|
+    # Web client form setting items field.
     @jsondata:Name {value: "WebClientFormSettingItems"}
     WebClientFormSettingItem[] webClientFormSettingItems?;
+    # Document object code field.
     @jsondata:Name {value: "DocObjectCode"}
     string docObjectCode?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Form ID field.
     @jsondata:Name {value: "FormId"}
     string formId?;
 |};
@@ -2354,12 +2991,14 @@ public type SortOrderEnum "soAscending"|"soDescending";
 
 # Represents the request payload for the `WorkflowTaskService_Complete` operation of the SAP Business One Service Layer
 public type WorkflowTaskService_Complete_body record {
+    # Workflow task complete params field.
     @jsondata:Name {value: "WorkflowTaskCompleteParams"}
     WorkflowTaskCompleteParams workflowTaskCompleteParams?;
 };
 
 # Represents the request payload for the `CompanyService_GetPeriod` operation of the SAP Business One Service Layer
 public type CompanyService_GetPeriod_body record {
+    # Period category params field.
     @jsondata:Name {value: "PeriodCategoryParams"}
     PeriodCategoryParams periodCategoryParams?;
 };
@@ -2386,27 +3025,35 @@ public type GetExceptionalEventsQueries record {
 
 # The `IntegrationPackageConfigure` entity of the SAP Business One Service Layer
 public type IntegrationPackageConfigure record {|
+    # Is enable field.
     @jsondata:Name {value: "IsEnable"}
     BoYesNoEnum isEnable?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # Represents the request payload for the `MobileAppService_GetTechnicianSchedulings` operation of the SAP Business One Service Layer
 public type MobileAppService_GetTechnicianSchedulings_body record {
+    # Technician schedulings params field.
     @jsondata:Name {value: "TechnicianSchedulingsParams"}
     TechnicianSchedulingsParams technicianSchedulingsParams?;
 };
 
 # A paged collection of `UserObjectsMD` entities returned by the SAP Business One Service Layer
 public type UserObjectsMDCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserObjectsMD[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2419,36 +3066,44 @@ public type BoAlertTypeforWHStockEnum "atfwhs_WarningOnly"|"atfwhs_Block"|"atfwh
 
 # The `DocumentTypeParams` complex type of the SAP Business One Service Layer
 public type DocumentTypeParams record {|
+    # Document field.
     @jsondata:Name {value: "Document"}
     string document?;
+    # Document sub type field.
     @jsondata:Name {value: "DocumentSubType"}
     string documentSubType?;
 |};
 
 # Represents the request payload for the `ReportFilterService_GetTaxReportFilterList` operation of the SAP Business One Service Layer
 public type ReportFilterService_GetTaxReportFilterList_body record {
+    # Tax report filter params field.
     @jsondata:Name {value: "TaxReportFilterParams"}
     TaxReportFilterParams taxReportFilterParams?;
 };
 
 # The `TaxReportAccount` complex type of the SAP Business One Service Layer
 public type TaxReportAccount record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `WebClientRecentActivityParams` complex type of the SAP Business One Service Layer
 public type WebClientRecentActivityParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # The `ApprovalTemplateStage` complex type of the SAP Business One Service Layer
 public type ApprovalTemplateStage record {|
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Approval stage code field.
     @jsondata:Name {value: "ApprovalStageCode"}
     int:Signed32 approvalStageCode?;
+    # Sort ID field.
     @jsondata:Name {value: "SortID"}
     int:Signed32 sortID?;
 |};
@@ -2458,9 +3113,12 @@ public type BoQueryTypeEnum "qtRegular"|"qtWizard";
 
 # A paged collection of `UserQueries` entities returned by the SAP Business One Service Layer
 public type UserQueriesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserQuery[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2495,14 +3153,19 @@ public type ListUsersQueries record {
 
 # The `WebClientDashboard` entity of the SAP Business One Service Layer
 public type WebClientDashboard record {|
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Content field.
     @jsondata:Name {value: "Content"}
     string content?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Web client dashboard cards field.
     @jsondata:Name {value: "WebClientDashboardCards"}
     WebClientDashboardCard[] webClientDashboardCards?;
+    # Sys field.
     @jsondata:Name {value: "Sys"}
     BoYesNoEnum sys?;
 |};
@@ -2523,21 +3186,30 @@ public type ListStatesHeaders record {
 
 # Represents the request payload for the `ReportLayoutsService_GetReportLayoutList` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_GetReportLayoutList_body record {
+    # Report params field.
     @jsondata:Name {value: "ReportParams"}
     ReportParams reportParams?;
 };
 
 # The `Attachments2_Line` complex type of the SAP Business One Service Layer
 public type Attachments2Line record {
+    # Absolute entry field.
     int:Signed32 AbsoluteEntry?;
+    # Line number field.
     int:Signed32 LineNum?;
+    # Source path field.
     string SourcePath?;
+    # File name field.
     string FileName?;
+    # File extension field.
     string FileExtension?;
+    # Attachment date field.
     string AttachmentDate?;
+    # User ID field.
     int:Signed32 UserID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Override?;
+    # Free text field.
     string FreeText?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CopyToTargetDoc?;
@@ -2545,11 +3217,15 @@ public type Attachments2Line record {
     BoYesNoEnum CopyToProductionOrder?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EDocSign?;
+    # Target path field.
     string TargetPath?;
+    # Sub path field.
     string SubPath?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SendInMail?;
+    # File size field.
     int:Signed32 FileSize?;
+    # Copy file field.
     string CopyFile?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FileSuffix?;
@@ -2560,8 +3236,10 @@ public type ReportLayoutCategoryEnum "rlcPLD"|"rlcCrystal"|"rlcLegalList"|"rlcUs
 
 # Represents the request payload for the `SBOBobService_Format_MoneyToString` operation of the SAP Business One Service Layer
 public type SBOBobService_Format_MoneyToString_body record {
+    # In money field.
     @jsondata:Name {value: "InMoney"}
     decimal inMoney?;
+    # In precision field.
     @jsondata:Name {value: "InPrecision"}
     string inPrecision?;
 };
@@ -2578,36 +3256,52 @@ public type GetUserKeysMDQueries record {
 
 # The `UserAccessLog` complex type of the SAP Business One Service Layer
 public type UserAccessLog record {|
+    # Win usr name field.
     @jsondata:Name {value: "WinUsrName"}
     string winUsrName?;
+    # Action field.
     @jsondata:Name {value: "Action"}
     UserActionTypeEnum action?;
+    # Proc name field.
     @jsondata:Name {value: "ProcName"}
     string procName?;
+    # User code field.
     @jsondata:Name {value: "UserCode"}
     string userCode?;
+    # Reason description field.
     @jsondata:Name {value: "ReasonDesc"}
     string reasonDesc?;
+    # Win sessn ID field.
     @jsondata:Name {value: "WinSessnID"}
     int:Signed32 winSessnID?;
+    # Client IP field.
     @jsondata:Name {value: "ClientIP"}
     string clientIP?;
+    # Action by field.
     @jsondata:Name {value: "ActionBy"}
     string actionBy?;
+    # Source field.
     @jsondata:Name {value: "Source"}
     string 'source?;
+    # Action date field.
     @jsondata:Name {value: "ActionDate"}
     string actionDate?;
+    # Action time field.
     @jsondata:Name {value: "ActionTime"}
     string actionTime?;
+    # Client name field.
     @jsondata:Name {value: "ClientName"}
     string clientName?;
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
+    # Process ID field.
     @jsondata:Name {value: "ProcessID"}
     int:Signed32 processID?;
+    # Reason ID field.
     @jsondata:Name {value: "ReasonID"}
     UserAccessLogReasonIDTypeEnum reasonID?;
+    # Session ID field.
     @jsondata:Name {value: "SessionID"}
     int:Signed32 sessionID?;
 |};
@@ -2639,6 +3333,7 @@ public type ListExtendedTranslationsQueries record {
 
 # Represents the request payload for the `MobileAppService_GetTechnicianSettings` operation of the SAP Business One Service Layer
 public type MobileAppService_GetTechnicianSettings_body record {
+    # Technician settings params field.
     @jsondata:Name {value: "TechnicianSettingsParams"}
     TechnicianSettingsParams technicianSettingsParams?;
 };
@@ -2670,60 +3365,81 @@ public type ListBranchesQueries record {
 
 # The `UserObjectMD_ChildTable` complex type of the SAP Business One Service Layer
 public type UserObjectMDChildTable record {
+    # Son number field.
     int:Signed32 SonNumber?;
+    # Table name field.
     string TableName?;
+    # Log table name field.
     string LogTableName?;
+    # Code field.
     string Code?;
+    # Object name field.
     string ObjectName?;
 };
 
 # The `WebClientVariantEmbeddedChartValue2` complex type of the SAP Business One Service Layer
 public type WebClientVariantEmbeddedChartValue2 record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # The `WebClientListviewFilter` entity of the SAP Business One Service Layer
 public type WebClientListviewFilter record {|
+    # Table name field.
     @jsondata:Name {value: "TableName"}
     string tableName?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Filter name field.
     @jsondata:Name {value: "FilterName"}
     string filterName?;
+    # Web client listview filter conditions field.
     @jsondata:Name {value: "WebClientListviewFilterConditions"}
     WebClientListviewFilterCondition[] webClientListviewFilterConditions?;
 |};
 
 # The `WebClientVariantEmbeddedChartValue1` complex type of the SAP Business One Service Layer
 public type WebClientVariantEmbeddedChartValue1 record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # The `ApprovalTemplateParams` complex type of the SAP Business One Service Layer
 public type ApprovalTemplateParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # A paged collection of `ValueMappingCommunication` entities returned by the SAP Business One Service Layer
 public type ValueMappingCommunicationCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ValueMappingCommunicationData[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2733,36 +3449,48 @@ public type BoPrintReceiptEnum "boprcAlways"|"boprcNo"|"boprcOnlyWhenAdding";
 
 # The `MessageDataLine` complex type of the SAP Business One Service Layer
 public type MessageDataLine record {|
+    # Value field.
     @jsondata:Name {value: "Value"}
     string value?;
+    # Object key field.
     @jsondata:Name {value: "ObjectKey"}
     string objectKey?;
+    # Object field.
     @jsondata:Name {value: "Object"}
     string 'object?;
 |};
 
 # The `MobileServerDateTime` complex type of the SAP Business One Service Layer
 public type MobileServerDateTime record {|
+    # Time field.
     @jsondata:Name {value: "Time"}
     string time?;
+    # Date field.
     @jsondata:Name {value: "Date"}
     string date?;
 |};
 
 # The `UserKeysMD` entity of the SAP Business One Service Layer
 public type UserKeysMD record {
+    # Table name field.
     string TableName?;
+    # Key index field.
     int:Signed32 KeyIndex?;
+    # Key name field.
     string KeyName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Unique?;
+    # User keys MD elements field.
     UserKeysMDElement[] UserKeysMD_Elements?;
 };
 
 # The `DefaultCreditCard` complex type of the SAP Business One Service Layer
 public type DefaultCreditCard record {
+    # Code field.
     string Code?;
+    # Credit account code field.
     string CreditAccountCode?;
+    # Credit card code field.
     int:Signed32 CreditCardCode?;
 };
 
@@ -2771,30 +3499,41 @@ public type DisplayBatchQtyUoMByEnum "dispBatchQtyByDocRowUoM"|"dispBatchQtyByIn
 
 # The `CountyParams` complex type of the SAP Business One Service Layer
 public type CountyParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # Abs ID field.
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `ExtendedTranslation` entity of the SAP Business One Service Layer
 public type ExtendedTranslation record {|
+    # Source language field.
     @jsondata:Name {value: "SourceLanguage"}
     int:Signed32 sourceLanguage?;
+    # Update date field.
     @jsondata:Name {value: "UpdateDate"}
     string updateDate?;
+    # Category field.
     @jsondata:Name {value: "Category"}
     TranslationCategoryEnum category?;
+    # Secondary ID field.
     @jsondata:Name {value: "SecondaryID"}
     string secondaryID?;
+    # Document entry field.
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
+    # Extended translation item lines field.
     @jsondata:Name {value: "ExtendedTranslation_ItemLines"}
     ExtendedTranslationItemLine[] extendedTranslationItemLines?;
+    # I d field.
     @jsondata:Name {value: "ID"}
     string iD?;
+    # Create date field.
     @jsondata:Name {value: "CreateDate"}
     string createDate?;
 |};
@@ -2826,10 +3565,13 @@ public type ListMultiLanguageTranslationsQueries record {
 
 # The `StateParams` complex type of the SAP Business One Service Layer
 public type StateParams record {|
+    # Country field.
     @jsondata:Name {value: "Country"}
     string country?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -2853,6 +3595,7 @@ public type ListEventNotificationsHeaders record {
 
 # Represents the request payload for the `CompanyService_GetAdvancedGLAccount` operation of the SAP Business One Service Layer
 public type CompanyService_GetAdvancedGLAccount_body record {
+    # Advanced general ledger account params field.
     @jsondata:Name {value: "AdvancedGLAccountParams"}
     AdvancedGLAccountParams advancedGLAccountParams?;
 };
@@ -2894,20 +3637,28 @@ public type BoApprovalRequestStatusEnum "arsPending"|"arsApproved"|"arsNotApprov
 
 # The `SensitiveDataAccess` complex type of the SAP Business One Service Layer
 public type SensitiveDataAccess record {|
+    # Key2 field.
     @jsondata:Name {value: "Key2"}
     string key2?;
+    # Key1 field.
     @jsondata:Name {value: "Key1"}
     string key1?;
+    # Property name field.
     @jsondata:Name {value: "PropertyName"}
     string propertyName?;
+    # Table field.
     @jsondata:Name {value: "Table"}
     string 'table?;
+    # Key4 field.
     @jsondata:Name {value: "Key4"}
     string key4?;
+    # Key3 field.
     @jsondata:Name {value: "Key3"}
     string key3?;
+    # Property value field.
     @jsondata:Name {value: "PropertyValue"}
     string propertyValue?;
+    # Property ID field.
     @jsondata:Name {value: "PropertyID"}
     int:Signed32 propertyID?;
 |};
@@ -2942,45 +3693,56 @@ public type BoMsgPriorities "pr_Low"|"pr_Normal"|"pr_High";
 
 # The `WorkflowApprovalTaskListParams` complex type of the SAP Business One Service Layer
 public type WorkflowApprovalTaskListParams record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     string status?;
 |};
 
 # Represents the request payload for the `CompanyService_RemoveFinancePeriod` operation of the SAP Business One Service Layer
 public type CompanyService_RemoveFinancePeriod_body record {
+    # Finance period params field.
     @jsondata:Name {value: "FinancePeriodParams"}
     FinancePeriodParams financePeriodParams?;
 };
 
 # A paged collection of `UserLanguages` entities returned by the SAP Business One Service Layer
 public type UserLanguagesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserLanguage[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WebClientBookmarkTileParams` complex type of the SAP Business One Service Layer
 public type WebClientBookmarkTileParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # Represents the request payload for the `SeriesService_AddSeries` operation of the SAP Business One Service Layer
 public type SeriesService_AddSeries_body record {
+    # Series field.
     @jsondata:Name {value: "Series"}
     Series series?;
 };
 
 # The `ServiceAppReport` complex type of the SAP Business One Service Layer
 public type ServiceAppReport record {|
+    # Customized report name field.
     @jsondata:Name {value: "CustomizedReportName"}
     string customizedReportName?;
+    # System report name field.
     @jsondata:Name {value: "SystemReportName"}
     string systemReportName?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Report choice field.
     @jsondata:Name {value: "ReportChoice"}
     MobileAppReportChoiceEnum reportChoice?;
 |};
@@ -2990,41 +3752,54 @@ public type TaxReportFilterType "trft_TaxReport"|"trft_WTReport"|"trft_Report347
 
 # Represents the request payload for the `CompanyService_GetFinancePeriod` operation of the SAP Business One Service Layer
 public type CompanyService_GetFinancePeriod_body record {
+    # Finance period params field.
     @jsondata:Name {value: "FinancePeriodParams"}
     FinancePeriodParams financePeriodParams?;
 };
 
 # The `QRCodeData` complex type of the SAP Business One Service Layer
 public type QRCodeData record {|
+    # Object type field.
     @jsondata:Name {value: "ObjectType"}
     int:Signed32 objectType?;
+    # Object abs entry field.
     @jsondata:Name {value: "ObjectAbsEntry"}
     string objectAbsEntry?;
+    # Field name field.
     @jsondata:Name {value: "FieldName"}
     string fieldName?;
+    # Q r code text field.
     @jsondata:Name {value: "QRCodeText"}
     string qRCodeText?;
 |};
 
 # The `PathAdmin` complex type of the SAP Business One Service Layer
 public type PathAdmin record {|
+    # Attachments folder path field.
     @jsondata:Name {value: "AttachmentsFolderPath"}
     string attachmentsFolderPath?;
+    # Extensions folder path field.
     @jsondata:Name {value: "ExtensionsFolderPath"}
     string extensionsFolderPath?;
+    # Word template folder path field.
     @jsondata:Name {value: "WordTemplateFolderPath"}
     string wordTemplateFolderPath?;
+    # Pictures folder path field.
     @jsondata:Name {value: "PicturesFolderPath"}
     string picturesFolderPath?;
+    # Print ID field.
     @jsondata:Name {value: "PrintId"}
     string printId?;
 |};
 
 # A paged collection of `Departments` entities returned by the SAP Business One Service Layer
 public type DepartmentsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Department[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3041,12 +3816,14 @@ public type GetMultiLanguageTranslationsQueries record {
 
 # Represents the request payload for the `ReportLayoutsService_AddReportLayout` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_AddReportLayout_body record {
+    # Report layout field.
     @jsondata:Name {value: "ReportLayout"}
     ReportLayout reportLayout?;
 };
 
 # The `PeriodCategoryParams` complex type of the SAP Business One Service Layer
 public type PeriodCategoryParams record {|
+    # Absolute entry field.
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
 |};
@@ -3063,15 +3840,19 @@ public type GetUserDefaultGroupsQueries record {
 
 # A paged collection of `ApprovalRequests` entities returned by the SAP Business One Service Layer
 public type ApprovalRequestsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalRequest[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `ReportLayoutsService_SetDefaultReport` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_SetDefaultReport_body record {
+    # Default report params field.
     @jsondata:Name {value: "DefaultReportParams"}
     DefaultReportParams defaultReportParams?;
 };
@@ -3085,66 +3866,116 @@ public type ListExtendedTranslationsHeaders record {
 
 # Represents the request payload for the `MobileAppService_GetDppChangeParams` operation of the SAP Business One Service Layer
 public type MobileAppService_GetDppChangeParams_body record {
+    # Dpp change params field.
     @jsondata:Name {value: "DppChangeParams"}
     DppChangeParams dppChangeParams?;
 };
 
 # The `BusinessPlace` entity of the SAP Business One Service Layer
 public type BusinessPlace record {
+    # BPLID field.
     int:Signed32 BPLID?;
+    # BPL name field.
     string BPLName?;
+    # BPL name foreign field.
     string BPLNameForeign?;
+    # VAT reg number field.
     string VATRegNum?;
+    # Rep name field.
     string RepName?;
+    # Industry field.
     string Industry?;
+    # Business field.
     string Business?;
+    # Address field.
     string Address?;
+    # Addressforeign field.
     string Addressforeign?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum MainBPL?;
+    # Tax office number field.
     string TaxOfficeNo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Disabled?;
+    # Default customer ID field.
     string DefaultCustomerID?;
+    # Default vendor ID field.
     string DefaultVendorID?;
+    # Default warehouse ID field.
     string DefaultWarehouseID?;
+    # Default tax code field.
     string DefaultTaxCode?;
+    # Tax office field.
     string TaxOffice?;
+    # Federal tax ID field.
     string FederalTaxID?;
+    # Federal tax ID2 field.
     string FederalTaxID2?;
+    # Federal tax ID3 field.
     string FederalTaxID3?;
+    # Additional ID number field.
     string AdditionalIdNumber?;
+    # Nature of company code field.
     int:Signed32 NatureOfCompanyCode?;
+    # Economic activity type code field.
     int:Signed32 EconomicActivityTypeCode?;
+    # Credit contribution origin code field.
     string CreditContributionOriginCode?;
+    # IPI period code field.
     string IPIPeriodCode?;
+    # Cooperative association type code field.
     int:Signed32 CooperativeAssociationTypeCode?;
+    # Profit taxation code field.
     int:Signed32 ProfitTaxationCode?;
+    # Company qualification code field.
     int:Signed32 CompanyQualificationCode?;
+    # Declarer type code field.
     int:Signed32 DeclarerTypeCode?;
+    # Preferred state code field.
     string PreferredStateCode?;
+    # Address type field.
     string AddressType?;
+    # Street field.
     string Street?;
+    # Street number field.
     string StreetNo?;
+    # Building field.
     string Building?;
+    # Zip code field.
     string ZipCode?;
+    # Block field.
     string Block?;
+    # City field.
     string City?;
+    # State field.
     string State?;
+    # County field.
     string County?;
+    # Country field.
     string Country?;
+    # Alias name field.
     string AliasName?;
+    # Commercial register field.
     string CommercialRegister?;
+    # Date of incorporation field.
     string DateOfIncorporation?;
+    # SPED profile field.
     string SPEDProfile?;
+    # Environment type field.
     int:Signed32 EnvironmentType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Opting4ICMS?;
+    # Payment clearing account field.
     string PaymentClearingAccount?;
+    # Global location number field.
     string GlobalLocationNumber?;
+    # Default resource warehouse ID field.
     string DefaultResourceWarehouseID?;
+    # Business place IE numbers field.
     BusinessPlaceIENumber[] BusinessPlaceIENumbers?;
+    # Business place tributary infos field.
     BusinessPlaceTributaryInfo[] BusinessPlaceTributaryInfos?;
+    # User default groups field.
     UserDefaultGroup[] UserDefaultGroups?;
     # The `County` entity of the SAP Business One Service Layer
     County County2?;
@@ -3154,99 +3985,147 @@ public type BusinessPlace record {
 
 # The `ReportLayout` complex type of the SAP Business One Service Layer
 public type ReportLayout record {|
+    # Top margin field.
     @jsondata:Name {value: "TopMargin"}
     int:Signed32 topMargin?;
+    # Extension name field.
     @jsondata:Name {value: "ExtensionName"}
     string extensionName?;
+    # B1 version field.
     @jsondata:Name {value: "B1Version"}
     string b1Version?;
+    # Bottom margin field.
     @jsondata:Name {value: "BottomMargin"}
     int:Signed32 bottomMargin?;
+    # Category field.
     @jsondata:Name {value: "Category"}
     ReportLayoutCategoryEnum category?;
+    # Query field.
     @jsondata:Name {value: "Query"}
     string query?;
+    # Foreign language report field.
     @jsondata:Name {value: "ForeignLanguageReport"}
     BoYesNoEnum foreignLanguageReport?;
+    # Grid size field.
     @jsondata:Name {value: "GridSize"}
     int:Signed32 gridSize?;
+    # Language field.
     int:Signed32 language?;
+    # Printer field.
     @jsondata:Name {value: "Printer"}
     string printer?;
+    # Report layout translation lines field.
     @jsondata:Name {value: "ReportLayout_TranslationLines"}
     ReportLayoutTranslationLine[] reportLayoutTranslationLines?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Grid type field.
     @jsondata:Name {value: "GridType"}
     BoGridTypeEnum gridType?;
+    # Repetitive areas number field.
     @jsondata:Name {value: "RepetitiveAreasNumber"}
     int:Signed32 repetitiveAreasNumber?;
+    # Type detail field.
     @jsondata:Name {value: "TypeDetail"}
     string typeDetail?;
+    # Report layout items field.
     @jsondata:Name {value: "ReportLayoutItems"}
     ReportLayoutItem[] reportLayoutItems?;
+    # Change font size in preview field.
     @jsondata:Name {value: "ChangeFontSizeInPreview"}
     int:Signed32 changeFontSizeInPreview?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Picture field.
     @jsondata:Name {value: "Picture"}
     string picture?;
+    # Follow up report field.
     @jsondata:Name {value: "FollowUpReport"}
     string followUpReport?;
+    # Editable field.
     @jsondata:Name {value: "Editable"}
     BoYesNoEnum editable?;
+    # Height field.
     @jsondata:Name {value: "Height"}
     int:Signed32 height?;
+    # Localization field.
     @jsondata:Name {value: "Localization"}
     string localization?;
+    # Width field.
     @jsondata:Name {value: "Width"}
     int:Signed32 width?;
+    # Imp exp obj code field.
     @jsondata:Name {value: "ImpExpObjCode"}
     int:Signed32 impExpObjCode?;
+    # C r version field.
     @jsondata:Name {value: "CRVersion"}
     string cRVersion?;
+    # Printer first page field.
     @jsondata:Name {value: "PrinterFirstPage"}
     string printerFirstPage?;
+    # Show grid field.
     @jsondata:Name {value: "ShowGrid"}
     BoYesNoEnum showGrid?;
+    # E mail font field.
     @jsondata:Name {value: "EMailFont"}
     string eMailFont?;
+    # Type code field.
     @jsondata:Name {value: "TypeCode"}
     string typeCode?;
+    # Number of copies field.
     @jsondata:Name {value: "NumberOfCopies"}
     int:Signed32 numberOfCopies?;
+    # Convert font for e mail field.
     @jsondata:Name {value: "ConvertFontForEMail"}
     BoYesNoEnum convertFontForEMail?;
+    # Leader report field.
     @jsondata:Name {value: "LeaderReport"}
     string leaderReport?;
+    # Change font size for e mail field.
     @jsondata:Name {value: "ChangeFontSizeForEMail"}
     int:Signed32 changeFontSizeForEMail?;
+    # Orientation field.
     @jsondata:Name {value: "Orientation"}
     BoOrientationEnum orientation?;
+    # Right margin field.
     @jsondata:Name {value: "RightMargin"}
     int:Signed32 rightMargin?;
+    # Use first printer field.
     @jsondata:Name {value: "UseFirstPrinter"}
     BoYesNoEnum useFirstPrinter?;
+    # Allign footer to bottom field.
     @jsondata:Name {value: "AllignFooterToBottom"}
     BoYesNoEnum allignFooterToBottom?;
+    # Layout code field.
     @jsondata:Name {value: "LayoutCode"}
     string layoutCode?;
+    # Snap to grid field.
     @jsondata:Name {value: "SnapToGrid"}
     BoYesNoEnum snapToGrid?;
+    # Preview printing font field.
     @jsondata:Name {value: "PreviewPrintingFont"}
     string previewPrintingFont?;
+    # Sortable field.
     @jsondata:Name {value: "Sortable"}
     BoYesNoEnum sortable?;
+    # Paper size field.
     @jsondata:Name {value: "PaperSize"}
     string paperSize?;
+    # Author field.
     @jsondata:Name {value: "Author"}
     string author?;
+    # Extension error action field.
     @jsondata:Name {value: "ExtensionErrorAction"}
     BoExtensionErrorActionEnum extensionErrorAction?;
+    # Left margin field.
     @jsondata:Name {value: "LeftMargin"}
     int:Signed32 leftMargin?;
+    # Convert font in print preview field.
     @jsondata:Name {value: "ConvertFontInPrintPreview"}
     BoYesNoEnum convertFontInPrintPreview?;
+    # Query type field.
     @jsondata:Name {value: "QueryType"}
     BoQueryTypeEnum queryType?;
 |};
@@ -3260,6 +4139,7 @@ public type ListValueMappingCommunicationHeaders record {
 
 # Represents the request payload for the `ValueMappingService_GetMappedB1Value` operation of the SAP Business One Service Layer
 public type ValueMappingService_GetMappedB1Value_body record {
+    # V MB1V alues data field.
     @jsondata:Name {value: "VM_B1ValuesData"}
     VMB1ValuesData vMB1ValuesData?;
 };
@@ -3270,12 +4150,17 @@ public type DefaultDocument record {
     BoYesNoEnum AddExport?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AddPrint?;
+    # Code field.
     string Code?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EnglishKeyboardEnteringBPC?;
+    # Noof copies field.
     int:Signed32 NoofCopies?;
+    # Noof copiesfor manual document field.
     int:Signed32 NoofCopiesforManualDoc?;
+    # Object type field.
     string ObjectType?;
+    # Permanent remark field.
     string PermanentRemark?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PrintDiscountData?;
@@ -3296,58 +4181,81 @@ public type ListMultiLanguageTranslationsHeaders record {
 
 # The `ApprovalTemplate` entity of the SAP Business One Service Layer
 public type ApprovalTemplate record {|
+    # Approval template stages field.
     @jsondata:Name {value: "ApprovalTemplateStages"}
     ApprovalTemplateStage[] approvalTemplateStages?;
+    # Approval requests field.
     @jsondata:Name {value: "ApprovalRequests"}
     ApprovalRequest[] approvalRequests?;
+    # Is active when updating documents field.
     @jsondata:Name {value: "IsActiveWhenUpdatingDocuments"}
     BoYesNoEnum isActiveWhenUpdatingDocuments?;
+    # Approval template queries field.
     @jsondata:Name {value: "ApprovalTemplateQueries"}
     ApprovalTemplateQuery[] approvalTemplateQueries?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Approval template terms field.
     @jsondata:Name {value: "ApprovalTemplateTerms"}
     ApprovalTemplateTerm[] approvalTemplateTerms?;
+    # Is active field.
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
+    # Use terms field.
     @jsondata:Name {value: "UseTerms"}
     BoYesNoEnum useTerms?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Approval template documents field.
     @jsondata:Name {value: "ApprovalTemplateDocuments"}
     ApprovalTemplateDocument[] approvalTemplateDocuments?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Approval template users field.
     @jsondata:Name {value: "ApprovalTemplateUsers"}
     ApprovalTemplateUser[] approvalTemplateUsers?;
 |};
 
 # The `ElectronicSeries` complex type of the SAP Business One Service Layer
 public type ElectronicSeries record {|
+    # Series field.
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
+    # Next number field.
     @jsondata:Name {value: "NextNumber"}
     string nextNumber?;
+    # Initial number field.
     @jsondata:Name {value: "InitialNumber"}
     string initialNumber?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Approval year field.
     @jsondata:Name {value: "ApprovalYear"}
     int:Signed32 approvalYear?;
+    # Approval number field.
     @jsondata:Name {value: "ApprovalNumber"}
     int:Signed32 approvalNumber?;
+    # Prefix field.
     @jsondata:Name {value: "Prefix"}
     string prefix?;
+    # Electronic series field.
     @jsondata:Name {value: "ElectronicSeries"}
     int:Signed32 electronicSeries?;
+    # Last number field.
     @jsondata:Name {value: "LastNumber"}
     string lastNumber?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # Represents the request payload for the `WorkflowTaskService_GetApprovalTaskList` operation of the SAP Business One Service Layer
 public type WorkflowTaskService_GetApprovalTaskList_body record {
+    # Workflow approval task list params field.
     @jsondata:Name {value: "WorkflowApprovalTaskListParams"}
     WorkflowApprovalTaskListParams workflowApprovalTaskListParams?;
 };
@@ -3367,27 +4275,35 @@ public type GetUserPermissionTreeQueries record {
 
 # The `UserTablesMD` entity of the SAP Business One Service Layer
 public type UserTablesMD record {
+    # Table name field.
     string TableName?;
+    # Table description field.
     string TableDescription?;
     # OData EnumType 'BoUTBTableType'. Serialised by the Service Layer as the member name
     BoUTBTableType TableType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Archivable?;
+    # Archive date field field.
     string ArchiveDateField?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DisplayMenu?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ApplyAuthorization?;
+    # User fields MD field.
     UserFieldMD[] UserFieldsMD?;
+    # User objects MD field.
     UserObjectsMD[] UserObjectsMD?;
 };
 
 # The `ApprovalTemplateTerm` complex type of the SAP Business One Service Layer
 public type ApprovalTemplateTerm record {|
+    # Value field.
     @jsondata:Name {value: "Value"}
     string value?;
+    # Condition type field.
     @jsondata:Name {value: "ConditionType"}
     ApprovalTemplateConditionTypeEnum conditionType?;
+    # Operation type field.
     @jsondata:Name {value: "OperationType"}
     ApprovalTemplateOperationTypeEnum operationType?;
 |};
@@ -3426,6 +4342,7 @@ public type ListWebClientNotificationsHeaders record {
 
 # Represents the request payload for the `ReportLayoutsService_UpdatePrinterSettings` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_UpdatePrinterSettings_body record {
+    # Report layout field.
     @jsondata:Name {value: "ReportLayout"}
     ReportLayout reportLayout?;
 };
@@ -3442,23 +4359,31 @@ public type GetWebClientNotificationsQueries record {
 
 # The `ReportTypeParams` complex type of the SAP Business One Service Layer
 public type ReportTypeParams record {|
+    # Type name field.
     @jsondata:Name {value: "TypeName"}
     string typeName?;
+    # Menu ID field.
     @jsondata:Name {value: "MenuID"}
     string menuID?;
+    # Type code field.
     @jsondata:Name {value: "TypeCode"}
     string typeCode?;
+    # Addon name field.
     @jsondata:Name {value: "AddonName"}
     string addonName?;
+    # Addon form type field.
     @jsondata:Name {value: "AddonFormType"}
     string addonFormType?;
 |};
 
 # A paged collection of `TSRExceptionalEvents` entities returned by the SAP Business One Service Layer
 public type TSRExceptionalEventsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     TSRExceptionalEvent[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3468,10 +4393,13 @@ public type AlertManagementPriorityEnum "atp_Low"|"atp_Normal"|"atp_High";
 
 # The `MessageDataColumn` complex type of the SAP Business One Service Layer
 public type MessageDataColumn record {|
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Message data lines field.
     @jsondata:Name {value: "MessageDataLines"}
     MessageDataLine[] messageDataLines?;
+    # Link field.
     @jsondata:Name {value: "Link"}
     BoYesNoEnum link?;
 |};
@@ -3492,17 +4420,27 @@ public type ListCockpitsHeaders record {
 
 # The `UserQuery` entity of the SAP Business One Service Layer
 public type UserQuery record {
+    # Internal key field.
     int:Signed32 InternalKey?;
+    # Query category field.
     int:Signed32 QueryCategory?;
+    # Query description field.
     string QueryDescription?;
+    # Query field.
     string Query?;
+    # Procedure alias field.
     string ProcedureAlias?;
+    # Procedure name field.
     string ProcedureName?;
     # OData EnumType 'UserQueryTypeEnum'. Serialised by the Service Layer as the member name
     UserQueryTypeEnum QueryType?;
+    # Menu caption field.
     string MenuCaption?;
+    # Parent menu ID field.
     int:Signed32 ParentMenuID?;
+    # Menu position field.
     int:Signed32 MenuPosition?;
+    # Menu unique ID field.
     string MenuUniqueID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EnableMenuEntry?;
@@ -3512,12 +4450,14 @@ public type UserQuery record {
 
 # Represents the request payload for the `SeriesService_UnattachSeriesFromDocument` operation of the SAP Business One Service Layer
 public type SeriesService_UnattachSeriesFromDocument_body record {
+    # Document series params field.
     @jsondata:Name {value: "DocumentSeriesParams"}
     DocumentSeriesParams documentSeriesParams?;
 };
 
 # Represents the request payload for the `SeriesService_SetDefaultSeriesForUser` operation of the SAP Business One Service Layer
 public type SeriesService_SetDefaultSeriesForUser_body record {
+    # Document series user params field.
     @jsondata:Name {value: "DocumentSeriesUserParams"}
     DocumentSeriesUserParams documentSeriesUserParams?;
 };
@@ -3530,14 +4470,17 @@ public type BoUDOObjType "boud_Document"|"boud_MasterData";
 
 # Represents the request payload for the `SeriesService_RemoveElectronicSeries` operation of the SAP Business One Service Layer
 public type SeriesService_RemoveElectronicSeries_body record {
+    # Electronic series params field.
     @jsondata:Name {value: "ElectronicSeriesParams"}
     ElectronicSeriesParams electronicSeriesParams?;
 };
 
 # Represents the request payload for the `SBOBobService_GetSystemPermission` operation of the SAP Business One Service Layer
 public type SBOBobService_GetSystemPermission_body record {
+    # User code field.
     @jsondata:Name {value: "UserCode"}
     string userCode?;
+    # Permission ID field.
     @jsondata:Name {value: "PermissionID"}
     string permissionID?;
 };
@@ -3547,39 +4490,50 @@ public type BoBlockBudget "bb_OnlyAnnualAlert"|"bb_MonthlyAlertOnly"|"bb_Block";
 
 # The `WebClientNotificationParams` complex type of the SAP Business One Service Layer
 public type WebClientNotificationParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # A paged collection of `QueryAuthGroups` entities returned by the SAP Business One Service Layer
 public type QueryAuthGroupsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     QueryAuthGroup[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `ReportFilter` entities returned by the SAP Business One Service Layer
 public type ReportFilterCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     TaxReportFilter[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `DataSensitiveStatus` complex type of the SAP Business One Service Layer
 public type DataSensitiveStatus record {|
+    # Data sensitive status field.
     @jsondata:Name {value: "DataSensitiveStatus"}
     DataSensitiveStatusEnum dataSensitiveStatus?;
 |};
 
 # A paged collection of `UserDefaultGroups` entities returned by the SAP Business One Service Layer
 public type UserDefaultGroupsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserDefaultGroup[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3628,24 +4582,32 @@ public type ListBusinessPlacesHeaders record {
 
 # The `ApprovalRequestParams` complex type of the SAP Business One Service Layer
 public type ApprovalRequestParams record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     BoApprovalRequestStatusEnum status?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
 |};
 
 # The `ExtendedTranslation_ResultLine` complex type of the SAP Business One Service Layer
 public type ExtendedTranslationResultLine record {|
+    # Language code field.
     @jsondata:Name {value: "LanguageCode"}
     int:Signed32 languageCode?;
+    # Translated text field.
     @jsondata:Name {value: "TranslatedText"}
     string translatedText?;
+    # Sub line number field.
     @jsondata:Name {value: "SubLineNumber"}
     int:Signed32 subLineNumber?;
+    # Document entry field.
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
+    # Line number field.
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
@@ -3662,6 +4624,7 @@ public type GetSingleUserConnectionsQueries record {
 
 # Represents the request payload for the `SeriesService_GetDocumentChangedMenuName` operation of the SAP Business One Service Layer
 public type SeriesService_GetDocumentChangedMenuName_body record {
+    # Document type params field.
     @jsondata:Name {value: "DocumentTypeParams"}
     DocumentTypeParams documentTypeParams?;
 };
@@ -3696,6 +4659,7 @@ public type ListMobileAddOnSettingQueries record {
 
 # The `WebClientFormSettingParams` complex type of the SAP Business One Service Layer
 public type WebClientFormSettingParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -3712,10 +4676,13 @@ public type AuthenticationTypeEnum "None"|"Basic"|"OAuth"|"HMAC";
 
 # The `WebClientVariantGroupBy` complex type of the SAP Business One Service Layer
 public type WebClientVariantGroupBy record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -3725,24 +4692,36 @@ public type BoManageMethod "bomm_OnEveryTransaction"|"bomm_OnReleaseOnly";
 
 # Represents the request payload for the `MobileAppService_GetTechnicianSettingsGroup` operation of the SAP Business One Service Layer
 public type MobileAppService_GetTechnicianSettingsGroup_body record {
+    # Technician settings group params field.
     @jsondata:Name {value: "TechnicianSettingsGroupParams"}
     TechnicianSettingsGroupParams technicianSettingsGroupParams?;
 };
 
 # The `UserActionRecordItem` complex type of the SAP Business One Service Layer
 public type UserActionRecordItem record {
+    # User code field.
     string UserCode?;
     # OData EnumType 'UserActionTypeEnum'. Serialised by the Service Layer as the member name
     UserActionTypeEnum Action?;
+    # Action by field.
     string ActionBy?;
+    # Client IP field.
     string ClientIP?;
+    # Client name field.
     string ClientName?;
+    # Action date field.
     string ActionDate?;
+    # Action time field.
     string ActionTime?;
+    # Windows session field.
     int:Signed32 WindowsSession?;
+    # Windows user field.
     string WindowsUser?;
+    # Process name field.
     string ProcessName?;
+    # Process ID field.
     int:Signed32 ProcessID?;
+    # Alive duration field.
     int:Signed32 AliveDuration?;
 };
 
@@ -3751,8 +4730,10 @@ public type BoBarCodeStandardEnum "rlbsan13"|"rlbsCode39"|"rlbsCode128";
 
 # Represents the request payload for the `UserMenuService_UpdateUserMenu` operation of the SAP Business One Service Layer
 public type UserMenuService_UpdateUserMenu_body record {
+    # User menu params field.
     @jsondata:Name {value: "UserMenuParams"}
     UserMenuParams userMenuParams?;
+    # User menu items field.
     @jsondata:Name {value: "UserMenuItems"}
     UserMenuItem[] userMenuItems?;
 };
@@ -3769,82 +4750,119 @@ public type GetUserLanguagesQueries record {
 
 # The `TaxReportFilter` entity of the SAP Business One Service Layer
 public type TaxReportFilter record {|
+    # Quarter field.
     @jsondata:Name {value: "Quarter"}
     int:Signed32 quarter?;
+    # First printed number field.
     @jsondata:Name {value: "FirstPrintedNumber"}
     int:Signed32 firstPrintedNumber?;
+    # Include customers field.
     @jsondata:Name {value: "IncludeCustomers"}
     BoYesNoEnum includeCustomers?;
+    # Include general ledger accounts field.
     @jsondata:Name {value: "IncludeGLAccounts"}
     BoYesNoEnum includeGLAccounts?;
+    # Diplay credit memos in separate column field.
     @jsondata:Name {value: "DiplayCreditMemosInSeparateColumn"}
     BoYesNoEnum diplayCreditMemosInSeparateColumn?;
+    # Tax report series collection field.
     @jsondata:Name {value: "TaxReportSeriesCollection"}
     TaxReportSeries[] taxReportSeriesCollection?;
+    # Include vendors field.
     @jsondata:Name {value: "IncludeVendors"}
     BoYesNoEnum includeVendors?;
+    # Tax report business partners field.
     @jsondata:Name {value: "TaxReportBusinessPartners"}
     TaxReportBusinessPartner[] taxReportBusinessPartners?;
+    # Round amount field.
     @jsondata:Name {value: "RoundAmount"}
     BoYesNoEnum roundAmount?;
+    # Include document type field.
     @jsondata:Name {value: "IncludeDocumentType"}
     BoYesNoEnum includeDocumentType?;
+    # Tax report groups field.
     @jsondata:Name {value: "TaxReportGroups"}
     TaxReportGroup[] taxReportGroups?;
+    # Tax report accounts field.
     @jsondata:Name {value: "TaxReportAccounts"}
     TaxReportAccount[] taxReportAccounts?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Appendix oor p selection field.
     @jsondata:Name {value: "AppendixOorPSelection"}
     BoYesNoEnum appendixOorPSelection?;
+    # Include series filter field.
     @jsondata:Name {value: "IncludeSeriesFilter"}
     BoYesNoEnum includeSeriesFilter?;
+    # Tax report documents field.
     @jsondata:Name {value: "TaxReportDocuments"}
     TaxReportDocument[] taxReportDocuments?;
+    # Tax date field.
     @jsondata:Name {value: "TaxDate"}
     BoYesNoEnum taxDate?;
+    # Cancellation field.
     @jsondata:Name {value: "Cancellation"}
     BoYesNoEnum cancellation?;
+    # Report layout field.
     @jsondata:Name {value: "ReportLayout"}
     TaxReportFilterReportLayoutType reportLayout?;
+    # First register number field.
     @jsondata:Name {value: "FirstRegisterNumber"}
     int:Signed32 firstRegisterNumber?;
+    # Exclude withholding tax field.
     @jsondata:Name {value: "ExcludeWT"}
     BoYesNoEnum excludeWT?;
+    # Opening and closing balance field.
     @jsondata:Name {value: "OpeningAndClosingBalance"}
     BoYesNoEnum openingAndClosingBalance?;
+    # Period field.
     @jsondata:Name {value: "Period"}
     TaxReportFilterPeriod period?;
+    # Document type field.
     @jsondata:Name {value: "DocumentType"}
     TaxReportFilterApArDocumentType documentType?;
+    # Show payments with deferred tax field.
     @jsondata:Name {value: "ShowPaymentsWithDeferredTax"}
     BoYesNoEnum showPaymentsWithDeferredTax?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # To series field.
     @jsondata:Name {value: "ToSeries"}
     int:Signed32 toSeries?;
+    # Declaration type field.
     @jsondata:Name {value: "DeclarationType"}
     TaxReportFilterDeclarationType declarationType?;
+    # Filter type field.
     @jsondata:Name {value: "FilterType"}
     TaxReportFilterType filterType?;
+    # Hide tax without transaction field.
     @jsondata:Name {value: "HideTaxWithoutTransaction"}
     BoYesNoEnum hideTaxWithoutTransaction?;
+    # Year field.
     @jsondata:Name {value: "Year"}
     int:Signed32 year?;
+    # Quarter or dates field.
     @jsondata:Name {value: "QuarterOrDates"}
     TaxReportFilterQuarterOrDates quarterOrDates?;
+    # From date field.
     @jsondata:Name {value: "FromDate"}
     string fromDate?;
+    # To date field.
     @jsondata:Name {value: "ToDate"}
     string toDate?;
+    # From series field.
     @jsondata:Name {value: "FromSeries"}
     int:Signed32 fromSeries?;
 |};
 
 # Represents the response payload for the `CockpitsService_GetCockpitList` operation of the SAP Business One Service Layer
 public type inline_response_200_9 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     CockpitParams[] value?;
 };
 
@@ -3853,15 +4871,19 @@ public type BoAeDistMthd "aed_Equally"|"aed_LineTotal"|"aed_None"|"aed_Quantity"
 
 # Represents the response payload for the `ApprovalTemplatesService_GetApprovalTemplateList` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalTemplateParams[] value?;
 };
 
 # Represents the response payload for the `BranchesService_GetBranchList` operation of the SAP Business One Service Layer
 public type inline_response_200_6 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     BranchParams[] value?;
 };
 
@@ -3877,15 +4899,19 @@ public type GetUserFieldsMDQueries record {
 
 # Represents the response payload for the `ChangeLogsService_GetChangeLog` operation of the SAP Business One Service Layer
 public type inline_response_200_7 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ChangeLogParams[] value?;
 };
 
 # Represents the response payload for the `ChangeLogsService_GetChangeLogDifferences` operation of the SAP Business One Service Layer
 public type inline_response_200_8 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ChangeLogDifferenceParams[] value?;
 };
 
@@ -3916,24 +4942,34 @@ public type ListSingleUserConnectionsQueries record {
 
 # The `Recipient` complex type of the SAP Business One Service Layer
 public type Recipient record {|
+    # Send internal field.
     @jsondata:Name {value: "SendInternal"}
     BoYesNoEnum sendInternal?;
+    # Cellular number field.
     @jsondata:Name {value: "CellularNumber"}
     string cellularNumber?;
+    # Name to field.
     @jsondata:Name {value: "NameTo"}
     string nameTo?;
+    # Fax number field.
     @jsondata:Name {value: "FaxNumber"}
     string faxNumber?;
+    # User code field.
     @jsondata:Name {value: "UserCode"}
     string userCode?;
+    # Send SMS field.
     @jsondata:Name {value: "SendSMS"}
     BoYesNoEnum sendSMS?;
+    # Send email field.
     @jsondata:Name {value: "SendEmail"}
     BoYesNoEnum sendEmail?;
+    # User type field.
     @jsondata:Name {value: "UserType"}
     BoMsgRcpTypes userType?;
+    # Email address field.
     @jsondata:Name {value: "EmailAddress"}
     string emailAddress?;
+    # Send fax field.
     @jsondata:Name {value: "SendFax"}
     BoYesNoEnum sendFax?;
 |};
@@ -3980,8 +5016,10 @@ public type GetApprovalStagesQueries record {
 
 # Represents the response payload for the `ApprovalRequestsService_GetAllApprovalRequestsList` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalRequestParams[] value?;
 };
 
@@ -4012,15 +5050,19 @@ public type ListIntegrationPackagesConfigureQueries record {
 
 # Represents the response payload for the `ApprovalRequestsService_GetApprovalRequestList` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalRequestParams[] value?;
 };
 
 # Represents the response payload for the `ApprovalRequestsService_GetOpenApprovalRequestList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalRequestParams[] value?;
 };
 
@@ -4051,13 +5093,16 @@ public type ListCountriesQueries record {
 
 # Represents the response payload for the `ApprovalStagesService_GetApprovalStageList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalStageParams[] value?;
 };
 
 # The `ElectronicSeriesParams` complex type of the SAP Business One Service Layer
 public type ElectronicSeriesParams record {|
+    # Electronic series field.
     @jsondata:Name {value: "ElectronicSeries"}
     int:Signed32 electronicSeries?;
 |};
@@ -4067,147 +5112,199 @@ public type BoBaseDateRateEnum "bdr_PostingDate"|"bdr_TaxDate";
 
 # A paged collection of `Users` entities returned by the SAP Business One Service Layer
 public type UsersCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     User[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `CockpitsService_GetUserCockpitList` operation of the SAP Business One Service Layer
 public type inline_response_200_11 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     CockpitParams[] value?;
 };
 
 # Represents the response payload for the `CockpitsService_GetTemplateCockpitList` operation of the SAP Business One Service Layer
 public type inline_response_200_10 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     CockpitParams[] value?;
 };
 
 # The `TechnicianSettingsGroup` complex type of the SAP Business One Service Layer
 public type TechnicianSettingsGroup record {|
+    # Enable resign field.
     @jsondata:Name {value: "EnableResign"}
     BoYesNoEnum enableResign?;
+    # Customized group field.
     @jsondata:Name {value: "CustomizedGroup"}
     BoYesNoEnum customizedGroup?;
+    # Enable edit time field.
     @jsondata:Name {value: "EnableEditTime"}
     BoYesNoEnum enableEditTime?;
+    # Enable star rating field.
     @jsondata:Name {value: "EnableStarRating"}
     BoYesNoEnum enableStarRating?;
+    # Enable actual duration field.
     @jsondata:Name {value: "EnableActualDuration"}
     BoYesNoEnum enableActualDuration?;
+    # Enable followup field.
     @jsondata:Name {value: "EnableFollowup"}
     BoYesNoEnum enableFollowup?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Enable reject field.
     @jsondata:Name {value: "EnableReject"}
     BoYesNoEnum enableReject?;
+    # Enable signature field.
     @jsondata:Name {value: "EnableSignature"}
     BoYesNoEnum enableSignature?;
+    # Advanced dash board field.
     @jsondata:Name {value: "AdvancedDashBoard"}
     int:Signed32 advancedDashBoard?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # Represents the response payload for the `CompanyService_GetFinancePeriods` operation of the SAP Business One Service Layer
 public type inline_response_200_13 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     FinancePeriod[] value?;
 };
 
 # Represents the response payload for the `CompanyService_GetFeaturesStatus` operation of the SAP Business One Service Layer
 public type inline_response_200_12 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     FeatureStatus[] value?;
 };
 
 # Represents the response payload for the `EmailGroupsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_19 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     EmailGroupParams[] value?;
 };
 
 # A paged collection of `WebClientLaunchpads` entities returned by the SAP Business One Service Layer
 public type WebClientLaunchpadsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientLaunchpad[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `DistributionListsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_18 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     DistributionListParams[] value?;
 };
 
 # Represents the response payload for the `CountiesService_GetCountyList` operation of the SAP Business One Service Layer
 public type inline_response_200_15 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     CountyParams[] value?;
 };
 
 # The `WebClientBookmarkTile` entity of the SAP Business One Service Layer
 public type WebClientBookmarkTile record {|
+    # URL target field.
     @jsondata:Name {value: "UrlTarget"}
     string urlTarget?;
+    # Endpoint field.
     @jsondata:Name {value: "Endpoint"}
     string endpoint?;
+    # Title field.
     @jsondata:Name {value: "Title"}
     string title?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Information field.
     @jsondata:Name {value: "Info"}
     string info?;
+    # Bind type field.
     @jsondata:Name {value: "BindType"}
     string bindType?;
+    # Sub title field.
     @jsondata:Name {value: "SubTitle"}
     string subTitle?;
 |};
 
 # The `County` entity of the SAP Business One Service Layer
 public type County record {
+    # Abs ID field.
     int:Signed32 AbsId?;
+    # Code field.
     string Code?;
+    # Country field.
     string Country?;
+    # State field.
     string State?;
+    # Name field.
     string Name?;
+    # Ibge code field.
     string IbgeCode?;
+    # Gia code field.
     string GiaCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxZone?;
+    # Business places field.
     BusinessPlace[] BusinessPlaces?;
 };
 
 # Represents the response payload for the `CompanyService_GetPeriods` operation of the SAP Business One Service Layer
 public type inline_response_200_14 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     PeriodCategoryParams[] value?;
 };
 
 # Represents the response payload for the `DepartmentsService_GetDepartmentList` operation of the SAP Business One Service Layer
 public type inline_response_200_17 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     DepartmentParams[] value?;
 };
 
 # Represents the response payload for the `CountriesService_GetCountryList` operation of the SAP Business One Service Layer
 public type inline_response_200_16 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     CountryParams[] value?;
 };
 
@@ -4226,44 +5323,62 @@ public type BoCockpitTypeEnum "cptt_UserCockpit"|"cptt_TemplateCockpit";
 
 # The `EventSubscription` entity of the SAP Business One Service Layer
 public type EventSubscription record {|
+    # Verify certificate field.
     @jsondata:Name {value: "VerifyCertificate"}
     BoYesNoEnum verifyCertificate?;
+    # Last sent time field.
     @jsondata:Name {value: "LastSentTime"}
     string lastSentTime?;
+    # Authentication cred field.
     @jsondata:Name {value: "AuthenticationCred"}
     string authenticationCred?;
+    # Create time field.
     @jsondata:Name {value: "CreateTime"}
     string createTime?;
+    # Create date field.
     @jsondata:Name {value: "CreateDate"}
     string createDate?;
+    # Last sent date field.
     @jsondata:Name {value: "LastSentDate"}
     string lastSentDate?;
+    # Webhook URL field.
     @jsondata:Name {value: "WebhookURL"}
     string webhookURL?;
+    # Webhook ID field.
     @jsondata:Name {value: "WebhookID"}
     string webhookID?;
+    # Update date field.
     @jsondata:Name {value: "UpdateDate"}
     string updateDate?;
+    # Event collection field.
     @jsondata:Name {value: "EventCollection"}
     Event[] eventCollection?;
+    # State field.
     @jsondata:Name {value: "State"}
     WebhookStateEnum state?;
+    # Update time field.
     @jsondata:Name {value: "UpdateTime"}
     string updateTime?;
+    # Last err msg field.
     @jsondata:Name {value: "LastErrMsg"}
     string lastErrMsg?;
+    # Work mode field.
     @jsondata:Name {value: "WorkMode"}
     WebhookWorkModeEnum workMode?;
+    # Authentication type field.
     @jsondata:Name {value: "AuthenticationType"}
     AuthenticationTypeEnum authenticationType?;
+    # Handshake field.
     @jsondata:Name {value: "Handshake"}
     BoYesNoEnum handshake?;
 |};
 
 # The `PredefinedTextParams` complex type of the SAP Business One Service Layer
 public type PredefinedTextParams record {|
+    # Numerator field.
     @jsondata:Name {value: "Numerator"}
     int:Signed32 numerator?;
+    # Text code field.
     @jsondata:Name {value: "TextCode"}
     string textCode?;
 |};
@@ -4273,15 +5388,20 @@ public type BoPictureSizeEnum "rlpsOriginalSize"|"rlpsFitFieldSizeNonProportiona
 
 # Represents the request payload for the `ReportLayoutsService_UpdateLanguageReport` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_UpdateLanguageReport_body record {
+    # Report layout field.
     @jsondata:Name {value: "ReportLayout"}
     ReportLayout reportLayout?;
 };
 
 # The `UserObjectMD_FindColumn` complex type of the SAP Business One Service Layer
 public type UserObjectMDFindColumn record {
+    # Column number field.
     int:Signed32 ColumnNumber?;
+    # Column alias field.
     string ColumnAlias?;
+    # Column description field.
     string ColumnDescription?;
+    # Code field.
     string Code?;
 };
 
@@ -4343,167 +5463,245 @@ public type ListWebClientRecentActivitiesQueries record {
 
 # The `WebClientVariantGroup` entity of the SAP Business One Service Layer
 public type WebClientVariantGroup record {|
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # View ID field.
     @jsondata:Name {value: "ViewId"}
     string viewId?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Default variant field.
     @jsondata:Name {value: "DefaultVariant"}
     string defaultVariant?;
+    # View type field.
     @jsondata:Name {value: "ViewType"}
     string viewType?;
+    # Object name field.
     @jsondata:Name {value: "ObjectName"}
     string objectName?;
 |};
 
 # The `ReportLayoutItem` complex type of the SAP Business One Service Layer
 public type ReportLayoutItem record {|
+    # Display total as a word field.
     @jsondata:Name {value: "DisplayTotalAsAWord"}
     BoYesNoEnum displayTotalAsAWord?;
+    # Top margin field.
     @jsondata:Name {value: "TopMargin"}
     int:Signed32 topMargin?;
+    # Line break field.
     @jsondata:Name {value: "LineBreak"}
     BoLineBreakEnum lineBreak?;
+    # Left field.
     @jsondata:Name {value: "Left"}
     int:Signed32 left?;
+    # Bottom margin field.
     @jsondata:Name {value: "BottomMargin"}
     int:Signed32 bottomMargin?;
+    # Next segment item number field.
     @jsondata:Name {value: "NextSegmentItemNumber"}
     string nextSegmentItemNumber?;
+    # Height adjustments field.
     @jsondata:Name {value: "HeightAdjustments"}
     BoYesNoEnum heightAdjustments?;
+    # String field.
     @jsondata:Name {value: "String"}
     string 'string?;
+    # Distance to repetitive duplicate field.
     @jsondata:Name {value: "DistanceToRepetitiveDuplicate"}
     int:Signed32 distanceToRepetitiveDuplicate?;
+    # Suppress zeros field.
     @jsondata:Name {value: "SuppressZeros"}
     BoYesNoEnum suppressZeros?;
+    # Border red field.
     @jsondata:Name {value: "BorderRed"}
     int:Signed32 borderRed?;
+    # Text style field.
     @jsondata:Name {value: "TextStyle"}
     int:Signed32 textStyle?;
+    # Top border line thickness field.
     @jsondata:Name {value: "TopBorderLineThickness"}
     int:Signed32 topBorderLineThickness?;
+    # Reverse sort field.
     @jsondata:Name {value: "ReverseSort"}
     BoYesNoEnum reverseSort?;
+    # Parent type field.
     @jsondata:Name {value: "ParentType"}
     int:Signed32 parentType?;
+    # Parent index field.
     @jsondata:Name {value: "ParentIndex"}
     int:Signed32 parentIndex?;
+    # Background blue field.
     @jsondata:Name {value: "BackgroundBlue"}
     int:Signed32 backgroundBlue?;
+    # New page field.
     @jsondata:Name {value: "NewPage"}
     BoYesNoEnum newPage?;
+    # Display repetitive area footer on all pages field.
     @jsondata:Name {value: "DisplayRepetitiveAreaFooterOnAllPages"}
     BoYesNoEnum displayRepetitiveAreaFooterOnAllPages?;
+    # String length field.
     @jsondata:Name {value: "StringLength"}
     int:Signed32 stringLength?;
+    # Background red field.
     @jsondata:Name {value: "BackgroundRed"}
     int:Signed32 backgroundRed?;
+    # Left border line thickness field.
     @jsondata:Name {value: "LeftBorderLineThickness"}
     int:Signed32 leftBorderLineThickness?;
+    # Group number field.
     @jsondata:Name {value: "GroupNumber"}
     int:Signed32 groupNumber?;
+    # Variable number field.
     @jsondata:Name {value: "VariableNumber"}
     int:Signed32 variableNumber?;
+    # Border green field.
     @jsondata:Name {value: "BorderGreen"}
     int:Signed32 borderGreen?;
+    # Data source field.
     @jsondata:Name {value: "DataSource"}
     BoDataSourceEnum dataSource?;
+    # Text red field.
     @jsondata:Name {value: "TextRed"}
     int:Signed32 textRed?;
+    # Table name field.
     @jsondata:Name {value: "TableName"}
     string tableName?;
+    # Relate to field field.
     @jsondata:Name {value: "RelateToField"}
     string relateToField?;
+    # Top field.
     @jsondata:Name {value: "Top"}
     int:Signed32 top?;
+    # Font size field.
     @jsondata:Name {value: "FontSize"}
     int:Signed32 fontSize?;
+    # Text blue field.
     @jsondata:Name {value: "TextBlue"}
     int:Signed32 textBlue?;
+    # Font name field.
     @jsondata:Name {value: "FontName"}
     string fontName?;
+    # Unique field.
     @jsondata:Name {value: "Unique"}
     BoYesNoEnum unique?;
+    # Bottom border line thickness field.
     @jsondata:Name {value: "BottomBorderLineThickness"}
     int:Signed32 bottomBorderLineThickness?;
+    # Bar code standard field.
     @jsondata:Name {value: "BarCodeStandard"}
     BoBarCodeStandardEnum barCodeStandard?;
+    # Display description field.
     @jsondata:Name {value: "DisplayDescription"}
     BoYesNoEnum displayDescription?;
+    # Item index field.
     @jsondata:Name {value: "ItemIndex"}
     int:Signed32 itemIndex?;
+    # Border blue field.
     @jsondata:Name {value: "BorderBlue"}
     int:Signed32 borderBlue?;
+    # Sort level field.
     @jsondata:Name {value: "SortLevel"}
     int:Signed32 sortLevel?;
+    # Link to field field.
     @jsondata:Name {value: "LinkToField"}
     string linkToField?;
+    # Background green field.
     @jsondata:Name {value: "BackgroundGreen"}
     int:Signed32 backgroundGreen?;
+    # String filler field.
     @jsondata:Name {value: "StringFiller"}
     string stringFiller?;
+    # Item number field.
     @jsondata:Name {value: "ItemNumber"}
     int:Signed32 itemNumber?;
+    # Visible field.
     @jsondata:Name {value: "Visible"}
     BoYesNoEnum visible?;
+    # Editable field.
     @jsondata:Name {value: "Editable"}
     int:Signed32 editable?;
+    # Height field.
     @jsondata:Name {value: "Height"}
     int:Signed32 height?;
+    # Vertical alignment field.
     @jsondata:Name {value: "VerticalAlignment"}
     BoVerticalAlignmentEnum verticalAlignment?;
+    # Width field.
     @jsondata:Name {value: "Width"}
     int:Signed32 width?;
+    # Field name field.
     @jsondata:Name {value: "FieldName"}
     string fieldName?;
+    # Right border line thickness field.
     @jsondata:Name {value: "RightBorderLineThickness"}
     int:Signed32 rightBorderLineThickness?;
+    # Horizontal alignment field.
     @jsondata:Name {value: "HorizontalAlignment"}
     BoHorizontalAlignmentEnum horizontalAlignment?;
+    # Highlight red field.
     @jsondata:Name {value: "HighlightRed"}
     int:Signed32 highlightRed?;
+    # Number of lines in repetitive area field.
     @jsondata:Name {value: "NumberOfLinesInRepetitiveArea"}
     int:Signed32 numberOfLinesInRepetitiveArea?;
+    # Print as bar code field.
     @jsondata:Name {value: "PrintAsBarCode"}
     BoYesNoEnum printAsBarCode?;
+    # Block font change field.
     @jsondata:Name {value: "BlockFontChange"}
     BoYesNoEnum blockFontChange?;
+    # Duplicate repetitive area field.
     @jsondata:Name {value: "DuplicateRepetitiveArea"}
     BoYesNoEnum duplicateRepetitiveArea?;
+    # Set as group field.
     @jsondata:Name {value: "SetAsGroup"}
     BoYesNoEnum setAsGroup?;
+    # Hide repetitive area if empty field.
     @jsondata:Name {value: "HideRepetitiveAreaIfEmpty"}
     BoYesNoEnum hideRepetitiveAreaIfEmpty?;
+    # Highlight blue field.
     @jsondata:Name {value: "HighlightBlue"}
     int:Signed32 highlightBlue?;
+    # Field identifier field.
     @jsondata:Name {value: "FieldIdentifier"}
     string fieldIdentifier?;
+    # Shadow thickness field.
     @jsondata:Name {value: "ShadowThickness"}
     int:Signed32 shadowThickness?;
+    # Right margin field.
     @jsondata:Name {value: "RightMargin"}
     int:Signed32 rightMargin?;
+    # Text green field.
     @jsondata:Name {value: "TextGreen"}
     int:Signed32 textGreen?;
+    # Sort type field.
     @jsondata:Name {value: "SortType"}
     BoSortTypeEnum sortType?;
+    # Highlight green field.
     @jsondata:Name {value: "HighlightGreen"}
     int:Signed32 highlightGreen?;
+    # Picture size field.
     @jsondata:Name {value: "PictureSize"}
     BoPictureSizeEnum pictureSize?;
+    # Type field.
     @jsondata:Name {value: "Type"}
     BoReportLayoutItemTypeEnum 'type?;
+    # Left margin field.
     @jsondata:Name {value: "LeftMargin"}
     int:Signed32 leftMargin?;
 |};
 
 # A paged collection of `UserKeysMD` entities returned by the SAP Business One Service Layer
 public type UserKeysMDCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserKeysMD[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4545,14 +5743,19 @@ public type GetWebClientVariantsQueries record {
 
 # The `ShowDifferenceParams` complex type of the SAP Business One Service Layer
 public type ShowDifferenceParams record {|
+    # Log instance2 field.
     @jsondata:Name {value: "LogInstance2"}
     int:Signed32 logInstance2?;
+    # Primary key field.
     @jsondata:Name {value: "PrimaryKey"}
     string primaryKey?;
+    # U DO object code field.
     @jsondata:Name {value: "UDOObjectCode"}
     string uDOObjectCode?;
+    # Object field.
     @jsondata:Name {value: "Object"}
     BoChangeLogEnum 'object?;
+    # Log instance field.
     @jsondata:Name {value: "LogInstance"}
     int:Signed32 logInstance?;
 |};
@@ -4562,16 +5765,22 @@ public type BoCurrencyCheck "cc_Block"|"cc_NoMessage";
 
 # Represents the request payload for the `MobileAppService_UpdateSalesAppSetting` operation of the SAP Business One Service Layer
 public type MobileAppService_UpdateSalesAppSetting_body record {
+    # Sales app setting field.
     @jsondata:Name {value: "SalesAppSetting"}
     SalesAppSetting salesAppSetting?;
 };
 
 # The `UserObjectMD_FormColumn` complex type of the SAP Business One Service Layer
 public type UserObjectMDFormColumn record {
+    # Form column alias field.
     string FormColumnAlias?;
+    # Form column description field.
     string FormColumnDescription?;
+    # Form column number field.
     int:Signed32 FormColumnNumber?;
+    # Son number field.
     int:Signed32 SonNumber?;
+    # Code field.
     string Code?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Editable?;
@@ -4579,13 +5788,17 @@ public type UserObjectMDFormColumn record {
 
 # The `UserObjectsMD` entity of the SAP Business One Service Layer
 public type UserObjectsMD record {
+    # Table name field.
     string TableName?;
+    # Code field.
     string Code?;
+    # Log table name field.
     string LogTableName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CanCreateDefaultForm?;
     # OData EnumType 'BoUDOObjType'. Serialised by the Service Layer as the member name
     BoUDOObjType ObjectType?;
+    # Extension name field.
     string ExtensionName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CanCancel?;
@@ -4599,6 +5812,7 @@ public type UserObjectsMD record {
     BoYesNoEnum CanFind?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CanYearTransfer?;
+    # Name field.
     string Name?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CanClose?;
@@ -4610,22 +5824,31 @@ public type UserObjectsMD record {
     BoYesNoEnum CanArchive?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum MenuItem?;
+    # Menu caption field.
     string MenuCaption?;
+    # Father menu ID field.
     int:Signed32 FatherMenuID?;
+    # Position field.
     int:Signed32 Position?;
+    # Menu UID field.
     string MenuUID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EnableEnhancedForm?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RebuildEnhancedForm?;
+    # Form SRF field.
     string FormSRF?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ApplyAuthorization?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PersonalDataProtection?;
+    # User object MD child tables field.
     UserObjectMDChildTable[] UserObjectMD_ChildTables?;
+    # User object MD find columns field.
     UserObjectMDFindColumn[] UserObjectMD_FindColumns?;
+    # User object MD form columns field.
     UserObjectMDFormColumn[] UserObjectMD_FormColumns?;
+    # User object MD enhanced form columns field.
     UserObjectMDEnhancedFormColumn[] UserObjectMD_EnhancedFormColumns?;
     # The `UserTablesMD` entity of the SAP Business One Service Layer
     UserTablesMD UserTablesMD?;
@@ -4633,9 +5856,12 @@ public type UserObjectsMD record {
 
 # A paged collection of `DistributionLists` entities returned by the SAP Business One Service Layer
 public type DistributionListsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     DistributionList[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4652,10 +5878,13 @@ public type GetReportTypesQueries record {
 
 # The `WebClientLaunchpadTile` complex type of the SAP Business One Service Layer
 public type WebClientLaunchpadTile record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Tile ID field.
     @jsondata:Name {value: "TileId"}
     string tileId?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -4687,57 +5916,80 @@ public type ListHolidaysQueries record {
 
 # Represents the request payload for the `MobileAppService_UpdateServiceAppReport` operation of the SAP Business One Service Layer
 public type MobileAppService_UpdateServiceAppReport_body record {
+    # Service app report field.
     @jsondata:Name {value: "ServiceAppReport"}
     ServiceAppReport serviceAppReport?;
 };
 
 # Represents the request payload for the `SeriesService_UpdateSeries` operation of the SAP Business One Service Layer
 public type SeriesService_UpdateSeries_body record {
+    # Series field.
     @jsondata:Name {value: "Series"}
     Series series?;
 };
 
 # The `Series` complex type of the SAP Business One Service Layer
 public type Series record {
+    # Document field.
     string Document?;
+    # Document sub type field.
     string DocumentSubType?;
+    # Initial number field.
     int:Signed32 InitialNumber?;
+    # Last number field.
     int:Signed32 LastNumber?;
+    # Next number field.
     int:Signed32 NextNumber?;
+    # Prefix field.
     string Prefix?;
+    # Suffix field.
     string Suffix?;
+    # Remarks field.
     string Remarks?;
     # OData EnumType 'BoSeriesGroupEnum'. Serialised by the Service Layer as the member name
     BoSeriesGroupEnum GroupCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Locked?;
+    # Period indicator field.
     string PeriodIndicator?;
+    # Name field.
     string Name?;
+    # Series field.
     int:Signed32 Series?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsDigitalSeries?;
+    # Digit number field.
     int:Signed32 DigitNumber?;
     # OData EnumType 'BoSeriesTypeEnum'. Serialised by the Service Layer as the member name
     BoSeriesTypeEnum SeriesType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsManual?;
+    # BPLID field.
     int:Signed32 BPLID?;
+    # AT document type field.
     string ATDocumentType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsElectronicCommEnabled?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CostAccountOnly?;
+    # Invoice type field.
     int:Signed32 InvoiceType?;
+    # Invoice type of negative invoice field.
     int:Signed32 InvoiceTypeOfNegativeInvoice?;
+    # Portugal series action field.
     string PortugalSeriesAction?;
+    # Portugal series status field.
     string PortugalSeriesStatus?;
+    # Portugal series phase field.
     string PortugalSeriesPhase?;
 };
 
 # The `TechnicianSettingsGroupParams` complex type of the SAP Business One Service Layer
 public type TechnicianSettingsGroupParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -4764,9 +6016,12 @@ public type BoWeekEnum "Sunday"|"Monday"|"Tuesday"|"Wednesday"|"Thursday"|"Frida
 
 # A paged collection of `WebClientVariants` entities returned by the SAP Business One Service Layer
 public type WebClientVariantsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientVariant[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4780,80 +6035,108 @@ public type ListUserLanguagesHeaders record {
 
 # A paged collection of `AlertManagements` entities returned by the SAP Business One Service Layer
 public type AlertManagementsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     AlertManagement[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the response payload for the `ReportFilterService_GetTaxReportFilterList` operation of the SAP Business One Service Layer
 public type inline_response_200_33 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     TaxReportFilterParams[] value?;
 };
 
 # Represents the response payload for the `QueryAuthGroupService_GetQueryAuthGroupList` operation of the SAP Business One Service Layer
 public type inline_response_200_32 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     QueryAuthGroup[] value?;
 };
 
 # Represents the response payload for the `ReportTypesService_GetReportTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_35 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ReportTypeParams[] value?;
 };
 
 # The `WebClientVariantMChart` complex type of the SAP Business One Service Layer
 public type WebClientVariantMChart record {|
+    # Time axis field.
     @jsondata:Name {value: "TimeAxis"}
     string timeAxis?;
+    # Shape field.
     @jsondata:Name {value: "Shape"}
     string shape?;
+    # Color field.
     @jsondata:Name {value: "Color"}
     string color?;
+    # Web client variant m chart size collection field.
     @jsondata:Name {value: "WebClientVariantMChartSizeCollection"}
     WebClientVariantMChartSize[] webClientVariantMChartSizeCollection?;
+    # Bubble width field.
     @jsondata:Name {value: "BubbleWidth"}
     string bubbleWidth?;
+    # Web client variant m chart value2 collection field.
     @jsondata:Name {value: "WebClientVariantMChartValue2Collection"}
     WebClientVariantMChartValue2[] webClientVariantMChartValue2Collection?;
+    # Chart type field.
     @jsondata:Name {value: "ChartType"}
     string chartType?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Is show legend field.
     @jsondata:Name {value: "IsShowLegend"}
     BoYesNoEnum isShowLegend?;
+    # Category axis1 field.
     @jsondata:Name {value: "CategoryAxis1"}
     string categoryAxis1?;
+    # Category axis2 field.
     @jsondata:Name {value: "CategoryAxis2"}
     string categoryAxis2?;
+    # Web client variant m chart value1 collection field.
     @jsondata:Name {value: "WebClientVariantMChartValue1Collection"}
     WebClientVariantMChartValue1[] webClientVariantMChartValue1Collection?;
 |};
 
 # Represents the response payload for the `ReportLayoutsService_GetReportLayoutList` operation of the SAP Business One Service Layer
 public type inline_response_200_34 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ReportLayoutParams[] value?;
 };
 
 # The `ApprovalTemplateUser` complex type of the SAP Business One Service Layer
 public type ApprovalTemplateUser record {|
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
 |};
 
 # The `ChooseFromList_Line` complex type of the SAP Business One Service Layer
 public type ChooseFromListLine record {
+    # Object name field.
     string ObjectName?;
+    # Field index field.
     int:Signed32 FieldIndex?;
+    # Field number field.
     string FieldNo?;
+    # Displayed name field.
     string DisplayedName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum GroupBy?;
@@ -4863,6 +6146,7 @@ public type ChooseFromListLine record {
     BoYesNoEnum ShowType?;
     # OData EnumType 'SortOrderEnum'. Serialised by the Service Layer as the member name
     SortOrderEnum SortOrder?;
+    # Visual index field.
     int:Signed32 VisualIndex?;
 };
 
@@ -4871,21 +6155,26 @@ public type KPITypeEnum "asSingle"|"asQuarterly"|"asMonthly"|"asMultiple";
 
 # The `ReportInputParams` complex type of the SAP Business One Service Layer
 public type ReportInputParams record {|
+    # Report layout menu ID field.
     @jsondata:Name {value: "ReportLayoutMenuID"}
     string reportLayoutMenuID?;
 |};
 
 # Represents the response payload for the `PredefinedTextsService_GetPredefinedTextList` operation of the SAP Business One Service Layer
 public type inline_response_200_31 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     PredefinedTextParams[] value?;
 };
 
 # Represents the response payload for the `MobileAppService_GetTechnicianSchedulings` operation of the SAP Business One Service Layer
 public type inline_response_200_30 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     TechnicianSchedulings[] value?;
 };
 
@@ -4930,12 +6219,16 @@ public type ListUserDefaultGroupsQueries record {
 
 # The `QueryAuthGroup` entity of the SAP Business One Service Layer
 public type QueryAuthGroup record {|
+    # Auth group code field.
     @jsondata:Name {value: "AuthGroupCode"}
     string authGroupCode?;
+    # Auth group des field.
     @jsondata:Name {value: "AuthGroupDes"}
     string authGroupDes?;
+    # Auth group ID field.
     @jsondata:Name {value: "AuthGroupId"}
     int:Signed32 authGroupId?;
+    # Category group collection field.
     @jsondata:Name {value: "CategoryGroupCollection"}
     CategoryGroup[] categoryGroupCollection?;
 |};
@@ -4952,41 +6245,51 @@ public type GetExtendedTranslationsQueries record {
 
 # Represents the request payload for the `CockpitsService_PublishCockpit` operation of the SAP Business One Service Layer
 public type CockpitsService_PublishCockpit_body record {
+    # Cockpit field.
     @jsondata:Name {value: "Cockpit"}
     Cockpit cockpit?;
 };
 
 # The `DashboardPackageParams` complex type of the SAP Business One Service Layer
 public type DashboardPackageParams record {|
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
 
 # Represents the response payload for the `SeriesService_GetDocumentSeries` operation of the SAP Business One Service Layer
 public type inline_response_200_37 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Series[] value?;
 };
 
 # Represents the response payload for the `SectionsService_GetSectionList` operation of the SAP Business One Service Layer
 public type inline_response_200_36 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     SectionParams[] value?;
 };
 
 # Represents the response payload for the `StatesService_GetStateList` operation of the SAP Business One Service Layer
 public type inline_response_200_39 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     StateParams[] value?;
 };
 
 # Represents the response payload for the `ShortLinkMappingsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_38 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ShortLinkMappingParams[] value?;
 };
 
@@ -5002,61 +6305,78 @@ public type GetWebClientFormSettingsQueries record {
 
 # The `ApprovalRequestDecision` complex type of the SAP Business One Service Layer
 public type ApprovalRequestDecision record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     BoApprovalRequestDecisionEnum status?;
+    # Approver password field.
     @jsondata:Name {value: "ApproverPassword"}
     string approverPassword?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Approver user name field.
     @jsondata:Name {value: "ApproverUserName"}
     string approverUserName?;
 |};
 
 # Represents the request payload for the `CompanyService_UpdateCompanyInfo` operation of the SAP Business One Service Layer
 public type CompanyService_UpdateCompanyInfo_body record {
+    # Company information field.
     @jsondata:Name {value: "CompanyInfo"}
     CompanyInfo companyInfo?;
 };
 
 # The `Department` entity of the SAP Business One Service Layer
 public type Department record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Users field.
     @jsondata:Name {value: "Users"}
     User[] users?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `FinancePeriodParams` complex type of the SAP Business One Service Layer
 public type FinancePeriodParams record {|
+    # Absolute entry field.
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # Period indicator field.
     @jsondata:Name {value: "PeriodIndicator"}
     string periodIndicator?;
 |};
 
 # The `CountryParams` complex type of the SAP Business One Service Layer
 public type CountryParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `WebClientDashboardParams` complex type of the SAP Business One Service Layer
 public type WebClientDashboardParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # A paged collection of `Attachments2` entities returned by the SAP Business One Service Layer
 public type Attachments2CollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Attachments2[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -5069,20 +6389,28 @@ public type ExternalCallStatusEnum "ecsNew"|"ecsInProcess"|"ecsCompleted"|"ecsCo
 
 # The `UserMenuItem` complex type of the SAP Business One Service Layer
 public type UserMenuItem record {|
+    # Type field.
     @jsondata:Name {value: "Type"}
     UserMenuItemTypeEnum 'type?;
+    # Position field.
     @jsondata:Name {value: "Position"}
     int:Signed32 position?;
+    # Report path field.
     @jsondata:Name {value: "ReportPath"}
     string reportPath?;
+    # Linked form menu ID field.
     @jsondata:Name {value: "LinkedFormMenuID"}
     int:Signed32 linkedFormMenuID?;
+    # Linked obj type field.
     @jsondata:Name {value: "LinkedObjType"}
     string linkedObjType?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Linked obj key field.
     @jsondata:Name {value: "LinkedObjKey"}
     string linkedObjKey?;
+    # Linked form number field.
     @jsondata:Name {value: "LinkedFormNum"}
     int:Signed32 linkedFormNum?;
 |};
@@ -5134,25 +6462,32 @@ public type BoSeriesGroupEnum "sg_Group1"|"sg_Group2"|"sg_Group3"|"sg_Group4"|"s
 
 # The `B1Session` entity of the SAP Business One Service Layer
 public type B1Session record {|
+    # Session timeout field.
     @jsondata:Name {value: "SessionTimeout"}
     int:Signed32 sessionTimeout?;
+    # Version field.
     @jsondata:Name {value: "Version"}
     string version?;
+    # Session ID field.
     @jsondata:Name {value: "SessionId"}
     string sessionId?;
 |};
 
 # Represents the response payload for the `HolidayService_GetHolidayList` operation of the SAP Business One Service Layer
 public type inline_response_200_22 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     HolidayParams[] value?;
 };
 
 # Represents the response payload for the `ExtendedTranslationsService_GetExtendedTranslationList` operation of the SAP Business One Service Layer
 public type inline_response_200_21 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ExtendedTranslationParams[] value?;
 };
 
@@ -5161,32 +6496,43 @@ public type BoHorizontalAlignmentEnum "rlhjRight"|"rlhjLeft"|"rlhjCentralized"|"
 
 # Represents the response payload for the `KPIsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_24 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     KPIParams[] value?;
 };
 
 # Represents the response payload for the `IntegrationPackagesConfigureService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_23 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     IntegrationPackageParams[] value?;
 };
 
 # The `ChangeLogDifferenceParams` complex type of the SAP Business One Service Layer
 public type ChangeLogDifferenceParams record {|
+    # User name field.
     @jsondata:Name {value: "UserName"}
     string userName?;
+    # Array offset field.
     @jsondata:Name {value: "ArrayOffset"}
     int:Signed32 arrayOffset?;
+    # Old value field.
     @jsondata:Name {value: "OldValue"}
     string oldValue?;
+    # Changed field field.
     @jsondata:Name {value: "ChangedField"}
     string changedField?;
+    # New value field.
     @jsondata:Name {value: "NewValue"}
     string newValue?;
+    # Date field.
     @jsondata:Name {value: "Date"}
     string date?;
+    # Line number field.
     @jsondata:Name {value: "LineNumber"}
     string lineNumber?;
 |};
@@ -5203,14 +6549,17 @@ public type GetQueryAuthGroupsQueries record {
 
 # Represents the request payload for the `UserMenuService_UpdateCurrentUserMenu` operation of the SAP Business One Service Layer
 public type UserMenuService_UpdateCurrentUserMenu_body record {
+    # User menu items field.
     @jsondata:Name {value: "UserMenuItems"}
     UserMenuItem[] userMenuItems?;
 };
 
 # Represents the response payload for the `ExceptionalEventService_GetExceptionalEventList` operation of the SAP Business One Service Layer
 public type inline_response_200_20 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ExceptionalEventParams[] value?;
 };
 
@@ -5223,73 +6572,94 @@ public type ListFormPreferencesHeaders record {
 
 # Represents the response payload for the `MobileAppService_GetEmployeeFullNames` operation of the SAP Business One Service Layer
 public type inline_response_200_29 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     EmployeeFullNamesParams[] value?;
 };
 
 # The `WebClientDashboardCard` complex type of the SAP Business One Service Layer
 public type WebClientDashboardCard record {|
+    # Version field.
     @jsondata:Name {value: "Version"}
     string version?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Content field.
     @jsondata:Name {value: "Content"}
     string content?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Sys field.
     @jsondata:Name {value: "Sys"}
     BoYesNoEnum sys?;
 |};
 
 # A paged collection of `ApprovalStages` entities returned by the SAP Business One Service Layer
 public type ApprovalStagesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalStage[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ApprovalStageApprover` complex type of the SAP Business One Service Layer
 public type ApprovalStageApprover record {|
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
 |};
 
 # Represents the response payload for the `MessagesService_GetOutbox` operation of the SAP Business One Service Layer
 public type inline_response_200_26 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     MessageHeader[] value?;
 };
 
 # Represents the response payload for the `MessagesService_GetInbox` operation of the SAP Business One Service Layer
 public type inline_response_200_25 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     MessageHeader[] value?;
 };
 
 # Represents the response payload for the `MobileAddOnSettingService_GetMobileAddOnSettingList` operation of the SAP Business One Service Layer
 public type inline_response_200_28 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     MobileAddOnSettingParams[] value?;
 };
 
 # The `WebClientVariantMChartSize` complex type of the SAP Business One Service Layer
 public type WebClientVariantMChartSize record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # Represents the request payload for the `DashboardPackagesService_ImportDashboardPackage` operation of the SAP Business One Service Layer
 public type DashboardPackagesService_ImportDashboardPackage_body record {
+    # Dashboard package import params field.
     @jsondata:Name {value: "DashboardPackageImportParams"}
     DashboardPackageImportParams dashboardPackageImportParams?;
 };
@@ -5299,8 +6669,10 @@ public type TranslationCategoryEnum "asCRReport"|"asMenuItem"|"asEFMItem";
 
 # Represents the response payload for the `MessagesService_GetSentMessages` operation of the SAP Business One Service Layer
 public type inline_response_200_27 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     MessageHeader[] value?;
 };
 
@@ -5319,8 +6691,10 @@ public type GetWebClientRecentActivitiesQueries record {
 
 # The `UserGroupParams` complex type of the SAP Business One Service Layer
 public type UserGroupParams record {|
+    # User group ID field.
     @jsondata:Name {value: "UserGroupId"}
     int:Signed32 userGroupId?;
+    # User group name field.
     @jsondata:Name {value: "UserGroupName"}
     string userGroupName?;
 |};
@@ -5337,8 +6711,10 @@ public type GetHolidaysQueries record {
 
 # The `TaxReportGroup` complex type of the SAP Business One Service Layer
 public type TaxReportGroup record {|
+    # Sum field.
     @jsondata:Name {value: "Sum"}
     BoYesNoEnum sum?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -5370,70 +6746,103 @@ public type ListB1SessionsQueries record {
 
 # The `KPI_ItemLine` complex type of the SAP Business One Service Layer
 public type KPIItemLine record {|
+    # K PI value30 field.
     @jsondata:Name {value: "KPIValue30"}
     decimal kPIValue30?;
+    # K PI code field.
     @jsondata:Name {value: "KPICode"}
     string kPICode?;
+    # K PI value13 field.
     @jsondata:Name {value: "KPIValue13"}
     decimal kPIValue13?;
+    # K PI value12 field.
     @jsondata:Name {value: "KPIValue12"}
     decimal kPIValue12?;
+    # K PI value11 field.
     @jsondata:Name {value: "KPIValue11"}
     decimal kPIValue11?;
+    # K PI name field.
     @jsondata:Name {value: "KPIName"}
     string kPIName?;
+    # K PI value10 field.
     @jsondata:Name {value: "KPIValue10"}
     decimal kPIValue10?;
+    # K PI line number field.
     @jsondata:Name {value: "KPILineNumber"}
     int:Signed32 kPILineNumber?;
+    # K PI value8 field.
     @jsondata:Name {value: "KPIValue8"}
     decimal kPIValue8?;
+    # K PI value17 field.
     @jsondata:Name {value: "KPIValue17"}
     decimal kPIValue17?;
+    # K PI value7 field.
     @jsondata:Name {value: "KPIValue7"}
     decimal kPIValue7?;
+    # K PI value16 field.
     @jsondata:Name {value: "KPIValue16"}
     decimal kPIValue16?;
+    # K PI value6 field.
     @jsondata:Name {value: "KPIValue6"}
     decimal kPIValue6?;
+    # K PI value15 field.
     @jsondata:Name {value: "KPIValue15"}
     decimal kPIValue15?;
+    # K PI value5 field.
     @jsondata:Name {value: "KPIValue5"}
     decimal kPIValue5?;
+    # K PI value14 field.
     @jsondata:Name {value: "KPIValue14"}
     decimal kPIValue14?;
+    # K PI value19 field.
     @jsondata:Name {value: "KPIValue19"}
     decimal kPIValue19?;
+    # K PI value9 field.
     @jsondata:Name {value: "KPIValue9"}
     decimal kPIValue9?;
+    # K PI value18 field.
     @jsondata:Name {value: "KPIValue18"}
     decimal kPIValue18?;
+    # K PI value4 field.
     @jsondata:Name {value: "KPIValue4"}
     decimal kPIValue4?;
+    # K PI value3 field.
     @jsondata:Name {value: "KPIValue3"}
     decimal kPIValue3?;
+    # K PI value2 field.
     @jsondata:Name {value: "KPIValue2"}
     decimal kPIValue2?;
+    # K PI value1 field.
     @jsondata:Name {value: "KPIValue1"}
     decimal kPIValue1?;
+    # K PI value20 field.
     @jsondata:Name {value: "KPIValue20"}
     decimal kPIValue20?;
+    # K PI value24 field.
     @jsondata:Name {value: "KPIValue24"}
     decimal kPIValue24?;
+    # K PI value23 field.
     @jsondata:Name {value: "KPIValue23"}
     decimal kPIValue23?;
+    # K PI value22 field.
     @jsondata:Name {value: "KPIValue22"}
     decimal kPIValue22?;
+    # K PI value21 field.
     @jsondata:Name {value: "KPIValue21"}
     decimal kPIValue21?;
+    # K PI value28 field.
     @jsondata:Name {value: "KPIValue28"}
     decimal kPIValue28?;
+    # K PI value27 field.
     @jsondata:Name {value: "KPIValue27"}
     decimal kPIValue27?;
+    # K PI value26 field.
     @jsondata:Name {value: "KPIValue26"}
     decimal kPIValue26?;
+    # K PI value25 field.
     @jsondata:Name {value: "KPIValue25"}
     decimal kPIValue25?;
+    # K PI value29 field.
     @jsondata:Name {value: "KPIValue29"}
     decimal kPIValue29?;
 |};
@@ -5460,8 +6869,10 @@ public type GetFormPreferencesQueries record {
 
 # Represents the response payload for the `WebClientVariantService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_55 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientVariantParams[] value?;
 };
 
@@ -5470,8 +6881,10 @@ public type VMCommunicationStatusEnum "vmcs_Pending"|"vmcs_Error"|"vmcs_Successf
 
 # Represents the response payload for the `WebClientVariantGroupService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_54 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientVariantGroupParams[] value?;
 };
 
@@ -5505,8 +6918,10 @@ public type PeriodStatusEnum "ltUnlocked"|"ltUnlockedExceptSales"|"ltPeriodClosi
 
 # Represents the response payload for the `WorkflowTaskService_GetApprovalTaskList` operation of the SAP Business One Service Layer
 public type inline_response_200_56 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WorkflowTask[] value?;
 };
 
@@ -5522,15 +6937,19 @@ public type GetCountiesQueries record {
 
 # Represents the response payload for the `WebClientNotificationService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_51 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientNotificationParams[] value?;
 };
 
 # Represents the response payload for the `WebClientListviewFilterService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_50 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientListviewFilterParams[] value?;
 };
 
@@ -5564,42 +6983,54 @@ public type ListMessagesQueries record {
 
 # Represents the response payload for the `WebClientRecentActivityService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_53 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientRecentActivityParams[] value?;
 };
 
 # Represents the request payload for the `Login` operation of the SAP Business One Service Layer
 public type Login_body record {
+    # User name field.
     @jsondata:Name {value: "UserName"}
     string userName?;
+    # Language field.
     @jsondata:Name {value: "Language"}
     string language?;
+    # Company DB field.
     @jsondata:Name {value: "CompanyDB"}
     string companyDB?;
+    # Password field.
     @jsondata:Name {value: "Password"}
     string password?;
 };
 
 # Represents the response payload for the `WebClientPreferenceService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_52 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientPreferenceParams[] value?;
 };
 
 # The `DefaultElectronicSeriesParams` complex type of the SAP Business One Service Layer
 public type DefaultElectronicSeriesParams record {|
+    # Series field.
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
+    # Electronic series field.
     @jsondata:Name {value: "ElectronicSeries"}
     int:Signed32 electronicSeries?;
 |};
 
 # The `ServiceAppReportParams` complex type of the SAP Business One Service Layer
 public type ServiceAppReportParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Report choice field.
     @jsondata:Name {value: "ReportChoice"}
     MobileAppReportChoiceEnum reportChoice?;
 |};
@@ -5631,31 +7062,39 @@ public type ListEmailGroupsQueries record {
 
 # The `SectionParams` complex type of the SAP Business One Service Layer
 public type SectionParams record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `ShortLinkMappingParams` complex type of the SAP Business One Service Layer
 public type ShortLinkMappingParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # A paged collection of `UserPermissionTree` entities returned by the SAP Business One Service Layer
 public type UserPermissionTreeCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserPermissionTree[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `SeriesService_GetDefaultElectronicSeries` operation of the SAP Business One Service Layer
 public type SeriesService_GetDefaultElectronicSeries_body record {
+    # Series params field.
     @jsondata:Name {value: "SeriesParams"}
     SeriesParams seriesParams?;
 };
@@ -5683,29 +7122,37 @@ public type ListQueryAuthGroupsHeaders record {
 
 # Represents the response payload for the `ValueMappingService_GetMappedB1Value` operation of the SAP Business One Service Layer
 public type inline_response_200_44 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     VMB1ValuesData[] value?;
 };
 
 # Represents the response payload for the `UserMenuService_GetUserMenu` operation of the SAP Business One Service Layer
 public type inline_response_200_43 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserMenuItem[] value?;
 };
 
 # Represents the response payload for the `WebClientBookmarkTileService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_46 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientBookmarkTileParams[] value?;
 };
 
 # Represents the response payload for the `ValueMappingService_GetThirdPartyValuesForB1Value` operation of the SAP Business One Service Layer
 public type inline_response_200_45 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     VMThirdPartyValuesData[] value?;
 };
 
@@ -5714,97 +7161,130 @@ public type BoDateTemplate "dt_DDMMYY"|"dt_DDMMCCYY"|"dt_MMDDYY"|"dt_MMDDCCYY"|"
 
 # Represents the response payload for the `TSRExceptionalEventService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_40 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     TSRExceptionalEventParams[] value?;
 };
 
 # Represents the response payload for the `UserMenuService_GetCurrentUserMenu` operation of the SAP Business One Service Layer
 public type inline_response_200_42 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserMenuItem[] value?;
 };
 
 # The `ColumnPreferences` entity of the SAP Business One Service Layer
 public type ColumnPreferences record {|
+    # Visible in expanded field.
     @jsondata:Name {value: "VisibleInExpanded"}
     BoYesNoEnum visibleInExpanded?;
+    # Editable in form field.
     @jsondata:Name {value: "EditableInForm"}
     BoYesNoEnum editableInForm?;
+    # User field.
     @jsondata:Name {value: "User"}
     int:Signed32 user?;
+    # Item number field.
     @jsondata:Name {value: "ItemNumber"}
     string itemNumber?;
+    # User2 field.
     @jsondata:Name {value: "User2"}
     User user2?;
+    # Column field.
     @jsondata:Name {value: "Column"}
     string column?;
+    # Editable in expanded field.
     @jsondata:Name {value: "EditableInExpanded"}
     BoYesNoEnum editableInExpanded?;
+    # Form ID field.
     @jsondata:Name {value: "FormID"}
     string formID?;
+    # Width field.
     @jsondata:Name {value: "Width"}
     int:Signed32 width?;
+    # Tabs layout field.
     @jsondata:Name {value: "TabsLayout"}
     int:Signed32 tabsLayout?;
+    # Expanded index field.
     @jsondata:Name {value: "ExpandedIndex"}
     int:Signed32 expandedIndex?;
+    # Visible in form field.
     @jsondata:Name {value: "VisibleInForm"}
     BoYesNoEnum visibleInForm?;
 |};
 
 # Represents the response payload for the `UserGroupService_GetUserGroupList` operation of the SAP Business One Service Layer
 public type inline_response_200_41 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserGroupParams[] value?;
 };
 
 # The `WorkflowTaskOutputObject` complex type of the SAP Business One Service Layer
 public type WorkflowTaskOutputObject record {|
+    # Type field.
     @jsondata:Name {value: "Type"}
     string 'type?;
+    # Task ID field.
     @jsondata:Name {value: "TaskID"}
     int:Signed32 taskID?;
+    # Sub type field.
     @jsondata:Name {value: "SubType"}
     string subType?;
+    # Line ID field.
     @jsondata:Name {value: "LineId"}
     string lineId?;
+    # Key field.
     @jsondata:Name {value: "Key"}
     string 'key?;
 |};
 
 # Represents the response payload for the `WebClientFormSettingService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_48 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientFormSettingParams[] value?;
 };
 
 # The `Section` entity of the SAP Business One Service Layer
 public type Section record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
+    # E code field.
     @jsondata:Name {value: "ECode"}
     string eCode?;
 |};
 
 # Represents the response payload for the `WebClientDashboardService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_47 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientDashboardParams[] value?;
 };
 
 # Represents the response payload for the `WebClientLaunchpadService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_49 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientLaunchpadParams[] value?;
 };
 
@@ -5827,87 +7307,120 @@ public type ListPicturesHeaders record {
 
 # The `UserPermissionForm` complex type of the SAP Business One Service Layer
 public type UserPermissionForm record {
+    # Form type field.
     string FormType?;
+    # Display order field.
     int:Signed32 DisplayOrder?;
+    # Permission ID field.
     string PermissionID?;
 };
 
 # The `ItemPriceReturnParams` complex type of the SAP Business One Service Layer
 public type ItemPriceReturnParams record {|
+    # Discount field.
     @jsondata:Name {value: "Discount"}
     decimal discount?;
+    # Price field.
     @jsondata:Name {value: "Price"}
     decimal price?;
+    # Currency field.
     @jsondata:Name {value: "Currency"}
     string currency?;
 |};
 
 # The `FinancePeriod` complex type of the SAP Business One Service Layer
 public type FinancePeriod record {|
+    # Tax date from field.
     @jsondata:Name {value: "TaxDateFrom"}
     string taxDateFrom?;
+    # Value date from field.
     @jsondata:Name {value: "ValueDateFrom"}
     string valueDateFrom?;
+    # Value date to field.
     @jsondata:Name {value: "ValueDateTo"}
     string valueDateTo?;
+    # Activefor feed field.
     @jsondata:Name {value: "ActiveforFeed"}
     BoYesNoEnum activeforFeed?;
+    # Sub number field.
     @jsondata:Name {value: "SubNum"}
     int:Signed32 subNum?;
+    # Posting date to field.
     @jsondata:Name {value: "PostingDateTo"}
     string postingDateTo?;
+    # Additional sub periods field.
     @jsondata:Name {value: "AdditionalSubPeriods"}
     BoYesNoEnum additionalSubPeriods?;
+    # Period indicator field.
     @jsondata:Name {value: "PeriodIndicator"}
     string periodIndicator?;
+    # Posting date from field.
     @jsondata:Name {value: "PostingDateFrom"}
     string postingDateFrom?;
+    # Locked field.
     @jsondata:Name {value: "Locked"}
     BoYesNoEnum locked?;
+    # Absolute entry field.
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # Period name field.
     @jsondata:Name {value: "PeriodName"}
     string periodName?;
+    # Period status field.
     @jsondata:Name {value: "PeriodStatus"}
     PeriodStatusEnum periodStatus?;
+    # Period code field.
     @jsondata:Name {value: "PeriodCode"}
     string periodCode?;
+    # Tax date to field.
     @jsondata:Name {value: "TaxDateTo"}
     string taxDateTo?;
 |};
 
 # The `TechnicianSettingsParams` complex type of the SAP Business One Service Layer
 public type TechnicianSettingsParams record {|
+    # Technician field.
     @jsondata:Name {value: "Technician"}
     int:Signed32 technician?;
 |};
 
 # The `Event` complex type of the SAP Business One Service Layer
 public type Event record {|
+    # Webhook ID field.
     @jsondata:Name {value: "WebhookID"}
     string webhookID?;
+    # Object type field.
     @jsondata:Name {value: "ObjectType"}
     string objectType?;
+    # Transaction type field.
     @jsondata:Name {value: "TransactionType"}
     TransactionTypeEnum transactionType?;
+    # Business object field.
     @jsondata:Name {value: "BusinessObject"}
     string businessObject?;
 |};
 
 # The `MessageHeader` complex type of the SAP Business One Service Layer
 public type MessageHeader record {|
+    # Read field.
     @jsondata:Name {value: "Read"}
     BoYesNoEnum read?;
+    # Received date field.
     @jsondata:Name {value: "ReceivedDate"}
     string receivedDate?;
+    # Sent time field.
     @jsondata:Name {value: "SentTime"}
     string sentTime?;
+    # Received field.
     @jsondata:Name {value: "Received"}
     BoYesNoEnum received?;
+    # Sent date field.
     @jsondata:Name {value: "SentDate"}
     string sentDate?;
+    # Received time field.
     @jsondata:Name {value: "ReceivedTime"}
     string receivedTime?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
 |};
@@ -5921,10 +7434,13 @@ public type ListApprovalStagesHeaders record {
 
 # The `DppChangeParams` complex type of the SAP Business One Service Layer
 public type DppChangeParams record {|
+    # From date field.
     @jsondata:Name {value: "FromDate"}
     string fromDate?;
+    # Has changed field.
     @jsondata:Name {value: "HasChanged"}
     BoYesNoEnum hasChanged?;
+    # From time field.
     @jsondata:Name {value: "FromTime"}
     string fromTime?;
 |};
@@ -5937,8 +7453,10 @@ public type EventReplayStateEnum "None"|"Replaying"|"Completed";
 
 # The `CategoryGroup` complex type of the SAP Business One Service Layer
 public type CategoryGroup record {|
+    # Category ID field.
     @jsondata:Name {value: "CategoryId"}
     int:Signed32 categoryId?;
+    # Auth group ID field.
     @jsondata:Name {value: "AuthGroupId"}
     int:Signed32 authGroupId?;
 |};
@@ -5952,28 +7470,38 @@ public type ListEmailGroupsHeaders record {
 
 # The `ApprovalRequestLine` complex type of the SAP Business One Service Layer
 public type ApprovalRequestLine record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     BoApprovalRequestDecisionEnum status?;
+    # Update date field.
     @jsondata:Name {value: "UpdateDate"}
     string updateDate?;
+    # Creation date field.
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
+    # Update time field.
     @jsondata:Name {value: "UpdateTime"}
     string updateTime?;
+    # Creation time field.
     @jsondata:Name {value: "CreationTime"}
     string creationTime?;
+    # Stage code field.
     @jsondata:Name {value: "StageCode"}
     int:Signed32 stageCode?;
 |};
 
 # The `ElectronicReportInfo` complex type of the SAP Business One Service Layer
 public type ElectronicReportInfo record {|
+    # Share capital amount field.
     @jsondata:Name {value: "ShareCapitalAmount"}
     decimal shareCapitalAmount?;
+    # Company type field.
     @jsondata:Name {value: "CompanyType"}
     string companyType?;
 |};
@@ -6030,26 +7558,35 @@ public type ListAlertManagementsQueries record {
 
 # The `TechnicianSchedulingsParams` complex type of the SAP Business One Service Layer
 public type TechnicianSchedulingsParams record {|
+    # Start date field.
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # Technician field.
     @jsondata:Name {value: "Technician"}
     int:Signed32 technician?;
+    # End date field.
     @jsondata:Name {value: "EndDate"}
     string endDate?;
 |};
 
 # The `SQLQuery` entity of the SAP Business One Service Layer
 public type SQLQuery record {|
+    # Sql code field.
     @jsondata:Name {value: "SqlCode"}
     string sqlCode?;
+    # Update date field.
     @jsondata:Name {value: "UpdateDate"}
     string updateDate?;
+    # Sql name field.
     @jsondata:Name {value: "SqlName"}
     string sqlName?;
+    # Sql text field.
     @jsondata:Name {value: "SqlText"}
     string sqlText?;
+    # Create date field.
     @jsondata:Name {value: "CreateDate"}
     string createDate?;
+    # Param list field.
     @jsondata:Name {value: "ParamList"}
     string paramList?;
 |};
@@ -6101,12 +7638,14 @@ public type GetKPIsQueries record {
 
 # Represents the request payload for the `SensitiveDataAccessService_IsDataSensitive` operation of the SAP Business One Service Layer
 public type SensitiveDataAccessService_IsDataSensitive_body record {
+    # Sensitive data access field.
     @jsondata:Name {value: "SensitiveDataAccess"}
     SensitiveDataAccess sensitiveDataAccess?;
 };
 
 # Represents the request payload for the `SeriesService_AddElectronicSeries` operation of the SAP Business One Service Layer
 public type SeriesService_AddElectronicSeries_body record {
+    # Electronic series field.
     @jsondata:Name {value: "ElectronicSeries"}
     ElectronicSeries electronicSeries?;
 };
@@ -6141,7 +7680,9 @@ public type ListValueMappingCommunicationQueries record {
 
 # The `AlertManagement` entity of the SAP Business One Service Layer
 public type AlertManagement record {
+    # Code field.
     int:Signed32 Code?;
+    # Name field.
     string Name?;
     # OData EnumType 'AlertManagementTypeEnum'. Serialised by the Service Layer as the member name
     AlertManagementTypeEnum Type?;
@@ -6149,322 +7690,475 @@ public type AlertManagement record {
     AlertManagementPriorityEnum Priority?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Active?;
+    # Param field.
     string Param?;
+    # Query ID field.
     int:Signed32 QueryID?;
     # OData EnumType 'AlertManagementFrequencyType'. Serialised by the Service Layer as the member name
     AlertManagementFrequencyType FrequencyType?;
+    # Day of execution field.
     int:Signed32 DayOfExecution?;
+    # Execution time field.
     string ExecutionTime?;
+    # Last execution date field.
     string LastExecutionDate?;
+    # Last execution time field.
     int:Signed32 LastExecutionTime?;
+    # Next execution date field.
     string NextExecutionDate?;
+    # Next execution time field.
     string NextExecutionTime?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SaveHistory?;
+    # Frequency interval field.
     int:Signed32 FrequencyInterval?;
+    # Alert management recipients field.
     AlertManagementRecipient[] AlertManagementRecipients?;
+    # Alert management documents field.
     AlertManagementDocument[] AlertManagementDocuments?;
 };
 
 # The `WebClientLaunchpad` entity of the SAP Business One Service Layer
 public type WebClientLaunchpad record {|
+    # Theme ID field.
     @jsondata:Name {value: "ThemeId"}
     string themeId?;
+    # Notification show days field.
     @jsondata:Name {value: "NotificationShowDays"}
     int:Signed32 notificationShowDays?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Web client launchpad groups field.
     @jsondata:Name {value: "WebClientLaunchpadGroups"}
     WebClientLaunchpadGroup[] webClientLaunchpadGroups?;
+    # Display quick view field.
     @jsondata:Name {value: "DisplayQuickView"}
     BoYesNoEnum displayQuickView?;
 |};
 
 # The `PeriodCategory` complex type of the SAP Business One Service Layer
 public type PeriodCategory record {|
+    # Underpayments accounts receivable account field.
     @jsondata:Name {value: "UnderpaymentsARAccount"}
     string underpaymentsARAccount?;
+    # Vendor assets account field.
     @jsondata:Name {value: "VendorAssetsAccount"}
     string vendorAssetsAccount?;
+    # Underpayments accounts payable account field.
     @jsondata:Name {value: "UnderpaymentsAPAccount"}
     string underpaymentsAPAccount?;
+    # Exchange rate differences account field.
     @jsondata:Name {value: "ExchangeRateDifferencesAcct"}
     string exchangeRateDifferencesAcct?;
+    # Exh rates diff account ln w tax field.
     @jsondata:Name {value: "ExhRatesDiffAcctLnWTax"}
     string exhRatesDiffAcctLnWTax?;
+    # Stock revaluation offset account field.
     @jsondata:Name {value: "StockRevaluationOffsetAcct"}
     string stockRevaluationOffsetAcct?;
+    # Financial year field.
     @jsondata:Name {value: "FinancialYear"}
     int:Signed32 financialYear?;
+    # Inventory offset increase field.
     @jsondata:Name {value: "InventoryOffsetIncrease"}
     string inventoryOffsetIncrease?;
+    # G l gain realized conversion diff field.
     @jsondata:Name {value: "GLGainRealizedConversionDiff"}
     string gLGainRealizedConversionDiff?;
+    # Number of periods field.
     @jsondata:Name {value: "NumberOfPeriods"}
     int:Signed32 numberOfPeriods?;
+    # A p loss realized conversion diff field.
     @jsondata:Name {value: "APLossRealizedConversionDiff"}
     string aPLossRealizedConversionDiff?;
+    # Repomo account field.
     @jsondata:Name {value: "RepomoAccount"}
     string repomoAccount?;
+    # Variance acc field.
     @jsondata:Name {value: "VarianceAcc"}
     string varianceAcc?;
+    # Sub period type field.
     @jsondata:Name {value: "SubPeriodType"}
     BoSubPeriodTypeEnum subPeriodType?;
+    # A r cash discount account field.
     @jsondata:Name {value: "ARCashDiscountAccount"}
     string aRCashDiscountAccount?;
+    # A p ex rate interim field.
     @jsondata:Name {value: "APExRateInterim"}
     string aPExRateInterim?;
+    # To document date field.
     @jsondata:Name {value: "ToDocumentDate"}
     string toDocumentDate?;
+    # To due date field.
     @jsondata:Name {value: "ToDueDate"}
     string toDueDate?;
+    # Negative inventory adjustment account field.
     @jsondata:Name {value: "NegativeInventoryAdjustmentAccount"}
     string negativeInventoryAdjustmentAccount?;
+    # Increase general ledger account field.
     @jsondata:Name {value: "IncreaseGLAccount"}
     string increaseGLAccount?;
+    # A r loss realized conversion diff field.
     @jsondata:Name {value: "ARLossRealizedConversionDiff"}
     string aRLossRealizedConversionDiff?;
+    # Invoice payment business partner field.
     @jsondata:Name {value: "InvoicePaymentBP"}
     string invoicePaymentBP?;
+    # Rate differences default acc field.
     @jsondata:Name {value: "RateDifferencesDefaultAcc"}
     string rateDifferencesDefaultAcc?;
+    # Down payment VAT account sale field.
     @jsondata:Name {value: "DownPaymentVATAcctSale"}
     string downPaymentVATAcctSale?;
+    # Allocation acc field.
     @jsondata:Name {value: "AllocationAcc"}
     string allocationAcc?;
+    # W IP mapping collection field.
     @jsondata:Name {value: "WIPMappingCollection"}
     WIPMapping[] wIPMappingCollection?;
+    # A r gain realized conversion diff field.
     @jsondata:Name {value: "ARGainRealizedConversionDiff"}
     string aRGainRealizedConversionDiff?;
+    # Outgoing tax account field.
     @jsondata:Name {value: "OutgoingTaxAccount"}
     string outgoingTaxAccount?;
+    # Acountfor opening warehouse balance field.
     @jsondata:Name {value: "AcountforOpeningWHBalance"}
     string acountforOpeningWHBalance?;
+    # W IP material variance account field.
     @jsondata:Name {value: "WIPMaterialVarianceAccount"}
     string wIPMaterialVarianceAccount?;
+    # Sales down payment interim account field.
     @jsondata:Name {value: "SalesDownPaymentInterimAccount"}
     string salesDownPaymentInterimAccount?;
+    # Self invoice expense account field.
     @jsondata:Name {value: "SelfInvoiceExpenseAccount"}
     string selfInvoiceExpenseAccount?;
+    # Customer doubtful debts account field.
     @jsondata:Name {value: "CustomerDoubtfulDebtsAcct"}
     string customerDoubtfulDebtsAcct?;
+    # Stock revaluation account field.
     @jsondata:Name {value: "StockRevaluationAccount"}
     string stockRevaluationAccount?;
+    # Overpayments accounts receivable account field.
     @jsondata:Name {value: "OverpaymentsARAccount"}
     string overpaymentsARAccount?;
+    # Absolute entry field.
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # Accountfor outgoing checks field.
     @jsondata:Name {value: "AccountforOutgoingChecks"}
     string accountforOutgoingChecks?;
+    # Customer unpaid bo e field.
     @jsondata:Name {value: "CustomerUnpaidBoE"}
     string customerUnpaidBoE?;
+    # Self invoice revenue account field.
     @jsondata:Name {value: "SelfInvoiceRevenueAccount"}
     string selfInvoiceRevenueAccount?;
+    # Billof exchange accounts rece field.
     @jsondata:Name {value: "BillofExchangeAccountsRece"}
     string billofExchangeAccountsRece?;
+    # Cost of goods sold field.
     @jsondata:Name {value: "CostOfGoodsSold"}
     string costOfGoodsSold?;
+    # Goods clearing acc field.
     @jsondata:Name {value: "GoodsClearingAcc"}
     string goodsClearingAcc?;
+    # Sales credit acc field.
     @jsondata:Name {value: "SalesCreditAcc"}
     string salesCreditAcc?;
+    # Down payment VAT account purch field.
     @jsondata:Name {value: "DownPaymentVATAcctPurch"}
     string downPaymentVATAcctPurch?;
+    # Inventory offset decrease field.
     @jsondata:Name {value: "InventoryOffsetDecrease"}
     string inventoryOffsetDecrease?;
+    # Debitors follow up account field.
     @jsondata:Name {value: "DebitorsFollowUpAccount"}
     string debitorsFollowUpAccount?;
+    # Opening balances account field.
     @jsondata:Name {value: "OpeningBalancesAccount"}
     string openingBalancesAccount?;
+    # Sales credit foreign acc field.
     @jsondata:Name {value: "SalesCreditForeignAcc"}
     string salesCreditForeignAcc?;
+    # Price difference account field.
     @jsondata:Name {value: "PriceDifferenceAccount"}
     string priceDifferenceAccount?;
+    # W IP material account field.
     @jsondata:Name {value: "WIPMaterialAccount"}
     string wIPMaterialAccount?;
+    # A p gain realized conversion diff field.
     @jsondata:Name {value: "APGainRealizedConversionDiff"}
     string aPGainRealizedConversionDiff?;
+    # Accountfor cash receipt field.
     @jsondata:Name {value: "AccountforCashReceipt"}
     string accountforCashReceipt?;
+    # Decrease general ledger acc field.
     @jsondata:Name {value: "DecreaseGLAcc"}
     string decreaseGLAcc?;
+    # Customer billof exchange pres field.
     @jsondata:Name {value: "CustomerBillofExchangePres"}
     string customerBillofExchangePres?;
+    # Sales revenue EU field.
     @jsondata:Name {value: "SalesRevenueEU"}
     string salesRevenueEU?;
+    # Foreign accounts receivables field.
     @jsondata:Name {value: "ForeignAccountsReceivables"}
     string foreignAccountsReceivables?;
+    # Purchase interim account ln w tax field.
     @jsondata:Name {value: "PurchaseInterimAcctLnWTax"}
     string purchaseInterimAcctLnWTax?;
+    # Customer down payments account field.
     @jsondata:Name {value: "CustomerDownPaymentsAccount"}
     string customerDownPaymentsAccount?;
+    # To posting date field.
     @jsondata:Name {value: "ToPostingDate"}
     string toPostingDate?;
+    # A p loss realized exchange dif field.
     @jsondata:Name {value: "APLossRealizedExchangeDif"}
     string aPLossRealizedExchangeDif?;
+    # Purchase credit acc field.
     @jsondata:Name {value: "PurchaseCreditAcc"}
     string purchaseCreditAcc?;
+    # Purchase down payment interim account field.
     @jsondata:Name {value: "PurchaseDownPaymentInterimAccount"}
     string purchaseDownPaymentInterimAccount?;
+    # E u purchase credit acc field.
     @jsondata:Name {value: "EUPurchaseCreditAcc"}
     string eUPurchaseCreditAcc?;
+    # Bo e accounts payable2 field.
     @jsondata:Name {value: "BoEAccountsPayable2"}
     string boEAccountsPayable2?;
+    # Expenses account foreign field.
     @jsondata:Name {value: "ExpensesAccountForeign"}
     string expensesAccountForeign?;
+    # E OY control account field.
     @jsondata:Name {value: "EOYControlAccount"}
     string eOYControlAccount?;
+    # A p cash discount account field.
     @jsondata:Name {value: "APCashDiscountAccount"}
     string aPCashDiscountAccount?;
+    # Purchase account field.
     @jsondata:Name {value: "PurchaseAccount"}
     string purchaseAccount?;
+    # Sales credit EU acc field.
     @jsondata:Name {value: "SalesCreditEUAcc"}
     string salesCreditEUAcc?;
+    # Stock in transit account field.
     @jsondata:Name {value: "StockInTransitAccount"}
     string stockInTransitAccount?;
+    # E u accounts payable field.
     @jsondata:Name {value: "EUAccountsPayable"}
     string eUAccountsPayable?;
+    # Exempted credits field.
     @jsondata:Name {value: "ExemptedCredits"}
     string exemptedCredits?;
+    # Tax exempt revenues default field.
     @jsondata:Name {value: "TaxExemptRevenuesDefault"}
     string taxExemptRevenuesDefault?;
+    # Sales returns field.
     @jsondata:Name {value: "SalesReturns"}
     string salesReturns?;
+    # A p cash discount interim field.
     @jsondata:Name {value: "APCashDiscountInterim"}
     string aPCashDiscountInterim?;
+    # Period category field.
     @jsondata:Name {value: "PeriodCategory"}
     string periodCategory?;
+    # Revenues account foreign field.
     @jsondata:Name {value: "RevenuesAccountForeign"}
     string revenuesAccountForeign?;
+    # Down payment p clearing account field.
     @jsondata:Name {value: "DownPaymentPClearingAcct"}
     string downPaymentPClearingAcct?;
+    # Down payment s clearing account field.
     @jsondata:Name {value: "DownPaymentSClearingAcct"}
     string downPaymentSClearingAcct?;
+    # Customer billof exchnge disc field.
     @jsondata:Name {value: "CustomerBillofExchngeDisc"}
     string customerBillofExchngeDisc?;
+    # Vendor down payments account field.
     @jsondata:Name {value: "VendorDownPaymentsAccount"}
     string vendorDownPaymentsAccount?;
+    # A r ex rate interim field.
     @jsondata:Name {value: "ARExRateInterim"}
     string aRExRateInterim?;
+    # Withholoding tax field.
     @jsondata:Name {value: "WithholodingTax"}
     string withholodingTax?;
+    # Purchase offset account field.
     @jsondata:Name {value: "PurchaseOffsetAccount"}
     string purchaseOffsetAccount?;
+    # Expense offset account field.
     @jsondata:Name {value: "ExpenseOffsetAccount"}
     string expenseOffsetAccount?;
+    # Period name field.
     @jsondata:Name {value: "PeriodName"}
     string periodName?;
+    # Sales interim account ln w tax field.
     @jsondata:Name {value: "SalesInterimAcctLnWTax"}
     string salesInterimAcctLnWTax?;
+    # Expense account default field.
     @jsondata:Name {value: "ExpenseAccountDefault"}
     string expenseAccountDefault?;
+    # G l revaluation offset account field.
     @jsondata:Name {value: "GLRevaluationOffsetAccount"}
     string gLRevaluationOffsetAccount?;
+    # Accountfor credit memo payme field.
     @jsondata:Name {value: "AccountforCreditMemoPayme"}
     string accountforCreditMemoPayme?;
+    # Costof sale revaluation account field.
     @jsondata:Name {value: "CostofSaleRevaluationAcct"}
     string costofSaleRevaluationAcct?;
+    # A r gain realized exchnge dif field.
     @jsondata:Name {value: "ARGainRealizedExchngeDif"}
     string aRGainRealizedExchngeDif?;
+    # Costof sale rev offset account field.
     @jsondata:Name {value: "CostofSaleRevOffsetAcct"}
     string costofSaleRevOffsetAcct?;
+    # Customers deductionat source field.
     @jsondata:Name {value: "CustomersDeductionatSource"}
     string customersDeductionatSource?;
+    # Creditors follow up account field.
     @jsondata:Name {value: "CreditorsFollowUpAccount"}
     string creditorsFollowUpAccount?;
+    # Purchase return account field.
     @jsondata:Name {value: "PurchaseReturnAccount"}
     string purchaseReturnAccount?;
+    # From document date field.
     @jsondata:Name {value: "FromDocumentDate"}
     string fromDocumentDate?;
+    # Dunning fee account field.
     @jsondata:Name {value: "DunningFeeAccount"}
     string dunningFeeAccount?;
+    # A p gain realized exchnge dif field.
     @jsondata:Name {value: "APGainRealizedExchngeDif"}
     string aPGainRealizedExchngeDif?;
+    # E u accounts receivable field.
     @jsondata:Name {value: "EUAccountsReceivable"}
     string eUAccountsReceivable?;
+    # Overpayments accounts payable account field.
     @jsondata:Name {value: "OverpaymentsAPAccount"}
     string overpaymentsAPAccount?;
+    # A r cash discount interim field.
     @jsondata:Name {value: "ARCashDiscountInterim"}
     string aRCashDiscountInterim?;
+    # Customer billof exchangeon c field.
     @jsondata:Name {value: "CustBillofExchangeonC"}
     string custBillofExchangeonC?;
+    # Wip offset profit and loss account field.
     @jsondata:Name {value: "WipOffsetProfitAndLossAccount"}
     string wipOffsetProfitAndLossAccount?;
+    # From posting date field.
     @jsondata:Name {value: "FromPostingDate"}
     string fromPostingDate?;
+    # A r loss realized exchange di field.
     @jsondata:Name {value: "ARLossRealizedExchangeDi"}
     string aRLossRealizedExchangeDi?;
+    # From due date field.
     @jsondata:Name {value: "FromDueDate"}
     string fromDueDate?;
+    # Default sale account field.
     @jsondata:Name {value: "DefaultSaleAccount"}
     string defaultSaleAccount?;
+    # Foreign purchase credit acc field.
     @jsondata:Name {value: "ForeignPurchaseCreditAcc"}
     string foreignPurchaseCreditAcc?;
+    # Purchase tax field.
     @jsondata:Name {value: "PurchaseTax"}
     string purchaseTax?;
+    # Outgoing checks account field.
     @jsondata:Name {value: "OutgoingChecksAccount"}
     string outgoingChecksAccount?;
+    # Tax definition field.
     @jsondata:Name {value: "TaxDefinition"}
     string taxDefinition?;
+    # Stock account field.
     @jsondata:Name {value: "StockAccount"}
     string stockAccount?;
+    # Bo e accounts payable field.
     @jsondata:Name {value: "BoEAccountsPayable"}
     string boEAccountsPayable?;
+    # Input tax account field.
     @jsondata:Name {value: "InputTaxAccount"}
     string inputTaxAccount?;
+    # Beginningof financial year field.
     @jsondata:Name {value: "BeginningofFinancialYear"}
     string beginningofFinancialYear?;
+    # Expense variance account field.
     @jsondata:Name {value: "ExpenseVarianceAccount"}
     string expenseVarianceAccount?;
+    # Inventory offset profit and loss account field.
     @jsondata:Name {value: "InventoryOffsetProfitAndLossAccount"}
     string inventoryOffsetProfitAndLossAccount?;
+    # Rounding account field.
     @jsondata:Name {value: "RoundingAccount"}
     string roundingAccount?;
+    # Expense clearing account field.
     @jsondata:Name {value: "ExpenseClearingAccount"}
     string expenseClearingAccount?;
+    # Outgoing cash account field.
     @jsondata:Name {value: "OutgoingCashAccount"}
     string outgoingCashAccount?;
+    # A p loss cash discount account field.
     @jsondata:Name {value: "APLossCashDiscountAccount"}
     string aPLossCashDiscountAccount?;
+    # Dunning interest account field.
     @jsondata:Name {value: "DunningInterestAccount"}
     string dunningInterestAccount?;
+    # G l loss realized conversion diff field.
     @jsondata:Name {value: "GLLossRealizedConversionDiff"}
     string gLLossRealizedConversionDiff?;
+    # Commission account default field.
     @jsondata:Name {value: "CommissionAccountDefault"}
     string commissionAccountDefault?;
+    # E u expense account field.
     @jsondata:Name {value: "EUExpenseAccount"}
     string eUExpenseAccount?;
+    # Vendor doubtful debts account field.
     @jsondata:Name {value: "VendorDoubtfulDebtsAcct"}
     string vendorDoubtfulDebtsAcct?;
+    # Reconciliation difference field.
     @jsondata:Name {value: "ReconciliationDifference"}
     string reconciliationDifference?;
 |};
 
 # The `HolidayDate` complex type of the SAP Business One Service Layer
 public type HolidayDate record {|
+    # Start date field.
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Holiday code field.
     @jsondata:Name {value: "HolidayCode"}
     string holidayCode?;
+    # End date field.
     @jsondata:Name {value: "EndDate"}
     string endDate?;
 |};
 
 # A paged collection of `FormattedSearches` entities returned by the SAP Business One Service Layer
 public type FormattedSearchesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     FormattedSearch[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # Represents the request payload for the `SensitiveDataAccessService_Access` operation of the SAP Business One Service Layer
 public type SensitiveDataAccessService_Access_body record {
+    # Sensitive data access field.
     @jsondata:Name {value: "SensitiveDataAccess"}
     SensitiveDataAccess sensitiveDataAccess?;
 };
@@ -6506,12 +8200,16 @@ public type ListFormPreferencesQueries record {
 
 # The `VM_B1ValuesData` entity of the SAP Business One Service Layer
 public type VMB1ValuesData record {|
+    # V m third party values collection field.
     @jsondata:Name {value: "VM_ThirdPartyValuesCollection"}
     VMThirdPartyValuesData[] vMThirdPartyValuesCollection?;
+    # Object ID field.
     @jsondata:Name {value: "ObjectId"}
     int:Signed32 objectId?;
+    # Object abs entry field.
     @jsondata:Name {value: "ObjectAbsEntry"}
     string objectAbsEntry?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
@@ -6531,95 +8229,129 @@ public type GetUserObjectsMDQueries record {
 
 # The `CockpitParams` complex type of the SAP Business One Service Layer
 public type CockpitParams record {|
+    # Cockpit type field.
     @jsondata:Name {value: "CockpitType"}
     BoCockpitTypeEnum cockpitType?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
 
 # Represents the request payload for the `MobileAppService_GetEmployeeFullNames` operation of the SAP Business One Service Layer
 public type MobileAppService_GetEmployeeFullNames_body record {
+    # Employee full names params collection field.
     @jsondata:Name {value: "EmployeeFullNamesParamsCollection"}
     EmployeeFullNamesParams[] employeeFullNamesParamsCollection?;
 };
 
 # A paged collection of `Messages` entities returned by the SAP Business One Service Layer
 public type MessagesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Message[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `GetChangeLogParams` complex type of the SAP Business One Service Layer
 public type GetChangeLogParams record {|
+    # Primary key field.
     @jsondata:Name {value: "PrimaryKey"}
     string primaryKey?;
+    # U DO object code field.
     @jsondata:Name {value: "UDOObjectCode"}
     string uDOObjectCode?;
+    # Object field.
     @jsondata:Name {value: "Object"}
     BoChangeLogEnum 'object?;
 |};
 
 # Represents the request payload for the `ReportLayoutsService_GetReportLayout` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_GetReportLayout_body record {
+    # Report layout params field.
     @jsondata:Name {value: "ReportLayoutParams"}
     ReportLayoutParams reportLayoutParams?;
 };
 
 # Represents the request payload for the `SeriesService_SetDefaultElectronicSeries` operation of the SAP Business One Service Layer
 public type SeriesService_SetDefaultElectronicSeries_body record {
+    # Default electronic series params field.
     @jsondata:Name {value: "DefaultElectronicSeriesParams"}
     DefaultElectronicSeriesParams defaultElectronicSeriesParams?;
 };
 
 # The `WebClientVariant` entity of the SAP Business One Service Layer
 public type WebClientVariant record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Overview customization field.
     @jsondata:Name {value: "OverviewCustomization"}
     string overviewCustomization?;
+    # Report customization field.
     @jsondata:Name {value: "ReportCustomization"}
     string reportCustomization?;
+    # User filter field.
     @jsondata:Name {value: "UserFilter"}
     string userFilter?;
+    # Web client variant group by collection field.
     @jsondata:Name {value: "WebClientVariantGroupByCollection"}
     WebClientVariantGroupBy[] webClientVariantGroupByCollection?;
+    # Web client variant m chart collection field.
     @jsondata:Name {value: "WebClientVariantMChartCollection"}
     WebClientVariantMChart[] webClientVariantMChartCollection?;
+    # Chart customization field.
     @jsondata:Name {value: "ChartCustomization"}
     string chartCustomization?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Filter bar layout field.
     @jsondata:Name {value: "FilterBarLayout"}
     string filterBarLayout?;
+    # Object name field.
     @jsondata:Name {value: "ObjectName"}
     string objectName?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Web client variant sort by collection field.
     @jsondata:Name {value: "WebClientVariantSortByCollection"}
     WebClientVariantSortBy[] webClientVariantSortByCollection?;
+    # Web client variant embedded chart collection field.
     @jsondata:Name {value: "WebClientVariantEmbeddedChartCollection"}
     WebClientVariantEmbeddedChart[] webClientVariantEmbeddedChartCollection?;
+    # Sub view type field.
     @jsondata:Name {value: "SubViewType"}
     string subViewType?;
+    # Version field.
     @jsondata:Name {value: "Version"}
     int:Signed32 version?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Is public field.
     @jsondata:Name {value: "IsPublic"}
     BoYesNoEnum isPublic?;
+    # View ID field.
     @jsondata:Name {value: "ViewId"}
     string viewId?;
+    # Web client variant selected column collection field.
     @jsondata:Name {value: "WebClientVariantSelectedColumnCollection"}
     WebClientVariantSelectedColumn[] webClientVariantSelectedColumnCollection?;
+    # Is system field.
     @jsondata:Name {value: "IsSystem"}
     BoYesNoEnum isSystem?;
+    # System filter field.
     @jsondata:Name {value: "SystemFilter"}
     string systemFilter?;
+    # View type field.
     @jsondata:Name {value: "ViewType"}
     string viewType?;
+    # Condition filter field.
     @jsondata:Name {value: "ConditionFilter"}
     string conditionFilter?;
 |};
@@ -6629,12 +8361,14 @@ public type BoFldSubTypes "st_None"|"st_Address"|"st_Phone"|"st_Time"|"st_Rate"|
 
 # Represents the request payload for the `MobileAppService_GetSalesAppSetting` operation of the SAP Business One Service Layer
 public type MobileAppService_GetSalesAppSetting_body record {
+    # Sales app setting params field.
     @jsondata:Name {value: "SalesAppSettingParams"}
     SalesAppSettingParams salesAppSettingParams?;
 };
 
 # Represents the request payload for the `SeriesService_GetSeries` operation of the SAP Business One Service Layer
 public type SeriesService_GetSeries_body record {
+    # Series params field.
     @jsondata:Name {value: "SeriesParams"}
     SeriesParams seriesParams?;
 };
@@ -6644,21 +8378,30 @@ public type DocumentRemarksIncludeTypeEnum "driBaseDocumentNumber"|"driBPReferen
 
 # The `DocumentChangeMenuName` complex type of the SAP Business One Service Layer
 public type DocumentChangeMenuName record {|
+    # Changed menu name field.
     @jsondata:Name {value: "ChangedMenuName"}
     string changedMenuName?;
+    # Document field.
     @jsondata:Name {value: "Document"}
     string document?;
+    # Document sub type field.
     @jsondata:Name {value: "DocumentSubType"}
     string documentSubType?;
 |};
 
 # The `DistributionListLine` complex type of the SAP Business One Service Layer
 public type DistributionListLine record {
+    # Line number field.
     int:Signed32 LineNumber?;
+    # Distribution type field.
     string DistributionType?;
+    # Distribution code field.
     string DistributionCode?;
+    # Email field.
     string Email?;
+    # Port number field.
     string PortNum?;
+    # Fax field.
     string Fax?;
 };
 
@@ -6699,33 +8442,43 @@ public type ListBusinessPlacesQueries record {
 
 # Represents the request payload for the `CompanyService_UpdateAdminInfo` operation of the SAP Business One Service Layer
 public type CompanyService_UpdateAdminInfo_body record {
+    # Admin information field.
     @jsondata:Name {value: "AdminInfo"}
     AdminInfo adminInfo?;
 };
 
 # A paged collection of `WebClientListviewFilters` entities returned by the SAP Business One Service Layer
 public type WebClientListviewFiltersCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientListviewFilter[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `WebClientNotifications` entities returned by the SAP Business One Service Layer
 public type WebClientNotificationsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientNotification[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `FormPreferences` entities returned by the SAP Business One Service Layer
 public type FormPreferencesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ColumnPreferences[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -6748,18 +8501,23 @@ public type GetEventSubscriptionsQueries record {
 
 # Represents the request payload for the `SeriesService_ChangeDocumentMenuName` operation of the SAP Business One Service Layer
 public type SeriesService_ChangeDocumentMenuName_body record {
+    # Document change menu name field.
     @jsondata:Name {value: "DocumentChangeMenuName"}
     DocumentChangeMenuName documentChangeMenuName?;
 };
 
 # The `Branch` entity of the SAP Business One Service Layer
 public type Branch record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Users field.
     @jsondata:Name {value: "Users"}
     User[] users?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -6773,8 +8531,10 @@ public type ListBranchesHeaders record {
 
 # The `SalesAppSettingParams` complex type of the SAP Business One Service Layer
 public type SalesAppSettingParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -6797,9 +8557,12 @@ public type BoSortTypeEnum "rlstAlpha"|"rlstNumeric"|"rlstMoney"|"rlstDate";
 
 # A paged collection of `WebClientBookmarkTiles` entities returned by the SAP Business One Service Layer
 public type WebClientBookmarkTilesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientBookmarkTile[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -6859,6 +8622,7 @@ public type LogonMethodEnum "lmBOneIntegrationFramework"|"lmStandardLogon"|"lmNo
 
 # Represents the request payload for the `ReportLayoutsService_DeleteReportLayout` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_DeleteReportLayout_body record {
+    # Report layout params field.
     @jsondata:Name {value: "ReportLayoutParams"}
     ReportLayoutParams reportLayoutParams?;
 };
@@ -6868,9 +8632,12 @@ public type WebhookWorkModeEnum "Standard"|"Replay";
 
 # A paged collection of `Branches` entities returned by the SAP Business One Service Layer
 public type BranchesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Branch[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -6905,39 +8672,51 @@ public type ListCockpitsQueries record {
 
 # The `AlertManagementRecipient` complex type of the SAP Business One Service Layer
 public type AlertManagementRecipient record {|
+    # Send internal field.
     @jsondata:Name {value: "SendInternal"}
     BoYesNoEnum sendInternal?;
+    # User code field.
     @jsondata:Name {value: "UserCode"}
     int:Signed32 userCode?;
+    # Send SMS field.
     @jsondata:Name {value: "SendSMS"}
     BoYesNoEnum sendSMS?;
+    # Send e mail field.
     @jsondata:Name {value: "SendEMail"}
     BoYesNoEnum sendEMail?;
+    # Send fax field.
     @jsondata:Name {value: "SendFax"}
     BoYesNoEnum sendFax?;
 |};
 
 # The `ServiceAppReportContent` complex type of the SAP Business One Service Layer
 public type ServiceAppReportContent record {|
+    # Report content field.
     @jsondata:Name {value: "ReportContent"}
     string reportContent?;
 |};
 
 # The `PredefinedText` entity of the SAP Business One Service Layer
 public type PredefinedText record {|
+    # Numerator field.
     @jsondata:Name {value: "Numerator"}
     int:Signed32 numerator?;
+    # Text code field.
     @jsondata:Name {value: "TextCode"}
     string textCode?;
+    # Text field.
     @jsondata:Name {value: "Text"}
     string text?;
 |};
 
 # A paged collection of `AdditionalExpenses` entities returned by the SAP Business One Service Layer
 public type AdditionalExpensesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     AdditionalExpense[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -6951,38 +8730,51 @@ public type ListDistributionListsHeaders record {
 
 # A paged collection of `ExtendedTranslations` entities returned by the SAP Business One Service Layer
 public type ExtendedTranslationsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ExtendedTranslation[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `Attachments2` entity of the SAP Business One Service Layer
 public type Attachments2 record {
+    # Absolute entry field.
     int:Signed32 AbsoluteEntry?;
+    # Attachments2 lines field.
     Attachments2Line[] Attachments2_Lines?;
 };
 
 # A paged collection of `UserGroups` entities returned by the SAP Business One Service Layer
 public type UserGroupsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserGroup[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WebClientPreference` entity of the SAP Business One Service Layer
 public type WebClientPreference record {|
+    # Table name field.
     @jsondata:Name {value: "TableName"}
     string tableName?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Default value field.
     @jsondata:Name {value: "DefaultValue"}
     string defaultValue?;
+    # User ID field.
     @jsondata:Name {value: "UserId"}
     int:Signed32 userId?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -7014,10 +8806,15 @@ public type ListUserQueriesQueries record {
 
 # The `MultiLanguageTranslation` entity of the SAP Business One Service Layer
 public type MultiLanguageTranslation record {
+    # Numerator field.
     int:Signed32 Numerator?;
+    # Table name field.
     string TableName?;
+    # Field alias field.
     string FieldAlias?;
+    # Primary keyofobject field.
     string PrimaryKeyofobject?;
+    # Translations in user languages field.
     TranslationsInUserLanguage[] TranslationsInUserLanguages?;
 };
 
@@ -7048,43 +8845,55 @@ public type ListPicturesQueries record {
 
 # Represents the request payload for the `ChangeLogsService_GetChangeLog` operation of the SAP Business One Service Layer
 public type ChangeLogsService_GetChangeLog_body record {
+    # Get change log params field.
     @jsondata:Name {value: "GetChangeLogParams"}
     GetChangeLogParams getChangeLogParams?;
 };
 
 # Represents the request payload for the `ChangeLogsService_GetChangeLogDifferences` operation of the SAP Business One Service Layer
 public type ChangeLogsService_GetChangeLogDifferences_body record {
+    # Show difference params field.
     @jsondata:Name {value: "ShowDifferenceParams"}
     ShowDifferenceParams showDifferenceParams?;
 };
 
 # The `WorkflowTaskInputObject` complex type of the SAP Business One Service Layer
 public type WorkflowTaskInputObject record {|
+    # Type field.
     @jsondata:Name {value: "Type"}
     string 'type?;
+    # Task ID field.
     @jsondata:Name {value: "TaskID"}
     int:Signed32 taskID?;
+    # Sub type field.
     @jsondata:Name {value: "SubType"}
     string subType?;
+    # Line ID field.
     @jsondata:Name {value: "LineId"}
     int:Signed32 lineId?;
+    # Key field.
     @jsondata:Name {value: "Key"}
     string 'key?;
+    # Detail field.
     @jsondata:Name {value: "Detail"}
     string detail?;
 |};
 
 # A paged collection of `ChooseFromList` entities returned by the SAP Business One Service Layer
 public type ChooseFromListCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ChooseFromList[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WebClientListviewFilterParams` complex type of the SAP Business One Service Layer
 public type WebClientListviewFilterParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -7101,24 +8910,30 @@ public type GetMobileAddOnSettingQueries record {
 
 # The `FeatureStatus` complex type of the SAP Business One Service Layer
 public type FeatureStatus record {|
+    # Feature ID field.
     @jsondata:Name {value: "FeatureID"}
     string featureID?;
+    # Blocked field.
     @jsondata:Name {value: "Blocked"}
     BoYesNoEnum blocked?;
 |};
 
 # Represents the request payload for the `SBOBobService_GetDueDate` operation of the SAP Business One Service Layer
 public type SBOBobService_GetDueDate_body record {
+    # Reference date field.
     @jsondata:Name {value: "RefDate"}
     string refDate?;
+    # Card code field.
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
 };
 
 # Represents the request payload for the `SBOBobService_GetIndexRate` operation of the SAP Business One Service Layer
 public type SBOBobService_GetIndexRate_body record {
+    # Index field.
     @jsondata:Name {value: "Index"}
     string index?;
+    # Date field.
     @jsondata:Name {value: "Date"}
     string date?;
 };
@@ -7128,44 +8943,56 @@ public type BoYesNoEnum "tNO"|"tYES";
 
 # Represents the request payload for the `CompanyService_GetItemPrice` operation of the SAP Business One Service Layer
 public type CompanyService_GetItemPrice_body record {
+    # Item price params field.
     @jsondata:Name {value: "ItemPriceParams"}
     ItemPriceParams itemPriceParams?;
 };
 
 # The `UserGroup` entity of the SAP Business One Service Layer
 public type UserGroup record {|
+    # Start date field.
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # User group type field.
     @jsondata:Name {value: "UserGroupType"}
     UserGroupCategoryEnum userGroupType?;
+    # User group ID field.
     @jsondata:Name {value: "UserGroupId"}
     int:Signed32 userGroupId?;
+    # User group name field.
     @jsondata:Name {value: "UserGroupName"}
     string userGroupName?;
+    # Due date field.
     @jsondata:Name {value: "DueDate"}
     string dueDate?;
+    # User group dec field.
     @jsondata:Name {value: "UserGroupDec"}
     string userGroupDec?;
+    # T PL ID field.
     @jsondata:Name {value: "TPLId"}
     int:Signed32 tPLId?;
 |};
 
 # Represents the request payload for the `SeriesService_AttachSeriesToDocument` operation of the SAP Business One Service Layer
 public type SeriesService_AttachSeriesToDocument_body record {
+    # Document series params field.
     @jsondata:Name {value: "DocumentSeriesParams"}
     DocumentSeriesParams documentSeriesParams?;
 };
 
 # The `ValidValueMD` complex type of the SAP Business One Service Layer
 public type ValidValueMD record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Value field.
     @jsondata:Name {value: "Value"}
     string value?;
 |};
 
 # The `ExceptionalEventParams` complex type of the SAP Business One Service Layer
 public type ExceptionalEventParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -7185,6 +9012,7 @@ public type CallMessageStatusEnum "cmsUnread"|"cmsRead";
 
 # The `ApprovalTemplateQuery` complex type of the SAP Business One Service Layer
 public type ApprovalTemplateQuery record {|
+    # Query ID field.
     @jsondata:Name {value: "QueryID"}
     int:Signed32 queryID?;
 |};
@@ -7219,27 +9047,37 @@ public type ListEventNotificationsQueries record {
 
 # A paged collection of `Holidays` entities returned by the SAP Business One Service Layer
 public type HolidaysCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Holiday[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `MobileAddOnSettingParams` complex type of the SAP Business One Service Layer
 public type MobileAddOnSettingParams record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `UserObjectMD_EnhancedFormColumn` complex type of the SAP Business One Service Layer
 public type UserObjectMDEnhancedFormColumn record {
+    # Code field.
     string Code?;
+    # Column number field.
     int:Signed32 ColumnNumber?;
+    # Child number field.
     int:Signed32 ChildNumber?;
+    # Column alias field.
     string ColumnAlias?;
+    # Column description field.
     string ColumnDescription?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ColumnIsUsed?;
@@ -7299,23 +9137,29 @@ public type ListKPIsQueries record {
 
 # Represents the request payload for the `SBOBobService_GetCurrencyRate` operation of the SAP Business One Service Layer
 public type SBOBobService_GetCurrencyRate_body record {
+    # Currency field.
     @jsondata:Name {value: "Currency"}
     string currency?;
+    # Date field.
     @jsondata:Name {value: "Date"}
     string date?;
 };
 
 # A paged collection of `Countries` entities returned by the SAP Business One Service Layer
 public type CountriesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Country[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `UserValidValue` complex type of the SAP Business One Service Layer
 public type UserValidValue record {
+    # Field value field.
     string FieldValue?;
 };
 
@@ -7327,6 +9171,7 @@ public type TaxCalcSysEnum "PreconfiguredFormulaWithJurisdictionSupport"|"UserDe
 
 # The `WebClientVariantGroupParams` complex type of the SAP Business One Service Layer
 public type WebClientVariantGroupParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -7343,19 +9188,25 @@ public type ListKPIsHeaders record {
 
 # A paged collection of `KPIs` entities returned by the SAP Business One Service Layer
 public type KPIsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     KPI[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ReportLayoutParams` complex type of the SAP Business One Service Layer
 public type ReportLayoutParams record {|
+    # Layout code field.
     @jsondata:Name {value: "LayoutCode"}
     string layoutCode?;
+    # Category field.
     @jsondata:Name {value: "Category"}
     ReportLayoutCategoryEnum category?;
+    # Layout name field.
     @jsondata:Name {value: "LayoutName"}
     string layoutName?;
 |};
@@ -7365,37 +9216,50 @@ public type FreightTypeEnum "ftShipping"|"ftInsurance"|"ftOther"|"ftSpecial";
 
 # The `ReportLayout_TranslationLine` complex type of the SAP Business One Service Layer
 public type ReportLayoutTranslationLine record {|
+    # Language code field.
     @jsondata:Name {value: "LanguageCode"}
     int:Signed32 languageCode?;
+    # Update date field.
     @jsondata:Name {value: "UpdateDate"}
     string updateDate?;
+    # Create time field.
     @jsondata:Name {value: "CreateTime"}
     int:Signed32 createTime?;
+    # Update time field.
     @jsondata:Name {value: "UpdateTime"}
     int:Signed32 updateTime?;
+    # Document entry field.
     @jsondata:Name {value: "DocEntry"}
     string docEntry?;
+    # Document name field.
     @jsondata:Name {value: "DocName"}
     string docName?;
+    # Create date field.
     @jsondata:Name {value: "CreateDate"}
     string createDate?;
+    # Line number field.
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
 |};
 
 # A paged collection of `EmailGroups` entities returned by the SAP Business One Service Layer
 public type EmailGroupsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     EmailGroup[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `ExceptionalEvent` entity of the SAP Business One Service Layer
 public type ExceptionalEvent record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -7405,26 +9269,38 @@ public type AlertManagementDocumentEnum "atd_NOB"|"atd_Invoices"|"atd_RevertInvo
 
 # The `EventCatagory` complex type of the SAP Business One Service Layer
 public type EventCatagory record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Version field.
     @jsondata:Name {value: "Version"}
     string version?;
+    # Events field.
     @jsondata:Name {value: "Events"}
     Event[] events?;
 |};
 
 # The `Country` entity of the SAP Business One Service Layer
 public type Country record {
+    # Code field.
     string Code?;
+    # Name field.
     string Name?;
+    # Code for reports field.
     string CodeForReports?;
+    # Address format field.
     int:Signed32 AddressFormat?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EU?;
+    # Number of digits for tax ID field.
     int:Signed32 NumberOfDigitsForTaxID?;
+    # Bank code digits field.
     int:Signed32 BankCodeDigits?;
+    # Bank branch digits field.
     int:Signed32 BankBranchDigits?;
+    # Bank account digits field.
     int:Signed32 BankAccountDigits?;
+    # Bank control key digits field.
     int:Signed32 BankControlKeyDigits?;
     # OData EnumType 'DomesticBankAccountValidationEnum'. Serialised by the Service Layer as the member name
     DomesticBankAccountValidationEnum DomesticAccountValidation?;
@@ -7432,14 +9308,21 @@ public type Country record {
     BoYesNoEnum IbanValidation?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Blacklisted?;
+    # UIC country code field.
     string UICCountryCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EAEU?;
+    # ISO alpha2 code field.
     string ISOAlpha2Code?;
+    # ISO alpha3 code field.
     string ISOAlpha3Code?;
+    # ISO numeric field.
     string ISONumeric?;
+    # User default groups field.
     UserDefaultGroup[] UserDefaultGroups?;
+    # Business places field.
     BusinessPlace[] BusinessPlaces?;
+    # States field.
     State[] States?;
 };
 
@@ -7456,17 +9339,22 @@ public type ListDynamicSystemStringsHeaders record {
 
 # The `EmailGroupParams` complex type of the SAP Business One Service Layer
 public type EmailGroupParams record {|
+    # Email group name field.
     @jsondata:Name {value: "EmailGroupName"}
     string emailGroupName?;
+    # Email group code field.
     @jsondata:Name {value: "EmailGroupCode"}
     string emailGroupCode?;
 |};
 
 # A paged collection of `EventNotifications` entities returned by the SAP Business One Service Layer
 public type EventNotificationsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     EventNotification[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -7505,8 +9393,10 @@ public type ListExceptionalEventsHeaders record {
 
 # The `EmployeeFullNamesParams` complex type of the SAP Business One Service Layer
 public type EmployeeFullNamesParams record {|
+    # Employee full name field.
     @jsondata:Name {value: "EmployeeFullName"}
     string employeeFullName?;
+    # Employee ID field.
     @jsondata:Name {value: "EmployeeID"}
     int:Signed32 employeeID?;
 |};
@@ -7523,6 +9413,7 @@ public type ViewStyleTypeEnum "vstPage"|"vstFullScreen"|"vstLandscape";
 
 # Represents the request payload for the `SQLQueries_List_2` operation of the SAP Business One Service Layer
 public type SQLQueriessqlCode_List_body record {
+    # Param list field.
     @jsondata:Name {value: "ParamList"}
     string paramList?;
 };
@@ -7536,9 +9427,12 @@ public type ListApprovalRequestsHeaders record {
 
 # A paged collection of `BusinessPlaces` entities returned by the SAP Business One Service Layer
 public type BusinessPlacesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     BusinessPlace[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -7558,20 +9452,26 @@ public type BoInventorySystem "bis_MovingAverage"|"bis_Standard"|"bis_FIFO"|"bis
 
 # The `DecimalData` complex type of the SAP Business One Service Layer
 public type DecimalData record {|
+    # Context field.
     @jsondata:Name {value: "Context"}
     RoundingContextEnum context?;
+    # Currency field.
     @jsondata:Name {value: "Currency"}
     string currency?;
+    # Value field.
     @jsondata:Name {value: "Value"}
     decimal value?;
 |};
 
 # The `WebClientVariantMChartValue2` complex type of the SAP Business One Service Layer
 public type WebClientVariantMChartValue2 record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -7592,9 +9492,12 @@ public type ListWebClientVariantsHeaders record {
 
 # A paged collection of `States` entities returned by the SAP Business One Service Layer
 public type StatesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     State[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -7604,30 +9507,40 @@ public type SingleUserConnectionActionEnum "sucaWarning"|"sucaBlock";
 
 # The `TechnicianSettings` complex type of the SAP Business One Service Layer
 public type TechnicianSettings record {|
+    # Technician field.
     @jsondata:Name {value: "Technician"}
     int:Signed32 technician?;
+    # Group code field.
     @jsondata:Name {value: "GroupCode"}
     int:Signed32 groupCode?;
 |};
 
 # The `TaxReportBusinessPartner` complex type of the SAP Business One Service Layer
 public type TaxReportBusinessPartner record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `UserPermissionTree` entity of the SAP Business One Service Layer
 public type UserPermissionTree record {
+    # User signature field.
     int:Signed32 UserSignature?;
+    # Display order field.
     int:Signed32 DisplayOrder?;
+    # Permission ID field.
     string PermissionID?;
     # OData EnumType 'BoUPTOptions'. Serialised by the Service Layer as the member name
     BoUPTOptions Options?;
+    # Name field.
     string Name?;
+    # Levels field.
     int:Signed32 Levels?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsItem?;
+    # Parent ID field.
     string ParentID?;
+    # User permission forms field.
     UserPermissionForm[] UserPermissionForms?;
     # The `User` entity of the SAP Business One Service Layer
     User User?;
@@ -7635,24 +9548,33 @@ public type UserPermissionTree record {
 
 # A paged collection of `ApprovalTemplates` entities returned by the SAP Business One Service Layer
 public type ApprovalTemplatesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     ApprovalTemplate[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `FormattedSearch` entity of the SAP Business One Service Layer
 public type FormattedSearch record {
+    # Form ID field.
     string FormID?;
+    # Item ID field.
     string ItemID?;
+    # Column ID field.
     string ColumnID?;
     # OData EnumType 'BoFormattedSearchActionEnum'. Serialised by the Service Layer as the member name
     BoFormattedSearchActionEnum Action?;
+    # Query ID field.
     int:Signed32 QueryID?;
+    # Index field.
     int:Signed32 Index?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Refresh?;
+    # Field ID field.
     string FieldID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ForceRefresh?;
@@ -7660,7 +9582,9 @@ public type FormattedSearch record {
     BoYesNoEnum ByField?;
     # OData EnumType 'FormattedSearchByFieldEnum'. Serialised by the Service Layer as the member name
     FormattedSearchByFieldEnum ByFieldEx?;
+    # User valid values field.
     UserValidValue[] UserValidValues?;
+    # Field i ds field.
     FieldID[] FieldIDs?;
 };
 
@@ -7698,138 +9622,187 @@ public type ListWebClientBookmarkTilesHeaders record {
 
 # The `WebClientLaunchpadGroup` complex type of the SAP Business One Service Layer
 public type WebClientLaunchpadGroup record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Group name field.
     @jsondata:Name {value: "GroupName"}
     string groupName?;
+    # Visible field.
     @jsondata:Name {value: "Visible"}
     BoYesNoEnum visible?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Web client launchpad tiles field.
     @jsondata:Name {value: "WebClientLaunchpadTiles"}
     WebClientLaunchpadTile[] webClientLaunchpadTiles?;
+    # Group ID field.
     @jsondata:Name {value: "GroupId"}
     string groupId?;
 |};
 
 # The `ReportType` entity of the SAP Business One Service Layer
 public type ReportType record {|
+    # Type name field.
     @jsondata:Name {value: "TypeName"}
     string typeName?;
+    # Menu ID field.
     @jsondata:Name {value: "MenuID"}
     string menuID?;
+    # Type code field.
     @jsondata:Name {value: "TypeCode"}
     string typeCode?;
+    # Addon name field.
     @jsondata:Name {value: "AddonName"}
     string addonName?;
+    # Addon form type field.
     @jsondata:Name {value: "AddonFormType"}
     string addonFormType?;
+    # Default report layout field.
     @jsondata:Name {value: "DefaultReportLayout"}
     string defaultReportLayout?;
 |};
 
 # The `WebClientVariantMChartValue1` complex type of the SAP Business One Service Layer
 public type WebClientVariantMChartValue1 record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # The `ItemPriceParams` complex type of the SAP Business One Service Layer
 public type ItemPriceParams record {|
+    # Uo m quantity field.
     @jsondata:Name {value: "UoMQuantity"}
     decimal uoMQuantity?;
+    # Inventory quantity field.
     @jsondata:Name {value: "InventoryQuantity"}
     decimal inventoryQuantity?;
+    # Item code field.
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
+    # Uo m entry field.
     @jsondata:Name {value: "UoMEntry"}
     int:Signed32 uoMEntry?;
+    # Blanket agreement number field.
     @jsondata:Name {value: "BlanketAgreementNumber"}
     int:Signed32 blanketAgreementNumber?;
+    # Currency field.
     @jsondata:Name {value: "Currency"}
     string currency?;
+    # Card code field.
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
+    # Blanket agreement line field.
     @jsondata:Name {value: "BlanketAgreementLine"}
     int:Signed32 blanketAgreementLine?;
+    # Price list field.
     @jsondata:Name {value: "PriceList"}
     int:Signed32 priceList?;
+    # Date field.
     @jsondata:Name {value: "Date"}
     string date?;
 |};
 
 # Represents the request payload for the `QueryService_PostQuery` operation of the SAP Business One Service Layer
 public type QueryService_PostQuery_body record {
+    # Query path field.
     @jsondata:Name {value: "QueryPath"}
     string queryPath?;
+    # Query option field.
     @jsondata:Name {value: "QueryOption"}
     string queryOption?;
 };
 
 # The `WebClientFormSettingItem` complex type of the SAP Business One Service Layer
 public type WebClientFormSettingItem record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Visible field.
     @jsondata:Name {value: "Visible"}
     string visible?;
+    # Visible in grid field.
     @jsondata:Name {value: "VisibleInGrid"}
     string visibleInGrid?;
+    # Editable field.
     @jsondata:Name {value: "Editable"}
     string editable?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Item ID field.
     @jsondata:Name {value: "ItemId"}
     string itemId?;
+    # Editable in grid field.
     @jsondata:Name {value: "EditableInGrid"}
     string editableInGrid?;
 |};
 
 # The `TSRExceptionalEvent` entity of the SAP Business One Service Layer
 public type TSRExceptionalEvent record {|
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `BranchParams` complex type of the SAP Business One Service Layer
 public type BranchParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `RefreshPathsDocuments` complex type of the SAP Business One Service Layer
 public type RefreshPathsDocuments record {|
+    # Attachments folder path field.
     @jsondata:Name {value: "AttachmentsFolderPath"}
     string attachmentsFolderPath?;
 |};
 
 # The `ValueMappingCommunicationData` entity of the SAP Business One Service Layer
 public type ValueMappingCommunicationData record {|
+    # Start date field.
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # Status field.
     @jsondata:Name {value: "Status"}
     VMCommunicationStatusEnum status?;
+    # Third party system ID field.
     @jsondata:Name {value: "ThirdPartySystemId"}
     int:Signed32 thirdPartySystemId?;
+    # End time field.
     @jsondata:Name {value: "EndTime"}
     int:Signed32 endTime?;
+    # Message field.
     @jsondata:Name {value: "Message"}
     string message?;
+    # Object ID field.
     @jsondata:Name {value: "ObjectId"}
     int:Signed32 objectId?;
+    # Start time field.
     @jsondata:Name {value: "StartTime"}
     int:Signed32 startTime?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # End date field.
     @jsondata:Name {value: "EndDate"}
     string endDate?;
+    # Communication type field.
     @jsondata:Name {value: "CommunicationType"}
     VMCommunicationTypeEnum communicationType?;
 |};
@@ -7839,21 +9812,28 @@ public type BoMsgRcpTypes "rt_RandomUser"|"rt_ContactPerson"|"rt_InternalUser";
 
 # A paged collection of `SQLViews` entities returned by the SAP Business One Service Layer
 public type SQLViewsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     SQLView[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `DocumentSeriesUserParams` complex type of the SAP Business One Service Layer
 public type DocumentSeriesUserParams record {|
+    # Series field.
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
+    # User field.
     @jsondata:Name {value: "User"}
     int:Signed32 user?;
+    # Document field.
     @jsondata:Name {value: "Document"}
     string document?;
+    # Document sub type field.
     @jsondata:Name {value: "DocumentSubType"}
     string documentSubType?;
 |};
@@ -7870,9 +9850,12 @@ public type GetUserTablesMDQueries record {
 
 # A paged collection of `WebClientFormSettings` entities returned by the SAP Business One Service Layer
 public type WebClientFormSettingsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientFormSetting[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -7911,8 +9894,10 @@ public type ListUserPermissionTreeHeaders record {
 
 # Represents the request payload for the `ReportLayoutsService_AddReportLayoutToMenu` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_AddReportLayoutToMenu_body record {
+    # Report input params field.
     @jsondata:Name {value: "ReportInputParams"}
     ReportInputParams reportInputParams?;
+    # Report layout field.
     @jsondata:Name {value: "ReportLayout"}
     ReportLayout reportLayout?;
 };
@@ -7926,8 +9911,11 @@ public type ListUserGroupsHeaders record {
 
 # The `DistributionList` entity of the SAP Business One Service Layer
 public type DistributionList record {
+    # Code field.
     int:Signed32 Code?;
+    # Name field.
     string Name?;
+    # Distribution list lines field.
     DistributionListLine[] DistributionListLines?;
 };
 
@@ -7940,40 +9928,54 @@ public type ListAdditionalExpensesHeaders record {
 
 # The `TechnicianSchedulings` complex type of the SAP Business One Service Layer
 public type TechnicianSchedulings record {|
+    # Start date field.
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # Service call ID field.
     @jsondata:Name {value: "ServiceCallID"}
     int:Signed32 serviceCallID?;
+    # Scheduling line number field.
     @jsondata:Name {value: "SchedulingLineNum"}
     int:Signed32 schedulingLineNum?;
+    # Is closed field.
     @jsondata:Name {value: "IsClosed"}
     BoYesNoEnum isClosed?;
+    # End date field.
     @jsondata:Name {value: "EndDate"}
     string endDate?;
 |};
 
 # The `VM_ThirdPartyValuesData` complex type of the SAP Business One Service Layer
 public type VMThirdPartyValuesData record {|
+    # Third party system ID field.
     @jsondata:Name {value: "ThirdPartySystemId"}
     int:Signed32 thirdPartySystemId?;
+    # Line ID field.
     @jsondata:Name {value: "LineId"}
     int:Signed32 lineId?;
+    # Third party value field.
     @jsondata:Name {value: "ThirdPartyValue"}
     string thirdPartyValue?;
+    # Abs entry field.
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
 |};
 
 # The `KPI` entity of the SAP Business One Service Layer
 public type KPI record {|
+    # K PI item lines field.
     @jsondata:Name {value: "KPI_ItemLines"}
     KPIItemLine[] kPIItemLines?;
+    # Number of columns field.
     @jsondata:Name {value: "NumberOfColumns"}
     int:Signed32 numberOfColumns?;
+    # K PI code field.
     @jsondata:Name {value: "KPICode"}
     string kPICode?;
+    # K PI type field.
     @jsondata:Name {value: "KPIType"}
     KPITypeEnum kPIType?;
+    # K PI name field.
     @jsondata:Name {value: "KPIName"}
     string kPIName?;
 |};
@@ -7990,6 +9992,7 @@ public type AlertManagementTypeEnum "att_User"|"att_System";
 
 # The `WebClientLaunchpadParams` complex type of the SAP Business One Service Layer
 public type WebClientLaunchpadParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -8046,15 +10049,21 @@ public type ListApprovalRequestsQueries record {
 
 # The `UserBranchAssignmentItem` complex type of the SAP Business One Service Layer
 public type UserBranchAssignmentItem record {
+    # User code field.
     string UserCode?;
+    # BPLID field.
     int:Signed32 BPLID?;
 };
 
 # The `DynamicSystemString` entity of the SAP Business One Service Layer
 public type DynamicSystemString record {
+    # Form ID field.
     string FormID?;
+    # Item ID field.
     string ItemID?;
+    # Column ID field.
     string ColumnID?;
+    # Item string field.
     string ItemString?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsBold?;
@@ -8064,12 +10073,16 @@ public type DynamicSystemString record {
 
 # The `ExtendedTranslationParams` complex type of the SAP Business One Service Layer
 public type ExtendedTranslationParams record {|
+    # Category field.
     @jsondata:Name {value: "Category"}
     TranslationCategoryEnum category?;
+    # Secondary ID field.
     @jsondata:Name {value: "SecondaryID"}
     string secondaryID?;
+    # Document entry field.
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
+    # I d field.
     @jsondata:Name {value: "ID"}
     string iD?;
 |};
@@ -8079,30 +10092,39 @@ public type TaxReportFilterDocumentType "trfdt_ARInvoices"|"trfdt_ARCreditMemos"
 
 # A paged collection of `SQLQueries` entities returned by the SAP Business One Service Layer
 public type SQLQueriesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     SQLQuery[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `Pictures` entities returned by the SAP Business One Service Layer
 public type PicturesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Picture[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `UserKeysMD_Element` complex type of the SAP Business One Service Layer
 public type UserKeysMDElement record {
+    # Sub key index field.
     int:Signed32 SubKeyIndex?;
+    # Column alias field.
     string ColumnAlias?;
 };
 
 # The `WebClientPreferenceParams` complex type of the SAP Business One Service Layer
 public type WebClientPreferenceParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
@@ -8112,16 +10134,20 @@ public type BoUniqueSerialNumber "usn_None"|"usn_MfrSerialNumber"|"usn_SerialNum
 
 # The `DocumentSeriesParams` complex type of the SAP Business One Service Layer
 public type DocumentSeriesParams record {|
+    # Series field.
     @jsondata:Name {value: "Series"}
     int:Signed32 series?;
+    # Document field.
     @jsondata:Name {value: "Document"}
     string document?;
+    # Document sub type field.
     @jsondata:Name {value: "DocumentSubType"}
     string documentSubType?;
 |};
 
 # Represents the request payload for the `MobileAppService_GetServiceAppReport` operation of the SAP Business One Service Layer
 public type MobileAppService_GetServiceAppReport_body record {
+    # Service app report params field.
     @jsondata:Name {value: "ServiceAppReportParams"}
     ServiceAppReportParams serviceAppReportParams?;
 };
@@ -8165,15 +10191,19 @@ public type GetAlertManagementsQueries record {
 
 # A paged collection of `IntegrationPackagesConfigure` entities returned by the SAP Business One Service Layer
 public type IntegrationPackagesConfigureCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     IntegrationPackageConfigure[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `UserMenuParams` complex type of the SAP Business One Service Layer
 public type UserMenuParams record {|
+    # User ID field.
     @jsondata:Name {value: "UserID"}
     int:Signed32 userID?;
 |};
@@ -8212,7 +10242,9 @@ public type ListReportFilterHeaders record {
 
 # The `ChooseFromList` entity of the SAP Business One Service Layer
 public type ChooseFromList record {
+    # Object name field.
     string ObjectName?;
+    # Choose from list lines field.
     ChooseFromListLine[] ChooseFromList_Lines?;
 };
 
@@ -8221,17 +10253,22 @@ public type WebhookStateEnum "Active"|"Inactive"|"Exceptional";
 
 # Represents the request payload for the `CompanyService_LogLogoffAction` operation of the SAP Business One Service Layer
 public type CompanyService_LogLogoffAction_body record {
+    # User access log field.
     @jsondata:Name {value: "UserAccessLog"}
     UserAccessLog userAccessLog?;
+    # Support user login record field.
     @jsondata:Name {value: "SupportUserLoginRecord"}
     SupportUserLoginRecord supportUserLoginRecord?;
 };
 
 # A paged collection of `WebClientPreferences` entities returned by the SAP Business One Service Layer
 public type WebClientPreferencesCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     WebClientPreference[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -8241,9 +10278,12 @@ public type SupportUserLoginRecordLogReasonTypeEnum "reasonTransIssueAnaly"|"rea
 
 # A paged collection of `UserTablesMD` entities returned by the SAP Business One Service Layer
 public type UserTablesMDCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     UserTablesMD[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -8263,6 +10303,7 @@ public type UDFLinkedSystemObjectTypesEnum "ulNone"|"ulChartOfAccounts"|"ulBusin
 
 # Represents the request payload for the `SeriesService_GetDocumentSeries` operation of the SAP Business One Service Layer
 public type SeriesService_GetDocumentSeries_body record {
+    # Document type params field.
     @jsondata:Name {value: "DocumentTypeParams"}
     DocumentTypeParams documentTypeParams?;
 };
@@ -8279,40 +10320,56 @@ public type GetPicturesQueries record {
 
 # The `WebClientVariantParams` complex type of the SAP Business One Service Layer
 public type WebClientVariantParams record {|
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # The `UserFieldMD` entity of the SAP Business One Service Layer
 public type UserFieldMD record {|
+    # User tables MD field.
     @jsondata:Name {value: "UserTablesMD"}
     UserTablesMD userTablesMD?;
+    # Valid values MD field.
     @jsondata:Name {value: "ValidValuesMD"}
     ValidValueMD[] validValuesMD?;
+    # Description field.
     @jsondata:Name {value: "Description"}
     string description?;
+    # Sub type field.
     @jsondata:Name {value: "SubType"}
     BoFldSubTypes subType?;
+    # Linked table field.
     @jsondata:Name {value: "LinkedTable"}
     string linkedTable?;
+    # Size field.
     @jsondata:Name {value: "Size"}
     int:Signed32 size?;
+    # Linked system object field.
     @jsondata:Name {value: "LinkedSystemObject"}
     UDFLinkedSystemObjectTypesEnum linkedSystemObject?;
+    # Linked UDO field.
     @jsondata:Name {value: "LinkedUDO"}
     string linkedUDO?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Default value field.
     @jsondata:Name {value: "DefaultValue"}
     string defaultValue?;
+    # Table name field.
     @jsondata:Name {value: "TableName"}
     string tableName?;
+    # Type field.
     @jsondata:Name {value: "Type"}
     BoFieldTypes 'type?;
+    # Field ID field.
     @jsondata:Name {value: "FieldID"}
     int:Signed32 fieldID?;
+    # Edit size field.
     @jsondata:Name {value: "EditSize"}
     int:Signed32 editSize?;
+    # Mandatory field.
     @jsondata:Name {value: "Mandatory"}
     BoYesNoEnum mandatory?;
 |};
@@ -8322,6 +10379,7 @@ public type EventStatusEnum "New"|"Failed"|"PartiallyDelivered"|"Delivered"|"Arc
 
 # The `AdvancedGLAccountReturnParams` complex type of the SAP Business One Service Layer
 public type AdvancedGLAccountReturnParams record {|
+    # Account code field.
     @jsondata:Name {value: "AccountCode"}
     string accountCode?;
 |};
@@ -8331,6 +10389,7 @@ public type BoGridTypeEnum "gtCombination"|"gtContinuousLine"|"gtBrokenLine"|"gt
 
 # Represents the request payload for the `SeriesService_GetDefaultSeries` operation of the SAP Business One Service Layer
 public type SeriesService_GetDefaultSeries_body record {
+    # Document type params field.
     @jsondata:Name {value: "DocumentTypeParams"}
     DocumentTypeParams documentTypeParams?;
 };
@@ -8379,104 +10438,151 @@ public type ListDynamicSystemStringsQueries record {
 
 # The `UserLanguage` entity of the SAP Business One Service Layer
 public type UserLanguage record {
+    # Code field.
     int:Signed32 Code?;
+    # Language short name field.
     string LanguageShortName?;
+    # Language full name field.
     string LanguageFullName?;
+    # Related system language field.
     int:Signed32 RelatedSystemLanguage?;
+    # User default groups field.
     UserDefaultGroup[] UserDefaultGroups?;
 };
 
 # The `CompanyInfo` complex type of the SAP Business One Service Layer
 public type CompanyInfo record {|
+    # Minimum amount for annual list field.
     @jsondata:Name {value: "MinimumAmountForAnnualList"}
     decimal minimumAmountForAnnualList?;
+    # Percent of total acquisition field.
     @jsondata:Name {value: "PercentOfTotalAcquisition"}
     decimal percentOfTotalAcquisition?;
+    # Block stock negative quantity field.
     @jsondata:Name {value: "BlockStockNegativeQuantity"}
     BoYesNoEnum blockStockNegativeQuantity?;
+    # B ISR bank account field.
     @jsondata:Name {value: "BISRBankAccount"}
     string bISRBankAccount?;
+    # Group lines in VAT calculation field.
     @jsondata:Name {value: "GroupLinesInVATCalculation"}
     BoYesNoEnum groupLinesInVATCalculation?;
+    # Display transactions by dflt field.
     @jsondata:Name {value: "DisplayTransactionsByDflt"}
     BoYesNoEnum displayTransactionsByDflt?;
+    # Enable expenses management field.
     @jsondata:Name {value: "EnableExpensesManagement"}
     BoYesNoEnum enableExpensesManagement?;
+    # B1i time out field.
     @jsondata:Name {value: "B1iTimeOut"}
     int:Signed32 b1iTimeOut?;
+    # Tax calculation system field.
     @jsondata:Name {value: "TaxCalculationSystem"}
     TaxCalcSysEnum taxCalculationSystem?;
+    # S RI management system field.
     @jsondata:Name {value: "SRIManagementSystem"}
     BoManageMethod sRIManagementSystem?;
+    # Company name field.
     @jsondata:Name {value: "CompanyName"}
     string companyName?;
+    # Language code field.
     @jsondata:Name {value: "LanguageCode"}
     BoSuppLangs languageCode?;
+    # Enable stock rel number cost price field.
     @jsondata:Name {value: "EnableStockRelNoCostPrice"}
     BoYesNoEnum enableStockRelNoCostPrice?;
+    # Max number of documents in pmt field.
     @jsondata:Name {value: "MaxNumberOfDocumentsInPmt"}
     int:Signed32 maxNumberOfDocumentsInPmt?;
+    # Version field.
     @jsondata:Name {value: "Version"}
     int:Signed32 version?;
+    # Enable check quantity in RDR field.
     @jsondata:Name {value: "EnableCheckQuantityInRDR"}
     BoYesNoEnum enableCheckQuantityInRDR?;
+    # Base date for exchange rate field.
     @jsondata:Name {value: "BaseDateForExchangeRate"}
     BoBaseDateRateEnum baseDateForExchangeRate?;
+    # Minimum amount for appndix OP field.
     @jsondata:Name {value: "MinimumAmountForAppndixOP"}
     decimal minimumAmountForAppndixOP?;
+    # Localization field.
     @jsondata:Name {value: "Localization"}
     string localization?;
+    # B ISR bank act key field.
     @jsondata:Name {value: "BISRBankActKey"}
     int:Signed32 bISRBankActKey?;
+    # Data ownership indication field.
     @jsondata:Name {value: "DataOwnershipIndication"}
     BoYesNoEnum dataOwnershipIndication?;
+    # Minimum base amount per document field.
     @jsondata:Name {value: "MinimumBaseAmountPerDoc"}
     decimal minimumBaseAmountPerDoc?;
+    # B ISR bank country field.
     @jsondata:Name {value: "BISRBankCountry"}
     string bISRBankCountry?;
+    # Max records in choose from list field.
     @jsondata:Name {value: "MaxRecordsInChooseFromList"}
     int:Signed32 maxRecordsInChooseFromList?;
+    # Enable account segmentation field.
     @jsondata:Name {value: "EnableAccountSegmentation"}
     BoYesNoEnum enableAccountSegmentation?;
+    # I EPS payer field.
     @jsondata:Name {value: "IEPSPayer"}
     BoYesNoEnum iEPSPayer?;
+    # Auto SRI creation on receipt field.
     @jsondata:Name {value: "AutoSRICreationOnReceipt"}
     BoYesNoEnum autoSRICreationOnReceipt?;
+    # Enable sharing series field.
     @jsondata:Name {value: "EnableSharingSeries"}
     BoYesNoEnum enableSharingSeries?;
+    # Enable transaction notification field.
     @jsondata:Name {value: "EnableTransactionNotification"}
     BoYesNoEnum enableTransactionNotification?;
+    # B ISR branch field.
     @jsondata:Name {value: "BISRBranch"}
     string bISRBranch?;
+    # Auto create customer eq card field.
     @jsondata:Name {value: "AutoCreateCustomerEqCard"}
     BoYesNoEnum autoCreateCustomerEqCard?;
+    # Enable bill of exchange field.
     @jsondata:Name {value: "EnableBillOfExchange"}
     BoYesNoEnum enableBillOfExchange?;
+    # Default stamp tax field.
     @jsondata:Name {value: "DefaultStampTax"}
     string defaultStampTax?;
+    # Enable conversion different account field.
     @jsondata:Name {value: "EnableConversionDifferentAcct"}
     BoYesNoEnum enableConversionDifferentAcct?;
+    # B ISR bank number field.
     @jsondata:Name {value: "BISRBankNo"}
     string bISRBankNo?;
+    # Default days for ord canc field.
     @jsondata:Name {value: "DefaultDaysForOrdCanc"}
     int:Signed32 defaultDaysForOrdCanc?;
 |};
 
 # The `TaxReportDocument` complex type of the SAP Business One Service Layer
 public type TaxReportDocument record {|
+    # To number field.
     @jsondata:Name {value: "ToNumber"}
     int:Signed32 toNumber?;
+    # From number field.
     @jsondata:Name {value: "FromNumber"}
     int:Signed32 fromNumber?;
+    # Document type field.
     @jsondata:Name {value: "DocumentType"}
     TaxReportFilterDocumentType documentType?;
 |};
 
 # A paged collection of `ValueMapping` entities returned by the SAP Business One Service Layer
 public type ValueMappingCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     VMB1ValuesData[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -8503,17 +10609,27 @@ public type GetValueMappingQueries record {
 
 # The `User` entity of the SAP Business One Service Layer
 public type User record {
+    # Internal key field.
     int:Signed32 InternalKey?;
+    # User password field.
     string UserPassword?;
+    # User code field.
     string UserCode?;
+    # User name field.
     string UserName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Superuser?;
+    # E mail field.
     string eMail?;
+    # Mobile phone number field.
     string MobilePhoneNumber?;
+    # Defaults field.
     string Defaults?;
+    # Fax number field.
     string FaxNumber?;
+    # Branch field.
     int:Signed32 Branch?;
+    # Department field.
     int:Signed32 Department?;
     # OData EnumType 'BoSuppLangs'. Serialised by the Service Layer as the member name
     BoSuppLangs LanguageCode?;
@@ -8521,83 +10637,125 @@ public type User record {
     BoYesNoEnum Locked?;
     # OData EnumType 'BoUserGroup'. Serialised by the Service Layer as the member name
     BoUserGroup Group?;
+    # Max discount general field.
     decimal MaxDiscountGeneral?;
+    # Max discount sales field.
     decimal MaxDiscountSales?;
+    # Max discount purchase field.
     decimal MaxDiscountPurchase?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CashLimit?;
+    # Max cash amount for incmng payts field.
     decimal MaxCashAmtForIncmngPayts?;
+    # Last logout date field.
     string LastLogoutDate?;
+    # Last login time field.
     string LastLoginTime?;
+    # Last logout time field.
     string LastLogoutTime?;
+    # Last password change time field.
     string LastPasswordChangeTime?;
+    # Last password changed by field.
     string LastPasswordChangedBy?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NaturalPer?;
+    # User permission field.
     UserPermissionItem[] UserPermission?;
+    # User action record field.
     UserActionRecordItem[] UserActionRecord?;
+    # User group by user field.
     UserGroupByUserItem[] UserGroupByUser?;
+    # User branch assignment field.
     UserBranchAssignmentItem[] UserBranchAssignment?;
+    # User default groups field.
     UserDefaultGroup[] UserDefaultGroups?;
+    # Form preferences field.
     ColumnPreferences[] FormPreferences?;
+    # Approval requests field.
     ApprovalRequest[] ApprovalRequests?;
     # The `Branch` entity of the SAP Business One Service Layer
     Branch Branch2?;
     # The `Department` entity of the SAP Business One Service Layer
     Department Department2?;
+    # Cockpits field.
     Cockpit[] Cockpits?;
+    # User permission tree field.
     UserPermissionTree[] UserPermissionTree?;
 };
 
 # A paged collection of `DynamicSystemStrings` entities returned by the SAP Business One Service Layer
 public type DynamicSystemStringsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     DynamicSystemString[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `Message` entity of the SAP Business One Service Layer
 public type Message record {|
+    # User field.
     @jsondata:Name {value: "User"}
     int:Signed32 user?;
+    # Priority field.
     @jsondata:Name {value: "Priority"}
     BoMsgPriorities priority?;
+    # Text field.
     @jsondata:Name {value: "Text"}
     string text?;
+    # Attachment field.
     @jsondata:Name {value: "Attachment"}
     int:Signed32 attachment?;
+    # Message data columns field.
     @jsondata:Name {value: "MessageDataColumns"}
     MessageDataColumn[] messageDataColumns?;
+    # Recipient collection field.
     @jsondata:Name {value: "RecipientCollection"}
     Recipient[] recipientCollection?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Subject field.
     @jsondata:Name {value: "Subject"}
     string subject?;
 |};
 
 # The `AdditionalExpense` entity of the SAP Business One Service Layer
 public type AdditionalExpense record {
+    # Name field.
     string Name?;
+    # Revenues account field.
     string RevenuesAccount?;
+    # Expense account field.
     string ExpenseAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxLiable?;
+    # Fixed amount revenues field.
     decimal FixedAmountRevenues?;
+    # Fixed amount expenses field.
     decimal FixedAmountExpenses?;
+    # Output VAT group field.
     string OutputVATGroup?;
+    # Input VAT group field.
     string InputVATGroup?;
     # OData EnumType 'BoAeDistMthd'. Serialised by the Service Layer as the member name
     BoAeDistMthd DistributionMethod?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Includein1099?;
+    # Freight offset account field.
     string FreightOffsetAccount?;
+    # Withholding tax liable field.
     string WTLiable?;
+    # Expens code field.
     int:Signed32 ExpensCode?;
+    # Expense exempted account field.
     string ExpenseExemptedAccount?;
+    # Revenues exempted account field.
     string RevenuesExemptedAccount?;
+    # Distribution rule field.
     string DistributionRule?;
     # OData EnumType 'DrawingMethodEnum'. Serialised by the Service Layer as the member name
     DrawingMethodEnum DrawingMethod?;
@@ -8607,56 +10765,89 @@ public type AdditionalExpense record {
     BoYesNoEnum Stock?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LastPurchasePrice?;
+    # Project field.
     string Project?;
+    # Distribution rule2 field.
     string DistributionRule2?;
+    # Distribution rule3 field.
     string DistributionRule3?;
+    # Distribution rule4 field.
     string DistributionRule4?;
+    # Distribution rule5 field.
     string DistributionRule5?;
+    # Data version field.
     int:Signed32 DataVersion?;
     # OData EnumType 'SAFTProductTypeEnum'. Serialised by the Service Layer as the member name
     SAFTProductTypeEnum SAFTProductType?;
+    # SAFT product type ex field.
     string SAFTProductTypeEx?;
 };
 
 # The `UserDefaultGroup` entity of the SAP Business One Service Layer
 public type UserDefaultGroup record {
+    # Code field.
     string Code?;
+    # Name field.
     string Name?;
+    # Warehouse field.
     string Warehouse?;
+    # Sales employee field.
     int:Signed32 SalesEmployee?;
+    # B pfor invoice payment field.
     string BPforInvoicePayment?;
+    # Cash account field.
     string CashAccount?;
+    # Checking account field.
     string CheckingAcct?;
     # OData EnumType 'BoPrintReceiptEnum'. Serialised by the Service Layer as the member name
     BoPrintReceiptEnum PrintReceipt?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PrintInvoiceandPaymentinS?;
+    # Windows color field.
     int:Signed32 WindowsColor?;
+    # Address field.
     string Address?;
+    # Country field.
     string Country?;
+    # Printing header field.
     string PrintingHeader?;
+    # Phone number1 field.
     string PhoneNumber1?;
+    # Phone number2 field.
     string PhoneNumber2?;
+    # Fax number field.
     string FaxNumber?;
+    # E mail field.
     string eMail?;
+    # Addressin foreign language field.
     string AddressinForeignLanguage?;
+    # Printing header in foreign langu field.
     string PrintingHeaderInForeignLangu?;
+    # Phone number1 foreign lang field.
     string PhoneNumber1ForeignLang?;
+    # Phone number2 foreign lang field.
     string PhoneNumber2ForeignLang?;
+    # Fax number foreign lang field.
     string FaxNumberForeignLang?;
+    # Default tax code field.
     string DefaultTaxCode?;
+    # Additional ID number field.
     string AdditionalIdNumber?;
+    # User signature field.
     int:Signed32 UserSignature?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseTax?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseWarehouseAddressinAPD?;
+    # BPLID field.
     int:Signed32 BPLID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AssetInDoc?;
     # OData EnumType 'BoSuppLangs'. Serialised by the Service Layer as the member name
     BoSuppLangs LanguageCode?;
+    # Default documents field.
     DefaultDocument[] DefaultDocuments?;
+    # Default credit cards field.
     DefaultCreditCard[] DefaultCreditCards?;
     # The `Country` entity of the SAP Business One Service Layer
     Country Country2?;
@@ -8670,7 +10861,9 @@ public type UserDefaultGroup record {
 
 # The `UserPermissionItem` complex type of the SAP Business One Service Layer
 public type UserPermissionItem record {
+    # User code field.
     int:Signed32 UserCode?;
+    # Permission ID field.
     string PermissionID?;
     # OData EnumType 'BoPermission'. Serialised by the Service Layer as the member name
     BoPermission Permission?;
@@ -8680,22 +10873,31 @@ public type UserPermissionItem record {
 
 # The `ExtendedTranslation_ItemLine` complex type of the SAP Business One Service Layer
 public type ExtendedTranslationItemLine record {|
+    # Slim type field.
     @jsondata:Name {value: "SlimType"}
     string slimType?;
+    # Item code field.
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
+    # Item type field.
     @jsondata:Name {value: "ItemType"}
     string itemType?;
+    # Extended translation result lines field.
     @jsondata:Name {value: "ExtendedTranslation_ResultLines"}
     ExtendedTranslationResultLine[] extendedTranslationResultLines?;
+    # Document entry field.
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
+    # Source text field.
     @jsondata:Name {value: "SourceText"}
     string sourceText?;
+    # Max length field.
     @jsondata:Name {value: "MaxLength"}
     int:Signed32 maxLength?;
+    # Line number field.
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
+    # Memo field.
     @jsondata:Name {value: "Memo"}
     string memo?;
 |};
@@ -8712,10 +10914,13 @@ public type GetIntegrationPackagesConfigureQueries record {
 
 # Represents the request payload for the `SBOBobService_SetSystemPermission` operation of the SAP Business One Service Layer
 public type SBOBobService_SetSystemPermission_body record {
+    # User code field.
     @jsondata:Name {value: "UserCode"}
     string userCode?;
+    # Permission field.
     @jsondata:Name {value: "Permission"}
     int:Signed32 permission?;
+    # Permission ID field.
     @jsondata:Name {value: "PermissionID"}
     string permissionID?;
 };
@@ -8767,24 +10972,34 @@ public type ListWebClientLaunchpadsQueries record {
 
 # The `ExternalCall` complex type of the SAP Business One Service Layer
 public type ExternalCall record {|
+    # Status field.
     @jsondata:Name {value: "Status"}
     ExternalCallStatusEnum status?;
+    # Creation date field.
     @jsondata:Name {value: "CreationDate"}
     string creationDate?;
+    # Category field.
     @jsondata:Name {value: "Category"}
     int:Signed32 category?;
+    # Last update time field.
     @jsondata:Name {value: "LastUpdateTime"}
     int:Signed32 lastUpdateTime?;
+    # Call messages field.
     @jsondata:Name {value: "CallMessages"}
     CallMessage[] callMessages?;
+    # Creation time field.
     @jsondata:Name {value: "CreationTime"}
     int:Signed32 creationTime?;
+    # Call arguments field.
     @jsondata:Name {value: "CallArguments"}
     CallArgument[] callArguments?;
+    # I d field.
     @jsondata:Name {value: "ID"}
     int:Signed32 iD?;
+    # Last update user code field.
     @jsondata:Name {value: "LastUpdateUserCode"}
     string lastUpdateUserCode?;
+    # Last update date field.
     @jsondata:Name {value: "LastUpdateDate"}
     string lastUpdateDate?;
 |};
@@ -8794,6 +11009,7 @@ public type InventoryAccountTypeEnum "iatExpenses"|"iatRevenues"|"iatExemptIncom
 
 # Represents the request payload for the `SeriesService_GetElectronicSeries` operation of the SAP Business One Service Layer
 public type SeriesService_GetElectronicSeries_body record {
+    # Electronic series params field.
     @jsondata:Name {value: "ElectronicSeriesParams"}
     ElectronicSeriesParams electronicSeriesParams?;
 };
@@ -8810,43 +11026,57 @@ public type GetB1SessionsQueries record {
 
 # Represents the response payload for the `AlertManagements_GetAlertManagementList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     AlertManagementParams[] value?;
 };
 
 # The `WebClientListviewFilterCondition` complex type of the SAP Business One Service Layer
 public type WebClientListviewFilterCondition record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Value field.
     @jsondata:Name {value: "Value"}
     string value?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
+    # Compare expression field.
     @jsondata:Name {value: "CompareExpression"}
     string compareExpression?;
 |};
 
 # Represents the request payload for the `CompanyService_UpdatePeriod` operation of the SAP Business One Service Layer
 public type CompanyService_UpdatePeriod_body record {
+    # Period category field.
     @jsondata:Name {value: "PeriodCategory"}
     PeriodCategory periodCategory?;
 };
 
 # The `ApprovalStage` entity of the SAP Business One Service Layer
 public type ApprovalStage record {|
+    # Approval requests field.
     @jsondata:Name {value: "ApprovalRequests"}
     ApprovalRequest[] approvalRequests?;
+    # Remarks field.
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Approval stage approvers field.
     @jsondata:Name {value: "ApprovalStageApprovers"}
     ApprovalStageApprover[] approvalStageApprovers?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
+    # Number of approvers required field.
     @jsondata:Name {value: "NoOfApproversRequired"}
     int:Signed32 noOfApproversRequired?;
 |};
@@ -8903,6 +11133,7 @@ public type ListTSRExceptionalEventsQueries record {
 
 # Represents the request payload for the `CompanyService_RoundDecimal` operation of the SAP Business One Service Layer
 public type CompanyService_RoundDecimal_body record {
+    # Decimal data field.
     @jsondata:Name {value: "DecimalData"}
     DecimalData decimalData?;
 };
@@ -8934,30 +11165,37 @@ public type ListUserPermissionTreeQueries record {
 
 # Represents the request payload for the `SeriesService_SetDefaultSeriesForAllUsers` operation of the SAP Business One Service Layer
 public type SeriesService_SetDefaultSeriesForAllUsers_body record {
+    # Document series params field.
     @jsondata:Name {value: "DocumentSeriesParams"}
     DocumentSeriesParams documentSeriesParams?;
 };
 
 # The `WebClientVariantEmbeddedChartSize` complex type of the SAP Business One Service Layer
 public type WebClientVariantEmbeddedChartSize record {|
+    # Order field.
     @jsondata:Name {value: "Order"}
     int:Signed32 'order?;
+    # Column name field.
     @jsondata:Name {value: "ColumnName"}
     string columnName?;
+    # Guid field.
     @jsondata:Name {value: "Guid"}
     string guid?;
 |};
 
 # Represents the request payload for the `CompanyService_GetFinancePeriods` operation of the SAP Business One Service Layer
 public type CompanyService_GetFinancePeriods_body record {
+    # Period category params field.
     @jsondata:Name {value: "PeriodCategoryParams"}
     PeriodCategoryParams periodCategoryParams?;
 };
 
 # The `ApprovalStageParams` complex type of the SAP Business One Service Layer
 public type ApprovalStageParams record {|
+    # Code field.
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Name field.
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -8967,12 +11205,14 @@ public type BoVerticalAlignmentEnum "rlvaTop"|"rlvaBottom"|"rlvaCentralized";
 
 # Represents the request payload for the `MobileAppService_UpdateTechnicianSettings` operation of the SAP Business One Service Layer
 public type MobileAppService_UpdateTechnicianSettings_body record {
+    # Technician settings field.
     @jsondata:Name {value: "TechnicianSettings"}
     TechnicianSettings technicianSettings?;
 };
 
 # Represents the request payload for the `SeriesService_RemoveSeries` operation of the SAP Business One Service Layer
 public type SeriesService_RemoveSeries_body record {
+    # Series params field.
     @jsondata:Name {value: "SeriesParams"}
     SeriesParams seriesParams?;
 };
@@ -9021,22 +11261,29 @@ public type ListChooseFromListHeaders record {
 
 # The `BusinessPlaceIENumber` complex type of the SAP Business One Service Layer
 public type BusinessPlaceIENumber record {
+    # BPLID field.
     int:Signed32 BPLID?;
+    # State field.
     string State?;
+    # IE number field.
     string IENumber?;
 };
 
 # Represents the request payload for the `ReportLayoutsService_GetDefaultReportLayout` operation of the SAP Business One Service Layer
 public type ReportLayoutsService_GetDefaultReportLayout_body record {
+    # Report params field.
     @jsondata:Name {value: "ReportParams"}
     ReportParams reportParams?;
 };
 
 # A paged collection of `Sections` entities returned by the SAP Business One Service Layer
 public type SectionsCollectionResponse record {
+    # Odata metadata field.
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field.
     Section[] value?;
+    # Odata next link field.
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
