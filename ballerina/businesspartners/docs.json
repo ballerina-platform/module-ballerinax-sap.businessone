@@ -1,5 +1,5 @@
 {
-  "description": "The SAP Business One Business Partners connector provides APIs for the business partner master data of SAP Business One: customers, vendors, leads, contacts, and related setup, exposed through the [SAP Business One Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) (OData).",
+  "description": "The SAP Business One Business Partners connector provides APIs for the business partner master data of SAP Business One: customers, vendors, leads, contacts, and related setup, exposed through the [SAP Business One Service Layer](https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html) (OData).",
   "key-features": [
     "Create, read, update, and delete business partners",
     "Manage contact persons and business partner groups",

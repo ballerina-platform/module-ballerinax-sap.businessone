@@ -1,11 +1,9 @@
 ## Overview
 
 [SAP Business One](https://www.sap.com/products/erp/business-one.html) is an enterprise resource planning (ERP)
-solution designed for small and midsize businesses by SAP SE. Its
-[Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) exposes the Business One business objects
-through an OData web service interface.
+solution designed for small and midsize businesses by SAP SE.
 
-The SAP Business One Business Partners connector provides APIs for the business partner master data of SAP Business One: customers, vendors, leads, contacts, and related setup, exposed through the [SAP Business One Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) (OData).
+The SAP Business One Business Partners connector provides APIs for the business partner master data of SAP Business One: customers, vendors, leads, contacts, and related setup, exposed through the [SAP Business One Service Layer](https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html) (OData).
 
 ### Key Features
 

@@ -1,5 +1,5 @@
 {
-  "description": "The SAP Business One Localization & Electronic Documents connector provides APIs for the country-specific and electronic document objects of SAP Business One: electronic documents and file formats, Brazil Nota Fiscal codes, India GST data, Israel deduction documents, and more, exposed through the [SAP Business One Service Layer](https://help.sap.com/docs/SAP_BUSINESS_ONE_ONE_BRANCH) (OData).",
+  "description": "The SAP Business One Localization & Electronic Documents connector provides APIs for the country-specific and electronic document objects of SAP Business One: electronic documents and file formats, Brazil Nota Fiscal codes, India GST data, Israel deduction documents, and more, exposed through the [SAP Business One Service Layer](https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html) (OData).",
   "key-features": [
     "Process electronic documents and communication actions",
     "Maintain Brazil Nota Fiscal, CEST, and NCM code setup",
