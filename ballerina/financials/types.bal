@@ -22,34 +22,44 @@ import ballerina/http;
 
 # A paged collection of `NatureOfAssessees` entities returned by the SAP Business One Service Layer
 public type NatureOfAssesseesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     NatureOfAssessee[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `Dimensions` entities returned by the SAP Business One Service Layer
 public type DimensionsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     Dimension[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `CashDiscountParams` complex type of the SAP Business One Service Layer
 public type CashDiscountParams record {|
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `TransactionCodeParams` complex type of the SAP Business One Service Layer
 public type TransactionCodeParams record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -59,12 +69,16 @@ public type SPEDContabilAccountPurposeCode "spedContasDeAtivo"|"spedContasDePass
 
 # The `AccountCategory` entity of the SAP Business One Service Layer
 public type AccountCategory record {|
+    # Category code field
     @jsondata:Name {value: "CategoryCode"}
     int:Signed32 categoryCode?;
+    # Chart of accounts field
     @jsondata:Name {value: "ChartOfAccounts"}
     ChartOfAccount[] chartOfAccounts?;
+    # Category name field
     @jsondata:Name {value: "CategoryName"}
     string categoryName?;
+    # Category source field
     @jsondata:Name {value: "CategorySource"}
     AccountCategorySourceEnum categorySource?;
 |};
@@ -116,8 +130,10 @@ public type ListTaxWebSitesQueries record {
 
 # Represents the request payload for the `AccountsService_CreateOpenBalance` operation of the SAP Business One Service Layer
 public type AccountsService_CreateOpenBalance_body record {
+    # Openning balance account field
     @jsondata:Name {value: "OpenningBalanceAccount"}
     OpenningBalanceAccount openningBalanceAccount?;
+    # G l accounts field
     @jsondata:Name {value: "GLAccounts"}
     GLAccount[] gLAccounts?;
 };
@@ -174,28 +190,38 @@ public type ListCashFlowLineItemsQueries record {
 
 # The `RclRecurringTransaction` complex type of the SAP Business One Service Layer
 public type RclRecurringTransaction record {|
+    # Status field
     @jsondata:Name {value: "Status"}
     RclRecurringTransactionStatusEnum status?;
+    # Instance field
     @jsondata:Name {value: "Instance"}
     int:Signed32 instance?;
+    # Planned date field
     @jsondata:Name {value: "PlannedDate"}
     string plannedDate?;
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
+    # Template ID field
     @jsondata:Name {value: "TemplateID"}
     int:Signed32 templateID?;
+    # Document type field
     @jsondata:Name {value: "DocType"}
     string docType?;
+    # Transaction ID field
     @jsondata:Name {value: "TransactionID"}
     int:Signed32 transactionID?;
 |};
 
 # The `DeductionTaxSubGroup` entity of the SAP Business One Service Layer
 public type DeductionTaxSubGroup record {|
+    # Group name field
     @jsondata:Name {value: "GroupName"}
     string groupName?;
+    # Group code field
     @jsondata:Name {value: "GroupCode"}
     string groupCode?;
+    # Deduction tax groups field
     @jsondata:Name {value: "DeductionTaxGroups"}
     DeductionTaxGroup[] deductionTaxGroups?;
 |};
@@ -266,13 +292,17 @@ public type ListDistributionRulesQueries record {
 
 # The `ClosingDateProcedure` entity of the SAP Business One Service Layer
 public type ClosingDateProcedure record {
+    # Closing date number field
     int:Signed32 ClosingDateNum?;
+    # Closing date code field
     string ClosingDateCode?;
     # OData EnumType 'BoClosingDateProcedureBaseDateEnum'. Serialised by the Service Layer as the member name
     BoClosingDateProcedureBaseDateEnum BaselineDate?;
     # OData EnumType 'BoClosingDateProcedureDueMonthEnum'. Serialised by the Service Layer as the member name
     BoClosingDateProcedureDueMonthEnum DueMonth?;
+    # Extra month field
     int:Signed32 ExtraMonth?;
+    # Extra day field
     int:Signed32 ExtraDay?;
 };
 
@@ -310,8 +340,11 @@ public type ListAccountCategoryHeaders record {
 
 # The `DeductionTaxHierarchies_Line` complex type of the SAP Business One Service Layer
 public type DeductionTaxHierarchiesLine record {
+    # Row number field
     int:Signed32 RowNumber?;
+    # Deduction percent field
     decimal DeductionPercent?;
+    # Maximum total field
     decimal MaximumTotal?;
 };
 
@@ -333,60 +366,86 @@ public type BoClosingDateProcedureDueMonthEnum "bocpddm_HalfMonth"|"bocpddm_Mont
 
 # The `RecurringPostingsLine` complex type of the SAP Business One Service Layer
 public type RecurringPostingsLine record {|
+    # Distribution rule field
     @jsondata:Name {value: "DistributionRule"}
     string distributionRule?;
+    # Debit field
     @jsondata:Name {value: "Debit"}
     decimal debit?;
+    # Tax posting account field
     @jsondata:Name {value: "TaxPostingAccount"}
     BoTaxPostingAccountTypeEnum taxPostingAccount?;
+    # Cost element code field
     @jsondata:Name {value: "CostElementCode"}
     string costElementCode?;
+    # W tax liable field
     @jsondata:Name {value: "WTaxLiable"}
     BoYesNoEnum wTaxLiable?;
+    # Costing code2 field
     @jsondata:Name {value: "CostingCode2"}
     string costingCode2?;
+    # Costing code3 field
     @jsondata:Name {value: "CostingCode3"}
     string costingCode3?;
+    # Costing code4 field
     @jsondata:Name {value: "CostingCode4"}
     string costingCode4?;
+    # Costing code5 field
     @jsondata:Name {value: "CostingCode5"}
     string costingCode5?;
+    # Control account field
     @jsondata:Name {value: "ControlAccount"}
     string controlAccount?;
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
+    # Credit field
     @jsondata:Name {value: "Credit"}
     decimal credit?;
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # Tax group field
     @jsondata:Name {value: "TaxGroup"}
     string taxGroup?;
+    # Currency field
     @jsondata:Name {value: "Currency"}
     string currency?;
+    # Costing code1 field
     @jsondata:Name {value: "CostingCode1"}
     string costingCode1?;
+    # Account code field
     @jsondata:Name {value: "AccountCode"}
     string accountCode?;
+    # VAT line field
     @jsondata:Name {value: "VatLine"}
     BoYesNoEnum vatLine?;
+    # Project code field
     @jsondata:Name {value: "ProjectCode"}
     string projectCode?;
+    # Rcr code field
     @jsondata:Name {value: "RcrCode"}
     string rcrCode?;
+    # W tax line field
     @jsondata:Name {value: "WTaxLine"}
     BoYesNoEnum wTaxLine?;
+    # Account name field
     @jsondata:Name {value: "AccountName"}
     string accountName?;
 |};
 
 # The `JournalEntryDocumentType` entity of the SAP Business One Service Layer
 public type JournalEntryDocumentType record {|
+    # Document type description field
     @jsondata:Name {value: "DocTypeDescription"}
     string docTypeDescription?;
+    # Journal entries field
     @jsondata:Name {value: "JournalEntries"}
     JournalEntry[] journalEntries?;
+    # Short name field
     @jsondata:Name {value: "ShortName"}
     string shortName?;
+    # Journal entry type field
     @jsondata:Name {value: "JournalEntryType"}
     string journalEntryType?;
 |};
@@ -403,48 +462,79 @@ public type GetWTaxTypeCodesQueries record {
 
 # A paged collection of `RecurringTransactionTemplates` entities returned by the SAP Business One Service Layer
 public type RecurringTransactionTemplatesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     RecurringTransactionTemplate[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `DeductionTaxHierarchies` entities returned by the SAP Business One Service Layer
 public type DeductionTaxHierarchiesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeductionTaxHierarchy[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `Budget` entity of the SAP Business One Service Layer
 public type Budget record {
+    # Future annual expenses credit sys field
     decimal FutureAnnualExpensesCreditSys?;
+    # Future annual expenses credit loc field
     decimal FutureAnnualExpensesCreditLoc?;
+    # Future annual expenses debit sys field
     decimal FutureAnnualExpensesDebitSys?;
+    # Future annual expenses debit loc field
     decimal FutureAnnualExpensesDebitLoc?;
+    # Future annual revenues credit field
     decimal FutureAnnualRevenuesCredit?;
+    # Future annual revenues debit field
     decimal FutureAnnualRevenuesDebit?;
+    # Future revenues debit sys field
     decimal FutureRevenuesDebitSys?;
+    # Future revenues debit loc field
     decimal FutureRevenuesDebitLoc?;
+    # Parent acc percent field
     decimal ParentAccPercent?;
+    # Startof fiscal year field
     string StartofFiscalYear?;
+    # Parent account key field
     string ParentAccountKey?;
+    # Total annual budget debit sys field
     decimal TotalAnnualBudgetDebitSys?;
+    # Budget balance debit sys field
     decimal BudgetBalanceDebitSys?;
+    # Budget balance debit loc field
     decimal BudgetBalanceDebitLoc?;
+    # Total annual budget debit loc field
     decimal TotalAnnualBudgetDebitLoc?;
+    # Total annual budget credit sys field
     decimal TotalAnnualBudgetCreditSys?;
+    # Total annual budget credit loc field
     decimal TotalAnnualBudgetCreditLoc?;
+    # Budget balance credit sys field
     decimal BudgetBalanceCreditSys?;
+    # Budget balance credit loc field
     decimal BudgetBalanceCreditLoc?;
+    # Division code field
     int:Signed32 DivisionCode?;
+    # Account code field
     string AccountCode?;
+    # Numerator field
     int:Signed32 Numerator?;
+    # Budget scenario field
     int:Signed32 BudgetScenario?;
+    # Budget lines field
     BudgetLine[] BudgetLines?;
+    # Budget cost accounting lines field
     BudgetCostAccountingLine[] BudgetCostAccountingLines?;
     # The `BudgetDistribution` entity of the SAP Business One Service Layer
     BudgetDistribution BudgetDistribution?;
@@ -479,9 +569,12 @@ public type ListDimensionsQueries record {
 
 # A paged collection of `SalesTaxAuthoritiesTypes` entities returned by the SAP Business One Service Layer
 public type SalesTaxAuthoritiesTypesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     SalesTaxAuthoritiesType[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -513,81 +606,143 @@ public type ListDeterminationCriteriasQueries record {
 
 # A paged collection of `TaxExemptReasons` entities returned by the SAP Business One Service Layer
 public type TaxExemptReasonsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxExemptReason[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `SpecificWTHAmounts` entity of the SAP Business One Service Layer
 public type SpecificWTHAmounts record {
+    # Payment reason code field
     string PaymentReasonCode?;
+    # Card code field
     string CardCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CUSplit?;
+    # Full wtax taxation in advance field
     decimal FullWtaxTaxationInAdvance?;
+    # W tax amount on hold field
     decimal WTaxAmountOnHold?;
+    # Regional IRPEF held as w tax field
     decimal RegionalIRPEFHeldAsWTax?;
+    # Regional IRPEF in advance field
     decimal RegionalIRPEFInAdvance?;
+    # Regional suspended tax IRPEF field
     decimal RegionalSuspendedTaxIRPEF?;
+    # Municipal tax as w tax IRPEF field
     decimal MunicipalTaxAsWTaxIRPEF?;
+    # Municipal tax held as advance field
     decimal MunicipalTaxHeldAsAdvance?;
+    # Suspended municipal tax field
     decimal SuspendedMunicipalTax?;
+    # Taxable amount previous year field
     decimal TaxableAmtPreviousYear?;
+    # W tax amount previous year field
     decimal WTaxAmountPreviousYear?;
+    # Expenses reimbursed field
     decimal ExpensesReimbursed?;
+    # W tax reimbursed field
     decimal WTaxReimbursed?;
+    # Returned amount after deduction of w tax field
     decimal ReturnedAmountAfterDeductionOfWTax?;
+    # Delivery identification number field
     string DeliveryIdentificationNo?;
+    # Single certification number field
     string SingleCertificationNo?;
+    # Earning year field
     int:Signed32 EarningYear?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Advanced?;
+    # W tax type code field
     string WTaxTypeCode?;
+    # Social security fiscal c field
     string SocialSecurityFiscalC?;
+    # Social security institut field
     string SocialSecurityInstitut?;
+    # Company code field
     string CompanyCode?;
     # OData EnumType 'BoOSWACategoryEnum'. Serialised by the Service Layer as the member name
     BoOSWACategoryEnum Category?;
+    # Employee social security field
     decimal EmployeeSocialSecurity?;
+    # Employer social security field
     decimal EmployerSocialSecurity?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum OtherContributions?;
+    # Value of other contribut field
     decimal ValueOfOtherContribut?;
+    # Other amounts due field
     decimal OtherAmountsDue?;
+    # Other amounts paid field
     decimal OtherAmountsPaid?;
+    # Amount paid before bankr field
     decimal AmountPaidBeforeBankr?;
+    # Amount paid by trustee field
     decimal AmountPaidByTrustee?;
+    # Fiscal code field
     string FiscalCode?;
+    # Taxable amount field
     decimal TaxableAmount?;
+    # Tax amount field
     decimal TaxAmount?;
+    # Tax amount in advance field
     decimal TaxAmountInAdvance?;
+    # Suspended WTH tax field
     decimal SuspendedWTHTax?;
+    # Additional regional tax57 field
     decimal AdditionalRegionalTax57?;
+    # Additional regional tax58 field
     decimal AdditionalRegionalTax58?;
+    # Suspended regional tax field
     decimal SuspendedRegionalTax?;
+    # Additional citytax to I60 field
     decimal AdditionalCitytaxToI60?;
+    # Additional city tax to i field
     decimal AdditionalCityTaxToI?;
+    # Suspended city tax field
     decimal SuspendedCityTax?;
+    # Fiscal code third party71 field
     string FiscalCodeThirdParty71?;
+    # Fiscal code third party72 field
     string FiscalCodeThirdParty72?;
+    # Fiscal code expropriation field
     string FiscalCodeExpropriation?;
+    # Fiscal code of main deb101 field
     string FiscalCodeOfMainDeb101?;
+    # Amount paid102 field
     decimal AmountPaid102?;
+    # Amounts provided and no104 field
     decimal AmountsProvidedAndNo104?;
+    # WHT applied103 field
     decimal WHTApplied103?;
+    # Fiscal code of main deb105 field
     string FiscalCodeOfMainDeb105?;
+    # Amount paid106 field
     decimal AmountPaid106?;
+    # Amounts provided and no108 field
     decimal AmountsProvidedAndNo108?;
+    # WHT applied107 field
     decimal WHTApplied107?;
+    # Amount paid131 field
     decimal AmountPaid131?;
+    # Tax applied132 field
     decimal TaxApplied132?;
+    # Amount paid133 field
     decimal AmountPaid133?;
+    # Tax applied134 field
     decimal TaxApplied134?;
+    # Amount paid135 field
     decimal AmountPaid135?;
+    # Tax applied136 field
     decimal TaxApplied136?;
+    # Amount paid137 field
     decimal AmountPaid137?;
+    # Tax applied138 field
     decimal TaxApplied138?;
     # The `WTaxTypeCode` entity of the SAP Business One Service Layer
     WTaxTypeCode WTaxTypeCode2?;
@@ -661,24 +816,37 @@ public type ListSalesTaxAuthoritiesTypesQueries record {
 
 # The `DeductionTaxHierarchy` entity of the SAP Business One Service Layer
 public type DeductionTaxHierarchy record {
+    # Abs entry field
     int:Signed32 AbsEntry?;
+    # Business partner code field
     string BPCode?;
+    # Hierarchy code field
     string HierarchyCode?;
+    # Hierarchy name field
     string HierarchyName?;
+    # Valid from field
     string ValidFrom?;
+    # Valid until field
     string ValidUntil?;
+    # Deduction percent field
     decimal DeductionPercent?;
+    # Maximum total field
     decimal MaximumTotal?;
+    # Last updated field
     string LastUpdated?;
+    # Deduction tax hierarchies lines field
     DeductionTaxHierarchiesLine[] DeductionTaxHierarchies_Lines?;
 };
 
 # The `TaxCodeDeterminationTCDDefaultWT` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDDefaultWT record {|
+    # Type field
     @jsondata:Name {value: "Type"}
     TaxCodeDeterminationTCDDefaultWTTypeEnum 'type?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
+    # W t code field
     @jsondata:Name {value: "WTCode"}
     string wTCode?;
 |};
@@ -688,21 +856,37 @@ public type RoundingTypeEnum "rt_TruncatedAU"|"rt_CommercialValues"|"rt_NoRoundi
 
 # The `BudgetDistribution` entity of the SAP Business One Service Layer
 public type BudgetDistribution record {
+    # September field
     decimal September?;
+    # August field
     decimal August?;
+    # July field
     decimal July?;
+    # June field
     decimal June?;
+    # May field
     decimal May?;
+    # April field
     decimal April?;
+    # March field
     decimal March?;
+    # February field
     decimal February?;
+    # December field
     decimal December?;
+    # November field
     decimal November?;
+    # October field
     decimal October?;
+    # January field
     decimal January?;
+    # Budget amount field
     decimal BudgetAmount?;
+    # Description field
     string Description?;
+    # Division code field
     int:Signed32 DivisionCode?;
+    # Budgets field
     Budget[] Budgets?;
 };
 
@@ -722,11 +906,15 @@ public type SalesTaxCode record {
     BoYesNoEnum ValidForAR?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ValidForAP?;
+    # User signature field
     int:Signed32 UserSignature?;
+    # Rate field
     decimal Rate?;
+    # Name field
     string Name?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Freight?;
+    # Code field
     string Code?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsItemLevel?;
@@ -734,23 +922,31 @@ public type SalesTaxCode record {
     BoYesNoEnum Inactive?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FADebit?;
+    # Type formula comb ID field
     int:Signed32 TypeFormulaCombId?;
+    # CFOP in field
     string CFOPIn?;
+    # CFOP out field
     string CFOPOut?;
+    # Sales tax codes lines field
     SalesTaxCodesLine[] SalesTaxCodes_Lines?;
 };
 
 # A paged collection of `Budgets` entities returned by the SAP Business One Service Layer
 public type BudgetsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     Budget[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `DeterminationCriteriaParams` complex type of the SAP Business One Service Layer
 public type DeterminationCriteriaParams record {|
+    # Dmc ID field
     @jsondata:Name {value: "DmcId"}
     int:Signed32 dmcId?;
 |};
@@ -794,9 +990,12 @@ public type ListGLAccountAdvancedRulesHeaders record {
 
 # A paged collection of `CostElements` entities returned by the SAP Business One Service Layer
 public type CostElementsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CostElement[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -813,27 +1012,36 @@ public type GetDeterminationCriteriasQueries record {
 
 # Represents the request payload for the `JournalEntriesService_Close` operation of the SAP Business One Service Layer
 public type JournalEntriesService_Close_body record {
+    # Journal entry field
     @jsondata:Name {value: "JournalEntry"}
     JournalEntry journalEntry?;
 };
 
 # The `CostCenterType` entity of the SAP Business One Service Layer
 public type CostCenterType record {
+    # Cost center type code field
     string CostCenterTypeCode?;
+    # Cost center type name field
     string CostCenterTypeName?;
+    # Profit centers field
     ProfitCenter[] ProfitCenters?;
 };
 
 # The `DeductibleTax` entity of the SAP Business One Service Layer
 public type DeductibleTax record {|
+    # Category field
     @jsondata:Name {value: "Category"}
     BoVatCategoryEnum category?;
+    # Inactive field
     @jsondata:Name {value: "Inactive"}
     BoYesNoEnum inactive?;
+    # Deductible tax rate field
     @jsondata:Name {value: "DeductibleTaxRate"}
     decimal deductibleTaxRate?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
@@ -847,18 +1055,25 @@ public type ListAccrualTypesHeaders record {
 
 # The `TaxCodeDeterminationTCD` entity of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCD record {|
+    # Tax code determination TCD default w ts field
     @jsondata:Name {value: "TaxCodeDeterminationTCDDefaultWTs"}
     TaxCodeDeterminationTCDDefaultWT[] taxCodeDeterminationTCDDefaultWTs?;
+    # Dft accounts payable code field
     @jsondata:Name {value: "DftApCode"}
     string dftApCode?;
+    # Dft accounts receivable code field
     @jsondata:Name {value: "DftArCode"}
     string dftArCode?;
+    # Tax code determination TCD by usages field
     @jsondata:Name {value: "TaxCodeDeterminationTCDByUsages"}
     TaxCodeDeterminationTCDByUsage[] taxCodeDeterminationTCDByUsages?;
+    # Tcd type field
     @jsondata:Name {value: "TcdType"}
     TaxCodeDeterminationTCDTypeEnum tcdType?;
+    # Tax code determination TCD key fields field
     @jsondata:Name {value: "TaxCodeDeterminationTCDKeyFields"}
     TaxCodeDeterminationTCDKeyField[] taxCodeDeterminationTCDKeyFields?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
@@ -885,8 +1100,10 @@ public type GetAccountCategoryQueries record {
 
 # The `PostingTemplatesParams` complex type of the SAP Business One Service Layer
 public type PostingTemplatesParams record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -950,92 +1167,146 @@ public type ListChartOfAccountsQueries record {
 
 # The `PostingTemplates` entity of the SAP Business One Service Layer
 public type PostingTemplates record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Stamp tax field
     @jsondata:Name {value: "StampTax"}
     BoYesNoEnum stampTax?;
+    # Automatic VAT field
     @jsondata:Name {value: "AutomaticVAT"}
     BoYesNoEnum automaticVAT?;
+    # Manage w tax field
     @jsondata:Name {value: "ManageWTax"}
     BoYesNoEnum manageWTax?;
+    # Posting templates line collection field
     @jsondata:Name {value: "PostingTemplatesLineCollection"}
     PostingTemplatesLine[] postingTemplatesLineCollection?;
+    # Deferred tax field
     @jsondata:Name {value: "DeferredTax"}
     BoYesNoEnum deferredTax?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `WithholdingTaxCode` entity of the SAP Business One Service Layer
 public type WithholdingTaxCode record {
+    # Withholding tax code field
     string WTCode?;
+    # Withholding tax name field
     string WTName?;
     # OData EnumType 'WithholdingTaxCodeCategoryEnum'. Serialised by the Service Layer as the member name
     WithholdingTaxCodeCategoryEnum Category?;
     # OData EnumType 'WithholdingTaxCodeBaseTypeEnum'. Serialised by the Service Layer as the member name
     WithholdingTaxCodeBaseTypeEnum BaseType?;
+    # Base amount field
     decimal BaseAmount?;
+    # Official code field
     string OfficialCode?;
+    # Account field
     string Account?;
     # OData EnumType 'WithholdingTypeEnum'. Serialised by the Service Layer as the member name
     WithholdingTypeEnum WithholdingType?;
     # OData EnumType 'RoundingTypeEnum'. Serialised by the Service Layer as the member name
     RoundingTypeEnum RoundingType?;
+    # Section field
     int:Signed32 Section?;
+    # Threshold field
     decimal Threshold?;
+    # Surcharge field
     decimal Surcharge?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Concessional?;
+    # Assessee field
     int:Signed32 Assessee?;
+    # APTDS account field
     string APTDSAccount?;
+    # Accounts payable surcharge account field
     string APSurchargeAccount?;
+    # Accounts payable cess account field
     string APCessAccount?;
+    # APHSC account field
     string APHSCAccount?;
+    # APIGST account field
     string APIGSTAccount?;
+    # APCGST account field
     string APCGSTAccount?;
+    # APSGST account field
     string APSGSTAccount?;
+    # APUTGST account field
     string APUTGSTAccount?;
+    # Accounts payable cess GST account field
     string APCessGSTAccount?;
+    # ARTDS account field
     string ARTDSAccount?;
+    # Accounts receivable surcharge account field
     string ARSurchargeAccount?;
+    # Accounts receivable cess account field
     string ARCessAccount?;
+    # ARHSC account field
     string ARHSCAccount?;
+    # ARIGST account field
     string ARIGSTAccount?;
+    # ARCGST account field
     string ARCGSTAccount?;
+    # ARSGST account field
     string ARSGSTAccount?;
+    # ARUTGST account field
     string ARUTGSTAccount?;
+    # Accounts receivable cess GST account field
     string ARCessGSTAccount?;
+    # ARTCS interim account field
     string ARTCSInterimAccount?;
+    # Accounts receivable surcharge interim account field
     string ARSurchargeInterimAccount?;
+    # Accounts receivable cess interim account field
     string ARCessInterimAccount?;
+    # ARHSC interim account field
     string ARHSCInterimAccount?;
+    # APTCS interim account field
     string APTCSInterimAccount?;
+    # Accounts payable surcharge interim account field
     string APSurchargeInterimAccount?;
+    # Accounts payable cess interim account field
     string APCessInterimAccount?;
+    # APHSC interim account field
     string APHSCInterimAccount?;
+    # Location field
     int:Signed32 Location?;
     # OData EnumType 'ReturnTypeEnum'. Serialised by the Service Layer as the member name
     ReturnTypeEnum ReturnType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactive?;
+    # CST code incoming ID field
     int:Signed32 CSTCodeIncomingID?;
+    # CST code outgoing ID field
     int:Signed32 CSTCodeOutgoingID?;
+    # Nature of calculation base code field
     string NatureOfCalculationBaseCode?;
+    # Type ID field
     int:Signed32 TypeID?;
+    # Rate field
     decimal Rate?;
+    # Effective from field
     string EffectiveFrom?;
+    # Minimum taxable amount field
     decimal MinimumTaxableAmount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsProgressiveTax?;
+    # Currency field
     string Currency?;
     # OData EnumType 'TdsTypeEnum'. Serialised by the Service Layer as the member name
     TdsTypeEnum TdsType?;
+    # Transacton threshold field
     decimal TransactonThreshold?;
+    # E books w tax category field
     int:Signed32 EBooksWTaxCategory?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum NonDeductThreshold?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseInAPDPR?;
+    # Withholding tax codes lines field
     WithholdingTaxCodesLine[] WithholdingTaxCodes_Lines?;
     # The `ChartOfAccount` entity of the SAP Business One Service Layer
     ChartOfAccount ChartOfAccount?;
@@ -1135,12 +1406,16 @@ public type VatGroupsTaxRegionEnum "vgtrPT"|"vgtrPT_AC"|"vgtrPT_MA";
 
 # The `DeterminationCriteria` entity of the SAP Business One Service Layer
 public type DeterminationCriteria record {|
+    # Dmc ID field
     @jsondata:Name {value: "DmcId"}
     int:Signed32 dmcId?;
+    # Is active field
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
+    # Priority field
     @jsondata:Name {value: "Priority"}
     int:Signed32 priority?;
+    # Determination criteria field
     @jsondata:Name {value: "DeterminationCriteria"}
     string determinationCriteria?;
 |};
@@ -1164,34 +1439,47 @@ public type GetForms1099Queries record {
 
 # A paged collection of `ProfitCenters` entities returned by the SAP Business One Service Layer
 public type ProfitCentersCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     ProfitCenter[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `SalesTaxAuthoritiesType` entity of the SAP Business One Service Layer
 public type SalesTaxAuthoritiesType record {
+    # User signature field
     int:Signed32 UserSignature?;
+    # Name field
     string Name?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum VAT?;
+    # Numerator field
     int:Signed32 Numerator?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxCreditControl?;
+    # Nf tax ID field
     int:Signed32 NfTaxId?;
+    # Tax param set ID field
     int:Signed32 TaxParamSetId?;
+    # Sales tax authorities field
     SalesTaxAuthority[] SalesTaxAuthorities?;
 };
 
 # The `DeductionTaxGroup` entity of the SAP Business One Service Layer
 public type DeductionTaxGroup record {
+    # Group key field
     int:Signed32 GroupKey?;
     # OData EnumType 'BoDeductionTaxGroupCodeEnum'. Serialised by the Service Layer as the member name
     BoDeductionTaxGroupCodeEnum GroupCode?;
+    # Group name field
     string GroupName?;
+    # Max redin field
     decimal MaxRedin?;
+    # Group extended code field
     string GroupExtendedCode?;
     # The `DeductionTaxSubGroup` entity of the SAP Business One Service Layer
     DeductionTaxSubGroup DeductionTaxSubGroup?;
@@ -1202,24 +1490,32 @@ public type BoDeductionTaxGroupCodeEnum "dtgcInterestReceivers"|"dtgcEmployeeRec
 
 # The `TaxExemptReason` entity of the SAP Business One Service Layer
 public type TaxExemptReason record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # VAT groups field
     @jsondata:Name {value: "VatGroups"}
     VatGroup[] vatGroups?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `TaxWebSite` entity of the SAP Business One Service Layer
 public type TaxWebSite record {|
+    # Tax invoice report field
     @jsondata:Name {value: "TaxInvoiceReport"}
     TaxInvoiceReport[] taxInvoiceReport?;
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Web site URL field
     @jsondata:Name {value: "WebSiteURL"}
     string webSiteURL?;
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Web site name field
     @jsondata:Name {value: "WebSiteName"}
     string webSiteName?;
 |};
@@ -1264,18 +1560,25 @@ public type GetSalesTaxAuthoritiesTypesQueries record {
 
 # The `FinancialYear` entity of the SAP Business One Service Layer
 public type FinancialYear record {|
+    # Start date field
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Assess year field
     @jsondata:Name {value: "AssessYear"}
     string assessYear?;
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # End date field
     @jsondata:Name {value: "EndDate"}
     string endDate?;
+    # T CS accumulation base field
     @jsondata:Name {value: "TCSAccumulationBase"}
     TCSAccumulationBaseEnum tCSAccumulationBase?;
 |};
@@ -1289,40 +1592,61 @@ public type ListSalesTaxCodesHeaders record {
 
 # The `SalesTaxCodes_Line` complex type of the SAP Business One Service Layer
 public type SalesTaxCodesLine record {
+    # STA tax on tax type field
     int:Signed32 STATaxOnTaxType?;
+    # STA taxon tax code field
     string STATaxonTaxCode?;
+    # STC code field
     string STCCode?;
+    # STA type field
     int:Signed32 STAType?;
+    # STA code field
     string STACode?;
+    # Row number field
     int:Signed32 RowNumber?;
+    # Effective rate field
     decimal EffectiveRate?;
+    # Formula ID field
     int:Signed32 FormulaId?;
+    # CST code in field
     string CSTCodeIn?;
+    # CST suffix field
     string CSTSuffix?;
 };
 
 # The `RecurringTransactionTemplate` entity of the SAP Business One Service Layer
 public type RecurringTransactionTemplate record {|
+    # Template code field
     @jsondata:Name {value: "TemplateCode"}
     string templateCode?;
+    # Start date field
     @jsondata:Name {value: "StartDate"}
     string startDate?;
+    # Document object type field
     @jsondata:Name {value: "DocumentObjectType"}
     DocumentObjectTypeEnum documentObjectType?;
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # Frequency field
     @jsondata:Name {value: "Frequency"}
     RecurringTransactionTemplateFrequencyEnum frequency?;
+    # Card code field
     @jsondata:Name {value: "CardCode"}
     string cardCode?;
+    # Draft entry field
     @jsondata:Name {value: "DraftEntry"}
     int:Signed32 draftEntry?;
+    # Remind field
     @jsondata:Name {value: "Remind"}
     RecurringTransactionTemplateRemindEnum remind?;
+    # Template description field
     @jsondata:Name {value: "TemplateDescription"}
     string templateDescription?;
+    # End date field
     @jsondata:Name {value: "EndDate"}
     string endDate?;
+    # Price update field
     @jsondata:Name {value: "PriceUpdate"}
     BoYesNoEnum priceUpdate?;
 |};
@@ -1409,59 +1733,86 @@ public type GetClosingDateProcedureQueries record {
 
 # A paged collection of `RecurringPostings` entities returned by the SAP Business One Service Layer
 public type RecurringPostingsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     RecurringPostings[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `AccountCategory` entities returned by the SAP Business One Service Layer
 public type AccountCategoryCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     AccountCategory[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `TaxCodeDeterminationTCDKeyFieldValuePeriod` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDKeyFieldValuePeriod record {|
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # Efct to field
     @jsondata:Name {value: "EfctTo"}
     string efctTo?;
+    # Tax code determination TCD key field value period by usages field
     @jsondata:Name {value: "TaxCodeDeterminationTCDKeyFieldValuePeriodByUsages"}
     TaxCodeDeterminationTCDKeyFieldValuePeriodByUsage[] taxCodeDeterminationTCDKeyFieldValuePeriodByUsages?;
+    # Efct from field
     @jsondata:Name {value: "EfctFrom"}
     string efctFrom?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
 
 # The `JournalEntry` entity of the SAP Business One Service Layer
 public type JournalEntry record {
+    # Reference date field
     string ReferenceDate?;
+    # Memo field
     string Memo?;
+    # Reference field
     string Reference?;
+    # Reference2 field
     string Reference2?;
+    # Transaction code field
     string TransactionCode?;
+    # Project code field
     string ProjectCode?;
+    # Tax date field
     string TaxDate?;
+    # Jdt number field
     int:Signed32 JdtNum?;
+    # Indicator field
     string Indicator?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum UseAutoStorno?;
+    # Storno date field
     string StornoDate?;
+    # VAT date field
     string VatDate?;
+    # Series field
     int:Signed32 Series?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum StampTax?;
+    # Due date field
     string DueDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AutoVAT?;
+    # Number field
     int:Signed32 Number?;
+    # Folio number field
     int:Signed32 FolioNumber?;
+    # Folio prefix string field
     string FolioPrefixString?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ReportEU?;
@@ -1469,28 +1820,41 @@ public type JournalEntry record {
     BoYesNoEnum Report347?;
     # OData EnumType 'PrintStatusEnum'. Serialised by the Service Layer as the member name
     PrintStatusEnum Printed?;
+    # Location code field
     int:Signed32 LocationCode?;
     # OData EnumType 'TransTypesEnum'. Serialised by the Service Layer as the member name
     TransTypesEnum OriginalJournal?;
+    # Original field
     int:Signed32 Original?;
+    # Base reference field
     string BaseReference?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BlockDunningLetter?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AutomaticWT?;
+    # Withholding tax sum field
     decimal WTSum?;
+    # Withholding tax sum system currency field
     decimal WTSumSC?;
+    # Withholding tax sum foreign currency field
     decimal WTSumFC?;
+    # Signature input message field
     string SignatureInputMessage?;
+    # Signature digest field
     string SignatureDigest?;
+    # Certification number field
     string CertificationNumber?;
+    # Private key version field
     int:Signed32 PrivateKeyVersion?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Corisptivi?;
+    # Reference3 field
     string Reference3?;
+    # Document type field
     string DocumentType?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DeferredTax?;
+    # Blanket agreement number field
     int:Signed32 BlanketAgreementNumber?;
     # OData EnumType 'OperationCodeTypeEnum'. Serialised by the Service Layer as the member name
     OperationCodeTypeEnum OperationCode?;
@@ -1498,29 +1862,43 @@ public type JournalEntry record {
     ResidenceNumberTypeEnum ResidenceNumberType?;
     # OData EnumType 'ECDPostingTypeEnum'. Serialised by the Service Layer as the member name
     ECDPostingTypeEnum ECDPostingType?;
+    # Exposed trans number field
     int:Signed32 ExposedTransNumber?;
+    # Point of issue code field
     string PointOfIssueCode?;
     # OData EnumType 'FolioLetterEnum'. Serialised by the Service Layer as the member name
     FolioLetterEnum Letter?;
+    # Folio number from field
     int:Signed32 FolioNumberFrom?;
+    # Folio number to field
     int:Signed32 FolioNumberTo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsCostCenterTransfer?;
+    # Reporting section control statement VAT field
     string ReportingSectionControlStatementVAT?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ExcludeFromTaxReportControlStatementVAT?;
+    # SAP passport field
     string SAPPassport?;
+    # Cig field
     int:Signed32 Cig?;
+    # Cup field
     int:Signed32 Cup?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AdjustTransaction?;
+    # Attachment entry field
     int:Signed32 AttachmentEntry?;
     # OData EnumType 'SAFTTransactionTypeEnum'. Serialised by the Service Layer as the member name
     SAFTTransactionTypeEnum SAFTTransactionType?;
+    # Allocation number IL field
     string AllocationNumberIL?;
+    # SAFT transaction type ex field
     string SAFTTransactionTypeEx?;
+    # Journal entry lines field
     JournalEntryLine[] JournalEntryLines?;
+    # Withholding tax data collection field
     WithholdingTaxData[] WithholdingTaxDataCollection?;
+    # Electronic protocols field
     ElectronicProtocol[] ElectronicProtocols?;
     # The `TransactionCode` entity of the SAP Business One Service Layer
     TransactionCode TransactionCode2?;
@@ -1586,26 +1964,47 @@ public type FolioLetterEnum "fLetterA"|"fLetterB"|"fLetterC"|"fLetterE"|"fLetter
 
 # The `BudgetLine` complex type of the SAP Business One Service Layer
 public type BudgetLine record {
+    # Precent of annual budget amount field
     decimal PrecentOfAnnualBudgetAmount?;
+    # Row details field
     string RowDetails?;
+    # Row number field
     int:Signed32 RowNumber?;
+    # Fut expen sys debit field
     decimal FutExpenSysDebit?;
+    # Fut expen debit field
     decimal FutExpenDebit?;
+    # Fut expen sys credit field
     decimal FutExpenSysCredit?;
+    # Fut expen credit field
     decimal FutExpenCredit?;
+    # Fut incomes sys credit field
     decimal FutIncomesSysCredit?;
+    # Fut incomes sys debit field
     decimal FutIncomesSysDebit?;
+    # Fut incomes credit field
     decimal FutIncomesCredit?;
+    # Budget sys tot debit field
     decimal BudgetSysTotDebit?;
+    # Bal sys tot debit field
     decimal BalSysTotDebit?;
+    # Bal tot debit field
     decimal BalTotDebit?;
+    # Budget tot credit field
     decimal BudgetTotCredit?;
+    # Budget sys tot credit field
     decimal BudgetSysTotCredit?;
+    # Budget tot debit field
     decimal BudgetTotDebit?;
+    # Bal sys tot credit field
     decimal BalSysTotCredit?;
+    # Bal tot credit field
     decimal BalTotCredit?;
+    # Budget key field
     int:Signed32 BudgetKey?;
+    # Account code field
     string AccountCode?;
+    # Future income deb field
     decimal FutureIncomeDeb?;
 };
 
@@ -1664,10 +2063,15 @@ public type BoFrequencyTypeEnum "ftDaily"|"ftWeekly"|"ftMonthly"|"ftQuarterly"|"
 
 # The `AccrualType` entity of the SAP Business One Service Layer
 public type AccrualType record {
+    # Code field
     string Code?;
+    # Name field
     string Name?;
+    # Posting account field
     string PostingAccount?;
+    # Calculation account field
     string CalculationAccount?;
+    # Interim account field
     string InterimAccount?;
     # The `ChartOfAccount` entity of the SAP Business One Service Layer
     ChartOfAccount ChartOfAccount?;
@@ -1675,34 +2079,46 @@ public type AccrualType record {
 
 # A paged collection of `PostingTemplates` entities returned by the SAP Business One Service Layer
 public type PostingTemplatesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     PostingTemplates[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `VatGroups` entities returned by the SAP Business One Service Layer
 public type VatGroupsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     VatGroup[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WithholdingTaxCodes_ValueRange_Line` complex type of the SAP Business One Service Layer
 public type WithholdingTaxCodesValueRangeLine record {
+    # Value from field
     decimal ValueFrom?;
+    # W tax to be deductible field
     decimal WTaxToBeDeductible?;
+    # Rate field
     decimal Rate?;
 };
 
 # A paged collection of `DeductionTaxGroups` entities returned by the SAP Business One Service Layer
 public type DeductionTaxGroupsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeductionTaxGroup[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -1749,16 +2165,22 @@ public type GetBudgetsQueries record {
 
 # The `TaxCodeDeterminationTCDByUsage` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDByUsage record {|
+    # Usage code field
     @jsondata:Name {value: "UsageCode"}
     int:Signed32 usageCode?;
+    # Type field
     @jsondata:Name {value: "Type"}
     TaxCodeDeterminationTCDByUsageTypeEnum 'type?;
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # Exp tax code field
     @jsondata:Name {value: "ExpTaxCode"}
     string expTaxCode?;
+    # Pur tax code field
     @jsondata:Name {value: "PurTaxCode"}
     string purTaxCode?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
@@ -1790,6 +2212,7 @@ public type ListCostCenterTypesQueries record {
 
 # The `TaxCodeDeterminationTCDParams` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDParams record {|
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
@@ -1848,8 +2271,10 @@ public type ListCurrenciesHeaders record {
 
 # Represents the response payload for the `DimensionsService_GetDimensionList` operation of the SAP Business One Service Layer
 public type inline_response_200_9 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DimensionParams[] value?;
 };
 
@@ -1858,29 +2283,37 @@ public type TdsTypeEnum "wtETds"|"wtGstTds"|"wtGstTcs"|"wtTcs";
 
 # Represents the response payload for the `CostElementService_GetCostElementList` operation of the SAP Business One Service Layer
 public type inline_response_200_5 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CostElementParams[] value?;
 };
 
 # Represents the response payload for the `DeductibleTaxService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_6 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeductibleTaxParams[] value?;
 };
 
 # Represents the response payload for the `DeductionTaxSubGroupsService_GetDeductionTaxSubGroupList` operation of the SAP Business One Service Layer
 public type inline_response_200_7 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeductionTaxSubGroupParams[] value?;
 };
 
 # Represents the response payload for the `DeterminationCriteriasService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_8 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeterminationCriteriaParams[] value?;
 };
 
@@ -1924,73 +2357,93 @@ public type GetCurrenciesQueries record {
 
 # Represents the response payload for the `AccrualTypesService_GetAccrualTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_1 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     AccrualTypeParams[] value?;
 };
 
 # Represents the response payload for the `CashDiscountsService_GetCashDiscountList` operation of the SAP Business One Service Layer
 public type inline_response_200_2 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CashDiscountParams[] value?;
 };
 
 # The `TaxWebSiteParams` complex type of the SAP Business One Service Layer
 public type TaxWebSiteParams record {|
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Web site name field
     @jsondata:Name {value: "WebSiteName"}
     string webSiteName?;
 |};
 
 # Represents the response payload for the `CashFlowLineItemsService_GetCashFlowLineItemList` operation of the SAP Business One Service Layer
 public type inline_response_200_3 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CashFlowLineItemParams[] value?;
 };
 
 # Represents the response payload for the `CostCenterTypesService_GetCostCenterTypeList` operation of the SAP Business One Service Layer
 public type inline_response_200_4 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CostCenterTypeParams[] value?;
 };
 
 # The `CashFlowLineItemParams` complex type of the SAP Business One Service Layer
 public type CashFlowLineItemParams record {|
+    # Line item ID field
     @jsondata:Name {value: "LineItemID"}
     int:Signed32 lineItemID?;
+    # Line item name field
     @jsondata:Name {value: "LineItemName"}
     string lineItemName?;
 |};
 
 # Represents the response payload for the `FinancialYearsService_GetFinancialYearList` operation of the SAP Business One Service Layer
 public type inline_response_200_11 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     FinancialYearParams[] value?;
 };
 
 # Represents the response payload for the `DistributionRulesService_GetDistributionRuleList` operation of the SAP Business One Service Layer
 public type inline_response_200_10 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DistributionRuleParams[] value?;
 };
 
 # Represents the response payload for the `JournalEntryDocumentTypeService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_13 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     JournalEntryDocumentTypeParams[] value?;
 };
 
 # Represents the response payload for the `GLAccountAdvancedRulesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_12 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     GLAccountAdvancedRuleParams[] value?;
 };
 
@@ -2006,16 +2459,21 @@ public type GetSpecificWTHAmountsServiceQueries record {
 
 # Represents the response payload for the `RecurringTransactionService_GetAvailableRecurringTransactions` operation of the SAP Business One Service Layer
 public type inline_response_200_19 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     RclRecurringTransaction[] value?;
 };
 
 # A paged collection of `AccountSegmentations` entities returned by the SAP Business One Service Layer
 public type AccountSegmentationsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     AccountSegmentation[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2032,8 +2490,10 @@ public type GetRecurringPostingsQueries record {
 
 # Represents the response payload for the `RecurringTransactionService_ExecuteRecurringTransactions` operation of the SAP Business One Service Layer
 public type inline_response_200_18 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     RclRecurringTransaction[] value?;
 };
 
@@ -2049,37 +2509,49 @@ public type GetPostingTemplatesQueries record {
 
 # Represents the response payload for the `PostingTemplatesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_15 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     PostingTemplatesParams[] value?;
 };
 
 # The `WTDItem` complex type of the SAP Business One Service Layer
 public type WTDItem record {
+    # Item code field
     string ItemCode?;
+    # W tax code field
     string WTaxCode?;
+    # Effective date from field
     string EffectiveDateFrom?;
+    # Effective date to field
     string EffectiveDateTo?;
 };
 
 # Represents the response payload for the `NatureOfAssesseesService_GetNatureOfAssesseeList` operation of the SAP Business One Service Layer
 public type inline_response_200_14 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     NatureOfAssesseeParams[] value?;
 };
 
 # Represents the response payload for the `RecurringPostingsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_17 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     RecurringPostingsParams[] value?;
 };
 
 # Represents the response payload for the `ProfitCentersService_GetProfitCenterList` operation of the SAP Business One Service Layer
 public type inline_response_200_16 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     ProfitCenterParams[] value?;
 };
 
@@ -2110,44 +2582,64 @@ public type ListCurrenciesQueries record {
 
 # The `TaxCodeDeterminationTCDKeyField` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDKeyField record {|
+    # U DF table3 field
     @jsondata:Name {value: "UDFTable_3"}
     string uDFTable3?;
+    # Key fld4 field
     @jsondata:Name {value: "KeyFld_4"}
     int:Signed32 keyFld4?;
+    # U DF table2 field
     @jsondata:Name {value: "UDFTable_2"}
     string uDFTable2?;
+    # Key fld5 field
     @jsondata:Name {value: "KeyFld_5"}
     int:Signed32 keyFld5?;
+    # U DF table1 field
     @jsondata:Name {value: "UDFTable_1"}
     string uDFTable1?;
+    # Key fld1 field
     @jsondata:Name {value: "KeyFld_1"}
     int:Signed32 keyFld1?;
+    # Priority field
     @jsondata:Name {value: "Priority"}
     int:Signed32 priority?;
+    # Key fld2 field
     @jsondata:Name {value: "KeyFld_2"}
     int:Signed32 keyFld2?;
+    # U DF table5 field
     @jsondata:Name {value: "UDFTable_5"}
     string uDFTable5?;
+    # Key fld3 field
     @jsondata:Name {value: "KeyFld_3"}
     int:Signed32 keyFld3?;
+    # U DF table4 field
     @jsondata:Name {value: "UDFTable_4"}
     string uDFTable4?;
+    # Tax code determination TCD key field values field
     @jsondata:Name {value: "TaxCodeDeterminationTCDKeyFieldValues"}
     TaxCodeDeterminationTCDKeyFieldValue[] taxCodeDeterminationTCDKeyFieldValues?;
+    # Descr field
     @jsondata:Name {value: "Descr"}
     string descr?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
+    # Legal text field
     @jsondata:Name {value: "LegalText"}
     string legalText?;
+    # U DF alias1 field
     @jsondata:Name {value: "UDFAlias_1"}
     string uDFAlias1?;
+    # U DF alias2 field
     @jsondata:Name {value: "UDFAlias_2"}
     string uDFAlias2?;
+    # U DF alias3 field
     @jsondata:Name {value: "UDFAlias_3"}
     string uDFAlias3?;
+    # U DF alias4 field
     @jsondata:Name {value: "UDFAlias_4"}
     string uDFAlias4?;
+    # U DF alias5 field
     @jsondata:Name {value: "UDFAlias_5"}
     string uDFAlias5?;
 |};
@@ -2179,9 +2671,12 @@ public type ListBudgetsQueries record {
 
 # A paged collection of `SalesTaxAuthorities` entities returned by the SAP Business One Service Layer
 public type SalesTaxAuthoritiesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     SalesTaxAuthority[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2191,115 +2686,192 @@ public type GetGLAccountByEnum "gglab_General"|"gglab_Warehouse"|"gglab_ItemGrou
 
 # The `DistributionRule` entity of the SAP Business One Service Layer
 public type DistributionRule record {
+    # Factor code field
     string FactorCode?;
+    # Factor description field
     string FactorDescription?;
+    # Total factor field
     decimal TotalFactor?;
+    # Direct field
     string Direct?;
+    # In which dimension field
     int:Signed32 InWhichDimension?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Active?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsFixedAmount?;
+    # Distribution rule lines field
     DistributionRuleLine[] DistributionRuleLines?;
     # The `Dimension` entity of the SAP Business One Service Layer
     Dimension Dimension?;
+    # Chart of accounts field
     ChartOfAccount[] ChartOfAccounts?;
+    # Budget scenarios field
     BudgetScenario[] BudgetScenarios?;
 };
 
 # The `SpecificWTHAmountsParams` complex type of the SAP Business One Service Layer
 public type SpecificWTHAmountsParams record {
+    # Payment reason code field
     string PaymentReasonCode?;
+    # Card code field
     string CardCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CUSplit?;
+    # Full wtax taxation in advance field
     decimal FullWtaxTaxationInAdvance?;
+    # W tax amount on hold field
     decimal WTaxAmountOnHold?;
+    # Regional IRPEF held as w tax field
     decimal RegionalIRPEFHeldAsWTax?;
+    # Regional IRPEF in advance field
     decimal RegionalIRPEFInAdvance?;
+    # Regional suspended tax IRPEF field
     decimal RegionalSuspendedTaxIRPEF?;
+    # Municipal tax as w tax IRPEF field
     decimal MunicipalTaxAsWTaxIRPEF?;
+    # Municipal tax held as advance field
     decimal MunicipalTaxHeldAsAdvance?;
+    # Suspended municipal tax field
     decimal SuspendedMunicipalTax?;
+    # Taxable amount previous year field
     decimal TaxableAmtPreviousYear?;
+    # W tax amount previous year field
     decimal WTaxAmountPreviousYear?;
+    # Expenses reimbursed field
     decimal ExpensesReimbursed?;
+    # W tax reimbursed field
     decimal WTaxReimbursed?;
+    # Returned amount after deduction of w tax field
     decimal ReturnedAmountAfterDeductionOfWTax?;
+    # Delivery identification number field
     string DeliveryIdentificationNo?;
+    # Single certification number field
     string SingleCertificationNo?;
+    # Earning year field
     int:Signed32 EarningYear?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Advanced?;
+    # W tax type code field
     string WTaxTypeCode?;
+    # Social security fiscal c field
     string SocialSecurityFiscalC?;
+    # Social security institut field
     string SocialSecurityInstitut?;
+    # Company code field
     string CompanyCode?;
     # OData EnumType 'BoOSWACategoryEnum'. Serialised by the Service Layer as the member name
     BoOSWACategoryEnum Category?;
+    # Employee social security field
     decimal EmployeeSocialSecurity?;
+    # Employer social security field
     decimal EmployerSocialSecurity?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum OtherContributions?;
+    # Value of other contribut field
     decimal ValueOfOtherContribut?;
+    # Other amounts due field
     decimal OtherAmountsDue?;
+    # Other amounts paid field
     decimal OtherAmountsPaid?;
+    # Amount paid before bankr field
     decimal AmountPaidBeforeBankr?;
+    # Amount paid by trustee field
     decimal AmountPaidByTrustee?;
+    # Fiscal code field
     string FiscalCode?;
+    # Taxable amount field
     decimal TaxableAmount?;
+    # Tax amount field
     decimal TaxAmount?;
+    # Tax amount in advance field
     decimal TaxAmountInAdvance?;
+    # Suspended WTH tax field
     decimal SuspendedWTHTax?;
+    # Additional regional tax57 field
     decimal AdditionalRegionalTax57?;
+    # Additional regional tax58 field
     decimal AdditionalRegionalTax58?;
+    # Suspended regional tax field
     decimal SuspendedRegionalTax?;
+    # Additional citytax to I60 field
     decimal AdditionalCitytaxToI60?;
+    # Additional city tax to i field
     decimal AdditionalCityTaxToI?;
+    # Suspended city tax field
     decimal SuspendedCityTax?;
+    # Fiscal code third party71 field
     string FiscalCodeThirdParty71?;
+    # Fiscal code third party72 field
     string FiscalCodeThirdParty72?;
+    # Fiscal code expropriation field
     string FiscalCodeExpropriation?;
+    # Fiscal code of main deb101 field
     string FiscalCodeOfMainDeb101?;
+    # Amount paid102 field
     decimal AmountPaid102?;
+    # Amounts provided and no104 field
     decimal AmountsProvidedAndNo104?;
+    # WHT applied103 field
     decimal WHTApplied103?;
+    # Fiscal code of main deb105 field
     string FiscalCodeOfMainDeb105?;
+    # Amount paid106 field
     decimal AmountPaid106?;
+    # Amounts provided and no108 field
     decimal AmountsProvidedAndNo108?;
+    # WHT applied107 field
     decimal WHTApplied107?;
+    # Amount paid131 field
     decimal AmountPaid131?;
+    # Tax applied132 field
     decimal TaxApplied132?;
+    # Amount paid133 field
     decimal AmountPaid133?;
+    # Tax applied134 field
     decimal TaxApplied134?;
+    # Amount paid135 field
     decimal AmountPaid135?;
+    # Tax applied136 field
     decimal TaxApplied136?;
+    # Amount paid137 field
     decimal AmountPaid137?;
+    # Tax applied138 field
     decimal TaxApplied138?;
 };
 
 # The `TaxDefinition` complex type of the SAP Business One Service Layer
 public type TaxDefinition record {
+    # Effectivefrom field
     string Effectivefrom?;
+    # Rate field
     decimal Rate?;
 };
 
 # The `RecurringPostingsDocumentReference` complex type of the SAP Business One Service Layer
 public type RecurringPostingsDocumentReference record {|
+    # Referenced document entry field
     @jsondata:Name {value: "ReferencedDocEntry"}
     int:Signed32 referencedDocEntry?;
+    # Referenced object type field
     @jsondata:Name {value: "ReferencedObjectType"}
     ReferencedObjectTypeEnum referencedObjectType?;
+    # External referenced document number field
     @jsondata:Name {value: "ExternalReferencedDocNumber"}
     string externalReferencedDocNumber?;
+    # Issue date field
     @jsondata:Name {value: "IssueDate"}
     string issueDate?;
+    # Rcr code field
     @jsondata:Name {value: "RcrCode"}
     string rcrCode?;
+    # Referenced document number field
     @jsondata:Name {value: "ReferencedDocNumber"}
     int:Signed32 referencedDocNumber?;
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
+    # Remark field
     @jsondata:Name {value: "Remark"}
     string remark?;
 |};
@@ -2316,9 +2888,13 @@ public type AccountCategorySourceEnum "acsBalanceSheet"|"acsProfitAndLoss"|"acsT
 
 # The `AccountSegmentationCategory` entity of the SAP Business One Service Layer
 public type AccountSegmentationCategory record {
+    # Segment ID field
     int:Signed32 SegmentID?;
+    # Code field
     string Code?;
+    # Name field
     string Name?;
+    # Short name field
     string ShortName?;
     # The `AccountSegmentation` entity of the SAP Business One Service Layer
     AccountSegmentation AccountSegmentation?;
@@ -2336,9 +2912,13 @@ public type GetJournalEntryDocumentTypesQueries record {
 
 # The `VatGroups_Line` complex type of the SAP Business One Service Layer
 public type VatGroupsLine record {
+    # Effectivefrom field
     string Effectivefrom?;
+    # Rate field
     decimal Rate?;
+    # Equalization tax field
     decimal EqualizationTax?;
+    # Datev code field
     int:Signed32 DatevCode?;
 };
 
@@ -2350,32 +2930,43 @@ public type TaxInvoiceReportLineTypeEnum "LineOfBusinessPlace"|"LineOfBusinessPa
 
 # A paged collection of `CostCenterTypes` entities returned by the SAP Business One Service Layer
 public type CostCenterTypesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CostCenterType[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `NatureOfAssessee` entity of the SAP Business One Service Layer
 public type NatureOfAssessee record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Withholding tax codes field
     @jsondata:Name {value: "WithholdingTaxCodes"}
     WithholdingTaxCode[] withholdingTaxCodes?;
+    # Assessee type field
     @jsondata:Name {value: "AssesseeType"}
     AssesseeTypeEnum assesseeType?;
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # A paged collection of `DeterminationCriterias` entities returned by the SAP Business One Service Layer
 public type DeterminationCriteriasCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeterminationCriteria[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2392,30 +2983,39 @@ public type GetFinancialYearsQueries record {
 
 # The `DeductibleTaxParams` complex type of the SAP Business One Service Layer
 public type DeductibleTaxParams record {|
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `RclRecurringExecutionParams` complex type of the SAP Business One Service Layer
 public type RclRecurringExecutionParams record {|
+    # On error field
     @jsondata:Name {value: "OnError"}
     RclRecurringExecutionHandlingEnum onError?;
 |};
 
 # The `CashFlowLineItem` entity of the SAP Business One Service Layer
 public type CashFlowLineItem record {|
+    # Parent article field
     @jsondata:Name {value: "ParentArticle"}
     int:Signed32 parentArticle?;
+    # Level field
     @jsondata:Name {value: "Level"}
     int:Signed32 level?;
+    # Line item ID field
     @jsondata:Name {value: "LineItemID"}
     int:Signed32 lineItemID?;
+    # Drawer field
     @jsondata:Name {value: "Drawer"}
     int:Signed32 drawer?;
+    # Line item name field
     @jsondata:Name {value: "LineItemName"}
     string lineItemName?;
+    # Active line item field
     @jsondata:Name {value: "ActiveLineItem"}
     BoYesNoEnum activeLineItem?;
 |};
@@ -2439,37 +3039,55 @@ public type ListTransactionCodesHeaders record {
 
 # A paged collection of `BudgetScenarios` entities returned by the SAP Business One Service Layer
 public type BudgetScenariosCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     BudgetScenario[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `JournalEntries` entities returned by the SAP Business One Service Layer
 public type JournalEntriesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     JournalEntry[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `BudgetScenario` entity of the SAP Business One Service Layer
 public type BudgetScenario record {
+    # Name field
     string Name?;
+    # Initial ratio percentage field
     decimal InitialRatioPercentage?;
+    # Startof fiscal year field
     string StartofFiscalYear?;
+    # Basic budget field
     int:Signed32 BasicBudget?;
+    # Numerator field
     int:Signed32 Numerator?;
     # OData EnumType 'BoRoundingMethod'. Serialised by the Service Layer as the member name
     BoRoundingMethod RoundingMethod?;
+    # Project field
     string Project?;
+    # Distribution rule field
     string DistributionRule?;
+    # Distribution rule2 field
     string DistributionRule2?;
+    # Distribution rule3 field
     string DistributionRule3?;
+    # Distribution rule4 field
     string DistributionRule4?;
+    # Distribution rule5 field
     string DistributionRule5?;
+    # Budgets field
     Budget[] Budgets?;
     # The `DistributionRule` entity of the SAP Business One Service Layer
     DistributionRule DistributionRule6?;
@@ -2502,25 +3120,45 @@ public type ListTransactionCodesQueries record {
 
 # The `WithholdingTaxCodes_Line` complex type of the SAP Business One Service Layer
 public type WithholdingTaxCodesLine record {
+    # Effectivefrom field
     string Effectivefrom?;
+    # Rate field
     decimal Rate?;
+    # TDS rate field
     decimal TDSRate?;
+    # Surcharge rate field
     decimal SurchargeRate?;
+    # Cess rate field
     decimal CessRate?;
+    # HSC rate field
     decimal HSCRate?;
+    # IGST rate field
     decimal IGSTRate?;
+    # CGST rate field
     decimal CGSTRate?;
+    # SGST rate field
     decimal SGSTRate?;
+    # UTGST rate field
     decimal UTGSTRate?;
+    # Cess GST rate field
     decimal CessGSTRate?;
+    # Line number field
     int:Signed32 LineNum?;
+    # Uo m entry field
     int:Signed32 UoMEntry?;
+    # Uo m code field
     string UoMCode?;
+    # Fixed amount field
     decimal FixedAmount?;
+    # Currency field
     string Currency?;
+    # ITR non compliant rate field
     decimal ITRNonCompliantRate?;
+    # PAN non compliant rate field
     decimal PANNonCompliantRate?;
+    # Progressive tax lines field
     ProgressiveTaxLine[] ProgressiveTax_Lines?;
+    # Withholding tax codes value range lines field
     WithholdingTaxCodesValueRangeLine[] WithholdingTaxCodes_ValueRange_Lines?;
 };
 
@@ -2529,40 +3167,58 @@ public type DocumentObjectTypeEnum "dc_ArInvoice"|"dc_Delivery"|"dc_GoodsReturn"
 
 # The `TaxInvoiceReportLine` complex type of the SAP Business One Service Layer
 public type TaxInvoiceReportLine record {|
+    # Tax invoice report number field
     @jsondata:Name {value: "TaxInvoiceReportNumber"}
     string taxInvoiceReportNumber?;
+    # Legacy field
     @jsondata:Name {value: "Legacy"}
     string legacy?;
+    # Item price field
     @jsondata:Name {value: "ItemPrice"}
     decimal itemPrice?;
+    # Document type field
     @jsondata:Name {value: "DocumentType"}
     int:Signed32 documentType?;
+    # Item description field
     @jsondata:Name {value: "ItemDescription"}
     string itemDescription?;
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
+    # Base amount field
     @jsondata:Name {value: "BaseAmount"}
     decimal baseAmount?;
+    # Business place field
     @jsondata:Name {value: "BusinessPlace"}
     int:Signed32 businessPlace?;
+    # Tax amount field
     @jsondata:Name {value: "TaxAmount"}
     decimal taxAmount?;
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # B p name field
     @jsondata:Name {value: "BPName"}
     string bPName?;
+    # Item quantity field
     @jsondata:Name {value: "ItemQuantity"}
     decimal itemQuantity?;
+    # Item number field
     @jsondata:Name {value: "ItemNo"}
     string itemNo?;
+    # Currency field
     @jsondata:Name {value: "Currency"}
     string currency?;
+    # Document entry field
     @jsondata:Name {value: "DocumentEntry"}
     int:Signed32 documentEntry?;
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
+    # Line type field
     @jsondata:Name {value: "LineType"}
     TaxInvoiceReportLineTypeEnum lineType?;
+    # Document date field
     @jsondata:Name {value: "DocumentDate"}
     string documentDate?;
 |};
@@ -2579,25 +3235,37 @@ public type GetAccountSegmentationCategoriesQueries record {
 
 # The `VatGroup` entity of the SAP Business One Service Layer
 public type VatGroup record {
+    # Code field
     string Code?;
+    # Name field
     string Name?;
     # OData EnumType 'BoVatCategoryEnum'. Serialised by the Service Layer as the member name
     BoVatCategoryEnum Category?;
+    # Tax account field
     string TaxAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EU?;
+    # Triangular deal field
     string TriangularDeal?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AcquisitionReverse?;
+    # Non deduct field
     decimal NonDeduct?;
+    # Acquisition tax field
     string AcquisitionTax?;
+    # Goods shipment field
     string GoodsShipment?;
+    # Non deduct acc field
     string NonDeductAcc?;
+    # Deferred tax acc field
     string DeferredTaxAcc?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Correction?;
+    # VAT correction field
     string VatCorrection?;
+    # Equalization tax account field
     string EqualizationTaxAccount?;
+    # Service supply field
     string ServiceSupply?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactive?;
@@ -2605,28 +3273,43 @@ public type VatGroup record {
     TaxTypeBlackListEnum TaxTypeBlackList?;
     # OData EnumType 'Report349CodeListEnum'. Serialised by the Service Layer as the member name
     Report349CodeListEnum Report349Code?;
+    # VAT in revenue account field
     string VATInRevenueAccount?;
+    # Down payment tax offset account field
     string DownPaymentTaxOffsetAccount?;
+    # Cash discount account field
     string CashDiscountAccount?;
+    # VAT deductible account field
     string VATDeductibleAccount?;
     # OData EnumType 'VatGroupsTaxRegionEnum'. Serialised by the Service Layer as the member name
     VatGroupsTaxRegionEnum TaxRegion?;
+    # Acquisition reverse corresponding tax code field
     string AcquisitionReverseCorrespondingTaxCode?;
+    # E books VAT category field
     int:Signed32 EBooksVatCategory?;
+    # Tax exemption reason field
     string TaxExemptionReason?;
     # OData EnumType 'SAFTTaxCodeEnum'. Serialised by the Service Layer as the member name
     SAFTTaxCodeEnum SAFTTaxCode?;
+    # E books VAT exemption cause field
     int:Signed32 EBooksVatExemptionCause?;
+    # E books VAT exp class type field
     int:Signed32 EBooksVatExpClassType?;
+    # E books VAT exp class category field
     int:Signed32 EBooksVatExpClassCategory?;
+    # SAFT tax code ex field
     string SAFTTaxCodeEx?;
+    # Group description field
     string GroupDescription?;
+    # VAT type field
     int:Signed32 VATType?;
+    # VAT groups lines field
     VatGroupsLine[] VatGroups_Lines?;
     # The `ChartOfAccount` entity of the SAP Business One Service Layer
     ChartOfAccount ChartOfAccount?;
     # The `TaxExemptReason` entity of the SAP Business One Service Layer
     TaxExemptReason TaxExemptReason?;
+    # General ledger account advanced rules field
     GLAccountAdvancedRule[] GLAccountAdvancedRules?;
 };
 
@@ -2635,26 +3318,40 @@ public type RclRecurringTransactionStatusEnum "rtsNotExecuted"|"rtsExecuted"|"rt
 
 # The `RecurringPostingsParams` complex type of the SAP Business One Service Layer
 public type RecurringPostingsParams record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Instance field
     @jsondata:Name {value: "Instance"}
     int:Signed32 instance?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `Currency` entity of the SAP Business One Service Layer
 public type Currency record {
+    # Code field
     string Code?;
+    # Name field
     string Name?;
+    # Documents code field
     string DocumentsCode?;
+    # International description field
     string InternationalDescription?;
+    # Hundredth name field
     string HundredthName?;
+    # English name field
     string EnglishName?;
+    # English hundredth name field
     string EnglishHundredthName?;
+    # Plural international description field
     string PluralInternationalDescription?;
+    # Plural hundredth name field
     string PluralHundredthName?;
+    # Plural english name field
     string PluralEnglishName?;
+    # Plural english hundredth name field
     string PluralEnglishHundredthName?;
     # OData EnumType 'CurrenciesDecimalsEnum'. Serialised by the Service Layer as the member name
     CurrenciesDecimalsEnum Decimals?;
@@ -2662,42 +3359,60 @@ public type Currency record {
     RoundingSysEnum Rounding?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RoundingInPayment?;
+    # Max incoming amount diff field
     decimal MaxIncomingAmtDiff?;
+    # Max outgoing amount diff field
     decimal MaxOutgoingAmtDiff?;
+    # Max incoming amount diff percent field
     decimal MaxIncomingAmtDiffPercent?;
+    # Max outgoing amount diff percent field
     decimal MaxOutgoingAmtDiffPercent?;
+    # Withholding tax codes field
     WithholdingTaxCode[] WithholdingTaxCodes?;
+    # Chart of accounts field
     ChartOfAccount[] ChartOfAccounts?;
 };
 
 # The `TransactionCode` entity of the SAP Business One Service Layer
 public type TransactionCode record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Journal entries field
     @jsondata:Name {value: "JournalEntries"}
     JournalEntry[] journalEntries?;
+    # Chart of accounts field
     @jsondata:Name {value: "ChartOfAccounts"}
     ChartOfAccount[] chartOfAccounts?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `AccountSegmentation` entity of the SAP Business One Service Layer
 public type AccountSegmentation record {
+    # Numerator field
     int:Signed32 Numerator?;
+    # Name field
     string Name?;
+    # Size field
     int:Signed32 Size?;
     # OData EnumType 'AccountSegmentationTypeEnum'. Serialised by the Service Layer as the member name
     AccountSegmentationTypeEnum Type?;
+    # Account segmentations categories field
     AccountSegmentationsCategory[] AccountSegmentationsCategories?;
+    # Account segmentation categories field
     AccountSegmentationCategory[] AccountSegmentationCategories?;
 };
 
 # A paged collection of `TaxInvoiceReport` entities returned by the SAP Business One Service Layer
 public type TaxInvoiceReportCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxInvoiceReport[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2781,44 +3496,56 @@ public type ListBudgetsHeaders record {
 
 # The `CostElementParams` complex type of the SAP Business One Service Layer
 public type CostElementParams record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # Represents the response payload for the `TaxCodeDeterminationsService_GetTaxCodeDeterminationList` operation of the SAP Business One Service Layer
 public type inline_response_200_22 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxCodeDeterminationParams[] value?;
 };
 
 # Represents the response payload for the `SpecificWTHAmountsService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_21 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     SpecificWTHAmountsParams[] value?;
 };
 
 # Represents the response payload for the `TaxExemptReasonService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_24 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxExemptReasonParams[] value?;
 };
 
 # Represents the response payload for the `TaxCodeDeterminationsTCDService_GetTaxCodeDeterminationTCDList` operation of the SAP Business One Service Layer
 public type inline_response_200_23 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxCodeDeterminationTCDParams[] value?;
 };
 
 # Represents the response payload for the `RecurringTransactionTemplatesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_20 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     RecurringTransactionTemplateParams[] value?;
 };
 
@@ -2844,36 +3571,46 @@ public type GetDeductibleTaxesQueries record {
 
 # Represents the response payload for the `TransactionCodesService_GetList` operation of the SAP Business One Service Layer
 public type inline_response_200_26 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TransactionCodeParams[] value?;
 };
 
 # Represents the response payload for the `TaxWebSitesService_GetTaxWebSiteList` operation of the SAP Business One Service Layer
 public type inline_response_200_25 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxWebSiteParams[] value?;
 };
 
 # Represents the response payload for the `WTaxTypeCodeService_GetWTaxTypeCodeList` operation of the SAP Business One Service Layer
 public type inline_response_200_27 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     WTaxTypeCodeParams[] value?;
 };
 
 # A paged collection of `AccrualTypes` entities returned by the SAP Business One Service Layer
 public type AccrualTypesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     AccrualType[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `RecurringTransactionTemplateParams` complex type of the SAP Business One Service Layer
 public type RecurringTransactionTemplateParams record {|
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
 |};
@@ -2925,9 +3662,12 @@ public type BoRoundingMethod "borm_FixedEnding"|"borm_FixedInterval"|"borm_NoRou
 
 # A paged collection of `AccountSegmentationCategories` entities returned by the SAP Business One Service Layer
 public type AccountSegmentationCategoriesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     AccountSegmentationCategory[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -2944,8 +3684,11 @@ public type GetTaxInvoiceReportQueries record {
 
 # The `Forms1099` entity of the SAP Business One Service Layer
 public type Forms1099 record {
+    # Form code field
     int:Signed32 FormCode?;
+    # Form1099 field
     string Form1099?;
+    # Boxes1099 field
     Boxes1099Item[] Boxes1099?;
 };
 
@@ -2968,24 +3711,33 @@ public type GetBudgetScenariosQueries record {
 
 # The `ProgressiveTax_Line` complex type of the SAP Business One Service Layer
 public type ProgressiveTaxLine record {
+    # Tax rate field
     decimal TaxRate?;
+    # Min amount field
     decimal MinAmount?;
+    # Max amount field
     decimal MaxAmount?;
 };
 
 # The `ProfitCenterParams` complex type of the SAP Business One Service Layer
 public type ProfitCenterParams record {|
+    # Center name field
     @jsondata:Name {value: "CenterName"}
     string centerName?;
+    # Center code field
     @jsondata:Name {value: "CenterCode"}
     string centerCode?;
 |};
 
 # The `WTDFreight` complex type of the SAP Business One Service Layer
 public type WTDFreight record {
+    # Freight code field
     int:Signed32 FreightCode?;
+    # W tax code field
     string WTaxCode?;
+    # Effective date from field
     string EffectiveDateFrom?;
+    # Effective date to field
     string EffectiveDateTo?;
 };
 
@@ -3036,9 +3788,12 @@ public type BoOSWACategoryEnum "boswaMCAPrimaria"|"boswaPDLScelta"|"boswaMSEster
 
 # A paged collection of `TaxReplStateSubs` entities returned by the SAP Business One Service Layer
 public type TaxReplStateSubsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxReplStateSubData[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3105,6 +3860,7 @@ public type ListProfitCentersQueries record {
 
 # Represents the request payload for the `JournalVouchersService_Add` operation of the SAP Business One Service Layer
 public type JournalVouchersService_Add_body record {
+    # Journal voucher field
     @jsondata:Name {value: "JournalVoucher"}
     JournalEntry[] journalVoucher?;
 };
@@ -3142,63 +3898,98 @@ public type CurrenciesDecimalsEnum "cd1Digit"|"cd2Digits"|"cd3Digits"|"cd4Digits
 
 # The `DiscountLine` complex type of the SAP Business One Service Layer
 public type DiscountLine record {|
+    # Month field
     @jsondata:Name {value: "Month"}
     int:Signed32 month?;
+    # Number of days field
     @jsondata:Name {value: "NumOfDays"}
     int:Signed32 numOfDays?;
+    # Discount field
     @jsondata:Name {value: "Discount"}
     decimal discount?;
+    # Line ID field
     @jsondata:Name {value: "LineId"}
     int:Signed32 lineId?;
+    # Discount code field
     @jsondata:Name {value: "DiscountCode"}
     string discountCode?;
+    # Day field
     @jsondata:Name {value: "Day"}
     int:Signed32 day?;
 |};
 
 # The `DimensionParams` complex type of the SAP Business One Service Layer
 public type DimensionParams record {|
+    # Dimension code field
     @jsondata:Name {value: "DimensionCode"}
     int:Signed32 dimensionCode?;
+    # Dimension name field
     @jsondata:Name {value: "DimensionName"}
     string dimensionName?;
 |};
 
 # The `WithholdingTaxData` complex type of the SAP Business One Service Layer
 public type WithholdingTaxData record {
+    # Withholding tax code field
     string WTCode?;
+    # Withholding tax amount sys field
     decimal WTAmountSys?;
+    # Withholding tax amount foreign currency field
     decimal WTAmountFC?;
+    # Withholding tax amount field
     decimal WTAmount?;
+    # Withholding type field
     string WithholdingType?;
+    # Taxable amountin sys field
     decimal TaxableAmountinSys?;
+    # Taxable amount foreign currency field
     decimal TaxableAmountFC?;
+    # Taxable amount field
     decimal TaxableAmount?;
+    # Rounding type field
     string RoundingType?;
+    # Rate field
     decimal Rate?;
+    # Criteria field
     string Criteria?;
+    # Category field
     string Category?;
+    # Base type field
     string BaseType?;
+    # Applied withholding tax amount sys field
     decimal AppliedWTAmountSys?;
+    # Applied withholding tax amount foreign currency field
     decimal AppliedWTAmountFC?;
+    # Applied withholding tax amount field
     decimal AppliedWTAmount?;
+    # General ledger account field
     string GLAccount?;
+    # Line number field
     int:Signed32 LineNum?;
+    # Base document entry field
     int:Signed32 BaseDocEntry?;
+    # Base document line field
     int:Signed32 BaseDocLine?;
+    # Base document type field
     int:Signed32 BaseDocType?;
+    # Base document reference field
     int:Signed32 BaseDocumentReference?;
     # OData EnumType 'BoStatus'. Serialised by the Service Layer as the member name
     BoStatus Status?;
+    # Target abs entry field
     int:Signed32 TargetAbsEntry?;
+    # Target document type field
     int:Signed32 TargetDocumentType?;
 };
 
 # A paged collection of `CashFlowLineItems` entities returned by the SAP Business One Service Layer
 public type CashFlowLineItemsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CashFlowLineItem[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3238,25 +4029,34 @@ public type GetCostElementsQueries record {
 
 # The `OpenningBalanceAccount` complex type of the SAP Business One Service Layer
 public type OpenningBalanceAccount record {|
+    # Details field
     @jsondata:Name {value: "Details"}
     string details?;
+    # Open balance account field
     @jsondata:Name {value: "OpenBalanceAccount"}
     string openBalanceAccount?;
+    # Ref1 field
     @jsondata:Name {value: "Ref1"}
     string ref1?;
+    # Ref2 field
     @jsondata:Name {value: "Ref2"}
     string ref2?;
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
+    # B PLID field
     @jsondata:Name {value: "BPLID"}
     int:Signed32 bPLID?;
 |};
 
 # A paged collection of `JournalEntryDocumentTypes` entities returned by the SAP Business One Service Layer
 public type JournalEntryDocumentTypesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     JournalEntryDocumentType[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3291,18 +4091,24 @@ public type ListSpecificWTHAmountsServiceQueries record {
 
 # A paged collection of `TaxCodeDeterminations` entities returned by the SAP Business One Service Layer
 public type TaxCodeDeterminationsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxCodeDetermination[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `BudgetDistributions` entities returned by the SAP Business One Service Layer
 public type BudgetDistributionsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     BudgetDistribution[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3316,10 +4122,13 @@ public type ListWithholdingTaxCodesHeaders record {
 
 # The `JournalEntryDocumentTypeParams` complex type of the SAP Business One Service Layer
 public type JournalEntryDocumentTypeParams record {|
+    # Document type description field
     @jsondata:Name {value: "DocTypeDescription"}
     string docTypeDescription?;
+    # Short name field
     @jsondata:Name {value: "ShortName"}
     string shortName?;
+    # Journal entry type field
     @jsondata:Name {value: "JournalEntryType"}
     string journalEntryType?;
 |};
@@ -3339,39 +4148,53 @@ public type Report349CodeListEnum "r349cA"|"r349cE"|"r349cEmpty"|"r349cH"|"r349c
 
 # A paged collection of `DeductionTaxSubGroups` entities returned by the SAP Business One Service Layer
 public type DeductionTaxSubGroupsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeductionTaxSubGroup[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `CashDiscount` entity of the SAP Business One Service Layer
 public type CashDiscount record {|
+    # Tax field
     @jsondata:Name {value: "Tax"}
     BoYesNoEnum tax?;
+    # By date field
     @jsondata:Name {value: "ByDate"}
     BoYesNoEnum byDate?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # Discount lines field
     @jsondata:Name {value: "DiscountLines"}
     DiscountLine[] discountLines?;
+    # Freight field
     @jsondata:Name {value: "Freight"}
     BoYesNoEnum freight?;
+    # Name field
     @jsondata:Name {value: "Name"}
     string name?;
 |};
 
 # The `RelatedDocument` complex type of the SAP Business One Service Layer
 public type RelatedDocument record {|
+    # Abs enry field
     @jsondata:Name {value: "AbsEnry"}
     int:Signed32 absEnry?;
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # U UID field
     @jsondata:Name {value: "UUID"}
     string uUID?;
+    # Document tye field
     @jsondata:Name {value: "DocTye"}
     RelatedDocumentTypeEnum docTye?;
+    # Document type field
     @jsondata:Name {value: "DocType"}
     RelatedDocumentTypeEnum docType?;
 |};
@@ -3457,23 +4280,34 @@ public type ListBudgetScenariosQueries record {
 
 # The `CashFlowAssignment` complex type of the SAP Business One Service Layer
 public type CashFlowAssignment record {
+    # Cash flow assignments ID field
     int:Signed32 CashFlowAssignmentsID?;
+    # Cash flow line item ID field
     int:Signed32 CashFlowLineItemID?;
+    # Credit field
     decimal Credit?;
     # OData EnumType 'PaymentMeansTypeEnum'. Serialised by the Service Layer as the member name
     PaymentMeansTypeEnum PaymentMeans?;
+    # Check number field
     string CheckNumber?;
+    # Amount local currency field
     decimal AmountLC?;
+    # Amount foreign currency field
     decimal AmountFC?;
+    # JDT line ID field
     int:Signed32 JDTLineId?;
+    # JDT ID field
     int:Signed32 JDTId?;
 };
 
 # A paged collection of `WithholdingTaxCodes` entities returned by the SAP Business One Service Layer
 public type WithholdingTaxCodesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     WithholdingTaxCode[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3511,12 +4345,16 @@ public type BoBusinessAreaEnum "baSales"|"baPurchase"|"baSalesAndPurchase";
 
 # The `CostElement` entity of the SAP Business One Service Layer
 public type CostElement record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Chart of accounts field
     @jsondata:Name {value: "ChartOfAccounts"}
     ChartOfAccount[] chartOfAccounts?;
+    # Is active field
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -3548,18 +4386,24 @@ public type ListCashDiscountsQueries record {
 
 # A paged collection of `WTaxTypeCodes` entities returned by the SAP Business One Service Layer
 public type WTaxTypeCodesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     WTaxTypeCode[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `TaxWebSites` entities returned by the SAP Business One Service Layer
 public type TaxWebSitesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxWebSite[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3573,27 +4417,39 @@ public type ListCostCenterTypesHeaders record {
 
 # The `WTDCode` entity of the SAP Business One Service Layer
 public type WTDCode record {
+    # Abs entry field
     int:Signed32 AbsEntry?;
+    # W tax code field
     string WTaxCode?;
+    # W tax name field
     string WTaxName?;
+    # Formula ID field
     int:Signed32 FormulaID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Inactive?;
+    # Official code field
     string OfficialCode?;
     # OData EnumType 'WithholdingTaxCodeCategoryEnum'. Serialised by the Service Layer as the member name
     WithholdingTaxCodeCategoryEnum Category?;
     # OData EnumType 'WithholdingTaxCodeBaseTypeEnum'. Serialised by the Service Layer as the member name
     WithholdingTaxCodeBaseTypeEnum BaseType?;
+    # Type field
     int:Signed32 Type?;
+    # Min amount field
     decimal MinAmount?;
+    # Base amount prct field
     decimal BaseAmountPrct?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum SlidingScaleProgressiveTax?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CalculateInAutomaticCM?;
+    # WTD effective date collection field
     WTDEffectiveDate[] WTDEffectiveDateCollection?;
+    # WTDBP collection field
     WTDBP[] WTDBPCollection?;
+    # WTD item collection field
     WTDItem[] WTDItemCollection?;
+    # WTD freight collection field
     WTDFreight[] WTDFreightCollection?;
 };
 
@@ -3606,8 +4462,10 @@ public type ListProfitCentersHeaders record {
 
 # The `TaxReplStateSubData` entity of the SAP Business One Service Layer
 public type TaxReplStateSubData record {|
+    # State field
     @jsondata:Name {value: "State"}
     string state?;
+    # I EST field
     @jsondata:Name {value: "IEST"}
     string iEST?;
 |};
@@ -3617,38 +4475,61 @@ public type TaxInvoiceReportNTSApprovedEnum "NotApproved"|"Approved";
 
 # The `SalesTaxAuthority` entity of the SAP Business One Service Layer
 public type SalesTaxAuthority record {
+    # Use tax account field
     string UseTaxAccount?;
+    # User signature field
     int:Signed32 UserSignature?;
+    # Type field
     int:Signed32 Type?;
+    # A or r tax account field
     string AOrRTaxAccount?;
+    # Rate field
     decimal Rate?;
+    # A or p tax account field
     string AOrPTaxAccount?;
+    # Non deductible precent field
     decimal NonDeductiblePrecent?;
+    # Non deductible account field
     string NonDeductibleAccount?;
+    # Name field
     string Name?;
+    # Deferred tax account field
     string DeferredTaxAccount?;
+    # Code field
     string Code?;
+    # Min taxable amount field
     decimal MinTaxableAmount?;
+    # Max taxable amount field
     decimal MaxTaxableAmount?;
+    # Flat tax amount field
     decimal FlatTaxAmount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InclInPrice?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Exempt?;
+    # Accounts payable exp account field
     string APExpAccount?;
+    # Accounts receivable exp account field
     string ARExpAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InclInGrossRevenue?;
+    # Text code field
     int:Signed32 TextCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum InclInFirstInstallment?;
+    # Reverse charge percent field
     decimal ReverseChargePercent?;
+    # Sales tax RCM account field
     string SalesTaxRCMAccount?;
+    # Sales tax RCM clr account field
     string SalesTaxRCMClrAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum VATExemption?;
+    # VAT exemption base percent field
     decimal VATExemptionBasePercent?;
+    # VAT exemption percent field
     decimal VATExemptionPercent?;
+    # Tax definitions field
     TaxDefinition[] TaxDefinitions?;
     # The `ChartOfAccount` entity of the SAP Business One Service Layer
     ChartOfAccount ChartOfAccount?;
@@ -3665,22 +4546,29 @@ public type ListTaxInvoiceReportHeaders record {
 
 # The `AccountSegmentationsCategory` complex type of the SAP Business One Service Layer
 public type AccountSegmentationsCategory record {
+    # Segment ID field
     int:Signed32 SegmentID?;
+    # Code field
     string Code?;
+    # Name field
     string Name?;
+    # Short name field
     string ShortName?;
 };
 
 # Represents the request payload for the `RecurringTransactionService_ExecuteRecurringTransactions` operation of the SAP Business One Service Layer
 public type RecurringTransactionService_ExecuteRecurringTransactions_body record {
+    # Rcl recurring execution params field
     @jsondata:Name {value: "RclRecurringExecutionParams"}
     RclRecurringExecutionParams rclRecurringExecutionParams?;
+    # Rcl recurring transaction params collection field
     @jsondata:Name {value: "RclRecurringTransactionParamsCollection"}
     RclRecurringTransactionParams[] rclRecurringTransactionParamsCollection?;
 };
 
 # The `TaxCodeDeterminationParams` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationParams record {|
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
 |};
@@ -3694,9 +4582,12 @@ public type ListSalesTaxAuthoritiesHeaders record {
 
 # A paged collection of `CashDiscounts` entities returned by the SAP Business One Service Layer
 public type CashDiscountsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     CashDiscount[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3720,9 +4611,12 @@ public type BoYesNoEnum "tNO"|"tYES";
 
 # A paged collection of `GLAccountAdvancedRules` entities returned by the SAP Business One Service Layer
 public type GLAccountAdvancedRulesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     GLAccountAdvancedRule[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3739,9 +4633,12 @@ public type GetTaxExemptReasonsQueries record {
 
 # A paged collection of `SpecificWTHAmountsService` entities returned by the SAP Business One Service Layer
 public type SpecificWTHAmountsServiceCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     SpecificWTHAmounts[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3758,9 +4655,12 @@ public type ResidenceNumberTypeEnum "rntSpanishFiscalID"|"rntVATRegistrationNumb
 
 # A paged collection of `TaxCodeDeterminationsTCD` entities returned by the SAP Business One Service Layer
 public type TaxCodeDeterminationsTCDCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TaxCodeDeterminationTCD[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -3793,22 +4693,29 @@ public type ListNatureOfAssesseesQueries record {
 
 # The `DistributionRuleParams` complex type of the SAP Business One Service Layer
 public type DistributionRuleParams record {|
+    # Factor code field
     @jsondata:Name {value: "FactorCode"}
     string factorCode?;
+    # Factor description field
     @jsondata:Name {value: "FactorDescription"}
     string factorDescription?;
 |};
 
 # The `Boxes1099Item` complex type of the SAP Business One Service Layer
 public type Boxes1099Item record {
+    # Form code field
     int:Signed32 FormCode?;
+    # Box1099 field
     string Box1099?;
+    # Box description field
     string BoxDescription?;
+    # Minimum1099 amount field
     decimal Minimum1099Amount?;
 };
 
 # The `CostCenterTypeParams` complex type of the SAP Business One Service Layer
 public type CostCenterTypeParams record {|
+    # Cost center type code field
     @jsondata:Name {value: "CostCenterTypeCode"}
     string costCenterTypeCode?;
 |};
@@ -3840,6 +4747,7 @@ public type ListSalesTaxAuthoritiesQueries record {
 
 # The `TaxExemptReasonParams` complex type of the SAP Business One Service Layer
 public type TaxExemptReasonParams record {|
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -3850,45 +4758,81 @@ public type ElectronicProtocol record {
     ElectronicDocProtocolCodeEnum ProtocolCode?;
     # OData EnumType 'ElectronicDocGenTypeEnum'. Serialised by the Service Layer as the member name
     ElectronicDocGenTypeEnum GenerationType?;
+    # Mapping ID field
     int:Signed32 MappingID?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TestingMode?;
+    # Confirmation field
     string Confirmation?;
+    # E document type field
     int:Signed32 EDocType?;
+    # CF di cancellation reason field
     string CFDiCancellationReason?;
+    # CF di cancellation response field
     string CFDiCancellationResponse?;
+    # Related documents field
     RelatedDocument[] RelatedDocuments?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum EBooksRelevant?;
+    # E books MARK field
     string EBooksMARK?;
+    # E books MAR kof negative field
     string EBooksMARKofNegative?;
+    # E books invoice type field
     string EBooksInvoiceType?;
+    # E books invoice typeof negative field
     string EBooksInvoiceTypeofNegative?;
+    # E billing IRN field
     string EBillingIRN?;
+    # EETPKP field
     string EETPKP?;
+    # EETBKP field
     string EETBKP?;
+    # Signature input message field
     string SignatureInputMessage?;
+    # Signature digest field
     string SignatureDigest?;
+    # Fecha timbrado field
     string FechaTimbrado?;
+    # Sello SAT field
     string SelloSAT?;
+    # Payment method field
     string PaymentMethod?;
+    # Rfc prov certif field
     string RfcProvCertif?;
+    # Number certificado SAT field
     string NoCertificadoSAT?;
+    # FPA sequence number field
     int:Signed32 FPASequenceNumber?;
+    # FPA send date SDI field
     string FPASendDateSDI?;
+    # FPA progressivo field
     string FPAProgressivo?;
+    # Protocol description field
     string ProtocolDescription?;
+    # CF di export field
     string CFDiExport?;
+    # E billing ack number field
     string EBillingAckNo?;
+    # E billing ack dt field
     string EBillingAckDt?;
+    # E billing signed invoice field
     string EBillingSignedInvoice?;
+    # E billing signed QR code field
     string EBillingSignedQRCode?;
+    # E billing response status field
     string EBillingResponseStatus?;
+    # CF di cancellation reference field
     string CFDiCancellationReference?;
+    # E books QR code path field
     string EBooksQRCodePath?;
+    # E books QR code pathof negative field
     string EBooksQRCodePathofNegative?;
+    # Carta porte ID field
     string CartaPorteID?;
+    # E books dispatch date field
     string EBooksDispatchDate?;
+    # E books dispatch time field
     string EBooksDispatchTime?;
 };
 
@@ -3919,57 +4863,82 @@ public type ListCostElementsQueries record {
 
 # The `TaxCodeDeterminationTCDKeyFieldValueDefaultWT` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDKeyFieldValueDefaultWT record {|
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
+    # W t code field
     @jsondata:Name {value: "WTCode"}
     string wTCode?;
 |};
 
 # The `TaxInvoiceReport` entity of the SAP Business One Service Layer
 public type TaxInvoiceReport record {|
+    # Tax invoice report number field
     @jsondata:Name {value: "TaxInvoiceReportNumber"}
     string taxInvoiceReportNumber?;
+    # N TS approval number field
     @jsondata:Name {value: "NTSApprovalNo"}
     string nTSApprovalNo?;
+    # N TS approval field
     @jsondata:Name {value: "NTSApproval"}
     TaxInvoiceReportNTSApprovedEnum nTSApproval?;
+    # Tax web site field
     @jsondata:Name {value: "TaxWebSite"}
     TaxWebSite taxWebSite?;
+    # E tax web site field
     @jsondata:Name {value: "ETaxWebSite"}
     int:Signed32 eTaxWebSite?;
+    # E tax number field
     @jsondata:Name {value: "ETaxNo"}
     string eTaxNo?;
+    # Date field
     @jsondata:Name {value: "Date"}
     string date?;
+    # Tax invoice report line collection field
     @jsondata:Name {value: "TaxInvoiceReportLineCollection"}
     TaxInvoiceReportLine[] taxInvoiceReportLineCollection?;
+    # Business place field
     @jsondata:Name {value: "BusinessPlace"}
     int:Signed32 businessPlace?;
+    # Base amount field
     @jsondata:Name {value: "BaseAmount"}
     decimal baseAmount?;
+    # Tax amount field
     @jsondata:Name {value: "TaxAmount"}
     decimal taxAmount?;
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # B p name field
     @jsondata:Name {value: "BPName"}
     string bPName?;
+    # Original NTS approval number field
     @jsondata:Name {value: "OriginalNTSApprovalNo"}
     string originalNTSApprovalNo?;
+    # Canceled field
     @jsondata:Name {value: "Canceled"}
     string canceled?;
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
+    # Report type field
     @jsondata:Name {value: "ReportType"}
     int:Signed32 reportType?;
 |};
 
 # The `WTDBP` complex type of the SAP Business One Service Layer
 public type WTDBP record {
+    # Business partner key part1 field
     string BPKeyPart1?;
+    # Business partner key part2 field
     string BPKeyPart2?;
+    # W tax code field
     string WTaxCode?;
+    # Effective date from field
     string EffectiveDateFrom?;
+    # Effective date to field
     string EffectiveDateTo?;
+    # Rate field
     decimal Rate?;
     # OData EnumType 'WTDDetailType'. Serialised by the Service Layer as the member name
     WTDDetailType DetailType?;
@@ -3977,8 +4946,10 @@ public type WTDBP record {
 
 # The `DeductionTaxSubGroupParams` complex type of the SAP Business One Service Layer
 public type DeductionTaxSubGroupParams record {|
+    # Group name field
     @jsondata:Name {value: "GroupName"}
     string groupName?;
+    # Group code field
     @jsondata:Name {value: "GroupCode"}
     string groupCode?;
 |};
@@ -3988,43 +4959,60 @@ public type BoAccountTypes "at_Revenues"|"at_Expenses"|"at_Other";
 
 # The `GLAccount` complex type of the SAP Business One Service Layer
 public type GLAccount record {|
+    # Debit field
     @jsondata:Name {value: "Debit"}
     decimal debit?;
+    # System credit field
     @jsondata:Name {value: "SystemCredit"}
     decimal systemCredit?;
+    # Credit field
     @jsondata:Name {value: "Credit"}
     decimal credit?;
+    # Foreign credit field
     @jsondata:Name {value: "ForeignCredit"}
     decimal foreignCredit?;
+    # Foreign currency field
     @jsondata:Name {value: "ForeignCurrency"}
     string foreignCurrency?;
+    # System debit field
     @jsondata:Name {value: "SystemDebit"}
     decimal systemDebit?;
+    # Foreign debit field
     @jsondata:Name {value: "ForeignDebit"}
     decimal foreignDebit?;
+    # Due date field
     @jsondata:Name {value: "DueDate"}
     string dueDate?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # A paged collection of `ClosingDateProcedure` entities returned by the SAP Business One Service Layer
 public type ClosingDateProcedureCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     ClosingDateProcedure[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `Dimension` entity of the SAP Business One Service Layer
 public type Dimension record {
+    # Dimension code field
     int:Signed32 DimensionCode?;
+    # Dimension name field
     string DimensionName?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum IsActive?;
+    # Dimension description field
     string DimensionDescription?;
+    # Distribution rules field
     DistributionRule[] DistributionRules?;
+    # Profit centers field
     ProfitCenter[] ProfitCenters?;
 };
 
@@ -4068,37 +5056,48 @@ public type TransTypesEnum "ttAllTransactions"|"ttOpeningBalance"|"ttClosingBala
 
 # A paged collection of `TransactionCodes` entities returned by the SAP Business One Service Layer
 public type TransactionCodesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     TransactionCode[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `TaxCodeDeterminationTCDKeyFieldValuePeriodByUsage` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDKeyFieldValuePeriodByUsage record {|
+    # Usage code field
     @jsondata:Name {value: "UsageCode"}
     int:Signed32 usageCode?;
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # Exp tax code field
     @jsondata:Name {value: "ExpTaxCode"}
     string expTaxCode?;
+    # Pur tax code field
     @jsondata:Name {value: "PurTaxCode"}
     string purTaxCode?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
 |};
 
 # The `WTaxTypeCodeParams` complex type of the SAP Business One Service Layer
 public type WTaxTypeCodeParams record {|
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
 |};
 
 # The `RclRecurringTransactionParams` complex type of the SAP Business One Service Layer
 public type RclRecurringTransactionParams record {|
+    # Planned date field
     @jsondata:Name {value: "PlannedDate"}
     string plannedDate?;
+    # Transaction ID field
     @jsondata:Name {value: "TransactionID"}
     int:Signed32 transactionID?;
 |};
@@ -4118,31 +5117,43 @@ public type GetRecurringTransactionTemplatesQueries record {
 
 # A paged collection of `DeductibleTaxes` entities returned by the SAP Business One Service Layer
 public type DeductibleTaxesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DeductibleTax[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `TaxCodeDeterminationTCDKeyFieldValue` complex type of the SAP Business One Service Layer
 public type TaxCodeDeterminationTCDKeyFieldValue record {|
+    # Key fld5 v field
     @jsondata:Name {value: "KeyFld_5_V"}
     string keyFld5V?;
+    # Key fld3 v field
     @jsondata:Name {value: "KeyFld_3_V"}
     string keyFld3V?;
+    # Key fld4 v field
     @jsondata:Name {value: "KeyFld_4_V"}
     string keyFld4V?;
+    # Key fld1 v field
     @jsondata:Name {value: "KeyFld_1_V"}
     string keyFld1V?;
+    # Key fld2 v field
     @jsondata:Name {value: "KeyFld_2_V"}
     string keyFld2V?;
+    # Disp order field
     @jsondata:Name {value: "DispOrder"}
     int:Signed32 dispOrder?;
+    # Tax code determination TCD key field value default w ts field
     @jsondata:Name {value: "TaxCodeDeterminationTCDKeyFieldValueDefaultWTs"}
     TaxCodeDeterminationTCDKeyFieldValueDefaultWT[] taxCodeDeterminationTCDKeyFieldValueDefaultWTs?;
+    # Abs ID field
     @jsondata:Name {value: "AbsId"}
     int:Signed32 absId?;
+    # Tax code determination TCD key field value periods field
     @jsondata:Name {value: "TaxCodeDeterminationTCDKeyFieldValuePeriods"}
     TaxCodeDeterminationTCDKeyFieldValuePeriod[] taxCodeDeterminationTCDKeyFieldValuePeriods?;
 |};
@@ -4159,59 +5170,81 @@ public type GetGLAccountAdvancedRulesQueries record {
 
 # The `GLAccountAdvancedRuleParams` complex type of the SAP Business One Service Layer
 public type GLAccountAdvancedRuleParams record {|
+    # Federal tax ID field
     @jsondata:Name {value: "FederalTaxID"}
     string federalTaxID?;
+    # Item code field
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
+    # Warehouse field
     @jsondata:Name {value: "Warehouse"}
     string warehouse?;
+    # Item group field
     @jsondata:Name {value: "ItemGroup"}
     int:Signed32 itemGroup?;
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # Ship to country field
     @jsondata:Name {value: "ShipToCountry"}
     string shipToCountry?;
+    # Ship to state field
     @jsondata:Name {value: "ShipToState"}
     string shipToState?;
+    # Period field
     @jsondata:Name {value: "Period"}
     string period?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # B p group field
     @jsondata:Name {value: "BPGroup"}
     int:Signed32 bPGroup?;
 |};
 
 # The `AccountCategoryParams` complex type of the SAP Business One Service Layer
 public type AccountCategoryParams record {|
+    # Category code field
     @jsondata:Name {value: "CategoryCode"}
     int:Signed32 categoryCode?;
+    # Category name field
     @jsondata:Name {value: "CategoryName"}
     string categoryName?;
 |};
 
 # A paged collection of `DistributionRules` entities returned by the SAP Business One Service Layer
 public type DistributionRulesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     DistributionRule[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # A paged collection of `ChartOfAccounts` entities returned by the SAP Business One Service Layer
 public type ChartOfAccountsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     ChartOfAccount[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
 
 # The `WTDEffectiveDate` complex type of the SAP Business One Service Layer
 public type WTDEffectiveDate record {
+    # Line number field
     int:Signed32 LineNumber?;
+    # Effective from field
     string EffectiveFrom?;
+    # Rate field
     decimal Rate?;
+    # WTD value range collection field
     WTDValueRange[] WTDValueRangeCollection?;
 };
 
@@ -4234,9 +5267,12 @@ public type GetDeductionTaxGroupsQueries record {
 
 # A paged collection of `SalesTaxCodes` entities returned by the SAP Business One Service Layer
 public type SalesTaxCodesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     SalesTaxCode[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4302,8 +5338,11 @@ public type ListRecurringPostingsQueries record {
 
 # The `ChartOfAccount` entity of the SAP Business One Service Layer
 public type ChartOfAccount record {
+    # Code field
     string Code?;
+    # Name field
     string Name?;
+    # Balance field
     decimal Balance?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CashAccount?;
@@ -4313,9 +5352,13 @@ public type ChartOfAccount record {
     BoYesNoEnum ActiveAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PrimaryAccount?;
+    # Account level field
     int:Signed32 AccountLevel?;
+    # Data export code field
     string DataExportCode?;
+    # Father account key field
     string FatherAccountKey?;
+    # External code field
     string ExternalCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RateConversion?;
@@ -4323,12 +5366,17 @@ public type ChartOfAccount record {
     BoYesNoEnum TaxLiableAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum TaxExemptAccount?;
+    # External recon number field
     int:Signed32 ExternalReconNo?;
+    # Internal recon number field
     int:Signed32 InternalReconNo?;
     # OData EnumType 'BoAccountTypes'. Serialised by the Service Layer as the member name
     BoAccountTypes AccountType?;
+    # Account currency field
     string AcctCurrency?;
+    # Balance syscurr field
     decimal Balance_syscurr?;
+    # Balance frgn currency field
     decimal Balance_FrgnCurr?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Protected?;
@@ -4336,27 +5384,41 @@ public type ChartOfAccount record {
     BoYesNoEnum ReconciledAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LiableForAdvances?;
+    # Foreign name field
     string ForeignName?;
+    # Details field
     string Details?;
+    # Project code field
     string ProjectCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum RevaluationCoordinated?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LockManualTransaction?;
+    # Format code field
     string FormatCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum AllowChangeVatGroup?;
+    # Default VAT group field
     string DefaultVatGroup?;
+    # Category field
     int:Signed32 Category?;
+    # Transaction code field
     string TransactionCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum LoadingType?;
+    # Loading factor code field
     string LoadingFactorCode?;
+    # Loading factor code2 field
     string LoadingFactorCode2?;
+    # Loading factor code3 field
     string LoadingFactorCode3?;
+    # Loading factor code4 field
     string LoadingFactorCode4?;
+    # Loading factor code5 field
     string LoadingFactorCode5?;
+    # Planning level field
     string PlanningLevel?;
+    # Datev account field
     string DatevAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DatevAutoAccount?;
@@ -4376,21 +5438,31 @@ public type ChartOfAccount record {
     BoYesNoEnum DistributionRule4Relevant?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum DistributionRule5Relevant?;
+    # BPLID field
     int:Signed32 BPLID?;
+    # BPL name field
     string BPLName?;
+    # VAT reg number field
     string VATRegNum?;
     # OData EnumType 'SPEDContabilAccountPurposeCode'. Serialised by the Service Layer as the member name
     SPEDContabilAccountPurposeCode AccountPurposeCode?;
+    # Referential account code field
     string ReferentialAccountCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ValidFor?;
+    # Valid from field
     string ValidFrom?;
+    # Valid to field
     string ValidTo?;
+    # Valid remarks field
     string ValidRemarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum FrozenFor?;
+    # Frozen from field
     string FrozenFrom?;
+    # Frozen to field
     string FrozenTo?;
+    # Frozen remarks field
     string FrozenRemarks?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum BlockManualPosting?;
@@ -4398,24 +5470,37 @@ public type ChartOfAccount record {
     BoYesNoEnum CashFlowRelevant?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PCN874ReportRelevant?;
+    # Primary closing account field
     string PrimaryClosingAccount?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CostAccountingOnly?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum CostElementRelevant?;
+    # Cost element code field
     string CostElementCode?;
+    # Standard account code field
     string StandardAccountCode?;
+    # Taxonomy code field
     string TaxonomyCode?;
+    # Income classification category field
     int:Signed32 IncomeClassificationCategory?;
+    # Income classification type field
     int:Signed32 IncomeClassificationType?;
+    # Expense classification category field
     int:Signed32 ExpenseClassificationCategory?;
+    # Expense classification type field
     int:Signed32 ExpenseClassificationType?;
+    # Official account code field
     string OfficialAccountCode?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum ExchangeRateDifference?;
+    # Accrual types field
     AccrualType[] AccrualTypes?;
+    # VAT groups field
     VatGroup[] VatGroups?;
+    # Withholding tax codes field
     WithholdingTaxCode[] WithholdingTaxCodes?;
+    # General ledger account advanced rules field
     GLAccountAdvancedRule[] GLAccountAdvancedRules?;
     # The `Currency` entity of the SAP Business One Service Layer
     Currency Currency?;
@@ -4427,6 +5512,7 @@ public type ChartOfAccount record {
     DistributionRule DistributionRule?;
     # The `CostElement` entity of the SAP Business One Service Layer
     CostElement CostElement?;
+    # Sales tax authorities field
     SalesTaxAuthority[] SalesTaxAuthorities?;
 };
 
@@ -4439,10 +5525,13 @@ public type ListCashFlowLineItemsHeaders record {
 
 # The `NatureOfAssesseeParams` complex type of the SAP Business One Service Layer
 public type NatureOfAssesseeParams record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
@@ -4469,6 +5558,7 @@ public type WithholdingTypeEnum "wt_VatWithholding"|"wt_IncomeTaxWithholding";
 
 # Represents the request payload for the `RecurringTransactionService_GetRecurringTransaction` operation of the SAP Business One Service Layer
 public type RecurringTransactionService_GetRecurringTransaction_body record {
+    # Rcl recurring transaction params field
     @jsondata:Name {value: "RclRecurringTransactionParams"}
     RclRecurringTransactionParams rclRecurringTransactionParams?;
 };
@@ -4507,42 +5597,61 @@ public type ListDeductionTaxHierarchiesQueries record {
 
 # The `RecurringPostings` entity of the SAP Business One Service Layer
 public type RecurringPostings record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Instance field
     @jsondata:Name {value: "Instance"}
     int:Signed32 instance?;
+    # Stamp tax field
     @jsondata:Name {value: "StampTax"}
     BoYesNoEnum stampTax?;
+    # Automatic VAT field
     @jsondata:Name {value: "AutomaticVAT"}
     BoYesNoEnum automaticVAT?;
+    # Manage w tax field
     @jsondata:Name {value: "ManageWTax"}
     BoYesNoEnum manageWTax?;
+    # Deferred tax field
     @jsondata:Name {value: "DeferredTax"}
     BoYesNoEnum deferredTax?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # Next execution field
     @jsondata:Name {value: "NextExecution"}
     string nextExecution?;
+    # Valid until field
     @jsondata:Name {value: "ValidUntil"}
     BoYesNoEnum validUntil?;
+    # Valid until date field
     @jsondata:Name {value: "ValidUntilDate"}
     string validUntilDate?;
+    # Recurring postings line collection field
     @jsondata:Name {value: "RecurringPostingsLineCollection"}
     RecurringPostingsLine[] recurringPostingsLineCollection?;
+    # Remarks field
     @jsondata:Name {value: "Remarks"}
     string remarks?;
+    # Reference3 field
     @jsondata:Name {value: "Reference3"}
     string reference3?;
+    # Reference1 field
     @jsondata:Name {value: "Reference1"}
     string reference1?;
+    # Transaction code field
     @jsondata:Name {value: "TransactionCode"}
     string transactionCode?;
+    # Reference2 field
     @jsondata:Name {value: "Reference2"}
     string reference2?;
+    # Frequency field
     @jsondata:Name {value: "Frequency"}
     BoFrequencyTypeEnum frequency?;
+    # Sub frequency field
     @jsondata:Name {value: "SubFrequency"}
     BoSubFrequencyTypeEnum subFrequency?;
+    # Recurring postings document reference collection field
     @jsondata:Name {value: "RecurringPostingsDocumentReferenceCollection"}
     RecurringPostingsDocumentReference[] recurringPostingsDocumentReferenceCollection?;
 |};
@@ -4574,110 +5683,157 @@ public type ListTaxReplStateSubsQueries record {
 
 # The `DistributionRuleLine` complex type of the SAP Business One Service Layer
 public type DistributionRuleLine record {|
+    # Effective from field
     @jsondata:Name {value: "EffectiveFrom"}
     string effectiveFrom?;
+    # Total in center field
     @jsondata:Name {value: "TotalInCenter"}
     decimal totalInCenter?;
+    # Center code field
     @jsondata:Name {value: "CenterCode"}
     string centerCode?;
+    # Effective to field
     @jsondata:Name {value: "EffectiveTo"}
     string effectiveTo?;
 |};
 
 # The `TaxCodeDetermination` entity of the SAP Business One Service Layer
 public type TaxCodeDetermination record {|
+    # Condition1 field
     @jsondata:Name {value: "Condition1"}
     BoTCDConditionEnum condition1?;
+    # Condition2 field
     @jsondata:Name {value: "Condition2"}
     BoTCDConditionEnum condition2?;
+    # Freight header tax field
     @jsondata:Name {value: "FreightHeaderTax"}
     string freightHeaderTax?;
+    # U DF table2 field
     @jsondata:Name {value: "UDFTable2"}
     string uDFTable2?;
+    # U DF table1 field
     @jsondata:Name {value: "UDFTable1"}
     string uDFTable1?;
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # U DF table4 field
     @jsondata:Name {value: "UDFTable4"}
     string uDFTable4?;
+    # U DF table3 field
     @jsondata:Name {value: "UDFTable3"}
     string uDFTable3?;
+    # U DF table5 field
     @jsondata:Name {value: "UDFTable5"}
     string uDFTable5?;
+    # Condition5 field
     @jsondata:Name {value: "Condition5"}
     BoTCDConditionEnum condition5?;
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
+    # Condition3 field
     @jsondata:Name {value: "Condition3"}
     BoTCDConditionEnum condition3?;
+    # Condition4 field
     @jsondata:Name {value: "Condition4"}
     BoTCDConditionEnum condition4?;
+    # U DF alias4 field
     @jsondata:Name {value: "UDFAlias4"}
     string uDFAlias4?;
+    # U DF alias3 field
     @jsondata:Name {value: "UDFAlias3"}
     string uDFAlias3?;
+    # U DF alias2 field
     @jsondata:Name {value: "UDFAlias2"}
     string uDFAlias2?;
+    # U DF alias1 field
     @jsondata:Name {value: "UDFAlias1"}
     string uDFAlias1?;
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # Freight row tax field
     @jsondata:Name {value: "FreightRowTax"}
     string freightRowTax?;
+    # U DF alias5 field
     @jsondata:Name {value: "UDFAlias5"}
     string uDFAlias5?;
+    # String value5 field
     @jsondata:Name {value: "StringValue5"}
     string stringValue5?;
+    # Money value5 field
     @jsondata:Name {value: "MoneyValue5"}
     decimal moneyValue5?;
+    # String value4 field
     @jsondata:Name {value: "StringValue4"}
     string stringValue4?;
+    # String value1 field
     @jsondata:Name {value: "StringValue1"}
     string stringValue1?;
+    # Money value1 field
     @jsondata:Name {value: "MoneyValue1"}
     decimal moneyValue1?;
+    # Money value2 field
     @jsondata:Name {value: "MoneyValue2"}
     decimal moneyValue2?;
+    # String value3 field
     @jsondata:Name {value: "StringValue3"}
     string stringValue3?;
+    # Money value3 field
     @jsondata:Name {value: "MoneyValue3"}
     decimal moneyValue3?;
+    # String value2 field
     @jsondata:Name {value: "StringValue2"}
     string stringValue2?;
+    # Money value4 field
     @jsondata:Name {value: "MoneyValue4"}
     decimal moneyValue4?;
+    # Business area field
     @jsondata:Name {value: "BusinessArea"}
     BoBusinessAreaEnum businessArea?;
+    # Number value5 field
     @jsondata:Name {value: "NumberValue5"}
     int:Signed32 numberValue5?;
+    # Document entry field
     @jsondata:Name {value: "DocEntry"}
     int:Signed32 docEntry?;
+    # Document type field
     @jsondata:Name {value: "DocumentType"}
     BoTCDDocumentTypeEnum documentType?;
+    # Number value4 field
     @jsondata:Name {value: "NumberValue4"}
     int:Signed32 numberValue4?;
+    # Number value1 field
     @jsondata:Name {value: "NumberValue1"}
     int:Signed32 numberValue1?;
+    # Number value3 field
     @jsondata:Name {value: "NumberValue3"}
     int:Signed32 numberValue3?;
+    # Number value2 field
     @jsondata:Name {value: "NumberValue2"}
     int:Signed32 numberValue2?;
 |};
 
 # The `FinancialYearParams` complex type of the SAP Business One Service Layer
 public type FinancialYearParams record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Abs entry field
     @jsondata:Name {value: "AbsEntry"}
     int:Signed32 absEntry?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # Represents the response payload for the `AccountCategoryService_GetCategoryList` operation of the SAP Business One Service Layer
 public type inline_response_200 record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     AccountCategoryParams[] value?;
 };
 
@@ -4686,10 +5842,15 @@ public type TaxTypeBlackListEnum "ttblExcluded"|"ttblExempt"|"ttblNonSubject"|"t
 
 # The `WTDValueRange` complex type of the SAP Business One Service Layer
 public type WTDValueRange record {
+    # Line number field
     int:Signed32 LineNumber?;
+    # Seq number field
     int:Signed32 SeqNum?;
+    # Effective from field
     string EffectiveFrom?;
+    # Value from field
     decimal ValueFrom?;
+    # Rate field
     decimal Rate?;
 };
 
@@ -4720,31 +5881,46 @@ public type ListAccountSegmentationsQueries record {
 
 # The `BudgetCostAccountingLine` complex type of the SAP Business One Service Layer
 public type BudgetCostAccountingLine record {
+    # Distr rule code field
     string DistrRuleCode?;
+    # Dimension field
     int:Signed32 Dimension?;
+    # Distr rule debit local currency field
     decimal DistrRuleDebitLC?;
+    # Distr rule debit system currency field
     decimal DistrRuleDebitSC?;
+    # Distr rule credit local currency field
     decimal DistrRuleCreditLC?;
+    # Distr rule credit system currency field
     decimal DistrRuleCreditSC?;
 };
 
 # The `AccrualTypeParams` complex type of the SAP Business One Service Layer
 public type AccrualTypeParams record {|
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
 |};
 
 # The `ProfitCenter` entity of the SAP Business One Service Layer
 public type ProfitCenter record {
+    # Center code field
     string CenterCode?;
+    # Center name field
     string CenterName?;
+    # Group code field
     string GroupCode?;
+    # In which dimension field
     int:Signed32 InWhichDimension?;
+    # Cost center type field
     string CostCenterType?;
+    # Effective from field
     string EffectiveFrom?;
+    # Effective to field
     string EffectiveTo?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum Active?;
+    # Center owner field
     int:Signed32 CenterOwner?;
     # The `Dimension` entity of the SAP Business One Service Layer
     Dimension Dimension?;
@@ -4764,9 +5940,12 @@ public type GetDimensionsQueries record {
 
 # A paged collection of `Currencies` entities returned by the SAP Business One Service Layer
 public type CurrenciesCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     Currency[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -4794,170 +5973,253 @@ public type ListTaxExemptReasonsHeaders record {
 
 # The `GLAccountAdvancedRule` entity of the SAP Business One Service Layer
 public type GLAccountAdvancedRule record {|
+    # Foreign expens acc field
     @jsondata:Name {value: "ForeignExpensAcc"}
     string foreignExpensAcc?;
+    # Decreasing account field
     @jsondata:Name {value: "DecreasingAccount"}
     string decreasingAccount?;
+    # Purchase account field
     @jsondata:Name {value: "PurchaseAcct"}
     string purchaseAcct?;
+    # Returning account field
     @jsondata:Name {value: "ReturningAccount"}
     string returningAccount?;
+    # Cost account field
     @jsondata:Name {value: "CostAccount"}
     string costAccount?;
+    # E u revenues account field
     @jsondata:Name {value: "EURevenuesAccount"}
     string eURevenuesAccount?;
+    # Purchase credit acc field
     @jsondata:Name {value: "PurchaseCreditAcc"}
     string purchaseCreditAcc?;
+    # Purchase balance account field
     @jsondata:Name {value: "PurchaseBalanceAccount"}
     string purchaseBalanceAccount?;
+    # VAT group field
     @jsondata:Name {value: "VatGroup"}
     VatGroup vatGroup?;
+    # Exchange rate differences account field
     @jsondata:Name {value: "ExchangeRateDifferencesAcct"}
     string exchangeRateDifferencesAcct?;
+    # Expenses account field
     @jsondata:Name {value: "ExpensesAccount"}
     string expensesAccount?;
+    # Stock inflation offset account field
     @jsondata:Name {value: "StockInflationOffsetAccount"}
     string stockInflationOffsetAccount?;
+    # E u purchase credit acc field
     @jsondata:Name {value: "EUPurchaseCreditAcc"}
     string eUPurchaseCreditAcc?;
+    # Federal tax ID field
     @jsondata:Name {value: "FederalTaxID"}
     string federalTaxID?;
+    # Business partner type field
     @jsondata:Name {value: "BusinessPartnerType"}
     BoBusinessPartnerTypes businessPartnerType?;
+    # Financial year field
     @jsondata:Name {value: "FinancialYear"}
     int:Signed32 financialYear?;
+    # Ship to state field
     @jsondata:Name {value: "ShipToState"}
     string shipToState?;
+    # Number of periods field
     @jsondata:Name {value: "NumberOfPeriods"}
     int:Signed32 numberOfPeriods?;
+    # Wip account field
     @jsondata:Name {value: "WipAccount"}
     string wipAccount?;
+    # Stock in transit account field
     @jsondata:Name {value: "StockInTransitAccount"}
     string stockInTransitAccount?;
+    # Sales credit EU acc field
     @jsondata:Name {value: "SalesCreditEUAcc"}
     string salesCreditEUAcc?;
+    # Exempted credits field
     @jsondata:Name {value: "ExemptedCredits"}
     string exemptedCredits?;
+    # P a return account field
     @jsondata:Name {value: "PAReturnAcct"}
     string pAReturnAcct?;
+    # Stock inflation adjust account field
     @jsondata:Name {value: "StockInflationAdjustAccount"}
     string stockInflationAdjustAccount?;
+    # Period field
     @jsondata:Name {value: "Period"}
     string period?;
+    # Sub period type field
     @jsondata:Name {value: "SubPeriodType"}
     BoSubPeriodTypeEnum subPeriodType?;
+    # Expense clearing act field
     @jsondata:Name {value: "ExpenseClearingAct"}
     string expenseClearingAct?;
+    # Expense offsetting account field
     @jsondata:Name {value: "ExpenseOffsettingAccount"}
     string expenseOffsettingAccount?;
+    # Increasing account field
     @jsondata:Name {value: "IncreasingAccount"}
     string increasingAccount?;
+    # Shipped goods account field
     @jsondata:Name {value: "ShippedGoodsAccount"}
     string shippedGoodsAccount?;
+    # Transfer account field
     @jsondata:Name {value: "TransferAccount"}
     string transferAccount?;
+    # B p group field
     @jsondata:Name {value: "BPGroup"}
     int:Signed32 bPGroup?;
+    # Code field
     @jsondata:Name {value: "Code"}
     string code?;
+    # To document date field
     @jsondata:Name {value: "ToDocumentDate"}
     string toDocumentDate?;
+    # Chart of account field
     @jsondata:Name {value: "ChartOfAccount"}
     ChartOfAccount chartOfAccount?;
+    # To due date field
     @jsondata:Name {value: "ToDueDate"}
     string toDueDate?;
+    # Price difference acc field
     @jsondata:Name {value: "PriceDifferenceAcc"}
     string priceDifferenceAcc?;
+    # Negative inventory adjustment account field
     @jsondata:Name {value: "NegativeInventoryAdjustmentAccount"}
     string negativeInventoryAdjustmentAccount?;
+    # W h outgoing cenvat account field
     @jsondata:Name {value: "WHOutgoingCenvatAccount"}
     string wHOutgoingCenvatAccount?;
+    # From date field
     @jsondata:Name {value: "FromDate"}
     string fromDate?;
+    # Period name field
     @jsondata:Name {value: "PeriodName"}
     string periodName?;
+    # Item code field
     @jsondata:Name {value: "ItemCode"}
     string itemCode?;
+    # Warehouse field
     @jsondata:Name {value: "Warehouse"}
     string warehouse?;
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Is active field
     @jsondata:Name {value: "IsActive"}
     BoYesNoEnum isActive?;
+    # Foreign revenue acc field
     @jsondata:Name {value: "ForeignRevenueAcc"}
     string foreignRevenueAcc?;
+    # Wip variance account field
     @jsondata:Name {value: "WipVarianceAccount"}
     string wipVarianceAccount?;
+    # W h incoming cenvat account field
     @jsondata:Name {value: "WHIncomingCenvatAccount"}
     string wHIncomingCenvatAccount?;
+    # G l increase account field
     @jsondata:Name {value: "GLIncreaseAcct"}
     string gLIncreaseAcct?;
+    # From document date field
     @jsondata:Name {value: "FromDocumentDate"}
     string fromDocumentDate?;
+    # Absolute entry field
     @jsondata:Name {value: "AbsoluteEntry"}
     int:Signed32 absoluteEntry?;
+    # U DF5 field
     @jsondata:Name {value: "UDF5"}
     string uDF5?;
+    # U DF4 field
     @jsondata:Name {value: "UDF4"}
     string uDF4?;
+    # U DF3 field
     @jsondata:Name {value: "UDF3"}
     string uDF3?;
+    # Wip offset profit and loss account field
     @jsondata:Name {value: "WipOffsetProfitAndLossAccount"}
     string wipOffsetProfitAndLossAccount?;
+    # U DF2 field
     @jsondata:Name {value: "UDF2"}
     string uDF2?;
+    # From posting date field
     @jsondata:Name {value: "FromPostingDate"}
     string fromPostingDate?;
+    # U DF1 field
     @jsondata:Name {value: "UDF1"}
     string uDF1?;
+    # From due date field
     @jsondata:Name {value: "FromDueDate"}
     string fromDueDate?;
+    # Inventory account field
     @jsondata:Name {value: "InventoryAccount"}
     string inventoryAccount?;
+    # Foreign purchase credit acc field
     @jsondata:Name {value: "ForeignPurchaseCreditAcc"}
     string foreignPurchaseCreditAcc?;
+    # Sales credit acc field
     @jsondata:Name {value: "SalesCreditAcc"}
     string salesCreditAcc?;
+    # Usage field
     @jsondata:Name {value: "Usage"}
     int:Signed32 usage?;
+    # Ship to country field
     @jsondata:Name {value: "ShipToCountry"}
     string shipToCountry?;
+    # G l decrease account field
     @jsondata:Name {value: "GLDecreaseAcct"}
     string gLDecreaseAcct?;
+    # V AT in revenue account field
     @jsondata:Name {value: "VATInRevenueAccount"}
     string vATInRevenueAccount?;
+    # Goods clearing account field
     @jsondata:Name {value: "GoodsClearingAcct"}
     string goodsClearingAcct?;
+    # Sales credit foreign acc field
     @jsondata:Name {value: "SalesCreditForeignAcc"}
     string salesCreditForeignAcc?;
+    # Beginningof financial year field
     @jsondata:Name {value: "BeginningofFinancialYear"}
     string beginningofFinancialYear?;
+    # Inventory offset profit and loss account field
     @jsondata:Name {value: "InventoryOffsetProfitAndLossAccount"}
     string inventoryOffsetProfitAndLossAccount?;
+    # Exempt income acc field
     @jsondata:Name {value: "ExemptIncomeAcc"}
     string exemptIncomeAcc?;
+    # E u expenses account field
     @jsondata:Name {value: "EUExpensesAccount"}
     string eUExpensesAccount?;
+    # Item group field
     @jsondata:Name {value: "ItemGroup"}
     int:Signed32 itemGroup?;
+    # Get general ledger account by field
     @jsondata:Name {value: "GetGLAccountBy"}
     GetGLAccountByEnum getGLAccountBy?;
+    # Varience account field
     @jsondata:Name {value: "VarienceAccount"}
     string varienceAccount?;
+    # V AT group field
     @jsondata:Name {value: "VATGroup"}
     string vATGroup?;
+    # To date field
     @jsondata:Name {value: "ToDate"}
     string toDate?;
+    # Revenues account field
     @jsondata:Name {value: "RevenuesAccount"}
     string revenuesAccount?;
+    # Purchase offset account field
     @jsondata:Name {value: "PurchaseOffsetAcct"}
     string purchaseOffsetAcct?;
+    # Cost inflation account field
     @jsondata:Name {value: "CostInflationAccount"}
     string costInflationAccount?;
+    # B p code field
     @jsondata:Name {value: "BPCode"}
     string bPCode?;
+    # To posting date field
     @jsondata:Name {value: "ToPostingDate"}
     string toPostingDate?;
+    # Cost inflation offset account field
     @jsondata:Name {value: "CostInflationOffsetAccount"}
     string costInflationOffsetAccount?;
 |};
@@ -4974,19 +6236,25 @@ public type GetCostCenterTypesQueries record {
 
 # The `WTaxTypeCode` entity of the SAP Business One Service Layer
 public type WTaxTypeCode record {|
+    # Description field
     @jsondata:Name {value: "Description"}
     string description?;
+    # Code field
     @jsondata:Name {value: "Code"}
     int:Signed32 code?;
+    # Specific WTH amounts service field
     @jsondata:Name {value: "SpecificWTHAmountsService"}
     SpecificWTHAmounts[] specificWTHAmountsService?;
 |};
 
 # A paged collection of `WitholdingTaxDefinition` entities returned by the SAP Business One Service Layer
 public type WitholdingTaxDefinitionCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     WTDCode[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -5000,46 +6268,67 @@ public type ListSalesTaxAuthoritiesTypesHeaders record {
 
 # The `PostingTemplatesLine` complex type of the SAP Business One Service Layer
 public type PostingTemplatesLine record {|
+    # Distribution rule field
     @jsondata:Name {value: "DistributionRule"}
     string distributionRule?;
+    # Debit field
     @jsondata:Name {value: "Debit"}
     decimal debit?;
+    # Tax posting account field
     @jsondata:Name {value: "TaxPostingAccount"}
     BoTaxPostingAccountTypeEnum taxPostingAccount?;
+    # Cost element code field
     @jsondata:Name {value: "CostElementCode"}
     string costElementCode?;
+    # W tax liable field
     @jsondata:Name {value: "WTaxLiable"}
     BoYesNoEnum wTaxLiable?;
+    # Costing code2 field
     @jsondata:Name {value: "CostingCode2"}
     string costingCode2?;
+    # Costing code3 field
     @jsondata:Name {value: "CostingCode3"}
     string costingCode3?;
+    # Costing code4 field
     @jsondata:Name {value: "CostingCode4"}
     string costingCode4?;
+    # Costing code5 field
     @jsondata:Name {value: "CostingCode5"}
     string costingCode5?;
+    # Control account field
     @jsondata:Name {value: "ControlAccount"}
     string controlAccount?;
+    # Line number field
     @jsondata:Name {value: "LineNumber"}
     int:Signed32 lineNumber?;
+    # Credit field
     @jsondata:Name {value: "Credit"}
     decimal credit?;
+    # Tax code field
     @jsondata:Name {value: "TaxCode"}
     string taxCode?;
+    # Trt code field
     @jsondata:Name {value: "TrtCode"}
     string trtCode?;
+    # Tax group field
     @jsondata:Name {value: "TaxGroup"}
     string taxGroup?;
+    # Costing code1 field
     @jsondata:Name {value: "CostingCode1"}
     string costingCode1?;
+    # Account code field
     @jsondata:Name {value: "AccountCode"}
     string accountCode?;
+    # VAT line field
     @jsondata:Name {value: "VatLine"}
     BoYesNoEnum vatLine?;
+    # Project code field
     @jsondata:Name {value: "ProjectCode"}
     string projectCode?;
+    # W tax line field
     @jsondata:Name {value: "WTaxLine"}
     BoYesNoEnum wTaxLine?;
+    # Account name field
     @jsondata:Name {value: "AccountName"}
     string accountName?;
 |};
@@ -5056,55 +6345,96 @@ public type GetTaxCodeDeterminationsTCDQueries record {
 
 # Represents the request payload for the `RecurringTransactionService_DeleteRecurringTransactions` operation of the SAP Business One Service Layer
 public type RecurringTransactionService_DeleteRecurringTransactions_body record {
+    # Rcl recurring transaction params collection field
     @jsondata:Name {value: "RclRecurringTransactionParamsCollection"}
     RclRecurringTransactionParams[] rclRecurringTransactionParamsCollection?;
 };
 
 # The `JournalEntryLine` complex type of the SAP Business One Service Layer
 public type JournalEntryLine record {
+    # Line ID field
     int:Signed32 Line_ID?;
+    # Account code field
     string AccountCode?;
+    # Debit field
     decimal Debit?;
+    # Credit field
     decimal Credit?;
+    # Foreign currency debit field
     decimal FCDebit?;
+    # Foreign currency credit field
     decimal FCCredit?;
+    # Foreign currency currency field
     string FCCurrency?;
+    # Due date field
     string DueDate?;
+    # Short name field
     string ShortName?;
+    # Contra account field
     string ContraAccount?;
+    # Line memo field
     string LineMemo?;
+    # Reference date1 field
     string ReferenceDate1?;
+    # Reference date2 field
     string ReferenceDate2?;
+    # Reference1 field
     string Reference1?;
+    # Reference2 field
     string Reference2?;
+    # Project code field
     string ProjectCode?;
+    # Costing code field
     string CostingCode?;
+    # Tax date field
     string TaxDate?;
+    # Base sum field
     decimal BaseSum?;
+    # Tax group field
     string TaxGroup?;
+    # Debit sys field
     decimal DebitSys?;
+    # Credit sys field
     decimal CreditSys?;
+    # VAT date field
     string VatDate?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum VatLine?;
+    # System base amount field
     decimal SystemBaseAmount?;
+    # VAT amount field
     decimal VatAmount?;
+    # System VAT amount field
     decimal SystemVatAmount?;
+    # Gross value field
     decimal GrossValue?;
+    # Additional reference field
     string AdditionalReference?;
+    # Check abs field
     int:Signed32 CheckAbs?;
+    # Costing code2 field
     string CostingCode2?;
+    # Costing code3 field
     string CostingCode3?;
+    # Costing code4 field
     string CostingCode4?;
+    # Tax code field
     string TaxCode?;
     # OData EnumType 'BoTaxPostAccEnum'. Serialised by the Service Layer as the member name
     BoTaxPostAccEnum TaxPostAccount?;
+    # Costing code5 field
     string CostingCode5?;
+    # Location code field
     int:Signed32 LocationCode?;
+    # Control account field
     string ControlAccount?;
+    # Equalization tax amount field
     decimal EqualizationTaxAmount?;
+    # System equalization tax amount field
     decimal SystemEqualizationTaxAmount?;
+    # Total tax field
     decimal TotalTax?;
+    # System total tax field
     decimal SystemTotalTax?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum WTLiable?;
@@ -5112,27 +6442,47 @@ public type JournalEntryLine record {
     BoYesNoEnum WTRow?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentBlock?;
+    # Block reason field
     int:Signed32 BlockReason?;
+    # Federal tax ID field
     string FederalTaxID?;
+    # BPLID field
     int:Signed32 BPLID?;
+    # BPL name field
     string BPLName?;
+    # VAT reg number field
     string VATRegNum?;
     # OData EnumType 'BoYesNoEnum'. Serialised by the Service Layer as the member name
     BoYesNoEnum PaymentOrdered?;
+    # Exposed trans number field
     int:Signed32 ExposedTransNumber?;
+    # Document array field
     int:Signed32 DocumentArray?;
+    # Document line field
     int:Signed32 DocumentLine?;
+    # Cost element code field
     string CostElementCode?;
+    # Cig field
     int:Signed32 Cig?;
+    # Cup field
     int:Signed32 Cup?;
+    # Income classification category field
     int:Signed32 IncomeClassificationCategory?;
+    # Income classification type field
     int:Signed32 IncomeClassificationType?;
+    # Expenses classification category field
     int:Signed32 ExpensesClassificationCategory?;
+    # Expenses classification type field
     int:Signed32 ExpensesClassificationType?;
+    # VAT classification category field
     int:Signed32 VATClassificationCategory?;
+    # VAT classification type field
     int:Signed32 VATClassificationType?;
+    # VAT exemption cause field
     int:Signed32 VATExemptionCause?;
+    # Line allocation number field
     string LineAllocationNumber?;
+    # Cash flow assignments field
     CashFlowAssignment[] CashFlowAssignments?;
 };
 
@@ -5148,9 +6498,12 @@ public type BoTaxPostAccEnum "tpa_Default"|"tpa_SalesTaxAccount"|"tpa_PurchaseTa
 
 # A paged collection of `FinancialYears` entities returned by the SAP Business One Service Layer
 public type FinancialYearsCollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     FinancialYear[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
@@ -5167,9 +6520,12 @@ public type GetAccountSegmentationsQueries record {
 
 # A paged collection of `Forms1099` entities returned by the SAP Business One Service Layer
 public type Forms1099CollectionResponse record {
+    # Odata metadata field
     @jsondata:Name {value: "odata.metadata"}
     string odataMetadata?;
+    # Value field
     Forms1099[] value?;
+    # Odata next link field
     @jsondata:Name {value: "odata.nextLink"}
     string odataNextLink?;
 };
