@@ -51,7 +51,13 @@ java {
 
 jar {
     archiveBaseName = 'sap.businessone-native'
-    archiveVersion = project.version.toString().replace("-SNAPSHOT", "")
+    // Pinned to businessoneVersion (not the shared root `version`): the
+    // s4hana release template bumps the root `version` to match whichever
+    // package was just released, so it drifts away from businessoneVersion
+    // as soon as any connector is released. The wrapper's Ballerina.toml
+    // always references this jar by businessoneVersion, so the jar name
+    // must track that property, not the shared root version.
+    archiveVersion = project.businessoneVersion.toString().replace("-SNAPSHOT", "")
 }
 
 test {
