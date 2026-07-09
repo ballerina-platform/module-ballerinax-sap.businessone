@@ -18,7 +18,7 @@ your user name, and your password.
 
 Click the company name at the top of the SAP Business One desktop application, or contact your administrator.
 
-![SAP Business One Choose Company window showing the User ID, Password, and Database fields used to configure the connection](../../docs/resources/images/sap-b1-choose-company.png)
+![SAP Business One Choose Company window showing the User ID, Password, and Database fields used to configure the connection](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-sap.businessone/main/docs/resources/images/sap-b1-choose-company.png)
 
 The Service Layer endpoint follows the pattern `https://<host>:50000/b1s/v1`.
 
