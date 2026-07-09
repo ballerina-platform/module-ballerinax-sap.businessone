@@ -342,7 +342,7 @@ modules = [
 [[package]]
 org = "ballerinax"
 name = "sap.businessone"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "jballerina.java"},
@@ -357,7 +357,7 @@ modules = [
 [[package]]
 org = "ballerinax"
 name = "sap.businessone.projects"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
 	{org = "ballerina", name = "data.jsondata"},
 	{org = "ballerina", name = "http"},
