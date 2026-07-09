@@ -24,9 +24,7 @@ Click the company name at the top of the SAP Business One desktop application, o
 
 ![SAP Business One Choose Company window showing the User ID, Password, and Database fields used to configure the connection](../sap-b1-choose-company.png)
 
-> **Tip:** The **Current Server** field identifies the SAP HANA or SQL Server instance behind the Service Layer, not
-> the Service Layer itself — it is not part of the connector configuration. Ask your SAP administrator for the
-> Service Layer's own address if you do not already have it.
+The Service Layer endpoint follows the pattern `https://<host>:50000/b1s/v1`.
 
 ## Quickstart
 
