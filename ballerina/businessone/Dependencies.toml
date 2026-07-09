@@ -336,7 +336,7 @@ modules = [
 [[package]]
 org = "ballerinax"
 name = "sap.businessone"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "jballerina.java"},
