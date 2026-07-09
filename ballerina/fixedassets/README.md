@@ -13,10 +13,16 @@ The SAP Business One Fixed Assets connector provides APIs for the fixed asset ob
 
 ## Setup guide
 
-The connector requires an SAP Business One installation with the Service Layer component enabled (available for
-SAP Business One, version for SAP HANA, and SAP Business One on Microsoft SQL Server 9.3 PL10+). The Service Layer
-endpoint is `https://<host>:50000/b1s/v1` by default. A Business One user with a license and the relevant object
-authorizations is needed; sessions are opened against a specific company database (schema).
+The connector requires an SAP Business One installation with the Service Layer component enabled.
+
+To connect, you need three values from the SAP Business One desktop client's login screen: the company database,
+your user name, and your password.
+
+Click the company name at the top of the SAP Business One desktop application, or contact your administrator.
+
+![SAP Business One Choose Company window showing the User ID, Password, and Database fields used to configure the connection](../../docs/resources/images/sap-b1-choose-company.png)
+
+The Service Layer endpoint follows the pattern `https://<host>:50000/b1s/v1`.
 
 ## Quickstart
 
