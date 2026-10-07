@@ -58,7 +58,7 @@ allprojects {
 task clean {
 }
 
-task build {
+tasks.register('build') {
     dependsOn(':businessone-native:build')
     dependsOn(':businessone-ballerina:build')
     dependsOn(':businessone-examples:build')
